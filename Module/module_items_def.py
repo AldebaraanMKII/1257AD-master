@@ -264,12 +264,12 @@ italy_factions = [fac_culture_italian, fac_culture_anatolian_christian]
 balt_factions = [fac_culture_mazovian, fac_culture_baltic]
 nordic_factions = [fac_culture_finnish, fac_culture_nordic]
 gaelic_factions = [ fac_culture_welsh, fac_culture_gaelic, fac_culture_scotish]
-berber_factions = [fac_culture_marinid]
+berber_factions = [fac_culture_marinid, fac_culture_andalus]
 andalusian_factions = [fac_culture_andalus]
 mamluk_factions = [fac_culture_mamluke, fac_culture_anatolian]
-arab_factions = andalusian_factions + mamluk_factions
+arab_factions = [fac_culture_mamluke, fac_culture_anatolian, fac_culture_andalus, fac_culture_marinid]
 latin_factions = iberian_factions + italy_factions
-all_euro_factions = euro_factions + latin_factions + nordic_factions
+all_euro_factions = euro_factions + latin_factions + nordic_factions + gaelic_factions
 crusader_factions = [fac_kingdom_23, fac_culture_templar, fac_culture_hospitaller, fac_culture_teutonic, fac_culture_antioch, fac_culture_tripoli, fac_culture_ibelin, fac_culture_jerusalem]
 
 ## CC
