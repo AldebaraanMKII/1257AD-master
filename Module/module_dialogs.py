@@ -11633,6 +11633,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   
 #(try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
 (store_repeat_object, ":faction_no"),
+  (is_between, ":faction_no", kingdoms_begin, kingdoms_end),  ######## NEW v2.9 - fix cultures appearing together with factions
   (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
   (neq, ":faction_no", "$players_kingdom"),
   (neg|faction_slot_eq, ":faction_no", slot_faction_religion, religion_catholic),
@@ -38346,9 +38347,9 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   
 [anyone, "view_prisoner_inventory_2",
       [
-      (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),
       ],
-"Please leave me alone now!", "prisoner_options", []
+"Please leave me alone now!", "prisoner_options", [
+      (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
   ],
   
     # default entry (no prior join agreement, or they've previously refused)
@@ -39127,9 +39128,9 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   ],
 [anyone|plyr, "dplmc_do_view_regular_inventory_2",
     [
-      (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),
     ],
-"Indeed.", "do_regular_member_view_char", []
+"Indeed.", "do_regular_member_view_char", [
+      (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
   ],
 ## CC view regular's equipment
 ##diplomacy end+
