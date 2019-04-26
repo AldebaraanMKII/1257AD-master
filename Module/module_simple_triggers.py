@@ -8676,7 +8676,10 @@ simple_triggers = [
 
 
 ####### NEW v2.8 - if player doesn't have a minister, assign him a new one
-(12,   
+####### NEW v2.9-KOMKE START-
+# (12,   
+(24,   ##KOMKE Changed to 24 to avoid activation before "party-size-player-king-of-supporters" fix
+####### NEW v2.9-KOMKE END-
 [
  (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
  (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
