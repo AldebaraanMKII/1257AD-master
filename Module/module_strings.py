@@ -9128,7 +9128,10 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 
 ######## NEW v2.1 - extra lord info  
 # ("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of {s56}.^:{s54} is a vassal of {s55} of {s56}.^}}Renown: {reg5}. Controversy: {reg15}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}"),
-("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is a vassal of {s55} of the {s56}.^}}Renown: {reg5}. Controversy: {reg15}. Reputation: {s68}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Culture: {s62}.^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
+####### NEW v2.9-KOMKE START-##KOMKE reputation string is stored in s53 because s68 didn't work
+# ("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is a vassal of {s55} of the {s56}.^}}Renown: {reg5}. Controversy: {reg15}. Reputation: {s68}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Culture: {s62}.^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
+("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is a vassal of {s55} of the {s56}.^}}Renown: {reg5}. Controversy: {reg15}. Reputation: {s53}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Culture: {s62}.^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
+####### NEW v2.9-KOMKE END-             
 # ("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is a vassal of {s55} of the {s56}.^}}Renown: {reg5}. Controversy: {reg15}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
 ("lord_info_string_short", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is a vassal of {s55} of the {s56}.^}}Renown: {reg5}. Controversy: {reg15}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}"),
 #######################
