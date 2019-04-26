@@ -1222,7 +1222,7 @@ mission_templates = [
       common_battle_inventory,
       common_battle_order_panel,
       common_battle_order_panel_tick,
-    ] + hold_trigger + charge_trigger + lance_usage  + enhanced_common_battle_triggers  + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers + force_ranged,
+    ] + hold_trigger + charge_trigger + lance_usage  + enhanced_common_battle_triggers  + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers,
   ),  
   
   
@@ -1549,7 +1549,7 @@ mission_templates = [
            (try_end),
            (finish_mission),
            ]),
-    ] + must_1257_triggers + sp_shield_bash_triggers + force_ranged,
+    ] + must_1257_triggers + sp_shield_bash_triggers,
   ),
 
   ("lead_charge",mtf_battle_mode,charge,
