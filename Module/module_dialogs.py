@@ -11664,6 +11664,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 #(try_end),
                                                             ],
 "{s1}", "pope_crusade_against_cost",[(store_repeat_object, "$suggested_to_attack_fief")]],
+
+############ NEW v2.9
+[trp_pope|plyr, "pope_crusade_against_fief", 
+ [
+ ], "....I changed my mind.", "pope_crusade_not_start",[]],   
+############
+
 #####################
 
 
