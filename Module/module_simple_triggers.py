@@ -8191,8 +8191,7 @@ simple_triggers = [
 
   
 ############################# New v2.1 - FIEF CULTURE CHANGES TO LORD'S CULTURE
-# (0.98,   ###################### roughly once every month for each of the 733 centers
-(0.46,   ###################### roughly once every 2 weeks for each of the 733 centers
+(0.98,   ###################### roughly once every month for each of the 733 centers
 [
  (try_begin),
    (lt, "$g_change_culture_cur_center", centers_begin), 
