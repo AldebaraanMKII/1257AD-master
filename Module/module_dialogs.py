@@ -10211,6 +10211,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (store_faction_of_troop, ":faction_no", ":troop_no"),
   (eq, ":faction_no", "$g_lord_to_assassinate_faction"),
   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+  (neq, ":troop_no", "trp_player"),  ######### NEW v2.9 - fixes player appearing in the list
     (str_store_troop_name, s10, ":troop_no"),
   ],
   "{s10}.", "dplmc_constable_assassination_ask_confirm",
