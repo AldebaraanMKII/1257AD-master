@@ -6860,9 +6860,6 @@ dialogs = [
    (is_between, ":center_no", centers_begin, centers_end),
    (store_faction_of_party, ":center_faction", ":center_no"),
    (eq, ":center_faction", "fac_player_supporters_faction"),
-####### NEW v2.9-KOMKE START-        
-   (neg|party_slot_eq, ":center_no", slot_town_lord, "trp_player"),##KOMKE to exclude the fiefs already assigned to player
-####### NEW v2.9-KOMKE END-                
 ##diplomacy begin
    (neg|party_slot_eq, ":center_no", slot_village_infested_by_bandits, "trp_peasant_woman"),
     ##diplomacy end
@@ -6897,11 +6894,7 @@ dialogs = [
    [
    (str_store_party_name, s1, "$fief_selected"),
    (str_store_troop_name, s2, "trp_player"),
-####### NEW v2.9-KOMKE START-      
-   # ], "Very well. You shall be the lord of {s1}.", "minister_pretalk",
-   ##KOMKE above: when s1 the in game result is a date, when $fief_selected the result is UNRECOGNIZED TOKEN, however the code works fine and the correct fief is assigned   
-   ], "Very well. You shall own this fief.", "minister_pretalk", ##KOMKE removed the s1  
-####### NEW v2.9-KOMKE END-       
+   ], "Very well. You shall be the lord of {s1}.", "minister_pretalk",
    [
    (call_script, "script_give_center_to_lord", "$fief_selected", "trp_player", 0),
    
@@ -10218,7 +10211,6 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (store_faction_of_troop, ":faction_no", ":troop_no"),
   (eq, ":faction_no", "$g_lord_to_assassinate_faction"),
   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
-  (neq, ":troop_no", "trp_player"),  ######### NEW v2.9 - fixes player appearing in the list
     (str_store_troop_name, s10, ":troop_no"),
   ],
   "{s10}.", "dplmc_constable_assassination_ask_confirm",

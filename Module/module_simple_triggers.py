@@ -2855,7 +2855,7 @@ simple_triggers = [
    (ge, ":template", "pt_steppe_bandit_lair"),
  
    (store_distance_to_party_from_party, ":distance", "p_main_party", ":bandit_camp"),
-   (lt, ":distance", 3),##KOMKE increase value to make bandit_camps easier to spot
+   (lt, ":distance", 3),
    (party_set_flags, ":bandit_camp", pf_disabled, 0),
    (party_set_flags, ":bandit_camp", pf_always_visible, 1),
  (try_end),
@@ -8191,7 +8191,8 @@ simple_triggers = [
 
   
 ############################# New v2.1 - FIEF CULTURE CHANGES TO LORD'S CULTURE
-(0.98,   ###################### roughly once every month for each of the 733 centers
+# (0.98,   ###################### roughly once every month for each of the 733 centers
+(0.46,   ###################### roughly once every 2 weeks for each of the 733 centers
 [
  (try_begin),
    (lt, "$g_change_culture_cur_center", centers_begin), 
