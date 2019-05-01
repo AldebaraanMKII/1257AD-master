@@ -918,7 +918,7 @@ troops = [
     ranged_merc_attrib_1, cum_horseman_wp, cum_horseman_skills,
     berber_face_1, berber_face_2
     ],
-    ##GENETIC MAMLUKE MERCS
+    ##GENERIC MAMLUKE MERCS
     ##GENERIC NORTH AFRICA MERCS
 
 
@@ -972,8 +972,8 @@ troops = [
     ],
 
    ["merc_maghreb_range",
-    "Merc East Muslim Archer",
-    "Merc East Muslim Archers",
+    "Maghreb Archer",
+    "Maghreb Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
@@ -1056,43 +1056,8 @@ troops = [
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     arab_face_1, arab_face_2
     ],
-
-   ["merc_almogabar",
-     "Almogabar",
-     "Almogabars",
-    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots |  tf_guarantee_gloves | tf_guarantee_ranged,
-    0, 0, fac_kingdom_1,
-    [
-    itm_javelin,
-    itm_throwing_spears,
-
-    itm_almogavar_a,
-    itm_almogavar_b,
-    itm_almogavar_c,
-
-    itm_1257_hood,
-    itm_leather_fur_boots,
-    itm_almogavar_helmet,
-    itm_felt_hat,
-    itm_woolen_cap,
-    itm_tied_up_shoes,
-
-    itm_leather_jerkin,
-    itm_pelt_coat,
-    itm_rawhide_coat,
-    itm_padded_cloth,
-
-    itm_almogavar_sword,
-
-    itm_leather_covered_round_shield,
-    itm_hide_covered_round_shield,
-
-    ],
-    ranged_merc_attrib_1, merc_thrower_wp_1, merc_thrower_skills_1,
-    euro_face_1, euro_face_2
-    ],
-
     ##GENERIC NORTH AFRICA MERCS
+    
     ##GENERAL RUS MERCS
   ["merc_rus_spearman",
      "Shestnik",
@@ -1303,6 +1268,7 @@ troops = [
     nord_face_young_1, vaegir_face_older_2
     ],
     ##GENERAL RUS MERCS
+
     ##GENERAL LATIN MERCS
     ["merc_latin_spearman",
      "Hastatus solidarius",
@@ -1583,6 +1549,58 @@ troops = [
     latin_face_1, latin_face_2
     ],
 
+    ["merc_almogavar_1",
+     "Almogavar",
+     "Almogavars",
+    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged,
+    0, 0, fac_kingdom_1,
+    [
+    #Weapon
+    itm_javelin,
+
+    itm_modded_mace_1,
+    itm_mace_2,
+    itm_falshion_1,
+    itm_modded_falchion_1,
+    itm_raf_one_handed_axe_d,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
+    itm_raf_one_handed_axe_h,
+
+    #Armour
+    itm_rawhide_coat,
+    itm_pelt_coat,
+    itm_almogavar_a,
+    itm_almogavar_b,
+    itm_almogavar_c,
+    itm_leather_jerkin,
+    itm_padded_cloth,
+    itm_balt_shirt_c,
+
+    #Helmet
+    itm_1257_hood_2,
+    itm_felt_hat,
+    itm_woolen_cap,
+    itm_leather_warrior_cap,
+    itm_1257_hood,
+    itm_skullcap,
+    itm_almogavar_helmet,
+
+    #Boots
+    itm_tied_up_shoes,
+    itm_grey_hose,
+    itm_dark_grey_hose,
+
+    #Shield
+    itm_hide_covered_round_shield,
+    itm_leather_covered_round_shield,
+    itm_tab_shield_round_a,
+    itm_andalusian_shield_1,
+    itm_tab_shield_round_b,
+    ],
+    ranged_merc_attrib_1, merc_thrower_wp_1, merc_thrower_skills_1,
+    latin_face_1, latin_face_2
+    ],
 
     ["merc_latin_light",
      "Pedes",
@@ -2878,8 +2896,8 @@ troops = [
     ],
 
    ["merc_veteran_maghreb_range",
-    "Merc East Muslim Archer",
-    "Merc East Muslim Archers",
+    "Maghreb Veteran Archer",
+    "Maghreb Veteran Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
@@ -3463,6 +3481,61 @@ troops = [
     latin_face_1, latin_face_2
     ],
 
+     ["merc_almogavar_2",
+     "Almocaden Almogavar",
+     "Almocaden Almogavars",
+    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots |  tf_guarantee_gloves | tf_guarantee_ranged,
+    0, 0, fac_kingdom_1,
+    [
+    #Weapon
+    itm_javelin,
+
+    itm_modded_mace_1,
+    itm_mace_2,
+    itm_falchion,
+    itm_modded_falchion_2,
+    itm_raf_one_handed_axe_g,
+    itm_raf_one_handed_axe_h,
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_b,
+
+    #Armour
+    itm_leather_jerkin,
+    itm_padded_cloth,
+    itm_balt_shirt_c,
+    itm_iberian_leather_armour_a,
+    itm_iberian_leather_armour_b,
+    itm_iberian_leather_armour_c,
+    itm_buff_leather,
+    itm_scale_shirt_a,
+
+    #Helmet
+    itm_1257_hood,
+    itm_skullcap,
+    itm_megreb_spangen,
+    itm_vik_spangen_b,
+    itm_vik_norman_helmet_e,
+    itm_vik_spangen_a,
+    itm_almogavar_helmet,
+
+    #Boots
+    itm_dark_grey_hose,
+    itm_green_hose_b,
+    itm_leather_fur_boots,
+
+    #Gloves
+    itm_sa_gloves_a,
+
+    #Shield
+    itm_tab_shield_round_a,
+    itm_andalusian_shield_1,
+    itm_tab_shield_round_b,
+    itm_andalusian_shield_2,
+    itm_andalusian_shield_3,
+    ],
+    ranged_merc_attrib_2, merc_thrower_wp_2, merc_thrower_skills_2,
+    latin_face_1, latin_face_2
+    ],
 
     ["merc_veteran_latin_light",
      "Pedes",
@@ -3526,12 +3599,10 @@ troops = [
     # itm_hunter_boots,
 
     ]+latin_vet_armors+latin_vet_gear,
-
-##KOMKE END
-
     foot_attrib_4, light_infantry_wp_2, light_infantry_skills_2,
     latin_face_1, latin_face_2
     ],
+    
     ##GENERAL IBERIAN MERCS
 
     ##GENERAL BALKAN MERCS
@@ -4656,8 +4727,8 @@ troops = [
     ],
 
    ["merc_elite_maghreb_range",
-    "Merc East Muslim Archer",
-    "Merc East Muslim Archers",
+    "Maghreb Elite Archer",
+    "Maghreb Elite Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
@@ -5231,6 +5302,61 @@ troops = [
     latin_face_1, latin_face_2
     ],
 
+    ["merc_almogavar_3",
+     "Adalid Almogavar",
+     "Adalid Almogavars",
+    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged,
+    0, 0, fac_kingdom_1,
+    [
+    #Weapon
+    itm_throwing_spears,
+
+    itm_modded_mace_1,
+    itm_mace_2,
+    itm_iberian_cleaver,
+    itm_almogavar_sword,
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_b,
+    itm_raf_one_handed_axe_c,
+    itm_raf_one_handed_axe_e,
+
+    #Armour
+    itm_iberian_leather_armour_b,
+    itm_iberian_leather_armour_c,
+    itm_buff_leather,
+    itm_scale_shirt_a,
+    itm_studden_leather_armour_a,
+    itm_modded_mail_1,
+    itm_modded_mail_2,
+    itm_modded_mail_3,
+
+    #Helmet
+    itm_elm2,
+    itm_footman_helmet,
+    itm_almogavar_helmet,
+    itm_raf_spangen,
+    itm_elm8,
+    itm_elm6,
+    itm_andalusian_helmet_d,
+
+    #Boots
+    itm_leather_fur_boots,
+    itm_hunter_boots,
+    itm_leather_boots,
+
+    #Gloves
+    itm_gauntlets_crysader,
+
+    #Shield
+    itm_andalusian_shield_2,
+    itm_andalusian_shield_3,
+    itm_tab_shield_round_c,
+    itm_adarga_a,
+    itm_adarga_b,
+    ],
+    ranged_merc_attrib_3, merc_thrower_wp_3, merc_thrower_skills_3,
+    latin_face_1, latin_face_2
+    ],
 
     ["merc_elite_latin_light",
      "Pedes",
@@ -5294,9 +5420,6 @@ troops = [
     # itm_hunter_boots,
 
     ]+latin_elite_armors+latin_elite_gear,
-
-##KOMKE END
-
     foot_attrib_5, light_infantry_wp_3, light_infantry_skills_3,
     latin_face_1, latin_face_2
     ],
@@ -8302,8 +8425,6 @@ troops = [
     horse_attrib_4, cum_vharcher_wp, cum_vharcher_skills,
     mong_face_1, mong_face_2
     ],
-
-
 
   ["mamluke_light_horse_archer",
     "Mamluk Al-Sighar Al-Amir",
@@ -17994,6 +18115,8 @@ itm_spear_p,
 
     itm_beduin_armor_a,
     itm_beduin_armor_b,
+    itm_beduin_armor_b,
+    itm_beduin_armor_c,
 
     #itm_berber_helmet_a,
     itm_beduin_turban_1,
@@ -18042,6 +18165,11 @@ itm_spear_p,
     itm_beduin_armor_c,
     itm_arab_bandit_4,
     itm_arab_bandit_4,
+    itm_berber_robe_a,
+    itm_berber_robe_b,
+    itm_berber_robe_c,
+    itm_berber_kaftan,
+    itm_berber_tunic_b,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18092,9 +18220,13 @@ itm_spear_p,
 
     #Armor
     itm_beduin_armor_c,
-    itm_beduin_armor_c,
     itm_arab_bandit_4,
     itm_arab_bandit_2,
+    itm_berber_robe_a,
+    itm_berber_robe_b,
+    itm_berber_robe_c,
+    itm_berber_kaftan,
+    itm_berber_tunic_b,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18150,9 +18282,13 @@ itm_spear_p,
 
     #Armor
     itm_sa_arabian_light_armor,
-    itm_sa_arabian_light_armor,
-    itm_sa_arabian_light_armor,
-    itm_sa_armor_archer_saracin_4,
+    itm_sa_arabian_light_armor_2,
+    itm_sa_arabian_light_armor_3,
+    itm_sa_arabian_light_armor_4,
+    itm_sa_armor_archer_saracin_1,
+    itm_sa_armor_archer_saracin_2,
+    itm_sa_armor_archer_saracin_3,
+    itm_andalusi_horseman_robe,
 
     #Helmets
     itm_beduin_turban_3,
@@ -18172,6 +18308,11 @@ itm_spear_p,
 
     #Weapons
     itm_raf_one_handed_axe_c,
+    itm_raf_one_handed_axe_d,
+    itm_raf_one_handed_axe_e,
+    itm_raf_one_handed_axe_f,
+    itm_winged_mace,
+    itm_javelin,
     itm_javelin,
 
     itm_andalusian_shield_1,
@@ -18183,9 +18324,7 @@ itm_spear_p,
     itm_bandits_horse_b,
 
     ],
-    horse_attrib_1,
-    nbl_horsemen_wp,
-    nbl_horsemen_skills,
+    horse_attrib_1, nbl_horsemen_wp, nbl_horsemen_skills,
     morrocan_face_1, morrocan_face_2
   ],
 
@@ -18201,11 +18340,17 @@ itm_spear_p,
     itm_sa_saracin_medium_boot_1,
 
     #Armor
+    itm_andalusi_horseman_robe,
     itm_sa_arabian_light_armor,
+    itm_sa_armor_archer_saracin_1,
+    itm_sa_armor_archer_saracin_2,
+    itm_sa_armor_archer_saracin_3,
     itm_sa_armor_archer_saracin_4,
-    itm_sa_armor_archer_saracin_4,
-    itm_sa_armor_archer_saracin_4,
-    itm_sa_heavy_armor_arabs_4,
+    itm_sa_armor_archer_saracin_5,
+    itm_sa_armor_archer_saracin_6,
+    itm_sa_heavy_armor_arabs_1,
+    itm_sa_heavy_armor_arabs_2,
+    itm_sa_heavy_armor_arabs_3,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18221,8 +18366,6 @@ itm_spear_p,
     #Gloves
     itm_sa_gloves_a,
     itm_sa_gloves_a,
-    itm_lamellar_gauntlets,
-
 
     #Weapons
     itm_light_lance,
@@ -18260,36 +18403,30 @@ itm_spear_p,
     [
     #Boots
     itm_sa_saracin_medium_boot_1,
-    itm_sa_saracin_medium_boot_1,
+    itm_sa_saracin_medium_boot_2,
     itm_sa_saracin_hard_boot_1,
-
 
     #Armor
     itm_sa_armor_archer_saracin_4,
-    itm_sa_armor_archer_saracin_4,
-    itm_sa_heavy_armor_arabs_4,
-    itm_sa_heavy_armor_arabs_4,
-    itm_sa_heavy_armor_arabs_4,
+    itm_sa_heavy_armor_arabs_6,
+    itm_sa_heavy_armor_arabs_7,
+    itm_sa_heavy_armor_arabs_8,
+    itm_berber_mail_b,
+    itm_berber_mail_a,
 
     #Helmets
     itm_beduin_turban_2,
     itm_beduin_turban_3,
     itm_turban_b,
-    itm_turban_b,
-    itm_helm_saracin_b,
-    itm_helm_saracin_b,
     itm_helm_saracin_b,
     itm_andalus_infantry_helmet,
-    itm_andalus_infantry_helmet,
-	#itm_arab_nobleman_a,
+    itm_berber_white_turban,
 
     #Gloves
     itm_sa_gloves_a,
-    itm_lamellar_gauntlets,
-    itm_lamellar_gauntlets,
-
 
     #Weapons
+    itm_light_lance,
     itm_light_lance,
     itm_light_lance,
     itm_light_lance,
@@ -18299,6 +18436,7 @@ itm_spear_p,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
+    itm_moorish_axe,
 
     #Shields
     itm_andalusian_shield_1,
@@ -18438,9 +18576,12 @@ itm_spear_p,
     itm_beduin_armor_a,
     itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_beduin_armor_c,
+    itm_arab_bandit_1,
     itm_arab_bandit_4,
-    itm_arab_bandit_4,
+    itm_sa_armor_archer_saracin_1,
+    itm_sa_armor_archer_saracin_2,
+    itm_sa_armor_archer_saracin_3,
+    itm_sa_armor_archer_saracin_4,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18448,8 +18589,6 @@ itm_spear_p,
     itm_beduin_turban_3,
     itm_beduin_turban_4,
     itm_turban_a,
-    itm_turban_b,
-    itm_turban_b,
     itm_turban_b,
     itm_elm2,
     itm_sa_helm_saracin_3,
@@ -18479,28 +18618,31 @@ itm_spear_p,
     itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
     itm_sa_saracin_light_boot_2,
+    itm_berber_shoes,
 
     #Armor
-    itm_sarranid_cloth_robe_b,
+    itm_sarranid_cloth_robe,
     itm_sarranid_cloth_robe_b,
     itm_sarranid_cloth_robe_b,
     itm_saracen_kaftan_b,
     itm_saracen_kaftan_b,
     itm_saracen_kaftan_d,
     itm_saracen_kaftan_c,
-        #itm_moors_quilted_kaftan_blue,
-        #itm_moors_quilted_kaftan_brown,
-
 
     #Helmets
+    itm_turban_a,
     itm_turban_b,
-
+    itm_turban_c,
+    itm_desert_turban,
+    itm_desert_turban,
 
     #Weapons
     itm_falchion,
     itm_butchering_knife,
     itm_knife,
     itm_berber_spear,
+    itm_spear_d,
+    itm_spear_a,
 
     #Shields
     itm_arab_shield_a_3,
@@ -18805,7 +18947,7 @@ itm_spear_p,
   ["marinid_mounted_skirmisher_2",
     "Murtaziqa Al-Makhzan Faris",
     "Murtaziqa Al-Makhzan Faris",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse,
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_ranged,
     0,0,fac_kingdom_20,
     [
     #Boots
@@ -18817,9 +18959,8 @@ itm_spear_p,
     itm_beduin_armor_a,
     itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_beduin_armor_c,
     itm_arab_bandit_4,
-    itm_arab_bandit_4,
+    itm_arab_bandit_3,
 
     #Helmets
     itm_beduin_turban_3,
@@ -18841,6 +18982,7 @@ itm_spear_p,
     itm_arabian_sword_b,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
+    itm_berber_spear,
 
     #Shield
     itm_andalusian_shield_1,
@@ -18852,65 +18994,56 @@ itm_spear_p,
     #Horse
     itm_bandits_horse_a,
     itm_bandits_horse_a,
-    itm_bandits_horse_a,
-    itm_bandits_horse_b,
-    itm_bandits_horse_b,
-    itm_bandits_horse_d,
     itm_bedyin_camel_a,
     itm_bedyin_camel_a,
     itm_bedyin_camel_a,
-
-
     ],
-    horse_attrib_4,
-    cav_thrower_3_wp,
-    cav_thrower_3_skills,
+    horse_attrib_4, cav_thrower_3_wp, cav_thrower_3_skills,
     berber_face_1, berber_face_2
   ],
 
   ["marinid_mounted_skirmisher_3",
     "Sharif Al-Makhzan Khayl",
     "Sharif Al-Makhzan Khayl",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse,
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_ranged,
     0,0,fac_kingdom_20,
     [
 
     #Boots
     itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
-    itm_sa_saracin_light_boot_2,
+    itm_sa_saracin_medium_boot_1,
+    itm_sa_saracin_medium_boot_2,
 
     #Armor
     itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_beduin_armor_c,
-    itm_arab_bandit_4,
-    itm_arab_bandit_4,
+	itm_arab_bandit_1,
+    itm_arab_bandit_2,
+    itm_arab_bandit_2,
+	itm_arab_bandit_3,
+	itm_arab_bandit_4,
 
     #Helmets
+    itm_berber_white_turban,
     itm_beduin_turban_3,
     itm_beduin_turban_4,
     itm_turban_b,
-    itm_turban_b,
     itm_elm2,
-    itm_elm2,
-    itm_sa_helm_saracin_3,
     itm_sa_helm_saracin_3,
     itm_helm_saracin_3,
     itm_andalus_infantry_helmet,
-    itm_andalus_infantry_helmet,
     itm_sa_helm_saracin_5,
-    itm_sa_helm_saracin_5,
-    itm_sa_helm_saracin_4,
     itm_sa_helm_saracin_4,
 
     #Weapon
-    itm_javelin,
+    itm_throwing_spears,
     itm_throwing_spears,
     itm_sarranid_cavalry_sword,
     itm_arabian_sword_b,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
+    itm_berber_spear,
 
     #Shield
     itm_andalusian_shield_1,
@@ -18920,42 +19053,29 @@ itm_spear_p,
     itm_berber_shield_3,
 
     #Horse
-    itm_bandits_horse_a,
-    itm_bandits_horse_b,
-    itm_bandits_horse_b,
-    itm_bedyin_camel_a,
-    itm_bedyin_camel_a,
-    itm_bedyin_camel_a,
-    itm_bedyin_camel_a,
     itm_bedyin_camel_a,
 
     ],
-    horse_attrib_5,
-    cav_thrower_4_wp,
-    cav_thrower_4_skills,
+    horse_attrib_5, cav_thrower_4_wp, cav_thrower_4_skills,
     berber_face_3, berber_face_4
   ],
 
 
-  #NEW REVISON
+#NEW REVISON ASTACIUS 04/2019
+
   ["bedouin_recruit",
     "Mutatawwi'a",
     "Mutatawwi'a",
-    tf_guarantee_boots|tf_guarantee_armor,
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
 	#Weapons
     itm_hatchet,
     itm_pickaxe,
-
     itm_pitch_fork,
-
-
     itm_spear_d,
-    itm_spear_a,
 
 	#Boots
-    itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
 	itm_berber_shoes,
@@ -18963,10 +19083,7 @@ itm_spear_p,
     #Armor
     itm_beduin_armor_a,
     itm_beduin_armor_b,
-    #itm_beduin_armor_c,
-    #itm_beduin_armor_c,
-    #itm_arab_bandit_4,
-    #itm_arab_bandit_4,
+    itm_berber_tunic_c,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18975,352 +19092,494 @@ itm_spear_p,
     itm_beduin_turban_4,
     itm_turban_a,
     itm_turban_b,
-    itm_turban_b,
-    itm_turban_b,
-    itm_turban_a,
-    itm_turban_b,
     itm_turban_c,
     itm_headcloth,
     itm_desert_turban,
-    itm_desert_turban,
-    # itm_turban,
-    # itm_turban,
-    # itm_turban,
-    # itm_turban,
-
-
-
-
     ],
     foot_attrib_2, militia_wp, militia_skills,
-	arab_face_1, arab_face_2
+	arab_face_1, berber_face_1
   ],
 
-  ["bedouin_spearman",
-    "Ramah al Bedouh",
-    "Armah al Bedouh",
+  ["bedouin_skirmisher",
+    "Bedouin Auxiliary",
+    "Bedouin Auxiliaries",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
     0,0,fac_kingdom_20,
     [
-	#Weapons
-    itm_bamboo_spear,
-
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_j,
-    itm_spear_d,
-
-
-    itm_spear_a,
-    itm_falchion,
-    itm_hatchet,
-    itm_pickaxe,
-
-	#Boots
-    itm_sa_saracin_light_boot_1,
-    itm_sa_saracin_light_boot_1,
-    itm_sa_saracin_light_boot_2,
-	itm_berber_shoes,
-
-    #Armor
-    itm_beduin_armor_a,
-    itm_beduin_armor_b,
-    itm_beduin_armor_c,
-    itm_beduin_armor_c,
-    itm_arab_bandit_4,
-    #itm_arab_bandit_4,
-
-    #Helmets
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_beduin_turban_3,
-    itm_beduin_turban_4,
-	itm_beduin_turban_4,
-    itm_turban_a,
-    itm_turban_b,
-    itm_turban_c,
-    itm_headcloth,
-    itm_desert_turban,
-    itm_desert_turban,
-    # itm_turban,
-    # itm_turban,
-
-	#Shields
-	itm_saracin_shield_r_7,
-
-
-	itm_saracin_shield_r_6,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-
-
-    itm_arab_shield_f_3,
-    itm_arab_shield_g_3,
-    itm_arab_shield_h_3,
-    itm_arab_shield_i_3,
-	itm_bandit_shield_1,
-	itm_bandit_shield_2,
-	itm_bandit_shield_3,
-
-
-
-
-
-
-
-
-    ],
-    foot_attrib_3,
-    pikes_regulars_wp,
-    pikes_regulars_skills,
-    arab_face_3, arab_face_4
-  ],
-
-[
-	#Scout
-    "bedouin_cav_1",
-    "Faris al Bedouh",
-    "Fursan al Bedouh",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-
-	#Weapons
-    itm_bamboo_spear,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_j,
-    itm_spear_d,
-    itm_spear_a,
-
-    itm_falchion,
-    itm_hatchet,
-    itm_pickaxe,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	#Boots
-    itm_sa_saracin_light_boot_1,
-    itm_sa_saracin_light_boot_1,
-    itm_sa_saracin_light_boot_2,
-	itm_berber_shoes,
-
-    #Armor
-    itm_beduin_armor_a,
-    itm_beduin_armor_b,
-    itm_beduin_armor_c,
-    itm_beduin_armor_c,
-    itm_arab_bandit_4,
-    itm_arab_bandit_4,
-
-    #Helmets
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_beduin_turban_3,
-    itm_beduin_turban_4,
-	itm_beduin_turban_4,
-    itm_turban_a,
-    itm_turban_b,
-    itm_turban_c,
-    itm_headcloth,
-    itm_desert_turban,
-    itm_desert_turban,
-    # itm_turban,
-    # itm_turban,
-
-	#Shields
-	itm_saracin_shield_r_7,
-	itm_bandit_shield_1,
-	itm_bandit_shield_2,
-	itm_bandit_shield_2,
-	itm_bandit_shield_3,
-
 	#Ranged
     itm_javelin,
+    itm_javelin,
 
-	#Horse
-    itm_bandits_horse_a,
-    itm_bandits_horse_a,
-    itm_bandits_horse_a,
-    itm_bandits_horse_b,
-    itm_bandits_horse_b,
-    itm_bandits_horse_d,
-    ],
-    horse_attrib_2,
-    cav_thrower_2_wp,
-    cav_thrower_2_skills,
-    arab_face_1, arab_face_2
-  ],
-
-[
-    "bedouin_cav_2",
-    "Faris al Bedouh Murtaziqa",
-    "Fursan al Bedouh Murtaziqoun",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-
-	#Weapons,
-	itm_light_lance,
-    itm_falchion,
-    itm_hatchet,
-    itm_pickaxe,
-    itm_arabian_sword_a,
-    itm_arabian_sword_b,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-    itm_sarranid_mace_1,
-	itm_scimitar_b,
-	itm_scimitar_b,
-
-
-
-
-
-
+	#Weapons
+    itm_modded_falchion_1,
+    itm_raf_one_handed_axe_d,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
 
 	#Boots
     itm_sa_saracin_light_boot_1,
-    itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
-	itm_sa_saracin_medium_boot_2,
-	itm_berber_shoes,
 
     #Armor
     itm_beduin_armor_a,
     itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_beduin_armor_c,
-    itm_arab_bandit_4,
-    itm_arab_bandit_4,
-
-    #Helmets
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_beduin_turban_3,
-    itm_beduin_turban_4,
-	itm_beduin_turban_4,
-    itm_turban_a,
-    itm_turban_b,
-    itm_turban_c,
-    itm_headcloth,
-    itm_desert_turban,
-    itm_desert_turban,
-    # itm_turban,
-    # itm_turban,
-	itm_balt_helmet_b,
-
-	#Shields
-	itm_saracin_shield_r_7,
-	itm_bandit_shield_1,
-	itm_bandit_shield_2,
-	itm_bandit_shield_2,
-	itm_bandit_shield_3,
-
-	#Ranged
-    itm_javelin,
-	itm_javelin,
-
-	#Horse
-    itm_bedyin_camel_a,
-
-
-
-    ],
-    horse_attrib_3,
-    cav_thrower_3_wp,
-    cav_thrower_3_skills ,
-    arab_face_1, arab_face_2
-  ],
-
-[
-    "bedouin_cav_3",
-    "Sharif Fursan Al Arab",
-    "Shurafa'a Fursan Al-Arab",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-
-	#Weapons
-    itm_light_lance,
-    itm_lance,
-    itm_arabian_sword_b,
-    itm_arabian_sword_d,
-    itm_scimitar_b,
-	itm_scimitar_b,
-    itm_sword_type_xii,
-    itm_sarranid_mace_1,
-    itm_sarranid_axe_a,
-	itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Boots
-    itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-    itm_sa_saracin_light_boot_2,
-	itm_sa_saracin_light_boot_2,
-	itm_sa_saracin_hard_boot_2,
-
-    #Armor
     itm_arab_bandit_1,
+    itm_arab_bandit_4,
+    itm_arab_bandit_1,
+    itm_arab_bandit_4,
+    itm_kau_arab_aketon_red,
+    itm_kau_arab_aketon_green,
+    itm_sa_arabian_light_armor,
+    itm_sa_arabian_light_armor_2,
 
-	itm_arab_bandit_1,
+    #Helmets
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
+    itm_beduin_turban_3,
+	itm_beduin_turban_4,
+    itm_turban_a,
+    itm_turban_b,
+    itm_turban_c,
+    itm_headcloth,
+    itm_desert_turban,
+    itm_saracin_turban_a,
+
+	#Shields
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+	itm_bandit_shield_1,
+	itm_bandit_shield_2,
+	itm_bandit_shield_3,
+    ],
+    ranged_attrib_3, skirmisher_wp, skirmisher_skills,
+    arab_face_2, berber_face_2
+  ],
+
+  ["bedouin_guisarmer_1",
+    "Bedouin Infantryman",
+    "Bedouin Infantrymen",
+    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_20,
+    [
+    #Weapons
+    itm_modded_fauchard_1,
+    itm_modded_fauchard_2,
+    itm_modded_glaive_fork_1,
+    itm_modded_glaive_fork_2,
+
+    #Helmet
+    itm_beduin_turban_4,
+    itm_saracin_turban_a,
+    itm_saracin_turban_b,
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
+    itm_turban_b,
+    itm_turban_c,
+	itm_sa_helm_saracin_6,
+	itm_sa_helm_saracin_7,
+	itm_sa_helm_saracin_8,
+    itm_arab_helmet_b,
+	itm_arab_helmet_c,
+    itm_arab_helmet_d,
+	itm_arab_mail_coif,
+	itm_mamluke_helm_b,
+    itm_sarranid_mail_coif,
+	itm_black_guard_helmet,
+    
+	#Armor
+    itm_arab_bandit_3,
+    itm_arab_bandit_3,
+    itm_sa_armor_archer_saracin_1,
+    itm_sa_armor_archer_saracin_2,
+    itm_sa_armor_archer_saracin_3,
+	itm_sa_heavy_armor_arabs_6,
+	itm_sa_heavy_armor_arabs_7,
+	itm_sa_heavy_armor_arabs_8,
+    itm_arab_mail_a,
+
+	#Boots
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+    ],
+    foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
+    arab_face_1, berber_face_2
+    ],
+
+    ["bedouin_guisarmer_2",
+    "Bedouin Veteran Infantryman",
+    "Bedouin Veteran Infantrymen",
+    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_20,
+    [
+    #Weapons
+    itm_long_hafted_knobbed_mace,
+    itm_modded_spiked_voulge,
+    itm_modded_cleaving_voulge,
+    itm_modded_voulge,
+    itm_modded_guisarme,
+
+    #Helmet
+    itm_saracin_turban_a,
+	itm_saracin_turban_b,
+	itm_saracin_turban_c,
+	itm_sa_helm_saracin_6,
+	itm_sa_helm_saracin_7,
+	itm_sa_helm_saracin_8,
+	itm_arab_helmet_c,
+	itm_arab_helmet_b,
+	itm_arab_mail_coif,
+	itm_mamluke_helm_b,
+	itm_black_guard_helmet,
+	itm_arab_helmet_d,
+
+	#Armor
+    itm_arab_bandit_3,
     itm_arab_bandit_2,
+    itm_arab_bandit_2,
+    itm_sa_heavy_armor_arabs_4,
+	itm_sa_heavy_armor_arabs_5,
+	itm_sa_heavy_armor_arabs_6,
+	itm_sa_heavy_armor_arabs_7,
+	itm_sa_heavy_armor_arabs_8,
+    itm_mamluk_shirt_f,
+    itm_arab_mail_a,
+    itm_arab_mail_b,
+    itm_seljuk_scale_a,
+
+	#Boots
+	itm_sa_saracin_medium_boot_1,
+    itm_sa_saracin_medium_boot_2,
+    itm_sa_saracin_hard_boot_2,
+    ],
+    foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
+    arab_face_2, berber_face_1
+    ],
+
+    ["bedouin_javelin_1",
+     "Bedouin Warrior",
+     "Bedouin Warriors",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
+    0, 0, fac_kingdom_20,
+    [
+    #Weapons
+    itm_javelin,
+    itm_javelin,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
+    itm_modded_falchion_1,
+    
+	#Helmet
+    itm_beduin_turban_4,
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
+    itm_beduin_turban_3,
+    itm_turban_a,
+    itm_turban_b,
+    itm_turban_c,
+    itm_sarranid_mail_coif,
+	itm_sa_helm_saracin_3,
+	itm_sa_helm_saracin_4,
+	itm_sa_helm_saracin_5,
+    itm_arab_helmet_b,
+	itm_arab_helmet_c,
+	itm_saracin_turban_a,
+	itm_saracin_turban_b,
+    itm_saracin_turban_c,
+
+    #Armor
+    itm_beduin_armor_c,
+    itm_beduin_armor_c,
+	itm_sa_armor_archer_saracin_1,
+	itm_sa_armor_archer_saracin_2,
+	itm_sa_armor_archer_saracin_3,
+	itm_sa_armor_archer_saracin_4,
+    itm_arab_bandit_1,
 	itm_arab_bandit_3,
 	itm_arab_bandit_4,
-	itm_arab_bandit_4,
 
-    #Helmets
-	itm_gulam_helm_a,
-	itm_gulam_helm_b,
-	itm_gulam_helm_b,
-	itm_gulam_helm_c,
-	itm_gulam_helm_d,
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_faris_helmet,
-    itm_balt_helmet_b,
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+    itm_sa_saracin_medium_boot_2,
 
 	#Shields
-	itm_saracin_shield_r_1,
+	itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_saracin_shield_r_1,
 	itm_saracin_shield_r_2,
 	itm_saracin_shield_r_3,
 	itm_saracin_shield_r_4,
 	itm_saracin_shield_r_5,
 	itm_saracin_shield_r_6,
 	itm_saracin_shield_r_7,
+    ],
+    ranged_attrib_4, thrown_regulars_wp, thrown_regulars_skills,
+    arab_face_3, berber_face_3
+    ],
+
+    ["bedouin_javelin_2",
+    "Bedouin Veteran Warrior",
+    "Bedouin Veteran Warriors",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+    #Weapons
+    itm_throwing_spears,
+    itm_javelin,
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_b,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+    itm_saracin_sword_c,
+    itm_saracin_sword_d,
+    itm_arabian_sword_b,
+    itm_arabian_sword_d,
+
+    #Helmet
+    itm_sarranid_mail_coif,
+	itm_sa_helm_saracin_6,
+	itm_sa_helm_saracin_7,
+	itm_sa_helm_saracin_8,
+    itm_arab_helmet_b,
+	itm_arab_helmet_c,
+    itm_arab_helmet_d,
+	itm_arab_mail_coif,
+	itm_black_guard_helmet,
+    itm_saracin_turban_a,
+    itm_saracin_turban_b,
+
+	#Shield
+	itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+    itm_arab_shield_f_3,
+	itm_saracin_shield_r_1,
+	itm_saracin_shield_r_2,
+	itm_saracin_shield_r_3,
+
+	#Armor
+    itm_kau_arab_aketon_blue,
+    itm_kau_arab_mail_shirt_d,
+	itm_sa_armor_archer_saracin_2,
+	itm_sa_armor_archer_saracin_3,
+	itm_arab_bandit_3,
+    itm_arab_bandit_3,
+    itm_arab_bandit_2,
+    itm_arab_bandit_2,
+	itm_sa_heavy_armor_arabs_1,
+	itm_sa_heavy_armor_arabs_2,
+	itm_sa_heavy_armor_arabs_3,
+
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+    ],
+    ranged_attrib_5, thrown_veteran_wp, thrown_veteran_skills,
+    arab_face_4, berber_face_4
+  ],
+
+    ["bedouin_cavalry_1",
+    "Bedouin Auxiliary Cavalry",
+    "Bedouin Auxiliary Cavalry",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+    #Ranged
+    itm_javelin,
+    itm_javelin,
+
+	#Weapons
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_falchion,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
+    itm_pickaxe,
+    itm_winged_mace,
+
+	#Boots
+    itm_sa_saracin_light_boot_1,
+    itm_sa_saracin_light_boot_2,
+
+    #Armor
+    itm_beduin_armor_a,
+    itm_beduin_armor_c,
+    itm_arab_bandit_1,
+    itm_arab_bandit_4,
+    itm_arab_bandit_1,
+    itm_arab_bandit_4,
+
+    #Helmets
+    itm_beduin_turban_2,
+    itm_beduin_turban_3,
+    itm_beduin_turban_4,
+    itm_turban_a,
+    itm_turban_b,
+    itm_headcloth,
+    itm_desert_turban,
+    itm_saracin_turban_a,
+
+	#Shields
+    itm_arab_shield_a_3,
+    itm_saracin_shield_r_5,
+    itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+	itm_bandit_shield_1,
 	itm_bandit_shield_2,
 	itm_bandit_shield_3,
 
-	#Ranged
+	#Horse
+    itm_bandits_horse_a,
+    itm_bandits_horse_b,
+    itm_bandits_horse_d,
+    ],
+    horse_attrib_3, cav_thrower_2_wp, cav_thrower_2_skills,
+    arab_face_1, arab_face_2
+  ],
+
+    ["bedouin_cavalry_2",
+    "Bedouin Cavalry",
+    "Bedouin Cavalry",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet|tf_guarantee_ranged,
+    0,0,fac_kingdom_20,
+    [
+    #Ranged
     itm_javelin,
 	itm_javelin,
 
+	#Weapons,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_falchion,
+    itm_arabian_sword_a,
+    itm_arabian_sword_b,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+    itm_sarranid_mace_1,
+	itm_scimitar_b,
+
+	#Boots
+    itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_medium_boot_2,
+    itm_sa_saracin_medium_boot_1,
+
+    #Armor
+    itm_beduin_armor_c,
+    itm_arab_bandit_2,
+    itm_arab_bandit_1,
+    itm_arab_bandit_4,
+    itm_arab_bandit_3,
+    itm_arab_bandit_3,
+    itm_arab_bandit_3,
+    
+    #Helmets
+    itm_gulam_helm_a,
+	itm_gulam_helm_b,
+    itm_beduin_turban_4,
+	itm_beduin_turban_4,
+    itm_saracin_turban_a,
+    itm_saracin_turban_b,
+    itm_desert_turban,
+    itm_desert_turban,
+	itm_balt_helmet_b,
+
+	#Shields
+    itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_saracin_shield_r_3,
+	itm_saracin_shield_r_4,
+    itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_bandit_shield_1,
+	itm_bandit_shield_2,
+
 	#Horse
     itm_bedyin_camel_a,
-
     ],
-    horse_attrib_4,
-        cav_thrower_4_wp,
-    cav_thrower_4_skills,
-    arab_face_1, arab_face_2
+    horse_attrib_4, cav_thrower_3_wp, cav_thrower_3_skills,
+    berber_face_1, berber_face_2
+  ],
+
+  ["bedouin_cavalry_3",
+    "Bedouin Loyal Cavalry",
+    "Bedouin Loyal Cavalry",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet|tf_guarantee_ranged,
+    0,0,fac_kingdom_20,
+    [
+    #Ranged
+    itm_javelin,
+	itm_javelin,
+
+	#Weapons
+    itm_lance,
+    itm_lance,
+    itm_lance,
+    itm_lance,
+    itm_arabian_sword_b,
+    itm_arabian_sword_d,
+    itm_scimitar_b,
+    itm_sarranid_mace_1,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	#Boots
+    itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+	itm_sa_saracin_hard_boot_2,
+
+    #Armor
+	itm_arab_bandit_1,
+    itm_arab_bandit_2,
+    itm_arab_bandit_2,
+    itm_arab_bandit_2,
+	itm_arab_bandit_3,
+    itm_arab_bandit_3,
+	itm_arab_bandit_4,
+
+    #Helmets
+    itm_berber_white_turban,
+	itm_gulam_helm_a,
+	itm_gulam_helm_b,
+	itm_gulam_helm_c,
+	itm_gulam_helm_d,
+    itm_faris_helmet,
+    itm_saracin_turban_a,
+    itm_saracin_turban_b,
+    itm_saracin_turban_c,
+    itm_sa_helm_saracin_8,
+
+	#Shields
+    itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+    itm_arab_shield_f_3,
+	itm_saracin_shield_r_5,
+    itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+
+	#Horse
+    itm_bedyin_camel_a,
+    ],
+    horse_attrib_5, cav_thrower_4_wp, cav_thrower_4_skills,
+    arab_face_1, berber_face_3
   ],
 
   [ "halqa_recruit",
     "Harfush",
     "Harafeesh",
-    tf_guarantee_boots|tf_guarantee_armor,
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
     itm_hatchet,
@@ -19329,53 +19588,49 @@ itm_spear_p,
     itm_pitch_fork,
     itm_hunting_bow,
     itm_arrows,
-    itm_spear_d,
-    itm_spear_a,
 
     itm_turban_a,
     itm_turban_b,
     itm_turban_c,
     itm_desert_turban,
     itm_desert_turban,
-    # itm_turban,
-    # itm_turban,
-    # itm_turban,
-    # itm_turban,
-	# itm_saracin_turban_a,
-	# itm_saracin_turban_a,
-	# itm_saracin_turban_b,
 
-    itm_berber_shoes,
     itm_sarranid_cloth_robe,
     itm_sarranid_cloth_robe_b,
+    itm_kau_arab_aketon_red,
+    itm_kau_arab_aketon_green,
+
+    itm_berber_shoes,
     itm_sa_saracin_light_boot_1,
+    itm_sa_saracin_light_boot_2,
     ],
-    foot_attrib_2, militia_wp, militia_skills,    arab_face_1, arab_face_2
+    foot_attrib_2, militia_wp, militia_skills,    
+    arab_face_3, arab_face_4
   ],
 
-    [
-	"halqa_levy_spear",
-    "Dariba Al Halqa",
-    "Dariba Al Halqa",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet ,
+  [ "halqa_spear_1",
+    "Halqa Levy Spearman",
+    "Halqa Levy Spearmen",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
 	#Weapon
+    itm_spear_c,
     itm_spear_d,
-    itm_spear_a,
+    itm_spear_i,
 
 	#Helmet
+    itm_turban_a,
     itm_turban_b,
+    itm_turban_c,
     itm_saracin_turban_a,
     itm_saracin_turban_b,
     itm_saracin_turban_c,
-
     itm_desert_turban,
-    itm_desert_turban,
-
+    itm_sa_helm_saracin_2,
 	itm_sa_helm_saracin_3,
-	itm_sa_helm_saracin_3,
-
+	itm_sa_helm_saracin_4,
+	itm_sa_helm_saracin_5,
 	itm_mamluk_helm_b,
 	itm_mamluke_helm_ventail,
 	itm_faris_helmet,
@@ -19383,51 +19638,96 @@ itm_spear_p,
 	#Shield
 	itm_bandit_shield_1,
 	itm_bandit_shield_2,
-	itm_bandit_shield_2,
 	itm_bandit_shield_3,
-	itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_f_3,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
 
 	#Armor
-    itm_sarranid_cloth_robe,
-	itm_sarranid_cloth_robe,
-    itm_sarranid_cloth_robe_b,
 	itm_sa_arabian_light_armor,
-	itm_sa_arabian_light_armor_2,
 	itm_sa_arabian_light_armor_2,
 	itm_sa_arabian_light_armor_3,
 	itm_sa_arabian_light_armor_4,
+    itm_sa_armor_archer_saracin_1,
+	itm_sa_armor_archer_saracin_2,
+    itm_mamluk_jawshan_leather,
 
 	#Boots
     itm_berber_shoes,
 	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
     ],
-    foot_attrib_2, militia_wp, militia_skills,
-	arab_face_1, arab_face_2
+    foot_attrib_3, spears_regulars_wp, spears_regulars_skills,
+	arab_face_3, arab_face_4
   ],
 
-    [
-	"halqa_light_spear",
-    "Ramah Al Halqa",
-    "Ramah Al Halqa",
+  [ "halqa_spear_2",
+    "Halqa Spearman",
+    "Halqa Spearmen",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
 	#Weapon
-    itm_spear_d,
     itm_spear_a,
+    itm_spear_b,
+    itm_spear_g,
+    itm_spear_j,
+    itm_spear_k,
 
 	#Helmet
 	itm_saracin_turban_a,
-	itm_saracin_turban_a,
-	itm_saracin_turban_b,
 	itm_saracin_turban_b,
 	itm_saracin_turban_c,
-	itm_saracin_turban_c,
+	itm_sa_helm_saracin_6,
+	itm_sa_helm_saracin_7,
+    itm_sa_helm_saracin_8,
+	itm_arab_helmet_c,
+	itm_arab_helmet_b,
+	itm_arab_mail_coif,
+	itm_black_guard_helmet,
+	itm_arab_helmet_d,
 
+	#Shield
+	itm_arab_shield_a_3,
+    itm_arab_shield_b_3,	
+    itm_arab_shield_c_3,
+    itm_arab_shield_d_3,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+    itm_saracin_shield_r_3,
+
+	#Armor
+    itm_mamluk_jawshan_leather,
+    itm_arabian_lamellar,
+	itm_sa_armor_archer_saracin_1,
+	itm_sa_armor_archer_saracin_2,
+    itm_sa_heavy_armor_arabs_1,
+	itm_sa_heavy_armor_arabs_2,
+    itm_sa_heavy_armor_arabs_3,
+    itm_sa_heavy_armor_arabs_4,
+
+	#Boots
+	itm_sa_saracin_medium_boot_2,
+	itm_sa_saracin_medium_boot_1,
+    ],
+    foot_attrib_4, spears_veteran_wp, spears_veteran_skills,
+	arab_face_3, arab_face_4
+  ],
+
+  [ "halqa_spear_3",
+    "Halqa Veteran Spearman",
+    "Halqa Veteran Spearmen",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+	#Weapon
+    itm_spear_a,
+    itm_spear_b,
+    itm_spear_c,
+    itm_spear_d,
+    itm_spear_g,
+
+	#Helmet
 	itm_sa_helm_saracin_6,
 	itm_sa_helm_saracin_7,
 	itm_sa_helm_saracin_8,
@@ -19439,8 +19739,6 @@ itm_spear_p,
 	itm_arab_helmet_d,
 
 	#Shield
-	itm_bandit_shield_2,
-	itm_bandit_shield_3,
 	itm_arab_shield_a_3,
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
@@ -19450,203 +19748,220 @@ itm_spear_p,
     itm_arab_shield_g_3,
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
-
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-
-	#Armor
-	# itm_sa_arabian_light_armor,
-	# itm_sa_arabian_light_armor_2,
-	# itm_sa_arabian_light_armor_2,
-	# itm_sa_arabian_light_armor_3,
-	# itm_sa_arabian_light_armor_4,
-	itm_sa_armor_archer_saracin_2,
-	itm_sa_armor_archer_saracin_2,
-	itm_sa_armor_archer_saracin_3,
-	itm_sa_armor_archer_saracin_3,
-
-	itm_sa_heavy_armor_arabs_1,
-	itm_sa_heavy_armor_arabs_2,
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-	itm_sa_saracin_light_boot_2,
-    ],
-    foot_attrib_3, footman_wp, footman_skills,
-	arab_face_1, arab_face_2
-  ],
-
-    [
-	"halqa_medium_spear",
-    "Ramah Mtwst Al Halqa",
-    "Ramah Mtwst Al Halqa",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-	#Weapon
-    itm_spear_d,
-    itm_spear_a,
-	itm_spear_b,
-
-	#Helmet
-	itm_sa_helm_saracin_6,
-	itm_sa_helm_saracin_7,
-	itm_sa_helm_saracin_8,
-	itm_arab_helmet_c,
-	itm_arab_helmet_b,
-	itm_arab_mail_coif,
-	itm_mamluke_helm_b,
-	itm_black_guard_helmet,
-	itm_black_guard_helmet,
-	itm_arab_helmet_d,
-	itm_arab_helmet_d,
-
-	#Shield
-	itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-	itm_arab_shield_f_3,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
 	itm_saracin_shield_r_3,
 	itm_saracin_shield_r_4,
 	itm_saracin_shield_r_2,
 
 	#Armor
+    itm_kau_arab_aketon_blue,
+    itm_kau_arab_mail_shirt_d,
+    itm_arabian_lamellar,
 	itm_sa_heavy_armor_arabs_1,
 	itm_sa_heavy_armor_arabs_2,
 	itm_sa_heavy_armor_arabs_3,
 	itm_sa_heavy_armor_arabs_4,
 	itm_sa_heavy_armor_arabs_5,
-	itm_sa_heavy_armor_arabs_6,
-	itm_sa_heavy_armor_arabs_7,
-	itm_sa_heavy_armor_arabs_8,
+    itm_mamluk_shirt_f,
 
 	#Boots
-	itm_sa_saracin_light_boot_2,
-	itm_sa_saracin_light_boot_2,
 	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_1,
-
+	itm_sa_saracin_medium_boot_2,
+    itm_sa_saracin_hard_boot_1,
     ],
-    foot_attrib_4, footman_wp, footman_skills,
+    foot_attrib_5, spears_sergeant_wp, spears_sergeant_skills,
 	arab_face_3, arab_face_4
   ],
 
-  ["halqa_archer",
+  [ "halqa_archer",
     "Rami Al Halqa",
     "Rumat Al Halqa",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_ranged,
     0,0,fac_kingdom_20,
-    [
+    [   
     itm_nomad_bow,
-    itm_barbed_arrows,
+    itm_arrows,
+    itm_hatchet,
+    itm_dagger,
+    itm_knife,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
 
 	#Helmet
 	itm_saracin_turban_a,
 	itm_saracin_turban_b,
 	itm_saracin_turban_c,
     itm_desert_turban,
-    itm_desert_turban,
-    # itm_turban,
-    # itm_turban,
-    # itm_turban,
     itm_turban_b,
-	itm_turban_b,
     itm_turban_c,
-	itm_sa_helm_saracin_3,
+	itm_sa_helm_saracin_2,
 	itm_sa_helm_saracin_3,
 	itm_sa_helm_saracin_4,
 	itm_sa_helm_saracin_5,
-	itm_sa_helm_saracin_7,
 
 	#Shield
 	itm_bandit_shield_1,
-	itm_bandit_shield_1,
-	itm_bandit_shield_2,
 	itm_bandit_shield_2,
 	itm_bandit_shield_3,
-    itm_arab_shield_h_3,
-    itm_arab_shield_i_3,
-	itm_saracin_shield_r_7,
+    itm_saracin_shield_r_1,
+	itm_saracin_shield_r_2,
+	itm_saracin_shield_r_3,
 
 	#Armor
 	itm_sa_arabian_light_armor,
 	itm_sa_arabian_light_armor_2,
-	itm_sa_arabian_light_armor_2,
 	itm_sa_arabian_light_armor_3,
 	itm_sa_arabian_light_armor_4,
-	itm_sa_armor_archer_saracin_2,
 	itm_sa_armor_archer_saracin_3,
 
 	#Boots
 	itm_sa_saracin_light_boot_1,
 	itm_sa_saracin_light_boot_2,
-	itm_sa_saracin_light_boot_2,
-
-	#Blade
-    itm_raf_one_handed_axe_a,
-    itm_arabian_sword_a,
-    itm_arabian_sword_b,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
     ],
-    ranged_attrib_3, archer_regulars_wp, archer_regulars_skills,
+    ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     arab_face_1, arab_face_2
   ],
 
-  ["halqa_cav_1",
-    "Khayl al halqa",
-    "Khayl al halqa",
-    tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+  [ "halqa_cavalry_1",
+    "Halqa Light Cavalry",
+    "Halqa Light Cavalry",
+    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
-    #itm_nomad_bow,
-    #itm_arrows,
-
-
-
-
-	#Weapons
-	itm_bamboo_spear,
-	itm_bamboo_spear,
+    #Weapons
+    itm_nomad_bow,
+    itm_arrows,
     itm_arabian_sword_b,
     itm_sarranid_cavalry_sword,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
-
-
-
 	#Helmet
-	itm_mamluke_helm_ventail,
-	itm_mamluke_helm_ventail,
-    itm_turban_b,
-	itm_sa_helm_saracin_3,
-	itm_sa_helm_saracin_3,
-	itm_sa_helm_saracin_3,
 	itm_helm_saracin_b,
-	itm_helm_saracin_b,
-	itm_helm_saracin_b,
-	itm_helm_saracin_b,
-	itm_helm_saracin_b,
+    itm_sa_helm_saracin_3,
 	itm_sa_helm_saracin_4,
 	itm_sa_helm_saracin_5,
+    itm_sa_helm_saracin_6,
+    itm_sa_helm_saracin_7,
+    itm_sa_helm_saracin_8,
+    itm_saracin_turban_a,
+    itm_black_guard_helmet,
 
 	#Shield
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+    itm_arab_shield_f_3,
+    itm_saracin_shield_r_3,
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+
+	#Armor
+	itm_sa_armor_archer_saracin_1,
+	itm_sa_armor_archer_saracin_2,
+	itm_sa_armor_archer_saracin_3,
+	itm_sa_armor_archer_saracin_4,
+    itm_anatolian_leather_lamellar,
+    itm_mamluk_jawshan_leather,
+    itm_seljuk_tunic_c,
+    itm_sa_heavy_armor_arabs_4,
+    itm_sa_heavy_armor_arabs_5,
+
+
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+
+	itm_arabs_horse_a,
+	itm_arabs_horse_b,
+	itm_arabs_horse_c,
+	itm_arabs_horse_d,
+    ],
+    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
+    arab_face_1, arab_face_4
+  ],
+
+  ["halqa_cavalry_2",
+    "Halqa Cavalry",
+    "Halqa Cavalry",
+    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+    itm_nomad_bow,
+    itm_khergit_bow,
+    itm_barbed_arrows,
+    itm_sarranid_cavalry_sword,
+    itm_arabian_sword_d,
+    itm_sarranid_mace_1,
+    itm_morningstar,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	itm_sa_armor_archer_saracin_4,
+	itm_sa_armor_archer_saracin_5,
+	itm_sa_armor_archer_saracin_6,
+	itm_sa_heavy_armor_arabs_5,
+    itm_seljuk_tunic,
+    itm_seljuk_tunic_c,
+    itm_seljuk_tunic_b,
+    itm_mamluk_shirt_b,
+
+    itm_arab_shield_a_3,
     itm_arab_shield_c_3,
 	itm_arab_shield_f_3,
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+
+    itm_faris_helmet,
+    itm_arab_helmet_d,
+    itm_arab_helmet_b,
+    itm_arab_mail_coif,
+    itm_black_guard_helmet,
+    itm_saracin_turban_a,
+    itm_saracin_turban_b,
+    itm_saracin_turban_c,
+
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+    itm_boots_tyrk_a,
+
+    itm_horse_e,
+    itm_horse_d,
+    itm_arabs_horse_a,
+	itm_arabs_horse_b,
+	itm_arabs_horse_c,
+    ],
+    horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
+    arab_face_2, arab_face_3
+  ],
+
+   ["halqa_cavalry_3",
+    "Halqa Professional Cavalry",
+    "Halqa Professional Cavalry",
+    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+    itm_sarranid_cavalry_sword,
+    itm_arabian_sword_d,
+    itm_sarranid_mace_1,
+    itm_morningstar,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+    itm_nomad_bow,
+    itm_khergit_bow,
+    itm_barbed_arrows,
+
+    itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
 	itm_saracin_shield_r_5,
 	itm_saracin_shield_r_6,
 	itm_saracin_shield_r_7,
@@ -19654,27 +19969,196 @@ itm_spear_p,
 	itm_saracin_shield_r_7,
 	itm_saracin_shield_r_4,
 	itm_saracin_shield_r_2,
-	itm_bandit_shield_2,
-	itm_bandit_shield_3,
+
+    itm_mamluke_helm_b,
+    itm_faris_helmet,
+    itm_arab_helmet_d,
+    itm_arab_helmet_b,
+    itm_arab_mail_coif,
+    itm_black_guard_helmet,
+    itm_berber_helmet_g,
+    itm_arab_helmet_d,
+    itm_berber_white_turban,
+
+    itm_seljuk_tunic,
+    itm_seljuk_tunic_c,
+    itm_seljuk_tunic_b,
+    itm_mamluk_shirt_d,
+    itm_arab_mail_a,
+    itm_arab_mail_b,
+    itm_arab_mail_c,
+    itm_arab_mail_d,
+    itm_arab_banded_b,
+
+    itm_sa_saracin_medium_boot_1,
+    itm_sa_saracin_medium_boot_2,
+    itm_sa_saracin_hard_boot_1,
+    itm_boots_tyrk_b,
+
+    itm_arabian_horse_a,
+    itm_horse_e,
+    itm_horse_d,
+    ],
+    horse_attrib_5, cum_vharcher_wp, cum_vharcher_skills,
+    arab_face_3, arab_face_4
+  ],
+
+  ["slave_recruit",
+    "Slave Recruit",
+    "Slave Recruits",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+    #Helmet
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
+    itm_beduin_turban_3,
+    itm_beduin_turban_4,
+    itm_turban_a,
+    itm_turban_b,
+    itm_turban_c,
+    itm_headcloth,
+    itm_desert_turban,
+
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+    itm_berber_shoes,
 
 	#Armor
-	itm_sa_arabian_light_armor,
+	itm_sarranid_cloth_robe,
+    itm_sarranid_cloth_robe_b,
+    itm_sa_arabian_light_armor,
 	itm_sa_arabian_light_armor_2,
+    itm_mamluk_shirt_a,
+
+	#Weapon
+    itm_hatchet,
+    itm_bamboo_spear,
+    itm_sarranid_axe_b,
+    itm_raf_one_handed_axe_d,
+    itm_saracin_sword_a,
+
+	#Shield
+	itm_bandit_shield_1,
+    itm_bandit_shield_2,
+    itm_bandit_shield_3,
+    ],
+    foot_attrib_2, militia_wp, militia_skills,
+    arab_face_1, arab_face_2
+  ],
+
+  ["mamluk_levy",
+    "Mamluk Levy",
+    "Mamluk Levies",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_helmet|tf_guarantee_shield,
+    0,0,fac_kingdom_20,
+    [
+    #Weapon
+    itm_sarranid_axe_b,
+    itm_raf_one_handed_axe_d,
+    itm_saracin_sword_a,
+    itm_modded_arab_sword_1,
+    itm_nomad_bow,
+    itm_arrows,
+    
+    #Helmets
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
+    itm_beduin_turban_3,
+    itm_beduin_turban_4,
+    itm_turban_a,
+    itm_turban_b,
+    itm_turban_c,
+    itm_desert_turban,
+    itm_helm_saracin_3,
+    itm_helm_saracin_b,
+
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+
+	#Armor
+    itm_mamluk_jawshan_leather,
+	itm_sa_arabian_light_armor_3,
+	itm_sa_arabian_light_armor_4,
+    itm_kau_arab_aketon_red,
+    itm_kau_arab_aketon_green,
+    itm_archers_vest,
+
+    #Shield
+	itm_bandit_shield_1,
+	itm_bandit_shield_2,
+	itm_bandit_shield_3,
+    ],
+    ranged_attrib_3, archer_regulars_wp, archer_regulars_skills,
+    arab_face_3, arab_face_4
+  ],
+
+  ["mamluk_cavalry_1",
+    "Mamluk Junior Cavalry",
+    "Mamluk Junior Cavalry",
+    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+    #Weapons
+    itm_nomad_bow,
+    itm_barbed_arrows,
+    
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_bamboo_spear,
+    itm_arabian_sword_b,
+    itm_sarranid_cavalry_sword,
+    itm_sarranid_mace_1,
+    itm_morningstar,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	#Helmet
+	itm_mamluke_helm_ventail,
+    itm_turban_b,
+	itm_sa_helm_saracin_1,
+	itm_sa_helm_saracin_2,
+	itm_sa_helm_saracin_3,
+	itm_sa_helm_saracin_4,
+	itm_sa_helm_saracin_5,
+
+	#Shield
+	itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+    itm_arab_shield_f_3,
+	itm_saracin_shield_r_1,
+	itm_saracin_shield_r_2,
+	itm_saracin_shield_r_3,
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+
+	#Armor
 	itm_sa_arabian_light_armor_3,
 	itm_sa_arabian_light_armor_4,
 	itm_sa_armor_archer_saracin_1,
 	itm_sa_armor_archer_saracin_2,
-	itm_sa_armor_archer_saracin_2,
 	itm_sa_armor_archer_saracin_3,
-	itm_sa_armor_archer_saracin_3,
-	itm_sa_armor_archer_saracin_4,
-	itm_sa_armor_archer_saracin_3,
+    itm_kau_arab_mail_shirt_d,
+    itm_sarranid_cavalry_robe,
+    itm_arabian_armor_b,
+    itm_seljuk_tunic,
+    itm_seljuk_tunic_c,
+    itm_seljuk_tunic_b,
 
 	#Boots
-	itm_sa_saracin_light_boot_2,
+	itm_sa_saracin_light_boot_1,
 	itm_sa_saracin_light_boot_2,
 	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
 
     #itm_arabian_horse_a,
     #itm_arabian_horse_b,
@@ -19683,81 +20167,330 @@ itm_spear_p,
 	itm_arabs_horse_c,
 	itm_arabs_horse_d,
     ],
-    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
-
-
-    arab_face_1, arab_face_2
+    horse_attrib_4, cum_horseman_wp, cum_horseman_skills,
+    arab_face_2, arab_face_3
   ],
 
-  ["halqa_cav_2",
-    "Muhanak al Halqa Khayl",
-    "Mahanik al Halqa Khayl",
-    tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
+  ["mamluk_cavalry_2",
+    "Mamluk Regular Cavalry",
+    "Mamluk Regular Cavalry",
+    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
     itm_nomad_bow,
     itm_khergit_bow,
+    itm_saracin_bow_c,
     itm_barbed_arrows,
 
+    itm_lance,
+    itm_lance,
+    itm_lance,
+    itm_lance,
+    itm_lance,
+    itm_lance,
     itm_sarranid_cavalry_sword,
     itm_arabian_sword_d,
-    itm_sword_type_xii,
+    itm_arabian_sword_b,
     itm_sarranid_mace_1,
+    itm_morningstar,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
+    itm_seljuk_tunic,
+    itm_seljuk_tunic_c,
+    itm_armor_medium_tyrk_a,
+    itm_armor_medium_tyrk_b,
+    itm_armor_medium_tyrk_c,
+    itm_saracen_mail,
+    itm_arab_mail_b,
     itm_arab_mail_c,
     itm_arab_mail_d,
-    itm_kau_arab_mail_shirt_b,
-    itm_kau_arab_mail_shirt_c,
 
-    itm_byz_shield_4,
-
-    itm_faris_helmet,
-    itm_faris_helmet,
     itm_arab_helmet_d,
     itm_arab_helmet_b,
     itm_arab_mail_coif,
-    itm_arab_mail_coif,
     itm_black_guard_helmet,
-    itm_black_guard_helmet,
-    itm_rus_helmet,
+    itm_mamluke_helm,
+    itm_mamluke_helm_b,
 
+    itm_sa_saracin_medium_boot_1,
+    itm_boots_tyrk_a,
+    itm_boots_tyrk_b,
+    itm_boots_tyrk_c,
 
-    itm_nomad_bow,
-    itm_khergit_bow,
-    itm_barbed_arrows,
+    #Shield
+    itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+    itm_arab_shield_f_3,
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_2,
 
-    itm_mamluke_boots,
-
+    itm_arabs_horse_a,
+	itm_arabs_horse_b,
     itm_horse_e,
     itm_horse_d,
     itm_hunter,
     ],
-    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
+    horse_attrib_5, cum_harcher_wp, cum_harcher_skills,
     arab_face_3, arab_face_4
   ],
 
-    [
-    "halqa_cav_3",
-    "Sifyan al Halqa",
-    "Sifyan al Halqa",
-    tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
+  ["mamluk_cavalry_3",
+    "Mamluk Elite Cavalry",
+    "Mamluk Elite Cavalry",
+    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
-    itm_sarranid_cavalry_sword,
-    itm_arabian_sword_d,
-    itm_sword_type_xii,
-    itm_sarranid_mace_1,
+        #Weapons
+        itm_saracin_bow_a,
+        itm_saracin_bow_b,
+        itm_saracin_bow_c,
+        itm_arrow_tyrk_a,
+
+        itm_heavy_lance,
+        itm_heavy_lance,
+        itm_heavy_lance,
+        itm_heavy_lance,
+        itm_heavy_lance,
+        itm_heavy_lance,
+        itm_sarranid_cavalry_sword,
+        itm_arabian_sword_d,
+        itm_modded_arab_sword_1,
+        itm_modded_arab_sword_2,
+        itm_sarranid_mace_1,
+        itm_morningstar,
+        itm_sarranid_axe_a,
+        itm_sarranid_axe_b,
+
+        #Helmet
+        itm_ghulam_helmet,
+        itm_mamluke_helm,
+        itm_helm_tyrk_1,
+        itm_helm_tyrk_2,
+        itm_helm_tyrk_3,
+        itm_helm_tyrk_5,
+        itm_helm_tyrk_heavi_a,
+        itm_seljuk_helmet,
+
+    	#Shield
+        itm_arab_shield_a_3,
+        itm_arab_shield_b_3,
+        itm_arab_shield_c_3,
+        itm_arab_shield_d_3,
+        itm_arab_shield_e_3,
+        itm_arab_shield_f_3,
+        itm_arab_shield_g_3,
+        itm_arab_shield_h_3,
+        itm_arab_shield_i_3,
+        itm_saracin_shield_r_4,
+        itm_saracin_shield_r_2,
+        
+        #Armor
+        itm_mamluk_lamellar,
+        itm_kau_arab_nobleman,
+        itm_arab_banded_b,
+        itm_arab_banded_c,
+        itm_arab_banded_a,
+
+        #Boots
+        itm_boots_tyrk_b,
+        itm_boots_tyrk_a,
+        itm_boots_tyrk_c,
+        itm_sa_saracin_hard_boot_1,
+        itm_sa_saracin_hard_boot_2,
+
+        itm_european_horse_f,
+        itm_horse_e,
+        itm_horse_d,
+        itm_hunter,
+        itm_saracin_hard_horses_a_v1,
+        itm_saracin_hard_horses_b_v1,
+        itm_saracin_hard_horses_c_v1,
+        itm_saracin_hard_horses_d_v1,
+    ],
+    horse_attrib_elite, cum_vharcher_wp, cum_vharcher_skills,
+    arab_face_3, arab_face_4
+  ],
+
+  ["ghulam_levy",
+    "Ghulam Levy",
+    "Ghulam Levies",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
+    0,0,fac_kingdom_20,
+    [
+    #Helmet
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
+    itm_beduin_turban_3,
+    itm_beduin_turban_4,
+    itm_turban_a,
+    itm_turban_b,
+    itm_turban_c,
+    itm_desert_turban,
+    itm_saracin_turban_a,
+    itm_helm_saracin_3,
+    itm_helm_saracin_b,
+
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+
+	#Armor
+    itm_kau_arab_mail_shirt_d,
+    itm_mamluk_jawshan_leather,
+    itm_sa_armor_archer_saracin_1,
+    itm_sa_arabian_light_armor,
+    itm_sa_arabian_light_armor_2,
+    itm_sa_arabian_light_armor_3,
+
+	#Weapon
+    itm_spear_d,
+    itm_spear_a,
+    itm_modded_arab_sword_1,
+    itm_modded_arab_sword_2,
+    itm_modded_arab_sword_3,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
-    # itm_muslim_lance,
-    # itm_heraldic_lance,
-    itm_nomad_bow,
-    itm_khergit_bow,
-    itm_barbed_arrows,
+	#Shield
+	itm_bandit_shield_1,
+	itm_bandit_shield_2,
+	itm_bandit_shield_3,
+    ],
+    foot_attrib_3, swords_regulars_wp, swords_regulars_skills,
+    arab_face_1, arab_face_2
+  ],
 
+  ["ghulam_cavalry_1",
+    "Ghulam Light Cavalry",
+    "Ghulam Light Cavalry",
+    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
+    0,0,fac_kingdom_20,
+    [
+	#Boots
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+    itm_boots_tyrk_b,
+    itm_boots_tyrk_a,
+    itm_boots_tyrk_c,
+
+	#Armor
+	itm_armor_medium_tyrk_a,
+	itm_armor_medium_tyrk_b,
+	itm_armor_medium_tyrk_c,
+	itm_armor_medium_tyrk_d,
+	itm_armor_medium_tyrk_e,
+	itm_armor_medium_tyrk_f,
+
+	#Helmet
+	itm_arab_helmet_b,
+	itm_arab_helmet_c,
+	itm_ghulam_helmet,
+	itm_gulam_helm_a,
+	itm_gulam_helm_b,
+	itm_gulam_helm_c,
+	itm_gulam_helm_d,
+	itm_gulam_helm_f,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_5,
+	itm_helm_tyrk_heavi_a,
+
+	#Weapon
+	itm_lance,
+    itm_lance,
+    itm_lance,
+    itm_lance,
+    itm_arabian_sword_d,
+    itm_sarranid_mace_1,
+    itm_morningstar,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+    #Shield
+    itm_arab_shield_c_3,
+	itm_arab_shield_f_3,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+	itm_saracin_shield_r_7,
+	itm_saracin_shield_r_7,
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_2,
+
+	#Gloves
+	itm_sa_gloves_a,
+
+	#Horse
+	itm_arabs_horse_a,
+	itm_arabs_horse_b,
+	itm_arabs_horse_c,
+	itm_arabs_horse_d,
+    ],
+    horse_attrib_4, cum_horseman_wp, cum_horseman_skills,
+    arab_face_3, arab_face_4
+    ],
+
+  ["ghulam_cavalry_2",
+    "Ghulam Cavalry",
+    "Ghulam Cavalry",
+    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
+    0,0,fac_kingdom_20,
+    [
+	#Boots
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+	itm_sa_saracin_hard_boot_1,
+	itm_sa_saracin_hard_boot_2,
+    itm_boots_tyrk_b,
+    itm_boots_tyrk_a,
+    itm_boots_tyrk_c,
+
+	#Armor
+	itm_sa_heavy_armor_arabs_1,
+	itm_sa_heavy_armor_arabs_2,
+    itm_mamluk_shirt_f,
+    itm_arab_mail_a,
+    itm_arab_mail_b,
+    itm_arab_mail_c,
+    itm_arab_mail_d,
+    itm_mamluk_shirt_f,
+
+	#Helmet
+	itm_arab_helmet_b,
+	itm_arab_helmet_c,
+	itm_ghulam_helmet,
+	itm_mamluke_helm,
+	itm_gulam_helm_a,
+	itm_gulam_helm_b,
+	itm_gulam_helm_c,
+	itm_gulam_helm_d,
+	itm_gulam_helm_f,
+    itm_helm_tyrk_1,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_3,
+	itm_helm_tyrk_4,
+    itm_helm_tyrk_heavi_c,
+
+	#Weapon
+	itm_heavy_lance,
+    itm_heavy_lance,
+    itm_heavy_lance,
+    itm_heavy_lance,
+    itm_heavy_lance,
+    itm_arabian_sword_d,
+    itm_sarranid_mace_1,
+    itm_morningstar,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	#Gloves
+	itm_sa_gloves_a,
+    itm_mail_mittens,
+
+    #Shield
     itm_arab_shield_a_3,
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
@@ -19767,191 +20500,33 @@ itm_spear_p,
     itm_arab_shield_g_3,
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
-
-    itm_mamluke_helm_b,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_faris_helmet,
-    itm_faris_helmet,
-    itm_arab_helmet_d,
-    itm_arab_helmet_b,
-    itm_arab_mail_coif,
-    itm_arab_mail_coif,
-    itm_black_guard_helmet,
-    itm_black_guard_helmet,
-    itm_rus_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-
-
-    itm_mamluk_lamellar,
-    itm_arabian_armor_b,
-
-    itm_mamluke_boots,
-
-    itm_steppe_horse,
-    itm_arabian_horse_a,
-    itm_arabian_horse_b,
-    ],
-    horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
-    arab_face_3, arab_face_4
-  ],
-
-    ["mamluk_slave_1",
-    "Jadid Ghulam",
-    "Jadid Ghilman",
-    tf_guarantee_boots|tf_guarantee_armor,
-    0,0,fac_kingdom_20,
-    [
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-
-	#Armor
-	itm_black_guard,
-	itm_helm_saracin_3,
-	itm_helm_saracin_3,
-	itm_helm_saracin_b,
-
-	#Weapon
-    itm_arabian_sword_d,
-    itm_sword_type_xii,
-    itm_sarranid_mace_1,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Shield
-	itm_bandit_shield_1,
-
-    ],
-    horse_attrib_1, cum_horseman_wp, cum_horseman_skills,
-    arab_face_3, arab_face_4
-  ],
-
-    ["mamluk_slave_2",
-    "Ghulam",
-    "Ghilman",
-	tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_helmet|tf_guarantee_shield,
-    0,0,fac_kingdom_20,
-    [
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-
-	#Armor
-	itm_kau_arab_aketon_blue,
-	itm_arabian_lamellar,
-	itm_berber_tunic_b,
-
-	itm_gulam_helm_a,
-	itm_gulam_helm_b,
-	itm_gulam_helm_c,
-	itm_gulam_helm_d,
-	itm_gulam_helm_f,
-
-	#Weapon
-    itm_arabian_sword_d,
-    itm_sword_type_xii,
-    itm_sarranid_mace_1,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Gloves
-	itm_sa_gloves_a,
-
-	#Shield
-	itm_bandit_shield_1,
-
-    ],
-    horse_attrib_2, mamluk_ghulam_wp, mamluk_ghulam_skills,
-    arab_face_3, arab_face_4
-  ],
-
-    ["mamluk_horseman",
-    "Lesser Mamluk",
-    "Lesser Mamluks",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
-    0,0,fac_kingdom_20,
-    [
-	#Boots
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-	itm_sa_saracin_hard_boot_1,
-	itm_sa_saracin_hard_boot_2,
-
-	#Armor
-	itm_sa_heavy_armor_arabs_1,
-	itm_sa_heavy_armor_arabs_2,
-	itm_sa_heavy_armor_arabs_3,
-	itm_sa_heavy_armor_arabs_4,
-	itm_sa_heavy_armor_arabs_5,
-	itm_sa_heavy_armor_arabs_6,
-	itm_sa_heavy_armor_arabs_7,
-
-	#Helmet
-	itm_arab_helmet_b,
-	itm_arab_helmet_c,
-	itm_ghulam_helmet,
-	itm_mamluke_helm,
-	itm_gulam_helm_a,
-	itm_gulam_helm_a,
-	itm_gulam_helm_a,
-	itm_gulam_helm_b,
-	itm_gulam_helm_c,
-	itm_gulam_helm_d,
-	itm_gulam_helm_f,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_5,
-	itm_helm_tyrk_heavi_a,
-
-	#Weapon
-	itm_light_lance,
-    itm_arabian_sword_d,
-    itm_sarranid_mace_1,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Ranged
-    itm_saracin_bow_a,
-	itm_saracin_bow_b,
-	itm_saracin_bow_c,
-    itm_arrow_tyrk_a,
-
-	#Gloves
-	itm_sa_gloves_a,
+    itm_saracin_shield_r_1,
+    itm_saracin_shield_r_2,
+	itm_saracin_shield_r_3,
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_5,
 
 	#Horse
 	itm_arabs_horse_a,
-	itm_arabs_horse_b,
-	itm_arabs_horse_c,
-	itm_arabs_horse_d,
-
-	#Shield
-	#bandit_shield_1,
-
+    itm_horse_e,
+    itm_horse_d,
+    itm_hunter,
     ],
-    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
-    arab_face_3, arab_face_4
+    horse_attrib_5, cum_lancer_wp, cum_lancer_skills,
+    arab_face_2, arab_face_4
     ],
 
-    ["mamluk_lancer",
-    "Mamluk (Lancer)",
-    "Mamluks (Lancer)",
-    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
+  ["ghulam_cavalry_3",
+    "Ghulam Lancer Cavalry",
+    "Ghulam Lancer Cavalry",
+    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_gloves|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
     0,0,fac_kingdom_20,
     [
 	#Boots
 	itm_sa_saracin_hard_boot_1,
-	itm_sa_saracin_hard_boot_1,
 	itm_sa_saracin_hard_boot_2,
+    itm_sarranid_boots_d,
+    itm_sarranid_boots_d_long,
 
 	#Armor
 	itm_sa_ghulam_heavy_cavalryman_1,
@@ -19964,135 +20539,67 @@ itm_spear_p,
 	itm_tyrk_armor_heavi_b,
 
 	#Helmet
-	itm_arab_helmet_b,
-	itm_arab_helmet_c,
 	itm_ghulam_helmet,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
+    itm_seljuk_helmet,
 	itm_mamluke_helm,
 	itm_gulam_helm_a,
-	itm_gulam_helm_b,
-	itm_gulam_helm_c,
-	itm_gulam_helm_d,
-	itm_gulam_helm_f,
+    itm_helm_tyrk_1,
 	itm_helm_tyrk_2,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_5,
+	itm_helm_tyrk_3,
+	itm_helm_tyrk_4,
+    itm_helm_tyrk_5,
+    itm_helm_tyrk_6,
 	itm_helm_tyrk_heavi_a,
+    itm_helm_tyrk_heavi_b,
+    itm_helm_tyrk_heavi_c,
 
 	#Weapon
-	itm_muslim_lance,
-	itm_muslim_lance,
-	itm_muslim_lance,
+	itm_mameluk_spears_c_v_1,
+	itm_mameluk_spears_c_v_1,
+	itm_mameluk_spears_c_v_1,
+    itm_mameluk_spears_c_v_1,
+    itm_mameluk_spears_c_v_1,
+    itm_mameluk_spears_c_v_1,
     itm_arabian_sword_d,
+    itm_scimitar_b,
     itm_sarranid_mace_1,
+    itm_morningstar,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
-	#Ranged
-    itm_saracin_bow_a,
-	itm_saracin_bow_b,
-	itm_saracin_bow_c,
-    itm_arrow_tyrk_a,
-
 	#Gloves
-	itm_sa_gloves_a,
+    itm_mail_mittens,
+    itm_sa_gauntlets_arabs_1,
+
+	#Shield
+	itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+    itm_arab_shield_f_3,
+    itm_arab_shield_g_3,
+    itm_arab_shield_h_3,
+    itm_arab_shield_i_3,
 
 	#Horse
 	itm_saracin_hard_horses_a,
 	itm_saracin_hard_horses_b,
 	itm_saracin_hard_horses_c,
 	itm_saracin_hard_horses_d,
-
-	#Shield
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-
+    itm_european_horse_e,
+    itm_horse_e,
+    itm_horse_d,
+    itm_hunter,
+    itm_saracin_hard_horses_a_v1,
+    itm_saracin_hard_horses_b_v1,
+    itm_saracin_hard_horses_c_v1,
+    itm_saracin_hard_horses_d_v1,
     ],
-    horse_attrib_elite, cum_horseman_wp, cum_horseman_skills,
-    arab_face_3, arab_face_4
+    horse_attrib_elite, cum_hlancer_wp, cum_hlancer_skills,
+    arab_face_1, arab_face_3
   ],
 
-    ["mamluk_archer",
-    "Mamluk (Archer)",
-    "Mamluks (Archer)",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
-    0,0,fac_kingdom_20,
-    [
-	#Boots
-	itm_sa_saracin_hard_boot_1,
-	itm_sa_saracin_hard_boot_1,
-	itm_sa_saracin_hard_boot_2,
-
-	#Armor
-	itm_sa_ghulam_heavy_cavalryman_1,
-	itm_sa_ghulam_heavy_cavalryman_2,
-	itm_sa_ghulam_heavy_cavalryman_3,
-	itm_sa_ghulam_heavy_cavalryman_1,
-	itm_sa_ghulam_heavy_cavalryman_2,
-	itm_tyrk_armor_heavi_a,
-	itm_tyrk_armor_heavi_b,
-	itm_tyrk_armor_heavi_c,
-
-	#Helmet
-	itm_arab_helmet_b,
-	itm_arab_helmet_c,
-	itm_ghulam_helmet,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_mamluke_helm,
-	itm_gulam_helm_a,
-	itm_gulam_helm_b,
-	itm_gulam_helm_c,
-	itm_gulam_helm_d,
-	itm_gulam_helm_f,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_5,
-	itm_helm_tyrk_heavi_a,
-
-	#Weapon
-	itm_light_lance,
-    itm_arabian_sword_d,
-    itm_sarranid_mace_1,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Ranged
-    itm_saracin_bow_a,
-	itm_saracin_bow_b,
-	itm_saracin_bow_c,
-    itm_arrow_tyrk_a,
-	itm_arrow_tyrk_a,
-	itm_arrow_tyrk_b,
-	itm_arrow_tyrk_c,
-
-	#Gloves
-	itm_sa_gloves_a,
-
-	#Horse
-	itm_saracin_hard_horses_a,
-	itm_saracin_hard_horses_b,
-	itm_saracin_hard_horses_c,
-	itm_saracin_hard_horses_d,
-
-	#Shield
-	#bandit_shield_1,
-
-    ],
-    horse_attrib_5, cum_harcher_wp, cum_harcher_skills,
-    arab_face_3, arab_face_4
-  ],
   ["mamluke_turkoman_1",
     "Turkoman Horse Archer",
     "Turkoman Horse Archers",
@@ -26684,16 +27191,6 @@ itm_spear_p,
 	itm_tab_shield_kite_cav_a,
 	itm_shield_vostoka_b,
     itm_tab_shield_small_round_c,
-
-
-
-
-
-
-
-
-
-
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -26759,24 +27256,6 @@ itm_spear_p,
     itm_tied_up_shoes,
 
 	#Weapons
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     itm_scimitar,
     itm_arabian_sword_a,
     itm_sword_type_xii,
@@ -26804,24 +27283,12 @@ itm_spear_p,
 	itm_bolts,
     itm_crusade_bolt,
 
-
-
-
     itm_heavy_crossbow,
     itm_heavy_crossbow,
     itm_heavy_crossbow,
     itm_heavy_crossbow,
 	itm_sniper_crossbow,
 	itm_sniper_crossbow,
-
-
-
-
-
-
-
-
-
 
    	#Helmet
     itm_mamluk_cap,
@@ -26834,10 +27301,6 @@ itm_spear_p,
 	itm_ilkhanate_cap,
 	itm_cuman_cap_d,
     itm_arab_helmet_c,
-
-
-
-
 
     itm_arab_helmet_c,
 	itm_seljuk_helmet,
@@ -26883,9 +27346,6 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-
-
-
     ["anatolian_castle_recruit",
      "Mourtatoi Anatolikon Cavallarii",
      "Mourtatos Anatolikon Cavallarii",
@@ -26914,12 +27374,8 @@ itm_spear_p,
     itm_byz_psiloi_a,
     itm_byz_psiloi_a,
 
-
 	itm_arab_archer,
 	itm_arab_archer,
-
-
-
 
     #Boots
 	itm_leather_fur_boots,
@@ -26938,7 +27394,6 @@ itm_spear_p,
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
     ],
-
 
     ["anatolian_turkoman_1",
     "Jira Khvar Faris",
@@ -26975,8 +27430,6 @@ itm_spear_p,
 	itm_helm_tyrk_1,
 
     #Swords
-
-
     itm_sword_khergit_1,
     itm_sword_khergit_2,
     itm_sword_khergit_3,
@@ -67845,21 +68298,29 @@ upgrade(troops, "andalus_crossbowman_1", "andalus_crossbowman_2")
 upgrade(troops, "andalus_horse_1", "andalus_horse_2")
 upgrade(troops, "andalus_horse_2", "andalus_horse_3")
 upgrade(troops, "andalus_horse_3", "andalus_horse_4")
-# Mamluke
-##OK.
-##archers
-upgrade(troops, "halqa_recruit", "halqa_levy_spear")
-upgrade2(troops, "halqa_levy_spear", "halqa_light_spear", "halqa_archer")
-upgrade2(troops, "halqa_light_spear", "halqa_medium_spear", "halqa_cav_1")
-upgrade(troops, "halqa_cav_2", "halqa_cav_3")
-##infantry
-upgrade2(troops, "bedouin_recruit", "bedouin_cav_1", "bedouin_spearman")
-upgrade(troops, "bedouin_cav_1", "bedouin_cav_2")
-upgrade(troops, "bedouin_cav_2", "bedouin_cav_3")
-
-upgrade(troops, "mamluk_slave_1", "mamluk_slave_2")
-upgrade(troops, "mamluk_slave_2", "mamluk_horseman")
-upgrade2(troops, "mamluk_horseman", "mamluk_archer", "mamluk_lancer")
+# Mamluk
+## rural
+upgrade2(troops, "bedouin_recruit", "bedouin_skirmisher", "bedouin_cavalry_1")
+upgrade2(troops, "bedouin_skirmisher", "bedouin_guisarmer_1", "bedouin_javelin_1")
+upgrade(troops, "bedouin_guisarmer_1", "bedouin_guisarmer_2")
+upgrade(troops, "bedouin_javelin_1", "bedouin_javelin_2")
+upgrade(troops, "bedouin_cavalry_1", "bedouin_cavalry_2")
+upgrade(troops, "bedouin_cavalry_2", "bedouin_cavalry_3")
+## urban
+upgrade2(troops, "halqa_recruit", "halqa_spear_1", "halqa_archer")
+upgrade(troops, "halqa_spear_1", "halqa_spear_2")
+upgrade(troops, "halqa_spear_2", "halqa_spear_3")
+upgrade(troops, "halqa_archer", "halqa_cavalry_1")
+upgrade(troops, "halqa_cavalry_1", "halqa_cavalry_2")
+upgrade(troops, "halqa_cavalry_2", "halqa_cavalry_3")
+## castle
+upgrade2(troops, "slave_recruit", "mamluk_levy", "ghulam_levy")
+upgrade(troops, "mamluk_levy", "mamluk_cavalry_1")
+upgrade(troops, "mamluk_cavalry_1", "mamluk_cavalry_2")
+upgrade(troops, "mamluk_cavalry_2", "mamluk_cavalry_3")
+upgrade(troops, "ghulam_levy", "ghulam_cavalry_1")
+upgrade(troops, "ghulam_cavalry_1", "ghulam_cavalry_2")
+upgrade(troops, "ghulam_cavalry_2", "ghulam_cavalry_3")
 
 # Marinid - a bit wacky version
 ## Infantry -> bow -> crossbow
@@ -68333,6 +68794,9 @@ upgrade(troops,"merc_kern_infantry",  "merc_veteran_kern_infantry")
 upgrade(troops,"merc_veteran_kern_infantry",  "merc_elite_kern_infantry")
 
 upgrade(troops,"genoese_crossbowman",  "genoese_crossbowman_commander")
+
+upgrade(troops,"merc_almogavar_1", "merc_almogavar_2")
+upgrade(troops,"merc_almogavar_2", "merc_almogavar_3")
 ###################################### NEW MERC UPGRADES END
 
 
@@ -68402,7 +68866,7 @@ upgrade2(troops,"steppe_bandit", "tatar_tribesman", "cuman_tribesman")
 
 upgrade2(troops,"taiga_bandit", "rus_vil_1", "nordic_village_recruit")
 
-upgrade2(troops,"desert_bandit", "bedouin_recruit", "halqa_recruit")
+upgrade2(troops,"desert_bandit", "bedouin_recruit", "marinid_village_rabble")
 
 upgrade(troops,"looter", "farmer")
 
