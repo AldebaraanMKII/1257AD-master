@@ -1777,12 +1777,20 @@ horses_begin = "itm_sumpter_horse"
 horses_end = "itm_arrows"
 weapons_begin = "itm_wooden_stick"
 weapons_end = "itm_wooden_shield"
-ranged_weapons_begin = "itm_jarid"
-ranged_weapons_end = "itm_torch"
+####### NEW v2.9-KOMKE START-Changed 
+# ranged_weapons_begin = "itm_jarid"
+# ranged_weapons_end = "itm_torch"
+# armors_begin = "itm_leather_gloves"
+# armors_end = "itm_wooden_stick"
+# shields_begin = "itm_wooden_shield"
+# shields_end = "itm_jarid"
+ranged_weapons_begin = "itm_practice_bow_2"
+ranged_weapons_end = "itm_arrows"
 armors_begin = "itm_leather_gloves"
 armors_end = "itm_wooden_stick"
 shields_begin = "itm_wooden_shield"
-shields_end = "itm_jarid"
+shields_end = "itm_sumpter_horse"
+####### NEW v2.9-KOMKE END- 
 
 # Banner constants
 

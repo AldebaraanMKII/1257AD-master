@@ -6860,6 +6860,9 @@ dialogs = [
    (is_between, ":center_no", centers_begin, centers_end),
    (store_faction_of_party, ":center_faction", ":center_no"),
    (eq, ":center_faction", "fac_player_supporters_faction"),
+####### NEW v2.9-KOMKE START-        
+   (neg|party_slot_eq, ":center_no", slot_town_lord, "trp_player"),##KOMKE to exclude the fiefs already assigned to player
+####### NEW v2.9-KOMKE END-                
 ##diplomacy begin
    (neg|party_slot_eq, ":center_no", slot_village_infested_by_bandits, "trp_peasant_woman"),
     ##diplomacy end
@@ -6894,7 +6897,11 @@ dialogs = [
    [
    (str_store_party_name, s1, "$fief_selected"),
    (str_store_troop_name, s2, "trp_player"),
-   ], "Very well. You shall be the lord of {s1}.", "minister_pretalk",
+####### NEW v2.9-KOMKE START-      
+   # ], "Very well. You shall be the lord of {s1}.", "minister_pretalk",
+   ##KOMKE above: when s1 the in game result is a date, when $fief_selected the result is UNRECOGNIZED TOKEN, however the code works fine and the correct fief is assigned   
+   ], "Very well. You shall own this fief.", "minister_pretalk", ##KOMKE removed the s1  
+####### NEW v2.9-KOMKE END-       
    [
    (call_script, "script_give_center_to_lord", "$fief_selected", "trp_player", 0),
    
