@@ -88,9 +88,9 @@ party_templates = [
 ###########################
   
   
-  ("jihadist_raiders", "Jihadists", icon_khergit|pf_show_faction, 0 , fac_kingdom_25, soldier_personality,[(trp_bedouin_javelin_1,10,20),(trp_halqa_archer,10,15),(trp_bedouin_cavalry_2,10,15),(trp_mamluk_cavalry_2,5,8),(trp_halqa_cavalry_2,5,10)]),
+  ("jihadist_raiders", "Jihadists", icon_khergit|pf_show_faction, 0 , fac_kingdom_25, soldier_personality,[(trp_bedouin_spearman,10,20),(trp_halqa_archer,10,15),(trp_bedouin_cav_2,10,15),(trp_halqa_cav_2,5,8),(trp_mamluke_turkoman_2,5,10)]),
   ("teutonic_raiders", "Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_1, soldier_personality,[(trp_teu_horse_3, 1, 3), (trp_teu_town_2_2,2,6),(trp_teu_ger_1,3,10),(trp_teu_ger_2_1,5,10),(trp_teu_town_2_1,10,16),(trp_teu_town_3_2,5,8) ]),
-  #villages
+  #village
   #("empty", "Fields", pf_manor,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]), #this should be outside the range of a regular manor?
   ("manor", "Manor", pf_manor,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]),
   ("farm", "Farm", pf_manor,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]),
@@ -243,9 +243,9 @@ party_templates = [
   ("kingdom_byzantium_reinforcements_b", "{!}kingdom_byzantium_reinforcements_b", 0, 0, fac_kingdom_22, soldier_personality, [(trp_byz_village_3_1,1,3),(trp_byz_village_3_2,1,3),(trp_byz_town_3_1,2,6),(trp_byz_town_3_2,1,3)]),
   ("kingdom_byzantium_reinforcements_c", "{!}kingdom_byzantium_reinforcements_c", 0, 0, fac_kingdom_22, soldier_personality, [(trp_byz_castle_2, 2,5),(trp_byz_castle_4, 1,2)]),
 
-  ("kingdom_mamluke_reinforcements_a", "{!}kingdom_mamluke_reinforcements_a", 0, 0, fac_kingdom_25, soldier_personality, [(trp_halqa_recruit,4,9), (trp_halqa_cavalry_1,1,3), (trp_bedouin_recruit,4,9), (trp_mamluk_cavalry_1,0,1)]),
-  ("kingdom_mamluke_reinforcements_b", "{!}kingdom_mamluke_reinforcements_b", 0, 0, fac_kingdom_25, soldier_personality, [(trp_bedouin_javelin_1,1,3),(trp_halqa_archer,1,3),(trp_bedouin_cavalry_2,1,3),(trp_halqa_cavalry_2,1,3),(trp_mamluk_cavalry_1,2,4)]),
-  ("kingdom_mamluke_reinforcements_c", "{!}kingdom_mamluke_reinforcements_c", 0, 0, fac_kingdom_25, soldier_personality, [(trp_mamluk_cavalry_2, 2,3),(trp_ghulam_cavalry_2, 1,2)]),
+  ("kingdom_mamluke_reinforcements_a", "{!}kingdom_mamluke_reinforcements_a", 0, 0, fac_kingdom_25, soldier_personality, [(trp_halqa_recruit,4,9), (trp_mamluke_turkoman_1,1,3), (trp_bedouin_recruit,4,9), (trp_mamluke_turkoman_1,0,1)]),
+  ("kingdom_mamluke_reinforcements_b", "{!}kingdom_mamluke_reinforcements_b", 0, 0, fac_kingdom_25, soldier_personality, [(trp_bedouin_spearman,1,3),(trp_halqa_archer,1,3),(trp_bedouin_cav_2,1,3),(trp_halqa_cav_2,1,3),(trp_mamluke_turkoman_1,2,4)]),
+  ("kingdom_mamluke_reinforcements_c", "{!}kingdom_mamluke_reinforcements_c", 0, 0, fac_kingdom_25, soldier_personality, [(trp_mamluke_turkoman_2, 2,3),(trp_mamluke_turkoman_3, 1,2)]),
 
   ("kingdom_marinid_reinforcements_a", "{!}kingdom_marinid_reinforcements_a", 0, 0, fac_kingdom_28, soldier_personality, [(trp_marinid_village_rabble,13,32)]), # was 9, 21
   ("kingdom_marinid_reinforcements_b", "{!}kingdom_marinid_reinforcements_b", 0, 0, fac_kingdom_28, soldier_personality, [(trp_marinid_light_spearmen, 2, 5),(trp_marinid_light_lancer, 2, 5),(trp_marinid_mounted_skirmisher_2, 3, 12)]), # 3, 7 2, 8
@@ -358,7 +358,7 @@ party_templates = [
 
   ("seljuk_reinforcements_c", "{!}seljuk_reinforcements_c", 0, 0, fac_kingdom_27, soldier_personality, [(trp_anatolian_turkoman_3, 2,5)]),
    
-  ("almogavr", "{!}Lance", 0, 0, fac_neutral, soldier_personality, [(trp_merc_almogavar_1, 10, 20),(trp_merc_almogavar_2, 5, 10),]),
+  ("almogabar", "{!}Lance", 0, 0, fac_neutral, soldier_personality, [(trp_merc_almogabar, 20, 20)]),
   ("welsh_merc", "{!}Lance", 0, 0, fac_neutral, soldier_personality, [(trp_merc_welsh_bowman, 20, 25), (trp_merc_welsh_veteran_bowman, 3, 8), (trp_merc_welsh_elite_bowman, 0, 3)]),
   ("sicilian_merc_1", "{!}Lance", 0, 0, fac_neutral, soldier_personality, [(trp_merc_sicily_infantry_2, 5, 5),(trp_merc_sicily_infantry_1, 15, 15)]),
   ("sicilian_merc_2", "{!}Lance", 0, 0, fac_neutral, soldier_personality, [(trp_merc_sicily_foot_archer_2, 5, 5),(trp_merc_sicily_foot_archer_1, 15, 15)]),
@@ -377,7 +377,7 @@ party_templates = [
   ("generic_gaelic_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_merc_gaelic_spearman, 12, 15),(trp_merc_gaelic_axeman, 5, 7),(trp_merc_veteran_gaelic_spearman, 4, 8),(trp_merc_veteran_gaelic_axeman, 4, 7)]),
   ("generic_gaelic_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_merc_gaelic_spearman, 15, 20),(trp_merc_gaelic_axeman, 7, 10),(trp_merc_veteran_gaelic_spearman, 8, 12),(trp_merc_veteran_gaelic_axeman, 7, 10)]),
   ("generic_gaelic_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_merc_gaelic_spearman, 20, 25),(trp_merc_gaelic_axeman, 12, 15),(trp_merc_veteran_gaelic_spearman, 12, 16),(trp_merc_veteran_gaelic_axeman, 10, 14)]),
-  ("generic_mamluk", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_merc_mamluke_spearman, 12, 15),(trp_merc_mamluke_javalin, 7, 10),(trp_merc_mamluke_range, 5, 7),(trp_mamluk_cavalry_1, 3, 7)]),
+  ("generic_mamluk", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_merc_mamluke_spearman, 12, 15),(trp_merc_mamluke_javalin, 7, 10),(trp_merc_mamluke_range, 5, 7),(trp_merc_mamluke_syrian, 3, 7)]),
   ##historical
   ("company_genoese_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_genoese_crossbowman, 20, 25),(trp_genoese_crossbowman_commander, 1, 3)]),
   ("company_genoese_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_genoese_crossbowman, 30, 35),(trp_genoese_crossbowman_commander, 4, 6)]),

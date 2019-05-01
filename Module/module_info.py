@@ -3,4 +3,4 @@
 # Make sure you use forward slashes (/) and NOT backward slashes (\)
 
 
-export_dir = "C:/Users/Krzysiek/Desktop/1257AD - Enhanced Edition"
+export_dir = "C:/Program Files (x86)/Mount&Blade Warband/Modules/1257AD - Enhanced Edition"

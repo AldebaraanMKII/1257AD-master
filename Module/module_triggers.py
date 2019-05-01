@@ -1488,7 +1488,11 @@ triggers = [
     (party_get_icon, ":icon", ":cur_party"),
     (try_begin),
       (call_script, "script_cf_is_party_on_water", ":cur_party"),
-      (neg | is_between, ":icon", "icon_longship", "icon_bandit_marker"),
+####### NEW v2.9-KOMKE START- icon_crusaders is between longship and bandit_marker that's why it was excluded  
+      # (neg | is_between, ":icon", "icon_longship", "icon_bandit_marker"),
+      (neg | is_between, ":icon", "icon_longship", "icon_crusaders"),
+      (neg | is_between, ":icon", "icon_italy_new_a", "icon_bandit_marker"),
+####### NEW v2.9-KOMKE END-       
       (try_begin), #set the original icon to slot
         (party_slot_eq, ":cur_party", party_slot_original_icon, 0),
         (party_set_slot, ":cur_party", party_slot_original_icon, ":icon"),

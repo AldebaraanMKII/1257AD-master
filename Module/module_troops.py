@@ -918,7 +918,7 @@ troops = [
     ranged_merc_attrib_1, cum_horseman_wp, cum_horseman_skills,
     berber_face_1, berber_face_2
     ],
-    ##GENERIC MAMLUKE MERCS
+    ##GENETIC MAMLUKE MERCS
     ##GENERIC NORTH AFRICA MERCS
 
 
@@ -972,8 +972,8 @@ troops = [
     ],
 
    ["merc_maghreb_range",
-    "Maghreb Archer",
-    "Maghreb Archers",
+    "Merc East Muslim Archer",
+    "Merc East Muslim Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
@@ -1056,8 +1056,43 @@ troops = [
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     arab_face_1, arab_face_2
     ],
+
+   ["merc_almogabar",
+     "Almogabar",
+     "Almogabars",
+    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots |  tf_guarantee_gloves | tf_guarantee_ranged,
+    0, 0, fac_kingdom_1,
+    [
+    itm_javelin,
+    itm_throwing_spears,
+
+    itm_almogavar_a,
+    itm_almogavar_b,
+    itm_almogavar_c,
+
+    itm_1257_hood,
+    itm_leather_fur_boots,
+    itm_almogavar_helmet,
+    itm_felt_hat,
+    itm_woolen_cap,
+    itm_tied_up_shoes,
+
+    itm_leather_jerkin,
+    itm_pelt_coat,
+    itm_rawhide_coat,
+    itm_padded_cloth,
+
+    itm_almogavar_sword,
+
+    itm_leather_covered_round_shield,
+    itm_hide_covered_round_shield,
+
+    ],
+    ranged_merc_attrib_1, merc_thrower_wp_1, merc_thrower_skills_1,
+    euro_face_1, euro_face_2
+    ],
+
     ##GENERIC NORTH AFRICA MERCS
-    
     ##GENERAL RUS MERCS
   ["merc_rus_spearman",
      "Shestnik",
@@ -1268,7 +1303,6 @@ troops = [
     nord_face_young_1, vaegir_face_older_2
     ],
     ##GENERAL RUS MERCS
-
     ##GENERAL LATIN MERCS
     ["merc_latin_spearman",
      "Hastatus solidarius",
@@ -1549,58 +1583,6 @@ troops = [
     latin_face_1, latin_face_2
     ],
 
-    ["merc_almogavar_1",
-     "Almogavar",
-     "Almogavars",
-    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged,
-    0, 0, fac_kingdom_1,
-    [
-    #Weapon
-    itm_javelin,
-
-    itm_modded_mace_1,
-    itm_mace_2,
-    itm_falshion_1,
-    itm_modded_falchion_1,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-    itm_raf_one_handed_axe_h,
-
-    #Armour
-    itm_rawhide_coat,
-    itm_pelt_coat,
-    itm_almogavar_a,
-    itm_almogavar_b,
-    itm_almogavar_c,
-    itm_leather_jerkin,
-    itm_padded_cloth,
-    itm_balt_shirt_c,
-
-    #Helmet
-    itm_1257_hood_2,
-    itm_felt_hat,
-    itm_woolen_cap,
-    itm_leather_warrior_cap,
-    itm_1257_hood,
-    itm_skullcap,
-    itm_almogavar_helmet,
-
-    #Boots
-    itm_tied_up_shoes,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-
-    #Shield
-    itm_hide_covered_round_shield,
-    itm_leather_covered_round_shield,
-    itm_tab_shield_round_a,
-    itm_andalusian_shield_1,
-    itm_tab_shield_round_b,
-    ],
-    ranged_merc_attrib_1, merc_thrower_wp_1, merc_thrower_skills_1,
-    latin_face_1, latin_face_2
-    ],
 
     ["merc_latin_light",
      "Pedes",
@@ -2896,8 +2878,8 @@ troops = [
     ],
 
    ["merc_veteran_maghreb_range",
-    "Maghreb Veteran Archer",
-    "Maghreb Veteran Archers",
+    "Merc East Muslim Archer",
+    "Merc East Muslim Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
@@ -3481,61 +3463,6 @@ troops = [
     latin_face_1, latin_face_2
     ],
 
-     ["merc_almogavar_2",
-     "Almocaden Almogavar",
-     "Almocaden Almogavars",
-    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots |  tf_guarantee_gloves | tf_guarantee_ranged,
-    0, 0, fac_kingdom_1,
-    [
-    #Weapon
-    itm_javelin,
-
-    itm_modded_mace_1,
-    itm_mace_2,
-    itm_falchion,
-    itm_modded_falchion_2,
-    itm_raf_one_handed_axe_g,
-    itm_raf_one_handed_axe_h,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-
-    #Armour
-    itm_leather_jerkin,
-    itm_padded_cloth,
-    itm_balt_shirt_c,
-    itm_iberian_leather_armour_a,
-    itm_iberian_leather_armour_b,
-    itm_iberian_leather_armour_c,
-    itm_buff_leather,
-    itm_scale_shirt_a,
-
-    #Helmet
-    itm_1257_hood,
-    itm_skullcap,
-    itm_megreb_spangen,
-    itm_vik_spangen_b,
-    itm_vik_norman_helmet_e,
-    itm_vik_spangen_a,
-    itm_almogavar_helmet,
-
-    #Boots
-    itm_dark_grey_hose,
-    itm_green_hose_b,
-    itm_leather_fur_boots,
-
-    #Gloves
-    itm_sa_gloves_a,
-
-    #Shield
-    itm_tab_shield_round_a,
-    itm_andalusian_shield_1,
-    itm_tab_shield_round_b,
-    itm_andalusian_shield_2,
-    itm_andalusian_shield_3,
-    ],
-    ranged_merc_attrib_2, merc_thrower_wp_2, merc_thrower_skills_2,
-    latin_face_1, latin_face_2
-    ],
 
     ["merc_veteran_latin_light",
      "Pedes",
@@ -3599,10 +3526,12 @@ troops = [
     # itm_hunter_boots,
 
     ]+latin_vet_armors+latin_vet_gear,
+
+##KOMKE END
+
     foot_attrib_4, light_infantry_wp_2, light_infantry_skills_2,
     latin_face_1, latin_face_2
     ],
-    
     ##GENERAL IBERIAN MERCS
 
     ##GENERAL BALKAN MERCS
@@ -4727,8 +4656,8 @@ troops = [
     ],
 
    ["merc_elite_maghreb_range",
-    "Maghreb Elite Archer",
-    "Maghreb Elite Archers",
+    "Merc East Muslim Archer",
+    "Merc East Muslim Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
@@ -5302,61 +5231,6 @@ troops = [
     latin_face_1, latin_face_2
     ],
 
-    ["merc_almogavar_3",
-     "Adalid Almogavar",
-     "Adalid Almogavars",
-    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged,
-    0, 0, fac_kingdom_1,
-    [
-    #Weapon
-    itm_throwing_spears,
-
-    itm_modded_mace_1,
-    itm_mace_2,
-    itm_iberian_cleaver,
-    itm_almogavar_sword,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_e,
-
-    #Armour
-    itm_iberian_leather_armour_b,
-    itm_iberian_leather_armour_c,
-    itm_buff_leather,
-    itm_scale_shirt_a,
-    itm_studden_leather_armour_a,
-    itm_modded_mail_1,
-    itm_modded_mail_2,
-    itm_modded_mail_3,
-
-    #Helmet
-    itm_elm2,
-    itm_footman_helmet,
-    itm_almogavar_helmet,
-    itm_raf_spangen,
-    itm_elm8,
-    itm_elm6,
-    itm_andalusian_helmet_d,
-
-    #Boots
-    itm_leather_fur_boots,
-    itm_hunter_boots,
-    itm_leather_boots,
-
-    #Gloves
-    itm_gauntlets_crysader,
-
-    #Shield
-    itm_andalusian_shield_2,
-    itm_andalusian_shield_3,
-    itm_tab_shield_round_c,
-    itm_adarga_a,
-    itm_adarga_b,
-    ],
-    ranged_merc_attrib_3, merc_thrower_wp_3, merc_thrower_skills_3,
-    latin_face_1, latin_face_2
-    ],
 
     ["merc_elite_latin_light",
      "Pedes",
@@ -5420,6 +5294,9 @@ troops = [
     # itm_hunter_boots,
 
     ]+latin_elite_armors+latin_elite_gear,
+
+##KOMKE END
+
     foot_attrib_5, light_infantry_wp_3, light_infantry_skills_3,
     latin_face_1, latin_face_2
     ],
@@ -8425,6 +8302,8 @@ troops = [
     horse_attrib_4, cum_vharcher_wp, cum_vharcher_skills,
     mong_face_1, mong_face_2
     ],
+
+
 
   ["mamluke_light_horse_archer",
     "Mamluk Al-Sighar Al-Amir",
@@ -18115,8 +17994,6 @@ itm_spear_p,
 
     itm_beduin_armor_a,
     itm_beduin_armor_b,
-    itm_beduin_armor_b,
-    itm_beduin_armor_c,
 
     #itm_berber_helmet_a,
     itm_beduin_turban_1,
@@ -18165,11 +18042,6 @@ itm_spear_p,
     itm_beduin_armor_c,
     itm_arab_bandit_4,
     itm_arab_bandit_4,
-    itm_berber_robe_a,
-    itm_berber_robe_b,
-    itm_berber_robe_c,
-    itm_berber_kaftan,
-    itm_berber_tunic_b,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18220,13 +18092,9 @@ itm_spear_p,
 
     #Armor
     itm_beduin_armor_c,
+    itm_beduin_armor_c,
     itm_arab_bandit_4,
     itm_arab_bandit_2,
-    itm_berber_robe_a,
-    itm_berber_robe_b,
-    itm_berber_robe_c,
-    itm_berber_kaftan,
-    itm_berber_tunic_b,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18282,13 +18150,9 @@ itm_spear_p,
 
     #Armor
     itm_sa_arabian_light_armor,
-    itm_sa_arabian_light_armor_2,
-    itm_sa_arabian_light_armor_3,
-    itm_sa_arabian_light_armor_4,
-    itm_sa_armor_archer_saracin_1,
-    itm_sa_armor_archer_saracin_2,
-    itm_sa_armor_archer_saracin_3,
-    itm_andalusi_horseman_robe,
+    itm_sa_arabian_light_armor,
+    itm_sa_arabian_light_armor,
+    itm_sa_armor_archer_saracin_4,
 
     #Helmets
     itm_beduin_turban_3,
@@ -18308,11 +18172,6 @@ itm_spear_p,
 
     #Weapons
     itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_winged_mace,
-    itm_javelin,
     itm_javelin,
 
     itm_andalusian_shield_1,
@@ -18324,7 +18183,9 @@ itm_spear_p,
     itm_bandits_horse_b,
 
     ],
-    horse_attrib_1, nbl_horsemen_wp, nbl_horsemen_skills,
+    horse_attrib_1,
+    nbl_horsemen_wp,
+    nbl_horsemen_skills,
     morrocan_face_1, morrocan_face_2
   ],
 
@@ -18340,17 +18201,11 @@ itm_spear_p,
     itm_sa_saracin_medium_boot_1,
 
     #Armor
-    itm_andalusi_horseman_robe,
     itm_sa_arabian_light_armor,
-    itm_sa_armor_archer_saracin_1,
-    itm_sa_armor_archer_saracin_2,
-    itm_sa_armor_archer_saracin_3,
     itm_sa_armor_archer_saracin_4,
-    itm_sa_armor_archer_saracin_5,
-    itm_sa_armor_archer_saracin_6,
-    itm_sa_heavy_armor_arabs_1,
-    itm_sa_heavy_armor_arabs_2,
-    itm_sa_heavy_armor_arabs_3,
+    itm_sa_armor_archer_saracin_4,
+    itm_sa_armor_archer_saracin_4,
+    itm_sa_heavy_armor_arabs_4,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18366,6 +18221,8 @@ itm_spear_p,
     #Gloves
     itm_sa_gloves_a,
     itm_sa_gloves_a,
+    itm_lamellar_gauntlets,
+
 
     #Weapons
     itm_light_lance,
@@ -18403,30 +18260,36 @@ itm_spear_p,
     [
     #Boots
     itm_sa_saracin_medium_boot_1,
-    itm_sa_saracin_medium_boot_2,
+    itm_sa_saracin_medium_boot_1,
     itm_sa_saracin_hard_boot_1,
+
 
     #Armor
     itm_sa_armor_archer_saracin_4,
-    itm_sa_heavy_armor_arabs_6,
-    itm_sa_heavy_armor_arabs_7,
-    itm_sa_heavy_armor_arabs_8,
-    itm_berber_mail_b,
-    itm_berber_mail_a,
+    itm_sa_armor_archer_saracin_4,
+    itm_sa_heavy_armor_arabs_4,
+    itm_sa_heavy_armor_arabs_4,
+    itm_sa_heavy_armor_arabs_4,
 
     #Helmets
     itm_beduin_turban_2,
     itm_beduin_turban_3,
     itm_turban_b,
+    itm_turban_b,
+    itm_helm_saracin_b,
+    itm_helm_saracin_b,
     itm_helm_saracin_b,
     itm_andalus_infantry_helmet,
-    itm_berber_white_turban,
+    itm_andalus_infantry_helmet,
+	#itm_arab_nobleman_a,
 
     #Gloves
     itm_sa_gloves_a,
+    itm_lamellar_gauntlets,
+    itm_lamellar_gauntlets,
+
 
     #Weapons
-    itm_light_lance,
     itm_light_lance,
     itm_light_lance,
     itm_light_lance,
@@ -18436,7 +18299,6 @@ itm_spear_p,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
-    itm_moorish_axe,
 
     #Shields
     itm_andalusian_shield_1,
@@ -18576,12 +18438,9 @@ itm_spear_p,
     itm_beduin_armor_a,
     itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_arab_bandit_1,
+    itm_beduin_armor_c,
     itm_arab_bandit_4,
-    itm_sa_armor_archer_saracin_1,
-    itm_sa_armor_archer_saracin_2,
-    itm_sa_armor_archer_saracin_3,
-    itm_sa_armor_archer_saracin_4,
+    itm_arab_bandit_4,
 
     #Helmets
     itm_beduin_turban_1,
@@ -18589,6 +18448,8 @@ itm_spear_p,
     itm_beduin_turban_3,
     itm_beduin_turban_4,
     itm_turban_a,
+    itm_turban_b,
+    itm_turban_b,
     itm_turban_b,
     itm_elm2,
     itm_sa_helm_saracin_3,
@@ -18618,31 +18479,28 @@ itm_spear_p,
     itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
     itm_sa_saracin_light_boot_2,
-    itm_berber_shoes,
 
     #Armor
-    itm_sarranid_cloth_robe,
+    itm_sarranid_cloth_robe_b,
     itm_sarranid_cloth_robe_b,
     itm_sarranid_cloth_robe_b,
     itm_saracen_kaftan_b,
     itm_saracen_kaftan_b,
     itm_saracen_kaftan_d,
     itm_saracen_kaftan_c,
+        #itm_moors_quilted_kaftan_blue,
+        #itm_moors_quilted_kaftan_brown,
+
 
     #Helmets
-    itm_turban_a,
     itm_turban_b,
-    itm_turban_c,
-    itm_desert_turban,
-    itm_desert_turban,
+
 
     #Weapons
     itm_falchion,
     itm_butchering_knife,
     itm_knife,
     itm_berber_spear,
-    itm_spear_d,
-    itm_spear_a,
 
     #Shields
     itm_arab_shield_a_3,
@@ -18947,7 +18805,7 @@ itm_spear_p,
   ["marinid_mounted_skirmisher_2",
     "Murtaziqa Al-Makhzan Faris",
     "Murtaziqa Al-Makhzan Faris",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_ranged,
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
     #Boots
@@ -18959,8 +18817,9 @@ itm_spear_p,
     itm_beduin_armor_a,
     itm_beduin_armor_b,
     itm_beduin_armor_c,
+    itm_beduin_armor_c,
     itm_arab_bandit_4,
-    itm_arab_bandit_3,
+    itm_arab_bandit_4,
 
     #Helmets
     itm_beduin_turban_3,
@@ -18982,7 +18841,6 @@ itm_spear_p,
     itm_arabian_sword_b,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
-    itm_berber_spear,
 
     #Shield
     itm_andalusian_shield_1,
@@ -18994,56 +18852,65 @@ itm_spear_p,
     #Horse
     itm_bandits_horse_a,
     itm_bandits_horse_a,
+    itm_bandits_horse_a,
+    itm_bandits_horse_b,
+    itm_bandits_horse_b,
+    itm_bandits_horse_d,
     itm_bedyin_camel_a,
     itm_bedyin_camel_a,
     itm_bedyin_camel_a,
+
+
     ],
-    horse_attrib_4, cav_thrower_3_wp, cav_thrower_3_skills,
+    horse_attrib_4,
+    cav_thrower_3_wp,
+    cav_thrower_3_skills,
     berber_face_1, berber_face_2
   ],
 
   ["marinid_mounted_skirmisher_3",
     "Sharif Al-Makhzan Khayl",
     "Sharif Al-Makhzan Khayl",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse|tf_guarantee_ranged,
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_ranged|tf_mounted|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
 
     #Boots
     itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
-    itm_sa_saracin_medium_boot_1,
-    itm_sa_saracin_medium_boot_2,
+    itm_sa_saracin_light_boot_2,
 
     #Armor
     itm_beduin_armor_b,
     itm_beduin_armor_c,
-	itm_arab_bandit_1,
-    itm_arab_bandit_2,
-    itm_arab_bandit_2,
-	itm_arab_bandit_3,
-	itm_arab_bandit_4,
+    itm_beduin_armor_c,
+    itm_arab_bandit_4,
+    itm_arab_bandit_4,
 
     #Helmets
-    itm_berber_white_turban,
     itm_beduin_turban_3,
     itm_beduin_turban_4,
     itm_turban_b,
+    itm_turban_b,
     itm_elm2,
+    itm_elm2,
+    itm_sa_helm_saracin_3,
     itm_sa_helm_saracin_3,
     itm_helm_saracin_3,
     itm_andalus_infantry_helmet,
+    itm_andalus_infantry_helmet,
     itm_sa_helm_saracin_5,
+    itm_sa_helm_saracin_5,
+    itm_sa_helm_saracin_4,
     itm_sa_helm_saracin_4,
 
     #Weapon
-    itm_throwing_spears,
+    itm_javelin,
     itm_throwing_spears,
     itm_sarranid_cavalry_sword,
     itm_arabian_sword_b,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
-    itm_berber_spear,
 
     #Shield
     itm_andalusian_shield_1,
@@ -19053,29 +18920,42 @@ itm_spear_p,
     itm_berber_shield_3,
 
     #Horse
+    itm_bandits_horse_a,
+    itm_bandits_horse_b,
+    itm_bandits_horse_b,
+    itm_bedyin_camel_a,
+    itm_bedyin_camel_a,
+    itm_bedyin_camel_a,
+    itm_bedyin_camel_a,
     itm_bedyin_camel_a,
 
     ],
-    horse_attrib_5, cav_thrower_4_wp, cav_thrower_4_skills,
+    horse_attrib_5,
+    cav_thrower_4_wp,
+    cav_thrower_4_skills,
     berber_face_3, berber_face_4
   ],
 
 
-#NEW REVISON ASTACIUS 04/2019
-
+  #NEW REVISON
   ["bedouin_recruit",
     "Mutatawwi'a",
     "Mutatawwi'a",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
+    tf_guarantee_boots|tf_guarantee_armor,
     0,0,fac_kingdom_20,
     [
 	#Weapons
     itm_hatchet,
     itm_pickaxe,
+
     itm_pitch_fork,
+
+
     itm_spear_d,
+    itm_spear_a,
 
 	#Boots
+    itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
 	itm_berber_shoes,
@@ -19083,7 +18963,10 @@ itm_spear_p,
     #Armor
     itm_beduin_armor_a,
     itm_beduin_armor_b,
-    itm_berber_tunic_c,
+    #itm_beduin_armor_c,
+    #itm_beduin_armor_c,
+    #itm_arab_bandit_4,
+    #itm_arab_bandit_4,
 
     #Helmets
     itm_beduin_turban_1,
@@ -19092,494 +18975,352 @@ itm_spear_p,
     itm_beduin_turban_4,
     itm_turban_a,
     itm_turban_b,
+    itm_turban_b,
+    itm_turban_b,
+    itm_turban_a,
+    itm_turban_b,
     itm_turban_c,
     itm_headcloth,
     itm_desert_turban,
+    itm_desert_turban,
+    # itm_turban,
+    # itm_turban,
+    # itm_turban,
+    # itm_turban,
+
+
+
+
     ],
     foot_attrib_2, militia_wp, militia_skills,
-	arab_face_1, berber_face_1
+	arab_face_1, arab_face_2
   ],
 
-  ["bedouin_skirmisher",
-    "Bedouin Auxiliary",
-    "Bedouin Auxiliaries",
+  ["bedouin_spearman",
+    "Ramah al Bedouh",
+    "Armah al Bedouh",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
     0,0,fac_kingdom_20,
     [
-	#Ranged
-    itm_javelin,
-    itm_javelin,
-
 	#Weapons
-    itm_modded_falchion_1,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_bamboo_spear,
+
+    itm_spear_k,
+    itm_spear_l,
+    itm_spear_j,
+    itm_spear_d,
+
+
+    itm_spear_a,
+    itm_falchion,
+    itm_hatchet,
+    itm_pickaxe,
 
 	#Boots
     itm_sa_saracin_light_boot_1,
+    itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
+	itm_berber_shoes,
 
     #Armor
     itm_beduin_armor_a,
     itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_arab_bandit_1,
+    itm_beduin_armor_c,
     itm_arab_bandit_4,
-    itm_arab_bandit_1,
-    itm_arab_bandit_4,
-    itm_kau_arab_aketon_red,
-    itm_kau_arab_aketon_green,
-    itm_sa_arabian_light_armor,
-    itm_sa_arabian_light_armor_2,
+    #itm_arab_bandit_4,
 
     #Helmets
     itm_beduin_turban_1,
     itm_beduin_turban_2,
     itm_beduin_turban_3,
+    itm_beduin_turban_4,
 	itm_beduin_turban_4,
     itm_turban_a,
     itm_turban_b,
     itm_turban_c,
     itm_headcloth,
     itm_desert_turban,
-    itm_saracin_turban_a,
+    itm_desert_turban,
+    # itm_turban,
+    # itm_turban,
 
 	#Shields
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
 	itm_saracin_shield_r_7,
+
+
+	itm_saracin_shield_r_6,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+
+
+    itm_arab_shield_f_3,
+    itm_arab_shield_g_3,
+    itm_arab_shield_h_3,
+    itm_arab_shield_i_3,
 	itm_bandit_shield_1,
 	itm_bandit_shield_2,
 	itm_bandit_shield_3,
+
+
+
+
+
+
+
+
     ],
-    ranged_attrib_3, skirmisher_wp, skirmisher_skills,
-    arab_face_2, berber_face_2
+    foot_attrib_3,
+    pikes_regulars_wp,
+    pikes_regulars_skills,
+    arab_face_3, arab_face_4
   ],
 
-  ["bedouin_guisarmer_1",
-    "Bedouin Infantryman",
-    "Bedouin Infantrymen",
-    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_20,
-    [
-    #Weapons
-    itm_modded_fauchard_1,
-    itm_modded_fauchard_2,
-    itm_modded_glaive_fork_1,
-    itm_modded_glaive_fork_2,
-
-    #Helmet
-    itm_beduin_turban_4,
-    itm_saracin_turban_a,
-    itm_saracin_turban_b,
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_turban_b,
-    itm_turban_c,
-	itm_sa_helm_saracin_6,
-	itm_sa_helm_saracin_7,
-	itm_sa_helm_saracin_8,
-    itm_arab_helmet_b,
-	itm_arab_helmet_c,
-    itm_arab_helmet_d,
-	itm_arab_mail_coif,
-	itm_mamluke_helm_b,
-    itm_sarranid_mail_coif,
-	itm_black_guard_helmet,
-    
-	#Armor
-    itm_arab_bandit_3,
-    itm_arab_bandit_3,
-    itm_sa_armor_archer_saracin_1,
-    itm_sa_armor_archer_saracin_2,
-    itm_sa_armor_archer_saracin_3,
-	itm_sa_heavy_armor_arabs_6,
-	itm_sa_heavy_armor_arabs_7,
-	itm_sa_heavy_armor_arabs_8,
-    itm_arab_mail_a,
-
-	#Boots
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-    ],
-    foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
-    arab_face_1, berber_face_2
-    ],
-
-    ["bedouin_guisarmer_2",
-    "Bedouin Veteran Infantryman",
-    "Bedouin Veteran Infantrymen",
-    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_20,
-    [
-    #Weapons
-    itm_long_hafted_knobbed_mace,
-    itm_modded_spiked_voulge,
-    itm_modded_cleaving_voulge,
-    itm_modded_voulge,
-    itm_modded_guisarme,
-
-    #Helmet
-    itm_saracin_turban_a,
-	itm_saracin_turban_b,
-	itm_saracin_turban_c,
-	itm_sa_helm_saracin_6,
-	itm_sa_helm_saracin_7,
-	itm_sa_helm_saracin_8,
-	itm_arab_helmet_c,
-	itm_arab_helmet_b,
-	itm_arab_mail_coif,
-	itm_mamluke_helm_b,
-	itm_black_guard_helmet,
-	itm_arab_helmet_d,
-
-	#Armor
-    itm_arab_bandit_3,
-    itm_arab_bandit_2,
-    itm_arab_bandit_2,
-    itm_sa_heavy_armor_arabs_4,
-	itm_sa_heavy_armor_arabs_5,
-	itm_sa_heavy_armor_arabs_6,
-	itm_sa_heavy_armor_arabs_7,
-	itm_sa_heavy_armor_arabs_8,
-    itm_mamluk_shirt_f,
-    itm_arab_mail_a,
-    itm_arab_mail_b,
-    itm_seljuk_scale_a,
-
-	#Boots
-	itm_sa_saracin_medium_boot_1,
-    itm_sa_saracin_medium_boot_2,
-    itm_sa_saracin_hard_boot_2,
-    ],
-    foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-    arab_face_2, berber_face_1
-    ],
-
-    ["bedouin_javelin_1",
-     "Bedouin Warrior",
-     "Bedouin Warriors",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
-    0, 0, fac_kingdom_20,
-    [
-    #Weapons
-    itm_javelin,
-    itm_javelin,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-    itm_modded_falchion_1,
-    
-	#Helmet
-    itm_beduin_turban_4,
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_beduin_turban_3,
-    itm_turban_a,
-    itm_turban_b,
-    itm_turban_c,
-    itm_sarranid_mail_coif,
-	itm_sa_helm_saracin_3,
-	itm_sa_helm_saracin_4,
-	itm_sa_helm_saracin_5,
-    itm_arab_helmet_b,
-	itm_arab_helmet_c,
-	itm_saracin_turban_a,
-	itm_saracin_turban_b,
-    itm_saracin_turban_c,
-
-    #Armor
-    itm_beduin_armor_c,
-    itm_beduin_armor_c,
-	itm_sa_armor_archer_saracin_1,
-	itm_sa_armor_archer_saracin_2,
-	itm_sa_armor_archer_saracin_3,
-	itm_sa_armor_archer_saracin_4,
-    itm_arab_bandit_1,
-	itm_arab_bandit_3,
-	itm_arab_bandit_4,
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-    itm_sa_saracin_medium_boot_2,
-
-	#Shields
-	itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_saracin_shield_r_1,
-	itm_saracin_shield_r_2,
-	itm_saracin_shield_r_3,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-    ],
-    ranged_attrib_4, thrown_regulars_wp, thrown_regulars_skills,
-    arab_face_3, berber_face_3
-    ],
-
-    ["bedouin_javelin_2",
-    "Bedouin Veteran Warrior",
-    "Bedouin Veteran Warriors",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-    #Weapons
-    itm_throwing_spears,
-    itm_javelin,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-    itm_saracin_sword_c,
-    itm_saracin_sword_d,
-    itm_arabian_sword_b,
-    itm_arabian_sword_d,
-
-    #Helmet
-    itm_sarranid_mail_coif,
-	itm_sa_helm_saracin_6,
-	itm_sa_helm_saracin_7,
-	itm_sa_helm_saracin_8,
-    itm_arab_helmet_b,
-	itm_arab_helmet_c,
-    itm_arab_helmet_d,
-	itm_arab_mail_coif,
-	itm_black_guard_helmet,
-    itm_saracin_turban_a,
-    itm_saracin_turban_b,
-
-	#Shield
-	itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-	itm_saracin_shield_r_1,
-	itm_saracin_shield_r_2,
-	itm_saracin_shield_r_3,
-
-	#Armor
-    itm_kau_arab_aketon_blue,
-    itm_kau_arab_mail_shirt_d,
-	itm_sa_armor_archer_saracin_2,
-	itm_sa_armor_archer_saracin_3,
-	itm_arab_bandit_3,
-    itm_arab_bandit_3,
-    itm_arab_bandit_2,
-    itm_arab_bandit_2,
-	itm_sa_heavy_armor_arabs_1,
-	itm_sa_heavy_armor_arabs_2,
-	itm_sa_heavy_armor_arabs_3,
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-    ],
-    ranged_attrib_5, thrown_veteran_wp, thrown_veteran_skills,
-    arab_face_4, berber_face_4
-  ],
-
-    ["bedouin_cavalry_1",
-    "Bedouin Auxiliary Cavalry",
-    "Bedouin Auxiliary Cavalry",
+[
+	#Scout
+    "bedouin_cav_1",
+    "Faris al Bedouh",
+    "Fursan al Bedouh",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
-    #Ranged
-    itm_javelin,
-    itm_javelin,
 
 	#Weapons
     itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
+    itm_spear_k,
+    itm_spear_l,
+    itm_spear_j,
+    itm_spear_d,
+    itm_spear_a,
+
     itm_falchion,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_hatchet,
     itm_pickaxe,
-    itm_winged_mace,
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	#Boots
     itm_sa_saracin_light_boot_1,
+    itm_sa_saracin_light_boot_1,
     itm_sa_saracin_light_boot_2,
+	itm_berber_shoes,
 
     #Armor
     itm_beduin_armor_a,
+    itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_arab_bandit_1,
+    itm_beduin_armor_c,
     itm_arab_bandit_4,
-    itm_arab_bandit_1,
     itm_arab_bandit_4,
 
     #Helmets
+    itm_beduin_turban_1,
     itm_beduin_turban_2,
     itm_beduin_turban_3,
     itm_beduin_turban_4,
+	itm_beduin_turban_4,
     itm_turban_a,
     itm_turban_b,
+    itm_turban_c,
     itm_headcloth,
     itm_desert_turban,
-    itm_saracin_turban_a,
+    itm_desert_turban,
+    # itm_turban,
+    # itm_turban,
 
 	#Shields
-    itm_arab_shield_a_3,
-    itm_saracin_shield_r_5,
-    itm_saracin_shield_r_6,
 	itm_saracin_shield_r_7,
 	itm_bandit_shield_1,
 	itm_bandit_shield_2,
+	itm_bandit_shield_2,
 	itm_bandit_shield_3,
+
+	#Ranged
+    itm_javelin,
 
 	#Horse
     itm_bandits_horse_a,
+    itm_bandits_horse_a,
+    itm_bandits_horse_a,
+    itm_bandits_horse_b,
     itm_bandits_horse_b,
     itm_bandits_horse_d,
     ],
-    horse_attrib_3, cav_thrower_2_wp, cav_thrower_2_skills,
+    horse_attrib_2,
+    cav_thrower_2_wp,
+    cav_thrower_2_skills,
     arab_face_1, arab_face_2
   ],
 
-    ["bedouin_cavalry_2",
-    "Bedouin Cavalry",
-    "Bedouin Cavalry",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet|tf_guarantee_ranged,
+[
+    "bedouin_cav_2",
+    "Faris al Bedouh Murtaziqa",
+    "Fursan al Bedouh Murtaziqoun",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
-    #Ranged
-    itm_javelin,
-	itm_javelin,
 
 	#Weapons,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
+	itm_light_lance,
     itm_falchion,
+    itm_hatchet,
+    itm_pickaxe,
     itm_arabian_sword_a,
     itm_arabian_sword_b,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
     itm_sarranid_mace_1,
 	itm_scimitar_b,
+	itm_scimitar_b,
+
+
+
+
+
+
 
 	#Boots
     itm_sa_saracin_light_boot_1,
+    itm_sa_saracin_light_boot_1,
+    itm_sa_saracin_light_boot_2,
 	itm_sa_saracin_medium_boot_2,
-    itm_sa_saracin_medium_boot_1,
+	itm_berber_shoes,
 
     #Armor
+    itm_beduin_armor_a,
+    itm_beduin_armor_b,
     itm_beduin_armor_c,
-    itm_arab_bandit_2,
-    itm_arab_bandit_1,
+    itm_beduin_armor_c,
     itm_arab_bandit_4,
-    itm_arab_bandit_3,
-    itm_arab_bandit_3,
-    itm_arab_bandit_3,
-    
+    itm_arab_bandit_4,
+
     #Helmets
-    itm_gulam_helm_a,
-	itm_gulam_helm_b,
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
+    itm_beduin_turban_3,
     itm_beduin_turban_4,
 	itm_beduin_turban_4,
-    itm_saracin_turban_a,
-    itm_saracin_turban_b,
+    itm_turban_a,
+    itm_turban_b,
+    itm_turban_c,
+    itm_headcloth,
     itm_desert_turban,
     itm_desert_turban,
+    # itm_turban,
+    # itm_turban,
 	itm_balt_helmet_b,
 
 	#Shields
-    itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_saracin_shield_r_3,
-	itm_saracin_shield_r_4,
-    itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
 	itm_bandit_shield_1,
 	itm_bandit_shield_2,
+	itm_bandit_shield_2,
+	itm_bandit_shield_3,
 
-	#Horse
-    itm_bedyin_camel_a,
-    ],
-    horse_attrib_4, cav_thrower_3_wp, cav_thrower_3_skills,
-    berber_face_1, berber_face_2
-  ],
-
-  ["bedouin_cavalry_3",
-    "Bedouin Loyal Cavalry",
-    "Bedouin Loyal Cavalry",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet|tf_guarantee_ranged,
-    0,0,fac_kingdom_20,
-    [
-    #Ranged
+	#Ranged
     itm_javelin,
 	itm_javelin,
 
+	#Horse
+    itm_bedyin_camel_a,
+
+
+
+    ],
+    horse_attrib_3,
+    cav_thrower_3_wp,
+    cav_thrower_3_skills ,
+    arab_face_1, arab_face_2
+  ],
+
+[
+    "bedouin_cav_3",
+    "Sharif Fursan Al Arab",
+    "Shurafa'a Fursan Al-Arab",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+
 	#Weapons
-    itm_lance,
-    itm_lance,
-    itm_lance,
+    itm_light_lance,
     itm_lance,
     itm_arabian_sword_b,
     itm_arabian_sword_d,
     itm_scimitar_b,
+	itm_scimitar_b,
+    itm_sword_type_xii,
     itm_sarranid_mace_1,
     itm_sarranid_axe_a,
+	itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
 	#Boots
     itm_sa_saracin_medium_boot_1,
 	itm_sa_saracin_medium_boot_2,
+    itm_sa_saracin_light_boot_2,
+	itm_sa_saracin_light_boot_2,
 	itm_sa_saracin_hard_boot_2,
 
     #Armor
+    itm_arab_bandit_1,
+
 	itm_arab_bandit_1,
     itm_arab_bandit_2,
-    itm_arab_bandit_2,
-    itm_arab_bandit_2,
 	itm_arab_bandit_3,
-    itm_arab_bandit_3,
+	itm_arab_bandit_4,
 	itm_arab_bandit_4,
 
     #Helmets
-    itm_berber_white_turban,
 	itm_gulam_helm_a,
+	itm_gulam_helm_b,
 	itm_gulam_helm_b,
 	itm_gulam_helm_c,
 	itm_gulam_helm_d,
+    itm_beduin_turban_1,
+    itm_beduin_turban_2,
     itm_faris_helmet,
-    itm_saracin_turban_a,
-    itm_saracin_turban_b,
-    itm_saracin_turban_c,
-    itm_sa_helm_saracin_8,
+    itm_balt_helmet_b,
 
 	#Shields
-    itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
+	itm_saracin_shield_r_1,
+	itm_saracin_shield_r_2,
+	itm_saracin_shield_r_3,
+	itm_saracin_shield_r_4,
 	itm_saracin_shield_r_5,
-    itm_saracin_shield_r_6,
+	itm_saracin_shield_r_6,
 	itm_saracin_shield_r_7,
+	itm_bandit_shield_2,
+	itm_bandit_shield_3,
+
+	#Ranged
+    itm_javelin,
+	itm_javelin,
 
 	#Horse
     itm_bedyin_camel_a,
+
     ],
-    horse_attrib_5, cav_thrower_4_wp, cav_thrower_4_skills,
-    arab_face_1, berber_face_3
+    horse_attrib_4,
+        cav_thrower_4_wp,
+    cav_thrower_4_skills,
+    arab_face_1, arab_face_2
   ],
 
   [ "halqa_recruit",
     "Harfush",
     "Harafeesh",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
+    tf_guarantee_boots|tf_guarantee_armor,
     0,0,fac_kingdom_20,
     [
     itm_hatchet,
@@ -19588,49 +19329,53 @@ itm_spear_p,
     itm_pitch_fork,
     itm_hunting_bow,
     itm_arrows,
+    itm_spear_d,
+    itm_spear_a,
 
     itm_turban_a,
     itm_turban_b,
     itm_turban_c,
     itm_desert_turban,
     itm_desert_turban,
-
-    itm_sarranid_cloth_robe,
-    itm_sarranid_cloth_robe_b,
-    itm_kau_arab_aketon_red,
-    itm_kau_arab_aketon_green,
+    # itm_turban,
+    # itm_turban,
+    # itm_turban,
+    # itm_turban,
+	# itm_saracin_turban_a,
+	# itm_saracin_turban_a,
+	# itm_saracin_turban_b,
 
     itm_berber_shoes,
+    itm_sarranid_cloth_robe,
+    itm_sarranid_cloth_robe_b,
     itm_sa_saracin_light_boot_1,
-    itm_sa_saracin_light_boot_2,
     ],
-    foot_attrib_2, militia_wp, militia_skills,    
-    arab_face_3, arab_face_4
+    foot_attrib_2, militia_wp, militia_skills,    arab_face_1, arab_face_2
   ],
 
-  [ "halqa_spear_1",
-    "Halqa Levy Spearman",
-    "Halqa Levy Spearmen",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
+    [
+	"halqa_levy_spear",
+    "Dariba Al Halqa",
+    "Dariba Al Halqa",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet ,
     0,0,fac_kingdom_20,
     [
 	#Weapon
-    itm_spear_c,
     itm_spear_d,
-    itm_spear_i,
+    itm_spear_a,
 
 	#Helmet
-    itm_turban_a,
     itm_turban_b,
-    itm_turban_c,
     itm_saracin_turban_a,
     itm_saracin_turban_b,
     itm_saracin_turban_c,
+
     itm_desert_turban,
-    itm_sa_helm_saracin_2,
+    itm_desert_turban,
+
 	itm_sa_helm_saracin_3,
-	itm_sa_helm_saracin_4,
-	itm_sa_helm_saracin_5,
+	itm_sa_helm_saracin_3,
+
 	itm_mamluk_helm_b,
 	itm_mamluke_helm_ventail,
 	itm_faris_helmet,
@@ -19638,96 +19383,51 @@ itm_spear_p,
 	#Shield
 	itm_bandit_shield_1,
 	itm_bandit_shield_2,
+	itm_bandit_shield_2,
 	itm_bandit_shield_3,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
+	itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_arab_shield_f_3,
 
 	#Armor
+    itm_sarranid_cloth_robe,
+	itm_sarranid_cloth_robe,
+    itm_sarranid_cloth_robe_b,
 	itm_sa_arabian_light_armor,
+	itm_sa_arabian_light_armor_2,
 	itm_sa_arabian_light_armor_2,
 	itm_sa_arabian_light_armor_3,
 	itm_sa_arabian_light_armor_4,
-    itm_sa_armor_archer_saracin_1,
-	itm_sa_armor_archer_saracin_2,
-    itm_mamluk_jawshan_leather,
 
 	#Boots
     itm_berber_shoes,
 	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
+	itm_sa_saracin_light_boot_1,
     ],
-    foot_attrib_3, spears_regulars_wp, spears_regulars_skills,
-	arab_face_3, arab_face_4
+    foot_attrib_2, militia_wp, militia_skills,
+	arab_face_1, arab_face_2
   ],
 
-  [ "halqa_spear_2",
-    "Halqa Spearman",
-    "Halqa Spearmen",
+    [
+	"halqa_light_spear",
+    "Ramah Al Halqa",
+    "Ramah Al Halqa",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
     0,0,fac_kingdom_20,
     [
 	#Weapon
+    itm_spear_d,
     itm_spear_a,
-    itm_spear_b,
-    itm_spear_g,
-    itm_spear_j,
-    itm_spear_k,
 
 	#Helmet
 	itm_saracin_turban_a,
+	itm_saracin_turban_a,
+	itm_saracin_turban_b,
 	itm_saracin_turban_b,
 	itm_saracin_turban_c,
-	itm_sa_helm_saracin_6,
-	itm_sa_helm_saracin_7,
-    itm_sa_helm_saracin_8,
-	itm_arab_helmet_c,
-	itm_arab_helmet_b,
-	itm_arab_mail_coif,
-	itm_black_guard_helmet,
-	itm_arab_helmet_d,
+	itm_saracin_turban_c,
 
-	#Shield
-	itm_arab_shield_a_3,
-    itm_arab_shield_b_3,	
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-    itm_saracin_shield_r_3,
-
-	#Armor
-    itm_mamluk_jawshan_leather,
-    itm_arabian_lamellar,
-	itm_sa_armor_archer_saracin_1,
-	itm_sa_armor_archer_saracin_2,
-    itm_sa_heavy_armor_arabs_1,
-	itm_sa_heavy_armor_arabs_2,
-    itm_sa_heavy_armor_arabs_3,
-    itm_sa_heavy_armor_arabs_4,
-
-	#Boots
-	itm_sa_saracin_medium_boot_2,
-	itm_sa_saracin_medium_boot_1,
-    ],
-    foot_attrib_4, spears_veteran_wp, spears_veteran_skills,
-	arab_face_3, arab_face_4
-  ],
-
-  [ "halqa_spear_3",
-    "Halqa Veteran Spearman",
-    "Halqa Veteran Spearmen",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-	#Weapon
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_g,
-
-	#Helmet
 	itm_sa_helm_saracin_6,
 	itm_sa_helm_saracin_7,
 	itm_sa_helm_saracin_8,
@@ -19739,6 +19439,8 @@ itm_spear_p,
 	itm_arab_helmet_d,
 
 	#Shield
+	itm_bandit_shield_2,
+	itm_bandit_shield_3,
 	itm_arab_shield_a_3,
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
@@ -19748,417 +19450,231 @@ itm_spear_p,
     itm_arab_shield_g_3,
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
+
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+
+	#Armor
+	# itm_sa_arabian_light_armor,
+	# itm_sa_arabian_light_armor_2,
+	# itm_sa_arabian_light_armor_2,
+	# itm_sa_arabian_light_armor_3,
+	# itm_sa_arabian_light_armor_4,
+	itm_sa_armor_archer_saracin_2,
+	itm_sa_armor_archer_saracin_2,
+	itm_sa_armor_archer_saracin_3,
+	itm_sa_armor_archer_saracin_3,
+
+	itm_sa_heavy_armor_arabs_1,
+	itm_sa_heavy_armor_arabs_2,
+
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+	itm_sa_saracin_light_boot_2,
+    ],
+    foot_attrib_3, footman_wp, footman_skills,
+	arab_face_1, arab_face_2
+  ],
+
+    [
+	"halqa_medium_spear",
+    "Ramah Mtwst Al Halqa",
+    "Ramah Mtwst Al Halqa",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+	#Weapon
+    itm_spear_d,
+    itm_spear_a,
+	itm_spear_b,
+
+	#Helmet
+	itm_sa_helm_saracin_6,
+	itm_sa_helm_saracin_7,
+	itm_sa_helm_saracin_8,
+	itm_arab_helmet_c,
+	itm_arab_helmet_b,
+	itm_arab_mail_coif,
+	itm_mamluke_helm_b,
+	itm_black_guard_helmet,
+	itm_black_guard_helmet,
+	itm_arab_helmet_d,
+	itm_arab_helmet_d,
+
+	#Shield
+	itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+	itm_arab_shield_f_3,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
 	itm_saracin_shield_r_3,
 	itm_saracin_shield_r_4,
 	itm_saracin_shield_r_2,
 
 	#Armor
-    itm_kau_arab_aketon_blue,
-    itm_kau_arab_mail_shirt_d,
-    itm_arabian_lamellar,
 	itm_sa_heavy_armor_arabs_1,
 	itm_sa_heavy_armor_arabs_2,
 	itm_sa_heavy_armor_arabs_3,
 	itm_sa_heavy_armor_arabs_4,
 	itm_sa_heavy_armor_arabs_5,
-    itm_mamluk_shirt_f,
+	itm_sa_heavy_armor_arabs_6,
+	itm_sa_heavy_armor_arabs_7,
+	itm_sa_heavy_armor_arabs_8,
 
 	#Boots
+	itm_sa_saracin_light_boot_2,
+	itm_sa_saracin_light_boot_2,
 	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-    itm_sa_saracin_hard_boot_1,
+	itm_sa_saracin_medium_boot_1,
+
     ],
-    foot_attrib_5, spears_sergeant_wp, spears_sergeant_skills,
+    foot_attrib_4, footman_wp, footman_skills,
 	arab_face_3, arab_face_4
   ],
 
-  [ "halqa_archer",
+  ["halqa_archer",
     "Rami Al Halqa",
     "Rumat Al Halqa",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_ranged,
     0,0,fac_kingdom_20,
-    [   
+    [
     itm_nomad_bow,
-    itm_arrows,
-    itm_hatchet,
-    itm_dagger,
-    itm_knife,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_barbed_arrows,
 
 	#Helmet
 	itm_saracin_turban_a,
 	itm_saracin_turban_b,
 	itm_saracin_turban_c,
     itm_desert_turban,
+    itm_desert_turban,
+    # itm_turban,
+    # itm_turban,
+    # itm_turban,
     itm_turban_b,
+	itm_turban_b,
     itm_turban_c,
-	itm_sa_helm_saracin_2,
 	itm_sa_helm_saracin_3,
+	itm_sa_helm_saracin_3,
+	itm_sa_helm_saracin_4,
+	itm_sa_helm_saracin_5,
+	itm_sa_helm_saracin_7,
+
+	#Shield
+	itm_bandit_shield_1,
+	itm_bandit_shield_1,
+	itm_bandit_shield_2,
+	itm_bandit_shield_2,
+	itm_bandit_shield_3,
+    itm_arab_shield_h_3,
+    itm_arab_shield_i_3,
+	itm_saracin_shield_r_7,
+
+	#Armor
+	itm_sa_arabian_light_armor,
+	itm_sa_arabian_light_armor_2,
+	itm_sa_arabian_light_armor_2,
+	itm_sa_arabian_light_armor_3,
+	itm_sa_arabian_light_armor_4,
+	itm_sa_armor_archer_saracin_2,
+	itm_sa_armor_archer_saracin_3,
+
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+	itm_sa_saracin_light_boot_2,
+
+	#Blade
+    itm_raf_one_handed_axe_a,
+    itm_arabian_sword_a,
+    itm_arabian_sword_b,
+    itm_raf_one_handed_axe_b,
+    itm_raf_one_handed_axe_c,
+    itm_raf_one_handed_axe_d,
+    itm_raf_one_handed_axe_e,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
+
+    ],
+    ranged_attrib_3, archer_regulars_wp, archer_regulars_skills,
+    arab_face_1, arab_face_2
+  ],
+
+  ["halqa_cav_1",
+    "Khayl al halqa",
+    "Khayl al halqa",
+    tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+    0,0,fac_kingdom_20,
+    [
+    #itm_nomad_bow,
+    #itm_arrows,
+
+
+
+
+	#Weapons
+	itm_bamboo_spear,
+	itm_bamboo_spear,
+    itm_arabian_sword_b,
+    itm_sarranid_cavalry_sword,
+    itm_sarranid_mace_1,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+
+
+
+	#Helmet
+	itm_mamluke_helm_ventail,
+	itm_mamluke_helm_ventail,
+    itm_turban_b,
+	itm_sa_helm_saracin_3,
+	itm_sa_helm_saracin_3,
+	itm_sa_helm_saracin_3,
+	itm_helm_saracin_b,
+	itm_helm_saracin_b,
+	itm_helm_saracin_b,
+	itm_helm_saracin_b,
+	itm_helm_saracin_b,
 	itm_sa_helm_saracin_4,
 	itm_sa_helm_saracin_5,
 
 	#Shield
-	itm_bandit_shield_1,
+    itm_arab_shield_c_3,
+	itm_arab_shield_f_3,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+	itm_saracin_shield_r_7,
+	itm_saracin_shield_r_7,
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_2,
 	itm_bandit_shield_2,
 	itm_bandit_shield_3,
-    itm_saracin_shield_r_1,
-	itm_saracin_shield_r_2,
-	itm_saracin_shield_r_3,
 
 	#Armor
 	itm_sa_arabian_light_armor,
 	itm_sa_arabian_light_armor_2,
 	itm_sa_arabian_light_armor_3,
 	itm_sa_arabian_light_armor_4,
-	itm_sa_armor_archer_saracin_3,
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-    ],
-    ranged_attrib_3, skirmisher_wp, skirmisher_skills,
-    arab_face_1, arab_face_2
-  ],
-
-  [ "halqa_cavalry_1",
-    "Halqa Light Cavalry",
-    "Halqa Light Cavalry",
-    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-    #Weapons
-    itm_nomad_bow,
-    itm_arrows,
-    itm_arabian_sword_b,
-    itm_sarranid_cavalry_sword,
-    itm_sarranid_mace_1,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Helmet
-	itm_helm_saracin_b,
-    itm_sa_helm_saracin_3,
-	itm_sa_helm_saracin_4,
-	itm_sa_helm_saracin_5,
-    itm_sa_helm_saracin_6,
-    itm_sa_helm_saracin_7,
-    itm_sa_helm_saracin_8,
-    itm_saracin_turban_a,
-    itm_black_guard_helmet,
-
-	#Shield
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-    itm_saracin_shield_r_3,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-
-	#Armor
 	itm_sa_armor_archer_saracin_1,
 	itm_sa_armor_archer_saracin_2,
-	itm_sa_armor_archer_saracin_3,
-	itm_sa_armor_archer_saracin_4,
-    itm_anatolian_leather_lamellar,
-    itm_mamluk_jawshan_leather,
-    itm_seljuk_tunic_c,
-    itm_sa_heavy_armor_arabs_4,
-    itm_sa_heavy_armor_arabs_5,
-
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-
-	itm_arabs_horse_a,
-	itm_arabs_horse_b,
-	itm_arabs_horse_c,
-	itm_arabs_horse_d,
-    ],
-    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
-    arab_face_1, arab_face_4
-  ],
-
-  ["halqa_cavalry_2",
-    "Halqa Cavalry",
-    "Halqa Cavalry",
-    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-    itm_nomad_bow,
-    itm_khergit_bow,
-    itm_barbed_arrows,
-    itm_sarranid_cavalry_sword,
-    itm_arabian_sword_d,
-    itm_sarranid_mace_1,
-    itm_morningstar,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	itm_sa_armor_archer_saracin_4,
-	itm_sa_armor_archer_saracin_5,
-	itm_sa_armor_archer_saracin_6,
-	itm_sa_heavy_armor_arabs_5,
-    itm_seljuk_tunic,
-    itm_seljuk_tunic_c,
-    itm_seljuk_tunic_b,
-    itm_mamluk_shirt_b,
-
-    itm_arab_shield_a_3,
-    itm_arab_shield_c_3,
-	itm_arab_shield_f_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-
-    itm_faris_helmet,
-    itm_arab_helmet_d,
-    itm_arab_helmet_b,
-    itm_arab_mail_coif,
-    itm_black_guard_helmet,
-    itm_saracin_turban_a,
-    itm_saracin_turban_b,
-    itm_saracin_turban_c,
-
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-    itm_boots_tyrk_a,
-
-    itm_horse_e,
-    itm_horse_d,
-    itm_arabs_horse_a,
-	itm_arabs_horse_b,
-	itm_arabs_horse_c,
-    ],
-    horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
-    arab_face_2, arab_face_3
-  ],
-
-   ["halqa_cavalry_3",
-    "Halqa Professional Cavalry",
-    "Halqa Professional Cavalry",
-    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-    itm_sarranid_cavalry_sword,
-    itm_arabian_sword_d,
-    itm_sarranid_mace_1,
-    itm_morningstar,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-    itm_nomad_bow,
-    itm_khergit_bow,
-    itm_barbed_arrows,
-
-    itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-	itm_saracin_shield_r_7,
-	itm_saracin_shield_r_7,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_2,
-
-    itm_mamluke_helm_b,
-    itm_faris_helmet,
-    itm_arab_helmet_d,
-    itm_arab_helmet_b,
-    itm_arab_mail_coif,
-    itm_black_guard_helmet,
-    itm_berber_helmet_g,
-    itm_arab_helmet_d,
-    itm_berber_white_turban,
-
-    itm_seljuk_tunic,
-    itm_seljuk_tunic_c,
-    itm_seljuk_tunic_b,
-    itm_mamluk_shirt_d,
-    itm_arab_mail_a,
-    itm_arab_mail_b,
-    itm_arab_mail_c,
-    itm_arab_mail_d,
-    itm_arab_banded_b,
-
-    itm_sa_saracin_medium_boot_1,
-    itm_sa_saracin_medium_boot_2,
-    itm_sa_saracin_hard_boot_1,
-    itm_boots_tyrk_b,
-
-    itm_arabian_horse_a,
-    itm_horse_e,
-    itm_horse_d,
-    ],
-    horse_attrib_5, cum_vharcher_wp, cum_vharcher_skills,
-    arab_face_3, arab_face_4
-  ],
-
-  ["slave_recruit",
-    "Slave Recruit",
-    "Slave Recruits",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-    #Helmet
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_beduin_turban_3,
-    itm_beduin_turban_4,
-    itm_turban_a,
-    itm_turban_b,
-    itm_turban_c,
-    itm_headcloth,
-    itm_desert_turban,
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-    itm_berber_shoes,
-
-	#Armor
-	itm_sarranid_cloth_robe,
-    itm_sarranid_cloth_robe_b,
-    itm_sa_arabian_light_armor,
-	itm_sa_arabian_light_armor_2,
-    itm_mamluk_shirt_a,
-
-	#Weapon
-    itm_hatchet,
-    itm_bamboo_spear,
-    itm_sarranid_axe_b,
-    itm_raf_one_handed_axe_d,
-    itm_saracin_sword_a,
-
-	#Shield
-	itm_bandit_shield_1,
-    itm_bandit_shield_2,
-    itm_bandit_shield_3,
-    ],
-    foot_attrib_2, militia_wp, militia_skills,
-    arab_face_1, arab_face_2
-  ],
-
-  ["mamluk_levy",
-    "Mamluk Levy",
-    "Mamluk Levies",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_helmet|tf_guarantee_shield,
-    0,0,fac_kingdom_20,
-    [
-    #Weapon
-    itm_sarranid_axe_b,
-    itm_raf_one_handed_axe_d,
-    itm_saracin_sword_a,
-    itm_modded_arab_sword_1,
-    itm_nomad_bow,
-    itm_arrows,
-    
-    #Helmets
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_beduin_turban_3,
-    itm_beduin_turban_4,
-    itm_turban_a,
-    itm_turban_b,
-    itm_turban_c,
-    itm_desert_turban,
-    itm_helm_saracin_3,
-    itm_helm_saracin_b,
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-
-	#Armor
-    itm_mamluk_jawshan_leather,
-	itm_sa_arabian_light_armor_3,
-	itm_sa_arabian_light_armor_4,
-    itm_kau_arab_aketon_red,
-    itm_kau_arab_aketon_green,
-    itm_archers_vest,
-
-    #Shield
-	itm_bandit_shield_1,
-	itm_bandit_shield_2,
-	itm_bandit_shield_3,
-    ],
-    ranged_attrib_3, archer_regulars_wp, archer_regulars_skills,
-    arab_face_3, arab_face_4
-  ],
-
-  ["mamluk_cavalry_1",
-    "Mamluk Junior Cavalry",
-    "Mamluk Junior Cavalry",
-    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
-    0,0,fac_kingdom_20,
-    [
-    #Weapons
-    itm_nomad_bow,
-    itm_barbed_arrows,
-    
-    itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_bamboo_spear,
-    itm_arabian_sword_b,
-    itm_sarranid_cavalry_sword,
-    itm_sarranid_mace_1,
-    itm_morningstar,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Helmet
-	itm_mamluke_helm_ventail,
-    itm_turban_b,
-	itm_sa_helm_saracin_1,
-	itm_sa_helm_saracin_2,
-	itm_sa_helm_saracin_3,
-	itm_sa_helm_saracin_4,
-	itm_sa_helm_saracin_5,
-
-	#Shield
-	itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-	itm_saracin_shield_r_1,
-	itm_saracin_shield_r_2,
-	itm_saracin_shield_r_3,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-
-	#Armor
-	itm_sa_arabian_light_armor_3,
-	itm_sa_arabian_light_armor_4,
-	itm_sa_armor_archer_saracin_1,
 	itm_sa_armor_archer_saracin_2,
 	itm_sa_armor_archer_saracin_3,
-    itm_kau_arab_mail_shirt_d,
-    itm_sarranid_cavalry_robe,
-    itm_arabian_armor_b,
-    itm_seljuk_tunic,
-    itm_seljuk_tunic_c,
-    itm_seljuk_tunic_b,
+	itm_sa_armor_archer_saracin_3,
+	itm_sa_armor_archer_saracin_4,
+	itm_sa_armor_archer_saracin_3,
 
 	#Boots
-	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
 	itm_sa_saracin_light_boot_2,
 	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
+	itm_sa_saracin_medium_boot_1,
 
     #itm_arabian_horse_a,
     #itm_arabian_horse_b,
@@ -20167,330 +19683,81 @@ itm_spear_p,
 	itm_arabs_horse_c,
 	itm_arabs_horse_d,
     ],
-    horse_attrib_4, cum_horseman_wp, cum_horseman_skills,
-    arab_face_2, arab_face_3
+    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
+
+
+    arab_face_1, arab_face_2
   ],
 
-  ["mamluk_cavalry_2",
-    "Mamluk Regular Cavalry",
-    "Mamluk Regular Cavalry",
-    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+  ["halqa_cav_2",
+    "Muhanak al Halqa Khayl",
+    "Mahanik al Halqa Khayl",
+    tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
     itm_nomad_bow,
     itm_khergit_bow,
-    itm_saracin_bow_c,
     itm_barbed_arrows,
 
-    itm_lance,
-    itm_lance,
-    itm_lance,
-    itm_lance,
-    itm_lance,
-    itm_lance,
     itm_sarranid_cavalry_sword,
     itm_arabian_sword_d,
-    itm_arabian_sword_b,
+    itm_sword_type_xii,
     itm_sarranid_mace_1,
-    itm_morningstar,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
-    itm_seljuk_tunic,
-    itm_seljuk_tunic_c,
-    itm_armor_medium_tyrk_a,
-    itm_armor_medium_tyrk_b,
-    itm_armor_medium_tyrk_c,
-    itm_saracen_mail,
-    itm_arab_mail_b,
     itm_arab_mail_c,
     itm_arab_mail_d,
+    itm_kau_arab_mail_shirt_b,
+    itm_kau_arab_mail_shirt_c,
 
+    itm_byz_shield_4,
+
+    itm_faris_helmet,
+    itm_faris_helmet,
     itm_arab_helmet_d,
     itm_arab_helmet_b,
     itm_arab_mail_coif,
+    itm_arab_mail_coif,
     itm_black_guard_helmet,
-    itm_mamluke_helm,
-    itm_mamluke_helm_b,
+    itm_black_guard_helmet,
+    itm_rus_helmet,
 
-    itm_sa_saracin_medium_boot_1,
-    itm_boots_tyrk_a,
-    itm_boots_tyrk_b,
-    itm_boots_tyrk_c,
 
-    #Shield
-    itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_2,
+    itm_nomad_bow,
+    itm_khergit_bow,
+    itm_barbed_arrows,
 
-    itm_arabs_horse_a,
-	itm_arabs_horse_b,
+    itm_mamluke_boots,
+
     itm_horse_e,
     itm_horse_d,
     itm_hunter,
     ],
-    horse_attrib_5, cum_harcher_wp, cum_harcher_skills,
+    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
     arab_face_3, arab_face_4
   ],
 
-  ["mamluk_cavalry_3",
-    "Mamluk Elite Cavalry",
-    "Mamluk Elite Cavalry",
-    tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
+    [
+    "halqa_cav_3",
+    "Sifyan al Halqa",
+    "Sifyan al Halqa",
+    tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
-        #Weapons
-        itm_saracin_bow_a,
-        itm_saracin_bow_b,
-        itm_saracin_bow_c,
-        itm_arrow_tyrk_a,
-
-        itm_heavy_lance,
-        itm_heavy_lance,
-        itm_heavy_lance,
-        itm_heavy_lance,
-        itm_heavy_lance,
-        itm_heavy_lance,
-        itm_sarranid_cavalry_sword,
-        itm_arabian_sword_d,
-        itm_modded_arab_sword_1,
-        itm_modded_arab_sword_2,
-        itm_sarranid_mace_1,
-        itm_morningstar,
-        itm_sarranid_axe_a,
-        itm_sarranid_axe_b,
-
-        #Helmet
-        itm_ghulam_helmet,
-        itm_mamluke_helm,
-        itm_helm_tyrk_1,
-        itm_helm_tyrk_2,
-        itm_helm_tyrk_3,
-        itm_helm_tyrk_5,
-        itm_helm_tyrk_heavi_a,
-        itm_seljuk_helmet,
-
-    	#Shield
-        itm_arab_shield_a_3,
-        itm_arab_shield_b_3,
-        itm_arab_shield_c_3,
-        itm_arab_shield_d_3,
-        itm_arab_shield_e_3,
-        itm_arab_shield_f_3,
-        itm_arab_shield_g_3,
-        itm_arab_shield_h_3,
-        itm_arab_shield_i_3,
-        itm_saracin_shield_r_4,
-        itm_saracin_shield_r_2,
-        
-        #Armor
-        itm_mamluk_lamellar,
-        itm_kau_arab_nobleman,
-        itm_arab_banded_b,
-        itm_arab_banded_c,
-        itm_arab_banded_a,
-
-        #Boots
-        itm_boots_tyrk_b,
-        itm_boots_tyrk_a,
-        itm_boots_tyrk_c,
-        itm_sa_saracin_hard_boot_1,
-        itm_sa_saracin_hard_boot_2,
-
-        itm_european_horse_f,
-        itm_horse_e,
-        itm_horse_d,
-        itm_hunter,
-        itm_saracin_hard_horses_a_v1,
-        itm_saracin_hard_horses_b_v1,
-        itm_saracin_hard_horses_c_v1,
-        itm_saracin_hard_horses_d_v1,
-    ],
-    horse_attrib_elite, cum_vharcher_wp, cum_vharcher_skills,
-    arab_face_3, arab_face_4
-  ],
-
-  ["ghulam_levy",
-    "Ghulam Levy",
-    "Ghulam Levies",
-    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
-    0,0,fac_kingdom_20,
-    [
-    #Helmet
-    itm_beduin_turban_1,
-    itm_beduin_turban_2,
-    itm_beduin_turban_3,
-    itm_beduin_turban_4,
-    itm_turban_a,
-    itm_turban_b,
-    itm_turban_c,
-    itm_desert_turban,
-    itm_saracin_turban_a,
-    itm_helm_saracin_3,
-    itm_helm_saracin_b,
-
-	#Boots
-	itm_sa_saracin_light_boot_1,
-	itm_sa_saracin_light_boot_2,
-
-	#Armor
-    itm_kau_arab_mail_shirt_d,
-    itm_mamluk_jawshan_leather,
-    itm_sa_armor_archer_saracin_1,
-    itm_sa_arabian_light_armor,
-    itm_sa_arabian_light_armor_2,
-    itm_sa_arabian_light_armor_3,
-
-	#Weapon
-    itm_spear_d,
-    itm_spear_a,
-    itm_modded_arab_sword_1,
-    itm_modded_arab_sword_2,
-    itm_modded_arab_sword_3,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Shield
-	itm_bandit_shield_1,
-	itm_bandit_shield_2,
-	itm_bandit_shield_3,
-    ],
-    foot_attrib_3, swords_regulars_wp, swords_regulars_skills,
-    arab_face_1, arab_face_2
-  ],
-
-  ["ghulam_cavalry_1",
-    "Ghulam Light Cavalry",
-    "Ghulam Light Cavalry",
-    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
-    0,0,fac_kingdom_20,
-    [
-	#Boots
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-    itm_boots_tyrk_b,
-    itm_boots_tyrk_a,
-    itm_boots_tyrk_c,
-
-	#Armor
-	itm_armor_medium_tyrk_a,
-	itm_armor_medium_tyrk_b,
-	itm_armor_medium_tyrk_c,
-	itm_armor_medium_tyrk_d,
-	itm_armor_medium_tyrk_e,
-	itm_armor_medium_tyrk_f,
-
-	#Helmet
-	itm_arab_helmet_b,
-	itm_arab_helmet_c,
-	itm_ghulam_helmet,
-	itm_gulam_helm_a,
-	itm_gulam_helm_b,
-	itm_gulam_helm_c,
-	itm_gulam_helm_d,
-	itm_gulam_helm_f,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_5,
-	itm_helm_tyrk_heavi_a,
-
-	#Weapon
-	itm_lance,
-    itm_lance,
-    itm_lance,
-    itm_lance,
+    itm_sarranid_cavalry_sword,
     itm_arabian_sword_d,
+    itm_sword_type_xii,
     itm_sarranid_mace_1,
-    itm_morningstar,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
-    #Shield
-    itm_arab_shield_c_3,
-	itm_arab_shield_f_3,
-	itm_saracin_shield_r_5,
-	itm_saracin_shield_r_6,
-	itm_saracin_shield_r_7,
-	itm_saracin_shield_r_7,
-	itm_saracin_shield_r_7,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_2,
+    # itm_muslim_lance,
+    # itm_heraldic_lance,
+    itm_nomad_bow,
+    itm_khergit_bow,
+    itm_barbed_arrows,
 
-	#Gloves
-	itm_sa_gloves_a,
-
-	#Horse
-	itm_arabs_horse_a,
-	itm_arabs_horse_b,
-	itm_arabs_horse_c,
-	itm_arabs_horse_d,
-    ],
-    horse_attrib_4, cum_horseman_wp, cum_horseman_skills,
-    arab_face_3, arab_face_4
-    ],
-
-  ["ghulam_cavalry_2",
-    "Ghulam Cavalry",
-    "Ghulam Cavalry",
-    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
-    0,0,fac_kingdom_20,
-    [
-	#Boots
-	itm_sa_saracin_medium_boot_1,
-	itm_sa_saracin_medium_boot_2,
-	itm_sa_saracin_hard_boot_1,
-	itm_sa_saracin_hard_boot_2,
-    itm_boots_tyrk_b,
-    itm_boots_tyrk_a,
-    itm_boots_tyrk_c,
-
-	#Armor
-	itm_sa_heavy_armor_arabs_1,
-	itm_sa_heavy_armor_arabs_2,
-    itm_mamluk_shirt_f,
-    itm_arab_mail_a,
-    itm_arab_mail_b,
-    itm_arab_mail_c,
-    itm_arab_mail_d,
-    itm_mamluk_shirt_f,
-
-	#Helmet
-	itm_arab_helmet_b,
-	itm_arab_helmet_c,
-	itm_ghulam_helmet,
-	itm_mamluke_helm,
-	itm_gulam_helm_a,
-	itm_gulam_helm_b,
-	itm_gulam_helm_c,
-	itm_gulam_helm_d,
-	itm_gulam_helm_f,
-    itm_helm_tyrk_1,
-	itm_helm_tyrk_2,
-	itm_helm_tyrk_3,
-	itm_helm_tyrk_4,
-    itm_helm_tyrk_heavi_c,
-
-	#Weapon
-	itm_heavy_lance,
-    itm_heavy_lance,
-    itm_heavy_lance,
-    itm_heavy_lance,
-    itm_heavy_lance,
-    itm_arabian_sword_d,
-    itm_sarranid_mace_1,
-    itm_morningstar,
-    itm_sarranid_axe_a,
-    itm_sarranid_axe_b,
-
-	#Gloves
-	itm_sa_gloves_a,
-    itm_mail_mittens,
-
-    #Shield
     itm_arab_shield_a_3,
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
@@ -20500,33 +19767,191 @@ itm_spear_p,
     itm_arab_shield_g_3,
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
-    itm_saracin_shield_r_1,
-    itm_saracin_shield_r_2,
-	itm_saracin_shield_r_3,
-	itm_saracin_shield_r_4,
-	itm_saracin_shield_r_5,
+
+    itm_mamluke_helm_b,
+    itm_mamluke_helm,
+    itm_mamluke_helm,
+    itm_mamluke_helm,
+    itm_faris_helmet,
+    itm_faris_helmet,
+    itm_arab_helmet_d,
+    itm_arab_helmet_b,
+    itm_arab_mail_coif,
+    itm_arab_mail_coif,
+    itm_black_guard_helmet,
+    itm_black_guard_helmet,
+    itm_rus_helmet,
+    itm_seljuk_helmet,
+    itm_seljuk_helmet,
+    itm_seljuk_helmet,
+    itm_seljuk_helmet,
+
+
+    itm_mamluk_lamellar,
+    itm_arabian_armor_b,
+
+    itm_mamluke_boots,
+
+    itm_steppe_horse,
+    itm_arabian_horse_a,
+    itm_arabian_horse_b,
+    ],
+    horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
+    arab_face_3, arab_face_4
+  ],
+
+    ["mamluk_slave_1",
+    "Jadid Ghulam",
+    "Jadid Ghilman",
+    tf_guarantee_boots|tf_guarantee_armor,
+    0,0,fac_kingdom_20,
+    [
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+
+	#Armor
+	itm_black_guard,
+	itm_helm_saracin_3,
+	itm_helm_saracin_3,
+	itm_helm_saracin_b,
+
+	#Weapon
+    itm_arabian_sword_d,
+    itm_sword_type_xii,
+    itm_sarranid_mace_1,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	#Shield
+	itm_bandit_shield_1,
+
+    ],
+    horse_attrib_1, cum_horseman_wp, cum_horseman_skills,
+    arab_face_3, arab_face_4
+  ],
+
+    ["mamluk_slave_2",
+    "Ghulam",
+    "Ghilman",
+	tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_helmet|tf_guarantee_shield,
+    0,0,fac_kingdom_20,
+    [
+	#Boots
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_1,
+	itm_sa_saracin_light_boot_2,
+
+	#Armor
+	itm_kau_arab_aketon_blue,
+	itm_arabian_lamellar,
+	itm_berber_tunic_b,
+
+	itm_gulam_helm_a,
+	itm_gulam_helm_b,
+	itm_gulam_helm_c,
+	itm_gulam_helm_d,
+	itm_gulam_helm_f,
+
+	#Weapon
+    itm_arabian_sword_d,
+    itm_sword_type_xii,
+    itm_sarranid_mace_1,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	#Gloves
+	itm_sa_gloves_a,
+
+	#Shield
+	itm_bandit_shield_1,
+
+    ],
+    horse_attrib_2, mamluk_ghulam_wp, mamluk_ghulam_skills,
+    arab_face_3, arab_face_4
+  ],
+
+    ["mamluk_horseman",
+    "Lesser Mamluk",
+    "Lesser Mamluks",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
+    0,0,fac_kingdom_20,
+    [
+	#Boots
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_1,
+	itm_sa_saracin_medium_boot_2,
+	itm_sa_saracin_hard_boot_1,
+	itm_sa_saracin_hard_boot_2,
+
+	#Armor
+	itm_sa_heavy_armor_arabs_1,
+	itm_sa_heavy_armor_arabs_2,
+	itm_sa_heavy_armor_arabs_3,
+	itm_sa_heavy_armor_arabs_4,
+	itm_sa_heavy_armor_arabs_5,
+	itm_sa_heavy_armor_arabs_6,
+	itm_sa_heavy_armor_arabs_7,
+
+	#Helmet
+	itm_arab_helmet_b,
+	itm_arab_helmet_c,
+	itm_ghulam_helmet,
+	itm_mamluke_helm,
+	itm_gulam_helm_a,
+	itm_gulam_helm_a,
+	itm_gulam_helm_a,
+	itm_gulam_helm_b,
+	itm_gulam_helm_c,
+	itm_gulam_helm_d,
+	itm_gulam_helm_f,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_5,
+	itm_helm_tyrk_heavi_a,
+
+	#Weapon
+	itm_light_lance,
+    itm_arabian_sword_d,
+    itm_sarranid_mace_1,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	#Ranged
+    itm_saracin_bow_a,
+	itm_saracin_bow_b,
+	itm_saracin_bow_c,
+    itm_arrow_tyrk_a,
+
+	#Gloves
+	itm_sa_gloves_a,
 
 	#Horse
 	itm_arabs_horse_a,
-    itm_horse_e,
-    itm_horse_d,
-    itm_hunter,
+	itm_arabs_horse_b,
+	itm_arabs_horse_c,
+	itm_arabs_horse_d,
+
+	#Shield
+	#bandit_shield_1,
+
     ],
-    horse_attrib_5, cum_lancer_wp, cum_lancer_skills,
-    arab_face_2, arab_face_4
+    horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
+    arab_face_3, arab_face_4
     ],
 
-  ["ghulam_cavalry_3",
-    "Ghulam Lancer Cavalry",
-    "Ghulam Lancer Cavalry",
-    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_gloves|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
+    ["mamluk_lancer",
+    "Mamluk (Lancer)",
+    "Mamluks (Lancer)",
+    tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse|tf_guarantee_shield,
     0,0,fac_kingdom_20,
     [
 	#Boots
 	itm_sa_saracin_hard_boot_1,
+	itm_sa_saracin_hard_boot_1,
 	itm_sa_saracin_hard_boot_2,
-    itm_sarranid_boots_d,
-    itm_sarranid_boots_d_long,
 
 	#Armor
 	itm_sa_ghulam_heavy_cavalryman_1,
@@ -20539,67 +19964,135 @@ itm_spear_p,
 	itm_tyrk_armor_heavi_b,
 
 	#Helmet
+	itm_arab_helmet_b,
+	itm_arab_helmet_c,
 	itm_ghulam_helmet,
-    itm_seljuk_helmet,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
 	itm_mamluke_helm,
 	itm_gulam_helm_a,
-    itm_helm_tyrk_1,
+	itm_gulam_helm_b,
+	itm_gulam_helm_c,
+	itm_gulam_helm_d,
+	itm_gulam_helm_f,
 	itm_helm_tyrk_2,
-	itm_helm_tyrk_3,
-	itm_helm_tyrk_4,
-    itm_helm_tyrk_5,
-    itm_helm_tyrk_6,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_5,
 	itm_helm_tyrk_heavi_a,
-    itm_helm_tyrk_heavi_b,
-    itm_helm_tyrk_heavi_c,
 
 	#Weapon
-	itm_mameluk_spears_c_v_1,
-	itm_mameluk_spears_c_v_1,
-	itm_mameluk_spears_c_v_1,
-    itm_mameluk_spears_c_v_1,
-    itm_mameluk_spears_c_v_1,
-    itm_mameluk_spears_c_v_1,
+	itm_muslim_lance,
+	itm_muslim_lance,
+	itm_muslim_lance,
     itm_arabian_sword_d,
-    itm_scimitar_b,
     itm_sarranid_mace_1,
-    itm_morningstar,
     itm_sarranid_axe_a,
     itm_sarranid_axe_b,
 
-	#Gloves
-    itm_mail_mittens,
-    itm_sa_gauntlets_arabs_1,
+	#Ranged
+    itm_saracin_bow_a,
+	itm_saracin_bow_b,
+	itm_saracin_bow_c,
+    itm_arrow_tyrk_a,
 
-	#Shield
-	itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-    itm_arab_shield_g_3,
-    itm_arab_shield_h_3,
-    itm_arab_shield_i_3,
+	#Gloves
+	itm_sa_gloves_a,
 
 	#Horse
 	itm_saracin_hard_horses_a,
 	itm_saracin_hard_horses_b,
 	itm_saracin_hard_horses_c,
 	itm_saracin_hard_horses_d,
-    itm_european_horse_e,
-    itm_horse_e,
-    itm_horse_d,
-    itm_hunter,
-    itm_saracin_hard_horses_a_v1,
-    itm_saracin_hard_horses_b_v1,
-    itm_saracin_hard_horses_c_v1,
-    itm_saracin_hard_horses_d_v1,
+
+	#Shield
+	itm_saracin_shield_r_4,
+	itm_saracin_shield_r_5,
+	itm_saracin_shield_r_6,
+	itm_saracin_shield_r_7,
+
     ],
-    horse_attrib_elite, cum_hlancer_wp, cum_hlancer_skills,
-    arab_face_1, arab_face_3
+    horse_attrib_elite, cum_horseman_wp, cum_horseman_skills,
+    arab_face_3, arab_face_4
   ],
 
+    ["mamluk_archer",
+    "Mamluk (Archer)",
+    "Mamluks (Archer)",
+    tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_mounted|tf_guarantee_helmet|tf_guarantee_horse,
+    0,0,fac_kingdom_20,
+    [
+	#Boots
+	itm_sa_saracin_hard_boot_1,
+	itm_sa_saracin_hard_boot_1,
+	itm_sa_saracin_hard_boot_2,
+
+	#Armor
+	itm_sa_ghulam_heavy_cavalryman_1,
+	itm_sa_ghulam_heavy_cavalryman_2,
+	itm_sa_ghulam_heavy_cavalryman_3,
+	itm_sa_ghulam_heavy_cavalryman_1,
+	itm_sa_ghulam_heavy_cavalryman_2,
+	itm_tyrk_armor_heavi_a,
+	itm_tyrk_armor_heavi_b,
+	itm_tyrk_armor_heavi_c,
+
+	#Helmet
+	itm_arab_helmet_b,
+	itm_arab_helmet_c,
+	itm_ghulam_helmet,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_mamluke_helm,
+	itm_gulam_helm_a,
+	itm_gulam_helm_b,
+	itm_gulam_helm_c,
+	itm_gulam_helm_d,
+	itm_gulam_helm_f,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_2,
+	itm_helm_tyrk_5,
+	itm_helm_tyrk_heavi_a,
+
+	#Weapon
+	itm_light_lance,
+    itm_arabian_sword_d,
+    itm_sarranid_mace_1,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
+
+	#Ranged
+    itm_saracin_bow_a,
+	itm_saracin_bow_b,
+	itm_saracin_bow_c,
+    itm_arrow_tyrk_a,
+	itm_arrow_tyrk_a,
+	itm_arrow_tyrk_b,
+	itm_arrow_tyrk_c,
+
+	#Gloves
+	itm_sa_gloves_a,
+
+	#Horse
+	itm_saracin_hard_horses_a,
+	itm_saracin_hard_horses_b,
+	itm_saracin_hard_horses_c,
+	itm_saracin_hard_horses_d,
+
+	#Shield
+	#bandit_shield_1,
+
+    ],
+    horse_attrib_5, cum_harcher_wp, cum_harcher_skills,
+    arab_face_3, arab_face_4
+  ],
   ["mamluke_turkoman_1",
     "Turkoman Horse Archer",
     "Turkoman Horse Archers",
@@ -27191,6 +26684,16 @@ itm_spear_p,
 	itm_tab_shield_kite_cav_a,
 	itm_shield_vostoka_b,
     itm_tab_shield_small_round_c,
+
+
+
+
+
+
+
+
+
+
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -27256,6 +26759,24 @@ itm_spear_p,
     itm_tied_up_shoes,
 
 	#Weapons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     itm_scimitar,
     itm_arabian_sword_a,
     itm_sword_type_xii,
@@ -27283,12 +26804,24 @@ itm_spear_p,
 	itm_bolts,
     itm_crusade_bolt,
 
+
+
+
     itm_heavy_crossbow,
     itm_heavy_crossbow,
     itm_heavy_crossbow,
     itm_heavy_crossbow,
 	itm_sniper_crossbow,
 	itm_sniper_crossbow,
+
+
+
+
+
+
+
+
+
 
    	#Helmet
     itm_mamluk_cap,
@@ -27301,6 +26834,10 @@ itm_spear_p,
 	itm_ilkhanate_cap,
 	itm_cuman_cap_d,
     itm_arab_helmet_c,
+
+
+
+
 
     itm_arab_helmet_c,
 	itm_seljuk_helmet,
@@ -27346,6 +26883,9 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
+
+
+
     ["anatolian_castle_recruit",
      "Mourtatoi Anatolikon Cavallarii",
      "Mourtatos Anatolikon Cavallarii",
@@ -27374,8 +26914,12 @@ itm_spear_p,
     itm_byz_psiloi_a,
     itm_byz_psiloi_a,
 
+
 	itm_arab_archer,
 	itm_arab_archer,
+
+
+
 
     #Boots
 	itm_leather_fur_boots,
@@ -27394,6 +26938,7 @@ itm_spear_p,
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
     ],
+
 
     ["anatolian_turkoman_1",
     "Jira Khvar Faris",
@@ -27430,6 +26975,8 @@ itm_spear_p,
 	itm_helm_tyrk_1,
 
     #Swords
+
+
     itm_sword_khergit_1,
     itm_sword_khergit_2,
     itm_sword_khergit_3,
@@ -60654,315 +60201,315 @@ itm_rnd_helm_06,
 ############################## NEW v2.1 - RANDOM GENERATED LORDS
 
 ############### EUROPEAN
-     ["enhanced_rnd_lord_1", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a7f000450050d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_2", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a3c000450350d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_3", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054d000308d50d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_4", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005f1000030c50d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_5", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000000e000404450d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_6", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000553000155350d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_7", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000311000100650d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_8", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000092400001c650d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_9", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b8e00002ce50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_10", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000047a000400250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_11", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024000062c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_12", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000959000310e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_13", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000258000531050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_14", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001b4000510250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_15", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000077700023d050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_16", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e06000008150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_17", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000de1000404c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_18", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000fbc000320450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_19", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a5000514050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_20", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f7a000454850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_21", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ae7000151150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_22", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000be500022c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_23", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f50000234950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_24", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e93000121050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_25", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ab00000c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_26", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ab4000105150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_27", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a9000624150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_28", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000865000004850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_29", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000415000120c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_30", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000023e000234b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_31", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e9000528350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_32", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c3900031d350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_33", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004fb000345050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_34", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bd800031c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_35", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000060300023cb50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_36", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c0400054c650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_37", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea00044c850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_38", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005da000548c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_39", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052c000100c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_40", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001ae00010ca50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_41", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027200051c250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_42", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000252000040f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_43", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea000535350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_44", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d7900060c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_45", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000028a000328b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_46", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000078e00022c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_47", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000793000440a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_48", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000015c00020c750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_49", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024100033cf50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_50", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000281000508650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_51", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc2000048750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_52", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a5300064c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_53", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bb7000144250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_54", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000039100043c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_55", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000778000628050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_56", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005fc000124d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_57", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007b1000639150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_58", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f75000511050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_59", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c21000348a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_60", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dfd000210750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_61", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000636000208750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_62", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000113000124e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_63", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006c8000528150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_64", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000050700010c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_65", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004e9000221250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_66", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ea000004550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_67", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000041600063d050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_68", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006f200023c550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_69", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d50000538d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_70", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ebb00003c550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_71", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001f6000628d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_72", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000037f000448550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_73", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000020d000220950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_74", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000230000419150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_75", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c26000408f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_76", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000112000248950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_77", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000074400061c850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_78", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000800000400550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_79", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e8a000330750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_80", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cca000230550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_81", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031c000118250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_82", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a08000010950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_83", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000093f000328f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_84", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e6d000214050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_85", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000566000424450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_86", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f1c000404b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_87", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000080d000354b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_88", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200064cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_89", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000392000328450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_90", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004d4000344050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_91", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000081600060c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_92", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000925000031350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_93", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003ae00021c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_94", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000071a000048350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_95", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002bd00001c850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_96", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f95000248350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_97", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054e000610d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_98", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031d00054c750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_99", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcf000028250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_100", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084300060c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_101", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000239000124e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_102", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000089400051ce50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_103", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c6200022cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_104", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000040100004d150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_105", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200024c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_106", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eb0000628050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_107", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001dd000135350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_108", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000059f00051c550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_109", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000558000250b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_110", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000035800002c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_111", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc5000345050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_112", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000079400024d150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_113", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000098b000540950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_114", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cb9000230350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_115", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000018c000225350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_116", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000451000430250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_117", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000331350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_118", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000608d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_119", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b05000605150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_120", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000132000018650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_121", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000af9000e00b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_122", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bdb000e40f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_123", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000056000e11050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_124", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052b000e4cd50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_125", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000063c000e44650d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_1", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a7f000450050d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_2", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a3c000450350d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_3", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054d000308d50d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_4", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005f1000030c50d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_5", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000000e000404450d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_6", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000553000155350d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_7", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000311000100650d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_8", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000092400001c650d46327b08cb85600000000001fa0f50000000000000000],
+     ["enhanced_rnd_lord_9", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b8e00002ce50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_10", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000047a000400250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_11", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024000062c450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_12", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000959000310e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_13", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000258000531050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_14", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001b4000510250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_15", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000077700023d050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_16", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e06000008150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_17", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000de1000404c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_18", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000fbc000320450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_19", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a5000514050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_20", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f7a000454850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_21", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ae7000151150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_22", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000be500022c050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_23", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f50000234950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_24", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e93000121050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_25", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ab00000c150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_26", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ab4000105150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_27", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a9000624150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_28", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000865000004850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_29", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000415000120c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_30", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000023e000234b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_31", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e9000528350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_32", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c3900031d350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_33", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004fb000345050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_34", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bd800031c050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_35", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000060300023cb50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_36", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c0400054c650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_37", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea00044c850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_38", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005da000548c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_39", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052c000100c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_40", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001ae00010ca50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_41", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027200051c250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_42", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000252000040f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_43", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea000535350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_44", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d7900060c050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_45", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000028a000328b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_46", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000078e00022c450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_47", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000793000440a50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_48", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000015c00020c750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_49", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024100033cf50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_50", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000281000508650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_51", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc2000048750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_52", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a5300064c950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_53", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bb7000144250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_54", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000039100043c050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_55", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000778000628050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_56", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005fc000124d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_57", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007b1000639150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_58", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f75000511050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_59", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c21000348a50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_60", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dfd000210750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_61", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000636000208750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_62", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000113000124e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_63", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006c8000528150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_64", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000050700010c150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_65", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004e9000221250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_66", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ea000004550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_67", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000041600063d050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_68", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006f200023c550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_69", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d50000538d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_70", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ebb00003c550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_71", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001f6000628d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_72", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000037f000448550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_73", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000020d000220950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_74", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000230000419150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_75", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c26000408f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_76", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000112000248950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_77", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000074400061c850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_78", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000800000400550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_79", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e8a000330750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_80", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cca000230550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_81", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031c000118250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_82", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a08000010950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_83", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000093f000328f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_84", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e6d000214050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_85", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000566000424450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_86", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f1c000404b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_87", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000080d000354b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_88", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200064cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_89", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000392000328450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_90", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004d4000344050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_91", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000081600060c050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_92", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000925000031350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_93", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003ae00021c150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_94", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000071a000048350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_95", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002bd00001c850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_96", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f95000248350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_97", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054e000610d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_98", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031d00054c750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_99", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcf000028250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_100", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084300060c150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_101", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000239000124e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_102", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000089400051ce50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_103", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c6200022cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_104", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000040100004d150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_105", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200024c950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_106", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eb0000628050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_107", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001dd000135350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_108", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000059f00051c550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_109", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000558000250b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_110", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000035800002c450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_111", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc5000345050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_112", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000079400024d150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_113", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000098b000540950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_114", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cb9000230350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_115", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000018c000225350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_116", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000451000430250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_117", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000331350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_118", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000608d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_119", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b05000605150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_120", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000132000018650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_121", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000af9000e00b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_122", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bdb000e40f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_123", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000056000e11050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_124", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052b000e4cd50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_125", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000063c000e44650d46327b08cb85600000000001fa0f50000000000000000],
 
-    ["enhanced_rnd_lord_126", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000094b000e24750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_127", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ce4000d50350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_128", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcd000e18250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_129", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e59000d2cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_130", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000251000e20950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_131", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005ac000d38350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_132", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000922000d24950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_133", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c40000e24d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_134", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000730000d50750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_135", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d12000e3c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_136", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b5e000e30150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_137", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000193000e20450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_138", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008df000e2cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_139", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000360000d0c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_140", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e9c000e18250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_141", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000053f000d59350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_142", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027f000d10d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_143", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000016b000d39250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_144", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003c1000d2c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_145", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084c000d54850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_146", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c79000d34c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_147", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007aa000e04250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_148", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002aa000d54850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_149", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000db4000e50a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_150", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b7d000e3d150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_151", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000485000e1cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_152", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000711000e2d050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_153", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000088d000e24850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_154", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003a8000d1c350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_155", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e5000d20750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_126", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000094b000e24750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_127", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ce4000d50350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_128", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcd000e18250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_129", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e59000d2cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_130", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000251000e20950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_131", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005ac000d38350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_132", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000922000d24950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_133", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c40000e24d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_134", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000730000d50750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_135", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d12000e3c950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_136", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b5e000e30150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_137", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000193000e20450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_138", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008df000e2cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_139", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000360000d0c950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_140", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e9c000e18250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_141", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000053f000d59350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_142", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027f000d10d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_143", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000016b000d39250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_144", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003c1000d2c050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_145", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084c000d54850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_146", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c79000d34c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_147", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007aa000e04250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_148", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002aa000d54850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_149", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000db4000e50a50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_150", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b7d000e3d150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_151", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000485000e1cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_152", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000711000e2d050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_153", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000088d000e24850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_154", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003a8000d1c350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_155", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e5000d20750d46327b08cb85600000000001fa0f50000000000000000],
 
-    ["enhanced_rnd_lord_156", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a54000d29350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_157", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008c3000d21250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_158", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000368000e20550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_159", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aeb000e49050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_160", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a1c000e28f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_161", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000af9000e00b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_162", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bdb000e40f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_163", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000056000e11050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_164", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052b000e4cd50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_165", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000063c000e44650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_166", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000094b000e24750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_167", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ce4000d50350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_168", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcd000e18250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_169", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e59000d2cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_170", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000251000e20950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_171", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005ac000d38350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_172", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000922000d24950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_173", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e90000d39150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_174", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000290000e2cd50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_175", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c9b000d11350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_176", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007bc000d54350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_177", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000081f000d28850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_178", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ead000e54f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_179", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000300000d0c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_180", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000db2000d28e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_181", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007a6000d48450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_182", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000029a000d55250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_183", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000010000e20a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_184", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005d2000d2c650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_185", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004f7000e14350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_186", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000626000e40350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_187", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000df8000d00a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_188", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000a9000e24e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_189", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ad1000d55250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_190", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002f8000d35350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_191", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c97000e04250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_192", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006a7000e4d050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_193", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eff000d18350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_194", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e05000d05050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_195", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c40000e24d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_196", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000730000d50750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_197", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d12000e3c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_198", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b5e000e30150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_199", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000193000e20450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_200", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008df000e2cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_156", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a54000d29350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_157", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008c3000d21250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_158", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000368000e20550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_159", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aeb000e49050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_160", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a1c000e28f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_161", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000af9000e00b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_162", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bdb000e40f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_163", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000056000e11050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_164", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052b000e4cd50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_165", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000063c000e44650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_166", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000094b000e24750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_167", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ce4000d50350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_168", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcd000e18250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_169", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e59000d2cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_170", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000251000e20950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_171", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005ac000d38350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_172", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000922000d24950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_173", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e90000d39150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_174", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000290000e2cd50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_175", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c9b000d11350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_176", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007bc000d54350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_177", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000081f000d28850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_178", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ead000e54f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_179", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000300000d0c450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_180", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000db2000d28e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_181", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007a6000d48450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_182", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000029a000d55250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_183", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000010000e20a50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_184", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005d2000d2c650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_185", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004f7000e14350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_186", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000626000e40350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_187", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000df8000d00a50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_188", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000a9000e24e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_189", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ad1000d55250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_190", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002f8000d35350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_191", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c97000e04250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_192", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006a7000e4d050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_193", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eff000d18350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_194", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e05000d05050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_195", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c40000e24d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_196", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000730000d50750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_197", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d12000e3c950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_198", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b5e000e30150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_199", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000193000e20450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_200", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008df000e2cc50d46327b08cb85600000000001fa0f50000000000000000],
 
 ################# MUSLIM
-    ["enhanced_rnd_lord_201", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ea7000818f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_202", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000778000828450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_203", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000987000805050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_204", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007c6000814350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_205", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dbc000804c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_206", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000036400082d250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_207", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e1b000829350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_208", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aaa000828450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_209", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001c5000821250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_210", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a27000850250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_211", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000035e00084d350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_212", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009c9000825250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_213", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000041c000855050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_214", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d8b00084cf50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_215", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a58000848e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_216", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f5b000809150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_217", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009c4000809050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_218", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000823000820250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_219", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ed700080ce50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_220", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006a600082c250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_221", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dd900083c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_222", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000015c00082cd50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_223", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000576000801250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_224", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000095e000818f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_225", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bb200083cf50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_201", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ea7000818f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_202", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000778000828450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_203", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000987000805050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_204", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007c6000814350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_205", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dbc000804c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_206", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000036400082d250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_207", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e1b000829350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_208", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aaa000828450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_209", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001c5000821250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_210", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a27000850250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_211", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000035e00084d350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_212", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009c9000825250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_213", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000041c000855050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_214", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d8b00084cf50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_215", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a58000848e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_216", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f5b000809150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_217", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009c4000809050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_218", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000823000820250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_219", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ed700080ce50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_220", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006a600082c250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_221", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dd900083c150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_222", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000015c00082cd50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_223", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000576000801250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_224", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000095e000818f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_225", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bb200083cf50d46327b08cb85600000000001fa0f50000000000000000],
 
-    ["enhanced_rnd_lord_226", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000090a000c09350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_227", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000088000c0c850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_228", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e32000d10550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_229", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f41000d20950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_230", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cae000d08250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_231", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009da000d24650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_232", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001e8000c19150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_233", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000076a000d44950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_234", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000360000c2cb50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_235", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002c2000c31150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_236", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a9c000c1ce50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_237", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000045a000d1cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_238", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000043e000d14150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_239", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000793000c18550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_240", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000480000c45050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_241", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000efe000c14b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_242", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008a2000d50750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_243", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000647000c38250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_244", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000010e000c1c550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_245", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000066b000c2c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_246", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001aa000d0c250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_247", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000013e000c21050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_248", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000055c000c28050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_249", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cd9000c20e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_250", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000444000c14d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_251", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000fee000c30750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_252", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000499000c40050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_253", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c71000c4cb50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_254", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000004f000c58c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_255", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000663000c18f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_256", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000649000d2cb50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_257", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000837000d44950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_258", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d51000d10650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_259", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c08000c30050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_260", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cb9000c54050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_226", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000090a000c09350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_227", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000088000c0c850d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_228", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e32000d10550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_229", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f41000d20950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_230", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cae000d08250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_231", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009da000d24650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_232", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001e8000c19150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_233", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000076a000d44950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_234", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000360000c2cb50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_235", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002c2000c31150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_236", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a9c000c1ce50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_237", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000045a000d1cc50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_238", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000043e000d14150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_239", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000793000c18550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_240", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000480000c45050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_241", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000efe000c14b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_242", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008a2000d50750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_243", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000647000c38250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_244", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000010e000c1c550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_245", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000066b000c2c150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_246", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001aa000d0c250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_247", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000013e000c21050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_248", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000055c000c28050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_249", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cd9000c20e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_250", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000444000c14d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_251", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000fee000c30750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_252", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000499000c40050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_253", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c71000c4cb50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_254", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000004f000c58c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_255", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000663000c18f50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_256", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000649000d2cb50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_257", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000837000d44950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_258", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d51000d10650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_259", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c08000c30050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_260", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cb9000c54050d46327b08cb85600000000001fa0f50000000000000000],
 
-    ["enhanced_rnd_lord_261", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000180000f0d050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_262", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000023f000f40150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_263", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004a4000f34c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_264", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000054000f0c650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_265", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002d9000f1c350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_266", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000021b000f31350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_267", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a09000f54250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_268", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f6000f3c350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_269", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000568000f01050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_270", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eac000f0cd50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_261", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000180000f0d050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_262", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000023f000f40150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_263", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004a4000f34c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_264", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000054000f0c650d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_265", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002d9000f1c350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_266", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000021b000f31350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_267", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a09000f54250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_268", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f6000f3c350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_269", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000568000f01050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_270", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eac000f0cd50d46327b08cb85600000000001fa0f50000000000000000],
 
 ################# MONGOL
-    ["enhanced_rnd_lord_271", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e74000a44b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_272", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000447000b28550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_273", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005f4000b50150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_274", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000133000a40050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_275", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a6000914e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_276", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000057b000928a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_277", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d94000b38750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_278", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000227000b38b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_279", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e22000928250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_280", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000904000928350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_281", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000004a000b30c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_282", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e9000b14450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_283", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009b6000a34550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_284", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000677000a20150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_285", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000184000948d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_286", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000766000920450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_287", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b3e000b00950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_288", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e5e000a50150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_289", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a96000a3cb50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_290", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002fb000a2d350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_291", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a3900094c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_292", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008e3000b0cb50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_293", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006b9000a0d250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_294", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e98000911250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_295", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f4f000b40350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_296", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000200000a30d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_297", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000055b000b34350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_298", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000356000b44b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_299", "Random", "Random", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000055a000b54b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_271", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e74000a44b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_272", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000447000b28550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_273", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005f4000b50150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_274", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000133000a40050d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_275", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a6000914e50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_276", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000057b000928a50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_277", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d94000b38750d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_278", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000227000b38b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_279", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e22000928250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_280", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000904000928350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_281", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000004a000b30c50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_282", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e9000b14450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_283", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009b6000a34550d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_284", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000677000a20150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_285", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000184000948d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_286", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000766000920450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_287", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b3e000b00950d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_288", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e5e000a50150d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_289", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a96000a3cb50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_290", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002fb000a2d350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_291", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a3900094c450d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_292", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008e3000b0cb50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_293", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006b9000a0d250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_294", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e98000911250d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_295", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f4f000b40350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_296", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000200000a30d50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_297", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000055b000b34350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_298", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000356000b44b50d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_299", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000055a000b54b50d46327b08cb85600000000001fa0f50000000000000000],
 #################
-    ["enhanced_rnd_lord_end", "Ritterbruder Frederick", "Frederick", tf_hero, 0, 0, fac_kingdom_1, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f0310245350d46327b08cb85600000000001fa0f50000000000000000],
+    ["enhanced_rnd_lord_end", "Random End", "Random End", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f0310245350d46327b08cb85600000000001fa0f50000000000000000],
 ##########################################################################################
 
 
@@ -68298,29 +67845,21 @@ upgrade(troops, "andalus_crossbowman_1", "andalus_crossbowman_2")
 upgrade(troops, "andalus_horse_1", "andalus_horse_2")
 upgrade(troops, "andalus_horse_2", "andalus_horse_3")
 upgrade(troops, "andalus_horse_3", "andalus_horse_4")
-# Mamluk
-## rural
-upgrade2(troops, "bedouin_recruit", "bedouin_skirmisher", "bedouin_cavalry_1")
-upgrade2(troops, "bedouin_skirmisher", "bedouin_guisarmer_1", "bedouin_javelin_1")
-upgrade(troops, "bedouin_guisarmer_1", "bedouin_guisarmer_2")
-upgrade(troops, "bedouin_javelin_1", "bedouin_javelin_2")
-upgrade(troops, "bedouin_cavalry_1", "bedouin_cavalry_2")
-upgrade(troops, "bedouin_cavalry_2", "bedouin_cavalry_3")
-## urban
-upgrade2(troops, "halqa_recruit", "halqa_spear_1", "halqa_archer")
-upgrade(troops, "halqa_spear_1", "halqa_spear_2")
-upgrade(troops, "halqa_spear_2", "halqa_spear_3")
-upgrade(troops, "halqa_archer", "halqa_cavalry_1")
-upgrade(troops, "halqa_cavalry_1", "halqa_cavalry_2")
-upgrade(troops, "halqa_cavalry_2", "halqa_cavalry_3")
-## castle
-upgrade2(troops, "slave_recruit", "mamluk_levy", "ghulam_levy")
-upgrade(troops, "mamluk_levy", "mamluk_cavalry_1")
-upgrade(troops, "mamluk_cavalry_1", "mamluk_cavalry_2")
-upgrade(troops, "mamluk_cavalry_2", "mamluk_cavalry_3")
-upgrade(troops, "ghulam_levy", "ghulam_cavalry_1")
-upgrade(troops, "ghulam_cavalry_1", "ghulam_cavalry_2")
-upgrade(troops, "ghulam_cavalry_2", "ghulam_cavalry_3")
+# Mamluke
+##OK.
+##archers
+upgrade(troops, "halqa_recruit", "halqa_levy_spear")
+upgrade2(troops, "halqa_levy_spear", "halqa_light_spear", "halqa_archer")
+upgrade2(troops, "halqa_light_spear", "halqa_medium_spear", "halqa_cav_1")
+upgrade(troops, "halqa_cav_2", "halqa_cav_3")
+##infantry
+upgrade2(troops, "bedouin_recruit", "bedouin_cav_1", "bedouin_spearman")
+upgrade(troops, "bedouin_cav_1", "bedouin_cav_2")
+upgrade(troops, "bedouin_cav_2", "bedouin_cav_3")
+
+upgrade(troops, "mamluk_slave_1", "mamluk_slave_2")
+upgrade(troops, "mamluk_slave_2", "mamluk_horseman")
+upgrade2(troops, "mamluk_horseman", "mamluk_archer", "mamluk_lancer")
 
 # Marinid - a bit wacky version
 ## Infantry -> bow -> crossbow
@@ -68618,7 +68157,7 @@ upgrade(troops,"mazovian_horse_3", "mazovian_horse_4")
 ## horse1 -> horse2 -> horse3 -> horse4
 # upgrade2(troops,"serbian_vil_recruit", "serbian_vil_footman", "serbian_vil_skirmisher")
 # upgrade2(troops,"serbian_vil_footman", "serbian_vil_spearman", "serbian_vil_axeman")
-# upgrade(troops,"serbian_vil_spearman", "serbian_vil_spearman_veteran")trp_bedouin_recruit
+# upgrade(troops,"serbian_vil_spearman", "serbian_vil_spearman_veteran")
 # upgrade(troops,"serbian_vil_axeman", "serbian_vil_axeman_veteran")
 # upgrade(troops,"serbian_vil_skirmisher", "serbian_vil_archer")
 # upgrade(troops,"serbian_vil_archer", "serbian_vil_archer_veteran")
@@ -68794,9 +68333,6 @@ upgrade(troops,"merc_kern_infantry",  "merc_veteran_kern_infantry")
 upgrade(troops,"merc_veteran_kern_infantry",  "merc_elite_kern_infantry")
 
 upgrade(troops,"genoese_crossbowman",  "genoese_crossbowman_commander")
-
-upgrade(troops,"merc_almogavar_1", "merc_almogavar_2")
-upgrade(troops,"merc_almogavar_2", "merc_almogavar_3")
 ###################################### NEW MERC UPGRADES END
 
 
@@ -68866,7 +68402,7 @@ upgrade2(troops,"steppe_bandit", "tatar_tribesman", "cuman_tribesman")
 
 upgrade2(troops,"taiga_bandit", "rus_vil_1", "nordic_village_recruit")
 
-upgrade2(troops,"desert_bandit", "bedouin_recruit", "marinid_village_rabble")
+upgrade2(troops,"desert_bandit", "bedouin_recruit", "halqa_recruit")
 
 upgrade(troops,"looter", "farmer")
 

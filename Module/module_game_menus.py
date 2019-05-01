@@ -3453,7 +3453,7 @@ game_menus = [ #
         (change_screen_map),
         (set_show_messages, 0),
         (troop_raise_skill, "trp_player", 1, 10),
-        (party_add_members, "p_main_party", "trp_mamluk_cavalry_2", 100),
+        (party_add_members, "p_main_party", "trp_mamluke_heavy_horse_archer", 100),
         (party_add_members, "p_main_party", "trp_cuman_horse_archer", 60),
         (troop_add_gold, "trp_player", 99799999),
         (troop_add_item, "trp_player", "itm_smoked_fish", 0),
