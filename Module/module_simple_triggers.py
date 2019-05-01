@@ -2855,7 +2855,10 @@ simple_triggers = [
    (ge, ":template", "pt_steppe_bandit_lair"),
  
    (store_distance_to_party_from_party, ":distance", "p_main_party", ":bandit_camp"),
-   (lt, ":distance", 3),
+   ######### NEW v2.9 - spotting skill takes part in the calculation
+   (val_add, ":spotting", 2),
+   (lt, ":distance", ":spotting"),
+   #########
    (party_set_flags, ":bandit_camp", pf_disabled, 0),
    (party_set_flags, ":bandit_camp", pf_always_visible, 1),
  (try_end),
