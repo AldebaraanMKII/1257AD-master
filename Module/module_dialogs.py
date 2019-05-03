@@ -268,44 +268,44 @@ dialogs = [
 
 ################################################# TAVERN TALK
 #SW - new cantina_walkers dialog - code primarily created by Mordachai and MartinF
-[anyone , "start",
-      [
-        # note: we use $g_talk_troop which is initialized in the first faux "start" condition, above (q.v.)
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (store_random_in_range, reg60, 0, 100), # 0..99
-        (eq, 1, 0), # this is just a setup, not a real dialog, so its always disqualified
-      ],
-      "You should never see this", "close_window", [],
-   ],
+# [anyone , "start",
+      # [
+        ############ note: we use $g_talk_troop which is initialized in the first faux "start" condition, above (q.v.)
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (store_random_in_range, reg60, 0, 100), # 0..99
+        # (eq, 1, 0), ############### this is just a setup, not a real dialog, so its always disqualified
+      # ],
+      # "You should never see this", "close_window", [],
+   # ],
 
 
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 60), # 40% drunk
-      ],
-"I'm drunk. Leave me alone", "tavern_walkers_generic_response", []],
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 60), # 40% drunk
+      # ],
+# "I'm drunk. Leave me alone", "tavern_walkers_generic_response", []],
    
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 60), # 40% buy a drink
-      ],
-"Hey, can you spare some coin for a beggar?", "tavern_walkers_pre_drink", []],
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 60), # 40% buy a drink
+      # ],
+# "Hey, can you spare some coin for a beggar?", "tavern_walkers_pre_drink", []],
 
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 85), # 15% try to start a fight
-      ],
-"I don't like you.", "tavern_walkers_pre_brawl", []],         
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 85), # 15% try to start a fight
+      # ],
+# "I don't like you.", "tavern_walkers_pre_brawl", []],         
       
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 85), # 15% try to start a fight
-      ],
-"What you're looking at?", "tavern_walkers_pre_brawl", []],         
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 85), # 15% try to start a fight
+      # ],
+# "What you're looking at?", "tavern_walkers_pre_brawl", []],         
    
    
 ##################### DRINK
