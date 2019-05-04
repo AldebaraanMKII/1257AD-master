@@ -15222,14 +15222,17 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                           (faction_set_slot, ":cur_faction", slot_faction_recognized_player, 1),
                           (call_script, "script_npc_decision_checklist_peace_or_war", ":cur_faction", "fac_player_supporters_faction", ":faction_leader"),
                           (ge, reg0, 1),
-                          (val_add, ":rtr", 5),
+####### NEW v2.9-KOMKE START-                          
+                          # (val_add, ":rtr", 5),
+                          (val_add, ":rtr", 2),##KOMKE changed to 2 because +/- 20 catholic factions * 5 was too much
                           (str_store_faction_name, s1, ":cur_faction"),
                           (str_store_faction_name, s2, "fac_player_supporters_faction"),
                           (display_message, "@{s1} recognize you as the rightful king of {s2}"),
                         (try_end),
                         (call_script, "script_change_player_right_to_rule", ":rtr"),
-                        (store_random_in_range, ":crown", "itm_crown_european", "itm_seljuk_hair"),
-                        (troop_add_item, "trp_player", ":crown"),
+                        # (store_random_in_range, ":crown", "itm_crown_european", "itm_seljuk_hair"),KOMKE range is wrong
+                        (troop_add_item, "trp_player", "itm_crown"),##KOMKE doesn't cover hair
+####### NEW v2.9-KOMKE END-                         
                    (try_end),
                     ]],
 ##TOM
