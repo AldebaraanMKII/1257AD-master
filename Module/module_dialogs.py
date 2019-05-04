@@ -268,44 +268,44 @@ dialogs = [
 
 ################################################# TAVERN TALK
 #SW - new cantina_walkers dialog - code primarily created by Mordachai and MartinF
-[anyone , "start",
-      [
-        # note: we use $g_talk_troop which is initialized in the first faux "start" condition, above (q.v.)
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (store_random_in_range, reg60, 0, 100), # 0..99
-        (eq, 1, 0), # this is just a setup, not a real dialog, so its always disqualified
-      ],
-      "You should never see this", "close_window", [],
-   ],
+# [anyone , "start",
+      # [
+        ############ note: we use $g_talk_troop which is initialized in the first faux "start" condition, above (q.v.)
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (store_random_in_range, reg60, 0, 100), # 0..99
+        # (eq, 1, 0), ############### this is just a setup, not a real dialog, so its always disqualified
+      # ],
+      # "You should never see this", "close_window", [],
+   # ],
 
 
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 60), # 40% drunk
-      ],
-"I'm drunk. Leave me alone", "tavern_walkers_generic_response", []],
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 60), # 40% drunk
+      # ],
+# "I'm drunk. Leave me alone", "tavern_walkers_generic_response", []],
    
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 60), # 40% buy a drink
-      ],
-"Hey, can you spare some coin for a beggar?", "tavern_walkers_pre_drink", []],
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 60), # 40% buy a drink
+      # ],
+# "Hey, can you spare some coin for a beggar?", "tavern_walkers_pre_drink", []],
 
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 85), # 15% try to start a fight
-      ],
-"I don't like you.", "tavern_walkers_pre_brawl", []],         
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 85), # 15% try to start a fight
+      # ],
+# "I don't like you.", "tavern_walkers_pre_brawl", []],         
       
-   [anyone, "start",
-      [
-        (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
-        (lt, reg60, 85), # 15% try to start a fight
-      ],
-"What you're looking at?", "tavern_walkers_pre_brawl", []],         
+   # [anyone, "start",
+      # [
+        # (is_between, "$g_talk_troop", tavern_goer_begin, tavern_goer_end),
+        # (lt, reg60, 85), # 15% try to start a fight
+      # ],
+# "What you're looking at?", "tavern_walkers_pre_brawl", []],         
    
    
 ##################### DRINK
@@ -11716,7 +11716,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (val_sub, ":cost", reg0),
     (val_mul, ":cost", -1),
     (set_show_messages, 0),
-    (troop_add_gold, "trp_player", ":cost"),
+    (troop_remove_gold, "trp_player", ":cost"), ########### NEW v2.9 - fixed player receiving money instead of losing it
     (assign, reg0, ":cost"),
     (set_show_messages, 1),
     (display_message, "@You donated {reg0} gold coins to the pope to fund your crusade"),
@@ -11729,6 +11729,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (neq, ":cur_king", "trp_player"),
       (call_script, "script_change_player_relation_with_troop", ":cur_king", -10),
     (try_end),
+	########### NEW v2.9 - improved relations with pope after crusade
+    (store_random_in_range, ":random", 5, 8),
+    (call_script, "script_change_player_relation_with_troop", ":trp_pope", ":random"),
+	###########
     (str_store_faction_name, s1, "$crusade_target_faction"),
  ], "So be it, I'll declare the crusade against {s1}. Deus Vult!", "lord_talk",[]],   
  
