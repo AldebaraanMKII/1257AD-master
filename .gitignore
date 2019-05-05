@@ -1,13 +1,2 @@
 merge and compile.bat
-Compiler/
-ID/
-Modmerger/
-MODULE_DATA/
-
-
-
-
-
-
-ID/ID_troops.py
-ID/ID_party_templates.py
+Module/module_info.py
