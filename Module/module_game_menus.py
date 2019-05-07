@@ -77,7 +77,7 @@ game_menus = [ #
            (eq, "$g_start_faction", "fac_kingdom_1"),
            (assign, "$current_town", "p_town_1_1"),
          (else_try),
-           (this_or_next|eq, "$g_start_faction", "fac_kingdom_2"),
+           # (this_or_next|eq, "$g_start_faction", "fac_kingdom_2"),##KOMKE ????
            (eq, "$g_start_faction", "fac_kingdom_2"),
            (assign, "$current_town", "p_town_2_1"),
          (else_try),
@@ -3999,6 +3999,18 @@ game_menus = [ #
         (try_end),
       ]
       ),
+
+############## MF for testing start ####################NEW v2.9-KOMKE
+
+     ("start_mod",[(eq,1,1),],"Quick Character (for mod testing)",
+       [
+           (troop_set_type,"trp_player",0),
+           (assign,"$character_gender",tf_male),
+         (troop_raise_attribute, "trp_player",ca_intelligence,-4), #so you dont need to wait time picking extra skills         
+           (change_screen_return, 0),
+      ]
+   ),
+############## MF for testing end ####################   
 	  
       ("start_female",
       [],
@@ -6592,6 +6604,11 @@ game_menus = [ #
      #(set_background_mesh, "mesh_pic_test_menu"),
     ],
     [
+####### NEW v2.9-KOMKE START-    
+     ("camp_modding",[],"Go to the modding menu.",
+       [(jump_to_menu, "mnu_camp_modding"),]
+     ),       
+####### NEW v2.9-KOMKE END-     
       # ("camp_action_1",[], "Walk around.",
        # [(set_jump_mission, "mt_ai_training"),
         # (call_script, "script_setup_random_scene"),
@@ -32501,11 +32518,124 @@ game_menus = [ #
      ]
   ),
 ######################################################
-  
 
+############## MF for testing start ########################### NEW v2.9-KOMKE START-
+
+  ("camp_modding",0,
+   "Select an option:",
+   "none",
+   [
+     ],
+    [
+      ("camp_mod_1",
+		[],"Increase player's renown.",
+       [(str_store_string, s1, "@Player renown is increased by 2000. "),
+        (call_script, "script_change_troop_renown", "trp_player" ,2000),
+        (jump_to_menu, "mnu_camp_modding"),
+        ]
+       ),
+### MF - change attributes and skills below, or add weapon proficiencies with (troop_raise_proficiency, "trp_player", wpt_). See header.troops.py for options   
+		("camp_mod_2",
+			[],
+			"Raise player's attributes and skills.",
+		[
+		   (troop_raise_attribute, "trp_player",ca_strength,30),
+           (troop_raise_attribute, "trp_player",ca_agility,30),
+           (troop_raise_attribute, "trp_player",ca_intelligence,30),
+           (troop_raise_attribute, "trp_player",ca_charisma,30),
+		   (troop_raise_skill, "trp_player",skl_trade,10),
+           (troop_raise_skill, "trp_player",skl_leadership,10),
+		   (troop_raise_skill, "trp_player",skl_prisoner_management,10),
+           (troop_raise_skill, "trp_player",skl_persuasion,10),
+           (troop_raise_skill, "trp_player",skl_engineer,10),
+           (troop_raise_skill, "trp_player",skl_first_aid,10),
+           (troop_raise_skill, "trp_player",skl_surgery,10),
+           (troop_raise_skill, "trp_player",skl_wound_treatment,10),
+           (troop_raise_skill, "trp_player",skl_inventory_management,10),
+           (troop_raise_skill, "trp_player",skl_spotting,10),
+           (troop_raise_skill, "trp_player",skl_pathfinding,10),
+           (troop_raise_skill, "trp_player",skl_tactics,10),
+           (troop_raise_skill, "trp_player",skl_tracking,10),
+           (troop_raise_skill, "trp_player",skl_trainer,10),
+           (troop_raise_skill, "trp_player",skl_foraging,10),
+           (troop_raise_skill, "trp_player",skl_looting,10),
+           (troop_raise_skill, "trp_player",skl_horse_archery,10),
+           (troop_raise_skill, "trp_player",skl_riding,10),
+           (troop_raise_skill, "trp_player",skl_athletics,10),
+           (troop_raise_skill, "trp_player",skl_shield,10),
+           (troop_raise_skill, "trp_player",skl_weapon_master,10),
+           (troop_raise_skill, "trp_player",skl_power_draw,10),
+           (troop_raise_skill, "trp_player",skl_power_throw,10),
+           (troop_raise_skill, "trp_player",skl_power_strike,10),
+           (troop_raise_skill, "trp_player",skl_ironflesh,10),
+           (troop_raise_proficiency_linear, "$g_player_troop", wpt_one_handed_weapon, 300),
+           (troop_raise_proficiency_linear, "$g_player_troop", wpt_two_handed_weapon, 300),
+           (troop_raise_proficiency_linear, "$g_player_troop", wpt_polearm, 300),
+           (troop_raise_proficiency_linear, "$g_player_troop", wpt_archery, 300),
+           (troop_raise_proficiency_linear, "$g_player_troop", wpt_crossbow, 300),
+           (troop_raise_proficiency_linear, "$g_player_troop", wpt_throwing, 300),           
+		   (display_message, "@Skills and attributes raised."),
+		  ]
+		),	   
+
+### MF - Change items below to anything you want to test out, look in items.py for item_id
+	  ("camp_mod_3",
+		[],
+		"Add gear and gold to player.",
+       [
+		   (troop_add_gold, "trp_player", 1000000),
+		   (troop_add_item, "trp_player","itm_warhorse",imod_champion),
+		   (troop_add_item, "trp_player","itm_heraldic_mail_with_surcoat",imod_lordly),
+           (troop_add_item, "trp_player","itm_maciejowski_helm",imod_lordly),
+           (troop_add_item, "trp_player","itm_mail_boots_long",imod_lordly),
+           (troop_add_item, "trp_player","itm_mail_mittens",imod_lordly),
+           (troop_add_item, "trp_player","itm_sword_type_xiiia",imod_balanced),
+           (troop_add_item, "trp_player","itm_throwing_spears",imod_balanced),
+           (troop_add_item, "trp_player","itm_heraldic_lance",imod_balanced),
+           (troop_add_item, "trp_player","itm_tab_shield_heater_cav_b",imod_reinforced),
+           
+		   (troop_equip_items, "trp_player"),
+           (troop_add_item, "trp_player","itm_smoked_fish",0),
+           (troop_add_item, "trp_player","itm_grain",0),
+           (troop_add_item, "trp_player","itm_apples",0),
+			(display_message, "@Items added to player inventory."),
+        ]
+       ),
+### MF - Add any units you want to test with below, look in troop.py for the troop_id	   
+	   ("camp_mod_4",
+		[],
+		"Add units to player party.",
+		[
+		  (party_add_members, "p_main_party", "trp_euro_horse_4", 5),
+		  (party_add_members, "p_main_party", "trp_euro_horse_3", 10),
+		  (display_message, "@Party members added."),
+		]
+		),
+		
+### MF - Spawn any party you want near your party. Look in party_templates.py for pt_id
+		("camp_mod_5",
+			[],
+		"Spawn a party nearby",
+		[
+			(spawn_around_party, "p_main_party", "pt_looters"),
+			(display_message, "@Party spawned nearby."),
+		]
+		),
+		
+	   
+      ("camp_mod_6",[],"Back to camp menu.",
+       [(jump_to_menu, "mnu_camp"),
+        ]
+       ),
+      ]
+  ),
+ 
+############## MF for testing end ########################### NEW v2.9-KOMKE END- 
 
   
   
+  
+  ######################################################
   
 
 ]  #################################### END OF GAME MENUS BRACKET

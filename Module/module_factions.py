@@ -22,13 +22,13 @@ from header_factions import *
 default_kingdom_relations = [("outlaws",-0.3),("peasant_rebels", -0.5),("deserters", -0.5),("mountain_bandits", -0.3),("forest_bandits", -0.3),("escaped_prisoners_faction", -0.3)]
 factions = [
   ("no_faction", "No Faction",0, 0.9, [], []),
-  ("commoners", "Commoners",0, 0.1,[("player_faction",0.1)], []),
-  ("outlaws", "Outlaws", max_player_rating(-30), 0.5,[("commoners",-0.6),("player_faction",-0.15)], [], 0x888888),
+  ("commoners", "Commoners",0, 0.1,[("player_faction",0.1)], [],0xFFFFFF),
+  ("outlaws", "Outlaws", max_player_rating(-30), 0.5,[("commoners",-0.6),("player_faction",-0.15)], [], 0xFF00FF),
 # Factions before this point are hardwired into the game end their order should not be changed.
 
   ("neutral", "Neutral",0, 0.1,[("player_faction",0.0)], [],0xFFFFFF),
-  ("innocents", "Innocents", ff_always_hide_label, 0.5,[("outlaws",-0.05)], []),
-  ("merchants", "Merchants", ff_always_hide_label, 0.5,[("outlaws",-0.5),], []),
+  ("innocents", "Innocents", ff_always_hide_label, 0.5,[("outlaws",-0.05)], [],0xFFFFFF),
+  ("merchants", "Merchants", ff_always_hide_label, 0.5,[("outlaws",-0.5),], [],0xFFFFFF),
 
   # ("dark_knights", "{!}Dark Knights", 0, 0.5,[("innocents",-0.9),("player_faction",-0.4)], []),
 
@@ -110,8 +110,8 @@ factions = [
 #  ("swadian_caravans", "Swadian Caravans", 0, 0.5,[("outlaws",-0.8), ("dark_knights",-0.2)], []),
 #  ("vaegir_caravans", "Vaegir Caravans", 0, 0.5,[("outlaws",-0.8), ("dark_knights",-0.2)], []),
 
-  ("player_faction", "Player Faction",0, 0.9, [], [], 0xcccccc),
-  ("player_supporters_faction", "Player's Supporters",0, 0.9, [("player_faction",1.00),("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0x468493), #changed name so that can tell difference if shows up on map
+  ("player_faction", "Player Faction",0, 0.9, [], [], 0x00FFFF),
+  ("player_supporters_faction", "Player's Supporters",0, 0.9, [("player_faction",1.00),("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0x00FFFF), #changed name so that can tell difference if shows up on map
 
   ("kingdom_1",  "Ordo Teutonicus",
   #"Teutonic Order (Livonia and Prussia)",
@@ -777,7 +777,7 @@ factions = [
       ("forest_bandits", -0.05)
     ],
     [],
-    0x07e233
+    0xebe800
   ),
   
     ("kingdom_40",  "Comuni Guelfi",
@@ -915,8 +915,8 @@ factions = [
 
 ##  ("rebel_peasants", "Rebel Peasants", 0, 0.5,[("vaegirs",-0.5),("player_faction",0.0)], []),
 
-  ("manhunters", "Captivos Proscriptorum", 0, 0.5,[("outlaws",-0.6),("player_faction",0.1)], []),
-  ("deserters", "Deserti", 0, 0.5,[("manhunters",-0.6),("merchants",-0.5),("player_faction",-0.1)], [], 0x888888),
+  ("manhunters", "Captivos Proscriptorum", 0, 0.5,[("outlaws",-0.6),("player_faction",0.1)], [],0xFFFFFF),
+  ("deserters", "Deserti", 0, 0.5,[("manhunters",-0.6),("merchants",-0.5),("player_faction",-0.1)], [], 0xFF00FF),
   ("mountain_bandits", "Montes Sicarii", 0, 0.5,[("commoners",-0.2),("merchants",-0.5),("manhunters",-0.6),("player_faction",-0.15)], [], 0x888888),
   ("forest_bandits", "Silvae Sicarii", 0, 0.5,[("commoners",-0.2),("merchants",-0.5),("manhunters",-0.6),("player_faction",-0.15)], [], 0x888888),
 
@@ -932,7 +932,7 @@ factions = [
       ("player_faction",0.0)
     ], 
     []
-  ),
+  , 0xFF00FF),
   # ("noble_refugees", "{!}Noble Refugees", 0, 0.5,[], []),
 
   # ("guelphs", "guelphs ", 0, 0.9,
@@ -968,9 +968,7 @@ factions = [
       ("papacy", -0.5),
       ("kingdom_33", -0.5)
     ],
-    [],
-    0xfff17a
-  ),
+    [],0xFFFFFF),
  
  
  ############### NEW v2.1 - escaped prisoner faction
@@ -984,8 +982,7 @@ factions = [
       ("player_faction",-0.2),
       ("peasant_rebels", -0.1),
     ], 
-    []
-  ),
+    [], 0x00FFFF),
   
   ("end_minor_faction", "Village Idiots",
   0, 0.9,
