@@ -52,7 +52,7 @@ lord_talk_addon = [
         (neq, "$players_kingdom", "$g_talk_troop_faction"),
 		############ NEW v2.8 - fixes player inability to enlist in v2.7
         # (eq, "$players_kingdom", 0),
-        (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
+        # (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
 		############
         (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0), 
      ],"My Lord, I would like to enlist in your army.", "lord_request_enlistment",[]],
@@ -88,7 +88,7 @@ lord_talk_addon = [
         (eq, "$g_talk_troop", "$enlisted_lord"),
         (eq, "$freelancer_state", 2),
         (ge, "$g_talk_troop_faction_relation", 0),
-        (neq, "$players_kingdom", "$g_talk_troop_faction"),
+        # (neq, "$players_kingdom", "$g_talk_troop_faction"),
 		############ NEW v2.8 - fixes player inability to enlist in v2.7
         # (eq, "$players_kingdom", 0),
         (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
