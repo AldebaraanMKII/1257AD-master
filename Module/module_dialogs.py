@@ -9557,7 +9557,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),
 	####################
    ],
-"{s1}", "constable_pretalk", []],
+"{s1}", "dplmc_constable_pretalk", []],
 #####
 
 #####
@@ -9581,7 +9581,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
      ]],
      
  [anyone|plyr, "dplmc_constable_exchange_prisoner_select", [],
-"Nobody.", "constable_pretalk", []],
+"Nobody.", "dplmc_constable_pretalk", []],
 #####
 
 #####
@@ -9609,7 +9609,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    ]],
      
  [anyone|plyr, "dplmc_constable_exchange_prisoner_lord_select", [],
-"Nobody.", "constable_pretalk", []],   
+"Nobody.", "dplmc_constable_pretalk", []],   
 #####
 
 #####
@@ -11731,7 +11731,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),
 	########### NEW v2.9 - improved relations with pope after crusade
     (store_random_in_range, ":random", 5, 8),
-    (call_script, "script_change_player_relation_with_troop", ":trp_pope", ":random"),
+    (call_script, "script_change_player_relation_with_troop", "trp_pope", ":random"),
 	###########
     (str_store_faction_name, s1, "$crusade_target_faction"),
  ], "So be it, I'll declare the crusade against {s1}. Deus Vult!", "lord_talk",[]],   
