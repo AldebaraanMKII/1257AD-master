@@ -9557,7 +9557,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),
 	####################
    ],
-"{s1}", "constable_pretalk", []],
+"{s1}", "dplmc_constable_pretalk", []],
 #####
 
 #####
@@ -9581,7 +9581,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
      ]],
      
  [anyone|plyr, "dplmc_constable_exchange_prisoner_select", [],
-"Nobody.", "constable_pretalk", []],
+"Nobody.", "dplmc_constable_pretalk", []],
 #####
 
 #####
@@ -9609,7 +9609,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    ]],
      
  [anyone|plyr, "dplmc_constable_exchange_prisoner_lord_select", [],
-"Nobody.", "constable_pretalk", []],   
+"Nobody.", "dplmc_constable_pretalk", []],   
 #####
 
 #####
