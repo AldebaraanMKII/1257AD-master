@@ -11004,7 +11004,8 @@ game_menus = [ #
 
         (try_begin),
           (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
-          (neq, "$players_kingdom", "fac_player_supporters_faction"),
+          # (neq, "$players_kingdom", "fac_player_supporters_faction"),
+          (neq|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself
           (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
           (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
           (jump_to_menu, "mnu_castle_taken_2"),
