@@ -26,7 +26,7 @@ factions = [
   ("outlaws", "Outlaws", max_player_rating(-30), 0.5,[("commoners",-0.6),("player_faction",-0.15)], [], 0xFF00FF),
 # Factions before this point are hardwired into the game end their order should not be changed.
 
-  ("neutral", "Neutral",0, 0.1,[("player_faction",0.0)], [],0xFFFFFF),
+  ("neutral", "Neutral Parties",0, 0.1,[("player_faction",0.0)], [],0xFFFFFF),
   ("innocents", "Innocents", ff_always_hide_label, 0.5,[("outlaws",-0.05)], [],0xFFFFFF),
   ("merchants", "Merchants", ff_always_hide_label, 0.5,[("outlaws",-0.5),], [],0xFFFFFF),
 
@@ -110,8 +110,8 @@ factions = [
 #  ("swadian_caravans", "Swadian Caravans", 0, 0.5,[("outlaws",-0.8), ("dark_knights",-0.2)], []),
 #  ("vaegir_caravans", "Vaegir Caravans", 0, 0.5,[("outlaws",-0.8), ("dark_knights",-0.2)], []),
 
-  ("player_faction", "Player Faction",0, 0.9, [], [], 0x00FFFF),
-  ("player_supporters_faction", "Player's Supporters",0, 0.9, [("player_faction",1.00),("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0x00FFFF), #changed name so that can tell difference if shows up on map
+  ("player_faction", "Player",0, 0.9, [], [], 0x00FFFF),
+  ("player_supporters_faction", "Player's Kingdom",0, 0.9, [("player_faction",1.00),("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0x00FFFF), #changed name so that can tell difference if shows up on map
 
   ("kingdom_1",  "Ordo Teutonicus",
   #"Teutonic Order (Livonia and Prussia)",
@@ -915,14 +915,14 @@ factions = [
 
 ##  ("rebel_peasants", "Rebel Peasants", 0, 0.5,[("vaegirs",-0.5),("player_faction",0.0)], []),
 
-  ("manhunters", "Captivos Proscriptorum", 0, 0.5,[("outlaws",-0.6),("player_faction",0.1)], [],0xFFFFFF),
-  ("deserters", "Deserti", 0, 0.5,[("manhunters",-0.6),("merchants",-0.5),("player_faction",-0.1)], [], 0xFF00FF),
-  ("mountain_bandits", "Montes Sicarii", 0, 0.5,[("commoners",-0.2),("merchants",-0.5),("manhunters",-0.6),("player_faction",-0.15)], [], 0x888888),
-  ("forest_bandits", "Silvae Sicarii", 0, 0.5,[("commoners",-0.2),("merchants",-0.5),("manhunters",-0.6),("player_faction",-0.15)], [], 0x888888),
+  ("manhunters", "Manhunters", 0, 0.5,[("outlaws",-0.6),("player_faction",0.1)], [],0xFFFFFF),
+  ("deserters", "Deserters", 0, 0.5,[("manhunters",-0.6),("merchants",-0.5),("player_faction",-0.1)], [], 0xFF00FF),
+  ("mountain_bandits", "Allied Factions", 0, 0.5,[("commoners",-0.2),("merchants",-0.5),("manhunters",-0.6),("player_faction",-0.15)], [], 0x006DE2),
+  ("forest_bandits", "Friendly Factions", 0, 0.5,[("commoners",-0.2),("merchants",-0.5),("manhunters",-0.6),("player_faction",-0.15)], [], 0x00FF00),
 
-  ("undeads", "{!}Undeads", max_player_rating(-30), 0.5,[("commoners",-0.7),("player_faction",-0.5)], []),
+  ("undeads", "Enemy Factions", max_player_rating(-30), 0.5,[("commoners",-0.7),("player_faction",-0.5)], [], 0xFF0000),
   # ("slavers", "{!}Slavers", 0, 0.1, [], []),
-  ("peasant_rebels", "{!}Peasant Rebels", 0, 1.0,
+  ("peasant_rebels", "Peasant Rebels", 0, 1.0,
     [
       # ("noble_refugees",-1.0),
       ("outlaws",-0.1),
@@ -968,11 +968,11 @@ factions = [
       ("papacy", -0.5),
       ("kingdom_33", -0.5)
     ],
-    [],0xFFFFFF),
+    [],0xFF00FF),
  
  
  ############### NEW v2.1 - escaped prisoner faction
-  ("escaped_prisoners_faction", "{!}Escaped Prisoners", 0, 1.0,
+  ("escaped_prisoners_faction", "Escaped Prisoners", 0, 1.0,
     [
       # ("noble_refugees",-0.1),
       ("outlaws",-0.2),
