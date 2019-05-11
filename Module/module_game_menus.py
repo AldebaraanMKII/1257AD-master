@@ -24700,12 +24700,14 @@ game_menus = [ #
          (eq, "$g_misc_garrison_dont_disband_troops_when_taking_control", 0),
            (call_script, "script_party_remove_all_companions", "$current_town"),
        (try_end),
-       (try_begin),
-         (neg|is_between, "$current_town", castles_begin, castles_end),
-         (call_script, "script_change_player_relation_with_center", "$current_town", -10),
-         (display_message, "@The commoners are angry you take away their rights!", 0xff0000),
-         (play_sound, "snd_quest_failed"),
-       (try_end),
+	   ##### NEW v2.9 - disabled
+       # (try_begin),
+         # (neg|is_between, "$current_town", castles_begin, castles_end),
+         # (call_script, "script_change_player_relation_with_center", "$current_town", -10),
+         # (display_message, "@The commoners are angry you take away their rights!", 0xff0000),
+         # (play_sound, "snd_quest_failed"),
+       # (try_end),
+	   ###################
        
      ]),
      
@@ -24716,11 +24718,12 @@ game_menus = [ #
      [
        (party_set_slot, "$current_town", slot_garrison_control, town_controled),
        #remove the rest
-       (call_script, "script_party_remove_all_companions", "$current_town"), 
-       (call_script, "script_cf_reinforce_party", "$current_town"),
-       (call_script, "script_cf_reinforce_party", "$current_town"),
-       (call_script, "script_cf_reinforce_party", "$current_town"),
-       (play_sound, "snd_quest_succeeded"),
+       (eq, "$g_misc_garrison_dont_disband_troops_when_taking_control", 0),  ##### NEW v2.9
+         (call_script, "script_party_remove_all_companions", "$current_town"), 
+         (call_script, "script_cf_reinforce_party", "$current_town"),
+         (call_script, "script_cf_reinforce_party", "$current_town"),
+         (call_script, "script_cf_reinforce_party", "$current_town"),
+         (play_sound, "snd_quest_succeeded"),
      ]),
 
      ("garrison_control_hire_local_merc",
