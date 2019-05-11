@@ -13558,90 +13558,92 @@ presentations = [
         # (troop_set_slot, "trp_temp_array_a", 37, "fac_kingdom_1"),
 
         # KOMKE reworked faction list
-        (troop_set_slot, "trp_temp_array_a", 0, "fac_commoners"),
-        (troop_set_slot, "trp_temp_array_a", 1, "fac_innocents"),
-        (troop_set_slot, "trp_temp_array_a", 2, "fac_neutral"),
-        (troop_set_slot, "trp_temp_array_a", 3, "fac_manhunters"),
-        (troop_set_slot, "trp_temp_array_a", 4, "fac_crusade"),
-        (troop_set_slot, "trp_temp_array_a", 5, "fac_deserters"),
-        (troop_set_slot, "trp_temp_array_a", 6, "fac_outlaws"),
-        (troop_set_slot, "trp_temp_array_a", 7, "fac_peasant_rebels"),
-        (troop_set_slot, "trp_temp_array_a", 8, "fac_escaped_prisoners_faction"),
-        (troop_set_slot, "trp_temp_array_a", 9, "fac_player_faction"),
-        (troop_set_slot, "trp_temp_array_a", 10, "fac_player_supporters_faction"),
-        (troop_set_slot, "trp_temp_array_a", 11, "fac_kingdom_1"),
-        (troop_set_slot, "trp_temp_array_a", 12, "fac_kingdom_2"),
-        (troop_set_slot, "trp_temp_array_a", 13, "fac_kingdom_3"),
-        (troop_set_slot, "trp_temp_array_a", 14, "fac_kingdom_4"),
-        (troop_set_slot, "trp_temp_array_a", 15, "fac_kingdom_5"),
-        (troop_set_slot, "trp_temp_array_a", 16, "fac_kingdom_6"),
-        (troop_set_slot, "trp_temp_array_a", 17, "fac_kingdom_7"),
-        (troop_set_slot, "trp_temp_array_a", 18, "fac_kingdom_8"),
-        (troop_set_slot, "trp_temp_array_a", 19, "fac_kingdom_9"),
-        (troop_set_slot, "trp_temp_array_a", 20, "fac_kingdom_10"),
-        (troop_set_slot, "trp_temp_array_a", 21, "fac_kingdom_11"),
-        (troop_set_slot, "trp_temp_array_a", 22, "fac_kingdom_12"),
-        (troop_set_slot, "trp_temp_array_a", 23, "fac_kingdom_13"),
-        (troop_set_slot, "trp_temp_array_a", 24, "fac_kingdom_14"),
-        (troop_set_slot, "trp_temp_array_a", 25, "fac_kingdom_15"),
-        (troop_set_slot, "trp_temp_array_a", 26, "fac_kingdom_16"),
-        (troop_set_slot, "trp_temp_array_a", 27, "fac_kingdom_17"),
-        (troop_set_slot, "trp_temp_array_a", 28, "fac_kingdom_18"),
-        (troop_set_slot, "trp_temp_array_a", 29, "fac_kingdom_19"),
-        (troop_set_slot, "trp_temp_array_a", 30, "fac_kingdom_20"),
-        (troop_set_slot, "trp_temp_array_a", 31, "fac_papacy"),
-        (troop_set_slot, "trp_temp_array_a", 32, "fac_kingdom_22"),
-        (troop_set_slot, "trp_temp_array_a", 33, "fac_kingdom_23"),
-        (troop_set_slot, "trp_temp_array_a", 34, "fac_kingdom_24"),
-        (troop_set_slot, "trp_temp_array_a", 35, "fac_kingdom_25"),
-        (troop_set_slot, "trp_temp_array_a", 36, "fac_kingdom_26"),
-        (troop_set_slot, "trp_temp_array_a", 37, "fac_kingdom_27"),
-        (troop_set_slot, "trp_temp_array_a", 38, "fac_kingdom_28"),
-        (troop_set_slot, "trp_temp_array_a", 39, "fac_kingdom_29"),
-        (troop_set_slot, "trp_temp_array_a", 40, "fac_kingdom_30"),
-        (troop_set_slot, "trp_temp_array_a", 41, "fac_kingdom_31"),
-        (troop_set_slot, "trp_temp_array_a", 42, "fac_kingdom_32"),
-        (troop_set_slot, "trp_temp_array_a", 43, "fac_kingdom_33"),
-        (troop_set_slot, "trp_temp_array_a", 44, "fac_kingdom_34"),
-        (troop_set_slot, "trp_temp_array_a", 45, "fac_kingdom_35"),
-        (troop_set_slot, "trp_temp_array_a", 46, "fac_kingdom_36"),
-        (troop_set_slot, "trp_temp_array_a", 47, "fac_kingdom_37"),
-        (troop_set_slot, "trp_temp_array_a", 48, "fac_kingdom_38"),
-        (troop_set_slot, "trp_temp_array_a", 49, "fac_kingdom_39"),
-        (troop_set_slot, "trp_temp_array_a", 50, "fac_kingdom_40"),
-        (troop_set_slot, "trp_temp_array_a", 51, "fac_kingdom_41"),
-        (troop_set_slot, "trp_temp_array_a", 52, "fac_kingdom_42"),
-        (troop_set_slot, "trp_temp_array_a", 53, "fac_enhanced_kingdom_1"),
-        (troop_set_slot, "trp_temp_array_a", 54, "fac_enhanced_kingdom_2"),
-        (troop_set_slot, "trp_temp_array_a", 55, "fac_enhanced_kingdom_3"),
-        (troop_set_slot, "trp_temp_array_a", 56, "fac_enhanced_kingdom_4"),
-        (troop_set_slot, "trp_temp_array_a", 57, "fac_enhanced_kingdom_5"),
-        (troop_set_slot, "trp_temp_array_a", 58, "fac_enhanced_kingdom_6"),
-        (troop_set_slot, "trp_temp_array_a", 59, "fac_enhanced_kingdom_7"),
-        (troop_set_slot, "trp_temp_array_a", 60, "fac_enhanced_kingdom_8"),
-        (troop_set_slot, "trp_temp_array_a", 61, "fac_enhanced_kingdom_9"),
-        (troop_set_slot, "trp_temp_array_a", 62, "fac_enhanced_kingdom_10"),
-        (troop_set_slot, "trp_temp_array_a", 63, "fac_enhanced_kingdom_11"),
-        (troop_set_slot, "trp_temp_array_a", 64, "fac_enhanced_kingdom_12"),
-        (troop_set_slot, "trp_temp_array_a", 65, "fac_enhanced_kingdom_13"),
-        (troop_set_slot, "trp_temp_array_a", 66, "fac_enhanced_kingdom_14"),
-        (troop_set_slot, "trp_temp_array_a", 67, "fac_enhanced_kingdom_15"),
-        (troop_set_slot, "trp_temp_array_a", 68, "fac_enhanced_kingdom_16"),
-        (troop_set_slot, "trp_temp_array_a", 69, "fac_enhanced_kingdom_17"),
-        (troop_set_slot, "trp_temp_array_a", 70, "fac_enhanced_kingdom_18"),
-        (troop_set_slot, "trp_temp_array_a", 71, "fac_enhanced_kingdom_19"),
-        (troop_set_slot, "trp_temp_array_a", 72, "fac_enhanced_kingdom_20"),
-        (troop_set_slot, "trp_temp_array_a", 73, "fac_enhanced_kingdom_21"),
-        (troop_set_slot, "trp_temp_array_a", 74, "fac_enhanced_kingdom_22"),
-        (troop_set_slot, "trp_temp_array_a", 75, "fac_enhanced_kingdom_23"),
-        (troop_set_slot, "trp_temp_array_a", 76, "fac_enhanced_kingdom_24"),
-        (troop_set_slot, "trp_temp_array_a", 77, "fac_enhanced_kingdom_25"),
-        (troop_set_slot, "trp_temp_array_a", 78, "fac_enhanced_kingdom_26"),
-        (troop_set_slot, "trp_temp_array_a", 79, "fac_enhanced_kingdom_27"),
-        (troop_set_slot, "trp_temp_array_a", 80, "fac_enhanced_kingdom_28"),
-        (troop_set_slot, "trp_temp_array_a", 81, "fac_enhanced_kingdom_29"),
-        (troop_set_slot, "trp_temp_array_a", 82, "fac_enhanced_kingdom_30"),
-
+        (troop_set_slot, "trp_temp_array_a", 0, "fac_player_faction"),
+        (troop_set_slot, "trp_temp_array_a", 1, "fac_player_supporters_faction"),
+        (troop_set_slot, "trp_temp_array_a", 2, "fac_escaped_prisoners_faction"),        
+        (troop_set_slot, "trp_temp_array_a", 3, "fac_mountain_bandits"),        
+        (troop_set_slot, "trp_temp_array_a", 4, "fac_forest_bandits"),        
+        (troop_set_slot, "trp_temp_array_a", 5, "fac_neutral"),        
+        (troop_set_slot, "trp_temp_array_a", 6, "fac_commoners"),
+        (troop_set_slot, "trp_temp_array_a", 7, "fac_innocents"),
+        (troop_set_slot, "trp_temp_array_a", 8, "fac_manhunters"),
+        (troop_set_slot, "trp_temp_array_a", 9, "fac_outlaws"),        
+        (troop_set_slot, "trp_temp_array_a", 10, "fac_deserters"),
+        (troop_set_slot, "trp_temp_array_a", 11, "fac_peasant_rebels"),
+        (troop_set_slot, "trp_temp_array_a", 12, "fac_crusade"),
+        (troop_set_slot, "trp_temp_array_a", 13, "fac_undeads"),
+        (troop_set_slot, "trp_temp_array_a", 14, "fac_kingdom_1"),
+        (troop_set_slot, "trp_temp_array_a", 15, "fac_kingdom_2"),
+        (troop_set_slot, "trp_temp_array_a", 16, "fac_kingdom_3"),
+        (troop_set_slot, "trp_temp_array_a", 17, "fac_kingdom_4"),
+        (troop_set_slot, "trp_temp_array_a", 18, "fac_kingdom_5"),
+        (troop_set_slot, "trp_temp_array_a", 19, "fac_kingdom_6"),
+        (troop_set_slot, "trp_temp_array_a", 20, "fac_kingdom_7"),
+        (troop_set_slot, "trp_temp_array_a", 21, "fac_kingdom_8"),
+        (troop_set_slot, "trp_temp_array_a", 22, "fac_kingdom_9"),
+        (troop_set_slot, "trp_temp_array_a", 23, "fac_kingdom_10"),
+        (troop_set_slot, "trp_temp_array_a", 24, "fac_kingdom_11"),
+        (troop_set_slot, "trp_temp_array_a", 25, "fac_kingdom_12"),
+        (troop_set_slot, "trp_temp_array_a", 26, "fac_kingdom_13"),
+        (troop_set_slot, "trp_temp_array_a", 27, "fac_kingdom_14"),
+        (troop_set_slot, "trp_temp_array_a", 28, "fac_kingdom_15"),
+        (troop_set_slot, "trp_temp_array_a", 29, "fac_kingdom_16"),
+        (troop_set_slot, "trp_temp_array_a", 30, "fac_kingdom_17"),
+        (troop_set_slot, "trp_temp_array_a", 31, "fac_kingdom_18"),
+        (troop_set_slot, "trp_temp_array_a", 32, "fac_kingdom_19"),
+        (troop_set_slot, "trp_temp_array_a", 33, "fac_kingdom_20"),
+        (troop_set_slot, "trp_temp_array_a", 34, "fac_papacy"),
+        (troop_set_slot, "trp_temp_array_a", 35, "fac_kingdom_22"),
+        (troop_set_slot, "trp_temp_array_a", 36, "fac_kingdom_23"),
+        (troop_set_slot, "trp_temp_array_a", 37, "fac_kingdom_24"),
+        (troop_set_slot, "trp_temp_array_a", 38, "fac_kingdom_25"),
+        (troop_set_slot, "trp_temp_array_a", 39, "fac_kingdom_26"),
+        (troop_set_slot, "trp_temp_array_a", 40, "fac_kingdom_27"),
+        (troop_set_slot, "trp_temp_array_a", 41, "fac_kingdom_28"),
+        (troop_set_slot, "trp_temp_array_a", 42, "fac_kingdom_29"),
+        (troop_set_slot, "trp_temp_array_a", 43, "fac_kingdom_30"),
+        (troop_set_slot, "trp_temp_array_a", 44, "fac_kingdom_31"),
+        (troop_set_slot, "trp_temp_array_a", 45, "fac_kingdom_32"),
+        (troop_set_slot, "trp_temp_array_a", 46, "fac_kingdom_33"),
+        (troop_set_slot, "trp_temp_array_a", 47, "fac_kingdom_34"),
+        (troop_set_slot, "trp_temp_array_a", 48, "fac_kingdom_35"),
+        (troop_set_slot, "trp_temp_array_a", 49, "fac_kingdom_36"),
+        (troop_set_slot, "trp_temp_array_a", 50, "fac_kingdom_37"),
+        (troop_set_slot, "trp_temp_array_a", 51, "fac_kingdom_38"),
+        (troop_set_slot, "trp_temp_array_a", 52, "fac_kingdom_39"),
+        (troop_set_slot, "trp_temp_array_a", 53, "fac_kingdom_40"),
+        (troop_set_slot, "trp_temp_array_a", 54, "fac_kingdom_41"),
+        (troop_set_slot, "trp_temp_array_a", 55, "fac_kingdom_42"),
+        (troop_set_slot, "trp_temp_array_a", 56, "fac_enhanced_kingdom_1"),
+        (troop_set_slot, "trp_temp_array_a", 57, "fac_enhanced_kingdom_2"),
+        (troop_set_slot, "trp_temp_array_a", 58, "fac_enhanced_kingdom_3"),
+        (troop_set_slot, "trp_temp_array_a", 59, "fac_enhanced_kingdom_4"),
+        (troop_set_slot, "trp_temp_array_a", 60, "fac_enhanced_kingdom_5"),
+        (troop_set_slot, "trp_temp_array_a", 61, "fac_enhanced_kingdom_6"),
+        (troop_set_slot, "trp_temp_array_a", 62, "fac_enhanced_kingdom_7"),
+        (troop_set_slot, "trp_temp_array_a", 63, "fac_enhanced_kingdom_8"),
+        (troop_set_slot, "trp_temp_array_a", 64, "fac_enhanced_kingdom_9"),
+        (troop_set_slot, "trp_temp_array_a", 65, "fac_enhanced_kingdom_10"),
+        (troop_set_slot, "trp_temp_array_a", 66, "fac_enhanced_kingdom_11"),
+        (troop_set_slot, "trp_temp_array_a", 67, "fac_enhanced_kingdom_12"),
+        (troop_set_slot, "trp_temp_array_a", 68, "fac_enhanced_kingdom_13"),
+        (troop_set_slot, "trp_temp_array_a", 69, "fac_enhanced_kingdom_14"),
+        (troop_set_slot, "trp_temp_array_a", 70, "fac_enhanced_kingdom_15"),
+        (troop_set_slot, "trp_temp_array_a", 71, "fac_enhanced_kingdom_16"),
+        (troop_set_slot, "trp_temp_array_a", 72, "fac_enhanced_kingdom_17"),
+        (troop_set_slot, "trp_temp_array_a", 73, "fac_enhanced_kingdom_18"),
+        (troop_set_slot, "trp_temp_array_a", 74, "fac_enhanced_kingdom_19"),
+        (troop_set_slot, "trp_temp_array_a", 75, "fac_enhanced_kingdom_20"),
+        (troop_set_slot, "trp_temp_array_a", 76, "fac_enhanced_kingdom_21"),
+        (troop_set_slot, "trp_temp_array_a", 77, "fac_enhanced_kingdom_22"),
+        (troop_set_slot, "trp_temp_array_a", 78, "fac_enhanced_kingdom_23"),
+        (troop_set_slot, "trp_temp_array_a", 79, "fac_enhanced_kingdom_24"),
+        (troop_set_slot, "trp_temp_array_a", 80, "fac_enhanced_kingdom_25"),
+        (troop_set_slot, "trp_temp_array_a", 81, "fac_enhanced_kingdom_26"),
+        (troop_set_slot, "trp_temp_array_a", 82, "fac_enhanced_kingdom_27"),
+        (troop_set_slot, "trp_temp_array_a", 83, "fac_enhanced_kingdom_28"),
+        (troop_set_slot, "trp_temp_array_a", 84, "fac_enhanced_kingdom_29"),
+        (troop_set_slot, "trp_temp_array_a", 85, "fac_enhanced_kingdom_30"),
 
         # # default color list
         # (troop_set_slot, "trp_temp_array_b", 0, 0x888888),
@@ -13689,90 +13691,92 @@ presentations = [
         # (troop_set_slot, "trp_temp_array_b", 42, 0xe8e8e8),
 
         # KOMKE reworked default color list
-        (troop_set_slot, "trp_temp_array_b", 0, 0xffffff),## Commoners
-        (troop_set_slot, "trp_temp_array_b", 1, 0xffffff),## Innocents
-        (troop_set_slot, "trp_temp_array_b", 2, 0xffffff),## Neutral
-        (troop_set_slot, "trp_temp_array_b", 3, 0xffffff),## Manhunters
-        (troop_set_slot, "trp_temp_array_b", 4, 0xffffff),## Crusade
-        (troop_set_slot, "trp_temp_array_b", 5, 0xff00ff),## Deserters
-        (troop_set_slot, "trp_temp_array_b", 6, 0xff00ff),## Outlaws
-        (troop_set_slot, "trp_temp_array_b", 7, 0xff00ff),## Peasant Rebels
-        (troop_set_slot, "trp_temp_array_b", 8, 0x00ffff),## Escaped Prisoners
-        (troop_set_slot, "trp_temp_array_b", 9, 0x00ffff),## Player
-        (troop_set_slot, "trp_temp_array_b", 10, 0x00ffff),## Player Supporters
-        (troop_set_slot, "trp_temp_array_b", 11, 0xe9e9e9),## Kingdom 1 Teutonicus
-        (troop_set_slot, "trp_temp_array_b", 12, 0xbadeb2),## Kingdom 2 Lithuania
-        (troop_set_slot, "trp_temp_array_b", 13, 0xa33e32),## Kingdom 3 Golden Horde
-        (troop_set_slot, "trp_temp_array_b", 14, 0x9b1a1a),## Kingdom 4 Danmark
-        (troop_set_slot, "trp_temp_array_b", 15, 0xff0000),## Kingdom 5 Poland
-        (troop_set_slot, "trp_temp_array_b", 16, 0xffcc00),## Kingdom 6 Holy Roman Empire
-        (troop_set_slot, "trp_temp_array_b", 17, 0x289327),## Kingdom 7 Hungary
-        (troop_set_slot, "trp_temp_array_b", 18, 0x9e0b6f),## Kingdom 8 Novgorod
-        (troop_set_slot, "trp_temp_array_b", 19, 0x931124),## Kingdom 9 England
-        (troop_set_slot, "trp_temp_array_b", 20, 0x6de2e2),## Kingdom 10 France
-        (troop_set_slot, "trp_temp_array_b", 21, 0x6669d6),## Kingdom 11 Norway
-        (troop_set_slot, "trp_temp_array_b", 22, 0x22d8a7),## Kingdom 12 Scotland
-        (troop_set_slot, "trp_temp_array_b", 23, 0x77b322),## Kingdom 13 Ireland
-        (troop_set_slot, "trp_temp_array_b", 24, 0x3254b5),## Kingdom 14 Sweden
-        (troop_set_slot, "trp_temp_array_b", 25, 0xece874),## Kingdom 15 Rus
-        (troop_set_slot, "trp_temp_array_b", 26, 0x27837a),## Kingdom 16 Portugal
-        (troop_set_slot, "trp_temp_array_b", 27, 0x7b2333),## Kingdom 17 Aragon
-        (troop_set_slot, "trp_temp_array_b", 28, 0xd85ac4),## Kingdom 18 Castille
-        (troop_set_slot, "trp_temp_array_b", 29, 0xf7f497),## Kingdom 19 Navarre
-        (troop_set_slot, "trp_temp_array_b", 30, 0xabc904),## Kingdom 20 Granada
-        (troop_set_slot, "trp_temp_array_b", 31, 0xfff17a),## Kingdom 21 Papacy
-        (troop_set_slot, "trp_temp_array_b", 32, 0x760d0d),## Kingdom 22 Nicaea
-        (troop_set_slot, "trp_temp_array_b", 33, 0xf3efb8),## Kingdom 23 Jerusalem
-        (troop_set_slot, "trp_temp_array_b", 34, 0x799cb5),## Kingdom 24 Sicily
-        (troop_set_slot, "trp_temp_array_b", 35, 0xebe800),## Kingdom 25 Mamluk
-        (troop_set_slot, "trp_temp_array_b", 36, 0xb26248),## Kingdom 26 Latin Empire
-        (troop_set_slot, "trp_temp_array_b", 37, 0xe19004),## Kingdom 27 Ilkhanate
-        (troop_set_slot, "trp_temp_array_b", 38, 0xa48460),## Kingdom 28 Hafsid Dynasty
-        (troop_set_slot, "trp_temp_array_b", 39, 0xb38263),## Kingdom 29 Serbia
-        (troop_set_slot, "trp_temp_array_b", 40, 0x76a296),## Kingdom 30 Bulgaria
-        (troop_set_slot, "trp_temp_array_b", 41, 0xc1272d),## Kingdom 31 Marinid Dynasty
-        (troop_set_slot, "trp_temp_array_b", 42, 0xc1172d),## Kingdom 32 Venezia
-        (troop_set_slot, "trp_temp_array_b", 43, 0x3e7583),## Kingdom 33 Jotvingians
-        (troop_set_slot, "trp_temp_array_b", 44, 0x65c0d7),## Kingdom 34 Pruteni
-        (troop_set_slot, "trp_temp_array_b", 45, 0x3e7583),## Kingdom 35 Kursi
-        (troop_set_slot, "trp_temp_array_b", 46, 0x529cae),## Kingdom 36 Zemaiciai
-        (troop_set_slot, "trp_temp_array_b", 47, 0xdc0000),## Kingdom 37 Welsh
-        (troop_set_slot, "trp_temp_array_b", 48, 0xe1900a),## Kingdom 38 Genoa
-        (troop_set_slot, "trp_temp_array_b", 49, 0x7e2333),## Kingdom 39 Pisa
-        (troop_set_slot, "trp_temp_array_b", 50, 0x3254e5),## Kingdom 40 Comuni Guelfi
-        (troop_set_slot, "trp_temp_array_b", 51, 0x9e026a),## Kingdom 41 Comuni Ghibellini
-        (troop_set_slot, "trp_temp_array_b", 52, 0xe8e8e8),## Kingdom 42 Bohemia
-        (troop_set_slot, "trp_temp_array_b", 53, 0xe8e8e8),## Enhanced Kingdom 1
-        (troop_set_slot, "trp_temp_array_b", 54, 0xe8e8e8),## Enhanced Kingdom 2
-        (troop_set_slot, "trp_temp_array_b", 55, 0xe8e8e8),## Enhanced Kingdom 3
-        (troop_set_slot, "trp_temp_array_b", 56, 0xe8e8e8),## Enhanced Kingdom 4
-        (troop_set_slot, "trp_temp_array_b", 57, 0xe8e8e8),## Enhanced Kingdom 5
-        (troop_set_slot, "trp_temp_array_b", 58, 0xe8e8e8),## Enhanced Kingdom 6
-        (troop_set_slot, "trp_temp_array_b", 59, 0xe8e8e8),## Enhanced Kingdom 7
-        (troop_set_slot, "trp_temp_array_b", 60, 0xe8e8e8),## Enhanced Kingdom 8
-        (troop_set_slot, "trp_temp_array_b", 61, 0xe8e8e8),## Enhanced Kingdom 9
-        (troop_set_slot, "trp_temp_array_b", 62, 0xe8e8e8),## Enhanced Kingdom 10
-        (troop_set_slot, "trp_temp_array_b", 63, 0xe8e8e8),## Enhanced Kingdom 11
-        (troop_set_slot, "trp_temp_array_b", 64, 0xe8e8e8),## Enhanced Kingdom 12
-        (troop_set_slot, "trp_temp_array_b", 65, 0xe8e8e8),## Enhanced Kingdom 13
-        (troop_set_slot, "trp_temp_array_b", 66, 0xe8e8e8),## Enhanced Kingdom 14
-        (troop_set_slot, "trp_temp_array_b", 67, 0xe8e8e8),## Enhanced Kingdom 15
-        (troop_set_slot, "trp_temp_array_b", 68, 0xe8e8e8),## Enhanced Kingdom 16
-        (troop_set_slot, "trp_temp_array_b", 69, 0xe8e8e8),## Enhanced Kingdom 17
-        (troop_set_slot, "trp_temp_array_b", 70, 0xe8e8e8),## Enhanced Kingdom 18
-        (troop_set_slot, "trp_temp_array_b", 71, 0xe8e8e8),## Enhanced Kingdom 19
-        (troop_set_slot, "trp_temp_array_b", 72, 0xe8e8e8),## Enhanced Kingdom 20
-        (troop_set_slot, "trp_temp_array_b", 73, 0xe8e8e8),## Enhanced Kingdom 21
-        (troop_set_slot, "trp_temp_array_b", 74, 0xe8e8e8),## Enhanced Kingdom 22
-        (troop_set_slot, "trp_temp_array_b", 75, 0xe8e8e8),## Enhanced Kingdom 23
-        (troop_set_slot, "trp_temp_array_b", 76, 0xe8e8e8),## Enhanced Kingdom 24
-        (troop_set_slot, "trp_temp_array_b", 77, 0xe8e8e8),## Enhanced Kingdom 25
-        (troop_set_slot, "trp_temp_array_b", 78, 0xe8e8e8),## Enhanced Kingdom 26
-        (troop_set_slot, "trp_temp_array_b", 79, 0xe8e8e8),## Enhanced Kingdom 27
-        (troop_set_slot, "trp_temp_array_b", 80, 0xe8e8e8),## Enhanced Kingdom 28
-        (troop_set_slot, "trp_temp_array_b", 81, 0xe8e8e8),## Enhanced Kingdom 29
-        (troop_set_slot, "trp_temp_array_b", 82, 0xe8e8e8),## Enhanced Kingdom 30
-
+        (troop_set_slot, "trp_temp_array_b", 0, 0x00ffff),## Player
+        (troop_set_slot, "trp_temp_array_b", 1, 0x00ffff),## Player Supporters
+        (troop_set_slot, "trp_temp_array_b", 2, 0x00ffff),## Escaped Prisoners        
+        (troop_set_slot, "trp_temp_array_b", 3, 0x006DE2),## mountain_bandits = ally
+        (troop_set_slot, "trp_temp_array_b", 4, 0x00FF00),## forest_bandits = friendly        
+        (troop_set_slot, "trp_temp_array_b", 5, 0xffffff),## Neutral        
+        (troop_set_slot, "trp_temp_array_b", 6, 0xffffff),## Commoners
+        (troop_set_slot, "trp_temp_array_b", 7, 0xffffff),## Innocents
+        (troop_set_slot, "trp_temp_array_b", 8, 0xffffff),## Manhunters
+        (troop_set_slot, "trp_temp_array_b", 9, 0xff00ff),## Outlaws        
+        (troop_set_slot, "trp_temp_array_b", 10, 0xff00ff),## Deserters
+        (troop_set_slot, "trp_temp_array_b", 11, 0xff00ff),## Peasant Rebels
+        (troop_set_slot, "trp_temp_array_b", 12, 0xff00ff),## Crusade
+        (troop_set_slot, "trp_temp_array_b", 13, 0xFF0000),## undeads = enemy
+        (troop_set_slot, "trp_temp_array_b", 14, 0xe9e9e9),## Kingdom 1 Teutonicus
+        (troop_set_slot, "trp_temp_array_b", 15, 0xbadeb2),## Kingdom 2 Lithuania
+        (troop_set_slot, "trp_temp_array_b", 16, 0xa33e32),## Kingdom 3 Golden Horde
+        (troop_set_slot, "trp_temp_array_b", 17, 0x9b1a1a),## Kingdom 4 Danmark
+        (troop_set_slot, "trp_temp_array_b", 18, 0xff0000),## Kingdom 5 Poland
+        (troop_set_slot, "trp_temp_array_b", 19, 0xffcc00),## Kingdom 6 Holy Roman Empire
+        (troop_set_slot, "trp_temp_array_b", 20, 0x289327),## Kingdom 7 Hungary
+        (troop_set_slot, "trp_temp_array_b", 21, 0x9e0b6f),## Kingdom 8 Novgorod
+        (troop_set_slot, "trp_temp_array_b", 22, 0x931124),## Kingdom 9 England
+        (troop_set_slot, "trp_temp_array_b", 23, 0x006de2),## Kingdom 10 France
+        (troop_set_slot, "trp_temp_array_b", 24, 0x6669d6),## Kingdom 11 Norway
+        (troop_set_slot, "trp_temp_array_b", 25, 0x22d8a7),## Kingdom 12 Scotland
+        (troop_set_slot, "trp_temp_array_b", 26, 0x77b322),## Kingdom 13 Ireland
+        (troop_set_slot, "trp_temp_array_b", 27, 0x3254b5),## Kingdom 14 Sweden
+        (troop_set_slot, "trp_temp_array_b", 28, 0xece874),## Kingdom 15 Rus
+        (troop_set_slot, "trp_temp_array_b", 29, 0x27837a),## Kingdom 16 Portugal
+        (troop_set_slot, "trp_temp_array_b", 30, 0x07b233),## Kingdom 17 Aragon
+        (troop_set_slot, "trp_temp_array_b", 31, 0xd85ac4),## Kingdom 18 Castille
+        (troop_set_slot, "trp_temp_array_b", 32, 0xf7f497),## Kingdom 19 Navarre
+        (troop_set_slot, "trp_temp_array_b", 33, 0xabc904),## Kingdom 20 Granada
+        (troop_set_slot, "trp_temp_array_b", 34, 0xfff17a),## Kingdom 21 Papacy
+        (troop_set_slot, "trp_temp_array_b", 35, 0x760d0d),## Kingdom 22 Nicaea
+        (troop_set_slot, "trp_temp_array_b", 36, 0xf3efb8),## Kingdom 23 Jerusalem
+        (troop_set_slot, "trp_temp_array_b", 37, 0x799cb5),## Kingdom 24 Sicily
+        (troop_set_slot, "trp_temp_array_b", 38, 0xebe800),## Kingdom 25 Mamluk
+        (troop_set_slot, "trp_temp_array_b", 39, 0xb26248),## Kingdom 26 Latin Empire
+        (troop_set_slot, "trp_temp_array_b", 40, 0xe19004),## Kingdom 27 Ilkhanate
+        (troop_set_slot, "trp_temp_array_b", 41, 0xa48460),## Kingdom 28 Hafsid Dynasty
+        (troop_set_slot, "trp_temp_array_b", 42, 0xb38263),## Kingdom 29 Serbia
+        (troop_set_slot, "trp_temp_array_b", 43, 0x76a296),## Kingdom 30 Bulgaria
+        (troop_set_slot, "trp_temp_array_b", 44, 0xc1272d),## Kingdom 31 Marinid Dynasty
+        (troop_set_slot, "trp_temp_array_b", 45, 0xc1172d),## Kingdom 32 Venezia
+        (troop_set_slot, "trp_temp_array_b", 46, 0x3e7583),## Kingdom 33 Jotvingians
+        (troop_set_slot, "trp_temp_array_b", 47, 0x65c0d7),## Kingdom 34 Pruteni
+        (troop_set_slot, "trp_temp_array_b", 48, 0x3e7583),## Kingdom 35 Kursi
+        (troop_set_slot, "trp_temp_array_b", 49, 0x529cae),## Kingdom 36 Zemaiciai
+        (troop_set_slot, "trp_temp_array_b", 50, 0x00dc00),## Kingdom 37 Welsh
+        (troop_set_slot, "trp_temp_array_b", 51, 0xe1900a),## Kingdom 38 Genoa
+        (troop_set_slot, "trp_temp_array_b", 52, 0xebe800),## Kingdom 39 Pisa
+        (troop_set_slot, "trp_temp_array_b", 53, 0x3254e5),## Kingdom 40 Comuni Guelfi
+        (troop_set_slot, "trp_temp_array_b", 54, 0x9e026a),## Kingdom 41 Comuni Ghibellini
+        (troop_set_slot, "trp_temp_array_b", 55, 0xe8e8e8),## Kingdom 42 Bohemia
+        (troop_set_slot, "trp_temp_array_b", 56, 0xe8e8e8),## Enhanced Kingdom 1
+        (troop_set_slot, "trp_temp_array_b", 57, 0xe8e8e8),## Enhanced Kingdom 2
+        (troop_set_slot, "trp_temp_array_b", 58, 0xe8e8e8),## Enhanced Kingdom 3
+        (troop_set_slot, "trp_temp_array_b", 59, 0xe8e8e8),## Enhanced Kingdom 4
+        (troop_set_slot, "trp_temp_array_b", 60, 0xe8e8e8),## Enhanced Kingdom 5
+        (troop_set_slot, "trp_temp_array_b", 61, 0xe8e8e8),## Enhanced Kingdom 6
+        (troop_set_slot, "trp_temp_array_b", 62, 0xe8e8e8),## Enhanced Kingdom 7
+        (troop_set_slot, "trp_temp_array_b", 63, 0xe8e8e8),## Enhanced Kingdom 8
+        (troop_set_slot, "trp_temp_array_b", 64, 0xe8e8e8),## Enhanced Kingdom 9
+        (troop_set_slot, "trp_temp_array_b", 65, 0xe8e8e8),## Enhanced Kingdom 10
+        (troop_set_slot, "trp_temp_array_b", 66, 0xe8e8e8),## Enhanced Kingdom 11
+        (troop_set_slot, "trp_temp_array_b", 67, 0xe8e8e8),## Enhanced Kingdom 12
+        (troop_set_slot, "trp_temp_array_b", 68, 0xe8e8e8),## Enhanced Kingdom 13
+        (troop_set_slot, "trp_temp_array_b", 69, 0xe8e8e8),## Enhanced Kingdom 14
+        (troop_set_slot, "trp_temp_array_b", 70, 0xe8e8e8),## Enhanced Kingdom 15
+        (troop_set_slot, "trp_temp_array_b", 71, 0xe8e8e8),## Enhanced Kingdom 16
+        (troop_set_slot, "trp_temp_array_b", 72, 0xe8e8e8),## Enhanced Kingdom 17
+        (troop_set_slot, "trp_temp_array_b", 73, 0xe8e8e8),## Enhanced Kingdom 18
+        (troop_set_slot, "trp_temp_array_b", 74, 0xe8e8e8),## Enhanced Kingdom 19
+        (troop_set_slot, "trp_temp_array_b", 75, 0xe8e8e8),## Enhanced Kingdom 20
+        (troop_set_slot, "trp_temp_array_b", 76, 0xe8e8e8),## Enhanced Kingdom 21
+        (troop_set_slot, "trp_temp_array_b", 77, 0xe8e8e8),## Enhanced Kingdom 22
+        (troop_set_slot, "trp_temp_array_b", 78, 0xe8e8e8),## Enhanced Kingdom 23
+        (troop_set_slot, "trp_temp_array_b", 79, 0xe8e8e8),## Enhanced Kingdom 24
+        (troop_set_slot, "trp_temp_array_b", 80, 0xe8e8e8),## Enhanced Kingdom 25
+        (troop_set_slot, "trp_temp_array_b", 81, 0xe8e8e8),## Enhanced Kingdom 26
+        (troop_set_slot, "trp_temp_array_b", 82, 0xe8e8e8),## Enhanced Kingdom 27
+        (troop_set_slot, "trp_temp_array_b", 83, 0xe8e8e8),## Enhanced Kingdom 28
+        (troop_set_slot, "trp_temp_array_b", 84, 0xe8e8e8),## Enhanced Kingdom 29
+        (troop_set_slot, "trp_temp_array_b", 85, 0xe8e8e8),## Enhanced Kingdom 30
 
         # (try_for_range, ":cur_slot", 1, 43),
         #   (troop_get_slot, ":cur_faction", "trp_temp_array_a", ":cur_slot"),
@@ -13786,10 +13790,16 @@ presentations = [
         # (troop_get_slot, ":cur_faction", "trp_temp_array_a", "$temp"),
         # (str_store_faction_name, s0, ":cur_faction"),
 
-        (try_for_range, ":cur_slot", 0, 83),##KOMKE from 0 to 82, + 1 because loop goes up to upper bound -1
+        (try_for_range, ":cur_slot", 0, 86),##KOMKE from 0 to 85, + 1 because loop goes up to upper bound -1
           (troop_get_slot, ":cur_faction", "trp_temp_array_a", ":cur_slot"),
           (str_store_faction_name, s0, ":cur_faction"),
-          (overlay_add_item, "$g_presentation_obj_1", s0),
+          (try_begin),
+            (is_between, ":cur_faction", enhanced_factions_begin, enhanced_factions_end),##KOMKE add only if enhanced faction active
+            (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
+            (overlay_add_item, "$g_presentation_obj_1", s0),
+          (else_try),
+            (overlay_add_item, "$g_presentation_obj_1", s0),
+          (try_end),
         (try_end),
 
         (overlay_set_val, "$g_presentation_obj_1", "$temp"),
@@ -13875,7 +13885,7 @@ presentations = [
         (position_set_x, pos1, 420),
         (position_set_y, pos1, 230),
         (overlay_set_position, "$g_presentation_obj_11", pos1),
-        (create_game_button_overlay, "$g_presentation_obj_12", "@Randomize Colors"),
+        (create_game_button_overlay, "$g_presentation_obj_12", "@Randomize Color"),
         (position_set_x, pos1, 580),
         (position_set_y, pos1, 230),
         (overlay_set_position, "$g_presentation_obj_12", pos1),
@@ -13883,7 +13893,7 @@ presentations = [
         (position_set_x, pos1, 260),
         (position_set_y, pos1, 230),
         (overlay_set_position, "$g_presentation_obj_13", pos1),
-        (create_game_button_overlay, "$g_presentation_obj_14", "@Customize Colors"),
+        (create_game_button_overlay, "$g_presentation_obj_14", "@Customize Help"),
         (position_set_x, pos1, 740),
         (position_set_y, pos1, 230),
         (overlay_set_position, "$g_presentation_obj_14", pos1),
@@ -14015,12 +14025,14 @@ presentations = [
 ####### NEW v2.9-KOMKE START-                              
         (else_try),
           (eq, ":object", "$g_presentation_obj_11"),##Default colors button
-          
-          (try_for_range, ":cur_slot", 0, 83),
+          (try_for_range, ":cur_slot", 0, 86),##KOMKE from 0 to 85, + 1 because loop goes up to upper bound -1
             (troop_get_slot, ":cur_faction", "trp_temp_array_a", ":cur_slot"),
             (troop_get_slot, ":cur_color", "trp_temp_array_b", ":cur_slot"),
             (faction_set_color, ":cur_faction", ":cur_color"),
-          (end_try),                  
+          (try_end),          
+          (assign, "$g_diplomatic_colors", 0),##KOMKE
+          (presentation_set_duration, 0),          
+
           # (call_script, "script_change_to_default_colors"),                  
           
           # (troop_get_slot, ":cur_faction", "trp_temp_array_a", "$temp"),
@@ -14065,10 +14077,16 @@ presentations = [
 ####### NEW v2.9-KOMKE START-                                        
         (else_try),
           (eq, ":object", "$g_presentation_obj_13"),##Diplomatic colors button
-          (call_script, "script_change_to_diplomatic_colors"),        
-        (else_try),        
+          (call_script, "script_change_to_diplomatic_colors"),
+          (assign, "$g_diplomatic_colors", 1),##KOMKE so the script is only activated while diplomatic colors are on
+          (presentation_set_duration, 0),
+        (else_try),
           (eq, ":object", "$g_presentation_obj_14"),##Customize colors button     
-          (call_script, "script_set_custom_colors"),                          
+          (str_clear, s50),
+          (str_store_string, s50, "@Click Diplomatic Colors button after changing one or more of the following factions:  Player - Allied - Friendly - Neutral - Outlaws - Enemy"),
+          (dialog_box, s50, "@DIPLOMATIC COLORS"),
+
+
 ####### NEW v2.9-KOMKE END-           
         (else_try),
           (eq, ":object", "$g_presentation_obj_10"),
