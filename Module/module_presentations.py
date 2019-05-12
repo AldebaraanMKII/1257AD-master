@@ -13798,6 +13798,7 @@ presentations = [
             (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
             (overlay_add_item, "$g_presentation_obj_1", s0),
           (else_try),
+            (neg|is_between, ":cur_faction", enhanced_factions_begin, enhanced_factions_end),##KOMKE not enhanced factions
             (overlay_add_item, "$g_presentation_obj_1", s0),
           (try_end),
         (try_end),

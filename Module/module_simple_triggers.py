@@ -44,27 +44,28 @@ simple_triggers = [
    [
     ]),
 
-  (1,
-   [
-      ######### rafi what's this?
-      ######### (try_begin),
-        ######### (eq, "$training_ground_position_changed", 0),
-        ######### (assign, "$training_ground_position_changed", 1),
-        ######### (position_set_x, pos0, 7050),
-        ######### (position_set_y, pos0, 7200),
-        ######### (party_set_position, "p_training_ground_3", pos0),
-      ######### (try_end),
-      
-      (gt, "$auto_besiege_town",0),
-      (gt, "$g_player_besiege_town", 0),
-      (ge, "$g_siege_method", 1),
-      (store_current_hours, ":cur_hours"),
-      (eq, "$g_siege_force_wait", 0),
-      (ge, ":cur_hours", "$g_siege_method_finish_hours"),
-      (neg|is_currently_night),
-      (rest_for_hours, 0, 0, 0), ######stop resting
-    ]),
-
+####### NEW v2.9-KOMKE START- this trigger commented out, no longer necessary due to later trigger, (see NEW v2.9-KOMKE)
+  # (1,
+  #  [
+  #     ######### rafi what's this?
+  #     ######### (try_begin),
+  #       ######### (eq, "$training_ground_position_changed", 0),
+  #       ######### (assign, "$training_ground_position_changed", 1),
+  #       ######### (position_set_x, pos0, 7050),
+  #       ######### (position_set_y, pos0, 7200),
+  #       ######### (party_set_position, "p_training_ground_3", pos0),
+  #     ######### (try_end),
+  # 
+  #     (gt, "$auto_besiege_town",0),
+  #     (gt, "$g_player_besiege_town", 0),
+  #     (ge, "$g_siege_method", 1),
+  #     (store_current_hours, ":cur_hours"),
+  #     (eq, "$g_siege_force_wait", 0),
+  #     (ge, ":cur_hours", "$g_siege_method_finish_hours"),
+  #     (neg|is_currently_night),
+  #     (rest_for_hours, 0, 0, 0), ######stop resting
+  #   ]),
+####### NEW v2.9-KOMKE END- 
   (0,
    [
       (try_begin),
@@ -154,6 +155,7 @@ simple_triggers = [
      (try_end),
      ]),
 
+####### NEW v2.9-KOMKE this trigger makes the previous no longer necessary(see NEW v2.9-KOMKE)
 (0.25,
    [
       (gt, "$auto_besiege_town",0),
@@ -174,6 +176,7 @@ simple_triggers = [
         (str_store_party_name_link, s1, "$g_player_besiege_town"),
         (display_message, "@You cannot maintain your siege of {s1} from this distance. You risk your lines breaking."),
       (else_try),
+        (eq, "$g_siege_force_wait", 0),####### NEW v2.9-KOMKE if it's waiting 24 hours don't stop (force wait 1)
         (store_current_hours, ":cur_hours"),
         (ge, ":cur_hours", "$g_siege_method_finish_hours"),
         (neg|is_currently_night),
