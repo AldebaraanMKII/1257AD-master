@@ -38366,14 +38366,21 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     ]],
     
     
-  
-[anyone, "view_prisoner_inventory_2",
-      [
-      ],
-"Please leave me alone now!", "prisoner_options", [
+####### NEW v2.9-KOMKE START-  
+# [anyone, "view_prisoner_inventory_2", [],
+# "Please leave me alone now!", "prisoner_options", [
+#       (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
+#   ],
+
+[anyone, "view_prisoner_inventory_2", [],
+"Please don't take my clothes!", "view_prisoner_inventory_3", []#Use {s0} instead of {sir/madam}
+],
+[anyone|plyr, "view_prisoner_inventory_3", [],
+"I don't want your rags!", "prisoner_options", [
       (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
-  ],
-  
+],
+
+####### NEW v2.9-KOMKE END-   
     # default entry (no prior join agreement, or they've previously refused)
 
 [anyone|plyr, "prisoner_options", [(neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),], "The sight of you makes me sick! You.. Die.. Now!", "prisoner_chat_die1",[]],
