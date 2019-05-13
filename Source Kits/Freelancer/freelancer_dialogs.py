@@ -91,7 +91,10 @@ lord_talk_addon = [
         # (neq, "$players_kingdom", "$g_talk_troop_faction"),
 		############ NEW v2.8 - fixes player inability to enlist in v2.7
         # (eq, "$players_kingdom", 0),
-        (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
+####### NEW v2.9-KOMKE START-        
+        # (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
+        (eq, "$players_kingdom", 0),##KOMKE replaced above line with this one (when not in enlisted party players kingdom is 0)
+####### NEW v2.9-KOMKE END-         
 		############
         (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0), 
      ], "My Lord, I am ready to return to your command.", "ask_return_from_leave",[]],    
