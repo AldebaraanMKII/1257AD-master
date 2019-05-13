@@ -87,6 +87,7 @@ scripts = [
         (assign, "$players_kingdom", ":commander_faction"),  #### NEW v2.1 - player is part of faction so now he gets to see those message colors related to the faction
         (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
            (neq, ":commander_faction", ":cur_faction"),
+           (neq, "fac_player_supporters_faction", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
            (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
            (store_relation, ":player_relation", ":cur_faction", "fac_player_supporters_faction"),
            (ge, ":player_relation", 0),
@@ -206,6 +207,7 @@ scripts = [
         (call_script, "script_change_player_relation_with_faction_ex", ":commander_faction", 5),
         (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
             (neq, ":commander_faction", ":cur_faction"),
+            (neq, "fac_player_supporters_faction", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
             (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
             (store_relation, ":player_relation", ":cur_faction", "fac_player_supporters_faction"),
             (lt, ":player_relation", 0),
@@ -269,6 +271,7 @@ scripts = [
         (store_troop_faction, ":commander_faction", "$enlisted_lord"),
         (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
             (neq, ":commander_faction", ":cur_faction"),
+            (neq, "fac_player_supporters_faction", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
             (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
             (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
         (try_end),
@@ -320,6 +323,7 @@ scripts = [
         (store_troop_faction, ":commander_faction", "$enlisted_lord"),
         (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
            (neq, ":commander_faction", ":cur_faction"),
+           (neq, "fac_player_supporters_faction", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
            (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
            (call_script, "script_set_player_relation_with_faction", ":cur_faction", -5),
         (try_end),    
@@ -448,6 +452,7 @@ scripts = [
         (store_troop_faction, ":commander_faction", "$enlisted_lord"),
         (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
             (neq, ":commander_faction", ":cur_faction"),
+            (neq, "fac_player_supporters_faction", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
             (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
             (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
         (try_end),
@@ -1179,6 +1184,7 @@ scripts_directives = [
             (try_end),
             (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
                (neq, ":faction_no", ":cur_faction"),
+               (neq, "fac_player_supporters_faction", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
                (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
                (store_relation, ":player_relation", ":cur_faction", "fac_player_supporters_faction"),
                (ge, ":player_relation", 0),
