@@ -1549,7 +1549,7 @@ pretenders_begin = "trp_kingdom_2_pretender"
 pretenders_end = kingdom_ladies_begin
 
 lords_begin = "trp_knight_1_1"
-lords_end = pretenders_begin
+lords_end = "trp_enhanced_rnd_lord_end"  ######### NEW v2.9 - this shall fix some issues
 
 kings_begin = "trp_kingdom_1_lord"
 kings_end = lords_begin

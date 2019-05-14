@@ -906,7 +906,7 @@ game_menus = [ #
       [
         (eq, "$current_startup_quest_phase", 0),
         (eq, "$kaos_kings_kingdom", 42),
-        (call_script, "script_set_player_kingdom_init", "fac_kingdom_42", "p_town_42_1", "fac_culture_western", "trp_knight_42_1", "trp_knight_1_1_wife", "trp_kingdom_42_lord", "scn_castle_1_interior"),
+        (call_script, "script_set_player_kingdom_init", "fac_kingdom_42", "p_town_42_1", "fac_culture_western", "trp_knight_42_1", "trp_enhanced_rnd_lord_1", "trp_kingdom_42_lord", "scn_castle_1_interior"),
       ],
       "You_ride_a_caravan_to_your_home.",
       [
