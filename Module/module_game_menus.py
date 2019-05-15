@@ -11309,7 +11309,7 @@ game_menus = [ #
                      (str_store_troop_name, s1, ":faction_leader")], "Renew your contract with {s1} for another month.",
        [
          (store_current_day, ":cur_day"),
-         (store_add, "$mercenary_service_next_renew_day", ":cur_day", 30),
+         (store_add, "$mercenary_service_next_renew_day", ":cur_day", 14),####### NEW v2.9-KOMKE changed from 30 to 14 like in dialogs
          (change_screen_return),
          ]),
       ("dont_renew_oath",[], "Become free of your bond.",
