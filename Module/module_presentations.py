@@ -12006,6 +12006,7 @@ presentations = [
         (neq, "$players_kingdom", "fac_player_supporters_faction"),
         (neq, "$players_kingdom", "fac_player_faction"),
         (eq, "$player_has_homage", 0),
+        (eq, "$freelancer_state", 0),  ############# NEW v2.9-KOMKE - fix mercenary payment when player is in freelancer
         (str_store_faction_name, s0, "$players_kingdom"),
 
         # rafi

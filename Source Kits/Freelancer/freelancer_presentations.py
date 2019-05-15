@@ -72,7 +72,10 @@ presentations = [
         (val_sub, ":cur_y", ":cur_y_adder"),
         
         #xp-to-next promotion
-        (troop_get_slot, ":service_xp_start", "trp_player", slot_troop_freelancer_start_xp),
+####### NEW v2.9-KOMKE START-        
+        # (troop_get_slot, ":service_xp_start", "trp_player", slot_troop_freelancer_start_xp),
+        (quest_get_slot, ":service_xp_start", "qst_freelancer_enlisted", slot_quest_freelancer_start_xp),
+####### NEW v2.9-KOMKE END-         
         (troop_get_xp, ":service_xp_cur", "trp_player"),
         (val_sub, ":service_xp_cur", ":service_xp_start"),
         (troop_get_upgrade_troop, ":upgrade_troop", "$player_cur_troop", 0),
@@ -110,7 +113,11 @@ presentations = [
         (val_sub, ":cur_y", ":cur_y_adder"),
         
         #next_pay
-        (str_store_date, s25, "$g_next_pay_time"),
+####### NEW v2.9-KOMKE START-                
+        # (str_store_date, s25, "$g_next_pay_time"),
+        (quest_get_slot, ":next_pay_day", "qst_freelancer_enlisted", slot_quest_freelancer_next_payday),
+        (str_store_date, s25, ":next_pay_day"),
+####### NEW v2.9-KOMKE END-                 
         (create_text_overlay, reg0, "@Next Pay/Promotion day: {s25}", tf_left_align),
         (position_set_y, pos1, ":cur_y"),
         (overlay_set_position, reg0, pos1),
