@@ -2,9 +2,41 @@
 
 Taleworlds: https://forums.taleworlds.com/index.php?topic=379851
 
-Current version: v2.8
+Current version: v2.9
 
 NOTE: Things with the "New game:" prefix requires a new game to take effect.
+
+
+
+
+v2.9 
+1). Fixed Gaelic, Scottish, Welsh, Marinid, Hafsid merchants having no items.
+2). Fixed some cultures not appearing (e.g anatolian, mazovian, finnish and rus (some golden horde fiefs should have it)).
+3). Fixed bug where teutonic order was always mentioned in siege lifting messages.
+4). Fixed lord reputation string in notes.
+5). Fixed cultures appearing together with factions when asking the Pope for a crusade.
+6). New game: Fixed Italian Senior Militia Spearman named as Iberian Senior Militia Spearman.
+7). Fixed ranged troops not switching to melee when enemy came closer.
+8). Fixed script errors that occurred when the pope asked about what fief the player wants the crusaders to siege. Now the correct names of the fiefs will be displayed.
+9). Changed the time it takes for lord to apply their culture to their fiefs to 1 month (from 2 weeks).
+10). Fixed the player appearing in the list of lords that can be assassinated when talking with the constable.
+11). Fixed "Random End" lord spawning in the Teutonic Order at the game start.
+12). Fixed javelins ineffectiveness against shields.
+13). Fixed grant fief bug.
+14). Fixed crusader parties not changing their map icons while traveling through the sea.
+15). Fixed player receiving money when asking for a crusade instead of losing it, and added a relation boost with the pope (5-7) after requesting a crusade.
+16). Removed the tavern brawl dialogue from villagers/townspeople.
+17). Fixed lots of CWE armors not having the itp_merchandise tag which makes them appear in shops, and also makes them show up in the list of available equipment of CTT troops.
+18). Changed Right to Rule received from Catholic factions to 2 from 5 and fixed the Pope not giving the player a crown in recognition for his sovereignty. 
+19). Fixed constable prisoner exchange.
+20). Fixed player receiving option to "send word to the king" after conquering a fief even if the player was the king (this only happened if the player became the king of one of the AI factions).
+21). Removed relation penalty when taking control of garrison. Also added a missing check (that if missing would cause the garrison to disband if you gave it to the town).
+22). Fixed building siege ladders bug. 
+23). Fixed player not being able to return to service after vacation in freelancer. 
+24). Fixed Kingdom of Bohemia having pretenders and "Random End" NPC as lords when the player started as king of it. 
+25). Fixed looting bug that happened when the player party had skill in looting.
+26). Fixed mercenary payment notification appearing during freelancer and decreased the time it takes to renew contract to 14 days from 30.
+
 
 
 
@@ -37,10 +69,8 @@ Mamluke units = castles
 21). New game: Fixed some nordic countries being entirely of nordic culture. Now some of their lords will start as Finnish.
 22). Fixed mercenary company dialogue not appearing if player started as a adventurer. 
 23). Fixed Bishop Mittres and some plated surcoats appearing in muslim and mongolian towns. Also fixed some templar and hospitaller armors not having the proper culture tags.
-24). @Komke fixed most of the veteran and elite mercenary troops equipment.
+24). @Komke fixed most of the veteran and elite mercenary troop equipment.
 25). New game: Fixed Almogabar being level 28 and costing 120 denars a week.
-
-
 
 
 
