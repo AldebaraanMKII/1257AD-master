@@ -631,7 +631,10 @@ dialogs = [
    [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
-   (neq, "trp_player", ":troop_no"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (store_troop_faction, ":faction_no", ":troop_no"),
    (eq, ":faction_no", "fac_player_supporters_faction"),
    (str_store_troop_name, s11, ":troop_no"),
@@ -741,7 +744,10 @@ dialogs = [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
    (neq, "$g_talk_troop", ":troop_no"),
-   (neq, "trp_player", ":troop_no"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (store_troop_faction, ":faction_no", ":troop_no"),
    (eq, ":faction_no", "fac_player_supporters_faction"),
    (str_store_troop_name, s11, ":troop_no"),
@@ -7112,7 +7118,10 @@ dialogs = [
     (store_repeat_object, ":troop_no"),
     (neq, "$g_talk_troop", ":troop_no"),
     (is_between, ":troop_no", active_npcs_begin, kingdom_ladies_end),
-    (neq, ":troop_no", "trp_player"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
     (neg|faction_slot_eq, "$g_faction_selected", slot_faction_leader, ":troop_no"),
     (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
     (store_troop_faction, ":faction_no", ":troop_no"),
@@ -7213,7 +7222,10 @@ dialogs = [
     (store_repeat_object, ":troop_no"),
     (neq, "$g_talk_troop", ":troop_no"),
     (is_between, ":troop_no", active_npcs_begin, kingdom_ladies_end),
-    (neq, ":troop_no", "trp_player"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
     (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
     (store_troop_faction, ":faction_no", ":troop_no"),
     (eq, "$players_kingdom", ":faction_no"),
@@ -7710,7 +7722,10 @@ dialogs = [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
    (neg|troop_slot_ge, ":troop_no", slot_troop_prisoner_of_party, 0),
-   (neq, "trp_player", ":troop_no"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (troop_get_slot, ":target_party", ":troop_no", slot_troop_leaded_party),
    (gt, ":target_party", 0),
    (store_troop_faction, ":faction_no", ":troop_no"),
@@ -7857,7 +7872,10 @@ dialogs = [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_lady),
    (neg|troop_slot_ge, ":troop_no", slot_troop_prisoner_of_party, 0),
-   (neq, "trp_player", ":troop_no"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (store_troop_faction, ":faction_no", ":troop_no"),
    (eq, ":faction_no", "$g_faction_selected"),
    (str_store_troop_name, s11, ":troop_no"),
@@ -8262,7 +8280,10 @@ dialogs = [
    [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
-   (neq, "trp_player", ":troop_no"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (troop_slot_ge, ":troop_no", slot_troop_leaded_party, 0),
    (neg|troop_slot_ge, ":troop_no", slot_troop_prisoner_of_party, 0),
    (store_troop_faction, ":faction_no", ":troop_no"),
@@ -9566,6 +9587,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
      (troop_get_slot, ":party", ":troop_no", slot_troop_prisoner_of_party),
      (is_between, ":party", walled_centers_begin, walled_centers_end),
      (party_slot_eq, ":party", slot_town_lord, "trp_player"),
@@ -9595,6 +9620,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
      (store_faction_of_troop, ":troop_faction", ":troop_no"),
      (eq, ":troop_faction", "fac_player_supporters_faction"),
        (troop_get_slot, ":party", ":troop_no", slot_troop_prisoner_of_party), 
@@ -9730,6 +9759,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (troop_get_slot, ":party", ":troop_no", slot_troop_prisoner_of_party),
 
    (assign, ":can_release", 0),
@@ -10067,6 +10100,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
   (store_repeat_object, ":troop_no"),
   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
   (troop_get_slot, ":party", ":troop_no", slot_troop_prisoner_of_party),
 
   (assign, ":can_release", 0),
@@ -14371,7 +14408,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [anyone|plyr|repeat_for_troops, "minister_grant_fief_select_recipient_choice",
    [
    (store_repeat_object, ":troop_no"),
-   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ## he's alive/active
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
    (is_between, ":troop_no", active_npcs_begin, active_npcs_end),
    (store_faction_of_troop, ":troop_faction", ":troop_no"),
@@ -14422,6 +14462,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (store_faction_of_troop, ":faction", ":troop_no"),
    (eq, ":faction", "fac_player_supporters_faction"),
    (str_store_troop_name, s11, ":troop_no"),
@@ -14462,7 +14506,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
    (neq, "$g_talk_troop", ":troop_no"),
-   (neq, "trp_player", ":troop_no"),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (store_troop_faction, ":faction_no", ":troop_no"),
    (eq, ":faction_no", "fac_player_supporters_faction"),
    (str_store_troop_name, s11, ":troop_no"),
@@ -29607,6 +29654,10 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 [anyone|plyr|repeat_for_troops, "seneschal_ask_location_2", [(store_repeat_object, ":troop_no"),
                                                               (is_between, ":troop_no", heroes_begin, heroes_end),
+                                                              ######### NEW v3.0
+                                                              (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+                                                              (neq, ":troop_no", "trp_player"),
+                                                              #########
                                                               (store_troop_faction, ":faction_no", ":troop_no"),
                                                               (eq, "$g_encountered_party_faction", ":faction_no"),
                                                               (str_store_troop_name, s1, ":troop_no")],
@@ -30006,6 +30057,10 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [
    (store_repeat_object, ":troop_no"),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   ######### NEW v3.0
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+   (neq, ":troop_no", "trp_player"),
+   #########
    (troop_get_slot, ":party", ":troop_no", slot_troop_prisoner_of_party),
    (eq, ":party", "$g_encountered_party"),
    (str_store_troop_name, s10, ":troop_no"),
@@ -30332,6 +30387,10 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 [anyone|plyr|repeat_for_troops, "request_meeting_3", [(store_repeat_object, ":troop_no"),
                                                        (troop_is_hero, ":troop_no"),
                                                        (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+                                                       ######### NEW v3.0
+                                                       (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+                                                       (neq, ":troop_no", "trp_player"),
+                                                       #########
                                                        (call_script, "script_get_troop_attached_party", ":troop_no"),
                                                        (eq, "$g_encountered_party", reg0),
                                                        (str_store_troop_name, s3, ":troop_no"),
