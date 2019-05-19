@@ -25946,6 +25946,19 @@ game_menus = [ #
          (call_script, "script_process_1257ad_center_upgrades", "p_town_9_1"),
        ]
        ),
+       
+	   ######### NEW v3.0
+       ("debug_options_14",[], "Display pretender locations.",
+       [
+       (try_for_range, ":cur_troop", pretenders_begin, pretenders_end),
+         (troop_get_slot, ":cur_center", ":cur_troop", slot_troop_cur_center),
+         (str_store_troop_name, s15, ":cur_troop"),  
+         (str_store_party_name_link, s11, ":cur_center"),  
+         (display_message, "@{s15} is currently at {s11}."),		 
+       (try_end),
+       ]
+       ),
+	   #########
 	   
        ("debug_options_99",[], "Go back.",
        [

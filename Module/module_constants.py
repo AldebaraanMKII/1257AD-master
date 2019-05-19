@@ -1576,8 +1576,8 @@ soldiers_end = "trp_town_walker_1"
 ##rebel_factions_begin = "fac_kingdom_1_rebels"
 ##rebel_factions_end =   "fac_kingdoms_end"
 
-pretenders_begin = "trp_kingdom_4_pretender"
-pretenders_end = active_npcs_end
+# pretenders_begin = "trp_kingdom_4_pretender"
+# pretenders_end = active_npcs_end
 #Rebellion changes
 
 tavern_minstrels_begin = "trp_tavern_minstrel_1"
