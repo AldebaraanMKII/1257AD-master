@@ -12057,6 +12057,7 @@ troops = [
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
+    itm_warhorse,
     itm_heavy_lance,
     itm_heraldic_lance,
     itm_mail_boots,
@@ -12148,7 +12149,6 @@ troops = [
     itm_rnd_surcoat_21,
     itm_rnd_surcoat_22,
     itm_rnd_surcoat_23,
-    itm_warhorse,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
@@ -68640,7 +68640,7 @@ upgrade(troops,"serbian_horse_3", "serbian_horse_4")
 
 upgrade(troops,"welsh_recruit", "welsh_spearman_1")
 upgrade(troops,"welsh_spearman_1", "welsh_spearman_2")
-upgrade(troops,"welsh_archer_recruit", "welsh_archer_2")
+upgrade(troops,"welsh_archer_recruit", "welsh_archer_1")
 upgrade(troops,"welsh_archer_1", "welsh_archer_2")
 
 upgrade(troops,"welsh_horse_1", "welsh_horse_2")

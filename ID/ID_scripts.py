@@ -986,3 +986,4 @@ script_freelancer_list_faction_troops = 984
 script_cf_freelancer_player_can_upgrade = 985
 script_freelancer_equip_troop = 986
 script_freelancer_unequip_troop = 987
+script_freelancer_find_enlist_troops = 988

@@ -102,69 +102,111 @@ lord_talk_addon = [
         
 dialogs    = [   
 # dialog_accept_enlistment
+
+####### NEW v3.0-KOMKE START-                    
+
+#     [anyone,"lord_request_enlistment", [
+#         (ge, "$g_talk_troop_relation", 0),
+# 		############ NEW v2.7 - player renown affects which troop he starts as
+#         (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+#         (troop_get_slot, ":lord_culture", "$g_talk_troop", slot_troop_cur_culture), ############ NEW v2.8 - troop culture is used instead
+#         (try_begin),
+#           (is_between, ":lord_culture", cultures_begin, cultures_end), ############ NEW v2.8 - is troop culture is not one of those, skip to next else try
+#           (try_begin),
+#             (ge, ":player_renown", 300),
+#               (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_5_troop),
+#           (else_try),
+#             (ge, ":player_renown", 200),
+#               (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_4_troop),
+#           (else_try),
+#             (ge, ":player_renown", 100),
+#               (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_3_troop),
+#           (else_try),
+#             (ge, ":player_renown", 50),
+#               (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_2_troop),
+# 		  ####################################	
+#           (else_try),
+#             (neg|faction_slot_eq, ":lord_culture", slot_faction_freelancer_troop, 0),
+#             (faction_get_slot, reg1, ":lord_culture", slot_faction_freelancer_troop),
+#           (else_try),
+#             (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_1_troop),
+#           (try_end),
+# ############ NEW v2.8 - gets faction culture instead
+#         (else_try),
+#           (neg|is_between, ":lord_culture", cultures_begin, cultures_end),
+#           (faction_get_slot, ":faction_culture", "$g_talk_troop_faction", slot_faction_culture), 
+#           (try_begin),
+#             (ge, ":player_renown", 300),
+#               (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_5_troop),
+#           (else_try),
+#             (ge, ":player_renown", 200),
+#               (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_4_troop),
+#           (else_try),
+#             (ge, ":player_renown", 100),
+#               (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_3_troop),
+#           (else_try),
+#             (ge, ":player_renown", 50),
+#               (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_2_troop),
+# ################################################	
+#           (else_try),
+#             (neg|faction_slot_eq, ":faction_culture", slot_faction_freelancer_troop, 0),
+#             (faction_get_slot, reg1, ":faction_culture", slot_faction_freelancer_troop),
+#           (else_try),
+#             (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_1_troop),
+#           (try_end),
+#         (try_end),
+# ################################################
+#         (str_store_troop_name, s1, reg1),
+#         (store_character_level, reg1, reg1),
+#         (val_mul, reg1, 10),        
+#         (str_store_string, s2, "str_reg1_denars"),
+#     ], "I've got room in my ranks for a {man/woman} of your disposition, {playername}.  I can take you on as a {s1}, with a weekly pay of {s2}. And food, of course.  Plenty of room for promotion and you'll be equipped as befits your rank. You'll have your take of what you can scavange after battle, too.  What do you say?", "lord_request_enlistment_confirm", []],        
+#     [anyone|plyr,"lord_request_enlistment_confirm", [], "Seems a fair lot and steady work in these lands. I'm with you, my lord.", "close_window", [        (call_script, "script_freelancer_event_player_enlists"),
+#         (eq,"$talk_context",tc_party_encounter),
+#         (assign, "$g_leave_encounter", 1),
+#      ]],
+#     [anyone|plyr,"lord_request_enlistment_confirm",[], "Well, on second thought my lord, I might try my luck alone a bit longer. My thanks.", "lord_pretalk",[]],
+# # dialog_reject_enlistment
+#     [anyone,"lord_request_enlistment", [(lt, "$g_talk_troop_relation", 0)], "I do not trust you enough to allow you to serve for me.", "lord_pretalk",[]],
+
     [anyone,"lord_request_enlistment", [
         (ge, "$g_talk_troop_relation", 0),
-		############ NEW v2.7 - player renown affects which troop he starts as
-        (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
-        (troop_get_slot, ":lord_culture", "$g_talk_troop", slot_troop_cur_culture), ############ NEW v2.8 - troop culture is used instead
-        (try_begin),
-          (is_between, ":lord_culture", cultures_begin, cultures_end), ############ NEW v2.8 - is troop culture is not one of those, skip to next else try
-          (try_begin),
-            (ge, ":player_renown", 300),
-              (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_5_troop),
-          (else_try),
-            (ge, ":player_renown", 200),
-              (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_4_troop),
-          (else_try),
-            (ge, ":player_renown", 100),
-              (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_3_troop),
-          (else_try),
-            (ge, ":player_renown", 50),
-              (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_2_troop),
-		  ####################################	
-          (else_try),
-            (neg|faction_slot_eq, ":lord_culture", slot_faction_freelancer_troop, 0),
-            (faction_get_slot, reg1, ":lord_culture", slot_faction_freelancer_troop),
-          (else_try),
-            (faction_get_slot, reg1, ":lord_culture", slot_faction_tier_1_troop),
-          (try_end),
-############ NEW v2.8 - gets faction culture instead
-        (else_try),
-          (neg|is_between, ":lord_culture", cultures_begin, cultures_end),
-          (faction_get_slot, ":faction_culture", "$g_talk_troop_faction", slot_faction_culture), 
-          (try_begin),
-            (ge, ":player_renown", 300),
-              (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_5_troop),
-          (else_try),
-            (ge, ":player_renown", 200),
-              (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_4_troop),
-          (else_try),
-            (ge, ":player_renown", 100),
-              (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_3_troop),
-          (else_try),
-            (ge, ":player_renown", 50),
-              (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_2_troop),
-################################################	
-          (else_try),
-            (neg|faction_slot_eq, ":faction_culture", slot_faction_freelancer_troop, 0),
-            (faction_get_slot, reg1, ":faction_culture", slot_faction_freelancer_troop),
-          (else_try),
-            (faction_get_slot, reg1, ":faction_culture", slot_faction_tier_1_troop),
-          (try_end),
-        (try_end),
-################################################
-        (str_store_troop_name, s1, reg1),
-        (store_character_level, reg1, reg1),
-        (val_mul, reg1, 10),        
-        (str_store_string, s2, "str_reg1_denars"),
-    ], "I've got room in my ranks for a {man/woman} of your disposition, {playername}.  I can take you on as a {s1}, with a weekly pay of {s2}. And food, of course.  Plenty of room for promotion and you'll be equipped as befits your rank. You'll have your take of what you can scavange after battle, too.  What do you say?", "lord_request_enlistment_confirm", []],        
-    [anyone|plyr,"lord_request_enlistment_confirm", [], "Seems a fair lot and steady work in these lands. I'm with you, my lord.", "close_window", [        (call_script, "script_freelancer_event_player_enlists"),
-        (eq,"$talk_context",tc_party_encounter),
-        (assign, "$g_leave_encounter", 1),
-     ]],
-    [anyone|plyr,"lord_request_enlistment_confirm",[], "Well, on second thought my lord, I might try my luck alone a bit longer. My thanks.", "lord_pretalk",[]],
-# dialog_reject_enlistment
+        ], "Alright. What do you have in mind?.", "lord_request_enlistment_division",[]],
     [anyone,"lord_request_enlistment", [(lt, "$g_talk_troop_relation", 0)], "I do not trust you enough to allow you to serve for me.", "lord_pretalk",[]],
+    
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with mounted troops", "lord_request_enlistment_cavalry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with missile troops", "lord_request_enlistment_archers", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with infantry troops", "lord_request_enlistment_infantry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Mmm, wait a minute", "lord_pretalk", []],
+
+    [anyone,"lord_request_enlistment_cavalry", [(store_skill_level, ":cur_riding", "skl_riding", "trp_player"),(ge, ":cur_riding", 2)], 
+        "Very good, let's find a mounted troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_cavalry)]],
+    [anyone,"lord_request_enlistment_cavalry", [], "Sorry, {playername}, but you don't know how to ride a horse.", "lord_pretalk",[]],
+    [anyone,"lord_request_enlistment_archers", [(store_skill_level, ":cur_power_draw", "skl_power_draw", "trp_player"),(ge, ":cur_power_draw", 2)], 
+        "Very good, let's find a missile troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_archers)]],
+    [anyone,"lord_request_enlistment_archers", [], "Sorry, {playername}, but you don't know how to draw a strong bow.", "lord_pretalk",[]],
+    [anyone,"lord_request_enlistment_infantry", [(store_skill_level, ":cur_power_strike", "skl_power_strike", "trp_player"),(ge, ":cur_power_strike", 2)], 
+        "Very good, let's find an infantry troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_infantry)]],
+    [anyone,"lord_request_enlistment_infantry", [], "Sorry, {playername}, but you don't know how to strike hard.", "lord_pretalk",[]],        
+
+    [anyone|plyr,"lord_request_enlistment_select", [(gt, reg51, 0),(str_store_troop_name, s51, reg51)], 
+      "Enlist as a: {s51}", "lord_request_enlistment_confirm", [(assign, "$temp", reg51)]],
+    [anyone|plyr,"lord_request_enlistment_select", [(gt, reg52, 0),(str_store_troop_name, s52, reg52)], 
+     "Enlist as a: {s52}", "lord_request_enlistment_confirm", [(assign, "$temp", reg52)]],
+    [anyone|plyr,"lord_request_enlistment_select", [(gt, reg53, 0),(str_store_troop_name, s53, reg53)], 
+      "Enlist as a: {s53}", "lord_request_enlistment_confirm", [(assign, "$temp", reg53)]],
+    [anyone|plyr,"lord_request_enlistment_select", [], "Mmm, wait a minute", "lord_pretalk", []],
+    [anyone,"lord_request_enlistment_select", [(eq, reg51, 0)], "Sorry, {playername}, there isn't any position available for you now.", "lord_pretalk", []],
+
+    [anyone,"lord_request_enlistment_confirm", [(str_store_troop_name, s49, "$temp")], "{playername}, do you want to serve in my company as a {s49}?", "lord_request_enlistment_confirm2", []],
+    [anyone|plyr,"lord_request_enlistment_confirm2", [], "I'm with you, my lord.", "close_window",
+       [(assign, "$player_cur_troop", "$temp"),## assign the selected troop
+        (call_script, "script_freelancer_event_player_enlists"),
+        (eq,"$talk_context",tc_party_encounter),
+        (assign, "$g_leave_encounter", 1),]],      
+    [anyone|plyr,"lord_request_enlistment_confirm2", [], "Well, on second thought my lord, I might try my luck alone a bit longer. My thanks.", "lord_pretalk", []],
+
+####### NEW v3.0-KOMKE END-
 
     #reassignment
     [anyone,"lord_request_reassignment", [(store_current_day, ":service_length"),(quest_get_slot, reg0, "qst_freelancer_enlisted", slot_quest_freelancer_start_date),
