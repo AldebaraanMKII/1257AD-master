@@ -6745,6 +6745,38 @@ game_menus = [ #
       ]
     ),
     # autoloot
+	
+	
+########## NEW v3.0 - player can customize troops is he has a fief
+    ("ee_new_1",
+      [
+      (eq, "$g_player_know_culture_player", 1),
+      (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
+      (assign, ":num_fiefs", 0),
+      (try_for_range, ":cur_center", centers_begin, centers_end),
+        (party_get_slot, ":town_lord", ":cur_center", slot_town_lord),
+        (eq, ":town_lord", "trp_player"),
+          (val_add, ":num_fiefs", 1),
+      (try_end),
+      (gt, ":num_fiefs", 0),
+      ],
+      "Customize your kingdom's troops.",
+      [
+      (try_begin),
+        (gt, "$cstm_troops_begin", 0),
+          (assign, "$cstm_selected_troop", -1),
+          (start_presentation, "prsnt_cstm_view_custom_troop_tree"),
+      (else_try),
+        (troop_set_name, cstm_troop_tree_prefix, "@Custom"),            
+	    (assign, "$cstm_num_tiers", 5),
+	    (assign, "$cstm_troops_begin", "trp_cstm_custom_troop_3_tiers_0_0_0"),
+	    (assign, "$cstm_troops_end", "trp_cstm_custom_troop_3_tiers_1_0_0"),
+	    (assign, "$cstm_presentation_troop", "trp_cstm_presentation_troop_0"),
+        (start_presentation, "prsnt_cstm_view_custom_troop_tree"),
+      (try_end),
+      ]
+    ),
+##################################################
 
       ("camp_action",[], "Take an action.",
        [(jump_to_menu, "mnu_camp_action"),
