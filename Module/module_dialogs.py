@@ -15766,9 +15766,43 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "start", [(eq, "$talk_context", tc_castle_commander)],
 "What do you want?", "player_siege_castle_commander_1", []],
-[anyone|plyr, "player_siege_castle_commander_1", [],
+
+############# NEW v3.0 - food stores matter now
+[anyone|plyr, "player_siege_castle_commander_1", 
+[
+(party_get_slot, ":town_food_store", "$g_encountered_party", slot_party_food_store),
+(call_script, "script_center_get_food_consumption", "$g_encountered_party"),
+(assign, ":food_consumption", reg0),
+(assign, reg7, ":food_consumption"),
+(assign, reg8, ":town_food_store"),
+(store_div, reg3, ":town_food_store", ":food_consumption"),
+(lt, ":town_food_store", 1)
+],
+"Your food stores are exhausted and you're starving! Surrender to us now!", "player_siege_ask_surrender_food", []],
+
+
+[anyone|plyr, "player_siege_castle_commander_1", 
+[
+(party_get_slot, ":town_food_store", "$g_encountered_party", slot_party_food_store),
+(call_script, "script_center_get_food_consumption", "$g_encountered_party"),
+(assign, ":food_consumption", reg0),
+(assign, reg7, ":food_consumption"),
+(assign, reg8, ":town_food_store"),
+(store_div, reg3, ":town_food_store", ":food_consumption"),
+(gt, ":town_food_store", 0)
+],
 "Surrender! Your situation is hopeless!", "player_siege_ask_surrender", []],
+##########################
+
 [anyone|plyr, "player_siege_castle_commander_1", [], "Nothing. I'll leave you now.", "close_window", []],
+
+
+############# NEW v3.0 - food stores matter now
+[anyone, "player_siege_ask_surrender_food",
+    [
+    ],
+"T-That's right... w-we are ready to leave this castle to you and m-march away if you give me your word of honour that you'll let us l-leave unmolested.", "player_siege_ask_leave_unmolested", []],
+##########################
 
 
 [anyone, "player_siege_ask_surrender",
@@ -15787,6 +15821,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (ge, "$g_ally_strength", ":required_str")
     ],
 "We are ready to leave this castle to you and march away if you give me your word of honour that you'll let us leave unmolested.", "player_siege_ask_leave_unmolested", []],
+
+
 [anyone, "player_siege_ask_surrender", [],
     "Surrender? Hah! We can hold these walls until we all die of old age.", "close_window",
     []
