@@ -174,10 +174,11 @@ dialogs    = [
         ], "Alright. What do you have in mind?.", "lord_request_enlistment_division",[]],
     [anyone,"lord_request_enlistment", [(lt, "$g_talk_troop_relation", 0)], "I do not trust you enough to allow you to serve for me.", "lord_pretalk",[]],
     
-    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with mounted troops", "lord_request_enlistment_cavalry", []],
-    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with missile troops", "lord_request_enlistment_archers", []],
-    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with infantry troops", "lord_request_enlistment_infantry", []],
-    [anyone|plyr,"lord_request_enlistment_division", [], "Mmm, wait a minute", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(lt, ":player_level", 7)], "My experience level is too low. I'll come back when I am as experienced as other recruits.", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with mounted troops", "lord_request_enlistment_cavalry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with missile troops", "lord_request_enlistment_archers", []],
+    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with infantry troops", "lord_request_enlistment_infantry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Mmm, wait a minute", "lord_pretalk", []],
 
     [anyone,"lord_request_enlistment_cavalry", [(store_skill_level, ":cur_riding", "skl_riding", "trp_player"),(ge, ":cur_riding", 2)], 
         "Very good, let's find a mounted troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_cavalry)]],

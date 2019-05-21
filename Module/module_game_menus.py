@@ -32670,9 +32670,17 @@ game_menus = [ #
 			(display_message, "@Party spawned nearby."),
 		]
 		),
-		
-	   
-      ("camp_mod_6",[],"Back to camp menu.",
+        
+		("camp_mod_6",
+			[],
+		"Give me 1000 experience",
+		[
+			(add_xp_to_troop, 1000, "trp_player"),
+			(display_message, "@+1000 EXP."),
+		]
+		),
+        
+      ("camp_mod_7",[],"Back to camp menu.",
        [(jump_to_menu, "mnu_camp"),
         ]
        ),
