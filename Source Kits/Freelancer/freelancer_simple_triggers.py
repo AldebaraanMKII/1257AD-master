@@ -21,11 +21,12 @@ from module_constants import *
 simple_triggers = [
 #+freelancer start
   #  WEEKLY PAY AND CHECKS FOR UPGRADE
+####### NEW v3.0-KOMKE START-  
     (24 * 7, [
         (eq, "$freelancer_state", 1),
-		(store_current_hours, reg0),
-		(val_add, reg0, 24 * 7),
-		(quest_set_slot, "qst_freelancer_enlisted", slot_quest_freelancer_next_payday, reg0),
+		(store_current_hours, reg20),##KOMKE changed register to check if it was overwritting reg0
+		(val_add, reg20, 24 * 7),
+		(quest_set_slot, "qst_freelancer_enlisted", slot_quest_freelancer_next_payday, reg20),
 		
 		(try_begin),
 		  (troop_get_upgrade_troop, ":upgrade_troop", "$player_cur_troop", 0),
@@ -54,14 +55,15 @@ simple_triggers = [
            (troop_get_inventory_slot, ":cur_item", "trp_player", ":cur_inv_slot"),
            (ge, ":cur_item", 0),
            (is_between, ":cur_item", food_begin, food_end),
-           (troop_inventory_slot_get_item_amount, reg0, "trp_player", ":cur_inv_slot"),
-		   (val_add, ":num_food", reg0),
+           (troop_inventory_slot_get_item_amount, reg30, "trp_player", ":cur_inv_slot"),##KOMKE changed register to check if it was overwritting reg0
+		   (val_add, ":num_food", reg30),
         (try_end),
         (try_begin),
            (lt, ":num_food", 10),
            (troop_add_item, "trp_player", "itm_bread"),
         (try_end),
     ]),
+####### NEW v3.0-KOMKE END- 
 
 #  HOURLY CHECKS
 

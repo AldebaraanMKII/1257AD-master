@@ -76,17 +76,20 @@ presentations = [
         # (troop_get_slot, ":service_xp_start", "trp_player", slot_troop_freelancer_start_xp),
         (quest_get_slot, ":service_xp_start", "qst_freelancer_enlisted", slot_quest_freelancer_start_xp),
 ####### NEW v2.9-KOMKE END-         
+####### NEW v3.0-KOMKE START-
         (troop_get_xp, ":service_xp_cur", "trp_player"),
         (val_sub, ":service_xp_cur", ":service_xp_start"),
         (troop_get_upgrade_troop, ":upgrade_troop", "$player_cur_troop", 0),
         (str_store_string, s1, "@N/A"),
         (try_begin),
             (gt, ":upgrade_troop", 1), #make sure troop is valid and not player troop
-            (call_script, "script_game_get_upgrade_xp", "$player_cur_troop"),
+            # (call_script, "script_game_get_upgrade_xp", "$player_cur_troop"),######### NEW v3.0-KOMKE replaced this call with line below
+            (quest_get_slot, reg0, "qst_freelancer_enlisted", slot_quest_freelancer_upgrade_xp),
             (store_sub, reg0, reg0, ":service_xp_cur"), #required XP from script
             (gt, reg0, 0),
             (str_store_string, s1, "str_reg0"),
         (try_end),
+####### NEW v3.0-KOMKE END- 
         (create_text_overlay, reg0, "@Experience to next promotion: {s1}", tf_left_align),
         (position_set_y, pos1, ":cur_y"),
         (overlay_set_position, reg0, pos1),
