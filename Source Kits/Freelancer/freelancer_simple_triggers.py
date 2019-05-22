@@ -49,6 +49,24 @@ simple_triggers = [
           (play_sound, "snd_money_received", 0),
         (try_end),
 		
+        # (assign, ":num_food", 0),
+        # (troop_get_inventory_capacity, ":max_inv_slot", "trp_player"),
+        # (try_for_range, ":cur_inv_slot", ek_item_0, ":max_inv_slot"),
+        #    (troop_get_inventory_slot, ":cur_item", "trp_player", ":cur_inv_slot"),
+        #    (ge, ":cur_item", 0),
+        #    (is_between, ":cur_item", food_begin, food_end),
+        #    (troop_inventory_slot_get_item_amount, reg30, "trp_player", ":cur_inv_slot"),##KOMKE changed register to check if it was overwritting reg0
+		#    (val_add, ":num_food", reg30),
+        # (try_end),
+        # (try_begin),
+        #    (lt, ":num_food", 10),
+        #    (troop_add_item, "trp_player", "itm_bread"),
+        # (try_end),
+#######KOMKE above block moved to trigger below because lack of food was checked every 7 days, now every 12 hours
+    ]),
+    
+    (12,[
+        (eq, "$freelancer_state", 1),
         (assign, ":num_food", 0),
         (troop_get_inventory_capacity, ":max_inv_slot", "trp_player"),
         (try_for_range, ":cur_inv_slot", ek_item_0, ":max_inv_slot"),
@@ -63,6 +81,7 @@ simple_triggers = [
            (troop_add_item, "trp_player", "itm_bread"),
         (try_end),
     ]),
+    
 ####### NEW v3.0-KOMKE END- 
 
 #  HOURLY CHECKS

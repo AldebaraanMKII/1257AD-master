@@ -623,7 +623,7 @@ scripts = [
 ####### NEW v3.0-KOMKE START-
     (store_script_param_1, ":troop_no"),
     (assign, reg0, 0),
-
+##This array stores experience table, substract 1 level to get it right 
     (troop_set_slot, "trp_temp_array_c", 0, 0),
     (troop_set_slot, "trp_temp_array_c", 1, 600),
     (troop_set_slot, "trp_temp_array_c", 2, 1360),
@@ -695,9 +695,6 @@ scripts = [
     (try_begin),
         (troop_get_upgrade_troop, ":upgrade_troop", ":troop_no", 0),
         (gt, ":upgrade_troop", 1), #make sure troop is valid and not player troop
-        (str_store_troop_name, s1, ":upgrade_troop"),##Debugging
-        (str_store_troop_name, s2, ":troop_no"),##Debugging
-        (display_log_message, "@upgrade = {s1} troop = {s2}", 0xffffff),##Debugging
         # (call_script, "script_game_get_upgrade_xp", ":troop_no"),######### NEW v3.0-KOMKE replaced this call with code below
         (store_character_level, ":troop_level", ":upgrade_troop"),
         (val_sub, ":troop_level", 1),
@@ -1217,7 +1214,7 @@ scripts = [
 ####### NEW v3.0-KOMKE START-   
 ####### INPUT: arg1: enlistment division: grc_cavalry, grc_archers, grc_infantry
 ####### OUTPUT: troops in reg1, reg2, reg3 belonging to chosen division. Returns troops with level <= player level
-####### NOTES: returns only first 3 valid troops. Max valid level is 30
+####### NOTES: returns only first 3 valid troops.
   ("freelancer_find_enlist_troops",
   [
     (store_script_param_1, ":division"), 
