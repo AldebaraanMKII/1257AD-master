@@ -174,21 +174,33 @@ dialogs    = [
         ], "Alright. What do you have in mind?.", "lord_request_enlistment_division",[]],
     [anyone,"lord_request_enlistment", [(lt, "$g_talk_troop_relation", 0)], "I do not trust you enough to allow you to serve for me.", "lord_pretalk",[]],
     
-    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(lt, ":player_level", 7)], "My experience level is too low. I'll come back when I am as experienced as other recruits.", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(lt, ":player_level", 7)], "Oops, my experience level is too low. I'll come back when I am as experienced as other recruits.", "lord_pretalk", []],
     [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with mounted troops", "lord_request_enlistment_cavalry", []],
     [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with missile troops", "lord_request_enlistment_archers", []],
     [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with infantry troops", "lord_request_enlistment_infantry", []],
-    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Mmm, wait a minute", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Mmm, a moment to think my lord", "lord_pretalk", []],
 
-    [anyone,"lord_request_enlistment_cavalry", [(store_skill_level, ":cur_riding", "skl_riding", "trp_player"),(ge, ":cur_riding", 2)], 
+    [anyone,"lord_request_enlistment_cavalry", [
+        (store_skill_level, ":cur_riding", "skl_riding", "trp_player"),
+        (ge, ":cur_riding", 4)], 
         "Very good, let's find a mounted troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_cavalry)]],
     [anyone,"lord_request_enlistment_cavalry", [], "Sorry, {playername}, but you don't know how to ride a horse.", "lord_pretalk",[]],
-    [anyone,"lord_request_enlistment_archers", [(store_skill_level, ":cur_power_draw", "skl_power_draw", "trp_player"),(ge, ":cur_power_draw", 2)], 
+    [anyone,"lord_request_enlistment_archers", [
+        (store_skill_level, ":cur_power_draw", "skl_power_draw", "trp_player"),
+        (store_skill_level, ":cur_power_throw", "skl_power_throw", "trp_player"),
+        (store_proficiency_level, ":cur_xbox_proficiency", "trp_player", wpt_crossbow),
+        (this_or_next|ge, ":cur_power_draw", 4),
+        (this_or_next|ge, ":cur_power_throw", 4),
+        (ge, ":cur_xbox_proficiency", 100)], 
         "Very good, let's find a missile troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_archers)]],
-    [anyone,"lord_request_enlistment_archers", [], "Sorry, {playername}, but you don't know how to draw a strong bow.", "lord_pretalk",[]],
-    [anyone,"lord_request_enlistment_infantry", [(store_skill_level, ":cur_power_strike", "skl_power_strike", "trp_player"),(ge, ":cur_power_strike", 2)], 
+    [anyone,"lord_request_enlistment_archers", [], "Sorry, {playername}, but you don't know how to draw a strong bow, to throw a javelin nor to shoot a crossbow.", "lord_pretalk",[]],
+    [anyone,"lord_request_enlistment_infantry", [
+        (store_skill_level, ":cur_power_strike", "skl_power_strike", "trp_player"),
+        (store_proficiency_level, ":cur_polearm_proficiency", "trp_player", wpt_polearm),
+        (this_or_next|ge, ":cur_power_strike", 4),
+        (ge, ":cur_polearm_proficiency", 100)], 
         "Very good, let's find an infantry troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_infantry)]],
-    [anyone,"lord_request_enlistment_infantry", [], "Sorry, {playername}, but you don't know how to strike hard.", "lord_pretalk",[]],        
+    [anyone,"lord_request_enlistment_infantry", [], "Sorry, {playername}, but you don't know how to strike hard nor to wield a polearm.", "lord_pretalk",[]],        
 
     [anyone|plyr,"lord_request_enlistment_select", [(gt, reg51, 0),(str_store_troop_name, s51, reg51)], 
       "Enlist as a: {s51}", "lord_request_enlistment_confirm", [(assign, "$temp", reg51)]],
@@ -196,7 +208,7 @@ dialogs    = [
      "Enlist as a: {s52}", "lord_request_enlistment_confirm", [(assign, "$temp", reg52)]],
     [anyone|plyr,"lord_request_enlistment_select", [(gt, reg53, 0),(str_store_troop_name, s53, reg53)], 
       "Enlist as a: {s53}", "lord_request_enlistment_confirm", [(assign, "$temp", reg53)]],
-    [anyone|plyr,"lord_request_enlistment_select", [], "Mmm, wait a minute", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_select", [], "Mmm, a moment to think my lord", "lord_pretalk", []],
     [anyone,"lord_request_enlistment_select", [(eq, reg51, 0)], "Sorry, {playername}, there isn't any position available for you now.", "lord_pretalk", []],
 
     [anyone,"lord_request_enlistment_confirm", [(str_store_troop_name, s49, "$temp")], "{playername}, do you want to serve in my company as a {s49}?", "lord_request_enlistment_confirm2", []],
@@ -207,26 +219,66 @@ dialogs    = [
         (assign, "$g_leave_encounter", 1),]],      
     [anyone|plyr,"lord_request_enlistment_confirm2", [], "Well, on second thought my lord, I might try my luck alone a bit longer. My thanks.", "lord_pretalk", []],
 
-####### NEW v3.0-KOMKE END-
-
     #reassignment
     [anyone,"lord_request_reassignment", [(store_current_day, ":service_length"),(quest_get_slot, reg0, "qst_freelancer_enlisted", slot_quest_freelancer_start_date),
         (val_sub, ":service_length", reg0),
-        (gt, ":service_length", 14),
-        (neg|faction_slot_eq, "$g_talk_troop_faction", slot_faction_tier_1_troop, "$player_cur_troop"), #served at least for 2 weeks, and have been upgraded once
-     ], "Reassignment, {playername}? Your current post doesn't suit you? Very well then. What were you thinking?", "lord_request_reassignment_select", 
-     [(call_script, "script_freelancer_list_faction_troops", "$g_talk_troop_faction", "trp_temp_array_a", "trp_temp_array_b")]],
-    [anyone,"lord_request_reassignment", [], "Sorry, {lad/lass}, but I can't have my men changing their mind every day. Next you'll be asking for leave--or to retire!", "lord_pretalk", []],
-    [anyone|plyr,"lord_request_reassignment_select", [(call_script, "script_cf_freelancer_get_reassign_troop", "trp_temp_array_a", grc_infantry),(assign, reg1, reg0),(str_store_troop_name, s1, reg0)], 
-      "A new role in the infantry: {s1}", "lord_request_reassignment_confirm", [(assign, "$temp", reg1)]],
-    [anyone|plyr,"lord_request_reassignment_select", [(call_script, "script_cf_freelancer_get_reassign_troop", "trp_temp_array_a", grc_archers),(assign, reg2, reg0),(str_store_troop_name, s2, reg0)], 
-     "A position with your ranged troops: {s2}", "lord_request_reassignment_confirm", [(assign, "$temp", reg2)]],
-    [anyone|plyr,"lord_request_reassignment_select", [(call_script, "script_cf_freelancer_get_reassign_troop", "trp_temp_array_a", grc_cavalry),(assign, reg3, reg0),(str_store_troop_name, s3, reg0)], 
-      "A spot amongst your horsemen: {s3}", "lord_request_reassignment_confirm", [(assign, "$temp", reg3)]],
-    [anyone|plyr,"lord_request_reassignment_select", [], "I'd like to start with the recruits again.", "lord_request_reassignment_confirm", [(faction_get_slot, "$temp", "$g_talk_troop_faction", slot_faction_tier_1_troop)]],
-    [anyone|plyr,"lord_request_reassignment_select", [(str_store_troop_name, s5, "$player_cur_troop")], "Actually...maybe not, milord. No. I'm fine as a {s5}", "lord_pretalk", []],
+        (gt, ":service_length", 14),#served at least for 2 weeks 14
+        # (neg|faction_slot_eq, "$g_talk_troop_faction", slot_faction_tier_1_troop, "$player_cur_troop"),  and have been upgraded once KOMKE commented out
+     ], "Reassignment, {playername}? Your current post doesn't suit you? Very well then. What were you thinking?", "lord_request_reassignment_division", []],
+     [anyone,"lord_request_reassignment", [], "Sorry, {lad/lass}, but I can't have my men changing their mind every day. Wait a week or two before asking!", "lord_pretalk", []],
+     # [(call_script, "script_freelancer_list_faction_troops", "$g_talk_troop_faction", "trp_temp_array_a", "trp_temp_array_b")]],
+    # [anyone,"lord_request_reassignment", [], "Sorry, {lad/lass}, but I can't have my men changing their mind every day. Next you'll be asking for leave--or to retire!", "lord_pretalk", []],
+    # [anyone|plyr,"lord_request_reassignment_select", [(call_script, "script_cf_freelancer_get_reassign_troop", "trp_temp_array_a", grc_infantry),(assign, reg1, reg0),(str_store_troop_name, s1, reg0)], 
+    #   "A new role in the infantry: {s1}", "lord_request_reassignment_confirm", [(assign, "$temp", reg1)]],
+    # [anyone|plyr,"lord_request_reassignment_select", [(call_script, "script_cf_freelancer_get_reassign_troop", "trp_temp_array_a", grc_archers),(assign, reg2, reg0),(str_store_troop_name, s2, reg0)], 
+    #  "A position with your ranged troops: {s2}", "lord_request_reassignment_confirm", [(assign, "$temp", reg2)]],
+    # [anyone|plyr,"lord_request_reassignment_select", [(call_script, "script_cf_freelancer_get_reassign_troop", "trp_temp_array_a", grc_cavalry),(assign, reg3, reg0),(str_store_troop_name, s3, reg0)], 
+    #   "A spot amongst your horsemen: {s3}", "lord_request_reassignment_confirm", [(assign, "$temp", reg3)]],
+    # [anyone|plyr,"lord_request_reassignment_select", [], "I'd like to start with the recruits again.", "lord_request_reassignment_confirm", [(faction_get_slot, "$temp", "$g_talk_troop_faction", slot_faction_tier_1_troop)]],
+    # [anyone|plyr,"lord_request_reassignment_select", [(str_store_troop_name, s5, "$player_cur_troop")], "Actually...maybe not, milord. No. I'm fine as a {s5}", "lord_pretalk", []],
+    # [anyone,"lord_request_reassignment_confirm", [(str_store_troop_name, s4, "$temp"),(str_store_troop_name, s5, "$player_cur_troop")], 
+    #   "Alright, {playername}, you're sure I should have my Master-of-Arms begin your retraining as a {s4}?", "lord_request_reassignment_finish", []],
+    
+    [anyone|plyr,"lord_request_reassignment_division", [], "Change to mounted troops", "lord_request_reassignment_cavalry", []],
+    [anyone|plyr,"lord_request_reassignment_division", [], "Change to missile troops", "lord_request_reassignment_archers", []],
+    [anyone|plyr,"lord_request_reassignment_division", [], "Change to infantry troops", "lord_request_reassignment_infantry", []],
+    [anyone|plyr,"lord_request_reassignment_division", [], "Mmm, nevermind my lord", "lord_pretalk", []],
+    
+    [anyone,"lord_request_reassignment_cavalry", [
+        (store_skill_level, ":cur_riding", "skl_riding", "trp_player"),
+        (ge, ":cur_riding", 4)], 
+        "Very good, let's find a mounted troop for you", "lord_request_reassignment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_cavalry)]],
+    [anyone,"lord_request_reassignment_cavalry", [], "Sorry, {playername}, but you don't know how to ride a horse.", "lord_pretalk",[]],
+    [anyone,"lord_request_reassignment_archers", [
+        (store_skill_level, ":cur_power_draw", "skl_power_draw", "trp_player"),
+        (store_skill_level, ":cur_power_throw", "skl_power_throw", "trp_player"),
+        (store_proficiency_level, ":cur_xbox_proficiency", "trp_player", wpt_crossbow),
+        (this_or_next|ge, ":cur_power_draw", 4),
+        (this_or_next|ge, ":cur_power_throw", 4),
+        (ge, ":cur_xbox_proficiency", 100)], 
+        "Very good, let's find a missile troop for you", "lord_request_reassignment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_archers)]],
+    [anyone,"lord_request_reassignment_archers", [], "Sorry, {playername}, but you don't know how to draw a strong bow, to throw a javelin nor to shoot a crossbow.", "lord_pretalk",[]],
+    [anyone,"lord_request_reassignment_infantry", [
+        (store_skill_level, ":cur_power_strike", "skl_power_strike", "trp_player"),
+        (store_proficiency_level, ":cur_polearm_proficiency", "trp_player", wpt_polearm),
+        (this_or_next|ge, ":cur_power_strike", 4),
+        (ge, ":cur_polearm_proficiency", 100)], 
+        "Very good, let's find an infantry troop for you", "lord_request_reassignment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_infantry)]],
+    [anyone,"lord_request_reassignment_infantry", [], "Sorry, {playername}, but you don't know how to strike hard nor to wield a polearm.", "lord_pretalk",[]],        
+    
+    [anyone|plyr,"lord_request_reassignment_select", [(gt, reg51, 0),(str_store_troop_name, s51, reg51)], 
+      "Enlist as a: {s51}", "lord_request_reassignment_confirm", [(assign, "$temp", reg51)]],
+    [anyone|plyr,"lord_request_reassignment_select", [(gt, reg52, 0),(str_store_troop_name, s52, reg52)], 
+     "Enlist as a: {s52}", "lord_request_reassignment_confirm", [(assign, "$temp", reg52)]],
+    [anyone|plyr,"lord_request_reassignment_select", [(gt, reg53, 0),(str_store_troop_name, s53, reg53)], 
+      "Enlist as a: {s53}", "lord_request_reassignment_confirm", [(assign, "$temp", reg53)]],
+    [anyone|plyr,"lord_request_reassignment_select", [], "Mmm, a moment to think my lord", "lord_pretalk", []],
+    [anyone,"lord_request_reassignment_select", [(eq, reg51, 0)], "Sorry, {playername}, there isn't any position available for you right now.", "lord_pretalk", []],
+
     [anyone,"lord_request_reassignment_confirm", [(str_store_troop_name, s4, "$temp"),(str_store_troop_name, s5, "$player_cur_troop")], 
       "Alright, {playername}, you're sure I should have my Master-of-Arms begin your retraining as a {s4}?", "lord_request_reassignment_finish", []],
+
+    
     [anyone|plyr,"lord_request_reassignment_finish", [], "Yes, I'd like to be retrained as a {s4}, sir.", "lord_pretalk", 
       [ (call_script, "script_freelancer_unequip_troop", "$player_cur_troop"),
         (assign, "$player_cur_troop", "$temp"),
@@ -247,7 +299,8 @@ dialogs    = [
         (quest_set_slot, "qst_freelancer_enlisted", slot_quest_freelancer_upgrade_xp, reg0),      
       ]],
     [anyone|plyr,"lord_request_reassignment_finish", [], "Actually...maybe not, milord. No. I'm fine as a {s5}. Milord.", "lord_pretalk", []],
-    
+
+####### NEW v3.0-KOMKE END-
     
 # dialog_lord_accept_retire 
     [anyone,"lord_request_retire",[], "Very well {playername}. You are relieved of duty.", "lord_pretalk",[
