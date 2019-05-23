@@ -8197,28 +8197,29 @@ simple_triggers = [
 
   
 ############################# New v2.1 - FIEF CULTURE CHANGES TO LORD'S CULTURE
-(0.98,   ###################### roughly once every month for each of the 733 centers
+# (0.98,   ###################### roughly once every month for each of the 733 centers
+(720,   
 [
- (try_begin),
-   (lt, "$g_change_culture_cur_center", centers_begin), 
-   (assign, "$g_change_culture_cur_center", centers_begin),
- (try_end),
+ # (try_begin),
+   # (lt, "$g_change_culture_cur_center", centers_begin), 
+   # (assign, "$g_change_culture_cur_center", centers_begin),
+ # (try_end),
  
- (try_begin),
-   (ge, "$g_change_culture_cur_center", centers_end), 
-   (assign, "$g_change_culture_cur_center", centers_begin),
- (try_end),
+ # (try_begin),
+   # (ge, "$g_change_culture_cur_center", centers_end), 
+   # (assign, "$g_change_culture_cur_center", centers_begin),
+ # (try_end),
  
- (try_begin),
-   (neg|party_slot_eq, "$g_change_culture_cur_center", slot_town_lord, -1),
-   (neg|party_slot_eq, "$g_change_culture_cur_center", slot_town_lord, "trp_player"),
-     (party_get_slot, ":center_lord", "$g_change_culture_cur_center", slot_town_lord),
-     (troop_get_slot, ":center_lord_culture", ":center_lord", slot_troop_cur_culture),
-     (party_set_slot, "$g_change_culture_cur_center", slot_center_culture, ":center_lord_culture"),
- (try_end),
+ # (try_begin),
+   # (neg|party_slot_eq, "$g_change_culture_cur_center", slot_town_lord, -1),
+   # (neg|party_slot_eq, "$g_change_culture_cur_center", slot_town_lord, "trp_player"),
+     # (party_get_slot, ":center_lord", "$g_change_culture_cur_center", slot_town_lord),
+     # (troop_get_slot, ":center_lord_culture", ":center_lord", slot_troop_cur_culture),
+     # (party_set_slot, "$g_change_culture_cur_center", slot_center_culture, ":center_lord_culture"),
+ # (try_end),
  
  ################ proceed to the next center
- (val_add, "$g_change_culture_cur_center", 1),
+ # (val_add, "$g_change_culture_cur_center", 1),
 ]),
 #######################################################################################
 
