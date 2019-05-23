@@ -4213,9 +4213,9 @@ game_menus = [ #
         (set_show_messages, 1),
         (try_begin),
           (eq, "$quickstart", 0),
-          (jump_to_menu, "mnu_start_game_2"),
+          (jump_to_menu, "mnu_start_game_new_spawn_presets"),
         (else_try),
-          (jump_to_menu, "mnu_start_game_2"),
+          (jump_to_menu, "mnu_start_game_new_spawn_presets"),
         (try_end),
       ]
       ),
@@ -4226,9 +4226,9 @@ game_menus = [ #
       [
         (try_begin),
           (eq, "$quickstart", 0),
-          (jump_to_menu, "mnu_start_game_2"),
+          (jump_to_menu, "mnu_start_game_new_spawn_presets"),
         (else_try),
-          (jump_to_menu, "mnu_start_game_2"),
+          (jump_to_menu, "mnu_start_game_new_spawn_presets"),
         (try_end),
       ]
       ),
@@ -4241,7 +4241,7 @@ game_menus = [ #
       "Enable_quickstart_(this_is_useful_for_debugging_only)",
       [
         (assign, "$quickstart", 1),
-        (jump_to_menu, "mnu_start_game_2"),
+        (jump_to_menu, "mnu_start_game_new_spawn_presets"),
       ]
       ),
 
@@ -4252,7 +4252,7 @@ game_menus = [ #
       "Disable_quickstart_(this_is_useful_for_debugging_only)",
       [
         (assign, "$quickstart", 0),
-        (jump_to_menu, "mnu_start_game_2"),
+        (jump_to_menu, "mnu_start_game_new_spawn_presets"),
       ]
       ),
 
@@ -4265,7 +4265,150 @@ game_menus = [ #
       ),
     ],
   ),
+##################################################################
+  
+  
+################################# NEW v3.0 - SPAWN PRESETS
+  ("start_game_new_spawn_presets", menu_text_color(0xFF000000),
+    "What spawn preset do you wish to use? (Spawn presets affect the maximum amount of parties like bandits that can exist in the map at one time. Use one that your computer can handle.)",
+    "none",
+    [
+    ],
+    [
+      ("start_game_new_spawn_presets_1",
+      [],
+      "Very Light (50% less)(For slow computers)",
+      [
+      (assign, "$g_party_faction_max_parties_foragers", 1),
+      (assign, "$g_party_faction_max_parties_scouts", 1),
+      (assign, "$g_party_faction_max_parties_patrols", 1),
+      (assign, "$g_party_faction_max_parties_caravans", 1),
+      (assign, "$g_party_faction_max_parties_prisoner_trains", 0),
+      (assign, "$g_party_faction_max_parties_war_parties", 0),
+      (assign, "$g_party_faction_max_parties_mercenary_companies", 0),
+	  
+      (assign, "$g_party_bandit_max_parties_looter", 25),
+      (assign, "$g_party_bandit_max_parties_sea_raider", 15),
+      (assign, "$g_party_bandit_max_parties_mountain_bandits", 20),
+      (assign, "$g_party_bandit_max_parties_steppe_bandits", 15),
+      (assign, "$g_party_bandit_max_parties_taiga_bandits", 15),
+      (assign, "$g_party_bandit_max_parties_forest_bandits", 20),
+      (assign, "$g_party_bandit_max_parties_desert_bandits", 15),
+      (assign, "$g_party_bandit_max_parties_deserters", 30),
+      (assign, "$g_party_bandit_max_parties_roving_knights", 5),
+      (assign, "$g_party_mercenary_company_max", 5),
+      (assign, "$g_party_rebellion_max", 2),
+      (assign, "$g_party_rebellion_strong_max", 2),
+      (assign, "$g_party_fugitive_serf_max", 10),
+      (assign, "$g_party_mercenary_warband_max", 20),
+	  
+      (jump_to_menu, "mnu_start_game_2"),
+      ]
+      ),
+	  
+      ("start_game_new_spawn_presets_2",
+      [],
+      "Light (25% less)",
+      [
+      (assign, "$g_party_faction_max_parties_foragers", 1),
+      (assign, "$g_party_faction_max_parties_scouts", 2),
+      (assign, "$g_party_faction_max_parties_patrols", 1),
+      (assign, "$g_party_faction_max_parties_caravans", 1),
+      (assign, "$g_party_faction_max_parties_prisoner_trains", 1),
+      (assign, "$g_party_faction_max_parties_war_parties", 1),
+      (assign, "$g_party_faction_max_parties_mercenary_companies", 1),
+	  
+      (assign, "$g_party_bandit_max_parties_looter", 38),
+      (assign, "$g_party_bandit_max_parties_sea_raider", 22),
+      (assign, "$g_party_bandit_max_parties_mountain_bandits", 30),
+      (assign, "$g_party_bandit_max_parties_steppe_bandits", 22),
+      (assign, "$g_party_bandit_max_parties_taiga_bandits", 22),
+      (assign, "$g_party_bandit_max_parties_forest_bandits", 30),
+      (assign, "$g_party_bandit_max_parties_desert_bandits", 22),
+      (assign, "$g_party_bandit_max_parties_deserters", 45),
+      (assign, "$g_party_bandit_max_parties_roving_knights", 7),
+      (assign, "$g_party_mercenary_company_max", 7),
+      (assign, "$g_party_rebellion_max", 3),
+      (assign, "$g_party_rebellion_strong_max", 3),
+      (assign, "$g_party_fugitive_serf_max", 15),
+      (assign, "$g_party_mercenary_warband_max", 30),
+	  
+      (jump_to_menu, "mnu_start_game_2"),
+      ]
+      ),
 
+      ("start_game_new_spawn_presets_3",
+      [],
+      "Normal",
+      [
+      (jump_to_menu, "mnu_start_game_2"),
+      ]
+      ),
+
+      ("start_game_new_spawn_presets_4",
+      [],
+      "Heavy (25% more)(For fast computers)",
+      [
+      (assign, "$g_party_faction_max_parties_foragers", 2),
+      (assign, "$g_party_faction_max_parties_scouts", 4),
+      (assign, "$g_party_faction_max_parties_patrols", 3),
+      (assign, "$g_party_faction_max_parties_caravans", 3),
+      (assign, "$g_party_faction_max_parties_prisoner_trains", 1),
+      (assign, "$g_party_faction_max_parties_war_parties", 1),
+      (assign, "$g_party_faction_max_parties_mercenary_companies", 1),
+	  
+      (assign, "$g_party_bandit_max_parties_looter", 62),
+      (assign, "$g_party_bandit_max_parties_sea_raider", 38),
+      (assign, "$g_party_bandit_max_parties_mountain_bandits", 50),
+      (assign, "$g_party_bandit_max_parties_steppe_bandits", 38),
+      (assign, "$g_party_bandit_max_parties_taiga_bandits", 38),
+      (assign, "$g_party_bandit_max_parties_forest_bandits", 50),
+      (assign, "$g_party_bandit_max_parties_desert_bandits", 38),
+      (assign, "$g_party_bandit_max_parties_deserters", 75),
+      (assign, "$g_party_bandit_max_parties_roving_knights", 13),
+      (assign, "$g_party_mercenary_company_max", 13),
+      (assign, "$g_party_rebellion_max", 6),
+      (assign, "$g_party_rebellion_strong_max", 6),
+      (assign, "$g_party_fugitive_serf_max", 25),
+      (assign, "$g_party_mercenary_warband_max", 50),
+	  
+      (jump_to_menu, "mnu_start_game_2"),
+      ]
+      ),
+
+      ("start_game_new_spawn_presets_5",
+      [],
+      "Very Heavy (50% more)(For very fast computers)",
+      [
+      (assign, "$g_party_faction_max_parties_foragers", 4),
+      (assign, "$g_party_faction_max_parties_scouts", 6),
+      (assign, "$g_party_faction_max_parties_patrols", 4),
+      (assign, "$g_party_faction_max_parties_caravans", 4),
+      (assign, "$g_party_faction_max_parties_prisoner_trains", 2),
+      (assign, "$g_party_faction_max_parties_war_parties", 2),
+      (assign, "$g_party_faction_max_parties_mercenary_companies", 2),
+	  
+      (assign, "$g_party_bandit_max_parties_looter", 75),
+      (assign, "$g_party_bandit_max_parties_sea_raider", 45),
+      (assign, "$g_party_bandit_max_parties_mountain_bandits", 60),
+      (assign, "$g_party_bandit_max_parties_steppe_bandits", 45),
+      (assign, "$g_party_bandit_max_parties_taiga_bandits", 45),
+      (assign, "$g_party_bandit_max_parties_forest_bandits", 60),
+      (assign, "$g_party_bandit_max_parties_desert_bandits", 45),
+      (assign, "$g_party_bandit_max_parties_deserters", 90),
+      (assign, "$g_party_bandit_max_parties_roving_knights", 15),
+      (assign, "$g_party_mercenary_company_max", 15),
+      (assign, "$g_party_rebellion_max", 7),
+      (assign, "$g_party_rebellion_strong_max", 7),
+      (assign, "$g_party_fugitive_serf_max", 30),
+      (assign, "$g_party_mercenary_warband_max", 60),
+	  
+      (jump_to_menu, "mnu_start_game_2"),
+      ]
+      ),
+    ],
+  ),
+##################################################################
   
   
   # ("optional_1", menu_text_color(0xFF000000),
@@ -25987,6 +26130,21 @@ game_menus = [ #
          (str_store_troop_name, s15, ":cur_troop"),  
          (str_store_party_name_link, s11, ":cur_center"),  
          (display_message, "@{s15} is currently at {s11}."),		 
+       (try_end),
+       ]
+       ),
+	   #########
+	   
+	   ######### NEW v3.0
+       ("debug_options_15",[], "Spawn a patrol in a player fief.",
+       [
+       (assign, ":loop_end", 0),
+       (try_for_range, ":cur_fief", centers_begin, ":loop_end"),
+         (party_slot_eq, ":cur_fief", slot_town_lord, "trp_player"),
+		   (call_script, "script_dplmc_send_patrol", ":cur_fief", ":cur_fief", 3, "$players_kingdom", "trp_player"),
+           (str_store_party_name_link, s11, ":cur_fief"),  
+           (display_message, "@Patrol spawned at {s11}."),
+           (assign, ":loop_end", -1),		 
        (try_end),
        ]
        ),
