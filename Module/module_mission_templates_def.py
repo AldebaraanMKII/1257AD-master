@@ -4986,13 +4986,15 @@ custom_battle_check_defeat_condition = (
     (finish_mission),
     ])
 
-common_battle_victory_display = (
-  5, 0, 0, [],
-  [
-    (eq, "$g_battle_won",1),
-    (call_script, "script_freelancer_keep_field_loot"),  ########## NEW v2.7 - lets player keep loot that he got from the field
-    (display_message, "str_msg_battle_won"),
-    ])
+####### NEW v3.0-KOMKE START-This trigger is commented out because there is another identical one later
+# common_battle_victory_display = (
+#   5, 0, 0, [],
+#   [
+#     (eq, "$g_battle_won",1),
+#     (call_script, "script_freelancer_keep_field_loot"),  ########## NEW v2.7 - lets player keep loot that he got from the field
+#     (display_message, "str_msg_battle_won"),
+#     ])
+####### NEW v3.0-KOMKE END- 
 
 common_siege_question_answered = (
   ti_question_answered, 0, 0, [],
@@ -5318,6 +5320,7 @@ common_battle_check_victory_condition = (
     (display_message, "str_msg_battle_won"),
     (assign, "$g_battle_won",1),
     (assign, "$g_battle_result", 1),
+    (call_script, "script_freelancer_keep_field_loot"),  ####### NEW v3.0-KOMKE
     (call_script, "script_play_victorious_sound"),
     ],
   [
@@ -5363,6 +5366,7 @@ common_battle_victory_display = (
   5, 0, 0, [],
   [
     (eq, "$g_battle_won",1),
+    # (call_script, "script_freelancer_keep_field_loot"),  ########## NEW v2.7 - lets player keep loot that he got from the field####### NEW v3.0-KOMKE moved to common_battle_check_victory_condition
     (display_message, "str_msg_battle_won"),
     ])
 
