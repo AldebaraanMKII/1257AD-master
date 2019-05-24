@@ -6966,6 +6966,7 @@ dialogs = [
 [trp_dplmc_messenger, "dplmc_messenger_talk_farewell", [], "Thank you. Farewell!", "close_window", [(assign, "$g_leave_encounter", 1),]],
 
 
+############### NEW v3.0 - Fixed patrol dialogue
 ##patrol
 [anyone, "start", 
     [
@@ -6976,8 +6977,86 @@ dialogs = [
       (eq, ":party_faction", ":player_faction"),
       (party_get_slot, ":target_party", "$g_encountered_party", slot_party_ai_object),
       (str_store_party_name, s6, ":target_party"),
-    ], "Greetings, Sire. We are still patrolling {s6}. Do you have new orders?", "dplmc_patrol_talk", []
+      (party_slot_ge, ":target_party", slot_town_lord, 0),
+      (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
+      (neq, ":town_lord", "trp_player"),
+      (neg|faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
+      (str_store_troop_name, s7, ":town_lord"),
+    ], "Greetings, Sire. We are patrolling {s6} under the orders of {s7}.", "dplmc_patrol_talk_no_action", []
   ],
+  
+[anyone|plyr, "dplmc_patrol_talk_no_action", [], 
+    "Great. Keep up the good work.", "close_window", 
+	[(assign, "$g_leave_encounter", 1),]
+],
+
+#####################
+[anyone, "start", 
+    [
+      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
+      (store_faction_of_troop, ":player_faction", "trp_player"),
+      (store_faction_of_party, ":party_faction", "$g_encountered_party"),
+      (eq, ":party_faction", ":player_faction"),
+      (party_get_slot, ":target_party", "$g_encountered_party", slot_party_ai_object),
+      (str_store_party_name, s6, ":target_party"),
+      (party_slot_ge, ":target_party", slot_town_lord, 0),
+      (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
+      (this_or_next|eq, ":town_lord", "trp_player"),
+      (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
+      (str_store_troop_name, s7, ":town_lord"),
+    ], "Greetings, Sire. We are patrolling {s6}. Do you have new orders?", "dplmc_patrol_talk", []
+  ],
+  
+[anyone, "dplmc_patrol_pretalk", [
+], "Greetings, Sire. Do you have new orders?", "dplmc_patrol_talk",
+##nested diplomacy end+
+[]],
+
+##################### patrol new area
+[anyone|plyr, "dplmc_patrol_talk", [], "Please patrol a new area.", "dplmc_patrol_orders_area_ask",
+[]],
+
+[anyone, "dplmc_patrol_orders_area_ask", [], "Where should we go?", "dplmc_patrol_orders_area",
+[]],
+
+[anyone|plyr|repeat_for_parties, "dplmc_patrol_orders_area",
+[
+(store_repeat_object, ":party_no"),
+(is_between, ":party_no", centers_begin, centers_end),
+(store_faction_of_party, ":party_faction", ":party_no"),
+(eq, ":party_faction", "$players_kingdom"),
+(str_store_party_name, s11, ":party_no"),
+],
+"{s11}.", "dplmc_patrol_confirm_ask",
+[
+(store_repeat_object, "$diplomacy_var"),
+]
+],
+
+[anyone|plyr, "dplmc_patrol_orders_area", [], "Nevermind.", "dplmc_patrol_pretalk",
+[]],
+
+[anyone, "dplmc_patrol_confirm_ask",
+[(str_store_party_name, s5, "$diplomacy_var"),],
+"As you wish, we will patrol {s5}.", "dplmc_patrol_confirm",
+[]
+],
+
+[anyone|plyr, "dplmc_patrol_confirm", [(str_store_party_name, s5, "$diplomacy_var"),], "Thank you.", "close_window",
+[
+(party_set_name, "$g_encountered_party", "str_s5_patrol"),
+(party_set_slot, "$g_encountered_party", slot_party_ai_object, "$diplomacy_var"),
+(party_set_slot, "$g_encountered_party", slot_party_ai_state, spai_patrolling_around_center),
+(party_set_ai_behavior, "$g_encountered_party", ai_bhvr_travel_to_party),
+(party_set_ai_object, "$g_encountered_party", "$diplomacy_var"),
+(assign, "$g_leave_encounter", 1),
+]],
+
+[anyone|plyr, "dplmc_patrol_confirm", [], "Wait, I changed my mind.", "dplmc_patrol_pretalk",
+[]],
+#############################################
+  
+  
  # rafi
  [anyone, "start",
 [
