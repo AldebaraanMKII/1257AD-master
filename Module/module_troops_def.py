@@ -289,17 +289,17 @@ cav_thrower_4_wp         = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(220)|
 cum_tribesman_skills      = knows_weapon_master_1|knows_ironflesh_1|knows_riding_2|knows_horse_archery_2|knows_power_throw_2|knows_power_draw_1|knows_inventory_management_10
 cum_tribesman_wp          = wp_one_handed(35)|wp_two_handed(60)|wp_polearm(35)|wp_archery(120)|wp_crossbow(60)|wp_throwing(120)
 
-cum_skirmisher_skills     = knows_weapon_master_3|knows_ironflesh_1|knows_riding_3|knows_horse_archery_3|knows_power_throw_3|knows_power_strike_1|knows_power_draw_3|knows_shield_1|knows_inventory_management_10
-cum_horseman_skills       = knows_weapon_master_5|knows_ironflesh_1|knows_riding_4|knows_horse_archery_4|knows_power_throw_4|knows_power_strike_2|knows_power_draw_4|knows_shield_2|knows_inventory_management_10
-cum_harcher_skills        = knows_weapon_master_7|knows_ironflesh_2|knows_riding_5|knows_horse_archery_5|knows_power_throw_5|knows_power_strike_3|knows_power_draw_5|knows_shield_2|knows_inventory_management_10
-cum_vharcher_skills       = knows_weapon_master_9|knows_ironflesh_3|knows_riding_6|knows_horse_archery_6|knows_power_throw_6|knows_power_strike_4|knows_power_draw_6|knows_shield_3|knows_inventory_management_10
+cum_skirmisher_skills     = knows_weapon_master_3|knows_ironflesh_1|knows_riding_3|knows_horse_archery_2|knows_power_throw_3|knows_power_strike_1|knows_power_draw_2|knows_shield_1|knows_inventory_management_10
+cum_horseman_skills       = knows_weapon_master_5|knows_ironflesh_1|knows_riding_4|knows_horse_archery_3|knows_power_throw_4|knows_power_strike_2|knows_power_draw_3|knows_shield_2|knows_inventory_management_10
+cum_harcher_skills        = knows_weapon_master_7|knows_ironflesh_2|knows_riding_5|knows_horse_archery_4|knows_power_throw_5|knows_power_strike_3|knows_power_draw_4|knows_shield_2|knows_inventory_management_10
+cum_vharcher_skills       = knows_weapon_master_9|knows_ironflesh_3|knows_riding_6|knows_horse_archery_5|knows_power_throw_6|knows_power_strike_4|knows_power_draw_5|knows_shield_3|knows_inventory_management_10
 cum_lancer_skills         = knows_ironflesh_4|knows_athletics_2|knows_weapon_master_5|knows_riding_6|knows_power_strike_5|knows_shield_5|knows_inventory_management_10
 cum_hlancer_skills        = knows_ironflesh_5|knows_athletics_3|knows_weapon_master_6|knows_riding_7|knows_power_strike_6|knows_shield_6|knows_inventory_management_10
 
-cum_skirmisher_wp         = wp_one_handed(80)|wp_two_handed(60)|wp_polearm(80)|wp_archery(150)|wp_crossbow(60)|wp_throwing(150)
-cum_horseman_wp           = wp_one_handed(140)|wp_two_handed(60)|wp_polearm(140)|wp_archery(220)|wp_crossbow(60)|wp_throwing(200)
-cum_harcher_wp            = wp_one_handed(180)|wp_two_handed(60)|wp_polearm(180)|wp_archery(290)|wp_crossbow(60)|wp_throwing(250)
-cum_vharcher_wp           = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(220)|wp_archery(360)|wp_crossbow(60)|wp_throwing(300)
+cum_skirmisher_wp         = wp_one_handed(80)|wp_two_handed(60)|wp_polearm(80)|wp_archery(130)|wp_crossbow(60)|wp_throwing(150)
+cum_horseman_wp           = wp_one_handed(140)|wp_two_handed(60)|wp_polearm(140)|wp_archery(180)|wp_crossbow(60)|wp_throwing(200)
+cum_harcher_wp            = wp_one_handed(180)|wp_two_handed(60)|wp_polearm(180)|wp_archery(250)|wp_crossbow(60)|wp_throwing(250)
+cum_vharcher_wp           = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(220)|wp_archery(320)|wp_crossbow(60)|wp_throwing(300)
 cum_lancer_wp             = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(220)|wp_archery(60)|wp_crossbow(60)|wp_throwing(60)
 cum_hlancer_wp            = wp_one_handed(300)|wp_two_handed(60)|wp_polearm(300)|wp_archery(60)|wp_crossbow(60)|wp_throwing(60)
 
