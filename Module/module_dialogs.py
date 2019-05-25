@@ -11867,6 +11867,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
     (eq, "$players_kingdom", "$g_talk_troop_faction"),
     (eq, "$player_has_homage", 1),
+    (eq, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role
     (faction_slot_eq, "$g_talk_troop_faction", slot_faction_religion, religion_catholic),
     (neq, "$g_talk_troop_faction", "fac_kingdom_23"),
     #tom
@@ -24813,7 +24814,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (assign, "$g_invite_faction", 0),
     (assign, "$g_invite_faction_lord", 0),
     (assign, "$g_invite_offered_center", 0),
-    (assign, "$g_leave_encounter",1)]],
+    (assign, "$g_leave_encounter",1)
+    (assign, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role
+	]],
 
 [anyone, "lord_give_conclude_2", [
   (troop_slot_eq, "$g_talk_troop", slot_troop_spouse, "trp_player"),
@@ -25886,7 +25889,9 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
    (store_add, "$mercenary_service_next_renew_day", ":cur_day", 14),
      # end
    (call_script, "script_player_join_faction", "$g_talk_troop_faction"),
-   (str_store_faction_name, s9, "$g_talk_troop_faction"),]],
+   (str_store_faction_name, s9, "$g_talk_troop_faction"),
+   (assign, "$g_player_cur_role", role_mercenary_captain),  ####### NEW v3.0 - player role
+   ]],
 
 [anyone, "lord_mercenary_service_accept_3", [], "Now, I suggest you prepare for a serious campaign.\
  Train and equip your soldiers as best you can in the meantime, and respond quickly when you are summoned for duty.", "lord_pretalk", []],

@@ -4458,6 +4458,7 @@ game_menus = [ #
         (assign, "$kaos_monarch_var", 1),
         (assign, "$g_start_faction", -1),
         (assign, "$background_type", 8),
+	    (assign, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
           (start_presentation, "prsnt_faction_selection"),
@@ -4482,6 +4483,7 @@ game_menus = [ #
         (assign, "$g_start_faction", -1),
         (assign, "$kaos_monarch_var", 1),
         (assign, "$background_type", 8),
+	    (assign, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
           (start_presentation, "prsnt_faction_selection"),
@@ -4506,6 +4508,7 @@ game_menus = [ #
         (assign, "$g_start_faction", -1),
         (assign, "$kaos_heir", 1),
         (assign, "$background_type", 10),
+	    (assign, "$g_player_cur_role", role_prince),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
           (start_presentation, "prsnt_faction_selection"),
@@ -4531,6 +4534,7 @@ game_menus = [ #
         (assign, "$kaos_heir", 1),
         (assign, "$background_type", 10),
         (assign, reg3, "$character_gender"),
+	    (assign, "$g_player_cur_role", role_prince),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
           (start_presentation, "prsnt_faction_selection"),
@@ -4554,6 +4558,7 @@ game_menus = [ #
         (assign, "$start_as_vassal_gvar1", 1),
         (assign, "$background_type", 9),
         (assign, reg3, "$character_gender"),
+	    (assign, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
           (start_presentation, "prsnt_faction_selection"),
@@ -4568,6 +4573,7 @@ game_menus = [ #
       "Start_as_a_Adventurer.",
       [
         (assign, "$g_start_faction", -1),
+	    (assign, "$g_player_cur_role", role_adventurer),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
           (jump_to_menu, "mnu_start_character_1"),
@@ -4583,6 +4589,7 @@ game_menus = [ #
       [
         (assign, "$g_start_faction", -1),
         (assign, "$bandit_start", 1),
+	    (assign, "$g_player_cur_role", role_bandit),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
           (jump_to_menu, "mnu_start_character_1"),
@@ -6572,8 +6579,9 @@ game_menus = [ #
     (val_div, ":renown", "$g_party_size_renown_bonus_divider"),
     
     (try_begin),
-      (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
-      (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+      (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
+      (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+      (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
         (assign, ":king_bonus", "$g_party_size_king_bonus"),
     (try_end),
 
