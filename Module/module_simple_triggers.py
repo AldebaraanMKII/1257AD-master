@@ -348,14 +348,15 @@ simple_triggers = [
 
 (24,
 [   ######this was an unused trigger for some strange religion thing - tom
-    (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
-    (faction_slot_eq, "fac_player_supporters_faction", slot_faction_ai_state, sfai_feast),
+    (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
+    (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
+    (faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_feast),
 
     (store_current_hours, ":cur_hours"),
-    (faction_get_slot, ":fest_hours", "fac_player_supporters_faction", slot_faction_ai_current_state_started),
+    (faction_get_slot, ":fest_hours", "$players_kingdom", slot_faction_ai_current_state_started),
     (val_sub, ":cur_hours", ":fest_hours"),
     (gt, ":cur_hours", 24*7), ######ongoing for a week?
-    (call_script, "script_faction_conclude_feast", "fac_player_supporters_faction", sfai_feast),
+    (call_script, "script_faction_conclude_feast", "$players_kingdom", sfai_feast),
     (display_message, "@Your kingdoms feast have concluded."),
     ######tom
     
@@ -652,7 +653,15 @@ simple_triggers = [
      (try_begin),
        (this_or_next|eq, "$g_infinite_camping", 0),           ####################### NEW v1.9 - bugfix
        (eq, "$freelancer_state", 1),           ####################### NEW v1.9 - bugfix
+	   ####### NEW v3.0 - report doesn't display if the player is the only one in the party and cheat menu is on
+       (try_begin),
+         (eq, "$cheat_mode", 1),
+	       (party_get_num_companions, ":num_troops", "p_main_party"),           
+           (gt, ":num_troops", 1),           
+       (else_try),
          (start_presentation, "prsnt_budget_report"),
+       (try_end),
+	   ##############
          #######diplomacy begin
          (try_begin),
            (gt, "$g_player_debt_to_party_members", 5000),
@@ -8146,6 +8155,7 @@ simple_triggers = [
        (ge, "$g_diplo_kingdom", ":kingdoms_end"),
        (try_begin),
          (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
+         (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
          (assign, "$g_diplo_kingdom", "fac_player_supporters_faction"),
        (else_try),
          ######(assign, "$g_diplo_kingdom", "fac_kingdom_1"),
@@ -8683,12 +8693,13 @@ simple_triggers = [
 
 ####### NEW v2.8 - if player doesn't have a minister, assign him a new one
 ####### NEW v2.9-KOMKE START-
-# (12,   
-(24,   ##KOMKE Changed to 24 to avoid activation before "party-size-player-king-of-supporters" fix
+(12,   
+# (24,   ##KOMKE Changed to 24 to avoid activation before "party-size-player-king-of-supporters" fix
 ####### NEW v2.9-KOMKE END-
 [
  (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
  (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+ (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
  (le, "$g_player_minister", 0),
  (try_begin),   ############# if player didn't want to assign minister, wait 48 hours before showing the menu again
    (gt, "$g_minister_notification_hours", 0),

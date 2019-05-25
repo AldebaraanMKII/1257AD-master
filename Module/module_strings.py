@@ -9299,6 +9299,10 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_lord_defects_ordinary", "Lord Defects^{s1} has renounced {reg4?her:his} allegiance to the {s3}, and joined the {s2}"),
 
 
+("s5_transfer", "Transfer to {s5}"),
+("s5_reinf", "Reinforcements from {s5}"),
+("s5_scout", "{s5} Scout"),
+("s5_patrol", "{s5} Patrol"),
 
 ##################################
 ]################################# END BRACKET

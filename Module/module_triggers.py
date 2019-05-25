@@ -1477,7 +1477,8 @@ triggers = [
 
 #NPC system changes end
 
- (0.5, 0, 0.0, [(eq, "$tom_use_longships", 1)],
+ # (0.5, 0, 0.0, [(eq, "$tom_use_longships", 1)],
+ (0.75, 0, 0.0, [(eq, "$tom_use_longships", 1)],  ####### NEW v3.0 - once every 3 seconds shall be enough
 [
 
   (try_for_parties, ":cur_party"),

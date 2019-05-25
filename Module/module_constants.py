@@ -256,11 +256,13 @@ slot_faction_ai_last_decisive_event     = 98 #capture a fortress or declaration 
 
 slot_faction_morale_of_player_troops    = 99
 
+########## NEW v3.0 - about 80 slots per item is enough
 #diplomacy
 slot_faction_truce_days_with_factions_begin             = 120
-slot_faction_provocation_days_with_factions_begin         = 170
-slot_faction_war_damage_inflicted_on_factions_begin     = 220 #tom 210
-slot_faction_sum_advice_about_factions_begin             = 300 #tom 260  ######### NEW v2.7 - changed to 300 from 260
+slot_faction_provocation_days_with_factions_begin         = 200
+slot_faction_war_damage_inflicted_on_factions_begin     = 280 #tom 210
+slot_faction_sum_advice_about_factions_begin             = 360 #tom 260  
+##########
 
 slot_faction_tier_1_town_troop    = 100
 slot_faction_tier_1_castle_troop  = 101
@@ -601,6 +603,8 @@ slot_center_shipyards            = 231 #naval stores - uses timber, pitch, and l
 
 slot_center_household_gardens   = 232 #cabbages
 slot_production_sources_end = 233
+
+slot_center_last_besieger = 235  ######## NEW v3.0 - to store last faction that sieged the center
 
 #all spice comes overland to Tulga
 #all dyes come by sea to Jelkala
@@ -3914,7 +3918,15 @@ slot_faction_lords_lost_defection = 283
 
 
 
-
+########### NEW v3.0 - role variables
+role_none = 0
+role_adventurer = 1
+role_bandit = 2
+role_mercenary_captain = 3
+role_vassal = 4
+role_prince = 5
+role_king = 6
+######################
 
 # modmerger_start version=201 type=1
 try:
