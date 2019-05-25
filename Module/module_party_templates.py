@@ -55,8 +55,8 @@ party_templates = [
   ("yotvingians",   "Yotvingians",   icon_axeman|carries_goods(2),0, fac_kingdom_33, soldier_personality, [(trp_balt_skirmisher,7,10),(trp_balt_footman,7,10),(trp_balt_jav,7,10),(trp_balt_veteran_jav,1,4),(trp_balt_billman,7,10),(trp_balt_spearman,7,10)]),
   #("yotvingians",   "Jotvingiai",   icon_axeman|carries_goods(2),0, fac_kingdom_35, soldier_personality, [(trp_nordic_veteran_swordsman,90,100)]), 
   ("welsh",   "Welsh",   icon_axeman|carries_goods(2),0, fac_kingdom_37, soldier_personality, [(trp_merc_welsh_bowman,24,31)]),
-  ("guelphs", "Guelphs", icon_gray_knight,0, fac_kingdom_40, soldier_personality, [(trp_iberian_knight,1,8), (trp_iberian_billman,15,30), (trp_iberian_veteran_crossbowman,10,15), (trp_iberian_veteran_spearman,10,15), (trp_iberian_light_cavalry,10, 15)]),
-  ("ghibellines", "Ghibellines", icon_gray_knight,0, fac_kingdom_41, soldier_personality, [(trp_iberian_knight,1,4), (trp_merc_euro_guisarmer,10,15), (trp_merc_euro_range,10,15), (trp_merc_euro_spearman,10,15), (trp_iberian_light_cavalry,10, 15)]),
+  ("guelphs", "Guelphs", icon_gray_knight,0, fac_kingdom_40, soldier_personality, [(trp_italian_knight,1,8), (trp_italian_billman,15,30), (trp_italian_veteran_crossbowman,10,15), (trp_italian_veteran_spearman,10,15), (trp_italian_light_cavalry,10, 15)]),
+  ("ghibellines", "Ghibellines", icon_gray_knight,0, fac_kingdom_41, soldier_personality, [(trp_italian_knight,1,4), (trp_merc_euro_guisarmer,10,15), (trp_merc_euro_range,10,15), (trp_merc_euro_spearman,10,15), (trp_italian_light_cavalry,10, 15)]),
   ("crusaders", "Crusaders", icon_crusaders,0, fac_crusade, soldier_personality, [(trp_euro_horse_4, 10, 25), (trp_euro_spearman_2, 150, 200), (trp_merc_euro_range, 50, 100), (trp_merc_euro_guisarmer, 50, 100), (trp_merc_euro_spearman, 50, 100), (trp_merc_euro_horse, 25, 50)]),
   ("merc_party", "Angry band of alchoholics", icon_gray_knight|pf_show_faction, 0 , fac_commoners, soldier_personality,[]),
   

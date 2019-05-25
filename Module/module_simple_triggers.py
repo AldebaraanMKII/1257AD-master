@@ -652,7 +652,15 @@ simple_triggers = [
      (try_begin),
        (this_or_next|eq, "$g_infinite_camping", 0),           ####################### NEW v1.9 - bugfix
        (eq, "$freelancer_state", 1),           ####################### NEW v1.9 - bugfix
+	   ####### NEW v3.0 - report doesn't display if the player is the only one in the party and cheat menu is on
+       (try_begin),
+         (eq, "$cheat_mode", 1),
+	       (party_get_num_companions, ":num_troops", "p_main_party"),           
+           (gt, ":num_troops", 1),           
+       (else_try),
          (start_presentation, "prsnt_budget_report"),
+       (try_end),
+	   ##############
          #######diplomacy begin
          (try_begin),
            (gt, "$g_player_debt_to_party_members", 5000),

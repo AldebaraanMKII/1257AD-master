@@ -15322,7 +15322,8 @@ game_menus = [ #
         (try_end),
 
            #(rest_for_hours_interactive, 24 * 7, 5, 0), #rest while not attackable
-           (rest_for_hours_interactive, 24 * 7, 3, 0), #rafi slow this down
+           # (rest_for_hours_interactive, 24 * 7, 3, 0), #rafi slow this down
+           (rest_for_hours_interactive, 24 * 30, 3, 0), #rafi slow this down
            (change_screen_return),
           ]),
 

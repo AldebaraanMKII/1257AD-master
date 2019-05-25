@@ -602,6 +602,8 @@ slot_center_shipyards            = 231 #naval stores - uses timber, pitch, and l
 slot_center_household_gardens   = 232 #cabbages
 slot_production_sources_end = 233
 
+slot_center_last_besieger = 235  ######## NEW v3.0 - to store last faction that sieged the center
+
 #all spice comes overland to Tulga
 #all dyes come by sea to Jelkala
 
