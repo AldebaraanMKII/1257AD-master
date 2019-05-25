@@ -5320,7 +5320,10 @@ common_battle_check_victory_condition = (
     (display_message, "str_msg_battle_won"),
     (assign, "$g_battle_won",1),
     (assign, "$g_battle_result", 1),
-    (call_script, "script_freelancer_keep_field_loot"),  ####### NEW v3.0-KOMKE
+    (try_begin),
+        (eq, "$freelancer_state", 1),
+        (call_script, "script_freelancer_keep_field_loot"),  ####### NEW v3.0-KOMKE
+    (try_end),
     (call_script, "script_play_victorious_sound"),
     ],
   [

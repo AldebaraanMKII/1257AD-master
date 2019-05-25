@@ -1990,3 +1990,4 @@ changes_made
 cstm_temp_name
 cstm_temp_pname
 g_diplomatic_colors
+g_player_cur_role
