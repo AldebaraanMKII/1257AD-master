@@ -24814,7 +24814,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (assign, "$g_invite_faction", 0),
     (assign, "$g_invite_faction_lord", 0),
     (assign, "$g_invite_offered_center", 0),
-    (assign, "$g_leave_encounter",1)
+    (assign, "$g_leave_encounter",1),
     (assign, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role
 	]],
 

@@ -29083,7 +29083,7 @@ itm_spear_p,
     ["euro_horse_1",
      "Servio Eques",
      "Servimus Equites",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
     itm_light_lance,
