@@ -11498,6 +11498,7 @@ game_menus = [ #
       ("dont_renew_oath",[], "Become free of your bond.",
        [
          (call_script, "script_player_leave_faction", 1), #1 means give back fiefs
+         (assign, "$g_player_cur_role", role_adventurer),  ####### NEW v3.0 - player role
          (change_screen_return),
          ]),
     ]
