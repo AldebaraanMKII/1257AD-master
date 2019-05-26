@@ -174,11 +174,10 @@ dialogs    = [
         ], "Alright. What do you have in mind?.", "lord_request_enlistment_division",[]],
     [anyone,"lord_request_enlistment", [(lt, "$g_talk_troop_relation", 0)], "I do not trust you enough to allow you to serve for me.", "lord_pretalk",[]],
     
-    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(lt, ":player_level", 7)], "Oops, my experience level is too low. I'll come back when I am as experienced as other recruits.", "lord_pretalk", []],
-    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with mounted troops", "lord_request_enlistment_cavalry", []],
-    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with missile troops", "lord_request_enlistment_archers", []],
-    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Enlist with infantry troops", "lord_request_enlistment_infantry", []],
-    [anyone|plyr,"lord_request_enlistment_division", [(store_character_level, ":player_level", "trp_player"),(ge, ":player_level", 7)], "Mmm, a moment to think my lord", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with mounted troops", "lord_request_enlistment_cavalry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with missile troops", "lord_request_enlistment_archers", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with infantry troops", "lord_request_enlistment_infantry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Mmm, a moment to think my lord", "lord_pretalk", []],
 
     [anyone,"lord_request_enlistment_cavalry", [
         (store_skill_level, ":cur_riding", "skl_riding", "trp_player"),

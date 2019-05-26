@@ -1222,6 +1222,10 @@ scripts = [
     (assign, reg52, 0),
     (assign, reg53, 0),
     (store_character_level, ":player_level", "trp_player"),
+    (try_begin),
+        (lt, ":player_level", 7),
+        (assign, ":player_level", 7),##this way player can start from level 1
+    (try_end),
     (troop_get_slot, ":freelancer_culture", "$g_talk_troop", slot_troop_cur_culture),## get lord culture
     (try_begin),
         (neg|is_between, ":freelancer_culture", cultures_begin, cultures_end),## not proper cultures
