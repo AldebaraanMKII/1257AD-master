@@ -4598,7 +4598,24 @@ game_menus = [ #
         (try_end),
       ]
       ),
-
+	  
+	  ################## NEW v3.0
+      ("start_mercenary_captain",
+      [],
+      "Start_as_a_mercenary_captain.",
+      [
+        (assign, "$g_start_faction", -1),
+        (assign, "$background_type", 11),
+	    (assign, "$g_player_cur_role", role_mercenary_captain),  
+        (try_begin),
+          (eq, "$quickstart", 0),
+          (jump_to_menu, "mnu_start_character_1"),
+        (else_try),
+          (jump_to_menu, "mnu_start_phase_2"),
+        (try_end),
+      ]
+      ),
+      ####################################
       ("go_back",
       [],
       "Go_back",
@@ -5564,6 +5581,54 @@ game_menus = [ #
           (change_screen_return, 0),
         (try_end),
         (troop_add_gold, "trp_player", 1000),
+########## NEW v3.0 - mercenary captain start
+        (try_begin),
+          (eq, "$background_type", 11),
+          (troop_raise_attribute, "trp_player", ca_strength, 6),
+          (troop_raise_attribute, "trp_player", ca_intelligence, 3),
+          (troop_raise_attribute, "trp_player", ca_charisma, 3),
+		  #############
+          (troop_raise_skill, "trp_player", "skl_trade", 2),
+          (troop_raise_skill, "trp_player", "skl_leadership", 3),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 2),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 2),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 2),
+          (troop_raise_skill, "trp_player", "skl_tactics", 2),
+          (troop_raise_skill, "trp_player", "skl_trainer", 3),
+          (troop_raise_skill, "trp_player", "skl_looting", 3),
+          (troop_raise_skill, "trp_player", "skl_riding", 3),
+          (troop_raise_skill, "trp_player", "skl_athletics", 2),
+          (troop_raise_skill, "trp_player", "skl_shield", 2),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 3),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 3),
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+		  #############
+          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 60),
+          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 50),
+          (troop_raise_proficiency, "trp_player", wpt_polearm, 60),
+          #############
+		  (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain"),
+          #############
+		  (troop_add_item, "trp_player", "itm_smoked_fish", 0),
+          (troop_add_item, "trp_player", "itm_smoked_fish", 0),
+          (troop_add_item, "trp_player", "itm_dried_meat", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+		  #############
+          (troop_set_slot, "trp_player", slot_troop_renown, 100),
+          (assign, ":player_gold", 0),
+          (store_random_in_range, ":player_gold", 5000, 8000),
+          (troop_add_gold, "trp_player", ":player_gold"),
+		  #############		  
+		  (call_script, "script_ee_get_closest_town", "p_main_party"),
+		  (assign, ":town", reg0),
+          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+          (party_add_xp, "p_main_party", 3000),
+        (try_end),
+#############################		  
         (try_begin),
           (gt, "$g_start_faction", 0),
           (try_begin),
