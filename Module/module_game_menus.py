@@ -9227,8 +9227,7 @@ game_menus = [ #
                       (party_set_slot, "p_town_26_1", slot_center_has_quarters_major_varangian, 1),
                 (try_end),
                 # rafi
-                # (jump_to_menu, "$g_next_menu"),####### NEW v3.0-KOMKE changed to below line
-                (jump_to_menu, "mnu_castle_taken_2"),####### NEW v3.0-KOMKE -> player took a walled center while he is a vassal of npc kingdom.
+                (jump_to_menu, "$g_next_menu"),
               (else_try), #player took a walled center while he is a vassal of rebels.
                 (eq, "$players_kingdom", "fac_player_supporters_faction"),
                 (assign, "$g_center_taken_by_player_faction", "$g_encountered_party"),
