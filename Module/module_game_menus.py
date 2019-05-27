@@ -9201,21 +9201,18 @@ game_menus = [ #
             (try_begin), #my kingdom
               #(change_screen_return),
               (eq, "$g_next_menu", "mnu_castle_taken"),
-
               (call_script, "script_add_log_entry", logent_castle_captured_by_player, "trp_player", "$g_encountered_party", -1, "$g_encountered_party_faction"),
               (store_current_hours, ":hours"),
 			  (faction_set_slot, "$players_kingdom", slot_faction_ai_last_decisive_event, ":hours"),
-
               (try_begin), #player took a walled center while he is a vassal of npc kingdom.
                 (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
                 # rafi - rename Nicae to Roman Empire
                 (try_begin),
                   (eq, "$g_encountered_party", "p_town_26_1"),
-																			
                     ########## FIX 
                     (faction_get_slot, ":player_culture", "$players_kingdom", slot_faction_culture),
-                    (this_or_next|eq, "$players_kingdom", "fac_kingdom_22"),
-                    (this_or_next|eq, "$kaos_kings_kingdom", 22),
+                    # (this_or_next|eq, "$players_kingdom", "fac_kingdom_22"),
+                    # (this_or_next|eq, "$kaos_kings_kingdom", 22),
                     (eq, ":player_culture", "fac_culture_byzantium"),  ######### NEW v2.4
 					##########
                       (faction_set_name, "$players_kingdom", "@Roman Empire"),
@@ -11253,17 +11250,17 @@ game_menus = [ #
         (try_begin),
           (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
           # (neq, "$players_kingdom", "fac_player_supporters_faction"),
-          (neq|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself
           (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
           (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
           (jump_to_menu, "mnu_castle_taken_2"),
         (else_try),
-          (call_script, "script_give_center_to_faction", "$g_encountered_party", "fac_player_supporters_faction"),
-          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "fac_player_supporters_faction"),
+          (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
+          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
           (str_store_party_name, s3, "$g_encountered_party"),
           (assign, reg1, 0),
           (try_begin),
-            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
             (assign, reg1, 1),
           (try_end),
           #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),
