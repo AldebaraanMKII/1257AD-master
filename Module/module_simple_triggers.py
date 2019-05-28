@@ -8706,7 +8706,7 @@ simple_triggers = [
      (val_sub, "$g_minister_notification_hours", 12),
  (else_try),
    (eq, "$g_minister_notification_hours", 0),
-     (call_script, "script_add_notification_menu", "mnu_ee_minister_appoint"),
+     (call_script, "script_add_notification_menu", "mnu_ee_minister_appoint", 0, 0),
  (try_end),
 ]),  
 #################
