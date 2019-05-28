@@ -4270,14 +4270,14 @@ game_menus = [ #
   
 ################################# NEW v3.0 - SPAWN PRESETS
   ("start_game_new_spawn_presets", menu_text_color(0xFF000000),
-    "What spawn preset do you wish to use? (Spawn presets affect the maximum amount of parties like bandits that can exist in the map at one time. Use one that your computer can handle.)",
+    "What spawn preset do you wish to use? (Spawn presets affect the maximum amount of parties like bandits that can exist in the map at one time. Since warband only runs on a single core the only thing that matters for it cpu wise is clock speed. Below are the recommended speeds in GHz).",
     "none",
     [
     ],
     [
       ("start_game_new_spawn_presets_1",
       [],
-      "Very Light (50% less)(For slow computers)",
+      "Very Light (50% less)(2.5GHz)",
       [
       (assign, "$g_party_faction_max_parties_foragers", 1),
       (assign, "$g_party_faction_max_parties_scouts", 1),
@@ -4308,7 +4308,7 @@ game_menus = [ #
 	  
       ("start_game_new_spawn_presets_2",
       [],
-      "Light (25% less)",
+      "Light (25% less)(3.0GHz)",
       [
       (assign, "$g_party_faction_max_parties_foragers", 1),
       (assign, "$g_party_faction_max_parties_scouts", 2),
@@ -4339,7 +4339,7 @@ game_menus = [ #
 
       ("start_game_new_spawn_presets_3",
       [],
-      "Normal",
+      "Normal (3.5GHz)",
       [
       (jump_to_menu, "mnu_start_game_2"),
       ]
@@ -4347,7 +4347,7 @@ game_menus = [ #
 
       ("start_game_new_spawn_presets_4",
       [],
-      "Heavy (25% more)(For fast computers)",
+      "Heavy (25% more)(4.2GHz)",
       [
       (assign, "$g_party_faction_max_parties_foragers", 2),
       (assign, "$g_party_faction_max_parties_scouts", 4),
@@ -4378,7 +4378,7 @@ game_menus = [ #
 
       ("start_game_new_spawn_presets_5",
       [],
-      "Very Heavy (50% more)(For very fast computers)",
+      "Very Heavy (50% more)(5.0GHz)",
       [
       (assign, "$g_party_faction_max_parties_foragers", 4),
       (assign, "$g_party_faction_max_parties_scouts", 6),
@@ -11270,6 +11270,13 @@ game_menus = [ #
           (is_between, "$g_encountered_party", towns_begin, towns_end),
           (assign, reg2, 1),
         (try_end),
+		####### NEW v3.0 - player role
+        (try_begin),
+          (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  
+          (neq, "$g_player_cur_role", role_king),  
+            (assign, "$g_player_cur_role", role_king),  
+        (try_end),
+		############## 
     ],
     [
       ("continue",[], "Continue...",
@@ -32691,7 +32698,7 @@ game_menus = [ #
           (try_end),
           (eq, ":player_can_draw_from_garrison", 1),
        ],
-         "Manage the garrison {s10}",
+         "Manage the garrison {s10}.",
 
          [
            #(change_screen_exchange_members,1),
@@ -33198,6 +33205,12 @@ game_menus = [ #
        ]
        ),
 	   #########
+	   
+       ("debug_options_new_4",[], "Activate player faction.",
+       [
+       (call_script, "script_activate_player_faction", "trp_player"),
+       ]
+       ),
 	   
        ("debug_options_new_99",[], "Go back.",
        [
