@@ -64669,8 +64669,9 @@ itm_rnd_helm_06,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
     ],
+    ####### NEW v3.0-KOMKE local village idiot changed to local village militia for immersion
     ###used for p. castles and crusade
-    ["temp_lord","Local village idiot","Local village idiots",tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face|tf_guarantee_helmet, 0,reserved,  fac_neutral,
+    ["temp_lord","Local village militia","Local village militia",tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face|tf_guarantee_helmet, 0,reserved,  fac_neutral,
     [itm_straw_hat,
     itm_linen_tunic,
     itm_woolen_hose,
