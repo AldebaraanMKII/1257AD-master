@@ -972,8 +972,7 @@ parties = [
     ("village_42_3", "Mělník", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (0.37, 32.43), [], 87),
     ("village_42_4", "Stará Boleslav", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (3.25, 30.14), [], 45),
     
-####### NEW v3.0-KOMKE village name changed from Crap to Your Village for immersion
-    ("village_player", "Your Village", icon_village_a|pf_village_player, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-69.40), scale_f(-97.41)), []),  
+    ("village_player", "Crap", icon_village_a|pf_village_player, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-69.40), scale_f(-97.41)), []),  
   
     ("salt_mine", "Salt_Mine", icon_town|pf_village|pf_disabled, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-106.95), scale_f(-93.14)), []),
     ("four_ways_inn", "Four_Ways_Inn", icon_town|pf_village|pf_disabled, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-29.26), scale_f(-75.57)), []),

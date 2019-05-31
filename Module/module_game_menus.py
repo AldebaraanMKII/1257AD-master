@@ -11205,32 +11205,21 @@ game_menus = [ #
 
         (try_begin),
           (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
-          (neq, "$players_kingdom", "fac_player_supporters_faction"),####### NEW v3.0-KOMKE uncommented to make it as in native Warband
-          # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself####### NEW v3.0-KOMKE commented out
+          # (neq, "$players_kingdom", "fac_player_supporters_faction"),
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself
           (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
           (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
           (jump_to_menu, "mnu_castle_taken_2"),
         (else_try),
-####### NEW v3.0-KOMKE START-commented out code was giving center to $players_kingdom and should be fac_player_supporters_faction
-          # (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
-          # (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
-          # (str_store_party_name, s3, "$g_encountered_party"),
-          # (assign, reg1, 0),
-          # (try_begin),
-          #   (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
-          #   (assign, reg1, 1),
-          # (try_end),
-          # #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),
-          (call_script, "script_give_center_to_faction", "$g_encountered_party", "fac_player_supporters_faction"),          
-          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "fac_player_supporters_faction"),
+          (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
+          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
           (str_store_party_name, s3, "$g_encountered_party"),
           (assign, reg1, 0),
           (try_begin),
-            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
             (assign, reg1, 1),
-          (try_end),          
-		  #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),		  
-####### NEW v3.0-KOMKE END-           
+          (try_end),
+          #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),
         (try_end),
         (assign, reg2, 0),
         (try_begin),
@@ -32991,10 +32980,10 @@ game_menus = [ #
             (party_add_members, ":objective", "trp_looter", 1),## to test battles, not autocalc menus or cheats
             (str_store_party_name, s20, ":objective"),
             (store_faction_of_party, ":party_faction", ":objective"),
-            (str_store_faction_name, s21, ":party_faction"),
+            (store_relation, ":party_relation", ":party_faction", "fac_player_faction"),
             (set_relation, "fac_player_faction", ":party_faction", -5),## not sure if this is necessary or if it does anything
             (set_relation, "fac_player_supporters_faction", ":party_faction", -5),## only supporters relation are displayed in view faction relations reports-
-            (display_log_message, "@party = {s20}, number of troops reduced to 1, faction = {s21}, relation with player set to -5", 0xffffff),
+            (display_log_message, "@party = {s20}, number of troops reduced to 1", 0xffffff),
 		]
 		),
 
