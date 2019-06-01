@@ -8965,18 +8965,27 @@ game_menus = [ #
 			  (try_end),
 			(else_try),
               (try_begin),
+									   
+																													
+						
+					   
+						  
                 (party_stack_get_troop_id, ":party_leader", "$g_encountered_party", 0),
                 (is_between, ":party_leader", active_npcs_begin, active_npcs_end),
                 (troop_slot_eq, ":party_leader", slot_troop_occupation, slto_kingdom_hero),
                 (store_sub, ":kingdom_hero_id", ":party_leader", active_npcs_begin),
                 (get_achievement_stat, ":was_he_defeated_player_before", ACHIEVEMENT_BARON_GOT_BACK, ":kingdom_hero_id"),
                 (eq, ":was_he_defeated_player_before", 1),
+
                 (unlock_achievement, ACHIEVEMENT_BARON_GOT_BACK),
               (try_end),
+
               (store_add, "$last_defeated_hero", ":stack_no", 1),
               (call_script, "script_remove_troop_from_prison", ":stack_troop"),
               (troop_set_slot, ":stack_troop", slot_troop_leaded_party, -1),
+
               (call_script, "script_cf_check_hero_can_escape_from_player", ":stack_troop"),
+
               (str_store_troop_name, s1, ":stack_troop"),
               (str_store_faction_name, s3, ":defeated_faction"),
               (str_store_string, s17, "@{s1} of {s3} managed to escape."),
@@ -8987,11 +8996,14 @@ game_menus = [ #
               (store_add, "$last_defeated_hero", ":stack_no", 1),
               (call_script, "script_remove_troop_from_prison", ":stack_troop"),
               (troop_set_slot, ":stack_troop", slot_troop_leaded_party, -1),
+
               (assign, "$talk_context", tc_hero_defeated),
+
               (call_script, "script_setup_troop_meeting", ":stack_troop", ":stack_troop_dna"),
               (assign, ":break", 1),
             (try_end),
           (try_end),
+
           (eq, ":break", 1),
         (else_try),
           # Talk to freed heroes
@@ -9015,9 +9027,12 @@ game_menus = [ #
           (party_clear, "p_temp_party"),
           (assign, "$g_move_heroes", 0),
           #(call_script, "script_party_prisoners_add_party_companions", "p_temp_party", "p_collective_enemy"),
+
           #p_total_enemy_casualties deki yarali askerler p_temp_party'e prisoner olarak eklenecek.
           (call_script, "script_party_add_wounded_members_as_prisoners", "p_temp_party", "p_total_enemy_casualties"),
+
           (call_script, "script_party_add_party_prisoners", "p_temp_party", "p_collective_enemy"),
+
           (try_begin),
             (call_script, "script_party_calculate_strength", "p_collective_friends_backup",0),
             (assign,":total_initial_strength", reg(0)),
@@ -9028,27 +9043,56 @@ game_menus = [ #
             # move ally_party_initial_strength/(player_party_initial_strength + ally_party_initial_strength) prisoners to ally party.
             # First we collect the share of prisoners of the ally party and distribute those among the allies.
             (store_sub, ":ally_party_initial_strength", ":total_initial_strength", ":player_party_initial_strength"),
+
             #(call_script, "script_party_calculate_strength", "p_ally_party_backup"),
             #(assign,":ally_party_initial_strength", reg(0)),
             #(store_add, ":total_initial_strength", ":player_party_initial_strength", ":ally_party_initial_strength"),
             (store_mul, ":ally_share", ":ally_party_initial_strength", 1000),
             (val_div, ":ally_share", ":total_initial_strength"),
             (assign, "$pin_number", ":ally_share"), #we send this as a parameter to the script.
-            (party_clear, "p_temp_party_2"),							
+            (party_clear, "p_temp_party_2"),
+																				
+																											
+																   
+															 
+																											
+																		
             (call_script, "script_move_members_with_ratio", "p_temp_party", "p_temp_party_2"),
+
             #TODO: This doesn't handle prisoners if our allies joined battle after us.
             (try_begin),
               (gt, "$g_ally_party", 0),
+																		 
+																						  
+																													 
+																	   
+															   
+																													 
+									
               (distribute_party_among_party_group, "p_temp_party_2", "$g_ally_party"),
             (try_end),
             #next if there's anything left, we'll open up the party exchange screen and offer them to the player.
           (try_end),
           (party_get_num_companions, ":num_rescued_prisoners", "p_temp_party"),
           (party_get_num_prisoners,  ":num_captured_enemies", "p_temp_party"),
+
           (store_add, ":total_capture_size", ":num_rescued_prisoners", ":num_captured_enemies"),
 		  # (neq, "$freelancer_state", 1), #+freelancer - makes it so player can not have prisoners while in commanders party
           (gt, ":total_capture_size", 0),
-          (change_screen_exchange_with_party, "p_temp_party"),   
+																  
+																			
+																		 
+																						 
+																												 
+																   
+														   
+																												 
+									
+          (change_screen_exchange_with_party, "p_temp_party"),
+							
+																				 
+																					 
+								   
         (else_try),
           (eq, "$loot_screen_shown", 0),
           (assign, "$loot_screen_shown", 1),
@@ -11205,32 +11249,21 @@ game_menus = [ #
 
         (try_begin),
           (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
-          (neq, "$players_kingdom", "fac_player_supporters_faction"),####### NEW v3.0-KOMKE uncommented to make it as in native Warband
-          # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself####### NEW v3.0-KOMKE commented out
+          # (neq, "$players_kingdom", "fac_player_supporters_faction"),
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself
           (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
           (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
           (jump_to_menu, "mnu_castle_taken_2"),
         (else_try),
-####### NEW v3.0-KOMKE START-commented out code was giving center to $players_kingdom and should be fac_player_supporters_faction
-          # (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
-          # (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
-          # (str_store_party_name, s3, "$g_encountered_party"),
-          # (assign, reg1, 0),
-          # (try_begin),
-          #   (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
-          #   (assign, reg1, 1),
-          # (try_end),
-          # #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),
-          (call_script, "script_give_center_to_faction", "$g_encountered_party", "fac_player_supporters_faction"),          
-          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "fac_player_supporters_faction"),
+          (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
+          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
           (str_store_party_name, s3, "$g_encountered_party"),
           (assign, reg1, 0),
           (try_begin),
-            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
             (assign, reg1, 1),
-          (try_end),          
-		  #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),		  
-####### NEW v3.0-KOMKE END-           
+          (try_end),
+          #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),
         (try_end),
         (assign, reg2, 0),
         (try_begin),
@@ -32991,10 +33024,10 @@ game_menus = [ #
             (party_add_members, ":objective", "trp_looter", 1),## to test battles, not autocalc menus or cheats
             (str_store_party_name, s20, ":objective"),
             (store_faction_of_party, ":party_faction", ":objective"),
-            (str_store_faction_name, s21, ":party_faction"),
+            (store_relation, ":party_relation", ":party_faction", "fac_player_faction"),
             (set_relation, "fac_player_faction", ":party_faction", -5),## not sure if this is necessary or if it does anything
             (set_relation, "fac_player_supporters_faction", ":party_faction", -5),## only supporters relation are displayed in view faction relations reports-
-            (display_log_message, "@party = {s20}, number of troops reduced to 1, faction = {s21}, relation with player set to -5", 0xffffff),
+            (display_log_message, "@party = {s20}, number of troops reduced to 1", 0xffffff),
 		]
 		),
 
