@@ -15396,10 +15396,12 @@ presentations = [
         # (overlay_set_val, "$g_presentation_obj_36", "$auto_recruitment"),
         #tom end
 
-        (position_set_y, pos1, 610),
-        (create_check_box_overlay, "$g_presentation_obj_37", "mesh_checkbox_off", "mesh_checkbox_on"),
-        (overlay_set_position, "$g_presentation_obj_37", pos1),
-        (overlay_set_val, "$g_presentation_obj_37", "$kaos_restore"),
+####### NEW v3.0-KOMKE START-faction resurrection disabled until it is in working order
+        # (position_set_y, pos1, 610),
+        # (create_check_box_overlay, "$g_presentation_obj_37", "mesh_checkbox_off", "mesh_checkbox_on"),
+        # (overlay_set_position, "$g_presentation_obj_37", pos1),
+        # (overlay_set_val, "$g_presentation_obj_37", "$kaos_restore"),
+####### NEW v3.0-KOMKE END- 
 
         # done
         (create_game_button_overlay, "$g_presentation_obj_20", "@Done"),
