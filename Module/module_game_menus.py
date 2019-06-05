@@ -8482,74 +8482,7 @@ game_menus = [ #
       (try_end),
 
       (inflict_casualties_to_party_group, "$g_encountered_party", ":total_player_and_followers_strength", "p_temp_casualties"),
-
-																																		
-																	 
-																			
-																	
-												   
-																							  
-																			
-														
-																							  
-									
-																							 
-																			
-														
-																							 
-									
-																							   
-															  
-														
-																							   
-													
-																							   
-																   
-														
-																							   
-									
-																							  
-																	
-														
-																							  
-																							   
-									
-																								
-															  
-														
-																								
-																								 
-														 
-																								  
-																			
-														
-																								  
-									
-																								 
-																			
-														
-																								 
-									
-																								   
-															  
-														
-																								   
-														  
-																								   
-																	
-														
-																								   
-									
-																								  
-																   
-														
-																								  
-									
-																									
-															  
-														
-																									
-														
+											
       #ozan begin
       (party_get_num_companion_stacks, ":num_stacks", "p_temp_casualties"),
       (try_for_range, ":stack_no", 0, ":num_stacks"),
@@ -18032,20 +17965,33 @@ game_menus = [ #
           (lt, reg(7), 4),
 
           (store_character_level, ":player_level", "trp_player"),
-          (try_begin),
+############################ NEW v3.0 - added roles
           ####### if player is king, triple ransom
+          (try_begin),
             (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+            (eq, "$g_player_cur_role", role_king),
               (store_mul, "$player_ransom_amount", ":player_level", 300),
               (val_add, "$player_ransom_amount", 300),
+          ####### if prince, double
+          (else_try), 
+            (eq, "$g_player_cur_role", role_prince),
+            (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
+              (store_mul, "$player_ransom_amount", ":player_level", 200),
+              (val_add, "$player_ransom_amount", 200),
           ####### if lord, 50% more
           (else_try), 
+            (eq, "$g_player_cur_role", role_vassal),
             (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
               (store_mul, "$player_ransom_amount", ":player_level", 150),
               (val_add, "$player_ransom_amount", 150),
           (else_try),
+            (this_or_next|eq, "$g_player_cur_role", role_adventurer),
+            (this_or_next|eq, "$g_player_cur_role", role_bandit),
+            (eq, "$g_player_cur_role", role_mercenary_captain),
             (store_mul, "$player_ransom_amount", ":player_level", 100),
             (val_add, "$player_ransom_amount", 100),
           (try_end),
+############################
           # (store_troop_gold, reg3, "trp_player"),
           # (store_div, ":player_gold_div_20", reg3, 20),
           # (val_add, "$player_ransom_amount", ":player_gold_div_20"),
