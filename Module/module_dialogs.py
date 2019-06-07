@@ -6197,9 +6197,45 @@ dialogs = [
 
 
         (try_begin),
-          (troop_slot_eq, "$g_talk_troop", slot_troop_original_faction, 0),
-          (party_get_slot, ":fief_culture", "$temp", slot_center_original_faction),
-          (troop_set_slot, "$g_talk_troop", slot_troop_original_faction, ":fief_culture"),
+####### NEW v3.0-KOMKE START-making companion lord: culture was wrong (culture=foraging party)
+          # (troop_slot_eq, "$g_talk_troop", slot_troop_original_faction, 0),
+          # (party_get_slot, ":fief_culture", "$temp", slot_center_original_faction),
+          # (troop_set_slot, "$g_talk_troop", slot_troop_original_faction, ":fief_culture"),
+          (try_for_range, ":cur_npc", companions_begin, companions_end),
+            (try_begin),
+              (this_or_next|is_between, "$g_talk_troop", "trp_npc1", "trp_npc4"),## Balt
+              (this_or_next|eq, "$g_talk_troop", "trp_npc16"),
+              (this_or_next|eq, "$g_talk_troop", "trp_npc19"),
+              (eq, "$g_talk_troop", "trp_npc26"),
+                (assign, ":culture", "fac_culture_baltic"),
+            (else_try),
+              (this_or_next|is_between, "$g_talk_troop", "trp_npc4", "trp_npc7"),## Western
+              (this_or_next|eq, "$g_talk_troop", "trp_npc21"),
+              (this_or_next|eq, "$g_talk_troop", "trp_npc23"),
+              (eq, "$g_talk_troop", "trp_npc25"),
+                (assign, ":culture", "fac_culture_western"),
+            (else_try),
+              (this_or_next|is_between, "$g_talk_troop", "trp_npc7", "trp_npc10"),## Rus
+              (this_or_next|eq, "$g_talk_troop", "trp_npc17"),
+              (this_or_next|eq, "$g_talk_troop", "trp_npc22"),
+              (eq, "$g_talk_troop", "trp_npc27"),
+                (assign, ":culture", "fac_culture_rus"),
+            (else_try),
+              (this_or_next|is_between, "$g_talk_troop", "trp_npc10", "trp_npc13"),## Mamluke
+              (this_or_next|eq, "$g_talk_troop", "trp_npc20"),
+              (this_or_next|eq, "$g_talk_troop", "trp_npc24"),
+              (eq, "$g_talk_troop", "trp_npc28"),
+                (assign, ":culture", "fac_culture_mamluke"),
+            (else_try),
+              (this_or_next|is_between, "$g_talk_troop", "trp_npc13", "trp_npc16"),## Mongol
+              (this_or_next|eq, "$g_talk_troop", "trp_npc18"),
+              (eq, "$g_talk_troop", "trp_npc29"),
+                (assign, ":culture", "fac_culture_mongol"),
+            (try_end),
+          (try_end),
+          (troop_set_slot, "$g_talk_troop", slot_troop_cur_culture,  ":culture"),
+          (call_script, "script_get_random_equipment_type_from_troop_by_culture", "$g_talk_troop", ":culture"), 
+####### NEW v3.0-KOMKE END- 
         (try_end),
 
 

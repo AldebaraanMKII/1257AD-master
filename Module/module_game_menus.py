@@ -4609,7 +4609,8 @@ game_menus = [ #
 	    (assign, "$g_player_cur_role", role_mercenary_captain),  
         (try_begin),
           (eq, "$quickstart", 0),
-          (jump_to_menu, "mnu_start_character_1"),
+          # (jump_to_menu, "mnu_start_character_1"),####### NEW v3.0-KOMKE replaced with below line
+          (jump_to_menu, "mnu_choose_skill"),####### NEW v3.0-KOMKE otherwise choosing background overwrites background type
         (else_try),
           (jump_to_menu, "mnu_start_phase_2"),
         (try_end),
@@ -5574,7 +5575,7 @@ game_menus = [ #
         (try_begin),
           (this_or_next|eq, "$background_type", 10),
           (this_or_next|eq, "$background_type", 9),
-          (eq, "$background_type", 1),
+          (eq, "$background_type", cb_noble),####### NEW v3.0-KOMKE
           (jump_to_menu, "mnu_auto_return"),
           (start_presentation, "prsnt_banner_selection"),
         (else_try),
@@ -6822,7 +6823,16 @@ game_menus = [ #
     [
 ####### NEW v2.9-KOMKE START-    
      ("camp_modding",[(eq, 1, 1), is_edit_mode_enabled],"Go to the modding menu.",## menu only available in edit mode when releasing new version set this to false so it is disabled
-       [(jump_to_menu, "mnu_camp_modding"),]
+       [
+       (assign, "$g_lord_creation_rate", 0), #### lord creation OFF
+       (assign, "$g_lord_death_chance_battle", 0),#### lord death OFF
+       (assign, "$g_lord_death_chance_battle_king", 0),
+       (assign, "$g_lord_death_chance_assassination", 0), 
+       (assign, "$g_lord_death_chance_assassination_king", 0),   
+       (assign, "$g_lord_death_chance_execution_base", 0),
+       (assign, "$g_lord_death_chance_execution_king_variation", 0),
+       (assign, "$g_lord_death_chance_execution_relation_divider", 3),
+       (jump_to_menu, "mnu_camp_modding"),]
      ),       
 ####### NEW v2.9-KOMKE END-     
       # ("camp_action_1",[], "Walk around.",
@@ -15307,7 +15317,8 @@ game_menus = [ #
 
       ("walled_center_manage",
       [
-        (neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
+####### NEW v3.0-KOMKE below line commented out because it was blocking access to garrison while center is under siege
+        # (neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
         (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),
         (assign, reg0, 1),
         (try_begin),
@@ -33901,27 +33912,22 @@ game_menus = [ #
     ]
   ),
 
-####### NEW v3.0-KOMKE START-This will notify the player when a fief improvement is finished Work in Progress
-  #  ("notification_building_constructed",0,
-  #   "Construction of {s1} in {s2} has finished.",
-  #   "none",
-  #   [
-  #     (str_store_string, s1, "$g_notification_menu_var1"),
-  #     (str_store_party_name_link, s2, "$g_notification_menu_var2"),
-  # 
-  #     (set_fixed_point_multiplier, 100),
-  #     (position_set_x, pos0, 65),
-  #     (position_set_y, pos0, 30),
-  #     (position_set_z, pos0, 170),
-  #     (set_game_menu_tableau_mesh, "tableau_faction_note_mesh_banner", "$g_notification_menu_var1", pos0),
-  #     ],
-  #   [
-  #     ("continue",[], "Continue",
-  #      [
-  #      (change_screen_return),
-  #       ]),
-  #    ]
-  # ),
+####### NEW v3.0-KOMKE START-This will notify the player when a fief improvement is finished
+   ("notification_building_constructed",0,
+    "Construction of {s0} in {s1} has finished.",
+    "none",
+    [
+      (assign, ":cur_improvement", "$g_notification_menu_var1"),## improvement in parameter 1
+      (call_script, "script_get_improvement_details", ":cur_improvement"),## improvement string stored in s0
+      (str_store_party_name_link, s1, "$g_notification_menu_var2"),## fief in parameter 2
+      ],
+    [
+      ("continue",[], "Continue",
+       [
+       (change_screen_return),
+        ]),
+     ]
+  ),
 ####### NEW v3.0-KOMKE END- 
 
 ######################################################
