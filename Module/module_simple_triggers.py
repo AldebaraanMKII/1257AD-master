@@ -8660,7 +8660,19 @@ simple_triggers = [
    (try_begin),   
      (neg|troop_slot_ge, "$g_place_lady_under_protection_cur_lady", slot_troop_spouse, 0),  ###### she's not married
      (neg|troop_slot_ge, "$g_place_lady_under_protection_cur_lady", slot_troop_betrothed, 0),  ###### she's not a bride
+     (neg|troop_slot_ge, "$g_place_lady_under_protection_cur_lady", slot_troop_father, 0),  ###### she's not a bride
+     (neg|troop_slot_ge, "$g_place_lady_under_protection_cur_lady", slot_troop_guardian, 0),  ###### she's not a bride
      ##### do nothing
+   (else_try),
+     (troop_slot_ge, "$g_place_lady_under_protection_cur_lady", slot_troop_spouse, 0),
+       (troop_get_slot, ":father", "$g_place_lady_under_protection_cur_lady", slot_troop_spouse),   
+	   (troop_slot_eq, ":father", slot_troop_is_alive, 1),  ###### he's alive
+       ##### do nothing
+   (else_try),
+     (troop_slot_ge, "$g_place_lady_under_protection_cur_lady", slot_troop_betrothed, 0),
+       (troop_get_slot, ":father", "$g_place_lady_under_protection_cur_lady", slot_troop_betrothed),   
+	   (troop_slot_eq, ":father", slot_troop_is_alive, 1),  ###### he's alive
+       ##### do nothing
    (else_try),
      (troop_slot_ge, "$g_place_lady_under_protection_cur_lady", slot_troop_father, 0),
        (troop_get_slot, ":father", "$g_place_lady_under_protection_cur_lady", slot_troop_father),   
@@ -8676,12 +8688,12 @@ simple_triggers = [
      (assign, ":loop_end", lords_end),
      (try_for_range, ":cur_lord", lords_begin, ":loop_end"),
        (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),  ####### he's alive/active
-       (call_script, "script_troop_get_relation_with_troop", "$g_place_lady_under_protection_cur_lady", ":cur_lord"),
-       (ge, reg0, 20),  ####### 20 or more
-  	   (store_faction_of_troop, ":faction_lord", ":cur_lord"),
-         (eq, ":faction_lord", ":faction_lady"),  ####### same faction
-           (troop_set_slot, "$g_place_lady_under_protection_cur_lady", slot_troop_guardian, ":cur_lord"),  
-           (assign, ":loop_end", -1), ##### breaks loop
+         (call_script, "script_troop_get_relation_with_troop", "$g_place_lady_under_protection_cur_lady", ":cur_lord"),
+         (ge, reg0, 20),  ####### 20 or more
+  	       (store_faction_of_troop, ":faction_lord", ":cur_lord"),
+           (eq, ":faction_lord", ":faction_lady"),  ####### same faction
+             (troop_set_slot, "$g_place_lady_under_protection_cur_lady", slot_troop_guardian, ":cur_lord"),  
+             (assign, ":loop_end", -1), ##### breaks loop
      (try_end),
    (try_end),
  (try_end),

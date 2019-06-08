@@ -4260,7 +4260,7 @@ game_menus = [ #
       [],
       "Go_back",
       [
-        (jump_to_menu, "mnu_start_game_0"),
+        (jump_to_menu, "mnu_start_game_new_2dot1_3"),
       ]
       ),
     ],
@@ -4404,6 +4404,14 @@ game_menus = [ #
       (assign, "$g_party_mercenary_warband_max", 60),
 	  
       (jump_to_menu, "mnu_start_game_2"),
+      ]
+      ),
+
+      ("start_game_new_spawn_presets_20",
+      [],
+      "Go back.",
+      [
+      (jump_to_menu, "mnu_start_game_new_1dot9"),
       ]
       ),
     ],

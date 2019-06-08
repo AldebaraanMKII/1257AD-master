@@ -4640,9 +4640,6 @@ dialogs = [
   (remove_member_from_party, "$g_talk_troop", "p_main_party"),
 (try_end),
 ]],
-
-
-  
 ############
   
   
