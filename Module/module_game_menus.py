@@ -4617,7 +4617,8 @@ game_menus = [ #
 	    (assign, "$g_player_cur_role", role_mercenary_captain),  
         (try_begin),
           (eq, "$quickstart", 0),
-          (jump_to_menu, "mnu_start_character_1"),
+          # (jump_to_menu, "mnu_start_character_1"),####### NEW v3.0-KOMKE replaced with below line
+          (jump_to_menu, "mnu_choose_skill"),####### NEW v3.0-KOMKE otherwise choosing background overwrites background type
         (else_try),
           (jump_to_menu, "mnu_start_phase_2"),
         (try_end),
@@ -5582,7 +5583,7 @@ game_menus = [ #
         (try_begin),
           (this_or_next|eq, "$background_type", 10),
           (this_or_next|eq, "$background_type", 9),
-          (eq, "$background_type", 1),
+          (eq, "$background_type", cb_noble),####### NEW v3.0-KOMKE
           (jump_to_menu, "mnu_auto_return"),
           (start_presentation, "prsnt_banner_selection"),
         (else_try),
@@ -6830,7 +6831,16 @@ game_menus = [ #
     [
 ####### NEW v2.9-KOMKE START-    
      ("camp_modding",[(eq, 1, 1), is_edit_mode_enabled],"Go to the modding menu.",## menu only available in edit mode when releasing new version set this to false so it is disabled
-       [(jump_to_menu, "mnu_camp_modding"),]
+       [
+       (assign, "$g_lord_creation_rate", 0), #### lord creation OFF
+       (assign, "$g_lord_death_chance_battle", 0),#### lord death OFF
+       (assign, "$g_lord_death_chance_battle_king", 0),
+       (assign, "$g_lord_death_chance_assassination", 0), 
+       (assign, "$g_lord_death_chance_assassination_king", 0),   
+       (assign, "$g_lord_death_chance_execution_base", 0),
+       (assign, "$g_lord_death_chance_execution_king_variation", 0),
+       (assign, "$g_lord_death_chance_execution_relation_divider", 3),
+       (jump_to_menu, "mnu_camp_modding"),]
      ),       
 ####### NEW v2.9-KOMKE END-     
       # ("camp_action_1",[], "Walk around.",
@@ -15248,7 +15258,8 @@ game_menus = [ #
 
       ("walled_center_manage",
       [
-        (neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
+####### NEW v3.0-KOMKE below line commented out because it was blocking access to garrison while center is under siege
+        # (neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
         (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),
         (assign, reg0, 1),
         (try_begin),
@@ -33503,32 +33514,37 @@ game_menus = [ #
 			[],
 		"Reduce party to 1",## I need to reduce the enemy party (lord or walled fief), to test battles, fiefs, kingdoms....
 		[
-            (assign, ":objective", 0),
             (try_for_range, ":center_no", centers_begin, centers_end),
                 (store_distance_to_party_from_party, ":party_distance", "p_main_party", ":center_no"),
-                (lt, ":party_distance", 1),
-                (assign, ":objective", ":center_no"),
+                (party_get_num_companions, ":party_no", ":center_no"),
+                (lt, ":party_distance", 1),## if center is within min distance
+                    (gt, ":party_no", 1),## if center troops > 1
+                        (party_clear, ":center_no"),
+                        (party_add_members, ":center_no", "trp_looter", 1),
+                        (str_store_party_name, s20, ":center_no"),
+                        (store_faction_of_party, ":party_faction", ":center_no"),
+                        (str_store_faction_name, s21, ":party_faction"),
+                        (set_relation, "fac_player_faction", ":party_faction", -5),
+                        (set_relation, "fac_player_supporters_faction", ":party_faction", -5),
+                        (display_log_message, "@party = {s20}, number of troops reduced to 1, faction = {s21}, relation with player set to -5", 0xffffff),
             (try_end),
-            (try_begin),
-                (eq, ":objective", 0),## if town is near don't try for lords
-                (try_for_range, ":lord_no", kings_begin, lords_end),
-                    (troop_get_slot, ":kingdom_hero_party", ":lord_no", slot_troop_leaded_party),
-                    (gt, ":kingdom_hero_party", 0),
-                    (party_is_active, ":kingdom_hero_party"),
-                    (store_distance_to_party_from_party, ":party_distance", "p_main_party", ":kingdom_hero_party"),
-                    (lt, ":party_distance", 1),
-                    (assign, ":objective", ":kingdom_hero_party"),
-                (try_end),
+            (try_for_range, ":lord_no", kings_begin, lords_end),
+                (troop_get_slot, ":kingdom_hero_party", ":lord_no", slot_troop_leaded_party),
+                (gt, ":kingdom_hero_party", 0),## if lord party is not -1 or main party
+                    (party_is_active, ":kingdom_hero_party"),## if active
+                        (store_distance_to_party_from_party, ":party_distance", "p_main_party", ":kingdom_hero_party"),
+                        (party_get_num_companions, ":party_no", ":kingdom_hero_party"),
+                        (lt, ":party_distance", 1),## if party is within min distance
+                            (gt, ":party_no", 1),## if party troops > 1
+                                (party_clear, ":kingdom_hero_party"),
+                                (party_add_members, ":kingdom_hero_party", "trp_looter", 1),
+                                (str_store_party_name, s20, ":kingdom_hero_party"),
+                                (store_faction_of_party, ":party_faction", ":kingdom_hero_party"),
+                                (str_store_faction_name, s21, ":party_faction"),
+                                (set_relation, "fac_player_faction", ":party_faction", -5),
+                                (set_relation, "fac_player_supporters_faction", ":party_faction", -5),
+                                (display_log_message, "@party = {s20}, number of troops reduced to 1, faction = {s21}, relation with player set to -5", 0xffffff),
             (try_end),
-            (neq, ":objective", 0),
-            (party_clear, ":objective"),
-            (party_add_members, ":objective", "trp_looter", 1),## to test battles, not autocalc menus or cheats
-            (str_store_party_name, s20, ":objective"),
-            (store_faction_of_party, ":party_faction", ":objective"),
-            (str_store_faction_name, s21, ":party_faction"),
-            (set_relation, "fac_player_faction", ":party_faction", -5),## not sure if this is necessary or if it does anything
-            (set_relation, "fac_player_supporters_faction", ":party_faction", -5),## only supporters relation are displayed in view faction relations reports-
-            (display_log_message, "@party = {s20}, number of troops reduced to 1, faction = {s21}, relation with player set to -5", 0xffffff),
 		]
 		),
 
@@ -33849,6 +33865,24 @@ game_menus = [ #
        ),
     ]
   ),
+
+####### NEW v3.0-KOMKE START-This will notify the player when a fief improvement is finished
+   ("notification_building_constructed",0,
+    "Construction of {s0} in {s1} has finished.",
+    "none",
+    [
+      (assign, ":cur_improvement", "$g_notification_menu_var1"),## improvement in parameter 1
+      (call_script, "script_get_improvement_details", ":cur_improvement"),## improvement string stored in s0
+      (str_store_party_name_link, s1, "$g_notification_menu_var2"),## fief in parameter 2
+      ],
+    [
+      ("continue",[], "Continue",
+       [
+       (change_screen_return),
+        ]),
+     ]
+  ),
+####### NEW v3.0-KOMKE END- 
 
 ######################################################
 
