@@ -25259,11 +25259,19 @@ game_menus = [ #
         (try_begin),
           (store_troop_gold, ":gold", "trp_player"),
           (lt, ":gold", reg5),
-          (display_message, "@You do not have enough gold!", 0xff0000),        
+          (display_message, "@You do not have enough gold!", 0xff0000),    
+        ######## NEW v3.0		  
         (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (store_party_size_wo_prisoners, ":party_size", "$current_town"),
           (ge, ":party_size", "$g_party_garrison_max_size_towns"),
           (display_message, "@Town garrison if full and can not hire additional men!", 0xff0000),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+          (store_party_size_wo_prisoners, ":party_size", "$current_town"),
+          (ge, ":party_size", "$g_party_garrison_max_size_castles"),
+          (display_message, "@Castle garrison if full and can not hire additional men!", 0xff0000),
+        ################
         (else_try),
           (troop_remove_gold, "trp_player", reg5),
           

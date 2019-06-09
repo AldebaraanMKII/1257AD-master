@@ -24788,6 +24788,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_begin),
         (eq, "$players_kingdom", "fac_player_supporters_faction"),
         (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),  ###### NEW v2.8
+        (eq, "$g_player_cur_role", role_king),  ###### NEW v3.0
         (call_script, "script_deactivate_player_faction"),
         (try_for_range, ":npc", active_npcs_begin, active_npcs_end),
             (troop_slot_eq, ":npc", slot_troop_is_alive, 1),  ## he's alive/active
@@ -25866,6 +25867,11 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
 #tom
 [anyone|plyr, "lord_talk", [(faction_get_slot, ":faction_leader", "$g_talk_troop_faction", slot_faction_leader),
                           (neq, ":faction_leader", "$g_talk_troop"),
+						  ########## NEW v3.0
+                          (this_or_next|neq, "$g_player_cur_role", role_king),
+                          (this_or_next|neq, "$g_player_cur_role", role_prince),
+                          (neq, "$g_player_cur_role", role_vassal),
+						  ####################
                           #(store_faction_of_troop, ":plyr_faction", "trp_player"),
 						  (this_or_next|neg|is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
                           (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),   ########## NEW v2.8 - fixes option not appearing when starting as adventurer
