@@ -147,7 +147,7 @@ troops = [
 
     # itm_mail_mittens,
     itm_leather_gloves,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_osp_faceplate,
     itm_mail_coif,
@@ -932,7 +932,7 @@ troops = [
 
     itm_arab_headcloth,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
     itm_berber_shoes,
 
     itm_meghrebi_vest,
@@ -1007,7 +1007,7 @@ troops = [
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
 
     ],
     ranged_merc_attrib_1, merc_archer_wp_1, merc_archer_skills_1,
@@ -1024,7 +1024,7 @@ troops = [
 
     itm_arab_headcloth,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
 
     itm_meghrebi_leather_c,
     itm_meghrebi_leather_a,
@@ -2880,7 +2880,7 @@ troops = [
 
     # itm_berber_turban_cape,
     # itm_arab_headcloth,
-    # itm_sarranid_boots_b,
+    # itm_sarranid_boots_b_long,
     # itm_berber_shoes,
     #
     # itm_meghrebi_vest,
@@ -2928,7 +2928,7 @@ troops = [
     # itm_kau_arab_mail_shirt_a,
     # itm_saracen_kaftan_c,
     # itm_saracen_kaftan_d,
-    # itm_sarranid_boots_b,
+    # itm_sarranid_boots_b_long,
 
     ]+maghreb_vet_armors+maghreb_vet_gear,
 
@@ -2963,7 +2963,7 @@ troops = [
 
     # itm_berber_turban_cape,
     # itm_arab_headcloth,
-    # itm_sarranid_boots_b,
+    # itm_sarranid_boots_b_long,
     # itm_meghrebi_leather_c,
     # itm_meghrebi_leather_a,
     # itm_kau_arab_tunic_a,
@@ -4712,7 +4712,7 @@ troops = [
 
     # itm_berber_turban_cape,
     # itm_arab_headcloth,
-    # itm_sarranid_boots_b,
+    # itm_sarranid_boots_b_long,
     # itm_berber_shoes,
     # itm_meghrebi_vest,
     # itm_berber_robe_b,
@@ -4759,7 +4759,7 @@ troops = [
     # itm_kau_arab_mail_shirt_a,
     # itm_saracen_kaftan_c,
     # itm_saracen_kaftan_d,
-    # itm_sarranid_boots_b,
+    # itm_sarranid_boots_b_long,
 
     ]+maghreb_elite_armors+maghreb_elite_gear,
 
@@ -4797,7 +4797,7 @@ troops = [
 
     # itm_berber_turban_cape,
     # itm_arab_headcloth,
-    # itm_sarranid_boots_b,
+    # itm_sarranid_boots_b_long,
     # itm_meghrebi_leather_c,
     # itm_meghrebi_leather_a,
     # itm_kau_arab_tunic_a,
@@ -6744,7 +6744,7 @@ troops = [
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
 
-    itm_sarranid_boots_a,
+    itm_sarranid_boots_a_long,
     itm_kau_arab_mail_shirt_d,
     itm_saracen_kaftan_a,
     itm_saracen_kaftan_d,
@@ -6768,7 +6768,7 @@ troops = [
     itm_arab_helmet_b,
     itm_black_guard_helmet,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
 
     itm_kau_arab_mail_shirt_d,
     itm_saracen_kaftan_a,
@@ -6824,7 +6824,7 @@ troops = [
     itm_saracen_kaftan_a,
     itm_saracen_kaftan_d,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
     itm_spear_j,
     itm_spear_k,
     itm_spear_l,
@@ -6859,7 +6859,7 @@ troops = [
     itm_arab_helmet_b,
     itm_arab_helmet_c,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
     itm_spear_j,
     itm_spear_k,
     itm_spear_l,
@@ -6882,7 +6882,7 @@ troops = [
     itm_turban_b,
     itm_arab_headcloth,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
 
     itm_andalusian_archers_vest,
     itm_kau_arab_mail_shirt_d,
@@ -6926,8 +6926,8 @@ troops = [
     itm_turban_b,
     itm_arab_headcloth,
 
-    itm_sarranid_boots_b,
-    itm_sarranid_boots_d,
+    itm_sarranid_boots_b_long,
+    itm_sarranid_boots_d_long,
 
     itm_andalusian_archers_vest,
     itm_kau_arab_mail_shirt_d,
@@ -7458,7 +7458,7 @@ troops = [
 
     (itm_tab_shield_kite_c, imod_thick),
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_hunter,
     ],
@@ -7473,7 +7473,7 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
     itm_morningstar,
 
@@ -7563,7 +7563,7 @@ troops = [
 
     (itm_tab_shield_kite_c, imod_thick),
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_hunter,
     ],
@@ -7578,7 +7578,7 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
 
     itm_talak_warhammer,
@@ -7673,7 +7673,7 @@ troops = [
 
     (itm_tab_shield_kite_c, imod_thick),
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_hunter,
     ],
@@ -7688,7 +7688,7 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
     itm_morningstar,
 
@@ -7783,7 +7783,7 @@ troops = [
 
     (itm_tab_shield_kite_c, imod_thick),
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_hunter,
     ],
@@ -7798,7 +7798,7 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
     itm_morningstar,
 
@@ -8156,7 +8156,7 @@ troops = [
     itm_wrapping_boots,
     itm_hunter_boots,
     itm_hide_boots,
-    itm_nomad_boots,
+    itm_leather_boots,
     itm_leather_boots,
 
     itm_baltic_sword,
@@ -8226,7 +8226,7 @@ troops = [
     itm_wrapping_boots,
     itm_hunter_boots,
     itm_hide_boots,
-    itm_nomad_boots,
+    itm_leather_boots,
     itm_leather_boots,
 
     itm_long_bow,
@@ -8270,7 +8270,7 @@ troops = [
     itm_leather_boots,
   #itm_khergit_leather_boots,
     itm_cuman_boots,
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
 
     itm_kau_rus_tunic_b,
     itm_kau_rus_tunic_c,
@@ -10663,7 +10663,7 @@ troops = [
     itm_kau_mail_a,
     itm_byz_kataphrakt,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_kau_rus_scale_a,
     itm_kau_rus_noble_a,
@@ -11522,9 +11522,9 @@ troops = [
     itm_gaelic_shirt_blue,
 
     itm_mail_chausses,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_hunter,
     itm_horse_e,
@@ -11580,9 +11580,9 @@ troops = [
     itm_mail_mittens,
 
     itm_mail_chausses,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_hunter,
     itm_horse_e,
@@ -12060,7 +12060,7 @@ troops = [
     itm_warhorse,
     itm_heavy_lance,
     itm_heraldic_lance,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     # itm_tab_shield_kite_c,
     # itm_tab_shield_heater_c,
@@ -12678,7 +12678,7 @@ troops = [
     # itm_sword_type_xiii,
     # itm_sword_type_xiiib,
 
-    # itm_priest_2_boots,
+    # itm_leather_boots,
 
     # itm_kettle_cloth_cape_b,
     # itm_kettle_cloth_cape,
@@ -12974,7 +12974,7 @@ troops = [
     itm_spear_o,
     itm_spear_p,
 
-    itm_priest_2_boots,
+    itm_leather_boots,
 
     itm_tab_shield_heater_c,
 
@@ -13225,7 +13225,7 @@ troops = [
     itm_elm2,
     itm_osp_faceplate,
 
-    itm_priest_2_boots,
+    itm_leather_boots,
 
     itm_tab_shield_heater_c,
 
@@ -13335,7 +13335,7 @@ troops = [
 
     itm_teu_hbrother_b,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_teu_kettle_hat_a_mail,
     itm_teu_kettle_hat_b,
@@ -13377,7 +13377,7 @@ troops = [
     [
     itm_lance,
     itm_sword_type_xiii,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_mace_4,
     itm_raf_one_handed_axe_h,
     itm_talak_warhammer,
@@ -13451,7 +13451,7 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_heraldic_lance,
       #itm_sword_type_xiii,
@@ -13613,7 +13613,7 @@ troops = [
     [
     itm_lance,
     itm_sword_type_xiii,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_mace_4,
     itm_raf_one_handed_axe_h,
     itm_talak_warhammer,
@@ -13682,7 +13682,7 @@ troops = [
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_heraldic_lance,
       #itm_sword_type_xiii,
@@ -15682,7 +15682,7 @@ troops = [
     itm_kipchak_steppe_helmet,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
+    itm_kau_mail_boots_dark_long,
     itm_lamellar_gauntlets,
 
     itm_splinted_leather_greaves,
@@ -16243,7 +16243,7 @@ troops = [
     itm_kettlehat_c,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
 
 
@@ -16400,7 +16400,7 @@ itm_spear_p,
     itm_kettlehat_b,
     itm_kettlehat_c,
 
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_tab_shield_heater_c,
 
@@ -16572,7 +16572,7 @@ itm_spear_p,
     itm_norman_coif_c,
 
 
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_tab_shield_heater_c,
     itm_tab_shield_heater_c
@@ -16853,7 +16853,7 @@ itm_spear_p,
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_heraldic_lance,
     itm_coat_of_plates_red,
@@ -16868,7 +16868,7 @@ itm_spear_p,
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
 
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_mail_mittens,
 
@@ -20513,7 +20513,7 @@ itm_spear_p,
 	#Boots
 	itm_sa_saracin_hard_boot_1,
 	itm_sa_saracin_hard_boot_2,
-    itm_sarranid_boots_d,
+    itm_sarranid_boots_d_long,
     itm_sarranid_boots_d_long,
 
 	#Armor
@@ -20685,7 +20685,7 @@ itm_spear_p,
     itm_arab_mail_coif,
     itm_black_guard_helmet,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
 
     itm_horse_e,
     itm_horse_d,
@@ -22150,8 +22150,8 @@ itm_spear_p,
     itm_kolpak_mail,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -22240,8 +22240,8 @@ itm_spear_p,
     # itm_gambeson_a,
 
      # itm_raf_mail_chausses,
-    # itm_kau_mail_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_splinted_leather_greaves,
     # itm_mail_chausses,
@@ -22288,8 +22288,8 @@ itm_spear_p,
      # itm_great_helmet_decorative,
 
      # itm_raf_mail_chausses,
-    # itm_kau_mail_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_splinted_leather_greaves,
     # itm_mail_chausses,
@@ -22650,7 +22650,7 @@ itm_spear_p,
     itm_veteran_surcoat_d,
     itm_veteran_surcoat_e,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_mail_mittens,
     itm_leather_gloves,
@@ -22707,7 +22707,7 @@ itm_spear_p,
     [
 
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_heraldic_lance,
     itm_sword_type_xii,
@@ -24017,7 +24017,7 @@ itm_spear_p,
     itm_veteran_surcoat_d,
     itm_veteran_surcoat_e,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_mail_mittens,
     itm_leather_gloves,
@@ -24093,7 +24093,7 @@ itm_spear_p,
     [
 
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_heraldic_lance,
     itm_sword_type_xii,
@@ -24491,7 +24491,7 @@ itm_spear_p,
     itm_turban_b,
     itm_headcloth,
 
-    itm_sarranid_boots_a,
+    itm_sarranid_boots_a_long,
     itm_sarranid_cloth_robe,
     itm_sarranid_cloth_robe_b,
     ],
@@ -24667,7 +24667,7 @@ itm_spear_p,
     itm_arab_shield_a_3,
     itm_tab_shield_round_c,
 
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
     itm_andalusian_shield_2,
 
     itm_raf_one_handed_axe_a,
@@ -24771,7 +24771,7 @@ itm_spear_p,
     itm_mail_mittens,
 
     itm_ankle_boots,
-    itm_sarranid_boots_d,
+    itm_sarranid_boots_d_long,
 
       #itm_arab_shield_a_3,
       #itm_arab_shield_b_3,
@@ -25024,7 +25024,7 @@ itm_spear_p,
     itm_moor_helmet_c,
     itm_moor_helmet_d,
     itm_leather_boots,
-    itm_sarranid_boots_b,
+    itm_sarranid_boots_b_long,
 
     itm_byzantine_sword,
     itm_jineta_sword,
@@ -25064,7 +25064,7 @@ itm_spear_p,
     itm_arab_mail_coif,
     itm_andalusian_helmet_b,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
       #itm_mamluke_boots,
     itm_leather_boots,
 
@@ -25108,7 +25108,7 @@ itm_spear_p,
     itm_heavy_lance,
 
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_andalusian_helmet_a,
     itm_mail_mittens,
@@ -25773,7 +25773,7 @@ itm_spear_p,
     [
     itm_heavy_lance,
     itm_heraldic_lance,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_tab_shield_kite_c,
     itm_tab_shield_heater_c,
@@ -26488,8 +26488,8 @@ itm_spear_p,
     itm_sword_type_xiiib,
     itm_arabian_sword_d,
 
-    itm_kau_mail_boots_dark,
-    itm_mail_boots,
+    itm_kau_mail_boots_dark_long,
+    itm_mail_boots_long,
 
     itm_mail_mittens,
 
@@ -28864,8 +28864,8 @@ itm_spear_p,
     # itm_sword_type_xiii,
     # itm_sword_type_xiiib,
 
-    # itm_kau_mail_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_tab_shield_kite_c,
     # itm_tab_shield_heater_c,
@@ -29206,8 +29206,8 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -29294,8 +29294,8 @@ itm_spear_p,
     itm_mail_mittens,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -29419,8 +29419,8 @@ itm_spear_p,
     itm_mail_coif,
     itm_rhodok_great_helmet,
 
-    itm_mail_boots,
-    itm_splinted_greaves,
+    itm_mail_boots_long,
+    itm_splinted_greaves_long,
     itm_frenchpepperpot2,
     itm_frenchpepperpot3,
     itm_munitionshelm2,
@@ -30419,7 +30419,7 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
     itm_rhodok_four_plated_helmet,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     ######## NEW v2.1 - CWE
     itm_sa_crusader_helm_1,
     itm_sa_crusader_helm_2,
@@ -30463,7 +30463,7 @@ itm_spear_p,
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_mail_chausses,
     itm_lance,
@@ -30669,8 +30669,8 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -30755,7 +30755,7 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
     itm_rhodok_four_plated_helmet,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     ######## NEW v2.1 - CWE
     itm_sa_crusader_helm_1,
@@ -30812,7 +30812,7 @@ itm_spear_p,
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_mail_chausses,
     itm_lance,
@@ -31622,7 +31622,7 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
     itm_rhodok_four_plated_helmet,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     ######## NEW v2.1 - CWE
     itm_sa_crusader_helm_1,
     itm_sa_crusader_helm_2,
@@ -31667,7 +31667,7 @@ itm_spear_p,
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_mail_chausses,
     itm_lance,
@@ -31872,8 +31872,8 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -31957,7 +31957,7 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
     itm_rhodok_four_plated_helmet,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     ######## NEW v2.1 - CWE
     itm_sa_crusader_helm_1,
@@ -32014,7 +32014,7 @@ itm_spear_p,
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_mail_chausses,
     itm_lance,
@@ -33238,8 +33238,8 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -33318,8 +33318,8 @@ itm_spear_p,
     itm_mail_mittens,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -33418,8 +33418,8 @@ itm_spear_p,
     itm_mail_coif,
     itm_rhodok_great_helmet,
 
-    itm_mail_boots,
-    itm_splinted_greaves,
+    itm_mail_boots_long,
+    itm_splinted_greaves_long,
     itm_frenchpepperpot2,
     itm_frenchpepperpot3,
     itm_munitionshelm2,
@@ -34525,8 +34525,8 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -34607,8 +34607,8 @@ itm_spear_p,
     itm_mail_mittens,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -34707,8 +34707,8 @@ itm_spear_p,
     itm_mail_coif,
     itm_rhodok_great_helmet,
 
-    itm_mail_boots,
-    itm_splinted_greaves,
+    itm_mail_boots_long,
+    itm_splinted_greaves_long,
     itm_frenchpepperpot2,
     itm_frenchpepperpot3,
     itm_munitionshelm2,
@@ -35805,8 +35805,8 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -35888,8 +35888,8 @@ itm_spear_p,
     itm_mail_mittens,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -35988,8 +35988,8 @@ itm_spear_p,
     itm_mail_coif,
     itm_rhodok_great_helmet,
 
-    itm_mail_boots,
-    itm_splinted_greaves,
+    itm_mail_boots_long,
+    itm_splinted_greaves_long,
     itm_frenchpepperpot2,
     itm_frenchpepperpot3,
     itm_munitionshelm2,
@@ -37087,8 +37087,8 @@ itm_spear_p,
     itm_rhodok_kettle_hat_c,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -37170,8 +37170,8 @@ itm_spear_p,
     itm_mail_mittens,
 
     itm_raf_mail_chausses,
-    itm_kau_mail_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
+    itm_kau_mail_boots_dark_long,
 
     itm_splinted_leather_greaves,
     itm_mail_chausses,
@@ -37270,8 +37270,8 @@ itm_spear_p,
     itm_mail_coif,
     itm_rhodok_great_helmet,
 
-    itm_mail_boots,
-    itm_splinted_greaves,
+    itm_mail_boots_long,
+    itm_splinted_greaves_long,
     itm_frenchpepperpot2,
     itm_frenchpepperpot3,
     itm_munitionshelm2,
@@ -37460,7 +37460,7 @@ itm_spear_p,
 
     itm_raf_mail_chausses,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_mail_mittens,
 
@@ -37573,7 +37573,7 @@ itm_spear_p,
 
   # ["sea_raider","Sea Raider","Sea Raiders",tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield,0,0,fac_outlaws,
    # [itm_arrows,itm_sword_viking_1,itm_sword_viking_2,itm_raf_one_handed_axe_d,itm_raf_two_handed_axe_a,itm_spear_i,itm_nordic_shield,itm_nordic_shield,itm_nordic_shield,itm_wooden_shield,itm_long_bow,itm_javelin,itm_throwing_axes,
-    # itm_nordic_helmet,itm_nordic_helmet,itm_leather_jerkin,itm_kau_mail_shirt_d,itm_leather_jerkin,itm_leather_boots, itm_nomad_boots],
+    # itm_nordic_helmet,itm_nordic_helmet,itm_leather_jerkin,itm_kau_mail_shirt_d,itm_leather_jerkin,itm_leather_boots, itm_leather_boots],
    # def_attrib|level(16),wp(110),knows_ironflesh_2|knows_power_strike_2|knows_power_draw_3|knows_power_throw_2|knows_riding_1|knows_athletics_2,nord_face_young_1, nord_face_old_2],
 
     ["sea_raider",
@@ -37933,7 +37933,7 @@ itm_spear_d,
 
 #fac_slavers
 ##  ["slave_keeper","Slave Keeper","Slave Keepers",tf_guarantee_armor,0,0,fac_slavers,
-##   [itm_cudgel,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_nomad_boots,itm_wrapping_boots,itm_sumpter_horse],
+##   [itm_cudgel,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_leather_boots,itm_wrapping_boots,itm_sumpter_horse],
 ##   def_attrib|level(60),wp(60),knows_common,bandit_face1, bandit_face2],
   # ["slave_driver","Slave Driver","Slave Drivers",tf_guarantee_armor,0,0,fac_slavers,
    # [itm_spiked_mace,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_woolen_hose,itm_wrapping_boots,itm_sumpter_horse],
@@ -39439,7 +39439,7 @@ itm_spear_p,
 
     itm_footman_helmet,
     itm_skullcap,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
     itm_wrapping_boots,
     itm_woolen_hose,
     itm_veteran_surcoat_a,
@@ -40468,10 +40468,10 @@ itm_spear_p,
     itm_sarranid_mail_shirt,itm_raf_mail_chausses,itm_turban_a,itm_arabian_horse_a,itm_kau_arab_aketon_blue,itm_kau_arab_aketon,itm_sarranid_mail_coif, ],
    def_attrib|level(20),wp_melee(100),knows_common|knows_riding_4|knows_ironflesh_2|knows_shield_2|knows_power_strike_3,arab_face_1, arab_face_2],
   ["sarranid_prison_guard","Prison Guard","Prison Guards",tf_guarantee_shield|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,0,0,fac_kingdom_1,
-   [itm_arabian_sword_b,itm_scimitar_b,itm_spear_i,itm_mace_4,itm_sarranid_boots_c,itm_arabian_armor_b,itm_sarranid_mail_coif,itm_sarranid_horseman_helmet,itm_kau_mail_boots_dark,itm_mail_mittens,itm_leather_gloves,itm_tab_shield_kite_c],
+   [itm_arabian_sword_b,itm_scimitar_b,itm_spear_i,itm_mace_4,itm_sarranid_boots_c,itm_arabian_armor_b,itm_sarranid_mail_coif,itm_sarranid_horseman_helmet,itm_kau_mail_boots_dark_long,itm_mail_mittens,itm_leather_gloves,itm_tab_shield_kite_c],
    def_attrib|level(25),wp_melee(135)|wp_throwing(100),knows_common|knows_shield_3|knows_ironflesh_3|knows_power_strike_3,arab_face_1, arab_face_2],
   # ["sarranid_castle_guard","Castle Guard","Castle Guards",tf_guarantee_shield|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,0,0,fac_kingdom_1,
-   # [itm_arabian_sword_b,itm_scimitar_b,itm_spear_i,itm_mace_4,itm_sarranid_boots_c, itm_sarranid_boots_d,itm_arabian_armor_b,itm_sarranid_mail_coif,itm_sarranid_helmet1,itm_sarranid_horseman_helmet,itm_kau_mail_boots_dark,itm_mail_mittens,itm_leather_gloves,itm_tab_shield_kite_c],
+   # [itm_arabian_sword_b,itm_scimitar_b,itm_spear_i,itm_mace_4,itm_sarranid_boots_c, itm_sarranid_boots_d_long,itm_arabian_armor_b,itm_sarranid_mail_coif,itm_sarranid_helmet1,itm_sarranid_horseman_helmet,itm_kau_mail_boots_dark_long,itm_mail_mittens,itm_leather_gloves,itm_tab_shield_kite_c],
    # def_attrib|level(25),wp_melee(135)|wp_throwing(100),knows_common|knows_shield_3|knows_ironflesh_3|knows_power_strike_3,arab_face_1, arab_face_2],
 
 ########################################################################
@@ -40493,7 +40493,7 @@ itm_spear_p,
     itm_sword_type_xiv,
     itm_rnd_surcoat_10,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_tab_shield_heater_c,
     itm_rhodok_great_helmet,
     itm_warhorse,
@@ -40512,7 +40512,7 @@ itm_spear_p,
     itm_sword_type_xiv,
     itm_rnd_surcoat_06,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_tab_shield_heater_c,
     itm_wenceslav_helmet,
     itm_warhorse,
@@ -40532,7 +40532,7 @@ itm_spear_p,
     itm_sword_type_xiv,
     itm_rnd_surcoat_10,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_tab_shield_heater_c,
     itm_maciejowski_kettle_hat_a,
     itm_warhorse,
@@ -40549,7 +40549,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40598,7 +40598,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40647,7 +40647,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40696,7 +40696,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40745,7 +40745,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40794,7 +40794,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40843,7 +40843,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40892,7 +40892,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40941,7 +40941,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -40990,7 +40990,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41039,7 +41039,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41088,7 +41088,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41137,7 +41137,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41186,7 +41186,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41235,7 +41235,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41284,7 +41284,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41333,7 +41333,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41382,7 +41382,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41431,7 +41431,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41480,7 +41480,7 @@ itm_spear_p,
     0, reserved,  fac_commoners,
     [
     itm_splinted_leather_greaves,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
@@ -41842,7 +41842,7 @@ itm_spear_p,
     # fac_commoners,
     # [
     # itm_gambeson_b,
-    # itm_priest_2_boots,
+    # itm_leather_boots,
     # itm_leather_cap,
 
     # itm_short_bow,
@@ -41982,7 +41982,7 @@ itm_spear_p,
     # fac_commoners,
     # [
     # itm_surgeon,
-    # itm_priest_2_boots,
+    # itm_leather_boots,
     # itm_priest_cap_1,
 
     # itm_butchering_knife,
@@ -42040,7 +42040,7 @@ itm_spear_p,
     # tf_hero|tf_unmoveable_in_party_window, 0, reserved,
     # fac_commoners,
     # [
-    # itm_sarranid_boots_a,
+    # itm_sarranid_boots_a_long,
     # itm_kau_arab_tunic_a,
     # itm_turban_a,
 
@@ -42063,7 +42063,7 @@ itm_spear_p,
     # tf_hero|tf_unmoveable_in_party_window, 0, reserved,
     # fac_commoners,
     # [
-    # itm_sarranid_boots_a,
+    # itm_sarranid_boots_a_long,
     # itm_kau_arab_tunic_a,
     # itm_turban_a,
 
@@ -42182,7 +42182,7 @@ itm_spear_p,
 #Companions
   ["kingdom_heroes_including_player_begin",  "kingdom_heroes_including_player_begin",  "kingdom_heroes_including_player_begin",  tf_hero, 0,reserved,  fac_kingdom_1,[],          lord_attrib,wp(220),knows_lord_1, 0x000000000010918a01f248377289467d],
 
-  # ["npc1","Borcha","Borcha",tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_khergit_armor,itm_nomad_boots,itm_knife],
+  # ["npc1","Borcha","Borcha",tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_khergit_armor,itm_leather_boots,itm_knife],
    # str_8|agi_7|int_12|cha_7|level(3),wp(60),knows_tracker_npc|
    # knows_ironflesh_1|knows_power_strike_1|knows_pathfinding_3|knows_athletics_2|knows_tracking_1|knows_riding_2, #skills 2/3 player at that level
    # 0x00000004bf086143259d061a9046e23500000000001db52c0000000000000000],
@@ -42194,15 +42194,15 @@ itm_spear_p,
    # str_6|agi_9|int_11|cha_6|level(1),wp(20),knows_merchant_npc|
    # knows_wound_treatment_1|knows_trade_1|knows_first_aid_3|knows_surgery_1|knows_athletics_1|knows_riding_1,
    # 0x0000000083040001583b6db8dec5925b00000000001d80980000000000000000],
-  # ["npc4","Rolf","Rolf",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_leather_jerkin,itm_nomad_boots, itm_sword_type_xii],
+  # ["npc4","Rolf","Rolf",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_leather_jerkin,itm_leather_boots, itm_sword_type_xii],
    # str_10|agi_9|int_13|cha_10|level(60),wp(110),knows_warrior_npc|
    # knows_weapon_master_2|knows_power_strike_2|knows_riding_2|knows_athletics_2|knows_power_throw_2|knows_first_aid_1|knows_surgery_1|knows_tactics_2|knows_leadership_2,
    # 0x000000057f1074002c75c6a8a58ad72e00000000001e1a890000000000000000],
-  # ["npc5","Baheshtur","Baheshtur",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_vest,itm_nomad_boots, itm_sword_khergit_1],
+  # ["npc5","Baheshtur","Baheshtur",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_vest,itm_leather_boots, itm_sword_khergit_1],
    # str_9|agi_9|int_12|cha_7|level(5),wp(90),knows_warrior_npc|
    # knows_riding_2|knows_horse_archery_3|knows_power_draw_3|knows_leadership_2|knows_weapon_master_1,
    # 0x000000088910318b5c6f972328324a6200000000001cd3310000000000000000],
-  # # ["npc6","Firentis","Firentis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_nomad_boots, itm_sword_type_xii],
+  # # ["npc6","Firentis","Firentis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_leather_boots, itm_sword_type_xii],
    # # str_10|agi_12|int_10|cha_5|level(6),wp(105),knows_warrior_npc|
    # # knows_riding_2|knows_weapon_master_2|knows_power_strike_2|knows_athletics_3|knows_trainer_1|knows_leadership_1,
   # # 0x00000002050052036a1895d0748f3ca30000000000000f0b0000000000000000],
@@ -42233,11 +42233,11 @@ itm_spear_p,
    # str_8|agi_9|int_10|cha_6|level(2),wp(80),knows_tracker_npc|
    # knows_tracking_2|knows_athletics_2|knows_spotting_1|knows_pathfinding_1|knows_power_draw_2,
    # 0x00000001fc08400533a15297634d44f400000000001e02db0000000000000000],
-  # ["npc8","Matheld","Matheld",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_tribal_warrior_outfit,itm_nomad_boots, itm_sword_viking_1],
+  # ["npc8","Matheld","Matheld",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_tribal_warrior_outfit,itm_leather_boots, itm_sword_viking_1],
    # str_9|agi_10|int_9|cha_10|level(7),wp(90),knows_warrior_npc|
    # knows_weapon_master_3|knows_power_strike_2|knows_athletics_2|knows_leadership_3|knows_tactics_1,
    # 0x00000005800c000637db8314e331e76e00000000001c46db0000000000000000],
-  # # ["npc9","Alayen","Alayen",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_nomad_boots, itm_sword_type_xiii],
+  # # ["npc9","Alayen","Alayen",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_leather_boots, itm_sword_type_xiii],
    # # str_11|agi_8|int_7|cha_8|level(2),wp(100),knows_warrior_npc|
    # # knows_weapon_master_1|knows_riding_1|knows_athletics_1|knows_leadership_1|knows_tactics_1|knows_power_strike_1,
    # # 0x000000030100300f499d5b391b6db8d300000000001dc2e10000000000000000],
@@ -42264,7 +42264,7 @@ itm_spear_p,
     # 0x1bf00000225cad6f39249477e00000000001db6db0000000000000000
     # ],
 
-  # ["npc10","Bunduk","Bunduk",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_nomad_boots, itm_crossbow, itm_bolts, itm_pickaxe],
+  # ["npc10","Bunduk","Bunduk",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_leather_boots, itm_crossbow, itm_bolts, itm_pickaxe],
    # str_12|agi_8|int_9|cha_11|level(9),wp(105),knows_warrior_npc|
    # knows_weapon_master_3|knows_tactics_1|knows_leadership_1|knows_ironflesh_3|knows_trainer_2|knows_first_aid_2,
    # 0x0000000a3f081006572c91c71c8d46cb00000000001e468a0000000000000000],
@@ -42272,15 +42272,15 @@ itm_spear_p,
    # str_8|agi_11|int_10|cha_10|level(8),wp(70),knows_merchant_npc|
    # knows_weapon_master_1|knows_first_aid_1|knows_wound_treatment_2|knows_ironflesh_3|knows_inventory_management_5,
    # 0x0000000d7f0400035915aa226b4d975200000000001ea49e0000000000000000],
-  # ["npc12","Jeremus","Jeremus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_pilgrim_disguise,itm_nomad_boots, itm_staff],
+  # ["npc12","Jeremus","Jeremus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_pilgrim_disguise,itm_leather_boots, itm_staff],
    # str_8|agi_7|int_13|cha_7|level(4),wp(30),   knows_merchant_npc|
    # knows_ironflesh_1|knows_power_strike_1|knows_surgery_4|knows_wound_treatment_3|knows_first_aid_3,
    # 0x000000078000500e4f8ba62a9cd5d36d00000000001e36250000000000000000],
-  # ["npc13","Nizar","Nizar",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_robe,itm_nomad_boots, itm_scimitar, itm_courser],
+  # ["npc13","Nizar","Nizar",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_robe,itm_leather_boots, itm_scimitar, itm_courser],
    # str_7|agi_7|int_12|cha_8|level(3),wp(80),knows_warrior_npc|
    # knows_riding_2|knows_leadership_2|knows_athletics_2|knows_ironflesh_2|knows_power_strike_1|knows_weapon_master_1,
    # 0x00000004bf0475c85f4e9592de4e574c00000000001e369c0000000000000000],
-  # # ["npc14","Lezalit","Lezalit",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_nomad_boots, itm_sword_type_xiii],
+  # # ["npc14","Lezalit","Lezalit",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_leather_boots, itm_sword_type_xiii],
    # # str_9|agi_8|int_11|cha_8|level(5),wp(100),knows_warrior_npc|
    # # knows_trainer_4|knows_weapon_master_3|knows_leadership_2|knows_power_strike_1,
    # # 0x00000001a410259144d5d1d6eb55e96a00000000001db0db0000000000000000],
@@ -42306,11 +42306,11 @@ itm_spear_p,
     # 0x1a410259144d5d1d6eb55e96a00000000001db0db0000000000000000
     # ],
 
-  # ["npc15","Artimenner","Artimenner",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_nomad_boots, itm_sword_type_xiii],
+  # ["npc15","Artimenner","Artimenner",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_leather_boots, itm_sword_type_xiii],
    # str_9|agi_9|int_12|cha_8|level(7),wp(80),knows_warrior_npc|
    # knows_tactics_2|knows_engineer_4|knows_trade_3|knows_tracking_1|knows_spotting_1,
    # 0x0000000f2e1021862b4b9123594eab5300000000001d55360000000000000000],
-  # ["npc16","Klethi","Klethi",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_peasant_dress,itm_nomad_boots, itm_dagger, itm_throwing_knives],
+  # ["npc16","Klethi","Klethi",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_peasant_dress,itm_leather_boots, itm_dagger, itm_throwing_knives],
    # str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|
    # knows_power_throw_3|knows_athletics_2|knows_power_strike_1,
    # 0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
@@ -42830,7 +42830,7 @@ itm_spear_p,
     # fac_commoners,
     # [
     # itm_sarranid_cloth_robe,
-    # itm_sarranid_boots_a,
+    # itm_sarranid_boots_a_long,
 
     # itm_turban_c,
 
@@ -42890,7 +42890,7 @@ itm_spear_p,
     # tf_hero|tf_unmoveable_in_party_window, 0, reserved,
     # fac_commoners,
     # [
-    # itm_sarranid_boots_a,
+    # itm_sarranid_boots_a_long,
     # itm_kau_arab_tunic_a,
     # itm_turban_c,
 
@@ -42926,7 +42926,7 @@ itm_spear_p,
     # itm_maciejowski_helm,
     # itm_kolpak_mail,
 
-    # itm_mail_boots,
+    # itm_mail_boots_long,
 
     # itm_tab_shield_heater_c,
     # itm_warhorse,
@@ -42979,7 +42979,7 @@ itm_spear_p,
     # itm_great_helmet_c,
     itm_rnd_helm_02,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     # (itm_tab_shield_heater_cav_b, imod_reinforced),
     (itm_sa_shield_knight_tevton_1, imod_reinforced),
@@ -43013,7 +43013,7 @@ itm_spear_p,
 
     itm_surcoat_lithuania_a,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
     itm_heavy_lance,
@@ -43074,7 +43074,7 @@ itm_spear_p,
     itm_surcoat_denmark_a,
     itm_maciejowski_crown,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43106,7 +43106,7 @@ itm_spear_p,
     itm_crowned_norman,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43137,7 +43137,7 @@ itm_spear_p,
     itm_richard_of_cornwall_surcoat_over_mail,
     itm_maciejowski_crown,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43169,7 +43169,7 @@ itm_spear_p,
     itm_maciejowski_crown,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43200,7 +43200,7 @@ itm_spear_p,
 
     itm_rus_coat,
 
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
 
    (itm_rus_shield_1, imod_reinforced),
@@ -43230,7 +43230,7 @@ itm_spear_p,
 
     itm_surcoat_england_a,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
@@ -43264,7 +43264,7 @@ itm_spear_p,
     itm_maciejowski_crown,
     itm_crown,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
     itm_heraldic_lance,
@@ -43295,7 +43295,7 @@ itm_spear_p,
     itm_surcoat_norway_a,
     itm_talak_crown_ornate,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43324,7 +43324,7 @@ itm_spear_p,
 
     itm_surcoat_scotland_a,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
     itm_heavy_lance,
@@ -43352,7 +43352,7 @@ itm_spear_p,
     [
 
     itm_surcoat_ireland_a,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
     itm_heavy_lance,
@@ -43383,7 +43383,7 @@ itm_spear_p,
 
     itm_surcoat_sweden_a,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43414,7 +43414,7 @@ itm_spear_p,
     itm_kau_rus_noble_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43505,7 +43505,7 @@ itm_spear_p,
 
     itm_kau_castile_a,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43535,7 +43535,7 @@ itm_spear_p,
 
     itm_rnd_surcoat_01,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
     itm_heraldic_lance,
@@ -43593,7 +43593,7 @@ itm_spear_p,
 
     itm_civil_rich_boots_b,
 
-    #itm_kau_mail_boots_dark,
+    #itm_kau_mail_boots_dark_long,
 
    #(itm_tab_shield_heater_cav_b, imod_reinforced),
     (itm_horse_master_order_templar, imod_champion),
@@ -43619,7 +43619,7 @@ itm_spear_p,
     itm_merchant_outfit,
     itm_woolen_hose,
 
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     (itm_tab_shield_kite_cav_b, imod_reinforced),
 
@@ -43655,7 +43655,7 @@ itm_spear_p,
     itm_sa_knight_armor_ibelin_3_cloak,
     itm_rhodok_great_helmet,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    # (itm_tab_shield_heater_cav_b, imod_reinforced),
     (itm_sa_ibelin_shield_knight, imod_reinforced),
@@ -43686,7 +43686,7 @@ itm_spear_p,
 
     itm_kau_sicily_a,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
     itm_heraldic_lance,
@@ -43721,7 +43721,7 @@ itm_spear_p,
 
     # itm_mamluk_infantry_lamellar_a,
     itm_armor_sultan_saracens,
-    # itm_sarranid_boots_d,
+    # itm_sarranid_boots_d_long,
     itm_sa_saracin_hard_boot_1,
 
     # (itm_warhorse_sarranid, imod_champion),
@@ -43754,7 +43754,7 @@ itm_spear_p,
 
     itm_kau_courtenay,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43814,7 +43814,7 @@ itm_spear_p,
    (itm_tab_shield_small_round_c, imod_reinforced),
 
     itm_mamluk_infantry_lamellar_a,
-    itm_sarranid_boots_d,
+    itm_sarranid_boots_d_long,
 
     (itm_warhorse_sarranid, imod_champion),
 
@@ -43868,7 +43868,7 @@ itm_spear_p,
     [
     itm_woolen_hose,
 
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     itm_byz_emperor,
 
@@ -43932,7 +43932,7 @@ itm_spear_p,
     itm_woolen_hose,
 
     itm_rnd_surcoat_01,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43961,7 +43961,7 @@ itm_spear_p,
 
     itm_surcoat_lithuania_a,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -43988,7 +43988,7 @@ itm_spear_p,
     tf_hero,
     0, 0, fac_kingdom_34,
     [
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_surcoat_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -44020,7 +44020,7 @@ itm_spear_p,
     itm_short_tunic,
     itm_woolen_hose,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_surcoat_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -44048,7 +44048,7 @@ itm_spear_p,
     tf_hero,
     0, 0, fac_kingdom_36,
     [
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_surcoat_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -44082,7 +44082,7 @@ itm_spear_p,
     itm_rnd_surcoat_01,
     itm_maciejowski_crown,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
    (itm_tab_shield_heater_cav_b, imod_reinforced),
 
@@ -44224,7 +44224,7 @@ itm_spear_p,
     [
     itm_helmet_with_feathers,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_rnd_surcoat_10,
 
@@ -44259,7 +44259,7 @@ itm_spear_p,
     # itm_talak_crown_ornate,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_tab_shield_heater_cav_b,
     # itm_sword_type_xiii,
@@ -44290,7 +44290,7 @@ itm_spear_p,
     itm_teu_warhorse_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_heraldic_lance,
     itm_sword_type_xiia,
@@ -44316,7 +44316,7 @@ itm_spear_p,
     itm_teu_brother_surcoat_a,
     itm_heraldic_lance,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_talak_warhammer,
     itm_tab_shield_heater_cav_b,
@@ -44341,7 +44341,7 @@ itm_spear_p,
     itm_teu_brother_surcoat_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_sword_type_xiia,
     itm_tab_shield_heater_cav_b,
@@ -44368,7 +44368,7 @@ itm_spear_p,
     itm_osp_great_helm_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_teu_brother_surcoat_a,
     itm_teu_warhorse_c,
@@ -44395,7 +44395,7 @@ itm_spear_p,
     itm_rnd_helm_02,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_teu_brother_surcoat_d,
     itm_teu_brother_surcoat_d,
     itm_teu_warhorse_c,
@@ -44422,7 +44422,7 @@ itm_spear_p,
     itm_osp_great_helm_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_teu_brother_surcoat_e,
     itm_teu_brother_surcoat_e,
     itm_teu_warhorse_b,
@@ -44448,7 +44448,7 @@ itm_spear_p,
     itm_bishop_great_helm,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_bishop_cop,
     itm_rnd_horse_07,
@@ -44474,7 +44474,7 @@ itm_spear_p,
     itm_rnd_helm_02,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_teu_brother_surcoat_a,
     itm_teu_brother_surcoat_a,
     itm_teu_warhorse_b,
@@ -44500,7 +44500,7 @@ itm_spear_p,
     itm_rnd_helm_02,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_teu_brother_surcoat_e,
     itm_teu_warhorse_b,
@@ -44530,7 +44530,7 @@ itm_spear_p,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_teu_brother_surcoat_d,
     itm_teu_brother_surcoat_d,
     itm_teu_warhorse_a,
@@ -44556,7 +44556,7 @@ itm_spear_p,
     itm_bishop_great_helm,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_bishop_cop,
 
     itm_rnd_horse_12,
@@ -44582,7 +44582,7 @@ itm_spear_p,
     itm_heraldic_lance,
     itm_rnd_helm_02,
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_bishop_cop,
 
     itm_rnd_horse_07,
@@ -44608,7 +44608,7 @@ itm_spear_p,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_bishop_a,
 
     itm_teu_warhorse_a,
@@ -44633,7 +44633,7 @@ itm_spear_p,
     itm_maciejowski_helm,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_rnd_surcoat_01,
 
     itm_rnd_horse_01,
@@ -44659,7 +44659,7 @@ itm_spear_p,
 
     itm_osp_great_helm_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_teu_brother_surcoat_b,
 
     itm_teu_warhorse_a,
@@ -44684,7 +44684,7 @@ itm_spear_p,
     # itm_robe,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_teu_brother_surcoat_e,
     # itm_teu_warhorse_b,
@@ -44709,7 +44709,7 @@ itm_spear_p,
     # itm_robe,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_teu_brother_surcoat_a,
     # itm_teu_warhorse_a,
@@ -44734,7 +44734,7 @@ itm_spear_p,
     # itm_robe,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_teu_brother_surcoat_b,
     # itm_teu_warhorse_b,
@@ -44760,7 +44760,7 @@ itm_spear_p,
     # itm_maciejowski_helm,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_teu_brother_surcoat_c,
     # itm_teu_warhorse_a,
@@ -44786,7 +44786,7 @@ itm_spear_p,
     # itm_maciejowski_helm,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_teu_brother_surcoat_d,
     # itm_teu_warhorse_a,
@@ -44810,7 +44810,7 @@ itm_spear_p,
     0, 0, fac_kingdom_2,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -44837,7 +44837,7 @@ itm_spear_p,
 
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_a,
 
@@ -44866,7 +44866,7 @@ itm_spear_p,
     itm_woolen_hose,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_b,
 
@@ -44897,7 +44897,7 @@ itm_spear_p,
     itm_balt_helmet_c,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -44925,7 +44925,7 @@ itm_spear_p,
     itm_slonim,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -44955,7 +44955,7 @@ itm_spear_p,
     itm_woolen_hose,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_a,
 
@@ -44988,7 +44988,7 @@ itm_spear_p,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
 
@@ -45014,7 +45014,7 @@ itm_spear_p,
     itm_balt_helmet_c,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -45040,7 +45040,7 @@ itm_spear_p,
     0, 0, fac_kingdom_2,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_slonim,
 
@@ -45072,7 +45072,7 @@ itm_spear_p,
     itm_balt_helmet_a,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -45229,7 +45229,7 @@ itm_spear_p,
     # itm_balt_helmet_c,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_lithuania_a,
     # itm_surcoat_lithuania_a,
@@ -45254,7 +45254,7 @@ itm_spear_p,
     # itm_slonim,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_lithuania_a,
     # itm_surcoat_lithuania_b,
@@ -45280,7 +45280,7 @@ itm_spear_p,
     # itm_balt_helmet_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_lithuania_a,
     # itm_surcoat_lithuania_b,
@@ -45306,7 +45306,7 @@ itm_spear_p,
     # itm_balt_helmet_b,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_lithuania_a,
     # itm_surcoat_lithuania_b,
@@ -45331,7 +45331,7 @@ itm_spear_p,
     # itm_balt_helmet_c,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_lithuania_a,
     # itm_surcoat_lithuania_b,
@@ -45360,7 +45360,7 @@ itm_spear_p,
     itm_leather_vest,
     itm_mon_lamellar_b,
     itm_hide_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_leather_gloves,
     itm_sword_khergit_3,
     itm_khergit_bow,
@@ -45388,7 +45388,7 @@ itm_khergit_war_helmet,
     itm_saddle_horse,
     itm_nomad_vest,
     itm_hide_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_mongol_helmet_a,
     itm_leather_gloves,
     itm_shortened_military_scythe,
@@ -45470,7 +45470,7 @@ itm_light_lance,
     itm_ragged_outfit,
     itm_mon_lamellar_a,
     itm_hide_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
 itm_khergit_war_helmet,
     itm_sword_khergit_3,
@@ -45868,7 +45868,7 @@ itm_khergit_guard_helmet,
     itm_great_helmet_c,
     itm_great_helmet_d,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_tab_shield_heater_c,
 
@@ -45922,7 +45922,7 @@ itm_khergit_guard_helmet,
     # itm_saddle_horse,
     # itm_lamellar_vest,
     # itm_hide_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_mongol_helmet_a,
     # itm_leather_gloves,
@@ -45950,7 +45950,7 @@ itm_khergit_guard_helmet,
     # itm_saddle_horse,
     # itm_mon_lamellar_a,
     # itm_hide_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
 
 # itm_khergit_war_helmet,
@@ -45980,7 +45980,7 @@ itm_khergit_guard_helmet,
     # itm_saddle_horse,
     # itm_mon_lamellar_b,
     # itm_hide_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_khergit_guard_helmet,
     # itm_leather_gloves,
@@ -46009,7 +46009,7 @@ itm_khergit_guard_helmet,
     # itm_saddle_horse,
     # itm_lamellar_vest,
     # itm_hide_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
     # itm_lamellar_vest,
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46039,7 +46039,7 @@ itm_khergit_guard_helmet,
     # itm_saddle_horse,
 # itm_lamellar_vest,
     # itm_hide_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 # itm_lamellar_vest,
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46067,8 +46067,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46093,8 +46093,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46119,8 +46119,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46145,8 +46145,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46171,8 +46171,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46197,8 +46197,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46224,8 +46224,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46251,8 +46251,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46278,8 +46278,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46305,8 +46305,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46332,8 +46332,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46359,8 +46359,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46385,8 +46385,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46411,8 +46411,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46437,8 +46437,8 @@ itm_khergit_guard_helmet,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -46462,7 +46462,7 @@ itm_khergit_guard_helmet,
     itm_bishop_great_helm,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse_denmark_a,
     itm_bishop_a,
@@ -46487,7 +46487,7 @@ itm_khergit_guard_helmet,
 
 itm_bishop_great_helm,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_bishop_a,
     itm_warhorse_denmark_a,
     itm_bishop_a,
@@ -46514,7 +46514,7 @@ itm_heraldic_lance,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_heraldic_lance,
@@ -46537,7 +46537,7 @@ itm_heraldic_lance,
     itm_osp_great_helm_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46565,7 +46565,7 @@ itm_heraldic_lance,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
 
@@ -46589,7 +46589,7 @@ itm_heraldic_lance,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46614,7 +46614,7 @@ itm_heraldic_lance,
     itm_maciejowski_kettle_hat_a,
     itm_maciejowski_kettle_hat_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46640,7 +46640,7 @@ itm_heraldic_lance,
     itm_maciejowski_kettle_hat_a,
     itm_maciejowski_kettle_hat_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46665,7 +46665,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46691,7 +46691,7 @@ itm_sword_type_xiv,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46716,7 +46716,7 @@ itm_sword_type_xiv,
     itm_osp_great_helm_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_bishop_cop,
@@ -46740,7 +46740,7 @@ itm_sword_type_xiv,
     [
     itm_maciejowski_helm,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_heraldic_lance,
 
     itm_warhorse_denmark_a,
@@ -46765,7 +46765,7 @@ itm_sword_type_xiv,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46789,7 +46789,7 @@ itm_sword_type_xiv,
     itm_osp_great_helm_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_denmark_a,
     itm_surcoat_denmark_a,
@@ -46816,7 +46816,7 @@ itm_sword_type_xiv,
     itm_bishop_mitre,
     itm_mail_mittens,
 
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_warhorse_denmark_a,
     itm_bishop_armour,
     itm_heraldic_lance,
@@ -46839,7 +46839,7 @@ itm_sword_type_xiv,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_denmark_a,
     # itm_surcoat_denmark_a,
@@ -46864,7 +46864,7 @@ itm_sword_type_xiv,
     # itm_osp_great_helm_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_denmark_a,
     # itm_surcoat_denmark_a,
@@ -46889,7 +46889,7 @@ itm_sword_type_xiv,
     # [
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_denmark_a,
     # itm_surcoat_denmark_a,
@@ -46914,7 +46914,7 @@ itm_sword_type_xiv,
     # itm_norman_coif_b,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_denmark_a,
     # itm_surcoat_denmark_a,
@@ -46939,7 +46939,7 @@ itm_sword_type_xiv,
     # itm_rnd_helm_06,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_denmark_a,
     # itm_surcoat_denmark_a,
@@ -46967,7 +46967,7 @@ itm_sword_type_xiv,
     itm_surcoat_gslask,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_heraldic_lance,
     itm_sword_type_xiia,
@@ -47015,7 +47015,7 @@ itm_sword_type_xiv,
     [
     itm_warhorse,
     itm_surcoat_henry3,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_rhodok_nasal_helmet_a,
 
     itm_mail_mittens,
@@ -47047,10 +47047,10 @@ itm_sword_type_xiv,
     itm_veteran_surcoat_a,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_sword_type_xiii,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_tab_shield_heater_cav_b,
     ],
     knight_attrib_5,
@@ -47072,11 +47072,11 @@ itm_sword_type_xiv,
     itm_veteran_surcoat_a,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_sword_type_xiii,
     itm_heraldic_lance,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_tab_shield_heater_cav_b,
     ],
     knight_attrib_5,
@@ -47100,7 +47100,7 @@ itm_sword_type_xiv,
     itm_rnd_helm_06,
     itm_surcoat_henry3,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_heraldic_lance,
     itm_sword_type_xiii,
@@ -47129,7 +47129,7 @@ itm_sword_type_xiv,
 itm_wenceslav_helmet,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_heraldic_lance,
     itm_morningstar,
@@ -47213,7 +47213,7 @@ itm_wenceslav_helmet,
     itm_rnd_horse_17,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_wenceslav_helmet,
 
@@ -47242,7 +47242,7 @@ itm_wenceslav_helmet,
 
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_wenceslav_helmet,
 
@@ -47269,7 +47269,7 @@ itm_wenceslav_helmet,
     itm_rnd_surcoat_08,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_wenceslav_helmet,
 
@@ -47297,7 +47297,7 @@ itm_wenceslav_helmet,
     itm_haubergeon,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_wenceslav_helmet,
 
@@ -47327,7 +47327,7 @@ itm_wenceslav_helmet,
 
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_wenceslav_helmet,
 
@@ -47355,7 +47355,7 @@ itm_wenceslav_helmet,
     itm_rnd_surcoat_07,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
 
 itm_wenceslav_helmet,
@@ -47385,7 +47385,7 @@ itm_wenceslav_helmet,
     # itm_rnd_helm_04,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_heavy_lance,
     # itm_morningstar,
@@ -47415,7 +47415,7 @@ itm_wenceslav_helmet,
 
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_norman_coif_b,
 
@@ -47442,7 +47442,7 @@ itm_wenceslav_helmet,
 
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_heavy_lance,
     # itm_morningstar,
@@ -47466,7 +47466,7 @@ itm_wenceslav_helmet,
     # itm_surcoat_pol_b,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_talak_warhammer,
     # itm_tab_shield_kite_cav_b
@@ -47490,7 +47490,7 @@ itm_wenceslav_helmet,
     # itm_surcoat_pol_c,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_morningstar,
     # itm_talak_bastard_sword,
@@ -47516,7 +47516,7 @@ itm_wenceslav_helmet,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_rnd_horse_14,
     itm_rnd_surcoat_14,
@@ -47540,7 +47540,7 @@ itm_wenceslav_helmet,
     itm_osp_great_helm_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_21,
@@ -47565,7 +47565,7 @@ itm_wenceslav_helmet,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_01,
@@ -47589,7 +47589,7 @@ itm_wenceslav_helmet,
     [
 itm_rnd_helm_06,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_06,
@@ -47615,7 +47615,7 @@ itm_rnd_helm_06,
     itm_wenceslav_helmet,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_07,
@@ -47641,7 +47641,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_13,
@@ -47667,7 +47667,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_23,
@@ -47693,7 +47693,7 @@ itm_rnd_helm_06,
     itm_maciejowski_helm,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_06,
@@ -47721,7 +47721,7 @@ itm_rnd_helm_06,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_warhorse_hre_a,
 
     itm_heraldic_lance,
@@ -47747,7 +47747,7 @@ itm_rnd_helm_06,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
 
@@ -47774,7 +47774,7 @@ itm_rnd_helm_06,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
 
@@ -47797,7 +47797,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_23,
@@ -47821,7 +47821,7 @@ itm_rnd_helm_06,
     itm_wenceslav_helmet,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_17,
@@ -47846,7 +47846,7 @@ itm_rnd_helm_06,
     itm_norman_coif_c,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_07,
@@ -47869,7 +47869,7 @@ itm_rnd_helm_06,
     0, 0, fac_kingdom_6,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_bishop_armour,
@@ -47894,7 +47894,7 @@ itm_rnd_helm_06,
     0, 0, fac_kingdom_6,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_01,
@@ -47919,7 +47919,7 @@ itm_rnd_helm_06,
     0, 0, fac_kingdom_6,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 itm_rnd_helm_06,
     itm_warhorse_hre_a,
     itm_rnd_surcoat_03,
@@ -47944,7 +47944,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_02,
@@ -47969,7 +47969,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_01,
@@ -47994,7 +47994,7 @@ itm_rnd_helm_06,
     itm_osp_great_helm_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hre_a,
     itm_rnd_surcoat_06,
@@ -48020,7 +48020,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48045,7 +48045,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_heraldic_lance,
@@ -48069,7 +48069,7 @@ itm_rnd_helm_06,
     itm_norman_coif_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_heraldic_lance,
@@ -48094,7 +48094,7 @@ itm_rnd_helm_06,
     itm_maciejowski_helm,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48119,7 +48119,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48144,7 +48144,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48169,7 +48169,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48194,7 +48194,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48219,7 +48219,7 @@ itm_rnd_helm_06,
     itm_norman_coif_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48244,7 +48244,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48270,7 +48270,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48295,7 +48295,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_heraldic_lance,
@@ -48320,7 +48320,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48345,7 +48345,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_hungary_a,
     itm_surcoat_hungary_a,
@@ -48370,7 +48370,7 @@ itm_rnd_helm_06,
     itm_cuman_cap_d,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse,
     itm_rnd_surcoat_10,
@@ -48395,7 +48395,7 @@ itm_rnd_helm_06,
     # itm_osp_great_helm_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_hungary_a,
     # itm_surcoat_hungary_a,
@@ -48420,7 +48420,7 @@ itm_rnd_helm_06,
     # itm_norman_coif_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_hungary_a,
     # itm_surcoat_hungary_a,
@@ -48445,7 +48445,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_hungary_a,
     # itm_surcoat_hungary_a,
@@ -48470,7 +48470,7 @@ itm_rnd_helm_06,
     # itm_osp_great_helm_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_hungary_a,
     # itm_surcoat_hungary_a,
@@ -48496,7 +48496,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_06,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_hungary_a,
     # itm_surcoat_hungary_a,
@@ -48772,7 +48772,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_surcoat_england_a,
@@ -48798,7 +48798,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_devalence,
     itm_surcoat_devalence,
@@ -48823,7 +48823,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_demontfort,
     itm_surcoat_demontfort,
@@ -48847,7 +48847,7 @@ itm_rnd_helm_06,
     [
 itm_rnd_helm_06,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_08,
@@ -48872,7 +48872,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_01,
@@ -48897,7 +48897,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_mortimer,
     itm_surcoat_mortimer,
@@ -48924,7 +48924,7 @@ itm_rnd_helm_06,
     itm_bishop_mitre,
     itm_bishop_armour,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
 
@@ -48947,7 +48947,7 @@ itm_rnd_helm_06,
     itm_great_helmet_c,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_bigod,
     itm_surcoat_bigod,
@@ -48976,7 +48976,7 @@ itm_rnd_helm_06,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_heraldic_lance,
@@ -48998,7 +48998,7 @@ itm_rnd_helm_06,
     [
     itm_osp_great_helm_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_dewarenne,
     itm_surcoat_dewarenne,
@@ -49024,7 +49024,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_21,
@@ -49049,7 +49049,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_01,
@@ -49075,7 +49075,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_13,
@@ -49101,7 +49101,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_02,
@@ -49127,7 +49127,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_08,
@@ -49153,7 +49153,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_08,
@@ -49179,7 +49179,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_rnd_surcoat_10,
@@ -49207,7 +49207,7 @@ itm_rnd_helm_06,
     itm_bishop_mitre,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
 
@@ -49231,7 +49231,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_surcoat_england_a,
@@ -49258,7 +49258,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_england_a,
     itm_surcoat_england_a,
@@ -49284,7 +49284,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_surcoat_france_a,
@@ -49309,7 +49309,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_surcoat_france_a,
@@ -49335,7 +49335,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_15,
@@ -49360,7 +49360,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_18,
@@ -49386,7 +49386,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_17,
@@ -49411,7 +49411,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_surcoat_dewarenne,
@@ -49437,7 +49437,7 @@ itm_rnd_helm_06,
     itm_heraldic_lance,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_surcoat_france_a,
@@ -49461,7 +49461,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_15,
@@ -49487,7 +49487,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_08,
@@ -49512,7 +49512,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_02,
@@ -49538,7 +49538,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_01,
@@ -49563,7 +49563,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_03,
@@ -49589,7 +49589,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_08,
@@ -49614,7 +49614,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_08,
@@ -49639,7 +49639,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_15,
@@ -49664,7 +49664,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_01,
@@ -49689,7 +49689,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_03,
@@ -49714,7 +49714,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_03,
@@ -49739,7 +49739,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_07,
@@ -49765,7 +49765,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_france_a,
     itm_rnd_surcoat_08,
@@ -49790,7 +49790,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49815,7 +49815,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49840,7 +49840,7 @@ itm_rnd_helm_06,
     itm_heraldic_lance,
     itm_maciejowski_kettle_hat_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49865,7 +49865,7 @@ itm_rnd_helm_06,
     itm_maciejowski_kettle_hat_a,
     itm_maciejowski_kettle_hat_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49892,7 +49892,7 @@ itm_rnd_helm_06,
     itm_maciejowski_kettle_hat_a,
     itm_maciejowski_kettle_hat_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49918,7 +49918,7 @@ itm_rnd_helm_06,
     itm_maciejowski_kettle_hat_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49943,7 +49943,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49968,7 +49968,7 @@ itm_heraldic_lance,
     itm_maciejowski_kettle_hat_a,
     itm_maciejowski_kettle_hat_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -49994,7 +49994,7 @@ itm_heraldic_lance,
     itm_maciejowski_kettle_hat_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -50019,7 +50019,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -50045,7 +50045,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -50070,7 +50070,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -50095,7 +50095,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_heraldic_lance,
 
     itm_warhorse_norway_a,
@@ -50121,7 +50121,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -50147,7 +50147,7 @@ itm_heraldic_lance,
     itm_maciejowski_kettle_hat_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
@@ -50173,7 +50173,7 @@ itm_heraldic_lance,
     # itm_maciejowski_kettle_hat_b,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_norway_a,
     # itm_surcoat_norway_a,
@@ -50198,7 +50198,7 @@ itm_heraldic_lance,
     # itm_mail_coif,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_norway_a,
     # itm_surcoat_norway_a,
@@ -50224,7 +50224,7 @@ itm_heraldic_lance,
  # itm_maciejowski_kettle_hat_a,
     # itm_maciejowski_kettle_hat_b,
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_norway_a,
     # itm_surcoat_norway_a,
@@ -50249,7 +50249,7 @@ itm_heraldic_lance,
     # itm_maciejowski_kettle_hat_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_norway_a,
     # itm_surcoat_norway_a,
@@ -50275,7 +50275,7 @@ itm_heraldic_lance,
  # itm_maciejowski_kettle_hat_a,
     # itm_maciejowski_kettle_hat_b,
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_norway_a,
     # itm_surcoat_norway_a,
@@ -50301,7 +50301,7 @@ itm_heraldic_lance,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50327,7 +50327,7 @@ itm_heraldic_lance,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50352,7 +50352,7 @@ itm_heraldic_lance,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_heraldic_lance,
 
     itm_warhorse_scotland_a,
@@ -50378,7 +50378,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50403,7 +50403,7 @@ itm_heraldic_lance,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50428,7 +50428,7 @@ itm_heraldic_lance,
     itm_norman_coif_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50453,7 +50453,7 @@ itm_heraldic_lance,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50478,7 +50478,7 @@ itm_heraldic_lance,
     itm_norman_coif_d,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50503,7 +50503,7 @@ itm_heraldic_lance,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50528,7 +50528,7 @@ itm_heraldic_lance,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_scotland_a,
     itm_surcoat_scotland_a,
@@ -50805,7 +50805,7 @@ itm_heraldic_lance,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -50830,7 +50830,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -50855,7 +50855,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_heraldic_lance,
 
     itm_warhorse_sweden_a,
@@ -50881,7 +50881,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -50906,7 +50906,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -50932,7 +50932,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -50958,7 +50958,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -50982,7 +50982,7 @@ itm_heraldic_lance,
     [
 itm_rnd_helm_06,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -51007,7 +51007,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -51033,7 +51033,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -51060,7 +51060,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -51087,7 +51087,7 @@ itm_rnd_helm_06,
     itm_maciejowski_kettle_hat_a,
     itm_maciejowski_kettle_hat_b,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -51112,7 +51112,7 @@ itm_rnd_helm_06,
     itm_maciejowski_kettle_hat_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_heraldic_lance,
 
     itm_warhorse_sweden_a,
@@ -51138,7 +51138,7 @@ itm_rnd_helm_06,
     itm_mail_coif,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -51164,7 +51164,7 @@ itm_rnd_helm_06,
     itm_maciejowski_kettle_hat_b,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
@@ -51190,7 +51190,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_01,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_sweden_a,
     # itm_surcoat_sweden_a,
@@ -51215,7 +51215,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_03,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_sweden_a,
     # itm_surcoat_sweden_a,
@@ -51238,7 +51238,7 @@ itm_rnd_helm_06,
     # 0, 0, fac_kingdom_14,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_sweden_a,
     # itm_surcoat_sweden_a,
@@ -51263,7 +51263,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_01,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_sweden_a,
     # itm_surcoat_sweden_a,
@@ -51288,7 +51288,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_03,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_sweden_a,
     # itm_surcoat_sweden_a,
@@ -51562,7 +51562,7 @@ itm_rnd_helm_06,
     # [
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -51587,7 +51587,7 @@ itm_rnd_helm_06,
     # [
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_war_helmet,
 
@@ -51612,7 +51612,7 @@ itm_rnd_helm_06,
     # [
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_mask,
 
@@ -51638,7 +51638,7 @@ itm_rnd_helm_06,
     # [
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -51663,7 +51663,7 @@ itm_rnd_helm_06,
     # 0, 0, fac_kingdom_15,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
 
     # itm_vaegir_war_helmet,
@@ -51689,7 +51689,7 @@ itm_rnd_helm_06,
     # 0, 0, fac_kingdom_15,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
 
     # itm_vaegir_war_helmet,
@@ -51715,7 +51715,7 @@ itm_rnd_helm_06,
     # 0, 0, fac_kingdom_15,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
 
     # itm_vaegir_war_helmet,
@@ -51740,7 +51740,7 @@ itm_rnd_helm_06,
     # 0, 0, fac_kingdom_15,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
 
     # itm_vaegir_war_helmet,
@@ -51765,7 +51765,7 @@ itm_rnd_helm_06,
     # 0, 0, fac_kingdom_15,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
 
     # itm_vaegir_war_helmet,
@@ -51790,7 +51790,7 @@ itm_rnd_helm_06,
     # 0, 0, fac_kingdom_15,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
 
     # itm_vaegir_war_helmet,
@@ -51843,7 +51843,7 @@ itm_rnd_helm_06,
     itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_heraldic_lance,
 
     itm_portugal_horse,
@@ -51868,7 +51868,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_c,
@@ -51894,7 +51894,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_a,
@@ -51919,7 +51919,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_b,
@@ -51944,7 +51944,7 @@ itm_rnd_helm_06,
     itm_norman_coif_b,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_c,
@@ -51968,7 +51968,7 @@ itm_rnd_helm_06,
     [
     itm_kolpak_mail,
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_d,
@@ -52020,7 +52020,7 @@ itm_rnd_helm_06,
 itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_b,
@@ -52046,7 +52046,7 @@ itm_kolpak_mail,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_c,
@@ -52073,7 +52073,7 @@ itm_kolpak_mail,
 itm_andalusian_helmet_d,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_d,
@@ -52099,7 +52099,7 @@ itm_andalusian_helmet_d,
     itm_andalusian_helmet_d,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_a,
@@ -52125,7 +52125,7 @@ itm_andalusian_helmet_d,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_b,
@@ -52151,7 +52151,7 @@ itm_andalusian_helmet_d,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_c,
@@ -52177,7 +52177,7 @@ itm_andalusian_helmet_d,
     itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_portugal_horse,
     itm_kau_portugal_d,
@@ -52304,7 +52304,7 @@ itm_andalusian_helmet_d,
     itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse,
     itm_kau_aragon_a,
@@ -52354,7 +52354,7 @@ itm_andalusian_helmet_d,
     [
     itm_kolpak_mail,
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse,
     itm_kau_aragon_a,
@@ -52406,7 +52406,7 @@ itm_andalusian_helmet_d,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse,
     itm_kau_aragon_a,
@@ -52508,7 +52508,7 @@ itm_andalusian_helmet_d,
     itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse,
     itm_kau_aragon_a,
@@ -52584,7 +52584,7 @@ itm_andalusian_helmet_d,
     # itm_norman_coif_b,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_aragon_b,
@@ -52607,7 +52607,7 @@ itm_andalusian_helmet_d,
     # 0, 0, fac_kingdom_17,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_aragon_c,
@@ -52633,7 +52633,7 @@ itm_andalusian_helmet_d,
     # itm_norman_coif_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_aragon_a,
@@ -52658,7 +52658,7 @@ itm_andalusian_helmet_d,
     # itm_rnd_helm_03,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_aragon_b,
@@ -52684,7 +52684,7 @@ itm_andalusian_helmet_d,
     # itm_rnd_helm_03,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_aragon_c,
@@ -52708,7 +52708,7 @@ itm_andalusian_helmet_d,
     [
     itm_andalusian_helmet_d,
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_a,
@@ -52733,7 +52733,7 @@ itm_andalusian_helmet_d,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_c,
@@ -52757,7 +52757,7 @@ itm_andalusian_helmet_d,
     itm_norman_coif_a,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_a,
@@ -52782,7 +52782,7 @@ itm_andalusian_helmet_d,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_a,
@@ -52807,7 +52807,7 @@ itm_andalusian_helmet_d,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_c,
@@ -52832,7 +52832,7 @@ itm_andalusian_helmet_d,
     itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_a,
@@ -52856,7 +52856,7 @@ itm_andalusian_helmet_d,
     [
     itm_mail_coif,
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_a,
@@ -52883,7 +52883,7 @@ itm_andalusian_helmet_d,
 itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_c,
@@ -52908,7 +52908,7 @@ itm_kolpak_mail,
     itm_andalusian_helmet_b,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_warhorse,
     itm_rnd_surcoat_07,
@@ -52935,7 +52935,7 @@ itm_kolpak_mail,
     itm_vik_spangen_b,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_b,
@@ -52962,7 +52962,7 @@ itm_kolpak_mail,
     itm_vik_spangen_b,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_c,
@@ -52986,7 +52986,7 @@ itm_kolpak_mail,
     [
     itm_kolpak_mail,
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
     itm_heraldic_lance,
 
     itm_castile_horse,
@@ -53011,7 +53011,7 @@ itm_kolpak_mail,
     itm_vik_spangen_b,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_b,
@@ -53036,7 +53036,7 @@ itm_kolpak_mail,
     itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_c,
@@ -53061,7 +53061,7 @@ itm_kolpak_mail,
     itm_kolpak_mail,
 
     itm_mail_mittens,
-    itm_splinted_greaves,
+    itm_splinted_greaves_long,
 
     itm_castile_horse,
     itm_kau_castile_a,
@@ -53086,7 +53086,7 @@ itm_kolpak_mail,
     # itm_norman_coif_b,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_kau_castile_b,
@@ -53109,7 +53109,7 @@ itm_kolpak_mail,
     # 0, 0, fac_kingdom_18,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_kau_castile_c,
@@ -53135,7 +53135,7 @@ itm_kolpak_mail,
     # itm_norman_coif_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_kau_castile_a,
@@ -53160,7 +53160,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_03,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_kau_castile_b,
@@ -53186,7 +53186,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_kau_castile_c,
@@ -53212,7 +53212,7 @@ itm_kolpak_mail,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_red,
     itm_rnd_surcoat_02,
@@ -53237,7 +53237,7 @@ itm_kolpak_mail,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_red,
     itm_rnd_surcoat_03,
@@ -53261,7 +53261,7 @@ itm_kolpak_mail,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_red,
     itm_rnd_surcoat_05,
@@ -53287,7 +53287,7 @@ itm_kolpak_mail,
 # itm_osp_great_helm_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_rnd_surcoat_03,
@@ -53312,7 +53312,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_04,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_rnd_surcoat_05,
@@ -53336,7 +53336,7 @@ itm_kolpak_mail,
     # itm_norman_coif_b,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_rnd_surcoat_03,
@@ -53359,7 +53359,7 @@ itm_kolpak_mail,
     # 0, 0, fac_kingdom_19,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_rnd_surcoat_05,
@@ -53385,7 +53385,7 @@ itm_kolpak_mail,
     # itm_norman_coif_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_rnd_surcoat_03,
@@ -53410,7 +53410,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_03,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_rnd_surcoat_05,
@@ -53436,7 +53436,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_red,
     # itm_rnd_surcoat_03,
@@ -53461,7 +53461,7 @@ itm_kolpak_mail,
     itm_arabian_horse_a,
     itm_andalus_marinid_hasfid_elite_b,
     itm_sarranid_boots_c,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_arab_headcloth,
     itm_leather_gloves,
     itm_heavy_lance,
@@ -53530,7 +53530,7 @@ itm_kolpak_mail,
     itm_arabian_horse_a,
     itm_berber_mail_a,
     itm_sarranid_boots_c,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_arab_headcloth,
     itm_lance,
     itm_military_pick,
@@ -53642,7 +53642,7 @@ itm_kolpak_mail,
     itm_courser,
     itm_andalus_marinid_hasfid_elite_b,
     itm_sarranid_boots_c,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_arab_headcloth,
     itm_lance,
     itm_military_pick,
@@ -53908,7 +53908,7 @@ itm_kolpak_mail,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_papal,
@@ -53933,7 +53933,7 @@ itm_kolpak_mail,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_papal,
@@ -53957,7 +53957,7 @@ itm_kolpak_mail,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_papal,
@@ -53982,7 +53982,7 @@ itm_kolpak_mail,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_papal,
@@ -54007,7 +54007,7 @@ itm_kolpak_mail,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_papal,
@@ -54033,7 +54033,7 @@ itm_kolpak_mail,
     itm_byz_lord,
 
     itm_byzantine_greaves,
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     itm_elm9,
 
@@ -54058,7 +54058,7 @@ itm_kolpak_mail,
     itm_byz_lord,
 
     itm_byzantine_greaves,
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     itm_elm9,
 
@@ -54083,7 +54083,7 @@ itm_kolpak_mail,
     itm_byz_lord,
 
     itm_byzantine_greaves,
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     itm_elm9,
 
@@ -54108,7 +54108,7 @@ itm_kolpak_mail,
     itm_byz_lord,
 
     itm_byzantine_greaves,
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     itm_elm9,
 
@@ -54133,7 +54133,7 @@ itm_kolpak_mail,
     itm_byz_lord,
 
     itm_byzantine_greaves,
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     itm_elm9,
 
@@ -54158,7 +54158,7 @@ itm_kolpak_mail,
     itm_byz_lord,
 
     itm_byzantine_greaves,
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
 
     itm_elm9,
 
@@ -54402,7 +54402,7 @@ itm_kolpak_mail,
     # itm_osp_byzantion_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_mon_lamellar_horse_a,
     # itm_kau_rus_c,
@@ -54428,7 +54428,7 @@ itm_kolpak_mail,
     # itm_elm9,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_mon_lamellar_horse_a,
     # itm_kau_rus_d,
@@ -54453,7 +54453,7 @@ itm_kolpak_mail,
     # itm_elm10,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_mon_lamellar_horse_a,
     # itm_kau_rus_e,
@@ -54478,7 +54478,7 @@ itm_kolpak_mail,
     # itm_osp_byzantion_a,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_mon_lamellar_horse_a,
     # itm_kau_rus_scale_a,
@@ -54503,7 +54503,7 @@ itm_kolpak_mail,
     # itm_elm9,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_mon_lamellar_horse_a,
     # itm_kau_rus_lamellar_vest,
@@ -54528,7 +54528,7 @@ itm_kolpak_mail,
     itm_osp_great_helm_a,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     # itm_hospitaller_warhorse_a,
     itm_horse_master_order_hospitaller,
@@ -54557,7 +54557,7 @@ itm_kolpak_mail,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     # itm_templar_warhorse_a,
     itm_horse_master_order_templar,
@@ -54588,7 +54588,7 @@ itm_kolpak_mail,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     # itm_rnd_horse_08,
     itm_antioch_knight_horse_b,
@@ -54617,7 +54617,7 @@ itm_kolpak_mail,
     itm_maciejowski_crown,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_rnd_horse_18,
     itm_kau_cyprus,
@@ -54642,7 +54642,7 @@ itm_kolpak_mail,
     itm_rhodok_four_plated_helmet,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_ibelin_knight_horse_a,
     # itm_veteran_surcoat_a,
@@ -54672,7 +54672,7 @@ itm_kolpak_mail,
     itm_rhodok_great_helmet,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_teu_warhorse_b,
     # itm_teu_brother_surcoat_a,
@@ -54699,7 +54699,7 @@ itm_kolpak_mail,
     [
     itm_elm6,
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_raf_one_handed_axe_c,
 
@@ -54731,7 +54731,7 @@ itm_kolpak_mail,
     itm_norman_coif_c,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_jerusalem_knight_horse_b,
     itm_sa_knight_armor_jerusalem_3_cloak,
@@ -54784,7 +54784,7 @@ itm_kolpak_mail,
     itm_vik_norman_helmet_a,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse,
     itm_rnd_surcoat_02,
@@ -54810,7 +54810,7 @@ itm_kolpak_mail,
     itm_flat_topped_helmet_b,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_rnd_horse_14,
     itm_rnd_surcoat_07,
@@ -54836,7 +54836,7 @@ itm_kolpak_mail,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_rnd_horse_13,
     itm_rnd_surcoat_13,
@@ -54862,7 +54862,7 @@ itm_kolpak_mail,
     itm_great_helmet_c,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_warhorse_demontfort,
     itm_surcoat_demontfort,
@@ -54888,7 +54888,7 @@ itm_kolpak_mail,
     itm_great_helmet_c,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_jerusalem_horse,
     itm_kau_jerusalem,
@@ -54914,7 +54914,7 @@ itm_kolpak_mail,
     itm_osp_great_helm_a,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     # itm_warhorse_red,
     # itm_veteran_surcoat_d,
@@ -54948,7 +54948,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_jerusalem,
@@ -54974,7 +54974,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_jerusalem,
@@ -55000,7 +55000,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_jerusalem,
@@ -55026,7 +55026,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_jerusalem,
@@ -55052,7 +55052,7 @@ itm_kolpak_mail,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_jerusalem,
@@ -55126,7 +55126,7 @@ itm_kolpak_mail,
     itm_norman_coif_d,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_kau_sicily_a,
@@ -55252,7 +55252,7 @@ itm_mail_coif,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_kau_sicily_b,
@@ -55461,7 +55461,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_sicily_b,
@@ -55487,7 +55487,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_sicily_a,
@@ -55513,7 +55513,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_sicily_b,
@@ -55539,7 +55539,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_sicily_a,
@@ -55565,7 +55565,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_yellow,
     # itm_kau_sicily_b,
@@ -55689,7 +55689,7 @@ itm_rnd_helm_06,
 
     itm_warhorse,
     itm_arabian_armor_b,
-    itm_byz_lord_boots,
+    itm_byz_lord_boots_long,
     itm_mamluke_helm_b,
     itm_leather_gloves,
     itm_sarranid_cavalry_sword,
@@ -56559,7 +56559,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_b,
@@ -56584,7 +56584,7 @@ itm_rnd_helm_06,
     itm_vik_norman_helmet_a,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_athens,
@@ -56608,7 +56608,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_b,
@@ -56633,7 +56633,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_a,
@@ -56658,7 +56658,7 @@ itm_rnd_helm_06,
     itm_elm3,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_b,
@@ -56684,7 +56684,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_a,
@@ -56708,7 +56708,7 @@ itm_rnd_helm_06,
     [
 itm_rnd_helm_06,
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_b,
@@ -56734,7 +56734,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_b,
@@ -56760,7 +56760,7 @@ itm_rnd_helm_06,
 itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_a,
@@ -56786,7 +56786,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_05,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_latin_b,
@@ -56812,7 +56812,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_latin_a,
@@ -56838,7 +56838,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_latin_b,
@@ -56864,7 +56864,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_latin_a,
@@ -56890,7 +56890,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_latin_b,
@@ -56916,7 +56916,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_latin_a,
@@ -56989,7 +56989,7 @@ itm_rnd_helm_06,
     0, 0, fac_kingdom_27,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_mamluk_cap,
 
@@ -57044,7 +57044,7 @@ itm_rnd_helm_06,
     itm_saddle_horse,
     itm_nomad_vest,
     itm_hide_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
     itm_mongol_helmet_a,
     itm_leather_gloves,
     itm_shortened_military_scythe,
@@ -57116,7 +57116,7 @@ itm_khergit_war_helmet,
     itm_ragged_outfit,
     itm_mon_lamellar_b,
     itm_hide_boots,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
 itm_khergit_war_helmet,
     itm_sword_khergit_3,
@@ -57309,7 +57309,7 @@ itm_mongol_helmet_b,
     # itm_saddle_horse,
     # itm_nomad_robe,
     # itm_lamellar_vest,
-    # itm_nomad_boots,
+    # itm_leather_boots,
         #
     # itm_khergit_cavalry_helmet,
     # itm_khergit_bow,
@@ -57335,7 +57335,7 @@ itm_mongol_helmet_b,
     # itm_courser,
     # itm_lamellar_vest,
     # itm_hide_boots,
-    # itm_splinted_greaves,
+    # itm_splinted_greaves_long,
 
     # itm_shortened_military_scythe,
     # itm_khergit_bow,
@@ -57383,8 +57383,8 @@ itm_mongol_helmet_b,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -57409,8 +57409,8 @@ itm_mongol_helmet_b,
 
     # itm_saddle_horse,
     # itm_leather_vest,
-    # itm_nomad_boots,
-    # itm_kau_mail_boots_dark,
+    # itm_leather_boots,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_leather_gloves,
     # itm_sword_khergit_3,
@@ -57920,7 +57920,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_noble_helmet,
 
@@ -57945,7 +57945,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_helmet_a,
 
@@ -57969,7 +57969,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_vaegir_mask,
 
@@ -57994,7 +57994,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_noble_helmet,
 
@@ -58019,7 +58019,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_helmet_a,
 
@@ -58044,7 +58044,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_vaegir_mask,
 
@@ -58069,7 +58069,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_noble_helmet,
 
@@ -58094,7 +58094,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_helmet_a,
 
@@ -58119,7 +58119,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_vaegir_mask,
 
@@ -58144,7 +58144,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_29,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_vaegir_mask,
 
@@ -58169,7 +58169,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_29,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58194,7 +58194,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_29,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58219,7 +58219,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_29,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58244,7 +58244,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_29,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58269,7 +58269,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_29,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58294,7 +58294,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_noble_helmet,
 
@@ -58319,7 +58319,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_helmet_a,
 
@@ -58343,7 +58343,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_vaegir_mask,
 
@@ -58368,7 +58368,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_noble_helmet,
 
@@ -58393,7 +58393,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_helmet_a,
 
@@ -58418,7 +58418,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_vaegir_mask,
 
@@ -58443,7 +58443,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_noble_helmet,
 
@@ -58468,7 +58468,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_helmet_a,
 
@@ -58493,7 +58493,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_vaegir_mask,
 
@@ -58518,7 +58518,7 @@ itm_mongol_helmet_b,
     0, 0, fac_kingdom_30,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_rus_noble_helmet,
 
@@ -58543,7 +58543,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_30,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58568,7 +58568,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_30,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58592,7 +58592,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_30,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58616,7 +58616,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_30,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -58641,7 +58641,7 @@ itm_mongol_helmet_b,
     # 0, 0, fac_kingdom_30,
     # [
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_vaegir_noble_helmet,
 
@@ -59085,7 +59085,7 @@ itm_mongol_helmet_b,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_rnd_surcoat_03,
@@ -59212,7 +59212,7 @@ itm_mail_coif,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_rnd_surcoat_07,
@@ -59418,7 +59418,7 @@ itm_rnd_helm_06,
     0, 0, fac_kingdom_33,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -59444,7 +59444,7 @@ itm_rnd_helm_06,
 
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_a,
 
@@ -59473,7 +59473,7 @@ itm_rnd_helm_06,
     itm_woolen_hose,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_b,
 
@@ -59503,7 +59503,7 @@ itm_rnd_helm_06,
     itm_balt_helmet_c,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -59533,7 +59533,7 @@ itm_rnd_helm_06,
     itm_balt_helmet_c,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -59558,7 +59558,7 @@ itm_rnd_helm_06,
     0, 0, fac_kingdom_34,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -59584,7 +59584,7 @@ itm_rnd_helm_06,
 
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_a,
 
@@ -59613,7 +59613,7 @@ itm_rnd_helm_06,
     itm_woolen_hose,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_b,
 
@@ -59643,7 +59643,7 @@ itm_rnd_helm_06,
     itm_balt_helmet_c,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -59668,7 +59668,7 @@ itm_rnd_helm_06,
     0, 0, fac_kingdom_36,
     [
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_lithuania_a,
     itm_surcoat_lithuania_a,
@@ -59694,7 +59694,7 @@ itm_rnd_helm_06,
 
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_a,
 
@@ -59723,7 +59723,7 @@ itm_rnd_helm_06,
     itm_woolen_hose,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_balt_helmet_b,
 
@@ -59750,7 +59750,7 @@ itm_rnd_helm_06,
     # itm_osp_faceplate,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_rnd_surcoat_12,
@@ -59775,7 +59775,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_04,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_rnd_surcoat_13,
@@ -59799,7 +59799,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_06,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_rnd_surcoat_14,
@@ -59824,7 +59824,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_rnd_surcoat_15,
@@ -59849,7 +59849,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_rnd_surcoat_16,
@@ -59873,7 +59873,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_rnd_surcoat_12,
@@ -59898,7 +59898,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_rnd_surcoat_11,
@@ -59922,7 +59922,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_white,
     itm_kau_papal,
@@ -59947,7 +59947,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_papal,
@@ -59972,7 +59972,7 @@ itm_rnd_helm_06,
     # itm_rnd_helm_05,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_kau_papal,
@@ -59997,7 +59997,7 @@ itm_rnd_helm_06,
     # itm_osp_faceplate,
 
     # itm_mail_mittens,
-    # itm_kau_mail_boots_dark,
+    # itm_kau_mail_boots_dark_long,
 
     # itm_warhorse_white,
     # itm_rnd_surcoat_12,
@@ -60071,7 +60071,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_rnd_surcoat_03,
@@ -60196,7 +60196,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_rnd_surcoat_03,
@@ -60321,7 +60321,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_rnd_surcoat_03,
@@ -60446,7 +60446,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_04,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_rnd_surcoat_03,
@@ -60571,7 +60571,7 @@ itm_rnd_helm_06,
     itm_rnd_helm_06,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_warhorse_yellow,
     itm_rnd_surcoat_03,
@@ -60973,7 +60973,7 @@ itm_rnd_helm_06,
     itm_talak_crown_ornate,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_tab_shield_heater_cav_b,
 
@@ -61001,7 +61001,7 @@ itm_rnd_helm_06,
     itm_talak_crown_ornate,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_tab_shield_heater_cav_b,
 
@@ -61030,7 +61030,7 @@ itm_rnd_helm_06,
     itm_rhodok_great_helmet,
 
     itm_mail_mittens,
-    itm_mail_boots,
+    itm_mail_boots_long,
 
     itm_tab_shield_heater_cav_b,
     itm_heraldic_lance,
@@ -61057,7 +61057,7 @@ itm_rnd_helm_06,
     itm_talak_crown_ornate,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_tab_shield_heater_cav_b,
     itm_heavy_lance,
@@ -61085,7 +61085,7 @@ itm_rnd_helm_06,
     itm_talak_crown_ornate,
 
     itm_mail_mittens,
-    itm_kau_mail_boots_dark,
+    itm_kau_mail_boots_dark_long,
 
     itm_tab_shield_heater_cav_b,
     itm_heavy_lance,
@@ -61894,7 +61894,7 @@ itm_rnd_helm_06,
   # ["kingdom_37_lady_5","Lady Gwyneira","Gwyneira",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_37, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e530c00075f5b67469b22d6e200000000000e1ad20000000000000000],
 
 
-  ["heroes_end", "{!}heroes end", "{!}heroes end", tf_hero, 0,reserved,  fac_neutral,[itm_saddle_horse,itm_leather_jacket,itm_nomad_boots],def_attrib|level(2),wp(20),knows_common, 0x000000000008318101f390c515555594],
+  ["heroes_end", "{!}heroes end", "{!}heroes end", tf_hero, 0,reserved,  fac_neutral,[itm_saddle_horse,itm_leather_jacket,itm_leather_boots],def_attrib|level(2),wp(20),knows_common, 0x000000000008318101f390c515555594],
 
 #Seneschals
   ["town_1_seneschal", "{!}Town 1 Seneschal", "{!}Town 1 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
@@ -62400,10 +62400,10 @@ itm_rnd_helm_06,
 ##
 ##  ["town_8_crook","Town 8 Crook","Town 8 Crook",tf_hero,                0,0, fac_neutral,[itm_leather_jacket,    itm_leather_boots       ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000010318401c96db4db6db58d],
 ##  ["town_9_crook","Town 9 Crook","Town 9 Crook",tf_hero,                0,0, fac_neutral,[itm_linen_tunic,    itm_hide_boots          ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000008520501f16db4db6db58d],
-##  ["town_10_crook","Town 10 Crook","Town 10 Crook",tf_hero,             0,0, fac_neutral,[itm_coarse_tunic,    itm_nomad_boots         ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000008600701f35144db6db8a2],
+##  ["town_10_crook","Town 10 Crook","Town 10 Crook",tf_hero,             0,0, fac_neutral,[itm_coarse_tunic,    itm_leather_boots         ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000008600701f35144db6db8a2],
 ##  ["town_11_crook","Town 11 Crook","Town 11 Crook",tf_hero|tf_female,   0,0, fac_neutral,[itm_blue_dress,    itm_wimple_with_veil    ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000008408101f386c4db4dd514],
 ##  ["town_12_crook","Town 12 Crook","Town 12 Crook",tf_hero,             0,0, fac_neutral,[itm_coarse_tunic,    itm_hide_boots          ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000870c501f386c4f34dbaa1],
-##  ["town_13_crook","Town 13 Crook","Town 13 Crook",tf_hero,             0,0, fac_neutral,[itm_gambeson_a,    itm_nomad_boots         ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000c114901f245caf34dbaa1],
+##  ["town_13_crook","Town 13 Crook","Town 13 Crook",tf_hero,             0,0, fac_neutral,[itm_gambeson_a,    itm_leather_boots         ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000c114901f245caf34dbaa1],
 ##  ["town_14_crook","Town 14 Crook","Town 14 Crook",tf_hero|tf_female,   0,0, fac_neutral,[    itm_turret_hat_ruby     ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000001021c001f545a49b6eb2bc],
 
 # Armor Merchants
@@ -63681,7 +63681,7 @@ itm_rnd_helm_06,
   ["village_31_5_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ["village_31_6_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ["village_31_7_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
-  #["village_31_8_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_nomad_boots],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
+  #["village_31_8_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_leather_boots],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
 
 
   ["village_32_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
@@ -63935,10 +63935,10 @@ itm_rnd_helm_06,
 
   ["local_merchant","Local Merchant","Local Merchants",tf_guarantee_boots|tf_guarantee_armor, 0,0, fac_commoners,[itm_tunic_with_green_cape,itm_leather_boots,itm_butchering_knife],def_attrib|level(5),wp(40),knows_power_strike_1, merchant_face_1, merchant_face_2],
   ["tax_rebel","Peasant Rebel","Peasant Rebels",tf_guarantee_armor,0,reserved,fac_commoners,
-   [itm_cleaver,itm_knife,itm_pitch_fork,itm_sickle,itm_club,itm_stones,itm_leather_cap,itm_felt_hat,itm_felt_hat,itm_linen_tunic,itm_coarse_tunic,itm_nomad_boots,itm_wrapping_boots],
+   [itm_cleaver,itm_knife,itm_pitch_fork,itm_sickle,itm_club,itm_stones,itm_leather_cap,itm_felt_hat,itm_felt_hat,itm_linen_tunic,itm_coarse_tunic,itm_leather_boots,itm_wrapping_boots],
    def_attrib|level(4),wp(60),knows_common,vaegir_face1, vaegir_face2],
   ["trainee_peasant","Peasant","Peasants",tf_guarantee_armor,0,reserved,fac_commoners,
-   [itm_cleaver,itm_knife,itm_pitch_fork,itm_sickle,itm_club,itm_stones,itm_leather_cap,itm_felt_hat,itm_felt_hat,itm_linen_tunic,itm_coarse_tunic,itm_nomad_boots,itm_wrapping_boots],
+   [itm_cleaver,itm_knife,itm_pitch_fork,itm_sickle,itm_club,itm_stones,itm_leather_cap,itm_felt_hat,itm_felt_hat,itm_linen_tunic,itm_coarse_tunic,itm_leather_boots,itm_wrapping_boots],
    def_attrib|level(4),wp(60),knows_common,vaegir_face1, vaegir_face2],
   ["fugitive","Nervous Man","Nervous Men",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_commoners,
    [itm_short_tunic,itm_linen_tunic,itm_coarse_tunic, itm_archer_a, itm_leather_vest, itm_woolen_hose, itm_woolen_hose, itm_blue_hose, itm_wrapping_boots, itm_fur_hat, itm_leather_cap, itm_sword_type_xiii, itm_throwing_daggers],
@@ -63981,7 +63981,7 @@ itm_rnd_helm_06,
 ##   [itm_sword,itm_leather_jerkin,itm_leather_boots,itm_hunter,itm_leather_gloves],
 ##   def_attrib|agi_11|level(60),wp(130),knows_common,vaegir_face1, vaegir_face2],
 ##  ["peasant_rebel","Peasant Rebel","Peasant Rebels",tf_guarantee_armor,0,reserved,fac_peasant_rebels,
-##   [itm_cleaver,itm_knife,itm_pitch_fork,itm_sickle,itm_club,itm_stones,itm_leather_cap,itm_felt_hat,itm_felt_hat,itm_linen_tunic,itm_coarse_tunic,itm_nomad_boots,itm_wrapping_boots],
+##   [itm_cleaver,itm_knife,itm_pitch_fork,itm_sickle,itm_club,itm_stones,itm_leather_cap,itm_felt_hat,itm_felt_hat,itm_linen_tunic,itm_coarse_tunic,itm_leather_boots,itm_wrapping_boots],
 ##   def_attrib|level(4),wp(60),knows_common,vaegir_face1, vaegir_face2],
 ##  ["noble_refugee","Noble Refugee","Noble Refugees",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_noble_refugees,
 ##   [itm_sword,itm_leather_jacket,itm_hide_boots, itm_saddle_horse, itm_leather_jacket, itm_leather_cap],
@@ -64008,14 +64008,14 @@ itm_rnd_helm_06,
    def_attrib|level(19),wp_melee(100),knows_common|knows_riding_4|knows_ironflesh_4|knows_shield_4|knows_power_strike_4|knows_athletics_1,swadian_face_young_1, swadian_face_old_2],
   ["vaegir_archer_multiplayer_ai","Vaegir Archer","Vaegir Archers",tf_guarantee_all,0,0,fac_kingdom_2,
    [itm_arrows,itm_scimitar,itm_nomad_bow,
-    itm_leather_vest,itm_nomad_boots,itm_nomad_cap],
+    itm_leather_vest,itm_leather_boots,itm_nomad_cap],
    def_attrib|str_12|level(19),wp_melee(70)|wp_archery(110),knows_ironflesh_4|knows_power_draw_5|knows_athletics_6|knows_shield_2,vaegir_face_young_1, vaegir_face_older_2],
   ["vaegir_spearman_multiplayer_ai","Vaegir Spearman","Vaegir Spearmen",tf_guarantee_all_wo_ranged,0,0,fac_kingdom_2,
-   [itm_merchant_outfit,itm_nomad_boots,itm_nomad_cap, itm_spear_i, itm_tab_shield_kite_c, itm_mace_1, itm_javelin],
+   [itm_merchant_outfit,itm_leather_boots,itm_nomad_cap, itm_spear_i, itm_tab_shield_kite_c, itm_mace_1, itm_javelin],
    def_attrib|str_12|level(19),wp_melee(90),knows_ironflesh_4|knows_athletics_6|knows_power_throw_3|knows_power_strike_3|knows_shield_2,vaegir_face_young_1, vaegir_face_older_2],
   ["vaegir_horseman_multiplayer_ai","Vaegir Horseman","Vaegir Horsemen",tf_mounted|tf_guarantee_all_wo_ranged,0,0,fac_kingdom_2,
    [itm_raf_two_handed_axe_a,itm_scimitar,itm_lance,itm_tab_shield_kite_cav_a,
-    itm_lamellar_vest,itm_nomad_boots,itm_saddle_horse],
+    itm_lamellar_vest,itm_leather_boots,itm_saddle_horse],
    def_attrib|level(19),wp(100),knows_riding_4|knows_ironflesh_4|knows_power_strike_4|knows_shield_3,vaegir_face_young_1, vaegir_face_older_2],
   ["khergit_dismounted_lancer_multiplayer_ai","Khergit Dismounted Lancer","Khergit Dismounted Lancer",tf_guarantee_all_wo_ranged,0,0,fac_kingdom_3,
    [itm_sword_khergit_4,itm_winged_mace,itm_spear_i,
@@ -64043,11 +64043,11 @@ itm_rnd_helm_06,
    def_attrib|str_11|level(19),wp_melee(80)|wp_archery(110),knows_ironflesh_4|knows_power_strike_2|knows_shield_1|knows_power_draw_5|knows_athletics_6,nord_face_young_1, nord_face_old_2],
   ["rhodok_veteran_crossbowman_multiplayer_ai","Rhodok Crossbowman","Rhodok Crossbowmen",tf_guarantee_all,0,0,fac_kingdom_5,
    [itm_fighting_pick,itm_club_with_spike_head,itm_maul,itm_tab_shield_heater_c,itm_heavy_crossbow,itm_bolts,
-    itm_leather_cap,itm_merchant_outfit,itm_nomad_boots],
+    itm_leather_cap,itm_merchant_outfit,itm_leather_boots],
    def_attrib|level(19),wp_melee(100)|wp_crossbow(120),knows_common|knows_ironflesh_4|knows_shield_5|knows_power_strike_3|knows_athletics_6,rhodok_face_middle_1, rhodok_face_older_2],
   ["rhodok_veteran_spearman_multiplayer_ai","Rhodok Spearman","Rhodok Spearmen",tf_guarantee_all_wo_ranged,0,0,fac_kingdom_5,
    [itm_spear_i,itm_club_with_spike_head,itm_sledgehammer,itm_tab_shield_heater_c,itm_sword_type_xii,
-    itm_leather_cap,itm_kau_mail_shirt_d,itm_ragged_outfit,itm_nomad_boots],
+    itm_leather_cap,itm_kau_mail_shirt_d,itm_ragged_outfit,itm_leather_boots],
    def_attrib|level(19),wp(115),knows_common|knows_ironflesh_5|knows_shield_3|knows_power_strike_4|knows_athletics_3,rhodok_face_young_1, rhodok_face_older_2],
   ["rhodok_scout_multiplayer_ai","Rhodok Scout","Rhodok Scouts",tf_mounted|tf_guarantee_all,0,0,fac_kingdom_5,
    #TODO: Change weapons, copied from Nord Scout
@@ -64161,15 +64161,15 @@ itm_rnd_helm_06,
    str_9|agi_15|int_12|cha_12|level(15),wpex(109,33,132,15,32,100),knows_riding_3|knows_athletics_5|knows_shield_3|knows_weapon_master_3|knows_power_throw_3|knows_power_strike_2|knows_ironflesh_3,0x0000000e240070cd598bb02b9556428c00000000001eabce0000000000000000, swadian_face_old_2],
   ["quick_battle_troop_2","Usiatra","Usiatra", tf_hero|tf_female,0,0,fac_kingdom_1,
    [itm_nomad_bow, itm_barbed_arrows, itm_scimitar, itm_tab_shield_small_round_c, itm_sumpter_horse,
-    itm_gambeson_a, itm_splinted_greaves],
+    itm_gambeson_a, itm_splinted_greaves_long],
    str_12|agi_14|int_11|cha_18|level(22),wpex(182,113,112,159,82,115),knows_horse_archery_2|knows_riding_3|knows_athletics_4|knows_shield_2|knows_weapon_master_4|knows_power_draw_2|knows_power_throw_1|knows_power_strike_3|knows_ironflesh_4,0x000000007f004000719b69422165b71300000000001d5d1d0000000000000000, swadian_face_old_2],
   ["quick_battle_troop_3","Hegen","Hegen", tf_hero,0,0,fac_kingdom_1,
    [itm_heavy_lance, itm_sword_type_xiia, itm_sword_type_xiv, itm_tab_shield_heater_c, itm_warhorse,
-    itm_rhodok_four_plated_helmet, itm_coat_of_plates, itm_mail_mittens, itm_kau_mail_boots_dark],
+    itm_rhodok_four_plated_helmet, itm_coat_of_plates, itm_mail_mittens, itm_kau_mail_boots_dark_long],
    str_18|agi_16|int_12|cha_11|level(24),wpex(90,152,102,31,33,34),knows_riding_5|knows_athletics_5|knows_shield_3|knows_weapon_master_5|knows_power_strike_6|knows_ironflesh_6,0x000000018000324428db8a431491472400000000001e44a90000000000000000, swadian_face_old_2],
   ["quick_battle_troop_4","Konrad","Konrad", tf_hero,0,0,fac_kingdom_1,
    [itm_sword_type_xiia, itm_mace_4, itm_tab_shield_kite_c,
-    itm_mail_mittens, itm_mail_boots,itm_rnd_helm_04,itm_rnd_surcoat_01],
+    itm_mail_mittens, itm_mail_boots_long,itm_rnd_helm_04,itm_rnd_surcoat_01],
    str_18|agi_15|int_12|cha_12|level(24),wpex(130,150,130,30,50,90),knows_riding_2|knows_athletics_5|knows_shield_4|knows_weapon_master_5|knows_power_throw_3|knows_power_strike_6|knows_ironflesh_6,0x000000081700205434db6df4636db8e400000000001db6e30000000000000000, swadian_face_old_2],
   ["quick_battle_troop_5","Sverre","Sverre", tf_hero,0,0,fac_kingdom_1,
    [itm_long_axe, itm_sword_viking_1, itm_tab_shield_round_d,
@@ -64189,7 +64189,7 @@ itm_rnd_helm_06,
    str_12|agi_15|int_12|cha_12|level(18),wpex(100,40,100,85,15,130),knows_horse_archery_2|knows_riding_2|knows_athletics_5|knows_shield_2|knows_weapon_master_4|knows_power_draw_2|knows_power_throw_4|knows_power_strike_2|knows_ironflesh_2,0x000000015400300118d36636db6dc8e400000000001db6db0000000000000000, swadian_face_old_2],
   ["quick_battle_troop_9","Aethrod","Aethrod", tf_hero,0,0,fac_kingdom_1,
    [itm_nomad_bow, itm_barbed_arrows, itm_barbed_arrows, itm_scimitar_b,
-    itm_splinted_greaves, itm_lamellar_vest],
+    itm_splinted_greaves_long, itm_lamellar_vest],
    str_16|agi_21|int_12|cha_14|level(26),wpex(182,113,112,159,82,115),knows_horse_archery_2|knows_riding_2|knows_athletics_7|knows_shield_2|knows_weapon_master_4|knows_power_draw_7|knows_power_throw_3|knows_power_strike_3|knows_ironflesh_4,0x000000000000210536db6db6db6db6db00000000001db6db0000000000000000, swadian_face_old_2],
   ["quick_battle_troop_10","Zaira","Zaira", tf_hero|tf_female,0,0,fac_kingdom_1,
    [itm_strong_bow, itm_bodkin_arrows, itm_bodkin_arrows,
@@ -64231,10 +64231,10 @@ itm_rnd_helm_06,
 
   # ["swadian_merchant", "Merchant of Praven", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_4, [itm_sword_two_handed_a, itm_merchant_outfit, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
   # ["vaegir_merchant", "Merchant of Reyvadin", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_5, [itm_sword_two_handed_a, itm_merchant_outfit, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  # ["khergit_merchant", "Merchant of Tulga", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_sword_two_handed_a, itm_gambeson_b, itm_nomad_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  # ["nord_merchant", "Merchant of Sargoth", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_sword_two_handed_a, itm_gambeson_b, itm_nomad_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
+  # ["khergit_merchant", "Merchant of Tulga", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_sword_two_handed_a, itm_gambeson_b, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
+  # ["nord_merchant", "Merchant of Sargoth", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_sword_two_handed_a, itm_gambeson_b, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
   # ["rhodok_merchant", "Merchant of Jelkala", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_3, [itm_sword_two_handed_a, itm_leather_jerkin, itm_blue_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  # ["sarranid_merchant", "Merchant of Shariz", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_6, [itm_sword_two_handed_a,  itm_sarranid_boots_a], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
+  # ["sarranid_merchant", "Merchant of Shariz", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_6, [itm_sword_two_handed_a,  itm_sarranid_boots_a_long_long], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
 
   ["merchant_kingdom_1", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_merchant_outfit, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
   ["merchant_kingdom_2", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_merchant_outfit, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
@@ -64294,7 +64294,7 @@ itm_rnd_helm_06,
   ["dplmc_constable","Constable","Constables",tf_hero|tf_male,0,0,fac_commoners,[itm_kau_mail_a, itm_leather_boots],
    knight_attrib_5,wp_melee(200),knows_common|knows_shield_3|knows_ironflesh_3|knows_power_strike_4|knows_athletics_4,0x0000000b4b1015054b1b4d591cba28d300000000001e472b0000000000000000],
 
-  ["dplmc_chancellor","Chancellor","Chancellors",tf_hero|tf_male,0,0,fac_commoners,[itm_priest_cap_2,itm_priest_robe_2,itm_priest_2_boots],def_attrib|level(60), wp(40),knows_inventory_management_10, 0x00000009a20c21cf491bad28a28628d400000000001e371a0000000000000000],
+  ["dplmc_chancellor","Chancellor","Chancellors",tf_hero|tf_male,0,0,fac_commoners,[itm_priest_cap_2,itm_priest_robe_2,itm_hide_boots],def_attrib|level(60), wp(40),knows_inventory_management_10, 0x00000009a20c21cf491bad28a28628d400000000001e371a0000000000000000],
 
   ["dplmc_messenger","Messenger","Messengers",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_gloves|tf_guarantee_horse|tf_guarantee_ranged,0,0,fac_neutral,
    [itm_sword_type_xii,itm_linen_tunic,itm_leather_boots,itm_courser,itm_leather_gloves,itm_light_crossbow,itm_bolts],
@@ -64371,7 +64371,7 @@ itm_rnd_helm_06,
 
 
     ["whore","Madame","Madams",tf_female|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
-    [itm_peasant_dress, itm_red_dress, itm_brown_dress, itm_green_dress, itm_priest_2_boots],
+    [itm_peasant_dress, itm_red_dress, itm_brown_dress, itm_green_dress, itm_hide_boots],
     def_attrib|level(5),wp(70),knows_common,refugee_face1,refugee_face2],
 
     ["priest_catholic", "Catholic Priest", "Priest", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
@@ -65433,8 +65433,8 @@ itm_rnd_helm_06,
     itm_mail_coif,
     itm_rhodok_great_helmet,
 
-    itm_mail_boots,
-    itm_splinted_greaves,
+    itm_mail_boots_long,
+    itm_splinted_greaves_long,
     itm_frenchpepperpot2,
     itm_frenchpepperpot3,
     itm_munitionshelm2,
@@ -65837,7 +65837,7 @@ itm_rnd_helm_06,
 
     (itm_tab_shield_kite_c, imod_thick),
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -65850,7 +65850,7 @@ itm_rnd_helm_06,
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
     itm_morningstar,
 
@@ -65939,7 +65939,7 @@ itm_rnd_helm_06,
 
     itm_andalusian_helmet_b,
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -65952,7 +65952,7 @@ itm_rnd_helm_06,
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
 
     itm_talak_warhammer,
@@ -66049,7 +66049,7 @@ itm_rnd_helm_06,
 
     (itm_tab_shield_kite_c, imod_thick),
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -66062,7 +66062,7 @@ itm_rnd_helm_06,
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
     itm_morningstar,
 
@@ -66158,7 +66158,7 @@ itm_rnd_helm_06,
 
     (itm_tab_shield_kite_c, imod_thick),
 
-    itm_mail_boots,
+    itm_mail_boots_long,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -66171,7 +66171,7 @@ itm_rnd_helm_06,
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots,
+    itm_mail_boots_long,
     itm_lance,
     itm_morningstar,
 
@@ -66423,7 +66423,7 @@ itm_rnd_helm_06,
    0, 0, fac_kingdom_1,
   [
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_lithuania_a,
   itm_surcoat_lithuania_a,
@@ -66463,7 +66463,7 @@ itm_rnd_helm_06,
   itm_mon_lamellar_b,
   itm_mon_lamellar_a,
   itm_hide_boots,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
   itm_leather_gloves,
   itm_sword_khergit_3,
   itm_khergit_bow,
@@ -66487,7 +66487,7 @@ itm_rnd_helm_06,
   itm_bishop_great_helm,
 
   itm_mail_mittens,
-  itm_mail_boots,
+  itm_mail_boots_long,
 
   itm_warhorse_denmark_a,
   itm_bishop_a,
@@ -66496,7 +66496,7 @@ itm_rnd_helm_06,
   itm_tab_shield_heater_cav_b,
 
   itm_bishop_great_helm,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
   itm_talak_warhammer,
 
   itm_bishop_armour,
@@ -66547,7 +66547,7 @@ itm_rnd_helm_06,
   itm_surcoat_gslask,
 
   itm_mail_mittens,
-  itm_mail_boots,
+  itm_mail_boots_long,
 
   itm_heraldic_lance,
   itm_sword_type_xiia,
@@ -66556,7 +66556,7 @@ itm_rnd_helm_06,
   itm_byzantine_greaves,
   itm_polski_helm,
 
-  itm_mail_boots,
+  itm_mail_boots_long,
   itm_rhodok_nasal_helmet_a,
 
   itm_wenceslav_helmet,
@@ -66583,7 +66583,7 @@ itm_rnd_helm_06,
   itm_osp_great_helm_b,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_hre_a,
   itm_warhorse_hre_a,
@@ -66631,7 +66631,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_04,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_hungary_a,
   itm_surcoat_hungary_a,
@@ -66700,7 +66700,7 @@ itm_rnd_helm_06,
    0, 0, fac_kingdom_1,
   [
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_england_a,
   itm_surcoat_england_a,
@@ -66748,7 +66748,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_04,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_france_a,
   itm_surcoat_france_a,
@@ -66800,7 +66800,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_06,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_norway_a,
   itm_surcoat_norway_a,
@@ -66854,7 +66854,7 @@ itm_rnd_helm_06,
   itm_mail_coif,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_scotland_a,
   itm_surcoat_scotland_a,
@@ -66940,7 +66940,7 @@ itm_rnd_helm_06,
   itm_mail_coif,
   itm_mail_coif,
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_sweden_a,
   itm_surcoat_sweden_a,
@@ -66997,7 +66997,7 @@ itm_rnd_helm_06,
   itm_kolpak_mail,
 
   itm_mail_mittens,
-  itm_mail_boots,
+  itm_mail_boots_long,
   itm_heraldic_lance,
 
   itm_portugal_horse,
@@ -67114,7 +67114,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_05,
   itm_rnd_helm_06,
   itm_mail_mittens,
-  itm_splinted_greaves,
+  itm_splinted_greaves_long,
 
   itm_castile_horse,
   itm_kau_castile_a,
@@ -67168,7 +67168,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_05,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_red,
   itm_rnd_surcoat_02,
@@ -67225,7 +67225,7 @@ itm_rnd_helm_06,
   itm_sarranid_boots_c,
   itm_andalus_marinid_hasfid_elite_b,
   itm_sarranid_boots_c,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
   itm_leather_gloves,
   itm_heavy_lance,
   itm_sarranid_cavalry_sword,
@@ -67251,7 +67251,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_06,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_white,
   itm_kau_papal,
@@ -67310,7 +67310,7 @@ itm_rnd_helm_06,
    itm_byz_kataphrakt,
 
    itm_byzantine_greaves,
-   itm_byz_lord_boots,
+   itm_byz_lord_boots_long,
 
    itm_elm9,
    itm_elm10,
@@ -67336,7 +67336,7 @@ itm_rnd_helm_06,
   itm_vik_norman_helmet_a,
 
   itm_mail_mittens,
-  itm_mail_boots,
+  itm_mail_boots_long,
 
   itm_warhorse,
   itm_rnd_surcoat_02,
@@ -67480,7 +67480,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_06,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_white,
   itm_kau_latin_b,
@@ -67528,7 +67528,7 @@ itm_rnd_helm_06,
    0, 0, fac_kingdom_1,
   [
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_mamluk_cap,
   itm_seljuk_helmet,
@@ -67568,7 +67568,7 @@ itm_rnd_helm_06,
    0, 0, fac_kingdom_1,
   [
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_mon_lamellar_horse_a,
   itm_mon_lamellar_horse_b,
@@ -67750,7 +67750,7 @@ itm_rnd_helm_06,
   itm_rnd_helm_06,
 
   itm_mail_mittens,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
 
   itm_warhorse_white,
   itm_rnd_surcoat_12,
@@ -67965,7 +67965,7 @@ itm_rnd_helm_06,
   itm_bishop_great_helm,
 
   itm_mail_mittens,
-  itm_mail_boots,
+  itm_mail_boots_long,
 
   itm_bishop_a,
   itm_heraldic_lance,
@@ -67975,7 +67975,7 @@ itm_rnd_helm_06,
   itm_warhorse,
 
   itm_bishop_great_helm,
-  itm_kau_mail_boots_dark,
+  itm_kau_mail_boots_dark_long,
   itm_talak_warhammer,
 
   itm_bishop_armour,

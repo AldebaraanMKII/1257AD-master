@@ -1986,8 +1986,5 @@ g_leave_defeated_faction_cur_lord
 suggested_to_attack_fief
 g_place_lady_under_protection_cur_lady
 g_minister_notification_hours
-changes_made
-cstm_temp_name
-cstm_temp_pname
 g_diplomatic_colors
 g_player_cur_role
