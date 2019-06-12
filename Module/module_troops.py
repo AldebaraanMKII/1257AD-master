@@ -27595,10 +27595,7 @@ itm_spear_p,
     khergit_face_younger_1, khergit_face_old_2
   ],
 
-
-
 ##################################################
-
 
     ["scottish_village_recruit",
      "Nativi Pedes",
@@ -27644,46 +27641,30 @@ itm_spear_p,
     euro_face_1, euro_face_2
     ],
 
-
-    ["scottish_forinsec_archer",
-     "Servitium Forensicum Sagittarius",
-     "Servitium Forensicum Sagittari",
-    tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_helmet,
+    ["scottish_infantry_recruit",
+     "Scottish Recruit",
+     "Scottish Recruits",
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots ,
     0, 0, fac_kingdom_1,
     [
-    itm_arrows,
+    itm_gaelic_shirt_blue,
+    itm_gaelic_shirt_green,
+    itm_gaelic_shirt_red,
 
-    itm_hunting_bow,
-    itm_short_bow,
-
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
-
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-
-    itm_arming_cap,
-    itm_1257_hood,
-    itm_flat_kettle_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
-
-    itm_archer_a,
-    itm_archer_b,
-    itm_archer_c,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-
-    itm_legs_with_shoes,
-    itm_shoes,
+    itm_peasant_f,
+    itm_hatchet,
+    itm_darts,
+    itm_club,
+    itm_studded_club,
+    itm_spiked_mace,
       #itm_bare_legs,
-    itm_highlander_boots_1,
+    itm_knife,
+    itm_butchering_knife,
+    itm_scythe,
     ],
-    ranged_attrib_3, skirmisher_wp, skirmisher_skills,
+    foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
     ],
-
 
     ["scottish_forinsec_spearman",
      "Servitium Forensicum Hastatus",
@@ -27727,7 +27708,6 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-
     ["scottish_clansman",
      "Scottis Clann",
      "Scottis Clann",
@@ -27742,7 +27722,6 @@ itm_spear_p,
     itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
 
     itm_surcoat_gaelic,
-
     itm_gaelic_shirt_blue,
     itm_gaelic_shirt_green,
     itm_elm2,
@@ -27780,7 +27759,6 @@ itm_spear_p,
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     euro_face_1, euro_face_2
     ],
-
 
     ["scottish_heavy_swordsman",
      "Gall-Òglaich Spatharius",
@@ -27836,7 +27814,6 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-
     ["scottish_heavy_axeman",
      "Gall-Òglaich Axeman",
      "Gall-Òglaichean Axemen",
@@ -27865,6 +27842,407 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_3, euro_face_4
+    ],
+
+    ["scottish_forinsec_archer",
+     "Servitium Forensicum Sagittarius",
+     "Servitium Forensicum Sagittari",
+    tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_helmet,
+    0, 0, fac_kingdom_1,
+    [
+    itm_arrows,
+
+    itm_hunting_bow,
+    itm_short_bow,
+
+    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
+
+
+    itm_arming_cap,
+    itm_1257_hood,
+    itm_flat_kettle_hat,
+    itm_elm2,
+    itm_norman_coif_d,
+    itm_raf_spangen,
+
+    itm_archer_a,
+    itm_archer_b,
+    itm_archer_c,
+    itm_militia_tunic_a,
+    itm_militia_tunic_b,
+
+    itm_legs_with_shoes,
+    itm_shoes,
+      #itm_bare_legs,
+    itm_highlander_boots_1,
+    ],
+    ranged_attrib_3, skirmisher_wp, skirmisher_skills,
+    euro_face_1, euro_face_2
+    ],
+
+    ["scottish_archer_2",
+     "Scottish Veteran Archer",
+     "Scottish Veteran Archers",
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged,
+    0, 0, fac_kingdom_1,
+    [
+    itm_barbed_arrows,
+    itm_short_bow,
+
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_b,
+    itm_raf_one_handed_axe_c,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
+    itm_raf_one_handed_axe_h,
+    itm_legs_with_shoes,
+    itm_shoes,
+      #itm_bare_legs,
+    itm_sword_viking_2,
+    itm_sword_viking_2_small,
+    itm_sword_viking_3,
+    itm_sword_viking_3_small,
+
+    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+
+    itm_gaelic_byrnie_a,
+    itm_gaelic_byrnie_b,
+    itm_padded_cloth,
+
+    itm_elm2,
+    itm_vik_spangen_a,
+    itm_vik_spangen_b,
+    itm_vik_norman_helmet_e,
+    itm_kettle_cloth,
+
+    itm_leather_jerkin,
+    itm_pelt_coat,
+    itm_rawhide_coat,
+
+
+    ],
+    ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
+    nord_face_young_1, swadian_face_old_2
+    ],
+
+
+    ["scottish_light_cavalry",
+     "Scottish Mounted Sergeant",
+     "Scottish Mounted Sergeants",
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse,
+    0, 0, fac_kingdom_1,
+    [
+    itm_javelin,
+    itm_throwing_spears,
+
+    itm_gaelic_shirt_blue,
+    itm_gaelic_shirt_red,
+    itm_gaelic_shirt_green,
+
+    itm_elm2,
+    itm_raf_spangen,
+    itm_spear_f,
+    itm_spear_h,
+    itm_spear_j,
+    itm_spear_k,
+    itm_spear_l,
+    itm_spear_m,
+    itm_spear_n,
+    itm_spear_o,
+    itm_spear_p,
+
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
+
+    itm_1257_hood,
+    itm_raf_one_handed_axe_b,
+    itm_raf_one_handed_axe_c,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_g,
+    itm_legs_with_shoes,
+    itm_shoes,
+      #itm_bare_legs,
+
+    itm_sumpter_horse,
+    itm_saddle_horse,
+    ],
+    horse_attrib_2, nbl_skirmisher_wp, nbl_skirmisher_skills,
+    euro_face_3, euro_face_4
+    ],
+
+
+    ["scottish_medium_cavalry",
+     "Scottish Man-at-arms",
+     "Scottish Men-at-arms",
+    tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
+    0, 0, fac_kingdom_1,
+    [
+    itm_javelin,
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_b,
+    itm_raf_one_handed_axe_c,
+    itm_raf_one_handed_axe_f,
+    itm_raf_spangen,
+    itm_raf_one_handed_axe_h,
+    itm_falchion,
+
+    itm_1257_hood,
+    itm_spear_k,
+    itm_spear_l,
+    itm_spear_n,
+    itm_haubergeon,
+
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_elm2,
+    itm_targe_5,
+    itm_targe_6,
+
+    itm_gaelic_byrnie_a,
+    itm_gaelic_byrnie_b,
+    itm_militia_tunic_a,
+    itm_militia_tunic_b,
+    itm_padded_cloth,
+
+    itm_legs_with_shoes,
+    itm_shoes,
+      #itm_bare_legs,
+
+    itm_vik_spangen_a,
+    itm_vik_spangen_b,
+    itm_vik_norman_helmet_e,
+    itm_kettle_cloth,
+    itm_elm2,
+
+    itm_saddle_horse,
+    itm_courser,
+    ],
+    horse_attrib_4, nbl_skirmisher2_wp, nbl_skirmisher2_skills,
+    euro_face_1, euro_face_2
+    ],
+
+
+    ["scottish_squire",
+     "Scottish Lesser Knight",
+     "Scottish Lesser Knights",
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
+    0, 0, fac_kingdom_1,
+    [
+    itm_lance,
+    itm_light_lance,
+
+    itm_tab_shield_kite_c,
+    itm_tab_shield_kite_c,
+    itm_tab_shield_heater_c,
+    itm_tab_shield_heater_c,
+
+    itm_kau_mail_a,
+    itm_kau_mail_b,
+    itm_kau_mail_shirt_a,
+    itm_kau_mail_shirt_b,
+    itm_gaelic_mail_shirt_a,
+    itm_gaelic_mail_shirt_b,
+    itm_haubergeon,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiii,
+    itm_sword_type_xiiib,
+    itm_sword_viking_1,
+    itm_sword_viking_2,
+    itm_sword_viking_3,
+
+    itm_legs_with_shoes,
+    itm_shoes,
+      #itm_bare_legs,
+
+    itm_priest_cap_1,
+    itm_mail_coif,
+    itm_great_helmet_d,
+    itm_elm1,
+    itm_elm2,
+    itm_raf_spangen,
+    itm_norman_coif_d,
+    itm_kettle_cloth,
+    itm_elm3,
+    itm_elm8,
+    itm_maciejowski_kettle_hat_b,
+    itm_maciejowski_kettle_hat_a,
+    itm_norman_faceplate,
+    itm_priest_cap_2,
+    itm_norman_coif_a,
+    itm_vik_spangen_a,
+    itm_norman_coif_e,
+    itm_kettlehat_b,
+    itm_arming_cap,
+    itm_flat_topped_helmet_b,
+    itm_rhodok_nasal_helmet_a,
+    itm_rhodok_kettle_hat_c,
+    itm_rhodok_four_plated_helmet,
+
+    itm_hunter,
+    itm_horse_d,
+    itm_horse_e,
+
+	########## NEW v2.5
+    itm_kettlehat_d,
+    itm_kettlehat_e,
+
+    itm_modded_helmet_kettle_mail_1,
+    itm_modded_helmet_kettle_mail_2,
+    itm_modded_helmet_kettle_mail_3,
+    itm_modded_helmet_kettle_mail_4,
+    itm_modded_helmet_kettle_mail_5,
+
+    itm_modded_mail_coif_1,
+
+    itm_capelina_crusader,
+
+    itm_sa_crusader_helm_1,
+    itm_sa_crusader_helm_2,
+    itm_sa_crusader_helm_3,
+    itm_sa_crusader_helm_4,
+    itm_sa_crusader_helm_5,
+    itm_sa_crusader_helm_6,
+    itm_sa_crusader_helm_7,
+    itm_sa_crusader_helm_8,
+    itm_sa_crusader_helm_9,
+    itm_sa_crusader_helm_10,
+    ##########
+
+
+
+    ],
+    horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
+    euro_face_3, euro_face_4
+    ],
+
+
+    ["scottish_knight",
+     "Scottish Knight",
+     "Scottish Knights",
+    tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
+    0, 0, fac_kingdom_1,
+    [
+    itm_heavy_lance,
+    itm_heraldic_lance,
+    itm_mail_boots,
+
+    itm_tab_shield_kite_c,
+    itm_tab_shield_heater_c,
+
+
+    itm_mail_coif,
+    itm_great_helmet_d,
+    itm_elm1,
+    itm_elm2,
+    itm_great_helmet_decorative,
+    itm_norman_coif_d,
+    itm_kettle_cloth,
+    itm_elm3,
+    itm_elm8,
+    itm_raf_spangen,
+
+    itm_norman_faceplate,
+
+    itm_norman_coif_a,
+    itm_kettlehat_b,
+    itm_arming_cap,
+    itm_flat_topped_helmet_b,
+    itm_rhodok_nasal_helmet_a,
+    itm_rhodok_kettle_hat_c,
+    itm_rhodok_four_plated_helmet,
+
+    itm_mail_mittens,
+
+    itm_cp391_sword,
+    itm_sword_viking_3,
+    itm_sword_type_xiiib,
+    itm_sword_type_xii,
+    itm_raf_one_handed_axe_h,
+      #itm_talak_mace,
+
+    itm_rnd_surcoat_01,
+    itm_rnd_surcoat_02,
+    itm_rnd_surcoat_03,
+    itm_rnd_surcoat_04,
+    itm_rnd_surcoat_05,
+    itm_rnd_surcoat_06,
+    itm_rnd_surcoat_07,
+    itm_rnd_surcoat_08,
+    itm_rnd_surcoat_09,
+    itm_rnd_surcoat_10,
+    itm_rnd_surcoat_11,
+    itm_rnd_surcoat_12,
+    itm_rnd_surcoat_13,
+    itm_rnd_surcoat_14,
+    itm_rnd_surcoat_15,
+    itm_rnd_surcoat_16,
+    itm_rnd_surcoat_17,
+    itm_rnd_surcoat_18,
+    itm_rnd_surcoat_19,
+    itm_rnd_surcoat_20,
+    itm_rnd_surcoat_21,
+    itm_rnd_surcoat_22,
+    itm_rnd_surcoat_23,
+
+    # itm_hunter,
+    # itm_horse_e,
+    # itm_horse_d,
+    # itm_warhorse_yellow,
+    # itm_warhorse_blue,
+    # itm_warhorse_white,
+    # itm_warhorse_red,
+    itm_warhorse,
+	########## NEW v2.5
+    itm_modded_helmet_heavy_1,
+    itm_modded_helmet_heavy_2,
+    itm_modded_helmet_heavy_3,
+
+    itm_sa_crusader_hard_helm_1,
+    itm_sa_crusader_hard_helm_2,
+    itm_sa_crusader_hard_helm_3,
+    itm_sa_crusader_hard_helm_4,
+    itm_sa_crusader_hard_helm_5,
+    itm_sa_crusader_hard_helm_6,
+    itm_sa_crusader_hard_helm_6_namet,
+    itm_sa_crusader_helm_11,
+
+    itm_kettlehat_d,
+    itm_kettlehat_e,
+
+    itm_modded_helmet_kettle_mail_1,
+    itm_modded_helmet_kettle_mail_2,
+    itm_modded_helmet_kettle_mail_3,
+    itm_modded_helmet_kettle_mail_4,
+    itm_modded_helmet_kettle_mail_5,
+
+    itm_modded_mail_coif_1,
+
+    itm_capelina_crusader,
+
+    itm_sa_crusader_helm_1,
+    itm_sa_crusader_helm_2,
+    itm_sa_crusader_helm_3,
+    itm_sa_crusader_helm_4,
+    itm_sa_crusader_helm_5,
+    itm_sa_crusader_helm_6,
+    itm_sa_crusader_helm_7,
+    itm_sa_crusader_helm_8,
+    itm_sa_crusader_helm_9,
+    itm_sa_crusader_helm_10,
+    ##########
+
+    ],
+    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+    euro_face_1, euro_face_2
     ],
 
 
@@ -68451,9 +68829,16 @@ upgrade(troops,"anatolian_turkoman_2", "anatolian_turkoman_3")
 # upgrade2(troops,"scottish_village_recruit", "scottish_forinsec_archer", "scottish_forinsec_spearman")
 # upgrade(troops,"scottish_forinsec_spearman", "scottish_clansman")
 # upgrade2(troops,"scottish_clansman", "scottish_heavy_swordsman", "scottish_heavy_axeman")
-upgrade(troops,"scottish_village_recruit", "scottish_forinsec_spearman")
+####### NEW v3.0-KOMKE START-
+upgrade(troops,"scottish_infantry_recruit", "scottish_forinsec_spearman")
 upgrade(troops,"scottish_forinsec_spearman", "scottish_clansman")
 upgrade2(troops,"scottish_clansman", "scottish_heavy_swordsman", "scottish_heavy_axeman")
+upgrade(troops,"scottish_village_recruit", "scottish_forinsec_archer")
+upgrade(troops,"scottish_forinsec_archer", "scottish_archer_2")
+upgrade(troops,"scottish_light_cavalry", "scottish_medium_cavalry")
+upgrade(troops,"scottish_medium_cavalry", "scottish_squire")
+upgrade(troops,"scottish_squire", "scottish_knight")
+####### NEW v3.0-KOMKE END- 
 
 #upgrade(troops,"scottish_forinsec_archer", "euro_archer_2")
 

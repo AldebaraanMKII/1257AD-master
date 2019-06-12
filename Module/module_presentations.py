@@ -18860,9 +18860,7 @@ presentations = [
           (neg|troop_is_hero, ":cur_troop"),
           # can upgrade
           (troop_get_upgrade_troop, ":upgrade_troop", ":cur_troop", 0),
-####### NEW v2.9-KOMKE START-            
           (gt, ":upgrade_troop", 0),
-####### NEW v2.9-KOMKE END-               
           # page_no_for_cur_troop
           (call_script, "script_get_page_no_of_troop_tree_for_troop_on_1", ":cur_troop"),
           (assign, ":page_no_for_cur_troop", reg0),
@@ -18885,6 +18883,15 @@ presentations = [
             (assign, ":is_root_troop", 0),
             (assign, ":end_cond", 0), #break
           (try_end),
+####### NEW v3.0-KOMKE START-dirty fix to mongol troop tree
+          (try_begin),
+            (eq, ":cur_troop", "trp_tatar_tribesman"),
+            (assign, ":is_root_troop", 1),
+          (else_try),
+            (gt, ":cur_troop", "trp_tatar_tribesman"),
+            (assign, ":is_root_troop", 0),
+          (try_end),
+####### NEW v3.0-KOMKE END- 
           (eq, ":is_root_troop", 1), # draw troop tree of cur root_troop
           (call_script, "script_troop_tree_recursive_backtracking", ":cur_troop", 50, reg2, ":offset_x"),
           (val_add, reg2, 160),
