@@ -1988,3 +1988,12 @@ g_place_lady_under_protection_cur_lady
 g_minister_notification_hours
 g_diplomatic_colors
 g_player_cur_role
+g_decap_enabled
+g_decap_minimum_damage
+g_decapitations_debugging
+g_decap_negative_health
+g_decap_chance
+g_decap_psys_blood_decapitation
+g_decap_psys_game_blood
+g_decap_psys_game_blood_2
+g_dismemberment_enabled

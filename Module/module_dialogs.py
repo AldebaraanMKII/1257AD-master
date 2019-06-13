@@ -5206,864 +5206,864 @@ dialogs = [
 
 
 
-[anyone|auto_proceed, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_town_talk),
-  ],
-  "{!}.", "merchant_quest_4_start",
-[
-  ]],
+# [anyone|auto_proceed, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_town_talk),
+  # ],
+  # "{!}.", "merchant_quest_4_start",
+# [
+  # ]],
 
-[anyone, "merchant_quest_4_start",
-[
-  ],
-  "It's time, lads! Up and at them!", "close_window",
-[
-    (try_for_agents, ":agent_no"),
-        (agent_get_troop_id, ":agent_troop_id", ":agent_no"),
-        (ge, ":agent_troop_id", "trp_looter"),
-        (le, ":agent_troop_id", "trp_desert_bandit"),
-        (agent_set_team, ":agent_no", 1),
-      (try_end),
+# [anyone, "merchant_quest_4_start",
+# [
+  # ],
+  # "It's time, lads! Up and at them!", "close_window",
+# [
+    # (try_for_agents, ":agent_no"),
+        # (agent_get_troop_id, ":agent_troop_id", ":agent_no"),
+        # (ge, ":agent_troop_id", "trp_looter"),
+        # (le, ":agent_troop_id", "trp_desert_bandit"),
+        # (agent_set_team, ":agent_no", 1),
+      # (try_end),
 
-    (get_player_agent_no, ":player_agent"),
+    # (get_player_agent_no, ":player_agent"),
 
-    (assign, ":minimum_distance", 1000),
-    (try_for_agents, ":agent_id_1"),
-      (neq, ":agent_id_1", ":player_agent"),
-      (agent_get_team, ":agent_team_1", ":agent_id_1"),
-      (eq, ":agent_team_1", 0),
-      (agent_get_position, pos0, ":agent_id_1"),
+    # (assign, ":minimum_distance", 1000),
+    # (try_for_agents, ":agent_id_1"),
+      # (neq, ":agent_id_1", ":player_agent"),
+      # (agent_get_team, ":agent_team_1", ":agent_id_1"),
+      # (eq, ":agent_team_1", 0),
+      # (agent_get_position, pos0, ":agent_id_1"),
 
-      (try_for_agents, ":agent_id_2"),
-        (agent_get_team, ":agent_team_2", ":agent_id_2"),
-        (eq, ":agent_team_2", 1),
-        (agent_get_position, pos1, ":agent_id_2"),
+      # (try_for_agents, ":agent_id_2"),
+        # (agent_get_team, ":agent_team_2", ":agent_id_2"),
+        # (eq, ":agent_team_2", 1),
+        # (agent_get_position, pos1, ":agent_id_2"),
 
-        (get_distance_between_positions, ":dist", pos0, pos1),
+        # (get_distance_between_positions, ":dist", pos0, pos1),
 
-        (le, ":dist", ":minimum_distance"),
-        (assign, ":minimum_distance", ":dist"),
-        (copy_position, pos2, pos1),
-      (try_end),
+        # (le, ":dist", ":minimum_distance"),
+        # (assign, ":minimum_distance", ":dist"),
+        # (copy_position, pos2, pos1),
+      # (try_end),
 
-      (agent_set_scripted_destination, ":agent_id_1", pos2, 0),
-      (agent_set_speed_limit, ":agent_id_1", 10),
-    (try_end),
-  ]],
+      # (agent_set_scripted_destination, ":agent_id_1", pos2, 0),
+      # (agent_set_speed_limit, ":agent_id_1", 10),
+    # (try_end),
+  # ]],
 
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_relative_of_merchant", "trp_relative_of_merchants_end"),
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_relative_of_merchant", "trp_relative_of_merchants_end"),
 
-    (try_begin),
-      (check_quest_active, "qst_save_relative_of_merchant"),
-      (call_script, "script_succeed_quest", "qst_save_relative_of_merchant"),
-    (try_end),
+    # (try_begin),
+      # (check_quest_active, "qst_save_relative_of_merchant"),
+      # (call_script, "script_succeed_quest", "qst_save_relative_of_merchant"),
+    # (try_end),
 
-    (str_store_party_name, s9, "$g_starting_town"),
+    # (str_store_party_name, s9, "$g_starting_town"),
 
-    (assign, "$relative_of_merchant_is_found", 1),
-  ],
-  "Thank you! Thank you, {sir/my lady}, for rescuing me from those fiends. Did my brother in {s9} put you onto their track?", "relative_saved_1a",
-[
-  ]],
+    # (assign, "$relative_of_merchant_is_found", 1),
+  # ],
+  # "Thank you! Thank you, {sir/my lady}, for rescuing me from those fiends. Did my brother in {s9} put you onto their track?", "relative_saved_1a",
+# [
+  # ]],
 
-[anyone|plyr, "relative_saved_1a",
-[],
-  "Yes. I told him that I would find you. I advise you to return to your family as quickly as you can -- and be careful on the road.", "close_window",
-[
-  ]],
-
-
-
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
-    (eq, "$talk_context",tc_hero_defeated),
-  ],
-  "Ay! Spare me! Spare my life! Let me go, and I'll go far away from here, and learn an honest trade, and you'll never hear of me again!", "bandit_leader_1a",
-[]],
-
-[anyone|plyr, "bandit_leader_1a",
-[
-    (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
-  ],
-  "I'll spare your life -- but in exchange, I want information. Either you or your mates kidnapped the brother of a prominent merchant in town. Tell me where you're hiding him, and give me your word that you'll stop troubling the people of these parts, and you can go free.", "bandit_leader_1b",
-[]],
+# [anyone|plyr, "relative_saved_1a",
+# [],
+  # "Yes. I told him that I would find you. I advise you to return to your family as quickly as you can -- and be careful on the road.", "close_window",
+# [
+  # ]],
 
 
 
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
+    # (eq, "$talk_context",tc_hero_defeated),
+  # ],
+  # "Ay! Spare me! Spare my life! Let me go, and I'll go far away from here, and learn an honest trade, and you'll never hear of me again!", "bandit_leader_1a",
+# []],
 
-
-[anyone, "start",
-[
-    (eq, "$talk_context",tc_party_encounter),
-    (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
-  ],
-"What do you want?", "looter_leader_1", []],
-
-[anyone|plyr, "looter_leader_1",
-[
-    (store_faction_of_party, ":starting_town_faction", "$g_starting_town"),
-    (try_begin),
-      (eq, ":starting_town_faction", "fac_kingdom_1"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_1"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_2"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_3"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_3"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_4"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_4"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_5"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_5"),
-    (else_try),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_6"),
-      (eq, ":starting_town_faction", "fac_kingdom_42"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_6"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_7"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_7"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_8"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_8"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_9"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_9"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_10"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_10"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_11"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_11"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_12"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_12"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_13"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_13"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_14"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_14"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_15"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_15"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_16"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_16"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_17"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_17"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_18"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_18"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_19"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_19"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_20"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_20"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_papacy"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_21"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_22"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_22"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_23"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_23"),
-    (else_try),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_24"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_38"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_39"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_40"),
-      (eq, ":starting_town_faction", "fac_kingdom_41"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_24"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_25"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_25"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_26"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_26"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_27"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_27"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_28"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_28"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_29"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_29"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_30"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_30"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_31"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_31"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_32"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_32"),  
-    (else_try),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_34"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_35"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_36"),
-      (eq, ":starting_town_faction", "fac_kingdom_33"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),    
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_37"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_37"),    
-    (try_end),
-
-    (str_store_troop_name, s9, ":troop_of_merchant"),
-  ],
-"I've been looking for you. Tell me where you keep your prisoners, and I'll let you go.", "looter_leader_2",
-[]],
-
-[anyone|plyr, "looter_leader_1",
-[],
-"Nothing. We'll leave you in peace.", "close_window",
-   [
-   (assign, "$g_leave_encounter", 1),
-   ]],
-
-[anyone, "looter_leader_2",
-[],
-"Hah! Those prisoners are only going free if you pay their ransom. Did you bring any silver?", "looter_leader_3", []],
-
-[anyone|plyr, "looter_leader_3",
-[],
-"No, but I brought steel.", "close_window", []],
-
-
-
-[anyone, "bandit_leader_1b",
-[
-    (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
-
-    (assign, ":possible_villages", 0),
-    (try_for_range, ":village_no", villages_begin, villages_end),
-      (party_slot_eq, ":village_no", slot_village_bound_center, "$g_starting_town"),
-      (val_add, ":possible_villages", 1),
-    (try_end),
-
-    (store_random_in_range, ":random_village", 0, ":possible_villages"),
-    (val_add, ":random_village", 1),
-
-    (try_for_range, ":village_no", villages_begin, villages_end),
-      (party_slot_eq, ":village_no", slot_village_bound_center, "$g_starting_town"),
-      (val_sub, ":random_village", 1),
-      (eq, ":random_village", 0),
-      (assign, "$lair_neighboor_village", ":village_no"),
-    (try_end),
-
-    (str_store_party_name_link, s9, "$lair_neighboor_village"),
-
-    (set_spawn_radius, 4),
-    (spawn_around_party, "$lair_neighboor_village", "pt_looter_lair"),
-    (party_set_flags, reg0, pf_always_visible, 1),
-  ],
-  "Oh bless you, {sir/my lady}. Bless you. We've done the lad no harm. We've been keeping him in our hideout near {s9}. I'll describe the area nearby in detail, so there's no mistaking it...", "close_window",
-[
-    (call_script, "script_succeed_quest", "qst_learn_where_merchant_brother_is"),
-    (call_script, "script_end_quest", "qst_learn_where_merchant_brother_is"),
-
-    (store_faction_of_party, ":starting_town_faction", "$g_starting_town"),
-    (try_begin),
-      (eq, ":starting_town_faction", "fac_kingdom_1"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_1"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_2"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_3"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_3"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_4"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_4"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_5"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_5"),
-    (else_try),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_42"),
-      (eq, ":starting_town_faction", "fac_kingdom_6"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_6"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_7"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_7"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_8"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_8"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_9"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_9"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_10"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_10"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_11"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_11"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_12"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_12"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_13"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_13"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_14"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_14"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_15"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_15"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_16"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_16"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_17"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_17"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_18"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_18"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_19"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_19"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_20"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_20"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_papacy"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_21"),
-    (else_try),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_24"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_38"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_39"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_40"),
-      (eq, ":starting_town_faction", "fac_kingdom_41"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_22"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_23"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_23"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_24"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_24"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_25"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_26"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_26"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_27"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_27"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_28"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_28"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_29"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_29"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_30"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_30"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_31"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_31"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_32"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_32"),
-    (else_try),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_34"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_35"),
-      (this_or_next|eq, ":starting_town_faction", "fac_kingdom_36"),
-      (eq, ":starting_town_faction", "fac_kingdom_33"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),
-    (else_try),
-      (eq, ":starting_town_faction", "fac_kingdom_37"),
-      (assign, ":troop_of_merchant", "trp_merchant_kingdom_37"),      
-    (try_end),
-    (str_store_troop_name, s10, ":troop_of_merchant"),
-
-    (str_store_string, s2, "str_find_the_lair_near_s9_and_free_the_brother_of_the_prominent_s10_merchant"),
-    (call_script, "script_start_quest", "qst_save_relative_of_merchant", ":troop_of_merchant"),
-  ]],
+# [anyone|plyr, "bandit_leader_1a",
+# [
+    # (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
+  # ],
+  # "I'll spare your life -- but in exchange, I want information. Either you or your mates kidnapped the brother of a prominent merchant in town. Tell me where you're hiding him, and give me your word that you'll stop troubling the people of these parts, and you can go free.", "bandit_leader_1b",
+# []],
 
 
 
 
-[anyone, "start", [
-    (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),
-    (check_quest_active, "qst_rescue_prisoner"),
-    (check_quest_succeeded, "qst_rescue_prisoner"),
-    (quest_slot_eq, "qst_rescue_prisoner", slot_quest_giver_troop, "$g_talk_troop"),
-    (quest_get_slot, ":cur_lord", "qst_rescue_prisoner", slot_quest_target_troop),
-    (call_script, "script_troop_get_family_relation_to_troop", ":cur_lord", "$g_talk_troop"),
-    ],
-"{playername}, you saved him! Thank you ever so much for rescuing my {s11}.\
- Please, take this as some small repayment for your noble deed.", "rescue_prisoner_succeed_2",
-   [
-   (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", 8),
-   (add_xp_as_reward, 2000),
-   (call_script, "script_troop_add_gold", "trp_player", 1500),
-   (call_script, "script_end_quest", "qst_rescue_prisoner"),
-   ]],#rescuerescue
-   [anyone|plyr, "rescue_prisoner_succeed_2", [], "Always an honour to serve, {s65}.", "lord_pretalk",[]],
+
+# [anyone, "start",
+# [
+    # (eq, "$talk_context",tc_party_encounter),
+    # (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
+  # ],
+# "What do you want?", "looter_leader_1", []],
+
+# [anyone|plyr, "looter_leader_1",
+# [
+    # (store_faction_of_party, ":starting_town_faction", "$g_starting_town"),
+    # (try_begin),
+      # (eq, ":starting_town_faction", "fac_kingdom_1"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_1"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_2"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_3"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_3"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_4"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_4"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_5"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_5"),
+    # (else_try),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_6"),
+      # (eq, ":starting_town_faction", "fac_kingdom_42"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_6"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_7"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_7"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_8"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_8"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_9"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_9"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_10"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_10"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_11"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_11"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_12"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_12"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_13"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_13"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_14"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_14"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_15"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_15"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_16"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_16"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_17"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_17"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_18"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_18"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_19"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_19"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_20"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_20"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_papacy"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_21"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_22"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_22"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_23"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_23"),
+    # (else_try),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_24"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_38"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_39"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_40"),
+      # (eq, ":starting_town_faction", "fac_kingdom_41"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_24"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_25"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_25"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_26"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_26"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_27"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_27"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_28"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_28"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_29"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_29"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_30"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_30"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_31"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_31"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_32"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_32"),  
+    # (else_try),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_34"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_35"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_36"),
+      # (eq, ":starting_town_faction", "fac_kingdom_33"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),    
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_37"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_37"),    
+    # (try_end),
+
+    # (str_store_troop_name, s9, ":troop_of_merchant"),
+  # ],
+# "I've been looking for you. Tell me where you keep your prisoners, and I'll let you go.", "looter_leader_2",
+# []],
+
+# [anyone|plyr, "looter_leader_1",
+# [],
+# "Nothing. We'll leave you in peace.", "close_window",
+   # [
+   # (assign, "$g_leave_encounter", 1),
+   # ]],
+
+# [anyone, "looter_leader_2",
+# [],
+# "Hah! Those prisoners are only going free if you pay their ransom. Did you bring any silver?", "looter_leader_3", []],
+
+# [anyone|plyr, "looter_leader_3",
+# [],
+# "No, but I brought steel.", "close_window", []],
 
 
 
-#Quest 0 - Alley talk
-[anyone|auto_proceed, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_back_alley),
-    (eq, "$talked_with_merchant", 0),
-  ],
-  "{!}.", "start_up_quest_1_next",
-[]],
+# [anyone, "bandit_leader_1b",
+# [
+    # (is_between, "$g_talk_troop", "trp_sea_raider_leader", "trp_bandit_leaders_end"),
 
-[anyone, "start_up_quest_1_next",
-[],
-  "Are you all right? Well.... I guess you're alive, at any rate. I'm not sure that we can say the same for the other fellow. That's one less thief to trouble our streets at night, although Heaven knows he won't be the last.... Anyway, maybe you can help me with something. Let's talk more inside. Out here, we don't know who's listening", "close_window",
-[
-    (assign, "$talked_with_merchant", 1),
-    (mission_disable_talk),
-  ]],
+    # (assign, ":possible_villages", 0),
+    # (try_for_range, ":village_no", villages_begin, villages_end),
+      # (party_slot_eq, ":village_no", slot_village_bound_center, "$g_starting_town"),
+      # (val_add, ":possible_villages", 1),
+    # (try_end),
+
+    # (store_random_in_range, ":random_village", 0, ":possible_villages"),
+    # (val_add, ":random_village", 1),
+
+    # (try_for_range, ":village_no", villages_begin, villages_end),
+      # (party_slot_eq, ":village_no", slot_village_bound_center, "$g_starting_town"),
+      # (val_sub, ":random_village", 1),
+      # (eq, ":random_village", 0),
+      # (assign, "$lair_neighboor_village", ":village_no"),
+    # (try_end),
+
+    # (str_store_party_name_link, s9, "$lair_neighboor_village"),
+
+    # (set_spawn_radius, 4),
+    # (spawn_around_party, "$lair_neighboor_village", "pt_looter_lair"),
+    # (party_set_flags, reg0, pf_always_visible, 1),
+  # ],
+  # "Oh bless you, {sir/my lady}. Bless you. We've done the lad no harm. We've been keeping him in our hideout near {s9}. I'll describe the area nearby in detail, so there's no mistaking it...", "close_window",
+# [
+    # (call_script, "script_succeed_quest", "qst_learn_where_merchant_brother_is"),
+    # (call_script, "script_end_quest", "qst_learn_where_merchant_brother_is"),
+
+    # (store_faction_of_party, ":starting_town_faction", "$g_starting_town"),
+    # (try_begin),
+      # (eq, ":starting_town_faction", "fac_kingdom_1"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_1"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_2"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_3"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_3"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_4"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_4"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_5"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_5"),
+    # (else_try),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_42"),
+      # (eq, ":starting_town_faction", "fac_kingdom_6"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_6"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_7"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_7"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_8"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_8"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_9"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_9"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_10"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_10"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_11"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_11"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_12"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_12"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_13"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_13"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_14"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_14"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_15"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_15"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_16"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_16"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_17"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_17"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_18"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_18"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_19"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_19"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_20"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_20"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_papacy"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_21"),
+    # (else_try),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_24"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_38"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_39"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_40"),
+      # (eq, ":starting_town_faction", "fac_kingdom_41"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_22"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_23"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_23"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_24"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_24"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_25"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_26"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_26"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_27"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_27"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_28"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_28"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_29"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_29"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_30"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_30"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_31"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_31"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_32"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_32"),
+    # (else_try),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_34"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_35"),
+      # (this_or_next|eq, ":starting_town_faction", "fac_kingdom_36"),
+      # (eq, ":starting_town_faction", "fac_kingdom_33"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),
+    # (else_try),
+      # (eq, ":starting_town_faction", "fac_kingdom_37"),
+      # (assign, ":troop_of_merchant", "trp_merchant_kingdom_37"),      
+    # (try_end),
+    # (str_store_troop_name, s10, ":troop_of_merchant"),
+
+    # (str_store_string, s2, "str_find_the_lair_near_s9_and_free_the_brother_of_the_prominent_s10_merchant"),
+    # (call_script, "script_start_quest", "qst_save_relative_of_merchant", ":troop_of_merchant"),
+  # ]],
 
 
-#Quest 1 - Repeating dialog sentence
-[anyone|auto_proceed, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_tavern_talk),
 
-    (call_script, "script_party_count_members_with_full_health", "p_main_party"),
-    (assign, ":total_party_size", reg0),
 
-    (assign, ":continue", 0),
-    (try_begin),
-      (check_quest_active, "qst_collect_men"),
-      (neg|check_quest_succeeded, "qst_collect_men"),
+# [anyone, "start", [
+    # (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),
+    # (check_quest_active, "qst_rescue_prisoner"),
+    # (check_quest_succeeded, "qst_rescue_prisoner"),
+    # (quest_slot_eq, "qst_rescue_prisoner", slot_quest_giver_troop, "$g_talk_troop"),
+    # (quest_get_slot, ":cur_lord", "qst_rescue_prisoner", slot_quest_target_troop),
+    # (call_script, "script_troop_get_family_relation_to_troop", ":cur_lord", "$g_talk_troop"),
+    # ],
+# "{playername}, you saved him! Thank you ever so much for rescuing my {s11}.\
+ # Please, take this as some small repayment for your noble deed.", "rescue_prisoner_succeed_2",
+   # [
+   # (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", 8),
+   # (add_xp_as_reward, 2000),
+   # (call_script, "script_troop_add_gold", "trp_player", 1500),
+   # (call_script, "script_end_quest", "qst_rescue_prisoner"),
+   # ]],#rescuerescue
+   # [anyone|plyr, "rescue_prisoner_succeed_2", [], "Always an honour to serve, {s65}.", "lord_pretalk",[]],
 
-      (le, ":total_party_size", 5),
 
-      (try_begin),
-        (le, ":total_party_size", 1),
-        (str_store_string, s11, "str_please_sir_my_lady_go_find_some_volunteers_i_do_not_know_how_much_time_we_have"),
-      (else_try),
-        (str_store_string, s11, "str_you_need_more_men_sir_my_lady"),
-      (try_end),
-      (assign, ":continue", 1),
-    (else_try),
-      (check_quest_active, "qst_learn_where_merchant_brother_is"),
-      (neg|check_quest_succeeded, "qst_learn_where_merchant_brother_is"),
-      (str_store_string, s11, "str_do_not_waste_time_go_and_learn_where_my_brother_is"),
-      (assign, ":continue", 1),
-    (try_end),
-    (eq, ":continue", 1),
-  ],
-  "{!}.", "start_up_quest_2_next",
-[]],
 
-[anyone, "start_up_quest_2_next",
-[],
-  "{!}{s11}", "close_window",
-[]],
+# Quest 0 - Alley talk
+# [anyone|auto_proceed, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_back_alley),
+    # (eq, "$talked_with_merchant", 0),
+  # ],
+  # "{!}.", "start_up_quest_1_next",
+# []],
+
+# [anyone, "start_up_quest_1_next",
+# [],
+  # "Are you all right? Well.... I guess you're alive, at any rate. I'm not sure that we can say the same for the other fellow. That's one less thief to trouble our streets at night, although Heaven knows he won't be the last.... Anyway, maybe you can help me with something. Let's talk more inside. Out here, we don't know who's listening", "close_window",
+# [
+    # (assign, "$talked_with_merchant", 1),
+    # (mission_disable_talk),
+  # ]],
+
+
+# Quest 1 - Repeating dialog sentence
+# [anyone|auto_proceed, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_tavern_talk),
+
+    # (call_script, "script_party_count_members_with_full_health", "p_main_party"),
+    # (assign, ":total_party_size", reg0),
+
+    # (assign, ":continue", 0),
+    # (try_begin),
+      # (check_quest_active, "qst_collect_men"),
+      # (neg|check_quest_succeeded, "qst_collect_men"),
+
+      # (le, ":total_party_size", 5),
+
+      # (try_begin),
+        # (le, ":total_party_size", 1),
+        # (str_store_string, s11, "str_please_sir_my_lady_go_find_some_volunteers_i_do_not_know_how_much_time_we_have"),
+      # (else_try),
+        # (str_store_string, s11, "str_you_need_more_men_sir_my_lady"),
+      # (try_end),
+      # (assign, ":continue", 1),
+    # (else_try),
+      # (check_quest_active, "qst_learn_where_merchant_brother_is"),
+      # (neg|check_quest_succeeded, "qst_learn_where_merchant_brother_is"),
+      # (str_store_string, s11, "str_do_not_waste_time_go_and_learn_where_my_brother_is"),
+      # (assign, ":continue", 1),
+    # (try_end),
+    # (eq, ":continue", 1),
+  # ],
+  # "{!}.", "start_up_quest_2_next",
+# []],
+
+# [anyone, "start_up_quest_2_next",
+# [],
+  # "{!}{s11}", "close_window",
+# []],
 
 #Quest 2 - First dialog sentence
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_tavern_talk),
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_tavern_talk),
 
-    (check_quest_active, "qst_collect_men"),
-    (neg|check_quest_succeeded, "qst_duel_for_lady"),
-    (call_script, "script_party_count_members_with_full_health", "p_main_party"),
-    (ge, reg0, 6),
+    # (check_quest_active, "qst_collect_men"),
+    # (neg|check_quest_succeeded, "qst_duel_for_lady"),
+    # (call_script, "script_party_count_members_with_full_health", "p_main_party"),
+    # (ge, reg0, 6),
 
-    (str_store_party_name, s9, "$current_town"),
-  ],
-  "Splendid work. You have hired enough men to take on the bandits. Now -- travellers entering {s9} have told us that there is a small group of robbers lurking on the outside of town. I suspect that they are all from the same band, the one that took my brother. Hunt them down and defeat them, and make them disclose the location of their lair!", "merchant_quest_2a",
-[
-    (call_script, "script_succeed_quest", "qst_collect_men"),
-    (call_script, "script_end_quest", "qst_collect_men"),
-  ]],
+    # (str_store_party_name, s9, "$current_town"),
+  # ],
+  # "Splendid work. You have hired enough men to take on the bandits. Now -- travellers entering {s9} have told us that there is a small group of robbers lurking on the outside of town. I suspect that they are all from the same band, the one that took my brother. Hunt them down and defeat them, and make them disclose the location of their lair!", "merchant_quest_2a",
+# [
+    # (call_script, "script_succeed_quest", "qst_collect_men"),
+    # (call_script, "script_end_quest", "qst_collect_men"),
+  # ]],
 
 #Quest 3 - First dialog sentence/Repeating dialog sentence
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_tavern_talk),
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_tavern_talk),
 
-    (check_quest_active, "qst_save_relative_of_merchant"),
-    (neg|check_quest_succeeded, "qst_save_relative_of_merchant"),
+    # (check_quest_active, "qst_save_relative_of_merchant"),
+    # (neg|check_quest_succeeded, "qst_save_relative_of_merchant"),
 
-    (str_store_party_name, s9, "$current_town"),
-  ],
-  "So, you've found out where they hid my brother? Splendid work. I flatter myself that I'm a fine judge of character, and you look to be a {man/woman} who can get things done. Now, go out and save his unworthy hide!", "merchant_quest_3a",
-[
-  ]],
+    # (str_store_party_name, s9, "$current_town"),
+  # ],
+  # "So, you've found out where they hid my brother? Splendid work. I flatter myself that I'm a fine judge of character, and you look to be a {man/woman} who can get things done. Now, go out and save his unworthy hide!", "merchant_quest_3a",
+# [
+  # ]],
 
 #Quest 3 - All succeeded - First dialog sentence
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_tavern_talk),
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_tavern_talk),
 
-    (check_quest_active, "qst_save_relative_of_merchant"),
-    (check_quest_succeeded, "qst_save_relative_of_merchant"),
-  ],
-  "Well... My brother is home safe. I'm not sure what to do with him -- maybe pack him off to a university outside Europe. That way, if he gets knocked on the head in a street brawl, no one can say it's my fault. But that's not your problem. Here's the rest of your reward. It was well-earned.", "merchant_quest_3b",
-[
-    (call_script, "script_finish_quest", "qst_save_relative_of_merchant", 100),
-    (troop_add_gold, "trp_player", 200),
-  ]],
+    # (check_quest_active, "qst_save_relative_of_merchant"),
+    # (check_quest_succeeded, "qst_save_relative_of_merchant"),
+  # ],
+  # "Well... My brother is home safe. I'm not sure what to do with him -- maybe pack him off to a university outside Europe. That way, if he gets knocked on the head in a street brawl, no one can say it's my fault. But that's not your problem. Here's the rest of your reward. It was well-earned.", "merchant_quest_3b",
+# [
+    # (call_script, "script_finish_quest", "qst_save_relative_of_merchant", 100),
+    # (troop_add_gold, "trp_player", 200),
+  # ]],
 
-[anyone|plyr, "merchant_quest_3b", #was startup
-[
-  ],
-  "The money is most welcome, and I am glad to have been of service", "merchant_quest_4a",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_3b", #was startup
+# [
+  # ],
+  # "The money is most welcome, and I am glad to have been of service", "merchant_quest_4a",
+# [
+  # ]],
 
-[anyone, "merchant_quest_4a", #was startup
-[
-  ],
-  "Good! Now... Are you interested in making some more?", "merchant_quest_4b",
-[
-  ]],
+# [anyone, "merchant_quest_4a", #was startup
+# [
+  # ],
+  # "Good! Now... Are you interested in making some more?", "merchant_quest_4b",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_4b",
-[
-  ],
-  "Possibly. What do you need?", "merchant_quest_4b1",
-[
-  ]],
-
-
-[anyone, "merchant_quest_4b1",
-[],
-  "Remember how I told you that the bandits had an ally inside the walls? I think I know who it is -- the captain of the watch, no less. Some months ago this captain, seeing the amount of profit we merchants were making from trade across the frontiers, decided to borrow some money to sponsor a caravan. Unfortunately, like many who are new to commerce, he failed to realize that great profit only comes with great risk. So he sank all his money into the most expensive commodities, and of course his caravan was captured and looted, and he lost everything.", "merchant_quest_4b2",
-[]],
-
-[anyone, "merchant_quest_4b2",
-[],
-  "As a consequence, it seems, our captain turned to villainy to recoup his fortune. I supposed I'd do the same if, the Heavens forbid, I ever faced indebtedness and ruination. Now, any watch captain worth his salary will have a few thieves and robbers on his payroll, to inform on the rest, but our captain decides to employ these bastards wholesale. He brings them into the town, lets them do as they will, and takes a share of their take. You've heard of poachers turning gamekeepers? Well, in the unfortunate land of Europe, sometimes gamekeepers will turn poacher. Luckily, there's are still a few brave, honest souls in the watch who've told me how he works.", "merchant_quest_4b3",
-[]],
-
-[anyone, "merchant_quest_4b3",
-[
-  (faction_get_slot, ":local_ruler", "$g_encountered_party_faction", slot_faction_leader),
-  (str_store_troop_name, s4, ":local_ruler"),
-  ],
-  "Now -- here's my plan. I could bring this to the attention of {s4}, lord of the city, but that would mean an inquiry, my word against the captain's, and witnesses can be bought and evidence destroyed, or maybe the whole thing will be forgotten if the enemy comes across the border again, and all I'll get for my trouble is a knife in the ribs. In time of war, you see, a king's eye wanders far from his domain, and his subjects suffer. So I've got another idea. I've got a small group of townsfolk together, some men in my employ and some others who've lost relatives to these bandits, and we'll storm the captain's home and bring him in chains before {s4}, hopefully with a few captured bandits to explain how things stack up.", "merchant_quest_4b4",
-[]],
-
-[anyone, "merchant_quest_4b4",
-[
-  ],
-  "All I need now is someone to lead my little army into battle -- and I can't think of anyone better than you. So, what do you say?", "merchant_quest_4b5",
-[
-  ]],
-
-   [anyone|plyr, "merchant_quest_4b5",
-[
-  ],
-  "How do I know that you're telling me the truth?", "merchant_quest_4b6",
-[
-  ]],
-
-   [anyone, "merchant_quest_4b6",
-[
-  (str_store_party_name, s4, "$g_encountered_party"),
-  ],
-  "Oh, well, I suppose it's possible that I found a dozen bandits who were willing to give their lives to give a passing stranger a false impression of life in old {s4}... Well, I guess you can't really know if my word is good, but I reckon you've learned by now that my money is good, and there's another 100 denars, or maybe a bit more, that's waiting for you if you'll do me this last little favor. So what do you say?", "merchant_quest_4b7",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_4b",
+# [
+  # ],
+  # "Possibly. What do you need?", "merchant_quest_4b1",
+# [
+  # ]],
 
 
-[anyone|plyr, "merchant_quest_4b7",
-[
-  ],
-  "All right. I'll lead your men.", "merchant_quest_4b8",
-[
-  ]],
+# [anyone, "merchant_quest_4b1",
+# [],
+  # "Remember how I told you that the bandits had an ally inside the walls? I think I know who it is -- the captain of the watch, no less. Some months ago this captain, seeing the amount of profit we merchants were making from trade across the frontiers, decided to borrow some money to sponsor a caravan. Unfortunately, like many who are new to commerce, he failed to realize that great profit only comes with great risk. So he sank all his money into the most expensive commodities, and of course his caravan was captured and looted, and he lost everything.", "merchant_quest_4b2",
+# []],
 
-[anyone|plyr, "merchant_quest_4b7",
-[
-  ],
-  "I'm sorry. This is too much, too fast. I need time to think.", "merchant_quest_4_decline",
-[
-  ]],
+# [anyone, "merchant_quest_4b2",
+# [],
+  # "As a consequence, it seems, our captain turned to villainy to recoup his fortune. I supposed I'd do the same if, the Heavens forbid, I ever faced indebtedness and ruination. Now, any watch captain worth his salary will have a few thieves and robbers on his payroll, to inform on the rest, but our captain decides to employ these bastards wholesale. He brings them into the town, lets them do as they will, and takes a share of their take. You've heard of poachers turning gamekeepers? Well, in the unfortunate land of Europe, sometimes gamekeepers will turn poacher. Luckily, there's are still a few brave, honest souls in the watch who've told me how he works.", "merchant_quest_4b3",
+# []],
 
-[anyone, "merchant_quest_4b8",
-[
-  ],
-  "Splendid. It's been a long time since I staked so much on a single throw of the dice, and frankly I find it exhilarating. My men are ready to move on your word. Are you ready?", "merchant_quest_4b9",
-[
-  ]],
+# [anyone, "merchant_quest_4b3",
+# [
+  # (faction_get_slot, ":local_ruler", "$g_encountered_party_faction", slot_faction_leader),
+  # (str_store_troop_name, s4, ":local_ruler"),
+  # ],
+  # "Now -- here's my plan. I could bring this to the attention of {s4}, lord of the city, but that would mean an inquiry, my word against the captain's, and witnesses can be bought and evidence destroyed, or maybe the whole thing will be forgotten if the enemy comes across the border again, and all I'll get for my trouble is a knife in the ribs. In time of war, you see, a king's eye wanders far from his domain, and his subjects suffer. So I've got another idea. I've got a small group of townsfolk together, some men in my employ and some others who've lost relatives to these bandits, and we'll storm the captain's home and bring him in chains before {s4}, hopefully with a few captured bandits to explain how things stack up.", "merchant_quest_4b4",
+# []],
 
-[anyone|plyr, "merchant_quest_4b9",
-[
-  ],
-  "Yes. Give them the sign.", "merchant_quest_4_accept",
-[
-  ]],
+# [anyone, "merchant_quest_4b4",
+# [
+  # ],
+  # "All I need now is someone to lead my little army into battle -- and I can't think of anyone better than you. So, what do you say?", "merchant_quest_4b5",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_4b9",
-[
-  ],
-  "Not now. I will need to rest before I can fight again.", "merchant_quest_4_decline",
-[
-  ]],
+   # [anyone|plyr, "merchant_quest_4b5",
+# [
+  # ],
+  # "How do I know that you're telling me the truth?", "merchant_quest_4b6",
+# [
+  # ]],
 
-[anyone, "merchant_quest_4_accept",
-[
-  ],
-  "Good! Now -- strike hard, strike fast, and the captain and his henchmen won't know what hit them. May the heavens be with you!", "close_window",
-[
-    (assign, "$current_startup_quest_phase", 3),
-    (jump_to_menu, "mnu_start_phase_3"),
-    (finish_mission),
-  ]],
-
-[anyone, "merchant_quest_4_decline", #was startup
-[
-  ],
-  "Right. I can keep my men standing by. If you let this go too long, then I suppose that I shall have to finish this affair without you, but I would be most pleased if you could be part of it as well. For now, take what time you need.", "close_window",
-[]],
+   # [anyone, "merchant_quest_4b6",
+# [
+  # (str_store_party_name, s4, "$g_encountered_party"),
+  # ],
+  # "Oh, well, I suppose it's possible that I found a dozen bandits who were willing to give their lives to give a passing stranger a false impression of life in old {s4}... Well, I guess you can't really know if my word is good, but I reckon you've learned by now that my money is good, and there's another 100 denars, or maybe a bit more, that's waiting for you if you'll do me this last little favor. So what do you say?", "merchant_quest_4b7",
+# [
+  # ]],
 
 
+# [anyone|plyr, "merchant_quest_4b7",
+# [
+  # ],
+  # "All right. I'll lead your men.", "merchant_quest_4b8",
+# [
+  # ]],
 
-#QUEST 2 - Learning where prominent's brother is.
-[anyone|plyr, "merchant_quest_2a",
-[
-  ],
-  "Very well. I shall hunt for bandits.", "close_window",
-[
-    (str_store_party_name, s9, "$current_town"),
-    (str_store_string, s2, "str_start_up_quest_message_2"),
-    (call_script, "script_start_quest", "qst_learn_where_merchant_brother_is", "$g_talk_troop"),
+# [anyone|plyr, "merchant_quest_4b7",
+# [
+  # ],
+  # "I'm sorry. This is too much, too fast. I need time to think.", "merchant_quest_4_decline",
+# [
+  # ]],
 
-    (set_spawn_radius, 2),
-    (spawn_around_party, "$current_town", "pt_leaded_looters"),
-    (assign, ":spawned_bandits", reg0),
+# [anyone, "merchant_quest_4b8",
+# [
+  # ],
+  # "Splendid. It's been a long time since I staked so much on a single throw of the dice, and frankly I find it exhilarating. My men are ready to move on your word. Are you ready?", "merchant_quest_4b9",
+# [
+  # ]],
 
-    (party_get_position, pos0, "$current_town"),
-    (party_set_ai_behavior, ":spawned_bandits", ai_bhvr_patrol_location),
-    (party_set_ai_patrol_radius, ":spawned_bandits", 3),
-    (party_set_ai_target_position, ":spawned_bandits", pos0),
-  ]],
+# [anyone|plyr, "merchant_quest_4b9",
+# [
+  # ],
+  # "Yes. Give them the sign.", "merchant_quest_4_accept",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_2a",
-[
-  ],
-  "Why don't you come with us?", "merchant_quest_2a_whynotcome",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_4b9",
+# [
+  # ],
+  # "Not now. I will need to rest before I can fight again.", "merchant_quest_4_decline",
+# [
+  # ]],
 
-[anyone, "merchant_quest_2a_whynotcome",
-[
-  ],
-  "Because I'm paying you to go take care of it. That's the short answer. The long answer is that I've got some leads to follow up here in town, and I have just as much chance of getting knocked on my head as you, if that's what you're asking. But I respect your question. Now, what do you say?", "merchant_quest_2a",
-[
-  ]],
+# [anyone, "merchant_quest_4_accept",
+# [
+  # ],
+  # "Good! Now -- strike hard, strike fast, and the captain and his henchmen won't know what hit them. May the heavens be with you!", "close_window",
+# [
+    # (assign, "$current_startup_quest_phase", 3),
+    # (jump_to_menu, "mnu_start_phase_3"),
+    # (finish_mission),
+  # ]],
+
+# [anyone, "merchant_quest_4_decline", #was startup
+# [
+  # ],
+  # "Right. I can keep my men standing by. If you let this go too long, then I suppose that I shall have to finish this affair without you, but I would be most pleased if you could be part of it as well. For now, take what time you need.", "close_window",
+# []],
 
 
-[anyone|plyr, "merchant_quest_2a",
-[
-  ],
-  "I cannot deal with this matter at this time.", "close_window",
-[
-  ]],
+
+# QUEST 2 - Learning where prominent's brother is.
+# [anyone|plyr, "merchant_quest_2a",
+# [
+  # ],
+  # "Very well. I shall hunt for bandits.", "close_window",
+# [
+    # (str_store_party_name, s9, "$current_town"),
+    # (str_store_string, s2, "str_start_up_quest_message_2"),
+    # (call_script, "script_start_quest", "qst_learn_where_merchant_brother_is", "$g_talk_troop"),
+
+    # (set_spawn_radius, 2),
+    # (spawn_around_party, "$current_town", "pt_leaded_looters"),
+    # (assign, ":spawned_bandits", reg0),
+
+    # (party_get_position, pos0, "$current_town"),
+    # (party_set_ai_behavior, ":spawned_bandits", ai_bhvr_patrol_location),
+    # (party_set_ai_patrol_radius, ":spawned_bandits", 3),
+    # (party_set_ai_target_position, ":spawned_bandits", pos0),
+  # ]],
+
+# [anyone|plyr, "merchant_quest_2a",
+# [
+  # ],
+  # "Why don't you come with us?", "merchant_quest_2a_whynotcome",
+# [
+  # ]],
+
+# [anyone, "merchant_quest_2a_whynotcome",
+# [
+  # ],
+  # "Because I'm paying you to go take care of it. That's the short answer. The long answer is that I've got some leads to follow up here in town, and I have just as much chance of getting knocked on my head as you, if that's what you're asking. But I respect your question. Now, what do you say?", "merchant_quest_2a",
+# [
+  # ]],
+
+
+# [anyone|plyr, "merchant_quest_2a",
+# [
+  # ],
+  # "I cannot deal with this matter at this time.", "close_window",
+# [
+  # ]],
 
 #Quest 3 - Saving merchant's brother.
-[anyone|plyr, "merchant_quest_3a",
-[
-  ],
-  "Very well. I go now to attack the bandits in their lair, and find your brother.", "close_window",
-[
+# [anyone|plyr, "merchant_quest_3a",
+# [
+  # ],
+  # "Very well. I go now to attack the bandits in their lair, and find your brother.", "close_window",
+# [
     #no need to below three lines anymore, this quest is auto starting after player learn where bandits are hiding merchant's brother.
     #(str_store_party_name, s9, "$lair_neighboor_village"),
     #(str_store_string, s2, "str_start_up_quest_message_3"),
     #(call_script, "script_start_quest", "qst_save_relative_of_merchant", "$g_talk_troop"),
-  ]],
+  # ]],
 
 
 
 
 
-[anyone|plyr, "merchant_quest_3a",
-[
-  ],
-  "I cannot deal with this matter at this time.", "close_window",
-[
+# [anyone|plyr, "merchant_quest_3a",
+# [
+  # ],
+  # "I cannot deal with this matter at this time.", "close_window",
+# [
     #think about placing end_quest here. Because it is auto-starting. If player do not want this quest he/she should have a way to avoid it.
-  ]],
+  # ]],
 
 
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
 
-    (this_or_next|eq, "$talk_context", tc_tavern_talk),
-    (neq, "$dialog_with_merchant_ended", 0),
+    # (this_or_next|eq, "$talk_context", tc_tavern_talk),
+    # (neq, "$dialog_with_merchant_ended", 0),
 
-    (assign, ":continue", 0),
-    (try_begin),
-      (neg|check_quest_succeeded, "qst_collect_men"),
-      (neg|check_quest_active, "qst_collect_men"),
-      (assign, ":continue", 1),
-    (else_try),
-      (neg|check_quest_active, "qst_collect_men"),
-      (neg|check_quest_succeeded, "qst_learn_where_merchant_brother_is"),
-      (neg|check_quest_active, "qst_learn_where_merchant_brother_is"),
-      (assign, ":continue", 1),
-    (else_try),
-      (neg|check_quest_active, "qst_collect_men"),
-      (neg|check_quest_active, "qst_learn_where_merchant_brother_is"),
-      (neg|check_quest_succeeded, "qst_save_relative_of_merchant"),
-      (neg|check_quest_active, "qst_save_relative_of_merchant"),
-      (assign, ":continue", 1),
-    (try_end),
+    # (assign, ":continue", 0),
+    # (try_begin),
+      # (neg|check_quest_succeeded, "qst_collect_men"),
+      # (neg|check_quest_active, "qst_collect_men"),
+      # (assign, ":continue", 1),
+    # (else_try),
+      # (neg|check_quest_active, "qst_collect_men"),
+      # (neg|check_quest_succeeded, "qst_learn_where_merchant_brother_is"),
+      # (neg|check_quest_active, "qst_learn_where_merchant_brother_is"),
+      # (assign, ":continue", 1),
+    # (else_try),
+      # (neg|check_quest_active, "qst_collect_men"),
+      # (neg|check_quest_active, "qst_learn_where_merchant_brother_is"),
+      # (neg|check_quest_succeeded, "qst_save_relative_of_merchant"),
+      # (neg|check_quest_active, "qst_save_relative_of_merchant"),
+      # (assign, ":continue", 1),
+    # (try_end),
 
-    (eq, ":continue", 1),
-  ],
-  "You may do as you wish, {sir/my lady}, but I am disappointed. You would do well to reconsider. I am a rich men, and would show you my gratitude in coin.", "merchant_quest_persuasion",
-[
-  ]],
+    # (eq, ":continue", 1),
+  # ],
+  # "You may do as you wish, {sir/my lady}, but I am disappointed. You would do well to reconsider. I am a rich men, and would show you my gratitude in coin.", "merchant_quest_persuasion",
+# [
+  # ]],
 
-[anyone|auto_proceed, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+# [anyone|auto_proceed, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
 
-    (this_or_next|eq, "$talk_context", tc_tavern_talk),
-    (neq, "$dialog_with_merchant_ended", 0),
+    # (this_or_next|eq, "$talk_context", tc_tavern_talk),
+    # (neq, "$dialog_with_merchant_ended", 0),
 
-    (check_quest_finished, "qst_save_relative_of_merchant"),
-    (neg|check_quest_succeeded, "qst_save_town_from_bandits"),
-    (neg|check_quest_active, "qst_save_town_from_bandits"),
-  ],
-  "{!}.", "merchant_quest_4b4",
-[
-  ]],
+    # (check_quest_finished, "qst_save_relative_of_merchant"),
+    # (neg|check_quest_succeeded, "qst_save_town_from_bandits"),
+    # (neg|check_quest_active, "qst_save_town_from_bandits"),
+  # ],
+  # "{!}.", "merchant_quest_4b4",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_persuasion",
-[
-    (neg|check_quest_finished, "qst_collect_men"),
-    (neg|check_quest_active, "qst_collect_men"),
-  ],
-  "You make a persuasive case. I will help you.", "merchant_quest_1_prologue_3",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_persuasion",
+# [
+    # (neg|check_quest_finished, "qst_collect_men"),
+    # (neg|check_quest_active, "qst_collect_men"),
+  # ],
+  # "You make a persuasive case. I will help you.", "merchant_quest_1_prologue_3",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_persuasion",
-[
-    (check_quest_finished, "qst_collect_men"),
-    (neg|check_quest_finished, "qst_learn_where_merchant_brother_is"),
-    (neg|check_quest_active, "qst_learn_where_merchant_brother_is"),
-  ],
-  "You make a persuasive case. I will help you.", "merchant_quest_2",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_persuasion",
+# [
+    # (check_quest_finished, "qst_collect_men"),
+    # (neg|check_quest_finished, "qst_learn_where_merchant_brother_is"),
+    # (neg|check_quest_active, "qst_learn_where_merchant_brother_is"),
+  # ],
+  # "You make a persuasive case. I will help you.", "merchant_quest_2",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_persuasion",
-[
-    (check_quest_finished, "qst_collect_men"),
-    (check_quest_finished, "qst_learn_where_merchant_brother_is"),
-    (neg|check_quest_finished, "qst_save_relative_of_merchant"),
-    (neg|check_quest_active, "qst_save_relative_of_merchant"),
-  ],
-  "You make a persuasive case. I will help you.", "merchant_quest_3",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_persuasion",
+# [
+    # (check_quest_finished, "qst_collect_men"),
+    # (check_quest_finished, "qst_learn_where_merchant_brother_is"),
+    # (neg|check_quest_finished, "qst_save_relative_of_merchant"),
+    # (neg|check_quest_active, "qst_save_relative_of_merchant"),
+  # ],
+  # "You make a persuasive case. I will help you.", "merchant_quest_3",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_persuasion",
-[
-    (check_quest_finished, "qst_collect_men"),
-    (check_quest_finished, "qst_learn_where_merchant_brother_is"),
-    (check_quest_finished, "qst_save_relative_of_merchant"),
-    (neg|check_quest_finished, "qst_save_town_from_bandits"),
-    (neg|check_quest_active, "qst_save_town_from_bandits"),
-  ],
-  "You make a persuasive case. I will help you.", "merchant_quest_4b8",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_persuasion",
+# [
+    # (check_quest_finished, "qst_collect_men"),
+    # (check_quest_finished, "qst_learn_where_merchant_brother_is"),
+    # (check_quest_finished, "qst_save_relative_of_merchant"),
+    # (neg|check_quest_finished, "qst_save_town_from_bandits"),
+    # (neg|check_quest_active, "qst_save_town_from_bandits"),
+  # ],
+  # "You make a persuasive case. I will help you.", "merchant_quest_4b8",
+# [
+  # ]],
 
-[anyone|plyr, "merchant_quest_persuasion",
-[
-  ],
-  "As I say, I have more important business elsewhere.", "close_window",
-[
-  ]],
+# [anyone|plyr, "merchant_quest_persuasion",
+# [
+  # ],
+  # "As I say, I have more important business elsewhere.", "close_window",
+# [
+  # ]],
 
-[anyone, "merchant_quest_2",
-[
-  ],
-  "Now -- go find and defeat that group of bandits.", "merchant_quest_2a",
-[
-  ]],
+# [anyone, "merchant_quest_2",
+# [
+  # ],
+  # "Now -- go find and defeat that group of bandits.", "merchant_quest_2a",
+# [
+  # ]],
 
-[anyone, "merchant_quest_3",
-[
-  ],
-  "Now -- go attack that bandit hideout, get my brother back, and show those brigands what happens to those who threaten my household.", "merchant_quest_3a",
-[
-  ]],
+# [anyone, "merchant_quest_3",
+# [
+  # ],
+  # "Now -- go attack that bandit hideout, get my brother back, and show those brigands what happens to those who threaten my household.", "merchant_quest_3a",
+# [
+  # ]],
 
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_relative_of_merchant", "trp_relative_of_merchant"),
-  ],
-  "Oh -- thank the heavens... Thank the heavens... Am I safe?", "close_window",
-[]],
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_relative_of_merchant", "trp_relative_of_merchant"),
+  # ],
+  # "Oh -- thank the heavens... Thank the heavens... Am I safe?", "close_window",
+# []],
 
 
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$g_do_one_more_meeting_with_merchant", 1),
-    (faction_get_slot, ":faction_leader", "$g_encountered_party_faction", slot_faction_leader),
-    (str_store_troop_name, s5, ":faction_leader"),
-  ],
-  "Ah... {playername}. Things didn't go quite so well as I had hoped. {s5} couldn't quite find it in him to overlook my little breach of the peace. Oh, he's grateful enough that I got rid of his crooked captain -- a guard who'll let in bandits will let in an enemy army, if the price is right -- but he can't exactly have me running around here as a lasting reminder of his failure to take care of things himself.", "merchant_closing_statement_2",
-[]],
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$g_do_one_more_meeting_with_merchant", 1),
+    # (faction_get_slot, ":faction_leader", "$g_encountered_party_faction", slot_faction_leader),
+    # (str_store_troop_name, s5, ":faction_leader"),
+  # ],
+  # "Ah... {playername}. Things didn't go quite so well as I had hoped. {s5} couldn't quite find it in him to overlook my little breach of the peace. Oh, he's grateful enough that I got rid of his crooked captain -- a guard who'll let in bandits will let in an enemy army, if the price is right -- but he can't exactly have me running around here as a lasting reminder of his failure to take care of things himself.", "merchant_closing_statement_2",
+# []],
 
-[anyone|plyr, "merchant_closing_statement_2",
-[],
-  "That hardly seems fair...", "merchant_closing_statement_3",
-[]],
+# [anyone|plyr, "merchant_closing_statement_2",
+# [],
+  # "That hardly seems fair...", "merchant_closing_statement_3",
+# []],
 
-[anyone, "merchant_closing_statement_3",
-[],
-  "Fair? This is Europe, {my boy/my lady}! Kings do what they will, and the rest of us do as they must. He didn't string me up, and instead gave me time to sell my properties -- even put in a word with the other merchants that they best pay me a fair price, too. That's gracious enough, as kings go -- but he's a weak king, as they all are here, and weak kings must always look to their authority first, and justice second. I suppose I'd do the same, in his shoes.", "merchant_closing_statement_4",
-[]],
+# [anyone, "merchant_closing_statement_3",
+# [],
+  # "Fair? This is Europe, {my boy/my lady}! Kings do what they will, and the rest of us do as they must. He didn't string me up, and instead gave me time to sell my properties -- even put in a word with the other merchants that they best pay me a fair price, too. That's gracious enough, as kings go -- but he's a weak king, as they all are here, and weak kings must always look to their authority first, and justice second. I suppose I'd do the same, in his shoes.", "merchant_closing_statement_4",
+# []],
 
-[anyone, "merchant_closing_statement_4",
-[],
-  "Anyway, I wouldn't go rubbing your part in this affair in {s5}'s face -- but he's taken note of you, and decided that you're not worth hanging, and that's something to which I'll raise a glass any day of the week. He might even have work for you, further down the road. Or, you can sell your sword to one of his competitors. Anyway, I hope you've learned a bit about what it will take to stay alive in this troubled land, and I suspect that the money you've earned won't go to waste. Good luck.", "close_window",
-[
-    (assign, "$g_do_one_more_meeting_with_merchant", 2),
-  ]],
+# [anyone, "merchant_closing_statement_4",
+# [],
+  # "Anyway, I wouldn't go rubbing your part in this affair in {s5}'s face -- but he's taken note of you, and decided that you're not worth hanging, and that's something to which I'll raise a glass any day of the week. He might even have work for you, further down the road. Or, you can sell your sword to one of his competitors. Anyway, I hope you've learned a bit about what it will take to stay alive in this troubled land, and I suspect that the money you've earned won't go to waste. Good luck.", "close_window",
+# [
+    # (assign, "$g_do_one_more_meeting_with_merchant", 2),
+  # ]],
 
-[anyone|auto_proceed, "start",
-   [
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (check_quest_finished, "qst_save_town_from_bandits"),
-    (eq, "$g_do_one_more_meeting_with_merchant", 2),
-   ],
-"{!}.", "merchant_quests_last_word", []],
+# [anyone|auto_proceed, "start",
+   # [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (check_quest_finished, "qst_save_town_from_bandits"),
+    # (eq, "$g_do_one_more_meeting_with_merchant", 2),
+   # ],
+# "{!}.", "merchant_quests_last_word", []],
 
-[anyone, "merchant_quests_last_word",
-[
-  ],
-  "I am preparing to leave town in a short while. It's been an honor to know you. Good luck.", "close_window",
-[
-  ]],
+# [anyone, "merchant_quests_last_word",
+# [
+  # ],
+  # "I am preparing to leave town in a short while. It's been an honor to know you. Good luck.", "close_window",
+# [
+  # ]],
 
 
 
@@ -34243,7 +34243,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone, "start", [
                      (eq, "$talk_context", tc_tavern_talk),
                      (neg|troop_is_hero, "$g_talk_troop"),
-                     (neg|is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+                     # (neg|is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
                      (party_get_slot, ":mercenary_troop", "$g_encountered_party", slot_center_mercenary_troop_type),
                      (party_get_slot, ":mercenary_amount", "$g_encountered_party", slot_center_mercenary_troop_amount),
                      (gt, ":mercenary_amount", 0),
@@ -34342,177 +34342,177 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 "Sorry. I don't need any other men right now.", "close_window", []],
 
 #Trainers
-[anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end),
-                    (eq, "$g_talk_troop_met", 0)],
-"Good day to you {lad/lass}. You look like another adventurer who has come to try {his/her} chance in these lands.\
- Well, trust my word, you won't be able to survive long here unless you know how to fight yourself out of a tight spot.", "trainer_intro_1",[]],
+# [anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end),
+                    # (eq, "$g_talk_troop_met", 0)],
+# "Good day to you {lad/lass}. You look like another adventurer who has come to try {his/her} chance in these lands.\
+ # Well, trust my word, you won't be able to survive long here unless you know how to fight yourself out of a tight spot.", "trainer_intro_1",[]],
 
-[anyone|plyr, "trainer_intro_1", [],
-"Thank you for your advice. This place looks like a training field. Maybe I can learn about fighting here?", "trainer_intro_2", []],
+# [anyone|plyr, "trainer_intro_1", [],
+# "Thank you for your advice. This place looks like a training field. Maybe I can learn about fighting here?", "trainer_intro_2", []],
 
-[anyone, "trainer_intro_2", [],
-"Indeed you can. I am a veteran soldier... fought a good deal in the wars in my time. But these days, I train young novices in this area.\
- I can find you some opponents to practice with if you like. Or if you have any questions about the theory of combat, feel free to ask.", "trainer_intro_3",[]],
+# [anyone, "trainer_intro_2", [],
+# "Indeed you can. I am a veteran soldier... fought a good deal in the wars in my time. But these days, I train young novices in this area.\
+ # I can find you some opponents to practice with if you like. Or if you have any questions about the theory of combat, feel free to ask.", "trainer_intro_3",[]],
 
-[anyone|plyr, "trainer_intro_3", [],
-"Yes, I do have a few questions.", "trainer_intro_4a", []],
-[anyone|plyr, "trainer_intro_3", [],
-"Actually, I can move on to practice.", "trainer_intro_4b", []],
+# [anyone|plyr, "trainer_intro_3", [],
+# "Yes, I do have a few questions.", "trainer_intro_4a", []],
+# [anyone|plyr, "trainer_intro_3", [],
+# "Actually, I can move on to practice.", "trainer_intro_4b", []],
 
-[anyone, "trainer_intro_4a", [],
-"Well, ask anything you like.", "trainer_talk_combat", []],
-[anyone, "trainer_intro_4b", [],
-"Good. It's good to find someone eager for practice. Let's see what you will do.", "trainer_practice_1", []],
+# [anyone, "trainer_intro_4a", [],
+# "Well, ask anything you like.", "trainer_talk_combat", []],
+# [anyone, "trainer_intro_4b", [],
+# "Good. It's good to find someone eager for practice. Let's see what you will do.", "trainer_practice_1", []],
 
- [anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end),
-                   (neq, "$waiting_for_training_fight_result", 0),
-                   (neq, "$training_fight_won", 0)],
- "That was a good fight. ", "trainer_practice_1",
-[(val_sub, "$num_opponents_to_beat_in_a_row", 1),
-   (assign, "$waiting_for_training_fight_result",0),
-   ]],
-[anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end),
-                    (neq, "$waiting_for_training_fight_result", 0)],
- "Ha! Looks like you've developed a bit of a limp there. Don't worry, even losses have their value, provided you learn from them. Shake the stars out of your eyes and get back in there. There's no other way to win.", "trainer_practice_1",
-   [(assign, "$num_opponents_to_beat_in_a_row",3),(assign, "$waiting_for_training_fight_result",0)]],
+ # [anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end),
+                   # (neq, "$waiting_for_training_fight_result", 0),
+                   # (neq, "$training_fight_won", 0)],
+ # "That was a good fight. ", "trainer_practice_1",
+# [(val_sub, "$num_opponents_to_beat_in_a_row", 1),
+   # (assign, "$waiting_for_training_fight_result",0),
+   # ]],
+# [anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end),
+                    # (neq, "$waiting_for_training_fight_result", 0)],
+ # "Ha! Looks like you've developed a bit of a limp there. Don't worry, even losses have their value, provided you learn from them. Shake the stars out of your eyes and get back in there. There's no other way to win.", "trainer_practice_1",
+   # [(assign, "$num_opponents_to_beat_in_a_row",3),(assign, "$waiting_for_training_fight_result",0)]],
 
-    [anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end)],
-"Good day. Ready for some training today?", "trainer_talk",[]],
+    # [anyone, "start", [(is_between, "$g_talk_troop", training_gound_trainers_begin, training_gound_trainers_end)],
+# "Good day. Ready for some training today?", "trainer_talk",[]],
 
-    [anyone, "trainer_pretalk", [],
-"Ah, are you ready for some training?", "trainer_talk",[]],
+    # [anyone, "trainer_pretalk", [],
+# "Ah, are you ready for some training?", "trainer_talk",[]],
 
-    [anyone|plyr, "trainer_talk", [],
-"I am ready for some practice.", "trainer_practice_1",[]],
+    # [anyone|plyr, "trainer_talk", [],
+# "I am ready for some practice.", "trainer_practice_1",[]],
 
-    [anyone|plyr, "trainer_talk", [],
-"First, tell me something about combat...", "trainer_combat_begin",[]],
+    # [anyone|plyr, "trainer_talk", [],
+# "First, tell me something about combat...", "trainer_combat_begin",[]],
 
 ##    [anyone|plyr, "trainer_talk", [],
 ##   "I have some novice soldiers with me. Can you train them?", "trainer_train_novices_1",[]],
 
-    [anyone|plyr, "trainer_talk", [],
-"I need to leave now. Farewell.", "close_window",[]],
+    # [anyone|plyr, "trainer_talk", [],
+# "I need to leave now. Farewell.", "close_window",[]],
 
 
-    [anyone, "trainer_combat_begin", [],
-"What do you want to know?", "trainer_talk_combat",[]],
-    [anyone, "trainer_combat_pretalk", [],
-"What else do you want to know?", "trainer_talk_combat",[]],
+    # [anyone, "trainer_combat_begin", [],
+# "What do you want to know?", "trainer_talk_combat",[]],
+    # [anyone, "trainer_combat_pretalk", [],
+# "What else do you want to know?", "trainer_talk_combat",[]],
 
-    [anyone|plyr, "trainer_talk_combat", [], "Tell me about defending myself.", "trainer_explain_defense",[]],
-    [anyone|plyr, "trainer_talk_combat", [], "Tell me about attacking with weapons.", "trainer_explain_attack",[]],
-    [anyone|plyr, "trainer_talk_combat", [], "Tell me about fighting on horseback.", "trainer_explain_horseback",[]],
+    # [anyone|plyr, "trainer_talk_combat", [], "Tell me about defending myself.", "trainer_explain_defense",[]],
+    # [anyone|plyr, "trainer_talk_combat", [], "Tell me about attacking with weapons.", "trainer_explain_attack",[]],
+    # [anyone|plyr, "trainer_talk_combat", [], "Tell me about fighting on horseback.", "trainer_explain_horseback",[]],
 #    [anyone|plyr, "trainer_talk_combat", [], "Tell me about using ranged weapons.", "trainer_explain_ranged",[]],
 #    [anyone|plyr, "trainer_talk_combat", [], "Tell me about weapon types.", "trainer_explain_weapon_types",[]],
-    [anyone|plyr, "trainer_talk_combat", [], "I guess I know all the theory I need. Let's talk about something else.", "trainer_pretalk",[]],
+    # [anyone|plyr, "trainer_talk_combat", [], "I guess I know all the theory I need. Let's talk about something else.", "trainer_pretalk",[]],
 
-   [anyone, "trainer_explain_defense", [], "Good question. The first thing you should know as a fighter is how to defend yourself.\
- Keeping yourself out of harm's way is the first rule of combat, and it is much more important than giving harm to others.\
- Everybody can swing a sword around and hope to cut some flesh, but only those fighters that are experts at defense live to tell of it.",
-    "trainer_explain_defense_2",[]],
-[anyone, "trainer_explain_defense_2", [], "Now. Defending yourself is easiest if you are equipped with a shield.\
- Just block with your shield. [Hold down the right mouse button to defend yourself with the shield.] In this state, you will be able to deflect all attacks that come from your front. However, you will still be open to strikes from your sides or your back.", "trainer_explain_defense_3",[]],
-[anyone|plyr, "trainer_explain_defense_3", [], "What if I don't have a shield?", "trainer_explain_defense_4",[]],
-[anyone, "trainer_explain_defense_4", [], "Then you will have to use your weapon to block your opponent.\
- This is a bit more difficult than defending with a shield.\
- Defending with a weapon, you can block against only ONE attack direction.\
- That is, you block against either overhead swings, side swings or thrusts.\
- Therefore you must watch your opponent carefully and start to block AFTER he starts his attack.\
- In this way you will be able to block against the direction of his current attack.\
- If you start to block BEFORE he makes his move, he may just attack in another direction than the one you are blocking against and score a hit.", "trainer_combat_pretalk",[]],
-[anyone, "trainer_explain_attack", [], "Good question. Attacking is the best defence, they say.\
- A tactic many fighters find useful is taking an offensive stance and readying your weapon for attack, waiting for the right moment for swinging it.\
- [You can ready your weapon for attack by pressing and holding down the left mouse button.]", "trainer_explain_attack_2",[]],
-[anyone|plyr, "trainer_explain_attack_2", [], "That sounds useful.", "trainer_explain_attack_3",[]],
-[anyone, "trainer_explain_attack_3", [], "It is a good tactic, but remember that, your opponent may see that and take a defensive stance against the direction you are swinging your weapon.\
- If that happens, you must break your attack and quickly attack from another direction\
- [You may cancel your current attack by quickly tapping the right mouse button].", "trainer_explain_attack_4",[]],
-[anyone|plyr, "trainer_explain_attack_4", [], "If my opponent is defending against the direction I am attacking from, I will break and use another direction.", "trainer_explain_attack_5",[]],
-[anyone, "trainer_explain_attack_5", [], "Yes, selecting the direction you swing your weapon is a crucial skill.\
- There are four main directions you may use: right swing, left swing, overhead swing and thrust. You must use each one wisely.\
- [to control your swing direction with default controls, move your mouse in the direction you want to swing from as you press the left mouse button].", "trainer_combat_pretalk",[]],
-[anyone, "trainer_explain_horseback", [], "Very good question. A horse may be a warrior's most powerful weapon in combat.\
- It gives you speed, height, power and initiative. A lot of deadly weapons will become even deadlier on horseback.\
- However you must pay particular attention to horse-mounted enemies couching their lances, as they may take down any opponent in one hit.\
- [To use the couched lance yourself, wield a lance or similar weapon, and speed up your horse without pressing attack or defense buttons.\
- after you reach a speed, you'll lower your lance. Then try to target your enemies by maneuvering your horse.]", "trainer_combat_pretalk",[]],
+   # [anyone, "trainer_explain_defense", [], "Good question. The first thing you should know as a fighter is how to defend yourself.\
+ # Keeping yourself out of harm's way is the first rule of combat, and it is much more important than giving harm to others.\
+ # Everybody can swing a sword around and hope to cut some flesh, but only those fighters that are experts at defense live to tell of it.",
+    # "trainer_explain_defense_2",[]],
+# [anyone, "trainer_explain_defense_2", [], "Now. Defending yourself is easiest if you are equipped with a shield.\
+ # Just block with your shield. [Hold down the right mouse button to defend yourself with the shield.] In this state, you will be able to deflect all attacks that come from your front. However, you will still be open to strikes from your sides or your back.", "trainer_explain_defense_3",[]],
+# [anyone|plyr, "trainer_explain_defense_3", [], "What if I don't have a shield?", "trainer_explain_defense_4",[]],
+# [anyone, "trainer_explain_defense_4", [], "Then you will have to use your weapon to block your opponent.\
+ # This is a bit more difficult than defending with a shield.\
+ # Defending with a weapon, you can block against only ONE attack direction.\
+ # That is, you block against either overhead swings, side swings or thrusts.\
+ # Therefore you must watch your opponent carefully and start to block AFTER he starts his attack.\
+ # In this way you will be able to block against the direction of his current attack.\
+ # If you start to block BEFORE he makes his move, he may just attack in another direction than the one you are blocking against and score a hit.", "trainer_combat_pretalk",[]],
+# [anyone, "trainer_explain_attack", [], "Good question. Attacking is the best defence, they say.\
+ # A tactic many fighters find useful is taking an offensive stance and readying your weapon for attack, waiting for the right moment for swinging it.\
+ # [You can ready your weapon for attack by pressing and holding down the left mouse button.]", "trainer_explain_attack_2",[]],
+# [anyone|plyr, "trainer_explain_attack_2", [], "That sounds useful.", "trainer_explain_attack_3",[]],
+# [anyone, "trainer_explain_attack_3", [], "It is a good tactic, but remember that, your opponent may see that and take a defensive stance against the direction you are swinging your weapon.\
+ # If that happens, you must break your attack and quickly attack from another direction\
+ # [You may cancel your current attack by quickly tapping the right mouse button].", "trainer_explain_attack_4",[]],
+# [anyone|plyr, "trainer_explain_attack_4", [], "If my opponent is defending against the direction I am attacking from, I will break and use another direction.", "trainer_explain_attack_5",[]],
+# [anyone, "trainer_explain_attack_5", [], "Yes, selecting the direction you swing your weapon is a crucial skill.\
+ # There are four main directions you may use: right swing, left swing, overhead swing and thrust. You must use each one wisely.\
+ # [to control your swing direction with default controls, move your mouse in the direction you want to swing from as you press the left mouse button].", "trainer_combat_pretalk",[]],
+# [anyone, "trainer_explain_horseback", [], "Very good question. A horse may be a warrior's most powerful weapon in combat.\
+ # It gives you speed, height, power and initiative. A lot of deadly weapons will become even deadlier on horseback.\
+ # However you must pay particular attention to horse-mounted enemies couching their lances, as they may take down any opponent in one hit.\
+ # [To use the couched lance yourself, wield a lance or similar weapon, and speed up your horse without pressing attack or defense buttons.\
+ # after you reach a speed, you'll lower your lance. Then try to target your enemies by maneuvering your horse.]", "trainer_combat_pretalk",[]],
 
-[anyone, "trainer_practice_1", [(eq, "$training_system_explained", 0)],
- "I train novices in four stages, each tougher than the one before.\
- To finish a stage and advance to the next one, you have to win three fights in a row.", "trainer_practice_1",
-   [
-   (assign, "$num_opponents_to_beat_in_a_row", 3),
-   (assign, "$novicemaster_opponent_troop", "trp_novice_fighter"),
-   (assign, "$training_system_explained", 1),
-   ]],
-[anyone, "trainer_practice_1",
-   [(ge, "$novice_training_difficulty",4)],
- "You have passed all stages of training. But if you want you can still practice. Are you ready?", "novicemaster_are_you_ready",
-   [(assign, "$num_opponents_to_beat_in_a_row",99999)]],
-[anyone, "trainer_practice_1",
-   [(eq, "$num_opponents_to_beat_in_a_row",0),(eq, "$novice_training_difficulty",0)],
- "Way to go {lad/lass}. With this victory, you have advanced to the next training level. From now on your opponents will be regular fighters, not the riff-raff off the street, so be on your toes.",
-"trainer_practice_1",
-   [[assign, "$num_opponents_to_beat_in_a_row",3],
-    [val_add, "$novice_training_difficulty",1],
-    [add_xp_to_troop,100],
-    [assign, "$novicemaster_opponent_troop", "trp_regular_fighter"]]],
-[anyone, "trainer_practice_1",
-   [[eq, "$num_opponents_to_beat_in_a_row",0],[eq, "$novice_training_difficulty",1]],
- "Way to go {lad/lass}. Welcome to the third training level. From now on your opponents will be veteran fighters; soldiers and arena regulars and the like. These guys know some dirty tricks, so keep your defense up.",
-"trainer_practice_1",
-   [[assign, "$num_opponents_to_beat_in_a_row",3],
-    [val_add, "$novice_training_difficulty",1],
-    [add_xp_to_troop,100],
-    [assign, "$novicemaster_opponent_troop", "trp_veteran_fighter"]]],
-[anyone, "trainer_practice_1",
-   [[eq, "$num_opponents_to_beat_in_a_row",0],[eq, "$novice_training_difficulty",2]],
- "You've got the heart of a champion, {lad/lass}, and the sword arm to match. From now on your opponents will be champion fighters.\
- These are the cream of the crop, the finest warriors I have trained. If you can best three of them in a row, you will join their ranks.",
-"trainer_practice_1",
-   [[assign, "$num_opponents_to_beat_in_a_row",3],
-    [val_add, "$novice_training_difficulty",1],
-    [add_xp_to_troop,100],
-    [assign, "$novicemaster_opponent_troop", "trp_champion_fighter"]]],
-[anyone, "trainer_practice_1",
-   [[eq, "$num_opponents_to_beat_in_a_row",0],[eq, "$novice_training_difficulty",3]],
- "It does my heart good to see such a promising talent. You have passed all tiers of training. You can now tell everyone that you have been trained by the master of the training field.",
-"novicemaster_finish_training",
-   [[assign, "$num_opponents_to_beat_in_a_row",3],
-    [val_add, "$novice_training_difficulty",1],
-    [add_xp_to_troop,300]]],
-[anyone|plyr, "novicemaster_finish_training", [], "Thank you master.", "novicemaster_finish_training_2",[]],
-[anyone, "novicemaster_finish_training_2", [], "I wish you good luck in the tournaments. And, don't forget,\
-  if you want to practice your swordwork anytime, just come and say the word.", "close_window",[]],
-[anyone, "trainer_practice_1",
-   [
-   (assign, reg8, "$num_opponents_to_beat_in_a_row"),
-   (str_store_troop_name, s9, "$novicemaster_opponent_troop"),
-   ],
- "Your next opponent will be a {s9}. You need to win {reg8} more\
- fights in a row to advance to the next stage. Are you ready?", "novicemaster_are_you_ready", []],
-[anyone|plyr, "novicemaster_are_you_ready", [], "Yes I am.", "novicemaster_ready_to_fight",[]],
-[anyone, "novicemaster_ready_to_fight", [], "Here you go then. Good luck.", "close_window",
-   [
-   (assign, "$training_fight_won", 0),
-   (assign, "$waiting_for_training_fight_result", 1),
-   (modify_visitors_at_site, "$g_training_ground_melee_training_scene"),
-   (reset_visitors),
-   (assign, reg0, 0),
-   (assign, reg1, 1),
-   (assign, reg2, 2),
-   (assign, reg3, 3),
-   (shuffle_range, 0, 4),
-   (set_visitor, reg0, "trp_player"),
-   (set_visitor, reg1, "$novicemaster_opponent_troop"),
-   (set_visitor, 4, "$g_talk_troop"),
-   (set_jump_mission, "mt_training_ground_trainer_training"),
-   (jump_to_scene, "$g_training_ground_melee_training_scene"),
-   ]],
+# [anyone, "trainer_practice_1", [(eq, "$training_system_explained", 0)],
+ # "I train novices in four stages, each tougher than the one before.\
+ # To finish a stage and advance to the next one, you have to win three fights in a row.", "trainer_practice_1",
+   # [
+   # (assign, "$num_opponents_to_beat_in_a_row", 3),
+   # (assign, "$novicemaster_opponent_troop", "trp_novice_fighter"),
+   # (assign, "$training_system_explained", 1),
+   # ]],
+# [anyone, "trainer_practice_1",
+   # [(ge, "$novice_training_difficulty",4)],
+ # "You have passed all stages of training. But if you want you can still practice. Are you ready?", "novicemaster_are_you_ready",
+   # [(assign, "$num_opponents_to_beat_in_a_row",99999)]],
+# [anyone, "trainer_practice_1",
+   # [(eq, "$num_opponents_to_beat_in_a_row",0),(eq, "$novice_training_difficulty",0)],
+ # "Way to go {lad/lass}. With this victory, you have advanced to the next training level. From now on your opponents will be regular fighters, not the riff-raff off the street, so be on your toes.",
+# "trainer_practice_1",
+   # [[assign, "$num_opponents_to_beat_in_a_row",3],
+    # [val_add, "$novice_training_difficulty",1],
+    # [add_xp_to_troop,100],
+    # [assign, "$novicemaster_opponent_troop", "trp_regular_fighter"]]],
+# [anyone, "trainer_practice_1",
+   # [[eq, "$num_opponents_to_beat_in_a_row",0],[eq, "$novice_training_difficulty",1]],
+ # "Way to go {lad/lass}. Welcome to the third training level. From now on your opponents will be veteran fighters; soldiers and arena regulars and the like. These guys know some dirty tricks, so keep your defense up.",
+# "trainer_practice_1",
+   # [[assign, "$num_opponents_to_beat_in_a_row",3],
+    # [val_add, "$novice_training_difficulty",1],
+    # [add_xp_to_troop,100],
+    # [assign, "$novicemaster_opponent_troop", "trp_veteran_fighter"]]],
+# [anyone, "trainer_practice_1",
+   # [[eq, "$num_opponents_to_beat_in_a_row",0],[eq, "$novice_training_difficulty",2]],
+ # "You've got the heart of a champion, {lad/lass}, and the sword arm to match. From now on your opponents will be champion fighters.\
+ # These are the cream of the crop, the finest warriors I have trained. If you can best three of them in a row, you will join their ranks.",
+# "trainer_practice_1",
+   # [[assign, "$num_opponents_to_beat_in_a_row",3],
+    # [val_add, "$novice_training_difficulty",1],
+    # [add_xp_to_troop,100],
+    # [assign, "$novicemaster_opponent_troop", "trp_champion_fighter"]]],
+# [anyone, "trainer_practice_1",
+   # [[eq, "$num_opponents_to_beat_in_a_row",0],[eq, "$novice_training_difficulty",3]],
+ # "It does my heart good to see such a promising talent. You have passed all tiers of training. You can now tell everyone that you have been trained by the master of the training field.",
+# "novicemaster_finish_training",
+   # [[assign, "$num_opponents_to_beat_in_a_row",3],
+    # [val_add, "$novice_training_difficulty",1],
+    # [add_xp_to_troop,300]]],
+# [anyone|plyr, "novicemaster_finish_training", [], "Thank you master.", "novicemaster_finish_training_2",[]],
+# [anyone, "novicemaster_finish_training_2", [], "I wish you good luck in the tournaments. And, don't forget,\
+  # if you want to practice your swordwork anytime, just come and say the word.", "close_window",[]],
+# [anyone, "trainer_practice_1",
+   # [
+   # (assign, reg8, "$num_opponents_to_beat_in_a_row"),
+   # (str_store_troop_name, s9, "$novicemaster_opponent_troop"),
+   # ],
+ # "Your next opponent will be a {s9}. You need to win {reg8} more\
+ # fights in a row to advance to the next stage. Are you ready?", "novicemaster_are_you_ready", []],
+# [anyone|plyr, "novicemaster_are_you_ready", [], "Yes I am.", "novicemaster_ready_to_fight",[]],
+# [anyone, "novicemaster_ready_to_fight", [], "Here you go then. Good luck.", "close_window",
+   # [
+   # (assign, "$training_fight_won", 0),
+   # (assign, "$waiting_for_training_fight_result", 1),
+   # (modify_visitors_at_site, "$g_training_ground_melee_training_scene"),
+   # (reset_visitors),
+   # (assign, reg0, 0),
+   # (assign, reg1, 1),
+   # (assign, reg2, 2),
+   # (assign, reg3, 3),
+   # (shuffle_range, 0, 4),
+   # (set_visitor, reg0, "trp_player"),
+   # (set_visitor, reg1, "$novicemaster_opponent_troop"),
+   # (set_visitor, 4, "$g_talk_troop"),
+   # (set_jump_mission, "mt_training_ground_trainer_training"),
+   # (jump_to_scene, "$g_training_ground_melee_training_scene"),
+   # ]],
 
-[anyone|plyr, "novicemaster_are_you_ready", [], "Just a minute. I am not ready yet.", "novicemaster_not_ready",[]],
-[anyone, "novicemaster_not_ready", [], "Hey, You will never make it if you don't practice.", "close_window",[]],
+# [anyone|plyr, "novicemaster_are_you_ready", [], "Just a minute. I am not ready yet.", "novicemaster_not_ready",[]],
+# [anyone, "novicemaster_not_ready", [], "Hey, You will never make it if you don't practice.", "close_window",[]],
 
 
 #Crooks
@@ -39454,108 +39454,108 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 
 
-[anyone|auto_proceed, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (check_quest_active, "qst_collect_men"),
-    #(neq, "$talk_context", tc_tavern_talk),
-    #(neq, "$talk_context", tc_back_alley),
-    (eq, "$talk_context", tc_merchants_house),
-  ],
-  "{!}.", "merchant_end", []],
+# [anyone|auto_proceed, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (check_quest_active, "qst_collect_men"),
+    #### (neq, "$talk_context", tc_tavern_talk),
+    #### (neq, "$talk_context", tc_back_alley),
+    # (eq, "$talk_context", tc_merchants_house),
+  # ],
+  # "{!}.", "merchant_end", []],
 
-[anyone, "merchant_end", [],
-  "Heh! I must really be in a tight spot, to place my hopes in a passing stranger. However, something about you tells me that my trust is not misplaced. Now, go see if you can round up some volunteers.", "close_window", []],
+# [anyone, "merchant_end", [],
+  # "Heh! I must really be in a tight spot, to place my hopes in a passing stranger. However, something about you tells me that my trust is not misplaced. Now, go see if you can round up some volunteers.", "close_window", []],
 
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_merchants_house),
-    (check_quest_active, "qst_save_town_from_bandits"),
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_merchants_house),
+    # (check_quest_active, "qst_save_town_from_bandits"),
 
-    (store_div, ":number_of_civilian_loses_div_2", "$number_of_civilian_loses", 2),
+    # (store_div, ":number_of_civilian_loses_div_2", "$number_of_civilian_loses", 2),
 
-    (try_begin),
-      (eq, "$g_killed_first_bandit", 1),
-      (store_add, ":player_success", "$number_of_bandits_killed_by_player", 1),
-    (else_try),
-      (store_add, ":player_success", "$number_of_bandits_killed_by_player", 0),
-    (try_end),
+    # (try_begin),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (store_add, ":player_success", "$number_of_bandits_killed_by_player", 1),
+    # (else_try),
+      # (store_add, ":player_success", "$number_of_bandits_killed_by_player", 0),
+    # (try_end),
 
-    (val_sub, ":player_success", ":number_of_civilian_loses_div_2"),
-    (val_max, ":player_success", 0),
+    # (val_sub, ":player_success", ":number_of_civilian_loses_div_2"),
+    # (val_max, ":player_success", 0),
 
-    (call_script, "script_change_player_relation_with_center", "$g_starting_town", ":player_success"),
+    # (call_script, "script_change_player_relation_with_center", "$g_starting_town", ":player_success"),
 
-    (try_begin),
-      (eq, "$g_killed_first_bandit", 1),
-      (gt, "$number_of_bandits_killed_by_player", 2),
-      (str_store_string, s3, "str_you_fought_well_at_town_fight_survived"),
-      (troop_add_gold, "trp_player", 200),
-    (else_try),
-      (eq, "$g_killed_first_bandit", 1),
-      (gt, "$number_of_bandits_killed_by_player", 0),
-      (str_store_string, s3, "str_you_fought_normal_at_town_fight_survived"),
-      (troop_add_gold, "trp_player", 200),
-    (else_try),
-      (eq, "$g_killed_first_bandit", 1),
-      (eq, "$number_of_bandits_killed_by_player", 0),
-      (str_store_string, s3, "str_you_fought_bad_at_town_fight_survived"),
-      (troop_add_gold, "trp_player", 100),
-    (else_try),
-      (eq, "$g_killed_first_bandit", 0),
-      (ge, "$number_of_bandits_killed_by_player", 2),
-      (str_store_string, s3, "str_you_fought_well_at_town_fight"),
-      (troop_add_gold, "trp_player", 100),
-    (else_try),
-      (str_store_string, s3, "str_you_wounded_at_town_fight"),
-      (troop_add_gold, "trp_player", 100),
-    (try_end),
+    # (try_begin),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (gt, "$number_of_bandits_killed_by_player", 2),
+      # (str_store_string, s3, "str_you_fought_well_at_town_fight_survived"),
+      # (troop_add_gold, "trp_player", 200),
+    # (else_try),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (gt, "$number_of_bandits_killed_by_player", 0),
+      # (str_store_string, s3, "str_you_fought_normal_at_town_fight_survived"),
+      # (troop_add_gold, "trp_player", 200),
+    # (else_try),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (eq, "$number_of_bandits_killed_by_player", 0),
+      # (str_store_string, s3, "str_you_fought_bad_at_town_fight_survived"),
+      # (troop_add_gold, "trp_player", 100),
+    # (else_try),
+      # (eq, "$g_killed_first_bandit", 0),
+      # (ge, "$number_of_bandits_killed_by_player", 2),
+      # (str_store_string, s3, "str_you_fought_well_at_town_fight"),
+      # (troop_add_gold, "trp_player", 100),
+    # (else_try),
+      # (str_store_string, s3, "str_you_wounded_at_town_fight"),
+      # (troop_add_gold, "trp_player", 100),
+    # (try_end),
 
-    (try_begin),
-      (ge, "$number_of_civilian_loses", 1),
-      (assign, reg0, "$number_of_civilian_loses"),
-      (str_store_string, s2, "str_unfortunately_reg0_civilians_wounded_during_fight_more"),
-    (else_try),
-      (eq, "$number_of_civilian_loses", 1),
-      (assign, reg0, "$number_of_civilian_loses"),
-      (str_store_string, s2, "str_unfortunately_reg0_civilians_wounded_during_fight"),
-    (else_try),
-      (str_store_string, s2, "str_also_one_another_good_news_is_any_civilians_did_not_wounded_during_fight"),
-    (try_end),
+    # (try_begin),
+      # (ge, "$number_of_civilian_loses", 1),
+      # (assign, reg0, "$number_of_civilian_loses"),
+      # (str_store_string, s2, "str_unfortunately_reg0_civilians_wounded_during_fight_more"),
+    # (else_try),
+      # (eq, "$number_of_civilian_loses", 1),
+      # (assign, reg0, "$number_of_civilian_loses"),
+      # (str_store_string, s2, "str_unfortunately_reg0_civilians_wounded_during_fight"),
+    # (else_try),
+      # (str_store_string, s2, "str_also_one_another_good_news_is_any_civilians_did_not_wounded_during_fight"),
+    # (try_end),
 
-    (call_script, "script_succeed_quest", "qst_save_town_from_bandits"),
-    (call_script, "script_end_quest", "qst_save_town_from_bandits"),
-  ],
-  "{s3}{s2}", "merchant_quest_4e",
-[]],
+    # (call_script, "script_succeed_quest", "qst_save_town_from_bandits"),
+    # (call_script, "script_end_quest", "qst_save_town_from_bandits"),
+  # ],
+  # "{s3}{s2}", "merchant_quest_4e",
+# []],
 
-[anyone|plyr, "merchant_quest_4e",
-[
-    (try_begin),
-      (eq, "$g_killed_first_bandit", 1),
-      (gt, "$number_of_bandits_killed_by_player", 2),
-      (str_store_string, s1, "str_you_fought_well_at_town_fight_survived_answer"),
-    (else_try),
-      (eq, "$g_killed_first_bandit", 1),
-      (gt, "$number_of_bandits_killed_by_player", 0),
-      (str_store_string, s1, "str_you_fought_normal_at_town_fight_survived_answer"),
-    (else_try),
-      (eq, "$g_killed_first_bandit", 1),
-      (eq, "$number_of_bandits_killed_by_player", 0),
-      (str_store_string, s1, "str_you_fought_bad_at_town_fight_survived_answer"),
-    (else_try),
-      (eq, "$g_killed_first_bandit", 0),
-      (ge, "$number_of_bandits_killed_by_player", 2),
-      (str_store_string, s1, "str_you_fought_well_at_town_fight_answer"),
-    (else_try),
-      (str_store_string, s1, "str_you_wounded_at_town_fight_answer"),
-    (try_end),
-  ],
-  "{s1}", "merchant_finale",
-[
-    (assign, "$dialog_with_merchant_ended", 1),
-  ]],
+# [anyone|plyr, "merchant_quest_4e",
+# [
+    # (try_begin),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (gt, "$number_of_bandits_killed_by_player", 2),
+      # (str_store_string, s1, "str_you_fought_well_at_town_fight_survived_answer"),
+    # (else_try),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (gt, "$number_of_bandits_killed_by_player", 0),
+      # (str_store_string, s1, "str_you_fought_normal_at_town_fight_survived_answer"),
+    # (else_try),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (eq, "$number_of_bandits_killed_by_player", 0),
+      # (str_store_string, s1, "str_you_fought_bad_at_town_fight_survived_answer"),
+    # (else_try),
+      # (eq, "$g_killed_first_bandit", 0),
+      # (ge, "$number_of_bandits_killed_by_player", 2),
+      # (str_store_string, s1, "str_you_fought_well_at_town_fight_answer"),
+    # (else_try),
+      # (str_store_string, s1, "str_you_wounded_at_town_fight_answer"),
+    # (try_end),
+  # ],
+  # "{s1}", "merchant_finale",
+# [
+    # (assign, "$dialog_with_merchant_ended", 1),
+  # ]],
 
 #[anyone|auto_proceed, "start",
 #[
@@ -39568,115 +39568,115 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 #]],
 
 
-[anyone|plyr, "merchant_quest_4e",
-[
-  ],
-  "The Heavens alone grant us victory.", "merchant_finale",
-[  (assign, "$dialog_with_merchant_ended", 1),
-  ]],
+# [anyone|plyr, "merchant_quest_4e",
+# [
+  # ],
+  # "The Heavens alone grant us victory.", "merchant_finale",
+# [  (assign, "$dialog_with_merchant_ended", 1),
+  # ]],
 
-[anyone|plyr, "merchant_quest_4e",
-[],
-  "I'm glad to see that you're alive, too.", "merchant_finale",
-[  
-    (assign, "$dialog_with_merchant_ended", 1),
-  ]],
+# [anyone|plyr, "merchant_quest_4e",
+# [],
+  # "I'm glad to see that you're alive, too.", "merchant_finale",
+# [  
+    # (assign, "$dialog_with_merchant_ended", 1),
+  # ]],
 
-[anyone, "merchant_finale", [
-  (faction_get_slot, ":faction_leader", "$g_encountered_party_faction", slot_faction_leader),
-  (str_store_troop_name, s5, ":faction_leader"),
-  ],
-  "Yes, yes... Now, a couple of my boys have the watch captain pinned down in a back room, with a knife at his throat. I''ll need to go drag him before {s5} and explain what this breach of the peace is all about. You don't need to be part of that, though. I'll tell you what -- if all goes well, I'll meet you in the tavern again shortly, and let you know how it all came out. If you don't see me in the tavern, but instead see my head on a spike over the city gate, I'll assume you know enough to stay out of town for a while and forget this whole episode ever happened. So -- hopefully we'll meet again!", "close_window",
-[
-(assign, "$g_do_one_more_meeting_with_merchant", 2),
+# [anyone, "merchant_finale", [
+  # (faction_get_slot, ":faction_leader", "$g_encountered_party_faction", slot_faction_leader),
+  # (str_store_troop_name, s5, ":faction_leader"),
+  # ],
+  # "Yes, yes... Now, a couple of my boys have the watch captain pinned down in a back room, with a knife at his throat. I''ll need to go drag him before {s5} and explain what this breach of the peace is all about. You don't need to be part of that, though. I'll tell you what -- if all goes well, I'll meet you in the tavern again shortly, and let you know how it all came out. If you don't see me in the tavern, but instead see my head on a spike over the city gate, I'll assume you know enough to stay out of town for a while and forget this whole episode ever happened. So -- hopefully we'll meet again!", "close_window",
+# [
+# (assign, "$g_do_one_more_meeting_with_merchant", 2),
 # (assign, "$g_do_one_more_meeting_with_merchant", 1), no need to this, do not open this line, it is already assigning while leaving mission.
 # (jump_to_menu, "mnu_town"),
 # (finish_mission, 0),
-]],
+# ]],
 
 
 
-[anyone, "start",
-[
-    (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
-    (eq, "$talk_context", tc_merchants_house),
-    (neg|check_quest_finished, "qst_collect_men"),
-    (eq, "$current_startup_quest_phase", 1),
+# [anyone, "start",
+# [
+    # (is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+    # (eq, "$talk_context", tc_merchants_house),
+    # (neg|check_quest_finished, "qst_collect_men"),
+    # (eq, "$current_startup_quest_phase", 1),
 
-    (try_begin),
-      (eq, "$g_killed_first_bandit", 1),
-      (str_store_string, s1, "str_are_you_all_right"),
-    (else_try),
-      (str_store_string, s1, "str_you_are_awake"),
-    (try_end),
-  ],
-  "{s1}", "merchant_quest_1_prologue_1",
-[]],
+    # (try_begin),
+      # (eq, "$g_killed_first_bandit", 1),
+      # (str_store_string, s1, "str_are_you_all_right"),
+    # (else_try),
+      # (str_store_string, s1, "str_you_are_awake"),
+    # (try_end),
+  # ],
+  # "{s1}", "merchant_quest_1_prologue_1",
+# []],
 
-[anyone, "merchant_quest_1_prologue_1",
-[
-  ],
-  "We've always had brigands in the hills, driven to banditry by war, debt, or love of violence. Recently, however, they've been getting bolder -- leaving their camps in the wild and venturing into town, looking for unwary prey. The watch commander tells us it's because of all the fighting on the frontiers -- fewer men to keep an eye on the streets -- but I'm not sure what to make of that. It seems to me that the most logical explanation is that these bandits have an ally inside the walls, who helps them enter unnoticed and helps them identify particularly tempting targets... Last week, you see, they took my brother.", "merchant_quest_1_prologue_2",
-[]],
+# [anyone, "merchant_quest_1_prologue_1",
+# [
+  # ],
+  # "We've always had brigands in the hills, driven to banditry by war, debt, or love of violence. Recently, however, they've been getting bolder -- leaving their camps in the wild and venturing into town, looking for unwary prey. The watch commander tells us it's because of all the fighting on the frontiers -- fewer men to keep an eye on the streets -- but I'm not sure what to make of that. It seems to me that the most logical explanation is that these bandits have an ally inside the walls, who helps them enter unnoticed and helps them identify particularly tempting targets... Last week, you see, they took my brother.", "merchant_quest_1_prologue_2",
+# []],
 
-[anyone, "merchant_quest_1_prologue_2",
-[],
-  "I don't know what my brother was thinking -- a lad from a prominent house, out alone after dark in times like these... Well, I suppose you were too, but you're a stranger here, and didn't know how bad things have become. He had no such excuse. But he's family, so what can you do? If you don't protect your kin, then people will start thinking that you can't protect your investements, either, and I can't have that... No doubt the gang will soon send word about a ransom, but I don't care to pay it.", "merchant_quest_1_prologue_3",[]],
+# [anyone, "merchant_quest_1_prologue_2",
+# [],
+  # "I don't know what my brother was thinking -- a lad from a prominent house, out alone after dark in times like these... Well, I suppose you were too, but you're a stranger here, and didn't know how bad things have become. He had no such excuse. But he's family, so what can you do? If you don't protect your kin, then people will start thinking that you can't protect your investements, either, and I can't have that... No doubt the gang will soon send word about a ransom, but I don't care to pay it.", "merchant_quest_1_prologue_3",[]],
 
 
-[anyone, "merchant_quest_1_prologue_3",
-[],
-  "So here's my proposition. You look like you've had a bit of experience with a blade -- and more importantly, you must have a bit of fire in your belly, or you wouldn't be coming to Europe to seek your fortune. So here's what I'm asking you to do: gather a small party, track down these bandits to their lair, teach them a lesson they won't forget, and get my brother back safe. In return, you'll earn my lasting gratitude and a bit of silver. What do you say?", "merchant_quest_1a",[]],
+# [anyone, "merchant_quest_1_prologue_3",
+# [],
+  # "So here's my proposition. You look like you've had a bit of experience with a blade -- and more importantly, you must have a bit of fire in your belly, or you wouldn't be coming to Europe to seek your fortune. So here's what I'm asking you to do: gather a small party, track down these bandits to their lair, teach them a lesson they won't forget, and get my brother back safe. In return, you'll earn my lasting gratitude and a bit of silver. What do you say?", "merchant_quest_1a",[]],
 
-[anyone|plyr, "merchant_quest_1a",
-[
-  ],
-  "I am interested.", "merchant_quest_1b",[]],
+# [anyone|plyr, "merchant_quest_1a",
+# [
+  # ],
+  # "I am interested.", "merchant_quest_1b",[]],
 
-[anyone|plyr, "merchant_quest_1a",
-[
-  ],
-  "I am not interested, have more important business to do.", "close_window",
-[
-    (assign, "$dialog_with_merchant_ended", 1),
-  ]],
+# [anyone|plyr, "merchant_quest_1a",
+# [
+  # ],
+  # "I am not interested, have more important business to do.", "close_window",
+# [
+    # (assign, "$dialog_with_merchant_ended", 1),
+  # ]],
 
-[anyone, "merchant_quest_1b",
-[
-  ],
-  "You won't be able to do this by yourself, though. If you try and take on the whole gang singlehandedly, the hunter will become the hunted, I'll warrant. You'll first want to round up a group of volunteers. There's always a few lads in the villages around here, looking for a bit of work that's more interesting than tilling the soil or hauling water. They'll follow you if you pay. So... Take this purse of 100 denars. Consider it an advance on your reward. Go round to the villages, and use the money to hire some help. I'll reckon that you need at least five men to take on these bandits.", "merchant_quest_1c",
-[
-    #tom lance recruitment system
-    (try_begin),
-      (eq, "$use_feudal_lance", 1),
-      (call_script, "script_troop_add_gold", "trp_player", 1000),
-    (else_try),
-      (call_script, "script_troop_add_gold", "trp_player", 100), 
-    (try_end),
-    #tom
+# [anyone, "merchant_quest_1b",
+# [
+  # ],
+  # "You won't be able to do this by yourself, though. If you try and take on the whole gang singlehandedly, the hunter will become the hunted, I'll warrant. You'll first want to round up a group of volunteers. There's always a few lads in the villages around here, looking for a bit of work that's more interesting than tilling the soil or hauling water. They'll follow you if you pay. So... Take this purse of 100 denars. Consider it an advance on your reward. Go round to the villages, and use the money to hire some help. I'll reckon that you need at least five men to take on these bandits.", "merchant_quest_1c",
+# [
+    # tom lance recruitment system
+    # (try_begin),
+      # (eq, "$use_feudal_lance", 1),
+      # (call_script, "script_troop_add_gold", "trp_player", 1000),
+    # (else_try),
+      # (call_script, "script_troop_add_gold", "trp_player", 100), 
+    # (try_end),
+    # tom
     
-    (str_store_troop_name, s9, "$g_talk_troop"),
-    (str_store_party_name, s1, "$g_starting_town"),
-    (str_store_string, s2, "str_start_up_quest_message_1"),
+    # (str_store_troop_name, s9, "$g_talk_troop"),
+    # (str_store_party_name, s1, "$g_starting_town"),
+    # (str_store_string, s2, "str_start_up_quest_message_1"),
 
-    (call_script, "script_start_quest", "qst_collect_men", "$g_talk_troop"),
+    # (call_script, "script_start_quest", "qst_collect_men", "$g_talk_troop"),
 
-    (party_get_position, pos1, "$current_town"),
-  ]],
+    # (party_get_position, pos1, "$current_town"),
+  # ]],
 
-[anyone|plyr, "merchant_quest_1c",
-[
-  ],
-  "Very good, sir. I'll go collect some men from around the villages.", "merchant_quest_1d",[]],
+# [anyone|plyr, "merchant_quest_1c",
+# [
+  # ],
+  # "Very good, sir. I'll go collect some men from around the villages.", "merchant_quest_1d",[]],
 
-[anyone, "merchant_quest_1d",
-[
-    (str_store_party_name, s1, "$current_town"),
-  ],
-  "Good. You can find me again in the tavern here in {s1} after you've got your group together. Then we'll speak about what we do next.", "close_window",
-[
-    (assign, "$dialog_with_merchant_ended", 1),
-  ]],
+# [anyone, "merchant_quest_1d",
+# [
+    # (str_store_party_name, s1, "$current_town"),
+  # ],
+  # "Good. You can find me again in the tavern here in {s1} after you've got your group together. Then we'll speak about what we do next.", "close_window",
+# [
+    # (assign, "$dialog_with_merchant_ended", 1),
+  # ]],
 
 
 
