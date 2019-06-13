@@ -72,3 +72,4 @@ prsnt_taragoth_lords_report = 70
 prsnt_bank = 71
 prsnt_bank_village = 72
 prsnt_bank_quickview = 73
+prsnt_enhanced_mod_options_decap = 74

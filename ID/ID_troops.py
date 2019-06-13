@@ -3957,3 +3957,7 @@ trp_ee_array_4 = 3955
 trp_ee_array_5 = 3956
 trp_wagon_master = 3957
 trp_wagon_possessions = 3958
+trp_looter_bully_handless = 3959
+trp_looter_thug_armless = 3960
+trp_thin_looter_armless = 3961
+trp_fat_peasant_handless = 3962

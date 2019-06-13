@@ -36,6 +36,11 @@ REM xcopy /s /y /Q "C:\Program Files (x86)\Mount&Blade Warband\Modules\1257AD-ma
 REM xcopy /s /y /Q "C:\Program Files (x86)\Mount&Blade Warband\Modules\1257AD-master\Source Kits\Generic Presentation Utilities" "C:\Program Files (x86)\Mount&Blade Warband\Modules\1257AD-master\build"
 
 
+REM NEW v3.0
+xcopy /s /y /Q "C:\Program Files (x86)\Mount&Blade Warband\Modules\1257AD-master\Source Kits\Decapitation" "C:\Program Files (x86)\Mount&Blade Warband\Modules\1257AD-master\build"
+
+
+
 
 REM Execute compile.bat
 start /d "C:\Program Files (x86)\Mount&Blade Warband\Modules\1257AD-master\build" compile.bat

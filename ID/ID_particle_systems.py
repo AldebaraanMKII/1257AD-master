@@ -62,3 +62,4 @@ psys_desert_storm = 60
 psys_blizzard = 61
 psys_rain = 62
 psys_oil = 63
+psys_blood_decapitation = 64

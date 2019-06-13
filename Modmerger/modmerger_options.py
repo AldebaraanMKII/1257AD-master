@@ -33,6 +33,7 @@ mods_active = [
     "FlorisBank",  ######## NEW v2.1
     "pcamp",  ######## NEW v2.1
     "outkit",  ######## NEW v2.1
+    "decapitation",  ######## NEW v3.0
     # "gpu",  ######## NEW v2.3
     # "ccp",  ######## NEW v2.3
     # "trees"

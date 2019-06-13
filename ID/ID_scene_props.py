@@ -1828,3 +1828,5 @@ spr_1257_tavern_door_a = 1827
 spr_1257_tavern_door_b = 1828
 spr_1257_castle_f_door_a = 1829
 spr_tent = 1830
+spr_head_dynamic_male = 1831
+spr_head_dynamic_female = 1832

@@ -188,3 +188,4 @@ snd_woman_grunt = 186
 snd_woman_stun = 187
 snd_woman_grunt_long = 188
 snd_woman_victory = 189
+snd_decapitation = 191
