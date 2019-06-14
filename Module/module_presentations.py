@@ -18888,7 +18888,7 @@ presentations = [
             (eq, ":cur_troop", "trp_tatar_tribesman"),
             (assign, ":is_root_troop", 1),
           (else_try),
-            (gt, ":cur_troop", "trp_tatar_tribesman"),
+            (gt, ":cur_troop", "trp_tatar_horseman"),
             (assign, ":is_root_troop", 0),
           (try_end),
 ####### NEW v3.0-KOMKE END- 

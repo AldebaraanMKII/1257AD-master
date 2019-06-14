@@ -15898,14 +15898,16 @@ game_menus = [ #
 
   ###TOM
     ("town_tournament_start_new",0,
-    "Select which type of tournament do you wish to participate in. You can only participate in one of them.",
+####### NEW v3.0-KOMKE START-
+    # "Select which type of tournament do you wish to participate in. You can only participate in one of them.",
+    "You need 200 renown to fight in tournaments. Only companions can join your team!",
     "none",
     [
         #(set_background_mesh, "mesh_pic_tournament_euro"),
         (assign, "$current_opponent", 0),
     ],
     [
-      ("join_one_on_one", [], "Join one on one tournament.",
+      ("join_one_on_one", [(eq, 1, 0)], "Join one on one tournament.",####### NEW v3.0-KOMKE disabled
       [
         (party_set_slot, "$current_town", slot_town_has_tournament, 0),
         (assign, "$tournament_type", 0),
@@ -15915,13 +15917,15 @@ game_menus = [ #
       
       ("join_team_on_team", 
       [
-        (try_begin),
-          (store_party_size, ":party_size", "p_main_party"),
-          (lt, ":party_size", 5),
+        # (try_begin),
+          # (store_party_size, ":party_size", "p_main_party"),
+          # (lt, ":party_size", 5),
           # (eq, "$freelancer_state", 0),
           # (display_message, "@You do not have five men in your party to form a team!", 0xEA9999),
-          (display_message, "@Only companions can join your team!", 0xEA9999),####### NEW v3.0-KOMKE
-        (try_end),
+        # (try_end),
+        (troop_get_slot, ":plyr_renown", "trp_player", slot_troop_renown),
+        (ge, ":plyr_renown", 200),
+####### NEW v3.0-KOMKE END- 
       ], "Join team on team tournament.",
       [  
         
@@ -33371,7 +33375,7 @@ game_menus = [ #
 		("camp_mod_6",
 			[],
 		"Give me 1000 experience",
-		[
+        [
 			(add_xp_to_troop, 1000, "trp_player"),
 			(display_message, "@+1000 EXP."),
             # (try_for_range, ":center_no", centers_begin, centers_end),
@@ -33386,6 +33390,19 @@ game_menus = [ #
             #         (str_store_faction_name, s21, ":party_faction"),
             #         (display_log_message, "@party = {s20}, faction = {s21}, mercs1 = {reg20}, mercs1_number = {reg21}, mercs2 = {reg22}, mercs2_number = {reg23}, ", 0xffffff),
             # (try_end),
+            # (try_for_range, ":lord_no", kings_begin, lords_end),
+            #     (troop_get_slot, ":kingdom_hero_party", ":lord_no", slot_troop_leaded_party),
+            #     (gt, ":kingdom_hero_party", 0),## if lord party is not -1 or main party
+            #         (party_is_active, ":kingdom_hero_party"),## if active
+            #             (store_distance_to_party_from_party, ":party_distance", "p_main_party", ":kingdom_hero_party"),
+            #             (lt, ":party_distance", 1),## if party is within min distance
+            #             (troop_get_slot, ":controversy", ":lord_no", slot_troop_controversy),
+            #             (troop_set_slot, ":lord_no", slot_troop_controversy, 100),
+            #             (assign, reg50, ":controversy"),
+            #             (str_store_troop_name, s50, ":lord_no"),
+            #             (display_log_message, "@lord = {s50}, previous controversy = {reg50}", 0xffffff),
+            # (try_end),
+
 		]
 		),
 
