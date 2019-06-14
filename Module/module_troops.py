@@ -42760,6 +42760,7 @@ itm_spear_d,
    ###### knows_power_throw_3|knows_athletics_2|knows_power_strike_1,
    ###### 0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
 
+####### NEW v3.0-KOMKE START-
 #BALT
   ["npc1",
     "Vytenis",
@@ -42769,9 +42770,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(160) | wp_two_handed(120) | wp_polearm(160) | wp_archery(80) | wp_crossbow(80) | wp_throwing(140),
-    knows_weapon_master_4|knows_power_strike_3|knows_riding_4|knows_leadership_3|knows_prisoner_management_1|knows_athletics_2|knows_spotting_2|knows_pathfinding_1|knows_looting_3|knows_power_throw_3|knows_ironflesh_3,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(160) | wp_two_handed(120) | wp_polearm(160) | wp_archery(80) | wp_crossbow(80) | wp_throwing(140),
+    # knows_weapon_master_4|knows_power_strike_3|knows_riding_4|knows_leadership_3|knows_prisoner_management_1|knows_athletics_2|knows_spotting_2|knows_pathfinding_1|knows_looting_3|knows_power_throw_3|knows_ironflesh_3,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x0000000ed30c030930244e14d4a925a200000000001e98a90000000000000000
   ],
 
@@ -42783,9 +42787,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(160) | wp_two_handed(120) | wp_polearm(160) | wp_archery(80) | wp_crossbow(80) | wp_throwing(140),
-    knows_weapon_master_4|knows_power_strike_3|knows_riding_4|knows_leadership_3|knows_prisoner_management_1|knows_athletics_2|knows_spotting_2|knows_pathfinding_1|knows_looting_3|knows_power_throw_3|knows_ironflesh_3,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(160) | wp_two_handed(120) | wp_polearm(160) | wp_archery(80) | wp_crossbow(80) | wp_throwing(140),
+    # knows_weapon_master_4|knows_power_strike_3|knows_riding_4|knows_leadership_3|knows_prisoner_management_1|knows_athletics_2|knows_spotting_2|knows_pathfinding_1|knows_looting_3|knows_power_throw_3|knows_ironflesh_3,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000000170c224f3464adc91e8dd95b00000000001dd9090000000000000000
   ],
 
@@ -42797,9 +42804,12 @@ itm_spear_d,
     [
 
     ],
-    str_13|agi_10|int_11|cha_8|level(8),
-    wp_one_handed(140) | wp_two_handed(100) | wp_polearm(140) | wp_archery(80) | wp_crossbow(80) | wp_throwing(120),
-    knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_prisoner_management_2|knows_tactics_2|knows_spotting_2|knows_pathfinding_2|knows_looting_1|knows_power_throw_2|knows_ironflesh_2,
+    # str_13|agi_10|int_11|cha_8|level(8),
+    # wp_one_handed(140) | wp_two_handed(100) | wp_polearm(140) | wp_archery(80) | wp_crossbow(80) | wp_throwing(120),
+    # knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_prisoner_management_2|knows_tactics_2|knows_spotting_2|knows_pathfinding_2|knows_looting_1|knows_power_throw_2|knows_ironflesh_2,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000004d80d308823129243146d2c4600000000001e5ad10000000000000000
   ],
 
@@ -42812,9 +42822,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(180) | wp_two_handed(100) | wp_polearm(180) | wp_archery(100) | wp_crossbow(120) | wp_throwing(60),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_shield_4|knows_ironflesh_4|knows_persuasion_2|knows_trade_2,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(180) | wp_two_handed(100) | wp_polearm(180) | wp_archery(100) | wp_crossbow(120) | wp_throwing(60),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_shield_4|knows_ironflesh_4|knows_persuasion_2|knows_trade_2,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x000000000300028e1a6d85c75991c55900000000001cd91a0000000000000000
   ],
 
@@ -42826,9 +42839,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(180) | wp_two_handed(100) | wp_polearm(180) | wp_archery(100) | wp_crossbow(120) | wp_throwing(60),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_shield_4|knows_ironflesh_4|knows_persuasion_2|knows_trade_2,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(180) | wp_two_handed(100) | wp_polearm(180) | wp_archery(100) | wp_crossbow(120) | wp_throwing(60),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_shield_4|knows_ironflesh_4|knows_persuasion_2|knows_trade_2,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000001b711304526ad45ca9c79cae300000000001dc2ec0000000000000000
   ],
 
@@ -42840,9 +42856,12 @@ itm_spear_d,
     [
 
     ],
-    str_13|agi_10|int_11|cha_8|level(8),
-    wp_one_handed(140) | wp_two_handed(80) | wp_polearm(140) | wp_archery(120) | wp_crossbow(140) | wp_throwing(60),
-    knows_weapon_master_3|knows_power_strike_3|knows_athletics_4|knows_trainer_3|knows_leadership_1|knows_ironflesh_3|knows_persuasion_3|knows_trade_3,
+    # str_13|agi_10|int_11|cha_8|level(8),
+    # wp_one_handed(140) | wp_two_handed(80) | wp_polearm(140) | wp_archery(120) | wp_crossbow(140) | wp_throwing(60),
+    # knows_weapon_master_3|knows_power_strike_3|knows_athletics_4|knows_trainer_3|knows_leadership_1|knows_ironflesh_3|knows_persuasion_3|knows_trade_3,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x000000000a0432c9353319cad3acbaa400000000001e57700000000000000000
   ],
 
@@ -42856,9 +42875,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(160) | wp_two_handed(160) | wp_polearm(180) | wp_archery(100) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_2|knows_tactics_2|knows_ironflesh_4,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(160) | wp_two_handed(160) | wp_polearm(180) | wp_archery(100) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_2|knows_tactics_2|knows_ironflesh_4,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000004f404120e4b235a259c9ad36e00000000001ecae60000000000000000
   ],
 
@@ -42870,9 +42892,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(160) | wp_two_handed(160) | wp_polearm(180) | wp_archery(100) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_2|knows_tactics_2|knows_ironflesh_4,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(160) | wp_two_handed(160) | wp_polearm(180) | wp_archery(100) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_2|knows_tactics_2|knows_ironflesh_4,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x0000000fec0c21c63b837644ab31635b00000000001d32e30000000000000000
   ],
 
@@ -42884,9 +42909,12 @@ itm_spear_d,
     [
 
     ],
-    str_13|agi_10|int_11|cha_8|level(8),
-    wp_one_handed(120) | wp_two_handed(120) | wp_polearm(140) | wp_archery(120) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_leadership_1|knows_ironflesh_2,
+    # str_13|agi_10|int_11|cha_8|level(8),
+    # wp_one_handed(120) | wp_two_handed(120) | wp_polearm(140) | wp_archery(120) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_leadership_1|knows_ironflesh_2,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000001bd0010051494726b226516a400000000001dc2e30000000000000000
   ],
 
@@ -42900,9 +42928,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(180) | wp_two_handed(80) | wp_polearm(180) | wp_archery(120) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_tactics_3|knows_trade_3|knows_prisoner_management_3|knows_engineer_2,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(180) | wp_two_handed(80) | wp_polearm(180) | wp_archery(120) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_tactics_3|knows_trade_3|knows_prisoner_management_3|knows_engineer_2,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000005c504e1d422da6837ab963ad400000000001119150000000000000000
   ],
 
@@ -42914,9 +42945,12 @@ itm_spear_d,
     [
 
     ],
-    str_16|agi_9|int_6|cha_12|level(8),
-    wp_one_handed(180) | wp_two_handed(80) | wp_polearm(180) | wp_archery(120) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_tactics_3|knows_trade_3|knows_prisoner_management_3|knows_engineer_2,
+    # str_16|agi_9|int_6|cha_12|level(8),
+    # wp_one_handed(180) | wp_two_handed(80) | wp_polearm(180) | wp_archery(120) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_tactics_3|knows_trade_3|knows_prisoner_management_3|knows_engineer_2,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000005c200b385371b6b46de466ce400000000001de72b0000000000000000
   ],
 
@@ -42928,9 +42962,12 @@ itm_spear_d,
     [
 
     ],
-    str_13|agi_10|int_11|cha_8|level(8),
-    wp_one_handed(140) | wp_two_handed(60) | wp_polearm(140) | wp_archery(140) | wp_crossbow(60) | wp_throwing(120),
-    knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_leadership_2|knows_trade_4|knows_prisoner_management_4|knows_engineer_3,
+    # str_13|agi_10|int_11|cha_8|level(8),
+    # wp_one_handed(140) | wp_two_handed(60) | wp_polearm(140) | wp_archery(140) | wp_crossbow(60) | wp_throwing(120),
+    # knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_leadership_2|knows_trade_4|knows_prisoner_management_4|knows_engineer_3,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x00000005c600c30f66696d99d98e3b6400000000001dc4840000000000000000
   ],
 
@@ -42943,9 +42980,12 @@ itm_spear_d,
     [
 
     ],
-    str_14|agi_12|int_5|cha_12|level(8),
-    wp_one_handed(140) | wp_two_handed(60) | wp_polearm(140) | wp_archery(160) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_horse_archery_3|knows_looting_3,
+    # str_14|agi_12|int_5|cha_12|level(8),
+    # wp_one_handed(140) | wp_two_handed(60) | wp_polearm(140) | wp_archery(160) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_horse_archery_3|knows_looting_3,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x0000000f6004824c46a376240b49a51c00000000001d99ae0000000000000000
   ],
 
@@ -42957,9 +42997,12 @@ itm_spear_d,
     [
 
     ],
-    str_14|agi_12|int_5|cha_12|level(8),
-    wp_one_handed(140) | wp_two_handed(60) | wp_polearm(140) | wp_archery(160) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_horse_archery_3|knows_looting_3,
+    # str_14|agi_12|int_5|cha_12|level(8),
+    # wp_one_handed(140) | wp_two_handed(60) | wp_polearm(140) | wp_archery(160) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_4|knows_riding_4|knows_leadership_3|knows_horse_archery_3|knows_looting_3,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x000000001510a44b2d7391a52bade8c400000000001dba5b0000000000000000
   ],
 
@@ -42970,9 +43013,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_12|agi_14|int_11|cha_8|level(8),
-    wp_one_handed(120) | wp_two_handed(60) | wp_polearm(120) | wp_archery(180) | wp_crossbow(60) | wp_throwing(120),
-    knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_leadership_1|knows_looting_4,
+    # str_12|agi_14|int_11|cha_8|level(8),
+    # wp_one_handed(120) | wp_two_handed(60) | wp_polearm(120) | wp_archery(180) | wp_crossbow(60) | wp_throwing(120),
+    # knows_weapon_master_3|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_leadership_1|knows_looting_4,
+    str_9|agi_9|int_8|cha_8|level(1),
+    wp_one_handed(90) | wp_two_handed(80) | wp_polearm(90) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
+    knows_ironflesh_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3|knows_leadership_2|knows_persuasion_2,
     0x000000000308a18a5b558946d132232500000000001d372e0000000000000000
   ],
 
@@ -42987,9 +43033,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_9|agi_14|int_8|cha_8|level(8),
-    wp_one_handed(80) | wp_two_handed(60) | wp_polearm(80) | wp_archery(100) | wp_crossbow(40) | wp_throwing(120),
-    knows_spotting_2|knows_tracking_4|knows_pathfinding_2|knows_power_draw_1|knows_athletics_3|knows_power_throw_3|knows_foraging_3,
+    # str_9|agi_14|int_8|cha_8|level(8),
+    # wp_one_handed(80) | wp_two_handed(60) | wp_polearm(80) | wp_archery(100) | wp_crossbow(40) | wp_throwing(120),
+    # knows_spotting_2|knows_tracking_4|knows_pathfinding_2|knows_power_draw_1|knows_athletics_3|knows_power_throw_3|knows_foraging_3,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_spotting_3|knows_tracking_3|knows_pathfinding_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x00000004d00433534a5cb1a4eb65d6e3000000000015c7110000000000000000
   ],
 
@@ -43001,9 +43050,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_9|agi_14|int_8|cha_8|level(8),
-    wp_one_handed(100) | wp_two_handed(80) | wp_polearm(100) | wp_archery(100) | wp_crossbow(50) | wp_throwing(80),
-    knows_spotting_2|knows_tracking_3|knows_pathfinding_3|knows_power_draw_2|knows_power_strike_2|knows_foraging_4,
+    # str_9|agi_14|int_8|cha_8|level(8),
+    # wp_one_handed(100) | wp_two_handed(80) | wp_polearm(100) | wp_archery(100) | wp_crossbow(50) | wp_throwing(80),
+    # knows_spotting_2|knows_tracking_3|knows_pathfinding_3|knows_power_draw_2|knows_power_strike_2|knows_foraging_4,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_spotting_3|knows_tracking_3|knows_pathfinding_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x00000001bc0c325036e494b89dd3471d00000000001d646b0000000000000000
   ],
 
@@ -43015,9 +43067,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_8|agi_15|int_8|cha_8|level(8),
-    wp_one_handed(80) | wp_two_handed(60) | wp_polearm(80) | wp_archery(120) | wp_crossbow(40) | wp_throwing(60),
-    knows_spotting_3|knows_tracking_2|knows_pathfinding_3|knows_power_draw_3|knows_riding_3|knows_foraging_3,
+    # str_8|agi_15|int_8|cha_8|level(8),
+    # wp_one_handed(80) | wp_two_handed(60) | wp_polearm(80) | wp_archery(120) | wp_crossbow(40) | wp_throwing(60),
+    # knows_spotting_3|knows_tracking_2|knows_pathfinding_3|knows_power_draw_3|knows_riding_3|knows_foraging_3,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_spotting_3|knows_tracking_3|knows_pathfinding_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x000000038c1084cc5aa68e4912a9939100000000001a26ab0000000000000000
   ],
  #TRADERs
@@ -43030,9 +43085,12 @@ itm_spear_d,
     [
 
     ],
-    str_7|agi_6|int_10|cha_14|level(8),
-    wp_one_handed(80) | wp_two_handed(35) | wp_polearm(35) | wp_archery(35) | wp_crossbow(60) | wp_throwing(35),
-    knows_weapon_master_1|knows_power_strike_1|knows_inventory_management_6|knows_trade_3|knows_athletics_3|knows_foraging_1,
+    # str_7|agi_6|int_10|cha_14|level(8),
+    # wp_one_handed(80) | wp_two_handed(35) | wp_polearm(35) | wp_archery(35) | wp_crossbow(60) | wp_throwing(35),
+    # knows_weapon_master_1|knows_power_strike_1|knows_inventory_management_6|knows_trade_3|knows_athletics_3|knows_foraging_1,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_inventory_management_3|knows_trade_3|knows_foraging_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x00000006410415915a2eae24db372b1c00000000001f689a0000000000000000
   ],
 
@@ -43044,9 +43102,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_7|agi_6|int_10|cha_14|level(8),
-    wp_one_handed(75) | wp_two_handed(35) | wp_polearm(45) | wp_archery(30) | wp_crossbow(60) | wp_throwing(35),
-    knows_weapon_master_1|knows_power_strike_1|knows_inventory_management_7|knows_trade_4|knows_athletics_3,
+    # str_7|agi_6|int_10|cha_14|level(8),
+    # wp_one_handed(75) | wp_two_handed(35) | wp_polearm(45) | wp_archery(30) | wp_crossbow(60) | wp_throwing(35),
+    # knows_weapon_master_1|knows_power_strike_1|knows_inventory_management_7|knows_trade_4|knows_athletics_3,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_inventory_management_3|knows_trade_3|knows_foraging_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x00000006fa0cc206256c8cc58e8da32d00000000001eb6dc0000000000000000
   ],
  #MONKS
@@ -43058,9 +43119,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_6|agi_6|int_14|cha_10|level(8),
-    wp_one_handed(35) | wp_two_handed(35) | wp_polearm(80) | wp_archery(35) | wp_crossbow(35) | wp_throwing(60),
-    knows_first_aid_4|knows_surgery_3|knows_wound_treatment_4|knows_athletics_3|knows_weapon_master_1,
+    # str_6|agi_6|int_14|cha_10|level(8),
+    # wp_one_handed(35) | wp_two_handed(35) | wp_polearm(80) | wp_archery(35) | wp_crossbow(35) | wp_throwing(60),
+    # knows_first_aid_4|knows_surgery_3|knows_wound_treatment_4|knows_athletics_3|knows_weapon_master_1,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(75),
+    knows_first_aid_3|knows_surgery_3|knows_wound_treatment_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x000000001110244e48a28d1ddc6dd8a300000000001659110000000000000000
   ],
 
@@ -43073,9 +43137,12 @@ itm_spear_d,
     [
 
     ],
-    str_6|agi_7|int_14|cha_10|level(8),
-    wp_one_handed(35) | wp_two_handed(35) | wp_polearm(80) | wp_archery(35) | wp_crossbow(35) | wp_throwing(60),
-    knows_first_aid_4|knows_surgery_2|knows_wound_treatment_5|knows_riding_2|knows_power_strike_1,
+    # str_6|agi_7|int_14|cha_10|level(8),
+    # wp_one_handed(35) | wp_two_handed(35) | wp_polearm(80) | wp_archery(35) | wp_crossbow(35) | wp_throwing(60),
+    # knows_first_aid_4|knows_surgery_2|knows_wound_treatment_5|knows_riding_2|knows_power_strike_1,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(75),
+    knows_first_aid_3|knows_surgery_3|knows_wound_treatment_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x00000001a201200e4724ad48e02ad922000000000011b2dc0000000000000000
   ],
 
@@ -43088,9 +43155,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_8|agi_8|int_14|cha_6|level(8),
-    wp_one_handed(60) | wp_two_handed(35) | wp_polearm(35) | wp_archery(35) | wp_crossbow(100) | wp_throwing(35),
-    knows_weapon_master_1|knows_power_strike_1|knows_engineer_4|knows_tactics_2|knows_shield_1|knows_athletics_2,
+    # str_8|agi_8|int_14|cha_6|level(8),
+    # wp_one_handed(60) | wp_two_handed(35) | wp_polearm(35) | wp_archery(35) | wp_crossbow(100) | wp_throwing(35),
+    # knows_weapon_master_1|knows_power_strike_1|knows_engineer_4|knows_tactics_2|knows_shield_1|knows_athletics_2,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_engineer_3|knows_tactics_3|knows_looting_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x0000000033103409451290c86c52d81d00000000001e33a90000000000000000
   ],
   [ #muslim
@@ -43102,9 +43172,12 @@ itm_spear_d,
     [
 
     ],
-    str_8|agi_8|int_14|cha_6|level(8),
-    wp_one_handed(70) | wp_two_handed(30) | wp_polearm(35) | wp_archery(35) | wp_crossbow(100) | wp_throwing(30),
-    knows_weapon_master_1|knows_power_strike_1|knows_engineer_4|knows_tactics_2|knows_athletics_2|knows_ironflesh_2,
+    # str_8|agi_8|int_14|cha_6|level(8),
+    # wp_one_handed(70) | wp_two_handed(30) | wp_polearm(35) | wp_archery(35) | wp_crossbow(100) | wp_throwing(30),
+    # knows_weapon_master_1|knows_power_strike_1|knows_engineer_4|knows_tactics_2|knows_athletics_2|knows_ironflesh_2,
+    str_9|agi_9|int_10|cha_6|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_engineer_3|knows_tactics_3|knows_looting_3|knows_power_strike_3|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_3,
     0x00000006ef10b18f38e98e5b199756b400000000001d59270000000000000000
   ],
 
@@ -43118,9 +43191,12 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_14|agi_10|int_11|cha_8|level(8),
-    wp_one_handed(160) | wp_two_handed(120) | wp_polearm(160) | wp_archery(80) | wp_crossbow(100) | wp_throwing(60),
-    knows_weapon_master_4|knows_power_strike_4|knows_athletics_3|knows_trainer_3|knows_leadership_1|knows_tactics_1|knows_ironflesh_4,
+    # str_14|agi_10|int_11|cha_8|level(8),
+    # wp_one_handed(160) | wp_two_handed(120) | wp_polearm(160) | wp_archery(80) | wp_crossbow(100) | wp_throwing(60),
+    # knows_weapon_master_4|knows_power_strike_4|knows_athletics_3|knows_trainer_3|knows_leadership_1|knows_tactics_1|knows_ironflesh_4,
+    str_8|agi_9|int_8|cha_9|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_trainer_3|knows_persuasion_3|knows_prisoner_management_3|knows_power_strike_2|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_2,
     0x000000064010000552a996b655b9e4e300000000001e22eb0000000000000000
   ],
   ["npc26",
@@ -43131,9 +43207,12 @@ itm_spear_d,
     [
 
     ],
-    str_13|agi_11|int_11|cha_8|level(8),
-    wp_one_handed(140) | wp_two_handed(140) | wp_polearm(140) | wp_archery(80) | wp_crossbow(60) | wp_throwing(160),
-    knows_weapon_master_4|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_tactics_2|knows_power_throw_3|knows_ironflesh_3,
+    # str_13|agi_11|int_11|cha_8|level(8),
+    # wp_one_handed(140) | wp_two_handed(140) | wp_polearm(140) | wp_archery(80) | wp_crossbow(60) | wp_throwing(160),
+    # knows_weapon_master_4|knows_power_strike_2|knows_athletics_4|knows_trainer_3|knows_tactics_2|knows_power_throw_3|knows_ironflesh_3,
+    str_8|agi_9|int_8|cha_9|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_trainer_3|knows_persuasion_3|knows_prisoner_management_3|knows_power_strike_2|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_2,
     0x00000004d70d24103b887238a299b8e200000000001eb28c0000000000000000
   ],
 
@@ -43145,9 +43224,12 @@ itm_spear_d,
     [
 
     ],
-    str_14|agi_10|int_11|cha_8|level(8),
-    wp_one_handed(140) | wp_two_handed(160) | wp_polearm(140) | wp_archery(80) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_3|knows_athletics_3|knows_trainer_3|knows_leadership_1|knows_power_throw_1|knows_ironflesh_4,
+    # str_14|agi_10|int_11|cha_8|level(8),
+    # wp_one_handed(140) | wp_two_handed(160) | wp_polearm(140) | wp_archery(80) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_3|knows_athletics_3|knows_trainer_3|knows_leadership_1|knows_power_throw_1|knows_ironflesh_4,
+    str_8|agi_9|int_8|cha_9|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_trainer_3|knows_persuasion_3|knows_prisoner_management_3|knows_power_strike_2|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_2,
     0x00000005e100c2833313935652d146f300000000001e2d0d0000000000000000
   ],
 
@@ -43160,9 +43242,12 @@ itm_spear_d,
     [
 
     ],
-    str_14|agi_10|int_11|cha_8|level(8),
-    wp_one_handed(160) | wp_two_handed(100) | wp_polearm(140) | wp_archery(100) | wp_crossbow(60) | wp_throwing(100),
-    knows_weapon_master_4|knows_power_strike_3|knows_athletics_3|knows_trainer_3|knows_leadership_2|knows_power_throw_2|knows_ironflesh_4,
+    # str_14|agi_10|int_11|cha_8|level(8),
+    # wp_one_handed(160) | wp_two_handed(100) | wp_polearm(140) | wp_archery(100) | wp_crossbow(60) | wp_throwing(100),
+    # knows_weapon_master_4|knows_power_strike_3|knows_athletics_3|knows_trainer_3|knows_leadership_2|knows_power_throw_2|knows_ironflesh_4,
+    str_8|agi_9|int_8|cha_9|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_trainer_3|knows_persuasion_3|knows_prisoner_management_3|knows_power_strike_2|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_2,
     0x0000000fd204b293572751394e4cd65b00000000001eab6a0000000000000000
   ],
 
@@ -43173,11 +43258,15 @@ itm_spear_d,
     fac_commoners,
     [
     ],
-    str_12|agi_12|int_11|cha_8|level(8),
-    wp_one_handed(140) | wp_two_handed(80) | wp_polearm(140) | wp_archery(160) | wp_crossbow(60) | wp_throwing(60),
-    knows_weapon_master_4|knows_power_strike_2|knows_riding_3|knows_trainer_3|knows_leadership_1|knows_spotting_2|knows_pathfinding_2|knows_foraging_1|knows_looting_2|knows_horse_archery_3|knows_power_draw_3|knows_ironflesh_2,
+    # str_12|agi_12|int_11|cha_8|level(8),
+    # wp_one_handed(140) | wp_two_handed(80) | wp_polearm(140) | wp_archery(160) | wp_crossbow(60) | wp_throwing(60),
+    # knows_weapon_master_4|knows_power_strike_2|knows_riding_3|knows_trainer_3|knows_leadership_1|knows_spotting_2|knows_pathfinding_2|knows_foraging_1|knows_looting_2|knows_horse_archery_3|knows_power_draw_3|knows_ironflesh_2,
+    str_8|agi_9|int_8|cha_9|level(1),
+    wp_one_handed(75) | wp_two_handed(45) | wp_polearm(75) | wp_archery(45) | wp_crossbow(75) | wp_throwing(45),
+    knows_trainer_3|knows_persuasion_3|knows_prisoner_management_3|knows_power_strike_2|knows_weapon_master_3|knows_riding_3|knows_athletics_3|knows_shield_2,
     0x0000000393049001774d70aeb576c6f300000000001d5b160000000000000000
   ],
+####### NEW v3.0-KOMKE END- 
 
   ###### [
     ###### "npc27",

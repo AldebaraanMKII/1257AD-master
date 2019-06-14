@@ -24012,6 +24012,31 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 []],
 ###############################################################
 
+####### NEW v3.0-KOMKE START-
+
+[anyone|plyr, "lord_talk", [(eq, 1, 1)], "I want to change your culture and equipment.", "lord_change_culture_equipment",[]],##KOMKE set to false when releasing
+[anyone, "lord_change_culture_equipment",[], "Which culture?", "lord_change_culture_equipment_choose_culture",[]],
+
+[anyone|plyr|repeat_for_factions, "lord_change_culture_equipment_choose_culture",
+    [
+      (store_repeat_object, ":faction_no"),
+      (is_between, ":faction_no", cultures_begin, cultures_end),
+      (str_store_faction_name, s1, ":faction_no"),
+    ],
+    "{s1}", "lord_change_culture_equipment_confirm",[(store_repeat_object, "$temp")]
+],
+
+[anyone, "lord_change_culture_equipment_confirm",[], "Do you want me to change my culture and equipment?", "lord_change_culture_equipment_confirm_2",[]],
+
+[anyone|plyr, "lord_change_culture_equipment_confirm_2",
+    [], "Yes do it.", "lord_talk",
+    [
+    # ((display_log_message, "@calling script", 0xffffff),##Debugging)
+    (troop_set_slot, "$g_talk_troop", slot_troop_cur_culture,  "$temp"),
+    (call_script, "script_get_random_equipment_type_from_troop_by_culture", "$g_talk_troop", "$temp"), 
+    ]
+],
+####### NEW v3.0-KOMKE END- 
 
 
 [anyone|plyr, "lord_demand", [(neq, "$g_encountered_party_faction", "$players_kingdom"),

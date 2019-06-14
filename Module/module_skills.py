@@ -41,7 +41,8 @@ from header_skills import *
 # If you want to add a new skill, use the reserved skills or use non-hardcoded skills.
 
 skills = [
-  ("trade", "Trade",sf_base_att_cha|sf_effects_party,10, "Every level of this skill reduces your trade penalty by 5%%. (Party skill)"),
+  # ("trade", "Trade",sf_base_att_cha|sf_effects_party,10, "Every level of this skill reduces your trade penalty by 5%%. (Party skill)"),####### NEW v3.0-KOMKE
+  ("trade", "Trade",sf_base_att_int|sf_effects_party,10, "Every level of this skill reduces your trade penalty by 5%%. (Party skill)"),####### NEW v3.0-KOMKE
   ("leadership", "Leadership",sf_base_att_cha,10, "Every point increases maximum number of troops you can command by 5, increases your party morale and reduces troop wages by 5%%. (Leader skill)"),
   ("prisoner_management", "Prisoner Management",sf_base_att_cha,10, "Every level of this skill increases maximum number of prisoners by %d. (Leader skill)"), 
   ("reserved_1", "Reserved Skill 1",sf_base_att_cha|sf_inactive,10, "This is a reserved skill."), 
@@ -59,16 +60,19 @@ skills = [
   ("pathfinding", "Path-finding",sf_base_att_int|sf_effects_party,10, "Party map speed is increased by 3%% per skill level. (Party skill)"), 
   ("tactics", "Tactics",sf_base_att_int|sf_effects_party,10, "Every two levels of this skill increases starting battle advantage by 1. (Party skill)"),
   ("tracking", "Tracking",sf_base_att_int|sf_effects_party,10, "Tracks become more informative. (Party skill)"),
-  ("trainer", "Trainer",sf_base_att_int,10, "Every day, each hero with this skill adds some experience to every other member of the party whose level is lower than his/hers. Experience gained goes as: {0,4,10,16,23,30,38,46,55,65,80}. (Personal skill)"),
+  # ("trainer", "Trainer",sf_base_att_int,10, "Every day, each hero with this skill adds some experience to every other member of the party whose level is lower than his/hers. Experience gained goes as: {0,4,10,16,23,30,38,46,55,65,80}. (Personal skill)"),####### NEW v3.0-KOMKE
+  ("trainer", "Trainer",sf_base_att_cha,10, "Every day, each hero with this skill adds some experience to every other member of the party whose level is lower than his/hers. Experience gained goes as: {0,4,10,16,23,30,38,46,55,65,80}. (Personal skill)"),####### NEW v3.0-KOMKE
   ("reserved_5", "Reserved Skill 5",sf_base_att_int|sf_inactive,10, "This is a reserved skill."), 
   ("reserved_6", "Reserved Skill 6",sf_base_att_int|sf_inactive,10, "This is a reserved skill."), 
   ("reserved_7", "Reserved Skill 7",sf_base_att_int|sf_inactive,10, "This is a reserved skill."), 
   # ("reserved_8", "Reserved Skill 8",sf_base_att_int|sf_inactive,10, "This is a reserved skill."), 
   ## Jrider + FORAGING 1.0 adding skill
   #("reserved_8", "Reserved Skill 8",sf_base_att_int|sf_inactive,10, "This is a reserved skill."),
-  ("foraging", "Foraging",sf_base_att_agi|sf_effects_party,10, "Allows the party to forage for 5 food per skill level (camp, siege, raiding) and increase foraging range (Party skill) Max level: 10."),
+  # ("foraging", "Foraging",sf_base_att_agi|sf_effects_party,10, "Allows the party to forage for 5 food per skill level (camp, siege, raiding) and increase foraging range (Party skill) Max level: 10."),####### NEW v3.0-KOMKE
+  ("foraging", "Foraging",sf_base_att_int|sf_effects_party,10, "Allows the party to forage for 5 food per skill level (camp, siege, raiding) and increase foraging range (Party skill) Max level: 10."),####### NEW v3.0-KOMKE
   ## Jrider -
-  ("looting", "Looting",sf_base_att_agi|sf_effects_party,10, "This skill increases the amount of loot obtained by 10%% per skill level. (Party skill)"), 
+  # ("looting", "Looting",sf_base_att_agi|sf_effects_party,10, "This skill increases the amount of loot obtained by 10%% per skill level. (Party skill)"), ####### NEW v3.0-KOMKE
+  ("looting", "Looting",sf_base_att_int|sf_effects_party,10, "This skill increases the amount of loot obtained by 10%% per skill level. (Party skill)"), ####### NEW v3.0-KOMKE
   ("horse_archery", "Horse Archery",sf_base_att_agi,10, "Reduces damage and accuracy penalties for archery and throwing from horseback. (Personal skill)"),
   ("riding", "Riding",sf_base_att_agi,10, "Enables you to ride horses of higher difficulty levels and increases your riding speed and manuever. (Personal skill)"),
   ("athletics", "Athletics",sf_base_att_agi,10, "Improves your running speed. (Personal skill)"),

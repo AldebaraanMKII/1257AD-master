@@ -218,9 +218,14 @@ party_templates = [
   ("kingdom_rus_reinforcements_c", "{!}kingdom_rus_reinforcements_c", 0, 0, fac_kingdom_8, soldier_personality, [(trp_rus_horse_2,2,5),(trp_rus_horse_4, 1,2)]),
 
   # Scotland #TOM
-  ("kingdom_scot_reinforcements_a", "{!}kingdom_scot_reinforcements_a", 0, 0, fac_kingdom_12, soldier_personality, [(trp_euro_horse_1,1,3),(trp_scottish_village_recruit,4,9),(trp_euro_town_recruit,4,9)]),
-  ("kingdom_scot_reinforcements_b", "{!}kingdom_scot_reinforcements_b", 0, 0, fac_kingdom_12, soldier_personality, [(trp_euro_archer_2,1,3),(trp_euro_xbow_2,1,3),(trp_scottish_clansman,1,3),(trp_euro_spearman_2,1,3),(trp_scottish_forinsec_spearman,1,3)]),
-  ("kingdom_scot_reinforcements_c", "{!}kingdom_scot_reinforcements_c", 0, 0, fac_kingdom_12, soldier_personality, [(trp_euro_horse_2, 2,5),(trp_euro_horse_4, 1,2)]),
+  ####### NEW v3.0-KOMKE START-
+  # ("kingdom_scot_reinforcements_a", "{!}kingdom_scot_reinforcements_a", 0, 0, fac_kingdom_12, soldier_personality, [(trp_euro_horse_1,1,3),(trp_scottish_village_recruit,4,9),(trp_euro_town_recruit,4,9)]),
+  # ("kingdom_scot_reinforcements_b", "{!}kingdom_scot_reinforcements_b", 0, 0, fac_kingdom_12, soldier_personality, [(trp_euro_archer_2,1,3),(trp_euro_xbow_2,1,3),(trp_scottish_clansman,1,3),(trp_euro_spearman_2,1,3),(trp_scottish_forinsec_spearman,1,3)]),
+  # ("kingdom_scot_reinforcements_c", "{!}kingdom_scot_reinforcements_c", 0, 0, fac_kingdom_12, soldier_personality, [(trp_euro_horse_2, 2,5),(trp_euro_horse_4, 1,2)]),
+  ("kingdom_scot_reinforcements_a", "{!}kingdom_scot_reinforcements_a", 0, 0, fac_kingdom_12, soldier_personality, [(trp_scottish_light_cavalry,1,3),(trp_scottish_village_recruit,4,9),(trp_scottish_infantry_recruit,4,9)]),
+  ("kingdom_scot_reinforcements_b", "{!}kingdom_scot_reinforcements_b", 0, 0, fac_kingdom_12, soldier_personality, [(trp_scottish_archer_2,1,3),(trp_scottish_archer_2,1,3),(trp_scottish_clansman,1,3),(trp_scottish_clansman,1,3),(trp_scottish_forinsec_spearman,1,3)]),
+  ("kingdom_scot_reinforcements_c", "{!}kingdom_scot_reinforcements_c", 0, 0, fac_kingdom_12, soldier_personality, [(trp_scottish_medium_cavalry, 2,5),(trp_scottish_knight, 1,2)]),
+  ####### NEW v3.0-KOMKE END-
 
   # Ireland
   ("kingdom_gaelic_reinforcements_a", "{!}kingdom_gaelic_reinforcements_a", 0, 0, fac_kingdom_13, soldier_personality, [(trp_gaelic_light_cavalry,1,3),(trp_gaelic_village_recruit,4,9),(trp_gaelic_village_recruit,4,9)]),
