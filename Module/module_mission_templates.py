@@ -142,17 +142,22 @@ mission_templates = [
         (eq, "$talk_context", tc_tavern_talk),
 
         (neg|troop_slot_eq, "trp_hired_assassin", slot_troop_cur_center, "$g_encountered_party"),
-        (troop_slot_eq, "trp_belligerent_drunk", slot_troop_cur_center, "$g_encountered_party"),
+        # (troop_slot_eq, "trp_belligerent_drunk", slot_troop_cur_center, "$g_encountered_party"),
+		######### NEW v3.0 - more belligerent drunks
+        (party_slot_ge, "$g_encountered_party", slot_center_tavern_troop, 1),
+		#########
         (eq, "$drunks_dont_pick_fights", 0),
       ],
       [
         (try_begin),
           (eq, "$g_start_belligerent_drunk_fight", 0),
+          ###### NEW v3.0
           (assign, "$g_start_belligerent_drunk_fight", 1),
-
+          (party_get_slot, "$g_cur_belligerent_drunk", "$g_encountered_party", slot_center_tavern_troop),  
+		  ##################
           (try_for_agents, ":cur_agent"),
             (agent_get_troop_id, ":cur_agent_troop", ":cur_agent"),
-            (eq, ":cur_agent_troop", "trp_belligerent_drunk"),
+            (eq, ":cur_agent_troop", "$g_cur_belligerent_drunk"), ###### NEW v3.0
             (assign, "$g_belligerent_drunk", ":cur_agent"),
           (try_end),
         (else_try),
@@ -177,9 +182,9 @@ mission_templates = [
           (store_add, ":400_plus_random_200", 400, ":random_value"),
           (le, ":dist", ":400_plus_random_200"),
 
-           (call_script, "script_activate_tavern_attackers"),
-            (start_mission_conversation, "trp_belligerent_drunk"),
-            (assign, "$g_start_belligerent_drunk_fight", 2),
+          (call_script, "script_activate_tavern_attackers", "$g_cur_belligerent_drunk"), 
+          (start_mission_conversation, "$g_cur_belligerent_drunk"),
+          (assign, "$g_start_belligerent_drunk_fight", 2),
         (try_end),
       ]),
 
@@ -222,7 +227,7 @@ mission_templates = [
           (store_add, ":400_plus_random_200", 400, ":random_value"),
           (le, ":dist", ":400_plus_random_200"),
 
-          (call_script, "script_activate_tavern_attackers"),
+          (call_script, "script_activate_tavern_attackers", "trp_hired_assassin"),  ######### this could cause errors so let's just add the assassin here
           (assign, "$g_start_hired_assassin_fight", 2),
         (try_end),
       ]),

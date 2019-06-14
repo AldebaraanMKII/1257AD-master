@@ -33844,6 +33844,18 @@ game_menus = [ #
        ]
        ),
 	   
+       ("debug_options_new_5",[], "Display belligerent drunk locations and troop types.",
+	   [
+          (try_for_range, ":belligerent_drunk_tavern", towns_begin, towns_end),
+            (party_slot_ge, ":belligerent_drunk_tavern", slot_center_tavern_troop, 1),
+              (party_get_slot, ":troop", ":belligerent_drunk_tavern", slot_center_tavern_troop),
+              (str_store_party_name_link, s40, ":belligerent_drunk_tavern"),
+              (str_store_troop_name, s41, ":troop"),
+              (display_message, "@{s40} has {s41} as belligerent drunk."),
+          (try_end),
+		#######################################      
+	   ]),
+	   
        ("debug_options_new_99",[], "Go back.",
        [
          (jump_to_menu, "mnu_debug_options"),

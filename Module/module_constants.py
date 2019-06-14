@@ -629,6 +629,8 @@ slot_party_battle_preparation = 251
 slot_center_has_fortifications_1 = 252
 slot_center_has_fortifications_2 = 253
 
+slot_center_tavern_troop = 254  ######## NEW v3.0
+
 slot_center_last_reconnoitered_by_faction_time                 = 350
 #slot_center_last_reconnoitered_by_faction_cached_strength     = 360
 #slot_center_last_reconnoitered_by_faction_friend_strength     = 370

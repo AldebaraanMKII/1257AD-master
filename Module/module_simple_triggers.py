@@ -4023,7 +4023,7 @@ simple_triggers = [
     
     
 
-  (24,
+  (48,
    [
     (call_script, "script_update_other_taverngoers"),
     ]),

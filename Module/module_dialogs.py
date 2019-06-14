@@ -1357,13 +1357,14 @@ dialogs = [
 #TAVERN DRUNK DIALOGS
    [anyone, "start",
    [
-    (eq, "$g_talk_troop", "trp_belligerent_drunk"),
+    (gt, "$g_cur_belligerent_drunk", 0), ##### NEW v3.0
+    (eq, "$g_talk_troop", "$g_cur_belligerent_drunk"),
     ],
 "What are you looking at?", "drunk_response",
    [
    (try_begin),
      (eq, "$g_main_attacker_agent", 0),
-     (call_script, "script_activate_tavern_attackers"),
+     (call_script, "script_activate_tavern_attackers", "$g_cur_belligerent_drunk"),  ##### NEW v3.0
    (try_end),
    (mission_disable_talk),
    ]],
@@ -1376,7 +1377,7 @@ dialogs = [
    [
    (try_begin),
      (eq, "$g_main_attacker_agent", 0),
-     (call_script, "script_activate_tavern_attackers"),       
+     (call_script, "script_activate_tavern_attackers", "trp_hired_assassin"),  ##### NEW v3.0   
    (try_end),
    (mission_disable_talk),
    ]],
@@ -1413,14 +1414,16 @@ dialogs = [
 
     (assign, "$g_main_attacker_agent", 0),
     (troop_add_gold, "trp_player", 50),
-    (troop_add_item, "trp_player", "itm_sword_viking_1", 0),
+    # (troop_add_item, "trp_player", "itm_sword_viking_1", 0),
+    (call_script, "script_give_source_troop_random_weapon_to_troop", "trp_player", "$g_cur_belligerent_drunk"),  ###### NEW v3.0 - gives a random weapon from the drunk to the player
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -1),
   (else_try),
     (neg|agent_is_alive, "$g_main_attacker_agent"),
     (str_store_string, s9, "str_well_id_say_that_he_started_it_that_entitles_you_to_his_sword_and_purse_i_suppose_have_a_drink_on_the_house_as_i_daresay_youve_saved_a_patron_or_two_a_broken_skull_still_i_hope_he_still_has_a_pulse_its_not_good_for_an_establishment_to_get_a_name_as_a_place_where_men_are_killed"),
     (assign, "$g_main_attacker_agent", 0),
     (troop_add_gold, "trp_player", 50),
-    (troop_add_item, "trp_player", "itm_sword_viking_1", 0),
+    # (troop_add_item, "trp_player", "itm_sword_viking_1", 0),
+    (call_script, "script_give_source_troop_random_weapon_to_troop", "trp_player", "$g_cur_belligerent_drunk"),  ###### NEW v3.0 - gives a random weapon from the drunk to the player
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
   (try_end),
   (troop_set_slot, "trp_hired_assassin", slot_troop_cur_center, -1),
@@ -1483,12 +1486,38 @@ dialogs = [
 
 [anyone, "drunk_fight_start", [],
 "I'll wipe that smirk right off your face!", "close_window", [
-    (troop_set_slot, "trp_belligerent_drunk", slot_troop_cur_center, 0),
+    # (troop_set_slot, "trp_belligerent_drunk", slot_troop_cur_center, 0),
+    (party_set_slot, "$g_encountered_party", slot_center_tavern_troop, 0),  ######## NEW v3.0
    ]],
 
 [anyone|plyr, "drunk_response",
 [
-    (troop_slot_ge, "trp_player", slot_troop_renown, 150),
+########### NEW v3.0 - renown required depends on the level of the troop
+    (store_character_level, ":level", "$g_cur_belligerent_drunk"),
+    (assign, ":renown", 50), ###### if below level 8 = 50
+    (try_begin),
+      (ge, ":level", 8),
+      (lt, ":level", 15),
+        (assign, ":renown", 100),
+    (else_try),
+      (ge, ":level", 15),
+      (lt, ":level", 20),
+        (assign, ":renown", 150),
+    (else_try),
+      (ge, ":level", 20),
+      (lt, ":level", 25),
+        (assign, ":renown", 200),
+    (else_try),
+      (ge, ":level", 25),
+      (lt, ":level", 30),
+        (assign, ":renown", 250),
+    (else_try),
+      (ge, ":level", 30),
+      (lt, ":level", 35),
+        (assign, ":renown", 300),
+    (try_end),
+    (troop_slot_ge, "trp_player", slot_troop_renown, ":renown"),
+######################
   ],
 "Do you have any idea who I am?", "drunk_player_high_renown", [
    ]],
@@ -1511,9 +1540,10 @@ dialogs = [
 "I thought as much. Now, remove yourself from here", "close_window",
    [
    (assign, "$drunks_dont_pick_fights", 1),
-   (troop_set_slot, "trp_belligerent_drunk", slot_troop_cur_center, 0),
+   # (troop_set_slot, "trp_belligerent_drunk", slot_troop_cur_center, 0),
+   (party_set_slot, "$g_encountered_party", slot_center_tavern_troop, 0),  ######## NEW v3.0
 
-   (call_script, "script_deactivate_tavern_attackers"),
+   (call_script, "script_deactivate_tavern_attackers", "$g_cur_belligerent_drunk"),
 
    (assign, "$g_belligerent_drunk_leaving", "$g_main_attacker_agent"),
 
