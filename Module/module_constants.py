@@ -627,13 +627,13 @@ slot_party_orders_time                        = 247
 
 slot_party_temp_slot_1                        = 248 #right now used only within a single script, merchant_road_info_to_s42, to denote closed roads. Now also used in comparative scripts
 slot_party_under_player_suggestion            = 249 #move this up a bit
-slot_town_trade_good_prices_begin             = 250
+slot_party_battle_preparation = 250
+slot_center_has_fortifications_1 = 251
+slot_center_has_fortifications_2 = 252
 
-slot_party_battle_preparation = 251
-slot_center_has_fortifications_1 = 252
-slot_center_has_fortifications_2 = 253
+slot_center_tavern_troop = 253  ######## NEW v3.0
 
-slot_center_tavern_troop = 254  ######## NEW v3.0
+slot_town_trade_good_prices_begin             = 280
 
 slot_center_last_reconnoitered_by_faction_time                 = 350
 #slot_center_last_reconnoitered_by_faction_cached_strength     = 360
