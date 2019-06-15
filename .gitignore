@@ -3,7 +3,6 @@ Module/module_info.py
 ID/ID_animations.py
 ID/ID_factions.py
 ID/ID_info_pages.py
-ID/ID_items.py
 ID/ID_map_icons.py
 ID/ID_menus.py
 ID/ID_meshes.py
@@ -23,5 +22,4 @@ ID/ID_skills.py
 ID/ID_sounds.py
 ID/ID_strings.py
 ID/ID_tableau_materials.py
-ID/ID_troops.py
 
