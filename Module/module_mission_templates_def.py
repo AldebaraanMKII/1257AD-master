@@ -6000,8 +6000,8 @@ enhanced_town_resident_behavior = (
                   (neq, ":wielded_item",  -1),
                   (agent_clear_scripted_mode, ":cur_agent"),
               (try_end),
-              (neg|is_between, ":troop_type",  "trp_swadian_recruit",  "trp_looter"),
-              (eq, ":wielded_item",  -1),
+              (neg|is_between, ":troop_type",  soldiers_begin, soldiers_end),
+              # (eq, ":wielded_item",  -1),  ######### 1257 civilians have weapons
               (agent_ai_set_aggressiveness, ":cur_agent",  0),
               (agent_set_speed_limit, ":cur_agent", 10),
               (party_get_slot, ":town_scene",  "$current_town",  slot_town_center),
