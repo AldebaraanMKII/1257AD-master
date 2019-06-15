@@ -9307,6 +9307,12 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("s5_scout", "{s5} Scout"),
 ("s5_patrol", "{s5} Patrol"),
 
+####### NEW v1.3 
+("saldiri_1", "You were condoned. But continued harassment will enrage the townsfolk."),
+("saldiri_2", "The town is alarmed! Fight your way out."),
+("saldiri_3", "Guard Reinforcements!"),
+("saldiri_4", "You started a brawl! You can stop it by continuesly holding block."),
+#####################
 ##################################
 ]################################# END BRACKET
 ##################################

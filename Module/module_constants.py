@@ -256,13 +256,6 @@ slot_faction_ai_last_decisive_event     = 98 #capture a fortress or declaration 
 
 slot_faction_morale_of_player_troops    = 99
 
-########## NEW v3.0 - about 80 slots per item is enough
-#diplomacy
-slot_faction_truce_days_with_factions_begin             = 120
-slot_faction_provocation_days_with_factions_begin         = 200
-slot_faction_war_damage_inflicted_on_factions_begin     = 280 #tom 210
-slot_faction_sum_advice_about_factions_begin             = 360 #tom 260  
-##########
 
 slot_faction_tier_1_town_troop    = 100
 slot_faction_tier_1_castle_troop  = 101
@@ -270,6 +263,17 @@ slot_faction_religion = 102
 slot_faction_peasant_rebellion_last = 103
 slot_faction_recalculate_ai = 105
 slot_faction_last_ai_calculation = 106
+
+slot_faction_lord_count = 107
+slot_faction_num_villages = 108
+
+########## NEW v3.0 - about 80 slots per item is enough
+#diplomacy
+slot_faction_truce_days_with_factions_begin             = 120
+slot_faction_provocation_days_with_factions_begin         = 200
+slot_faction_war_damage_inflicted_on_factions_begin     = 280 #tom 210
+slot_faction_sum_advice_about_factions_begin             = 360 #tom 260  
+##########
 #tom - for lance recruitment
 merc_cost = 1000
 
@@ -1090,9 +1094,7 @@ slot_troop_death_assassination_found_perpetrators = 179
 
 slot_troop_face_type = 180 ####### 1 = european, 2 = arab/turk, 3 = asian/mongol
 
-slot_faction_lord_count = 181
-slot_faction_num_villages = 182
-
+slot_troop_type_num_in_town = 181
 ###################################################################################
 # AutoLoot: Modified Constants
 # Most of these are slot definitions, make sure they do not clash with your mod's other slot usage

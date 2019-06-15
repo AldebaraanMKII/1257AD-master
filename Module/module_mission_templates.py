@@ -320,7 +320,7 @@ mission_templates = [
 
         (call_script, "script_neutral_behavior_in_fight"),
       ]),
-    ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers,
+    ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers + fief_civilian_triggers,
   ),
 
 # This template is used in party encounters and such.
@@ -1024,7 +1024,7 @@ mission_templates = [
           (call_script, "script_succeed_quest", "qst_hunt_down_fugitive"),
         (try_end),
         ]),
-    ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers,
+    ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers + fief_civilian_triggers,
   ),
 
    (#tom made

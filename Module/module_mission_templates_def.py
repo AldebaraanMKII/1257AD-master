@@ -5894,7 +5894,248 @@ enhanced_siege_lance_spear_fix = (
 )
 ####################################################
 
-
+  
+################# NEW v1.3 - added this from Azgad A Story Of Calradia v1.0
+enhanced_town_resident_behavior_init = (
+  0, 0, ti_once, [], [
+      (get_player_agent_no, ":player_agent"),
+      (agent_set_team, ":player_agent", 0),
+      (team_set_relation, 0, 1, 1),
+      (team_set_relation, 0, 2, -1),
+      (team_set_relation, 1, 2, 0),
+      (try_for_agents, ":cur_agent"),
+          (neq, ":cur_agent",  ":player_agent"),
+          (agent_set_team, ":cur_agent",  1),
+      (try_end),
+      (assign, "$town_residents_enraged", 0),
+      (assign, "$town_residents_condone_chance", 0),
+      (assign, "$town_residents_condoned", 0),
+      (assign, "$troop_restore_offset", 1),
+  ])
+enhanced_town_resident_behavior = (
+  0, 0, 0, [], [
+      (get_player_agent_no, ":player_agent"),
+      (agent_is_alive, ":player_agent"),
+      (agent_get_position,pos1, ":player_agent"),
+      (agent_get_attack_action, ":attack_action_state",  ":player_agent"),
+      (agent_get_defend_action, ":defend_action_state",  ":player_agent"),
+      (try_begin),
+          (eq, ":attack_action_state", 2),
+          (try_for_agents, ":cur_agent"),
+              (agent_is_human, ":cur_agent"),
+              (agent_is_alive, ":cur_agent"),
+			 
+              (neq, ":cur_agent",  ":player_agent"),
+              (agent_get_position,pos2, ":cur_agent"),
+              (agent_get_team, ":cur_agent_team",  ":cur_agent"),
+              (eq, ":cur_agent_team", 1),
+              (try_begin),
+                  (position_is_behind_position,pos2,pos1),
+              (else_try), 
+                  (get_distance_between_positions, ":dist", pos1,pos2),
+                  (lt, ":dist", 100),  
+                  
+                  (agent_force_rethink, ":cur_agent"),
+                  (agent_ai_set_aggressiveness, ":cur_agent", 199),
+                  (agent_set_team, ":cur_agent",  2),
+              (try_end),
+          (try_end),
+      (else_try),
+          (eq, "$town_residents_enraged", 0),
+          (this_or_next|eq, ":defend_action_state", 2),
+          (eq, ":defend_action_state", 1),
+          (try_begin),
+              (ge, "$town_residents_condone_chance", 500),
+              (val_sub, "$town_residents_condone_chance", 1),
+              (val_add, "$town_residents_condoned", 1),
+          (try_end),
+          (lt, "$town_residents_condone_chance", 500),
+          (try_for_agents, ":cur_agent"),
+              (agent_is_human, ":cur_agent"),
+              (agent_is_alive, ":cur_agent"),
+			  
+              (neq, ":cur_agent",  ":player_agent"),
+              (agent_get_team, ":cur_agent_team",  ":cur_agent"),
+              (eq, ":cur_agent_team", 2),
+              (agent_add_relation_with_agent, ":player_agent",  ":cur_agent", 1),
+              (agent_force_rethink, ":cur_agent"),
+              (agent_ai_set_aggressiveness, ":cur_agent",  0),
+              (agent_set_team, ":cur_agent",  1),
+              #(display_message, "str_saldiri_1"),
+          (try_end),
+      (else_try),
+          (eq, "$town_residents_enraged", 0),
+          (this_or_next|gt, "$town_residents_condoned", 1500),
+          (ge, "$town_residents_condone_chance", 2000),
+          (try_for_agents, ":cur_agent"),
+              (agent_is_human, ":cur_agent"),
+              (agent_is_alive, ":cur_agent"),
+			  
+              (neq, ":cur_agent",  ":player_agent"),
+              
+              (agent_force_rethink, ":cur_agent"),
+              (agent_ai_set_aggressiveness, ":cur_agent", 199),
+              (agent_set_team, ":cur_agent",  2),
+          (try_end),
+          (assign, "$town_residents_enraged", 1),
+          (assign, "$town_residents_condoned", 0),
+          #(party_get_slot, ":center_relation",  "$current_town", slot_center_player_relation),
+         # (val_sub, ":center_relation", 7),
+         # (party_set_slot, "$current_town", slot_center_player_relation, ":center_relation"),
+          #(party_get_slot, ":town_lord",  "$current_town", slot_town_lord),
+         # (call_script, "script_change_player_relation_with_troop",  ":town_lord", -1),
+          (display_message, "str_saldiri_2"),
+      (else_try),
+          (eq, "$town_residents_enraged", 1),
+          (agent_get_wielded_item, ":wielded_item",  ":player_agent", 0),
+          (neq, ":wielded_item",  -1),
+          (try_for_agents, ":cur_agent"),
+              (agent_is_human, ":cur_agent"),
+              (agent_is_alive, ":cur_agent"),
+			  
+              (neq, ":cur_agent",  ":player_agent"),
+              (agent_get_troop_id, ":troop_type",  ":cur_agent"),
+              (agent_get_wielded_item, ":wielded_item",  ":cur_agent", 0),
+              (try_begin),
+                  (neq, ":wielded_item",  -1),
+                  (agent_clear_scripted_mode, ":cur_agent"),
+              (try_end),
+              (neg|is_between, ":troop_type",  "trp_swadian_recruit",  "trp_looter"),
+              (eq, ":wielded_item",  -1),
+              (agent_ai_set_aggressiveness, ":cur_agent",  0),
+              (agent_set_speed_limit, ":cur_agent", 10),
+              (party_get_slot, ":town_scene",  "$current_town",  slot_town_center),
+              (party_get_slot, ":tavern_scene",  "$current_town",  slot_town_tavern),
+              (store_current_scene, ":cur_scene"),
+              (try_begin),
+                  (eq, ":cur_scene",  ":town_scene"),
+                  (entry_point_get_position, pos3, 2),
+              (else_try),
+                  (eq, ":cur_scene",  ":tavern_scene"),
+                  (entry_point_get_position, pos3, 0),
+              (try_end),
+              (agent_set_scripted_destination_no_attack, ":cur_agent", pos3, 1),
+              (agent_force_rethink, ":cur_agent"),
+              (agent_get_position ,pos2, ":cur_agent"),
+              (get_distance_between_positions, ":dist", pos2, pos3),
+              (try_begin),
+                  (gt, "$town_residents_condoned", 0),
+                  (agent_set_team, ":cur_agent",  1),
+              (try_end),
+              (try_begin),
+                  (le, ":dist", 300),
+                  (agent_fade_out, ":cur_agent"),
+                  (val_add, "$town_residents_condoned", 1),
+                  # (try_begin),  ######## added below
+                      # (gt, "$town_residents_condoned", 2),
+                      # (call_script, "script_return_random_troop_from_garrison", 1),
+                      # (assign, ":troop", reg0),
+                      # (call_script, "script_remove_troops_from_garrison",  ":troop", 1),
+                      # (set_spawn_position, pos3),
+                      # (spawn_agent, ":troop"),
+                      # (agent_set_team, reg0, 2),
+                      # (agent_add_relation_with_agent, ":player_agent",  reg0, -1),
+                      # (agent_ai_set_aggressiveness, reg0, 199),
+                      # (assign, "$town_residents_condoned", 0),
+                      # (display_message, "str_saldiri_3"),
+                  # (try_end),
+              (try_end),
+          (try_end),
+      (try_end),
+  ])
+  
+enhanced_town_spawn_guards = (
+ 2, 0, 3, [], [
+   (get_player_agent_no, ":player_agent"),
+   (agent_is_alive, ":player_agent"),
+   (party_get_slot, ":town_scene",  "$current_town",  slot_town_center),
+   (party_get_slot, ":tavern_scene",  "$current_town",  slot_town_tavern),
+   (store_current_scene, ":cur_scene"),
+   (try_begin),
+       (eq, ":cur_scene",  ":town_scene"),
+       (entry_point_get_position, pos3, 2),
+   (else_try),
+       (eq, ":cur_scene",  ":tavern_scene"),
+       (entry_point_get_position, pos3, 0),
+   (try_end),
+   # (agent_set_scripted_destination_no_attack, ":cur_agent", pos3, 1),
+   # (agent_force_rethink, ":cur_agent"),
+   # (agent_get_position ,pos2, ":cur_agent"),
+   # (get_distance_between_positions, ":dist", pos2, pos3),
+   (try_begin),
+       (gt, "$town_residents_condoned", 2),
+       (call_script, "script_return_random_troop_from_garrison", 1),
+       (assign, ":troop", reg0),
+       (gt, ":troop", 0),
+       (call_script, "script_remove_troops_from_garrison",  ":troop", 1),
+       (set_spawn_position, pos3),
+       (spawn_agent, ":troop"),
+       (agent_set_team, reg0, 2),
+       (agent_add_relation_with_agent, ":player_agent",  reg0, -1),
+       (agent_ai_set_aggressiveness, reg0, 199),
+       (agent_get_position, pos3, ":player_agent"),
+       (agent_set_scripted_destination, reg0, pos3, 1),
+       (agent_force_rethink, reg0),
+       (val_sub, "$town_residents_condoned", 1),
+       (display_message, "str_saldiri_3"),
+   (try_end),
+ ])
+ 
+enhanced_town_resident_behavior_killed = (
+ ti_on_agent_killed_or_wounded, 0, 0, [], [
+     #(store_trigger_param_1, ":dead_agent_no"),
+     (store_trigger_param_2, ":killer_agent_no"),
+     #(store_trigger_param_3, ":is_wounded"),
+     (get_player_agent_no, ":player_agent"),
+     (agent_is_alive, ":player_agent"),
+     (eq, ":killer_agent_no",  ":player_agent"),
+     (try_for_agents, ":cur_agent"),
+         (agent_is_human, ":cur_agent"),
+         (agent_is_alive, ":cur_agent"),
+		 
+         (neq, ":cur_agent",  ":player_agent"),
+         
+         (agent_force_rethink, ":cur_agent"),
+         (agent_ai_set_aggressiveness, ":cur_agent", 199),
+         (agent_set_team, ":cur_agent",  2),
+     (try_end),
+     (assign, "$town_residents_enraged", 1),
+     # (assign, "$town_residents_condoned", 0),
+     (party_get_slot, ":center_relation",  "$current_town", slot_center_player_relation),
+     (val_sub, ":center_relation", 1),
+     (party_set_slot, "$current_town", slot_center_player_relation, ":center_relation"),
+     (display_message, "str_saldiri_2"),
+     (val_add, "$town_residents_condoned", 1),
+     (party_get_slot, ":town_lord",  "$current_town", slot_town_lord),
+     (call_script, "script_change_player_relation_with_troop",  ":town_lord", -1),
+    # (party_get_slot, ":town_lord",  "$current_town", slot_town_lord),
+     
+ ])
+enhanced_town_resident_behavior_hit = (
+ ti_on_agent_hit, 0, 0, [], [
+     (store_trigger_param_1, ":hit_agent_no"),
+     (store_trigger_param_2, ":attacker_agent_no"),
+     #(store_trigger_param_3, ":damage"),
+     (get_player_agent_no, ":player_agent"),
+     (agent_is_alive, ":player_agent"),
+     (eq, ":attacker_agent_no",  ":player_agent"),
+     
+     (agent_force_rethink, ":hit_agent_no"),
+     (agent_ai_set_aggressiveness, ":hit_agent_no", 199),
+     (agent_set_team, ":hit_agent_no",  2),
+     (val_add, "$town_residents_condone_chance", 1000),
+     (eq, "$town_residents_enraged", 0),
+     #(display_message, "str_saldiri_4"),
+     #(party_get_slot, ":center_relation",  "$current_town", slot_center_player_relation),
+    # (val_sub, ":center_relation", 1),
+    # (party_set_slot, "$current_town", slot_center_player_relation, ":center_relation"),
+     #(party_get_slot, ":town_lord",  "$current_town", slot_town_lord),
+     
+ ])	
+####################################################################
+  
+  
+  
 
 ########################## NEW v2.0/2.1
 enhanced_common_battle_triggers = [
@@ -5920,6 +6161,15 @@ enhanced_common_siege_triggers = [
 #######################################################################################
 
 
+############ NEW v3.0
+fief_civilian_triggers = [
+    enhanced_town_resident_behavior_init,
+    enhanced_town_resident_behavior,
+    enhanced_town_resident_behavior_killed,
+    enhanced_town_resident_behavior_hit,
+    enhanced_town_spawn_guards,
+  ]  
+############
 
 
 
