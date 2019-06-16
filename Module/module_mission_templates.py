@@ -3687,8 +3687,8 @@ mission_templates = [
 #    5.5) Number of troops to spawn.
 #    5.6) list of equipment to add to troops spawned from here (maximum 8).
 
-  # ("arena_melee_fight",mtf_arena_fight,-1,
-  ("arena_melee_fight",mtf_battle_mode,charge,
+  ("arena_melee_fight",mtf_arena_fight,-1,
+  # ("arena_melee_fight",mtf_battle_mode,charge,
    "You enter a melee fight in the arena.",
     [ 
       (0, mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[itm_practice_sword,itm_practice_shield]),

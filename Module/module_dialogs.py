@@ -37843,15 +37843,15 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ## CC
 [anyone|plyr, "arena_master_melee_talk", [], "Good. That's what I am going to do.", "close_window", 
 [
-  (store_random_in_range, ":random_entry", 0, 39),
-  (assign, "$g_player_entry_point", ":random_entry"),
-# (assign, "$g_player_entry_point", 51),
+  # (store_random_in_range, ":random_entry", 0, 39),
+  # (assign, "$g_player_entry_point", ":random_entry"),
+  (assign, "$g_player_entry_point", 51),
 # (try_end),
   (assign, "$last_training_fight_town", "$current_town"),
   (store_current_hours, "$training_fight_time"),
   (assign, "$g_mt_mode", abm_training),
-  # (party_get_slot, ":scene", "$current_town",slot_town_arena), ### NEW v2.1 - normal battle
-  (assign, ":scene", "scn_random_scene"),
+  (party_get_slot, ":scene", "$current_town",slot_town_arena), ### NEW v2.1 - normal battle
+  # (assign, ":scene", "scn_random_scene"),
   (modify_visitors_at_site, ":scene"),
   (reset_visitors),
   (set_visitor, "$g_player_entry_point", "trp_player"),

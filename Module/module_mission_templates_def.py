@@ -5657,7 +5657,7 @@ common_battle_init_banner, #tom
   (ti_battle_window_opened, 0, 0, [], [(eq, "$g_mt_mode", abm_training),(start_presentation, "prsnt_arena_training")]),
 
   (0, 0, ti_once, [], [(eq, "$g_mt_mode", abm_training),
-                       (assign, "$g_arena_training_max_opponents", 9999), ############ NEW v1.8 - NOW THE FUN BEGINS! 
+                       (assign, "$g_arena_training_max_opponents", 50), ############ NEW v1.8 - NOW THE FUN BEGINS! 
                        (assign, "$g_arena_training_num_agents_spawned", 0),
                        (assign, "$g_arena_training_kills", 0),
                        (assign, "$g_arena_training_won", 0),
@@ -5699,7 +5699,7 @@ common_battle_init_banner, #tom
        ]),
 
 
-  (0.2, 0, 0,
+  (1, 0, 0,
    [
        (eq, "$g_mt_mode", abm_training),
        (assign, ":num_active_fighters", 0),
@@ -5710,7 +5710,7 @@ common_battle_init_banner, #tom
          (is_between, ":team_no", 0 ,7),
          (val_add, ":num_active_fighters", 1),
        (try_end),
-       (lt, ":num_active_fighters", 150), ############## YES!
+       (lt, ":num_active_fighters", 20), ############## YES!
        (neg|main_hero_fallen),
        (store_mission_timer_a, ":cur_time"),
        (this_or_next|ge, ":cur_time", "$g_arena_training_next_spawn_time"),
@@ -5719,14 +5719,14 @@ common_battle_init_banner, #tom
        (lt, "$g_arena_training_num_agents_spawned", "$g_arena_training_max_opponents"),
       ],
     [
-       # (assign, ":added_troop", "$g_arena_training_num_agents_spawned"),
-       # (store_div,  ":added_troop", "$g_arena_training_num_agents_spawned", 6),
-       # (assign, ":added_troop_sequence", "$g_arena_training_num_agents_spawned"),
-       # (val_mod, ":added_troop_sequence", 1),
-       # (val_add, ":added_troop", ":added_troop_sequence"),
-       # (val_min, ":added_troop", 3),
-       # (val_add, ":added_troop", "trp_novice_fighter"),   ############## YES!
-	   (store_random_in_range, ":added_troop", regular_troops_begin, regular_troops_end), ############# YES!
+       (assign, ":added_troop", "$g_arena_training_num_agents_spawned"),
+       (store_div,  ":added_troop", "$g_arena_training_num_agents_spawned", 6),
+       (assign, ":added_troop_sequence", "$g_arena_training_num_agents_spawned"),
+       (val_mod, ":added_troop_sequence", 1),
+       (val_add, ":added_troop", ":added_troop_sequence"),
+       (val_min, ":added_troop", 3),
+       (val_add, ":added_troop", "trp_novice_fighter"),   ############## YES!
+	   # (store_random_in_range, ":added_troop", regular_troops_begin, regular_troops_end), ############# YES!
        (assign, ":end_cond", 10000),
        (get_player_agent_no, ":player_agent"),
        (agent_get_position, pos5, ":player_agent"),
