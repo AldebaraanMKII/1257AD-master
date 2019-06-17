@@ -141,6 +141,12 @@ new_presentations = [
         ## INITIALISE VARIABLES
         (ti_on_presentation_load,
         [
+####### NEW v3.1-KOMKE START-Dirty fix to plural names: Every time presentation loads it copies singular names to plural names
+            (try_for_range, ":custom_troop", cstm_troops_begin, cstm_troops_end),
+                (str_store_troop_name, s1, ":custom_troop"),
+                (troop_set_plural_name, ":custom_troop", "@{s1}"),
+            (try_end),
+####### NEW v3.1-KOMKE END-
             (try_for_range, ":overlay_id", 0, 9999),
                 (troop_set_slot, "trp_cstm_overlay_troops", ":overlay_id", -1),
             (try_end),
@@ -567,12 +573,14 @@ new_presentations = [
       (call_script, "script_gpu_create_text_box_overlay", "str_s0", CSTM_NAME_POS_X + CSTM_NAME_LABEL_WIDTH, CSTM_NAME_POS_Y),
       (assign, "$cstm_set_name", reg1),
       
-      (str_store_string, s0, "@Name (plural): "),
-      (call_script, "script_gpu_create_text_overlay", "str_s0", CSTM_NAME_POS_X + CSTM_NAME_LABEL_WIDTH + CSTM_NAME_GAP, CSTM_NAME_POS_Y, 1000, CSTM_NAME_LABEL_WIDTH, 50, tf_right_align),
-      
-      (str_store_troop_name_plural, s0, ":dummy"),
-      (call_script, "script_gpu_create_text_box_overlay", "str_s0", CSTM_NAME_POS_X + CSTM_NAME_LABEL_WIDTH + CSTM_NAME_GAP, CSTM_NAME_POS_Y),
-      (assign, "$cstm_set_name_plural", reg1),
+####### NEW v3.1-KOMKE START-Dirty fix to plural names
+      # (str_store_string, s0, "@Name (plural): "),
+      # (call_script, "script_gpu_create_text_overlay", "str_s0", CSTM_NAME_POS_X + CSTM_NAME_LABEL_WIDTH + CSTM_NAME_GAP, CSTM_NAME_POS_Y, 1000, CSTM_NAME_LABEL_WIDTH, 50, tf_right_align),
+      # 
+      # (str_store_troop_name_plural, s0, ":dummy"),
+      # (call_script, "script_gpu_create_text_box_overlay", "str_s0", CSTM_NAME_POS_X + CSTM_NAME_LABEL_WIDTH + CSTM_NAME_GAP, CSTM_NAME_POS_Y),
+      # (assign, "$cstm_set_name_plural", reg1),
+####### NEW v3.1-KOMKE END-
             
             (assign, ":changes_made", "$cstm_name_changed"),
             (try_begin),
@@ -765,13 +773,15 @@ new_presentations = [
                 (troop_set_plural_name, ":dummy", s1),
                 (assign, "$cstm_name_changed", 1),
                 (start_presentation, "prsnt_cstm_customise_troop"),
-            (else_try),
+####### NEW v3.1-KOMKE START-Dirty fix to plural names
+            # (else_try),
                 ## PLURAL NAME CHANGED
-                (eq, ":object", "$cstm_set_name_plural"),
-                
-                (troop_set_plural_name, ":dummy", s0),
-                (assign, "$cstm_name_changed", 1),
-                (start_presentation, "prsnt_cstm_customise_troop"),
+            #     (eq, ":object", "$cstm_set_name_plural"),
+            # 
+            #     (troop_set_plural_name, ":dummy", s0),
+            #     (assign, "$cstm_name_changed", 1),
+            #     (start_presentation, "prsnt_cstm_customise_troop"),
+####### NEW v3.1-KOMKE END-
             (else_try),
                 ## ITEM TYPE BEING SELECTED
                 (eq, ":object", "$cstm_store_item_type_selector"),
