@@ -14246,23 +14246,26 @@ game_menus = [ #
              (eq, "$sneaked_into_town", 1),
              (display_message, "str_door_locked",0xFFFFAAAA),
            (else_try),
-             (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),
-                (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),
-             (neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),
+             # (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
+             (neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
+                # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),####### NEW v3.1-KOMKE
+             # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),####### NEW v3.1-KOMKE
+             (neg|troop_slot_ge, "trp_player", slot_troop_renown, 200),####### NEW v3.1-KOMKE
              (neq, "$g_player_eligible_feast_center_no", "$current_town"),
 
-             (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),
-             (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),
+             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),####### NEW v3.1-KOMKE
+             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),####### NEW v3.1-KOMKE
 
-             (neg|check_quest_active, "qst_wed_betrothed"),
-             (neg|check_quest_active, "qst_wed_betrothed_female"),
+             # (neg|check_quest_active, "qst_wed_betrothed"),####### NEW v3.1-KOMKE
+             # (neg|check_quest_active, "qst_wed_betrothed_female"),####### NEW v3.1-KOMKE
 
-             (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut
+             # (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut####### NEW v3.1-KOMKE
 
              (jump_to_menu, "mnu_cannot_enter_court"),
            (else_try),
              (assign, "$town_entered", 1),
-             (call_script, "script_enter_court", "$current_town"),
+             # (call_script, "script_enter_court", "$current_town"),####### NEW v3.1-KOMKE
+             (jump_to_menu, "mnu_castle_entered"),####### NEW v3.1-KOMKE
            (try_end),
         ], "Door to the castle."),
 
@@ -14304,23 +14307,26 @@ game_menus = [ #
              (eq, "$sneaked_into_town", 1),
              (display_message, "str_door_locked",0xFFFFAAAA),
            (else_try),
-             (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),
-                (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),
-             (neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),
-             (neq, "$g_player_eligible_feast_center_no", "$current_town"),
+             # (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
+             (neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
+                # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),####### NEW v3.1-KOMKE
+             # (this_or_next|neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),####### NEW v3.1-KOMKE
+             (neg|troop_slot_ge, "trp_player", slot_troop_renown, 200),####### NEW v3.1-KOMKE
+             (neq, "$g_player_eligible_feast_center_no", "$current_town"),####### NEW v3.1-KOMKE
 
-             (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),
-             (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),
+             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),####### NEW v3.1-KOMKE
+             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),####### NEW v3.1-KOMKE
 
-             (neg|check_quest_active, "qst_wed_betrothed"),
-             (neg|check_quest_active, "qst_wed_betrothed_female"),
+             # (neg|check_quest_active, "qst_wed_betrothed"),####### NEW v3.1-KOMKE
+             # (neg|check_quest_active, "qst_wed_betrothed_female"),####### NEW v3.1-KOMKE
 
-             (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut
+             # (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut####### NEW v3.1-KOMKE
 
              (jump_to_menu, "mnu_cannot_enter_court"),
             (else_try),
              (assign, "$town_entered", 1),
-             (call_script, "script_enter_court", "$current_town"),
+             # (call_script, "script_enter_court", "$current_town"),####### NEW v3.1-KOMKE
+             (jump_to_menu, "mnu_castle_entered"),####### NEW v3.1-KOMKE
            (try_end),
         ], "Door to the castle."),
 
@@ -15425,7 +15431,8 @@ game_menus = [ #
 
 
    ("cannot_enter_court",0,
-    "There is a feast in progress in the lord's hall, but you are not of sufficient status to be invited inside. Perhaps increasing your renown would win you admittance -- or you might also try distinguishing yourself at a tournament while the feast is in progress...",
+    # "There is a feast in progress in the lord's hall, but you are not of sufficient status to be invited inside. Perhaps increasing your renown would win you admittance -- or you might also try distinguishing yourself at a tournament while the feast is in progress...",####### NEW v3.1-KOMKE
+    "You are not of sufficient status to be invited inside. Perhaps increasing your renown would win you admittance -- or you might also try distinguishing yourself at a tournament while a feast is in progress...",####### NEW v3.1-KOMKE
     "none",
     [],
     [
@@ -15537,13 +15544,18 @@ game_menus = [ #
           (str_store_string, s8, "@Moreover, you earn {reg8} denars from the clever bets you placed on yourself..."),
         (try_end),
         (try_begin),
-            (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),
-                (neg|troop_slot_ge, "trp_player", slot_troop_renown, 70),
-            (neg|troop_slot_ge, "trp_player", slot_troop_renown, 145),
-
-            (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),
-            (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),
+####### NEW v3.1-KOMKE START-
+            # (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),
+            #     (neg|troop_slot_ge, "trp_player", slot_troop_renown, 70),
+            # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 145),
+            # 
+            # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),
+            # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),
+            # (str_store_string, s8, "str_s8_you_are_also_invited_to_attend_the_ongoing_feast_in_the_castle"),
+            (neq, "$players_kingdom", "$g_encountered_party_faction"),
+            (assign, "$g_player_eligible_feast_center_no", "$current_town"),
             (str_store_string, s8, "str_s8_you_are_also_invited_to_attend_the_ongoing_feast_in_the_castle"),
+####### NEW v3.1-KOMKE END- 
         (try_end),
         (troop_add_gold, "trp_player", ":total_win"),
         (assign, ":player_odds_sub", 0),
@@ -15903,7 +15915,7 @@ game_menus = [ #
     ("town_tournament_start_new",0,
 ####### NEW v3.0-KOMKE START-
     # "Select which type of tournament do you wish to participate in. You can only participate in one of them.",
-    "You need 200 renown to fight in tournaments. Only companions can join your team!",
+    "You need 125 renown to fight in tournaments. Only companions can join your team!",####### NEW v3.1-KOMKE
     "none",
     [
         #(set_background_mesh, "mesh_pic_tournament_euro"),
@@ -15927,7 +15939,7 @@ game_menus = [ #
           # (display_message, "@You do not have five men in your party to form a team!", 0xEA9999),
         # (try_end),
         (troop_get_slot, ":plyr_renown", "trp_player", slot_troop_renown),
-        (ge, ":plyr_renown", 200),
+        (ge, ":plyr_renown", 125),####### NEW v3.1-KOMKE 200->125 so player can access tournament and enter castle (200 required) if he wins
 ####### NEW v3.0-KOMKE END- 
       ], "Join team on team tournament.",
       [  
@@ -18576,217 +18588,219 @@ game_menus = [ #
 	  #########
       ],
     [
-      ("appoint_spouse",[
-      (troop_slot_ge, "trp_player", slot_troop_spouse, 1),
-      (troop_get_slot, ":player_spouse", "trp_player", slot_troop_spouse),
-      (neg|troop_slot_eq, ":player_spouse", slot_troop_occupation, slto_kingdom_hero),
-      (str_store_troop_name, s10, ":player_spouse"),
-      ], "Appoint your wife, {s10}...",
-       [
-       (troop_get_slot, ":player_spouse", "trp_player", slot_troop_spouse),
-       (assign, "$g_player_minister", ":player_spouse"),
-       (jump_to_menu, "mnu_minister_confirm"),
-       ]),
-
-      ("appoint_npc1",[
-      (main_party_has_troop, "trp_npc1"),
-      (str_store_troop_name, s10, "trp_npc1"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc1"),
-       (jump_to_menu, "mnu_minister_confirm"),
-       ]),
-
-      ("appoint_npc2",[
-      (main_party_has_troop, "trp_npc2"),
-      (str_store_troop_name, s10, "trp_npc2"),], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc2"),
-       (jump_to_menu, "mnu_minister_confirm"),]),
-
-      ("appoint_npc3",[
-      (main_party_has_troop, "trp_npc3"),
-      (str_store_troop_name, s10, "trp_npc3"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc3"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc4",[
-      (main_party_has_troop, "trp_npc4"),
-      (str_store_troop_name, s10, "trp_npc4"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc4"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc5",[
-      (main_party_has_troop, "trp_npc5"),
-      (str_store_troop_name, s10, "trp_npc5"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc5"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc6",[
-      (main_party_has_troop, "trp_npc6"),
-      (str_store_troop_name, s10, "trp_npc6"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc6"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc7",[
-      (main_party_has_troop, "trp_npc7"),
-      (str_store_troop_name, s10, "trp_npc7"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc7"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc8",[
-      (main_party_has_troop, "trp_npc8"),
-      (str_store_troop_name, s10, "trp_npc8"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc8"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc9",[
-      (main_party_has_troop, "trp_npc9"),
-      (str_store_troop_name, s10, "trp_npc9"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc9"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc10",[ #was npc9
-      (main_party_has_troop, "trp_npc10"),
-      (str_store_troop_name, s10, "trp_npc10"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc10"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc11",[
-      (main_party_has_troop, "trp_npc11"),
-      (str_store_troop_name, s10, "trp_npc11"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc11"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc12",[
-      (main_party_has_troop, "trp_npc12"),
-      (str_store_troop_name, s10, "trp_npc12"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc12"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc13",[
-      (main_party_has_troop, "trp_npc13"),
-      (str_store_troop_name, s10, "trp_npc13"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc13"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc14",[
-      (main_party_has_troop, "trp_npc14"),
-      (str_store_troop_name, s10, "trp_npc14"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc14"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc15",[
-      (main_party_has_troop, "trp_npc15"),
-      (str_store_troop_name, s10, "trp_npc15"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc15"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc16",[
-      (main_party_has_troop, "trp_npc16"),
-      (str_store_troop_name, s10, "trp_npc16"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc16"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc17",[
-      (main_party_has_troop, "trp_npc17"),
-      (str_store_troop_name, s10, "trp_npc17"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc17"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc18",[
-      (main_party_has_troop, "trp_npc18"),
-      (str_store_troop_name, s10, "trp_npc18"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc18"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc20",[
-      (main_party_has_troop, "trp_npc20"),
-      (str_store_troop_name, s10, "trp_npc20"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc20"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc21",[
-      (main_party_has_troop, "trp_npc21"),
-      (str_store_troop_name, s10, "trp_npc21"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc21"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-       
-      ("appoint_npc22",[
-      (main_party_has_troop, "trp_npc22"),
-      (str_store_troop_name, s10, "trp_npc22"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc22"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc23",[
-      (main_party_has_troop, "trp_npc23"),
-      (str_store_troop_name, s10, "trp_npc23"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc23"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc24",[
-      (main_party_has_troop, "trp_npc24"),
-      (str_store_troop_name, s10, "trp_npc24"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc24"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc25",[
-      (main_party_has_troop, "trp_npc25"),
-      (str_store_troop_name, s10, "trp_npc25"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc25"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
-
-      ("appoint_npc26",[
-      (main_party_has_troop, "trp_npc26"),
-      (str_store_troop_name, s10, "trp_npc26"),
-      ], "Appoint {s10}",
-       [
-       (assign, "$g_player_minister", "trp_npc26"),
-       (jump_to_menu, "mnu_minister_confirm"), ]),
+####### NEW v3.1-KOMKE START-disabled
+      # ("appoint_spouse",[
+      # (troop_slot_ge, "trp_player", slot_troop_spouse, 1),
+      # (troop_get_slot, ":player_spouse", "trp_player", slot_troop_spouse),
+      # (neg|troop_slot_eq, ":player_spouse", slot_troop_occupation, slto_kingdom_hero),
+      # (str_store_troop_name, s10, ":player_spouse"),
+      # ], "Appoint your wife, {s10}...",
+      #  [
+      #  (troop_get_slot, ":player_spouse", "trp_player", slot_troop_spouse),
+      #  (assign, "$g_player_minister", ":player_spouse"),
+      #  (jump_to_menu, "mnu_minister_confirm"),
+      #  ]),
+      # 
+      # ("appoint_npc1",[
+      # (main_party_has_troop, "trp_npc1"),
+      # (str_store_troop_name, s10, "trp_npc1"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc1"),
+      #  (jump_to_menu, "mnu_minister_confirm"),
+      #  ]),
+      # 
+      # ("appoint_npc2",[
+      # (main_party_has_troop, "trp_npc2"),
+      # (str_store_troop_name, s10, "trp_npc2"),], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc2"),
+      #  (jump_to_menu, "mnu_minister_confirm"),]),
+      # 
+      # ("appoint_npc3",[
+      # (main_party_has_troop, "trp_npc3"),
+      # (str_store_troop_name, s10, "trp_npc3"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc3"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc4",[
+      # (main_party_has_troop, "trp_npc4"),
+      # (str_store_troop_name, s10, "trp_npc4"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc4"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc5",[
+      # (main_party_has_troop, "trp_npc5"),
+      # (str_store_troop_name, s10, "trp_npc5"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc5"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc6",[
+      # (main_party_has_troop, "trp_npc6"),
+      # (str_store_troop_name, s10, "trp_npc6"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc6"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc7",[
+      # (main_party_has_troop, "trp_npc7"),
+      # (str_store_troop_name, s10, "trp_npc7"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc7"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc8",[
+      # (main_party_has_troop, "trp_npc8"),
+      # (str_store_troop_name, s10, "trp_npc8"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc8"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc9",[
+      # (main_party_has_troop, "trp_npc9"),
+      # (str_store_troop_name, s10, "trp_npc9"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc9"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc10",[ #was npc9
+      # (main_party_has_troop, "trp_npc10"),
+      # (str_store_troop_name, s10, "trp_npc10"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc10"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc11",[
+      # (main_party_has_troop, "trp_npc11"),
+      # (str_store_troop_name, s10, "trp_npc11"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc11"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc12",[
+      # (main_party_has_troop, "trp_npc12"),
+      # (str_store_troop_name, s10, "trp_npc12"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc12"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc13",[
+      # (main_party_has_troop, "trp_npc13"),
+      # (str_store_troop_name, s10, "trp_npc13"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc13"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc14",[
+      # (main_party_has_troop, "trp_npc14"),
+      # (str_store_troop_name, s10, "trp_npc14"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc14"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc15",[
+      # (main_party_has_troop, "trp_npc15"),
+      # (str_store_troop_name, s10, "trp_npc15"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc15"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc16",[
+      # (main_party_has_troop, "trp_npc16"),
+      # (str_store_troop_name, s10, "trp_npc16"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc16"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc17",[
+      # (main_party_has_troop, "trp_npc17"),
+      # (str_store_troop_name, s10, "trp_npc17"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc17"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc18",[
+      # (main_party_has_troop, "trp_npc18"),
+      # (str_store_troop_name, s10, "trp_npc18"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc18"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc20",[
+      # (main_party_has_troop, "trp_npc20"),
+      # (str_store_troop_name, s10, "trp_npc20"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc20"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc21",[
+      # (main_party_has_troop, "trp_npc21"),
+      # (str_store_troop_name, s10, "trp_npc21"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc21"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc22",[
+      # (main_party_has_troop, "trp_npc22"),
+      # (str_store_troop_name, s10, "trp_npc22"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc22"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc23",[
+      # (main_party_has_troop, "trp_npc23"),
+      # (str_store_troop_name, s10, "trp_npc23"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc23"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc24",[
+      # (main_party_has_troop, "trp_npc24"),
+      # (str_store_troop_name, s10, "trp_npc24"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc24"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc25",[
+      # (main_party_has_troop, "trp_npc25"),
+      # (str_store_troop_name, s10, "trp_npc25"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc25"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+      # 
+      # ("appoint_npc26",[
+      # (main_party_has_troop, "trp_npc26"),
+      # (str_store_troop_name, s10, "trp_npc26"),
+      # ], "Appoint {s10}",
+      #  [
+      #  (assign, "$g_player_minister", "trp_npc26"),
+      #  (jump_to_menu, "mnu_minister_confirm"), ]),
+####### NEW v3.1-KOMKE END- 
 
       # ("appoint_npc27",[
       # (main_party_has_troop, "trp_npc27"),
@@ -32705,8 +32719,6 @@ game_menus = [ #
 
     [
     
-        
-		
      ("call_retinue", ##TOWN
       [
         (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
@@ -33282,8 +33294,8 @@ game_menus = [ #
     [
       ("camp_mod_1",
 		[],"Increase player's renown.",
-       [(str_store_string, s1, "@Player renown is increased by 100. "),
-        (call_script, "script_change_troop_renown", "trp_player" ,100),
+       [(str_store_string, s1, "@Player renown is increased by 25. "),
+        (call_script, "script_change_troop_renown", "trp_player" ,25),
         # (jump_to_menu, "mnu_camp_modding"),
         ]
        ),
@@ -33881,6 +33893,8 @@ game_menus = [ #
     ]
   ),
 
+######################################################
+
 ####### NEW v3.0-KOMKE START-This will notify the player when a fief improvement is finished
    ("notification_building_constructed",0,
     "Construction of {s0} in {s1} has finished.",
@@ -33897,7 +33911,228 @@ game_menus = [ #
         ]),
      ]
   ),
-####### NEW v3.0-KOMKE END- 
+####### NEW v3.0-KOMKE END-
+  
+######################################################
+  
+####### NEW v3.1-KOMKE START-New menus to separate court, lords and ladies and to allow enough scene positions during tournaments 
+    ("castle_entered",0,
+    "You are allowed to enter the castle, what do you want to do?",
+    "none",
+    [],
+    [
+      ("attend_court",
+        [
+        
+        ], "Attend court",
+        [
+        (assign, ":center_no", "$current_town"),
+        (assign, "$talk_context", tc_court_talk),
+        (set_jump_mission, "mt_visit_town_castle"),
+        (mission_tpl_entry_clear_override_items, "mt_visit_town_castle", 0),
+        #(mission_tpl_entry_set_override_flags, "mt_visit_town_castle", 0, af_override_all),
+        (party_get_slot, ":castle_scene", ":center_no", slot_town_castle),
+        (modify_visitors_at_site, ":castle_scene"),
+        (reset_visitors),
+        
+        #Adding guards
+        (store_faction_of_party, ":center_faction", ":center_no"),
+        # (faction_get_slot, ":guard_troop", ":center_faction", slot_faction_castle_guard_troop), #### bugfix
+        
+        ############# NEW v1.8 - checking center culture instead of faction culture  
+        (party_get_slot, ":center_culture", ":center_no", slot_center_culture),
+        (faction_get_slot, ":guard_troop", ":center_culture", slot_faction_castle_guard_troop), #### bugfix
+        (try_begin),
+          (le, ":guard_troop", 0),
+          (assign, ":guard_troop", "trp_euro_spearman_3"),
+        (try_end),
+        (set_visitor, 6, ":guard_troop"),
+        # (set_visitor, 7, ":guard_troop"),
+        (assign, ":cur_pos", 16),
+
+        (try_begin),
+          (eq, "$g_player_court", ":center_no"),##spouse only if center is player court
+          (troop_get_slot, ":player_spouse", "trp_player", slot_troop_spouse),
+          (gt, ":player_spouse", 0),
+          (troop_slot_eq, ":player_spouse", slot_troop_cur_center, ":center_no"),
+          (set_visitor, ":cur_pos", ":player_spouse"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        (try_begin),##KOMKE I have to use leaded party because slot_troop_cur_center does not work for lords ???
+            (party_get_slot, ":center_lord", ":center_no", slot_town_lord),
+            (gt, ":center_lord", 0),##not including player
+            (troop_get_slot, ":center_lord_party", ":center_lord", slot_troop_leaded_party),
+            (party_get_attached_to, ":lord_party_located", ":center_lord_party"),
+            (eq, ":lord_party_located", ":center_no"),
+            (set_visitor, ":cur_pos", ":center_lord"),
+            (val_add, ":cur_pos", 1),
+        (try_end),
+        (try_begin),
+          (troop_get_slot, ":center_lady", ":center_lord", slot_troop_spouse),
+          (gt, ":center_lady", 0),##not including player
+          (troop_slot_eq, ":center_lady", slot_troop_cur_center, ":center_no"),
+          (set_visitor, ":cur_pos", ":center_lady"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        (try_begin),
+          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (gt, "$g_player_minister", 0),
+          (assign, "$g_player_minister", "trp_temporary_minister"),  #fix for wrong troops after update
+          (set_visitor, ":cur_pos", "$g_player_minister"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        ##diplomacy begin
+        (try_begin),
+          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (gt, "$g_player_chamberlain", 0),
+          (assign, "$g_player_chamberlain", "trp_dplmc_chamberlain"),  #fix for wrong troops after update
+          (set_visitor, ":cur_pos", "$g_player_chamberlain"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        
+        (try_begin),
+          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (gt, "$g_player_constable", 0),
+          (assign, "$g_player_constable", "trp_dplmc_constable"),  #fix for wrong troops after update
+          (set_visitor, ":cur_pos", "$g_player_constable"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        
+        (try_begin),
+          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (gt, "$g_player_chancellor", 0),
+          (assign, "$g_player_chancellor", "trp_dplmc_chancellor"), #fix for wrong troops after update
+          (set_visitor, ":cur_pos", "$g_player_chancellor"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        ##diplomacy end
+        
+        #Lords wishing to pledge allegiance - inactive, but part of player faction
+        (try_begin),
+          (eq, "$g_player_court", ":center_no"),
+          (faction_slot_eq, ":center_faction", slot_faction_leader, "trp_player"),
+          (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
+            (troop_slot_eq, ":active_npc", slot_troop_is_alive, 1),  ## he's alive/active
+            (store_faction_of_troop, ":active_npc_faction", ":active_npc"),
+            (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+            (troop_slot_eq, ":active_npc", slot_troop_occupation, slto_inactive),
+            (neg|troop_slot_ge, ":active_npc", slot_troop_prisoner_of_party, 0), #if he/she is not prisoner in any center.
+            (neq, ":active_npc", "$g_player_minister"),
+            (set_visitor, ":cur_pos", ":active_npc"),
+            (val_add, ":cur_pos", 1),
+          (try_end),
+        (try_end),
+        
+        (set_jump_entry, 0),
+        (jump_to_scene, ":castle_scene"),
+        (scene_set_slot, ":castle_scene", slot_scene_visited, 1),
+        (change_screen_mission),
+        ]),
+      
+      ("talk_to_lords.",
+        [
+        (str_clear, s1),
+        (try_begin),
+          (store_faction_of_party, ":center_faction", "$current_town"),
+          (faction_slot_eq, ":center_faction", slot_faction_ai_state, sfai_feast),
+          (faction_slot_eq, ":center_faction", slot_faction_ai_object, "$current_town"),
+          (str_store_string, s1, "str__join_the_feast"),
+        (try_end),
+        ], "Talk to the lords {s1}",
+        [
+        (assign, ":center_no", "$current_town"),
+        (assign, "$talk_context", tc_court_talk),
+        (set_jump_mission, "mt_visit_town_castle"),
+        (mission_tpl_entry_clear_override_items, "mt_visit_town_castle", 0),
+        #(mission_tpl_entry_set_override_flags, "mt_visit_town_castle", 0, af_override_all),
+        (party_get_slot, ":castle_scene", ":center_no", slot_town_castle),
+        (modify_visitors_at_site, ":castle_scene"),
+        (reset_visitors),
+        (assign, ":cur_pos", 16),
+        
+        (call_script, "script_get_heroes_attached_to_center", ":center_no", "p_temp_party"),
+        (party_get_num_companion_stacks, ":num_stacks", "p_temp_party"),
+        (try_for_range, ":i_stack", 0, ":num_stacks"),
+          (party_stack_get_troop_id, ":stack_troop", "p_temp_party", ":i_stack"),
+          (lt, ":cur_pos", 32), # spawn up to entry point 32 - is it possible to add another 10 spots?
+          (set_visitor, ":cur_pos", ":stack_troop"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        
+        (set_jump_entry, 0),
+        (jump_to_scene, ":castle_scene"),
+        (scene_set_slot, ":castle_scene", slot_scene_visited, 1),
+        (change_screen_mission),
+        ]),
+      
+      ("talk_to_ladies.",
+        [
+        (str_clear, s1),
+        (try_begin),
+          (store_faction_of_party, ":center_faction", "$current_town"),
+          (faction_slot_eq, ":center_faction", slot_faction_ai_state, sfai_feast),
+          (faction_slot_eq, ":center_faction", slot_faction_ai_object, "$current_town"),
+          (str_store_string, s1, "str__join_the_feast"),
+        (try_end),
+        ], "Talk to the ladies {s1}",
+        [
+        (assign, ":center_no", "$current_town"),
+        (assign, "$talk_context", tc_court_talk),
+        (set_jump_mission, "mt_visit_town_castle"),
+        (mission_tpl_entry_clear_override_items, "mt_visit_town_castle", 0),
+        #(mission_tpl_entry_set_override_flags, "mt_visit_town_castle", 0, af_override_all),
+        (party_get_slot, ":castle_scene", ":center_no", slot_town_castle),
+        (modify_visitors_at_site, ":castle_scene"),
+        (reset_visitors),
+        (assign, ":cur_pos", 16),
+        
+        (try_for_range, ":cur_troop", kingdom_ladies_begin, kingdom_ladies_end),
+          (neq, ":cur_troop", "trp_knight_1_1_wife"), #The one who should not appear in game
+          #(troop_slot_eq, ":cur_troop", slot_troop_occupation, slto_kingdom_lady),
+          (troop_slot_eq, ":cur_troop", slot_troop_cur_center, ":center_no"),
+          (assign, ":lady_meets_visitors", 0),
+          
+          (try_begin),
+            (this_or_next|troop_slot_eq, "trp_player", slot_troop_betrothed, ":cur_troop"),##betrothed allowed
+            (troop_slot_eq, ":cur_troop", slot_troop_betrothed, "trp_player"),
+            (assign, ":lady_meets_visitors", 1), 
+          (try_end),
+          (try_begin), 
+            (call_script, "script_get_kingdom_lady_social_determinants", ":cur_troop"),##single ladies check 
+            (gt, reg0, -1),  ####### NEW v3.0
+            (call_script, "script_npc_decision_checklist_male_guardian_assess_suitor", reg0, "trp_player"),
+            (gt, reg0, 0),
+            (assign, ":lady_meets_visitors", 1),
+          (try_end),
+          (try_begin),
+            (troop_slot_ge, ":cur_troop", slot_troop_spouse, 1),##married ladies allowed
+            (assign, ":lady_meets_visitors", 1),
+          (try_end),
+          
+          (eq, ":lady_meets_visitors", 1),
+          (lt, ":cur_pos", 32), # spawn up to entry point 32
+          (set_visitor, ":cur_pos", ":cur_troop"),
+          (val_add, ":cur_pos", 1),
+        (try_end),
+        
+        (set_jump_entry, 0),
+        (jump_to_scene, ":castle_scene"),
+        (scene_set_slot, ":castle_scene", slot_scene_visited, 1),
+        (change_screen_mission),
+        ]),
+      
+      ("continue",[], "Continue",
+        [
+        (jump_to_menu, "mnu_town"),
+        ]),
+    ]
+    ),
+####### NEW v3.1-KOMKE END- 
+    
+######################################################
+  
+
+
 
 ######################################################
 
