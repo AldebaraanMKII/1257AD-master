@@ -4263,10 +4263,11 @@ dialogs = [
                     (neg|troop_slot_eq, "trp_player", slot_troop_spouse, "$g_talk_troop")],
 "I am at your service, {sire/my lady}", "minister_issues",[]],
 
-[anyone, "start", [(eq, "$g_talk_troop", "trp_temporary_minister"),
-                    (neq, "$g_talk_troop", "$g_player_minister")],
-"It has been an honor to serve you, {sire/my lady}", "close_window",[]],
-
+####### NEW v3.1-KOMKE START-disabled
+# [anyone, "start", [(eq, "$g_talk_troop", "trp_temporary_minister"),
+#                     (neq, "$g_talk_troop", "$g_player_minister")],
+# "It has been an honor to serve you, {sire/my lady}", "close_window",[]],
+####### NEW v3.1-KOMKE END- 
 
 [anyone, "start", [(troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_player_companion),
                     (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
@@ -4626,50 +4627,51 @@ dialogs = [
 [anyone|plyr, "member_question_2", [(eq,0,1),
   ], "Do you have any connections that we could use to our advantage?", "member_intelgathering_1",[]],
 
-  
+####### NEW v3.1-KOMKE START-disabled
 ############ NEW v2.7 - player can ask companion directly to become minister
-[anyone|plyr, "member_question_2", 
-[
-### first see if player faction is active and there's a court
-(faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
-(is_between, "$g_player_court", walled_centers_begin, walled_centers_end),
-### make sure that no companion minister already exists
-(neg|is_between, "$g_player_minister", companions_begin, companions_end)
-], "Would you like to become my minister and help me administer this realm?", "member_minister_1",
-[
-]],
-
-[anyone, "member_minister_1", 
-[
-], "I would be honored. Are you sure about this?", "member_minister_2",
-[
-]],
-
-[anyone|plyr, "member_minister_2", 
-[
-], "Yes. I want you to be my minister.", "member_minister_3",
-[
-(assign, "$g_player_minister", "$g_talk_troop"),
-]],
-
-[anyone|plyr, "member_minister_2", 
-[
-], "Wait. I need to think more about this.", "do_member_trade",
-[
-]],
-
-[anyone, "member_minister_3", 
-[
-], "Very well. I shall move to your court as soon as possible.", "close_window",
-[
-(str_store_troop_name, s1, "$g_talk_troop"),
-(str_store_party_name, s2, "$g_player_court"),
-(display_message, "@{s1} is your new minister and can be found in your court in {s2}."),
-(try_begin),
-  (main_party_has_troop, "$g_talk_troop"),
-  (remove_member_from_party, "$g_talk_troop", "p_main_party"),
-(try_end),
-]],
+# [anyone|plyr, "member_question_2", 
+# [
+# ### first see if player faction is active and there's a court
+# (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
+# (is_between, "$g_player_court", walled_centers_begin, walled_centers_end),
+# ### make sure that no companion minister already exists
+# (neg|is_between, "$g_player_minister", companions_begin, companions_end)
+# ], "Would you like to become my minister and help me administer this realm?", "member_minister_1",
+# [
+# ]],
+# 
+# [anyone, "member_minister_1", 
+# [
+# ], "I would be honored. Are you sure about this?", "member_minister_2",
+# [
+# ]],
+# 
+# [anyone|plyr, "member_minister_2", 
+# [
+# ], "Yes. I want you to be my minister.", "member_minister_3",
+# [
+# (assign, "$g_player_minister", "$g_talk_troop"),
+# ]],
+# 
+# [anyone|plyr, "member_minister_2", 
+# [
+# ], "Wait. I need to think more about this.", "do_member_trade",
+# [
+# ]],
+# 
+# [anyone, "member_minister_3", 
+# [
+# ], "Very well. I shall move to your court as soon as possible.", "close_window",
+# [
+# (str_store_troop_name, s1, "$g_talk_troop"),
+# (str_store_party_name, s2, "$g_player_court"),
+# (display_message, "@{s1} is your new minister and can be found in your court in {s2}."),
+# (try_begin),
+#   (main_party_has_troop, "$g_talk_troop"),
+#   (remove_member_from_party, "$g_talk_troop", "p_main_party"),
+# (try_end),
+# ]],
+####### NEW v3.1-KOMKE END- 
 ############
   
   
@@ -6718,11 +6720,13 @@ dialogs = [
    ],
 "{s1} currently does not have a lord. You may wish to keep it this way, as lords will sometimes gravitate towards lieges who have land to offer, but for the time being, no one is collecting any of its rents.", "minister_talk", []],
    
-   [anyone, "minister_issues",
-   [
-   (neg|is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
-   ],
-"At this point, there are no particularly urgent matters which need your attention. I should point out though, sire, that I am not very skilled in the ways of politics, and that I am anxious to return to private life. If you wish to issue any but the most basic directives, I suggest appointing a trusted companion in my stead. In the meantime, is there anything you wish done?", "minister_talk",[]],
+####### NEW v3.1-KOMKE START-disabled
+#    [anyone, "minister_issues",
+#    [
+#    (neg|is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+#    ],
+# "At this point, there are no particularly urgent matters which need your attention. I should point out though, sire, that I am not very skilled in the ways of politics, and that I am anxious to return to private life. If you wish to issue any but the most basic directives, I suggest appointing a trusted companion in my stead. In the meantime, is there anything you wish done?", "minister_talk",[]],
+####### NEW v3.1-KOMKE END- 
 
    [anyone, "minister_issues",
    [
@@ -6746,7 +6750,7 @@ dialogs = [
    
 [anyone|plyr, "minister_talk",
    [
-   (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+   # (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE
    ],
 "Do you have any ideas to strengthen our kingdom's unity?", "combined_political_quests",[
    (call_script, "script_get_political_quest", "$g_talk_troop"),
@@ -6827,13 +6831,13 @@ dialogs = [
    
    [anyone|plyr, "minister_talk",
    [
-   (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+   # (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE
    ],
 "I wish to dispatch an emissary.", "minister_diplomatic_kingdoms", []],
 
    [anyone|plyr, "minister_talk",
    [
-   (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+   # (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE
    ],
 "I wish to indict a disloyal vassal for treason.", "minister_indict", []],   
 
@@ -6875,32 +6879,33 @@ dialogs = [
 "You have just made such an appointment, {sire/my lady}. If you countermand your decree so soon, there will be great confusion. We will need to wait a few days.", "minister_pretalk", []],
 
    
-   [anyone|plyr, "minister_talk",
-   [
-   (neg|is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
-   ],
-"I wish for you to retire as minister.", "minister_replace", []],
+####### NEW v3.1-KOMKE START-disabled
+#    [anyone|plyr, "minister_talk",
+#    [
+#    (neg|is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
+#    ],
+# "I wish for you to retire as minister.", "minister_replace", []],
 
+#    [anyone|plyr, "minister_talk",
+#    [
+#    (is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
+#     (neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),
+# 
+#    ],
+# "I wish you to rejoin my party.", "minister_replace", []],
+####### NEW v3.1-KOMKE END- 
+   
+   
    [anyone|plyr, "minister_talk",
    [
-   (is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
-    (neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),
-   
-   ],
-"I wish you to rejoin my party.", "minister_replace", []],
-
-   
-   
-   [anyone|plyr, "minister_talk",
-   [
-   (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+   # (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE
    ],
 "I wish to grant a fief to one of my vassals.", "minister_grant_fief", []],
    
 ###################### NEW PLAYER GRANT FIEF TO HIMSELF
    [anyone|plyr, "minister_talk",  ##### NEW v2.3 - disabled
    [
-   (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+   # (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE END- 
    ],
 "I wish to grant myself a fief.", "minister_grant_self_fief", []],
 
@@ -12781,7 +12786,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 #select kingdom religion
    [anyone|plyr, "minister_talk",
    [
-   (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+   # (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE
    ],
 "I wish to select the kingdom's religion.", "dplmc_minister_kingdom_religion_ask", []],
    
@@ -12878,7 +12883,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ######select kingdom culture
 [anyone|plyr, "minister_talk",
 [
-(is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+# (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE
 ],
 ##diplomacy start+ add apostrophe
 "I wish to select the kingdom's culture.", "dplmc_chancellor_kingdom_culture_ask",
@@ -13372,7 +13377,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ##spy mission
    [anyone|plyr, "minister_talk",
    [
-   (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),
+   # (is_between, "$g_player_minister", active_npcs_begin, kingdom_ladies_end),####### NEW v3.1-KOMKE
    ],
 "I wish to spy out another kingdom.", "dplmc_minister_spy_kingdoms", []],
 
@@ -14392,71 +14397,72 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
 [anyone|plyr, "minister_diplomatic_dispatch_confirm",[], "Actually, hold off on that", "minister_pretalk",[]],
 
-[anyone, "minister_replace", [], "Very good. Whom will you appoint in my stead?", "minister_replace_select", []],
-
-[anyone|plyr|repeat_for_troops, "minister_replace_select",
-   [
-   (store_repeat_object, ":troop_no"),
-   (is_between, ":troop_no", companions_begin, companions_end),
-   (main_party_has_troop, ":troop_no"),
-   (troop_slot_eq, ":troop_no", slot_troop_prisoner_of_party, -1),
-   (str_store_troop_name, s4, ":troop_no"),
-   ], "{s4}", "minister_replace_confirm",
-   [
-   (store_repeat_object, "$g_player_minister"),
-   ]],
-
-   [anyone|plyr, "minister_replace_select",
-   [
-   (troop_get_slot, ":spouse", "trp_player", slot_troop_spouse),
-   (gt, ":spouse", 0),
-   (troop_get_type, ":is_female", ":spouse"),
-   (neg|troop_slot_eq, ":spouse", slot_troop_occupation, slto_kingdom_hero),
-   (eq, ":is_female", 1),
-   (str_store_troop_name, s4, ":spouse"),
-   (neq, ":spouse", "$g_talk_troop"),
-   
-   ], "My wife, {s4}.", "minister_replace_confirm", #husband disabled, as he's an active lord
-   [
-   (troop_get_slot, "$g_player_minister", "trp_player", slot_troop_spouse),
-   ]],
-
-[anyone|plyr, "minister_replace_select", [], "Actually, hold off on that.", "minister_pretalk", []],
-
-
-
-   
-[anyone, "minister_replace_confirm",
-   [
-   (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_player_companion),
-   ], "Very good. {s9} is your new minister. I shall make ready to rejoin you.", "close_window",
-   [
-   (str_store_troop_name, s9, "$g_player_minister"),
-   (party_add_members, "p_main_party", "$g_talk_troop", 1), 
-   (assign, "$g_leave_encounter", 1),
-   (try_begin),
-      (main_party_has_troop, "$g_player_minister"),
-      (party_remove_members, "p_main_party", "$g_player_minister", 1), 
-   (try_end),
-   
-   (try_for_range, ":minister_quest", all_quests_begin, all_quests_end),
-    (quest_slot_eq, ":minister_quest", slot_quest_giver_troop, "$g_talk_troop"),
-    (call_script, "script_abort_quest", ":minister_quest", 0),
-   (try_end),
-   ]],
-   
-[anyone, "minister_replace_confirm",
-   [
-   ], "Very good. {s9} is your new minister. It has been an honor to serve you.", "close_window",
-   [
-   (str_store_troop_name, s9, "$g_player_minister"),
-   (try_begin),
-    (main_party_has_troop, "$g_player_minister"),
-    (party_remove_members, "p_main_party", "$g_player_minister", 1), 
-   (try_end),
-   
-   ]],
-   
+####### NEW v3.1-KOMKE START-disabled
+# [anyone, "minister_replace", [], "Very good. Whom will you appoint in my stead?", "minister_replace_select", []],
+# 
+# [anyone|plyr|repeat_for_troops, "minister_replace_select",
+#    [
+#    (store_repeat_object, ":troop_no"),
+#    (is_between, ":troop_no", companions_begin, companions_end),
+#    (main_party_has_troop, ":troop_no"),
+#    (troop_slot_eq, ":troop_no", slot_troop_prisoner_of_party, -1),
+#    (str_store_troop_name, s4, ":troop_no"),
+#    ], "{s4}", "minister_replace_confirm",
+#    [
+#    (store_repeat_object, "$g_player_minister"),
+#    ]],
+# 
+#    [anyone|plyr, "minister_replace_select",
+#    [
+#    (troop_get_slot, ":spouse", "trp_player", slot_troop_spouse),
+#    (gt, ":spouse", 0),
+#    (troop_get_type, ":is_female", ":spouse"),
+#    (neg|troop_slot_eq, ":spouse", slot_troop_occupation, slto_kingdom_hero),
+#    (eq, ":is_female", 1),
+#    (str_store_troop_name, s4, ":spouse"),
+#    (neq, ":spouse", "$g_talk_troop"),
+# 
+#    ], "My wife, {s4}.", "minister_replace_confirm", #husband disabled, as he's an active lord
+#    [
+#    (troop_get_slot, "$g_player_minister", "trp_player", slot_troop_spouse),
+#    ]],
+# 
+# [anyone|plyr, "minister_replace_select", [], "Actually, hold off on that.", "minister_pretalk", []],
+# 
+# 
+# 
+# 
+# [anyone, "minister_replace_confirm",
+#    [
+#    (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_player_companion),
+#    ], "Very good. {s9} is your new minister. I shall make ready to rejoin you.", "close_window",
+#    [
+#    (str_store_troop_name, s9, "$g_player_minister"),
+#    (party_add_members, "p_main_party", "$g_talk_troop", 1), 
+#    (assign, "$g_leave_encounter", 1),
+#    (try_begin),
+#       (main_party_has_troop, "$g_player_minister"),
+#       (party_remove_members, "p_main_party", "$g_player_minister", 1), 
+#    (try_end),
+# 
+#    (try_for_range, ":minister_quest", all_quests_begin, all_quests_end),
+#     (quest_slot_eq, ":minister_quest", slot_quest_giver_troop, "$g_talk_troop"),
+#     (call_script, "script_abort_quest", ":minister_quest", 0),
+#    (try_end),
+#    ]],
+# 
+# [anyone, "minister_replace_confirm",
+#    [
+#    ], "Very good. {s9} is your new minister. It has been an honor to serve you.", "close_window",
+#    [
+#    (str_store_troop_name, s9, "$g_player_minister"),
+#    (try_begin),
+#     (main_party_has_troop, "$g_player_minister"),
+#     (party_remove_members, "p_main_party", "$g_player_minister", 1), 
+#    (try_end),
+# 
+#    ]],
+####### NEW v3.1-KOMKE END- 
 
 
    [anyone, "minister_grant_fief",
@@ -24014,7 +24020,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 ####### NEW v3.0-KOMKE START-
 
-[anyone|plyr, "lord_talk", [(eq, 1, 1)], "I want to change your culture and equipment.", "lord_change_culture_equipment",[]],##KOMKE set to false when releasing
+[anyone|plyr, "lord_talk", [(eq, 1, 0)], "I want to change your culture and equipment.", "lord_change_culture_equipment",[]],##KOMKE set to false when releasing
 [anyone, "lord_change_culture_equipment",[], "Which culture?", "lord_change_culture_equipment_choose_culture",[]],
 
 [anyone|plyr|repeat_for_factions, "lord_change_culture_equipment_choose_culture",
@@ -24029,7 +24035,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "lord_change_culture_equipment_confirm",[], "Do you want me to change my culture and equipment?", "lord_change_culture_equipment_confirm_2",[]],
 
 [anyone|plyr, "lord_change_culture_equipment_confirm_2",
-    [], "Yes do it.", "lord_talk",
+    # [], "Yes do it.", "lord_talk",
+    [], "Yes do it.", "close_window",
     [
     # ((display_log_message, "@calling script", 0xffffff),##Debugging)
     (troop_set_slot, "$g_talk_troop", slot_troop_cur_culture,  "$temp"),
@@ -27370,12 +27377,14 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 "Yes, my husband?", "spouse_talk",[
  ]],
 
-[anyone|plyr, "spouse_talk",
-   [
-   (eq, "$g_player_minister", "$g_talk_troop"),
-   ],
-"As you are my chief minister, I wish to speak to about affairs of state", "minister_issues",[
- ]],
+####### NEW v3.1-KOMKE START-disabled
+# [anyone|plyr, "spouse_talk",
+#    [
+#    (eq, "$g_player_minister", "$g_talk_troop"),
+#    ],
+# "As you are my chief minister, I wish to speak to about affairs of state", "minister_issues",[
+#  ]],
+ ####### NEW v3.1-KOMKE END- 
 
 [anyone|plyr, "spouse_talk", [
     (check_quest_active, "qst_offer_gift"),
@@ -30447,7 +30456,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
                     ],
 "Your orders, {Lord/Lady}?", "castle_guard_players",[]],
 [anyone|plyr, "castle_guard_players", [],
-"Open the door. I'll go in.", "close_window",[(call_script, "script_enter_court", "$current_town")]],
+# "Open the door. I'll go in.", "close_window",[(call_script, "script_enter_court", "$current_town")]],####### NEW v3.1-KOMKE
+"Open the door. I'll go in.", "close_window",[(jump_to_menu, "mnu_castle_entered")]],####### NEW v3.1-KOMKE
 [anyone|plyr, "castle_guard_players", [],
 "Never mind.", "close_window",[]],
 
@@ -30471,26 +30481,29 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 "Never mind.", "close_window",[]],
 
    [anyone, "castle_guard_intro_2", [
-    (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),
-    (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$current_town"),
+    # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),####### NEW v3.1-KOMKE
+    # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$current_town"),####### NEW v3.1-KOMKE
 
-    (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),
-        (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),
-
-    (neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),
+    # (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
+    (neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
+        # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),####### NEW v3.1-KOMKE
+    # (this_or_next|neg|troop_slot_ge, "trp_player", slot_troop_renown,125),####### NEW v3.1-KOMKE
+    (neg|troop_slot_ge, "trp_player", slot_troop_renown,200),####### NEW v3.1-KOMKE
     (neq, "$g_player_eligible_feast_center_no", "$current_town"),
 
-    (neg|check_quest_active, "qst_wed_betrothed"),
-    (neg|check_quest_active, "qst_wed_betrothed_female"),
+    # (neg|check_quest_active, "qst_wed_betrothed"),####### NEW v3.1-KOMKE
+    # (neg|check_quest_active, "qst_wed_betrothed_female"),####### NEW v3.1-KOMKE
 
-    (neg|troop_slot_ge, "trp_player", slot_troop_spouse, 1), #Married players always make the cut
+    # (neg|troop_slot_ge, "trp_player", slot_troop_spouse, 1), #Married players always make the cut####### NEW v3.1-KOMKE
 
-   ], "I'm afraid there is a feast in progress, and you are not invited.", "close_window", []],
+   # ], "I'm afraid there is a feast in progress, and you are not invited.", "close_window", []],####### NEW v3.1-KOMKE
+   ], "I'm afraid your status is too low to enter the castle, but I'm sure we can find accomodation for you in the dungeon if you insist.", "close_window", []],
 
 
    [anyone, "castle_guard_intro_2", [], "You can go in after leaving your weapons with me. No one is allowed to carry arms into the lord's hall.", "castle_guard_intro_3", []],
 
-[anyone|plyr, "castle_guard_intro_3", [], "Here, take my arms. I'll go in.", "close_window", [(call_script, "script_enter_court", "$current_town")]],
+# [anyone|plyr, "castle_guard_intro_3", [], "Here, take my arms. I'll go in.", "close_window", [(call_script, "script_enter_court", "$current_town")]],####### NEW v3.1-KOMKE
+[anyone|plyr, "castle_guard_intro_3", [], "Here, take my arms. I'll go in.", "close_window", [(jump_to_menu, "mnu_castle_entered")]],####### NEW v3.1-KOMKE
 
 [anyone|plyr, "castle_guard_intro_3", [], "No, I give my arms to no one.", "castle_guard_intro_2b", []],
 [anyone, "castle_guard_intro_2b", [], "Then you can't go in.", "close_window", []],
@@ -37843,15 +37856,15 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ## CC
 [anyone|plyr, "arena_master_melee_talk", [], "Good. That's what I am going to do.", "close_window", 
 [
-  # (store_random_in_range, ":random_entry", 0, 39),
-  # (assign, "$g_player_entry_point", ":random_entry"),
-  (assign, "$g_player_entry_point", 51),
+  (store_random_in_range, ":random_entry", 0, 39),
+  (assign, "$g_player_entry_point", ":random_entry"),
+# (assign, "$g_player_entry_point", 51),
 # (try_end),
   (assign, "$last_training_fight_town", "$current_town"),
   (store_current_hours, "$training_fight_time"),
   (assign, "$g_mt_mode", abm_training),
-  (party_get_slot, ":scene", "$current_town",slot_town_arena), ### NEW v2.1 - normal battle
-  # (assign, ":scene", "scn_random_scene"),
+  # (party_get_slot, ":scene", "$current_town",slot_town_arena), ### NEW v2.1 - normal battle
+  (assign, ":scene", "scn_random_scene"),
   (modify_visitors_at_site, ":scene"),
   (reset_visitors),
   (set_visitor, "$g_player_entry_point", "trp_player"),
@@ -39366,12 +39379,39 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
                     (party_slot_eq, "$current_town",slot_town_lord, "trp_player"),
                      ], "Your orders, {my lord/my lady}?", "hall_guard_talk",[]],
 
+####### NEW v3.1-KOMKE START-
 [anyone, "start", [(eq, "$talk_context", tc_court_talk),
                     (this_or_next|is_between, "$g_talk_troop",regular_troops_begin, regular_troops_end),
                     (is_between, "$g_talk_troop", "trp_cstm_custom_troop_1_tier_0_0_0", "trp_cstm_custom_troops_end"),
                     (is_between, "$g_encountered_party_faction",kingdoms_begin, kingdoms_end),
-                     ], "We are not supposed to talk while on guard, {sir/madam}.", "close_window",[]],
-
+                     # ], "We are not supposed to talk while on guard, {sir/madam}.", "close_window",[]],
+                     ], "We are not supposed to talk while on guard, {sir/madam}.", "ask_question_guard",[]],
+[anyone|plyr, "ask_question_guard", [], "I want to know the location of someone.", "ask_question_guard_2",[]],
+[anyone|plyr|repeat_for_troops, "ask_question_guard_2", 
+                    [
+                    (store_repeat_object, ":troop_no"),
+                    (is_between, ":troop_no", active_npcs_begin, kingdom_ladies_end),
+                    (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ## he's alive/active
+                    (neq, ":troop_no", "trp_player"),
+                    (this_or_next|troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+                    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_lady),
+                    (store_troop_faction, ":hero_faction", ":troop_no"),
+                    (store_faction_of_party, ":center_faction", "$current_town"),
+                    (eq, ":hero_faction", ":center_faction"),
+                    (str_store_troop_name, s1, ":troop_no"),
+                    (try_begin),
+                        (faction_slot_eq, "$players_kingdom", slot_faction_marshall, ":troop_no"),
+                        (str_store_string, s1, "@Our marshal, {s1}"),
+                    (try_end),
+                    ],
+"{s1}", "ask_question_guard_3",[(store_repeat_object, "$hero_requested_to_learn_location")]],
+[anyone, "ask_question_guard_3",
+   [
+   (call_script, "script_update_troop_location_notes", "$hero_requested_to_learn_location", 1),
+   (call_script, "script_get_information_about_troops_position", "$hero_requested_to_learn_location", 0),
+   ],
+"{s1}", "close_window",[]],
+####### NEW v3.1-KOMKE END- 
 [anyone|plyr, "hall_guard_talk", [], "Stay on duty and let me know if anyone comes to see me.", "hall_guard_duty",[]],
 [anyone, "hall_guard_duty", [], "Yes, {my lord/my lady}. As you wish.", "close_window",[]],
 
