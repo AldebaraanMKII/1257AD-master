@@ -496,7 +496,7 @@ def modmerge_mission_templates(orig_mission_templates):
 # 2) Example of adding trigger groups to several  mt
     for n in range(len(orig_mission_templates)):
       mt_name = orig_mission_templates[n][0]
-      if (mt_name=="back_alley_revolt" or mt_name=="lead_charge" or mt_name=="village_attack_bandits" or mt_name=="village_raid" or mt_name=="quick_battle_battle" or mt_name=="quick_battle_siege" or mt_name=="castle_attack_walls_belfry" or mt_name=="castle_attack_walls_ladder" or mt_name=="castle_attack_walls_defenders_sally" or mt_name=="bandits_at_night" or mt_name=="bandit_lair" or mt_name=="town_default"): # search for the exact name of the mt
+      if (mt_name=="back_alley_revolt" or mt_name=="lead_charge" or mt_name=="village_attack_bandits" or mt_name=="village_raid" or mt_name=="quick_battle_battle" or mt_name=="quick_battle_siege" or mt_name=="castle_attack_walls_belfry" or mt_name=="castle_attack_walls_ladder" or mt_name=="castle_attack_walls_defenders_sally" or mt_name=="bandits_at_night" or mt_name=="bandit_lair" or mt_name=="town_default" or mt_name=="town_center"): # search for the exact name of the mt
         orig_mission_templates[n][5].extend(dismemberment_triggers)
 
 def modmerge(var_set):

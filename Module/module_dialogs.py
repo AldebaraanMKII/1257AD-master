@@ -14480,7 +14480,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (store_repeat_object, ":center_no"),
    (is_between, ":center_no", centers_begin, centers_end),
    (store_faction_of_party, ":center_faction", ":center_no"),
-   (eq, ":center_faction", "fac_player_supporters_faction"),
+   (eq, ":center_faction", "$players_kingdom"),  ######### NEW v3.0
 ##diplomacy begin
    (neg|party_slot_eq, ":center_no", slot_village_infested_by_bandits, "trp_peasant_woman"),
     ##diplomacy end
@@ -14490,7 +14490,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
         (ge, ":town_lord", active_npcs_begin),
         (troop_slot_eq, ":town_lord", slot_troop_is_alive, 1),  ## he's alive/active
         (store_faction_of_troop, ":town_lord_faction", ":town_lord"),
-        (neq, ":town_lord_faction", "fac_player_supporters_faction"),
+        (neq, ":town_lord_faction", "$players_kingdom"),
         (assign, ":town_lord", -1),
     (try_end),
     (le, ":town_lord", 0),
@@ -14526,7 +14526,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
         (troop_slot_eq, ":active_npc", slot_troop_is_alive, 1),  ## he's alive/active
         (store_faction_of_troop, ":active_npc_faction", ":active_npc"),
-        (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+        (eq, ":active_npc_faction", "$players_kingdom"),  ######### NEW v3.0
         (troop_get_slot, ":selected_npc", ":active_npc", slot_troop_stance_on_faction_issue),
         (ge, ":selected_npc", 0),
     
@@ -14558,7 +14558,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
    (is_between, ":troop_no", active_npcs_begin, active_npcs_end),
    (store_faction_of_troop, ":troop_faction", ":troop_no"),
-   (eq, ":troop_faction", "fac_player_supporters_faction"),
+   (eq, ":troop_faction", "$players_kingdom"),  ######### NEW v3.0
    (str_store_troop_name, s1, ":troop_no"),
    
    (call_script, "script_print_troop_owned_centers_in_numbers_to_s0", ":troop_no"),
@@ -31025,8 +31025,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (faction_get_slot, ":faction_leader", "$players_kingdom", slot_faction_leader),
    (str_store_troop_name, s7, ":faction_leader"),
    (try_begin),
-      (eq, "$players_kingdom", "fac_player_supporters_faction"),
-      (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+      # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+      (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),   ###### NEW v3.0
       (str_store_string, s9, "str_you_may_be_aware_my_lord_of_the_quarrel_between_s4_and_s5_which_is_damaging_the_unity_of_this_realm_and_sapping_your_authority_if_you_could_persuade_the_lords_to_reconcile_it_would_boost_your_own_standing_however_in_taking_this_on_you_run_the_risk_of_one_the_lords_deciding_that_you_have_taken_the_rivals_side"),
    (else_try),
       (str_store_string, s9, "str_you_may_be_aware_my_lord_of_the_quarrel_between_s4_and_s5_which_is_damaging_the_unity_of_this_realm_and_sapping_your_authority_if_you_could_persuade_the_lords_to_reconcile_i_imagine_that_s7_would_be_most_pleased_however_in_taking_this_on_you_run_the_risk_of_one_the_lords_deciding_that_you_have_taken_the_rivals_side"),
