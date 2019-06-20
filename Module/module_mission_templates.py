@@ -653,7 +653,8 @@ mission_templates = [
        (display_message, "@You got keys of dungeon."),
      (try_end),
    ]),
-  ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers, fief_civilian_triggers),
+  ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers + fief_civilian_triggers
+  ),
 
   ("village_center",0,-1,
    "village center",
