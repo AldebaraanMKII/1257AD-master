@@ -633,6 +633,38 @@ slot_center_has_fortifications_2 = 252
 
 slot_center_tavern_troop = 253  ######## NEW v3.0
 
+######## NEW v3.1 - moved those slots to here and changed their ID. They were causing script errors with town_merc_respawn script
+#manor - party slots
+village_slot_manor = 255 #village saves its bound manor
+manor_slot_unique = 256 #check if the manor is players development one
+#mongol camps - party slots
+slot_mongol_camp = 257 #village saves its mongolian camp id
+slot_mongol_camp_status = manor_slot_unique # mongolian camp status
+slot_mongol_town = village_slot_manor #for the camp, saves its bound town
+#feudal recruitment system
+slot_feudal_lances = slot_center_volunteer_troop_amount #lances
+#slot_garrison_cap = 700 #seems free. 0 - for very low.
+slot_garrison_control = 258 #seems free. 0 - for very low.
+slot_lances_cap = 259 #for future special buildings, relation bonuses
+slot_regional_mercs = 260
+slot_regional_mercs_number = 261
+slot_regional_party_template = 262
+slot_spec_mercs1 = 263
+slot_spec_mercs1_number = 264
+slot_spec_mercs1_party_template = 265
+slot_spec_mercs2 = 266
+slot_spec_mercs2_number = 267
+slot_spec_mercs2_party_template = 268
+slot_regional_mercs_number_npc = 269
+slot_spec_mercs1_number_npc = 270
+slot_spec_mercs2_number_npc = 271
+slot_number_commoner = 272
+slot_number_nobles = 273
+slot_number_troops_pending = 274
+slot_recruitment_type = 275
+slot_player_crusade_fief = 276
+
+
 slot_town_trade_good_prices_begin             = 280
 
 slot_center_last_reconnoitered_by_faction_time                 = 350
@@ -2382,35 +2414,6 @@ slot_agent_banner = 107
 #team slots:
 team_slot_direction = 200 #rotate to which direction sets
 #party slots:
-#manor - party slots
-village_slot_manor = 299 #village saves its bound manor
-manor_slot_unique = 301 #check if the manor is players development one
-#mongol camps - party slots
-slot_mongol_camp = 298 #village saves its mongolian camp id
-slot_mongol_camp_status = manor_slot_unique # mongolian camp status
-slot_mongol_town = village_slot_manor #for the camp, saves its bound town
-#feudal recruitment system
-slot_feudal_lances = slot_center_volunteer_troop_amount #lances
-#slot_garrison_cap = 700 #seems free. 0 - for very low.
-slot_garrison_control = 700 #seems free. 0 - for very low.
-slot_lances_cap = 701 #for future special buildings, relation bonuses
-slot_regional_mercs = 702
-slot_regional_mercs_number = 703
-slot_regional_party_template = 704
-slot_spec_mercs1 = 705
-slot_spec_mercs1_number = 706
-slot_spec_mercs1_party_template = 707
-slot_spec_mercs2 = 708
-slot_spec_mercs2_number = 709
-slot_spec_mercs2_party_template = 710
-slot_regional_mercs_number_npc = 711
-slot_spec_mercs1_number_npc = 712
-slot_spec_mercs2_number_npc = 713
-slot_number_commoner = 714
-slot_number_nobles = 715
-slot_number_troops_pending = 716
-slot_recruitment_type = 717
-slot_player_crusade_fief = 750
 
 
 ##recruitment types
