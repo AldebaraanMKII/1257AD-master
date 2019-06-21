@@ -6834,14 +6834,14 @@ game_menus = [ #
 ####### NEW v2.9-KOMKE START-    
      ("camp_modding",[(eq, 1, 1), is_edit_mode_enabled],"Go to the modding menu.",## menu only available in edit mode when releasing new version set this to false so it is disabled
        [
-       (assign, "$g_lord_creation_rate", 0), #### lord creation OFF
-       (assign, "$g_lord_death_chance_battle", 0),#### lord death OFF
-       (assign, "$g_lord_death_chance_battle_king", 0),
-       (assign, "$g_lord_death_chance_assassination", 0), 
-       (assign, "$g_lord_death_chance_assassination_king", 0),   
-       (assign, "$g_lord_death_chance_execution_base", 0),
-       (assign, "$g_lord_death_chance_execution_king_variation", 0),
-       (assign, "$g_lord_death_chance_execution_relation_divider", 3),
+       # (assign, "$g_lord_creation_rate", 0), #### lord creation OFF
+       # (assign, "$g_lord_death_chance_battle", 0),#### lord death OFF
+       # (assign, "$g_lord_death_chance_battle_king", 0),
+       # (assign, "$g_lord_death_chance_assassination", 0), 
+       # (assign, "$g_lord_death_chance_assassination_king", 0),   
+       # (assign, "$g_lord_death_chance_execution_base", 0),
+       # (assign, "$g_lord_death_chance_execution_king_variation", 0),
+       # (assign, "$g_lord_death_chance_execution_relation_divider", 3),
        (jump_to_menu, "mnu_camp_modding"),]
      ),       
 ####### NEW v2.9-KOMKE END-     
@@ -18548,8 +18548,9 @@ game_menus = [ #
 
 
 
-   ("notification_player_faction_active",0,
-    "You now possess land in your name, without being tied to any kingdom. This makes you a monarch in your own right, with your court temporarily located at {s12}. However, the other kings in Europe will at first consider you a threat, for if any upstart warlord can grab a throne, then their own legitimacy is called into question.^^You may find it desirable at this time to pledge yourself to an existing kingdom. If you want to continue as a sovereign monarch, then your first priority should be to establish an independent right to rule. You can establish your right to rule through several means -- marrying into a high-born family, recruiting new lords, governing your lands, treating with other kings, or dispatching your companions on missions.^^At any rate, your first step should be to appoint a chief minister from among your companions, to handle affairs of state. Different companions have different capabilities.^You may appoint new ministers from time to time. You may also change the location of your court, by speaking to the minister.  Don't forget to change your kingdom's religion through your minister.",
+   ("notification_player_faction_active",0,####### NEW v3.1-KOMKE removed reference to changing minister
+    # "You now possess land in your name, without being tied to any kingdom. This makes you a monarch in your own right, with your court temporarily located at {s12}. However, the other kings in Europe will at first consider you a threat, for if any upstart warlord can grab a throne, then their own legitimacy is called into question.^^You may find it desirable at this time to pledge yourself to an existing kingdom. If you want to continue as a sovereign monarch, then your first priority should be to establish an independent right to rule. You can establish your right to rule through several means -- marrying into a high-born family, recruiting new lords, governing your lands, treating with other kings, or dispatching your companions on missions.^^At any rate, your first step should be to appoint a chief minister from among your companions, to handle affairs of state. Different companions have different capabilities.^You may appoint new ministers from time to time. You may also change the location of your court, by speaking to the minister.  Don't forget to change your kingdom's religion through your minister.",
+    "You now possess land in your name, without being tied to any kingdom. This makes you a monarch in your own right, with your court temporarily located at {s12}. However, the other kings in Europe will at first consider you a threat, for if any upstart warlord can grab a throne, then their own legitimacy is called into question.^^You may find it desirable at this time to pledge yourself to an existing kingdom. If you want to continue as a sovereign monarch, then your first priority should be to establish an independent right to rule. You can establish your right to rule through several means -- marrying into a high-born family, recruiting new lords, governing your lands, treating with other kings, or dispatching your companions on missions.^^You may also change the location of your court when you own more than one castle, and you may change your kingdom's culture and religion through your minister.",
     "none",
     [
       (set_fixed_point_multiplier, 100),
@@ -33294,8 +33295,8 @@ game_menus = [ #
     [
       ("camp_mod_1",
 		[],"Increase player's renown.",
-       [(str_store_string, s1, "@Player renown is increased by 25. "),
-        (call_script, "script_change_troop_renown", "trp_player" ,25),
+       [(str_store_string, s1, "@Player renown is increased by 1000. "),
+        (call_script, "script_change_troop_renown", "trp_player" ,1000),
         # (jump_to_menu, "mnu_camp_modding"),
         ]
        ),
@@ -33473,11 +33474,17 @@ game_menus = [ #
 		),
         
 		("camp_mod_6",
-			[],
-		"Give me 1000 experience",
+			[(assign, "$temp", fac_culture_finnish)],
+		# "Give me 1000 experience",
+        "Show me player kingdom slot_faction_reinforcements_a",
         [
-			(add_xp_to_troop, 1000, "trp_player"),
-			(display_message, "@+1000 EXP."),
+			# (add_xp_to_troop, 1000, "trp_player"),
+			# (display_message, "@+1000 EXP."),
+            
+            (faction_get_slot, ":reinforcements_a", "fac_player_supporters_faction", slot_faction_reinforcements_a),
+            (assign, reg50, ":reinforcements_a"),
+            (display_log_message, "@{reg50}", 0xffffff),
+            
             # (try_for_range, ":center_no", centers_begin, centers_end),
             #     (store_distance_to_party_from_party, ":party_distance", "p_main_party", ":center_no"),
             #     (lt, ":party_distance", 1),## if center is within min distance
@@ -34032,7 +34039,7 @@ game_menus = [ #
           (assign, ":guard_troop", "trp_euro_spearman_3"),
         (try_end),
         (set_visitor, 6, ":guard_troop"),
-        # (set_visitor, 7, ":guard_troop"),
+        (set_visitor, 7, ":guard_troop"),
         (assign, ":cur_pos", 16),
 
         (try_begin),
