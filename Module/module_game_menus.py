@@ -13814,8 +13814,8 @@ game_menus = [ #
     "none",
     [
        (set_background_mesh, "mesh_pic_villageriot"),
-       (call_script, "script_party_count_members_with_full_health", "p_main_party"),
-       (assign, ":player_party_size", reg0),
+       # (call_script, "script_party_count_members_with_full_health", "p_main_party"),
+       # (assign, ":player_party_size", reg0),
        (call_script, "script_party_count_members_with_full_health", "$current_town"),
        (assign, ":villagers_party_size", reg0),
 
@@ -14522,9 +14522,9 @@ game_menus = [ #
              (call_script, "script_initialize_tavern_variables"),
 
              (store_random_in_range, ":randomize_attacker_placement", 0, 4),
-             (party_get_slot, ":town_scene", "$current_town", slot_town_center),
+             # (party_get_slot, ":town_scene", "$current_town", slot_town_center),
              (assign, "$g_mt_mode", tcm_default),
-             (store_faction_of_party, ":town_faction", "$current_town"),
+             # (store_faction_of_party, ":town_faction", "$current_town"),
 
              (assign, "$g_init_fight", 0),
              (modify_visitors_at_site, ":cur_scene"),
@@ -15342,7 +15342,7 @@ game_menus = [ #
         (try_begin),
           (eq, "$use_feudal_lance", 1),
           (assign, ":continue", 1),
-          (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
+          # (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
           #(eq, ":town_lord", "trp_player"),
           (assign, ":continue", 0),
         (try_end),
@@ -21637,7 +21637,7 @@ game_menus = [ #
       (try_end),
     
       (str_store_faction_name, s21, "$g_encountered_party_faction"),
-      (troop_get_type, ":is_female", "trp_player"),
+      # (troop_get_type, ":is_female", "trp_player"),
       (party_get_slot, ":bound_center", "$g_encountered_party",slot_village_bound_center),
       (str_store_string, s9, "@You come across a small settlement. It belongs to "),
       (try_begin),
@@ -26035,9 +26035,10 @@ game_menus = [ #
         (party_get_slot, ":town", "$g_encountered_party", slot_mongol_town),
         (party_get_slot, ":town_lord", ":town", slot_town_lord),
         (store_faction_of_party, ":faction", "$g_encountered_party"),
-        # (call_script, "script_change_player_relation_with_faction", ":faction", -5),
-        # (call_script, "script_change_player_relation_with_troop", ":town_lord", -5),
-
+		######### NEW v3.1 - i don't know why this was disabled
+        (call_script, "script_change_player_relation_with_faction", ":faction", -5),
+        (call_script, "script_change_player_relation_with_troop", ":town_lord", -2),
+        ##################
         (jump_to_menu, "mnu_simple_encounter"),
        #(change_screen_mission),
       ]),

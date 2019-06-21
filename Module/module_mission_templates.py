@@ -1228,7 +1228,7 @@ mission_templates = [
       common_battle_inventory,
       common_battle_order_panel,
       common_battle_order_panel_tick,
-    ] + hold_trigger + charge_trigger + lance_usage  + enhanced_common_battle_triggers  + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers,
+    ] + hold_trigger + charge_trigger + lance_usage  + enhanced_common_battle_triggers  + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers + auxiliary_player,
   ),  
   
   
@@ -13469,7 +13469,7 @@ mission_templates = [
 
          (finish_mission),
          ]),
-      ] + must_1257_triggers + sp_shield_bash_triggers),
+      ] + must_1257_triggers + sp_shield_bash_triggers + auxiliary_player),
 
   ("alley_fight", mtf_battle_mode,charge,
    "Alley fight",
