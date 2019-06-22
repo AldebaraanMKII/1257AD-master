@@ -11546,7 +11546,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
     (le, "$g_player_chancellor", 0),
     (assign, ":has_fief", 0),
-    (try_for_range, ":center_no", towns_begin, towns_end),
+    # (try_for_range, ":center_no", towns_begin, towns_end),####### NEW v3.1-KOMKE if player king but only has castle no chancellor
+    (try_for_range, ":center_no", walled_centers_begin, walled_centers_end, ),####### NEW v3.1-KOMKE now chancellor available with castle
       (party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
       (assign, ":has_fief", 1),
     (try_end),
@@ -24020,7 +24021,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 ####### NEW v3.0-KOMKE START-
 
-[anyone|plyr, "lord_talk", [(eq, 1, 0)], "I want to change your culture and equipment.", "lord_change_culture_equipment",[]],##KOMKE set to false when releasing
+[anyone|plyr, "lord_talk", [(eq, 1, 1)], "I want to change your culture and equipment.", "lord_change_culture_equipment",[]],##KOMKE set to false when releasing
 [anyone, "lord_change_culture_equipment",[], "Which culture?", "lord_change_culture_equipment_choose_culture",[]],
 
 [anyone|plyr|repeat_for_factions, "lord_change_culture_equipment_choose_culture",
@@ -39373,12 +39374,13 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
                      ], "Mind your manners within the walls and we'll have no trouble.", "close_window",[]],
 
 ####### NEW v3.1-KOMKE START-
-# [anyone, "start", [(eq, "$talk_context", tc_court_talk),
-#                     (this_or_next|is_between, "$g_talk_troop",regular_troops_begin, regular_troops_end),
-#                     (is_between, "$g_talk_troop", "trp_cstm_custom_troop_1_tier_0_0_0", "trp_cstm_custom_troops_end"),
-#                     (is_between, "$g_encountered_party_faction",kingdoms_begin, kingdoms_end),
-#                     (party_slot_eq, "$current_town",slot_town_lord, "trp_player"),
-#                      ], "Your orders, {my lord/my lady}?", "hall_guard_talk",[]],
+[anyone, "start", [(eq, "$talk_context", tc_court_talk),
+                    (this_or_next|is_between, "$g_talk_troop",regular_troops_begin, regular_troops_end),
+                    (is_between, "$g_talk_troop", "trp_cstm_custom_troop_1_tier_0_0_0", "trp_cstm_custom_troops_end"),
+                    (is_between, "$g_encountered_party_faction",kingdoms_begin, kingdoms_end),
+                    (party_slot_eq, "$current_town",slot_town_lord, "trp_player"),
+                     # ], "Your orders, {my lord/my lady}?", "hall_guard_talk",[]],
+                     ], "Your orders, {my lord/my lady}?", "ask_question_guard",[]],
 
 [anyone, "start", [(eq, "$talk_context", tc_court_talk),
                     (this_or_next|is_between, "$g_talk_troop",regular_troops_begin, regular_troops_end),
@@ -39389,6 +39391,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "ask_question_guard", [], "I want to know the location of someone.", "ask_question_guard_2",[]],
 [anyone|plyr|repeat_for_troops, "ask_question_guard_2", 
                     [
+                    (faction_get_slot, ":cur_faction_lord_count", "$g_encountered_party_faction", slot_faction_lord_count), 
+                    (ge, ":cur_faction_lord_count", 1) ,##KOMKE added this to avoid dialogue blocked if there isn't a single lord
                     (store_repeat_object, ":troop_no"),
                     (is_between, ":troop_no", active_npcs_begin, kingdom_ladies_end),
                     (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ## he's alive/active
@@ -39405,22 +39409,24 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
                     (try_end),
                     ],
 "{s1}", "ask_question_guard_3",[(store_repeat_object, "$hero_requested_to_learn_location")]],
+[anyone|plyr, "ask_question_guard_2", [], "Never mind.", "close_window",[]],
 [anyone, "ask_question_guard_3",
    [
    (call_script, "script_update_troop_location_notes", "$hero_requested_to_learn_location", 1),
    (call_script, "script_get_information_about_troops_position", "$hero_requested_to_learn_location", 0),
    ],
 "{s1}", "close_window",[]],
-####### NEW v3.1-KOMKE END- 
-[anyone|plyr, "hall_guard_talk", [], "Stay on duty and let me know if anyone comes to see me.", "hall_guard_duty",[]],
-[anyone, "hall_guard_duty", [], "Yes, {my lord/my lady}. As you wish.", "close_window",[]],
 
-[anyone|plyr, "hall_guard_talk", [
-  (eq, 1, 0),
-  ], "I want you to arrest this man immediately!", "hall_guard_arrest",[]],
-[anyone, "hall_guard_arrest", [], "Who do you want arrested {sir/madam}?", "hall_guard_arrest_2",[]],
-[anyone|plyr, "hall_guard_arrest_2", [], "Ah, never mind my high spirits lads.", "close_window",[]],
-[anyone|plyr, "hall_guard_arrest_2", [], "Forget it. I will find another way to deal with this.", "close_window",[]],
+# [anyone|plyr, "hall_guard_talk", [], "Stay on duty and let me know if anyone comes to see me.", "hall_guard_duty",[]],
+# [anyone, "hall_guard_duty", [], "Yes, {my lord/my lady}. As you wish.", "close_window",[]],
+# 
+# [anyone|plyr, "hall_guard_talk", [
+#   (eq, 1, 0),
+#   ], "I want you to arrest this man immediately!", "hall_guard_arrest",[]],
+# [anyone, "hall_guard_arrest", [], "Who do you want arrested {sir/madam}?", "hall_guard_arrest_2",[]],
+# [anyone|plyr, "hall_guard_arrest_2", [], "Ah, never mind my high spirits lads.", "close_window",[]],
+# [anyone|plyr, "hall_guard_arrest_2", [], "Forget it. I will find another way to deal with this.", "close_window",[]],
+####### NEW v3.1-KOMKE END- 
 
 [anyone, "enemy_defeated", [], "Arggh! I hate this.", "close_window",[]],
 
