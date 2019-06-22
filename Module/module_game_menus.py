@@ -33365,6 +33365,12 @@ game_menus = [ #
            (troop_add_item, "trp_player","itm_smoked_fish",0),
            (troop_add_item, "trp_player","itm_grain",0),
            (troop_add_item, "trp_player","itm_apples",0),
+           (troop_add_item, "trp_player","itm_tools",0),
+           (troop_add_item, "trp_player","itm_tools",0),
+           (troop_add_item, "trp_player","itm_tools",0),
+           (troop_add_item, "trp_player","itm_velvet",0),
+           (troop_add_item, "trp_player","itm_velvet",0),
+           (troop_add_item, "trp_player","itm_wool_cloth",0),
 			(display_message, "@Items added to player inventory."),
         ]
        ),
@@ -34221,6 +34227,24 @@ game_menus = [ #
     ]
     ),
 ####### NEW v3.1-KOMKE END- 
+    
+####### NEW v3.1-KOMKE START-This will notify the player when a new lord is created in his kingdom
+   ("notification_lord_created",0,
+    "{s0} has joined your kingdom at {s1}.",
+    "none",
+    [
+      (str_store_troop_name_link, s0, "$g_notification_menu_var1"),## lord in parameter 1
+      (str_store_party_name_link, s1, "$g_notification_menu_var2"),## center in parameter 2
+      
+      ],
+    [
+      ("continue",[], "Continue",
+       [
+       (change_screen_return),
+        ]),
+     ]
+  ),
+####### NEW v3.1-KOMKE END-
     
 ######################################################
   
