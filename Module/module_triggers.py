@@ -1747,7 +1747,8 @@ triggers = [
    [],
    [
    (assign, ":has_fief", 0),
-    (try_for_range, ":center_no", towns_begin, towns_end),
+    # (try_for_range, ":center_no", towns_begin, towns_end),####### NEW v3.1-KOMKE
+    (try_for_range, ":center_no", walled_centers_begin, walled_centers_end),####### NEW v3.1-KOMKE chancellor available with castle
       (party_get_slot,  ":lord_troop_id", ":center_no", slot_town_lord),
       (eq, ":lord_troop_id", "trp_player"),
       (assign, ":has_fief", 1),

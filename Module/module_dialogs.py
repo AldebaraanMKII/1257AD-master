@@ -8079,6 +8079,7 @@ dialogs = [
  ##################### NEW v1.8
    [anyone|plyr, "dplmc_chancellor_talk",
    [
+   (gt, "$g_player_minister", 0),####### NEW v3.1-KOMKE if exists minister then player should be king
    (eq, "$g_landless_vassals_compensation", 0), ####### not active
    ],
 "I wish to pay compensation to my landless vassals.", "dplmc_chancellor_pay_compensation", []], 
