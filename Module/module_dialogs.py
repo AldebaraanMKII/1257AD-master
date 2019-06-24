@@ -39390,8 +39390,6 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "ask_question_guard", [], "I want to know the location of someone.", "ask_question_guard_2",[]],
 [anyone|plyr|repeat_for_troops, "ask_question_guard_2", 
                     [
-                    (faction_get_slot, ":cur_faction_lord_count", "$g_encountered_party_faction", slot_faction_lord_count), 
-                    (ge, ":cur_faction_lord_count", 1) ,##KOMKE added this to avoid dialogue blocked if there isn't a single lord
                     (store_repeat_object, ":troop_no"),
                     (is_between, ":troop_no", active_npcs_begin, kingdom_ladies_end),
                     (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ## he's alive/active
