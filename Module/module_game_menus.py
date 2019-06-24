@@ -18568,10 +18568,13 @@ game_menus = [ #
         (eq, ":walled_center_faction", "fac_player_supporters_faction"),
         (assign, "$g_player_court", ":walled_center"),
 
+####### NEW v3.1-KOMKE START- commented out this was setting player culture to no specified probably because the slot was not right
+##KOMKE now player culture is set to western at script activate_player_faction (see NEW v3.1-KOMKE)
     #rafi
-    (party_get_slot, ":old_faction", "$g_player_court", slot_center_original_faction),
-    (assign, "$g_player_culture", ":old_faction"),
+    # (party_get_slot, ":old_faction", "$g_player_court", slot_center_original_faction),
+    # (assign, "$g_player_culture", ":old_faction"),
     # end rafi
+####### NEW v3.1-KOMKE END-
 
         (try_begin),
             (troop_get_slot, ":spouse", "trp_player", slot_troop_spouse),
@@ -33481,16 +33484,16 @@ game_menus = [ #
 		),
         
 		("camp_mod_6",
-			[(assign, "$temp", fac_culture_finnish)],
-		# "Give me 1000 experience",
-        "Show me player kingdom slot_faction_reinforcements_a",
+			[],
+		"Give me 1000 experience",
+        # "Show me player kingdom slot_faction_reinforcements_a",
         [
-			# (add_xp_to_troop, 1000, "trp_player"),
-			# (display_message, "@+1000 EXP."),
+			(add_xp_to_troop, 1000, "trp_player"),
+			(display_message, "@+1000 EXP."),
             
-            (faction_get_slot, ":reinforcements_a", "fac_player_supporters_faction", slot_faction_reinforcements_a),
-            (assign, reg50, ":reinforcements_a"),
-            (display_log_message, "@{reg50}", 0xffffff),
+            # (faction_get_slot, ":reinforcements_a", "fac_player_supporters_faction", slot_faction_reinforcements_a),
+            # (assign, reg50, ":reinforcements_a"),
+            # (display_log_message, "@{reg50}", 0xffffff),
             
             # (try_for_range, ":center_no", centers_begin, centers_end),
             #     (store_distance_to_party_from_party, ":party_distance", "p_main_party", ":center_no"),
@@ -33601,6 +33604,9 @@ game_menus = [ #
                 (eq, ":player_kingdom_status", 4),
                 (str_store_string, s37, "@beginning rebellion"),
             (try_end),
+            (str_store_faction_name, s38, "$g_player_culture"),
+            (faction_get_slot, ":supporters_culture", "fac_player_supporters_faction", slot_faction_culture),
+            (str_store_faction_name, s39, ":supporters_culture"),
             (display_log_message, "@current hours = {reg29}", 0xffffff),
             (display_log_message, "@player role = {s29}", 0xffffff),
             (try_begin),
@@ -33609,6 +33615,7 @@ game_menus = [ #
                 (display_log_message, "@Leader of followers is {s31}", 0xffffff),
                 (display_log_message, "@Marshall of followers is {s32}", 0xffffff),
                 (display_log_message, "@Followers faction is {s33}", 0xffffff),
+                (display_log_message, "@Followers culture is {s39}", 0xffffff),
             (else_try),
                 (display_log_message, "@Player doesn't have any followers", 0xffffff),
             (try_end),
@@ -33618,6 +33625,7 @@ game_menus = [ #
                 (display_log_message, "@Leader of player's kingdom is {s35}", 0xffffff),
                 (display_log_message, "@Marshall of player's kingdom is {s36}", 0xffffff),
                 (display_log_message, "@Player's kingdom is {s37}", 0xffffff),
+                (display_log_message, "@Player's culture is {s38}", 0xffffff),
             (else_try),
                 (display_log_message, "@player doesn't belong to any kingdom", 0xffffff),
             (try_end),
@@ -34076,6 +34084,7 @@ game_menus = [ #
             (val_add, ":cur_pos", 1),
         (try_end),
         (try_begin),
+          (ge, ":center_lord", 0),## if there is no lord the next line gives a script error
           (troop_get_slot, ":center_lady", ":center_lord", slot_troop_spouse),
           (gt, ":center_lady", 0),##not including player
           (troop_slot_eq, ":center_lady", slot_troop_cur_center, ":center_no"),
@@ -34083,7 +34092,8 @@ game_menus = [ #
           (val_add, ":cur_pos", 1),
         (try_end),
         (try_begin),
-          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (party_get_slot, ":town_lord", ":center_no", slot_town_lord),#minister and advisors if center belongs to player
+          (eq, ":town_lord", "trp_player"),          
           (gt, "$g_player_minister", 0),
           (assign, "$g_player_minister", "trp_temporary_minister"),  #fix for wrong troops after update
           (set_visitor, ":cur_pos", "$g_player_minister"),
@@ -34091,7 +34101,8 @@ game_menus = [ #
         (try_end),
         ##diplomacy begin
         (try_begin),
-          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (party_get_slot, ":town_lord", ":center_no", slot_town_lord),#minister and advisors if center belongs to player
+          (eq, ":town_lord", "trp_player"),          
           (gt, "$g_player_chamberlain", 0),
           (assign, "$g_player_chamberlain", "trp_dplmc_chamberlain"),  #fix for wrong troops after update
           (set_visitor, ":cur_pos", "$g_player_chamberlain"),
@@ -34099,7 +34110,8 @@ game_menus = [ #
         (try_end),
         
         (try_begin),
-          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (party_get_slot, ":town_lord", ":center_no", slot_town_lord),#minister and advisors if center belongs to player
+          (eq, ":town_lord", "trp_player"),          
           (gt, "$g_player_constable", 0),
           (assign, "$g_player_constable", "trp_dplmc_constable"),  #fix for wrong troops after update
           (set_visitor, ":cur_pos", "$g_player_constable"),
@@ -34107,7 +34119,8 @@ game_menus = [ #
         (try_end),
         
         (try_begin),
-          (eq, "$g_player_court", ":center_no"),##minister and advisors only if center is player court
+          (party_get_slot, ":town_lord", ":center_no", slot_town_lord),#minister and advisors if center belongs to player
+          (eq, ":town_lord", "trp_player"),          
           (gt, "$g_player_chancellor", 0),
           (assign, "$g_player_chancellor", "trp_dplmc_chancellor"), #fix for wrong troops after update
           (set_visitor, ":cur_pos", "$g_player_chancellor"),
@@ -34162,6 +34175,7 @@ game_menus = [ #
         (party_get_num_companion_stacks, ":num_stacks", "p_temp_party"),
         (try_for_range, ":i_stack", 0, ":num_stacks"),
           (party_stack_get_troop_id, ":stack_troop", "p_temp_party", ":i_stack"),
+          (neq, ":stack_troop", "trp_player"),##not including player
           (lt, ":cur_pos", 32), # spawn up to entry point 32 - is it possible to add another 10 spots?
           (set_visitor, ":cur_pos", ":stack_troop"),
           (val_add, ":cur_pos", 1),
