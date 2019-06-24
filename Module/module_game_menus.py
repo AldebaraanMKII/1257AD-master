@@ -33971,7 +33971,7 @@ game_menus = [ #
        (call_script, "script_activate_player_faction", "trp_player"),
        ]
        ),
-	   
+	   #######################################
        ("debug_options_new_5",[], "Display belligerent drunk locations and troop types.",
 	   [
           (try_for_range, ":belligerent_drunk_tavern", towns_begin, towns_end),
@@ -33981,17 +33981,26 @@ game_menus = [ #
               (str_store_troop_name, s41, ":troop"),
               (display_message, "@{s40} has {s41} as belligerent drunk."),
           (try_end),
-		#######################################      
+		      
 	   ]),
+	   #######################################
+       ("debug_options_new_6",[], "Add 5 random lords as prisoners to the main party.",
+	   [
+          (try_for_range, ":unused", 0, 5),
+            (store_random_in_range, ":random_lord", lords_begin, lords_end),
+            (party_add_prisoners, "p_main_party", ":random_lord", 1),
+            (troop_set_slot, ":random_lord", slot_troop_is_alive, 1),
+          (try_end),
+	   ]),
+	   #######################################
 	   
        ("debug_options_new_99",[], "Go back.",
        [
          (jump_to_menu, "mnu_debug_options"),
        ]
        ),
-    ]
-  ),
-
+#######################################
+    ]),
 ######################################################
 
 ####### NEW v3.0-KOMKE START-This will notify the player when a fief improvement is finished

@@ -3107,7 +3107,7 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
       ## CC
-    ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers,
+    ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers + fief_civilian_triggers,
   ),
 
 
