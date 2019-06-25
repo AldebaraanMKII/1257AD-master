@@ -30258,7 +30258,13 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 [anyone|plyr, "prison_guard_players", [],
 "No, not now.", "close_window",[]],
 
-[anyone, "start", [(eq, "$talk_context", 0),(faction_slot_eq, "$g_encountered_party_faction", slot_faction_prison_guard_troop, "$g_talk_troop")],
+[anyone, "start", [
+(eq, "$talk_context", 0),
+(faction_slot_eq, "$g_encountered_party_faction", slot_faction_prison_guard_troop, "$g_talk_troop"),
+############ NEW v3.1 - due to the removal of prison guard troops from the mod files, if a guard had the same troop ID as the prison guard, he would have the same dialogue. This is a fix that uses a entry point check instead.
+(agent_get_entry_no, ":entry_no", "$g_talk_agent"),
+(eq, ":entry_no", 24),
+],
 "Yes? What do you want?", "prison_guard_talk",[]],
 
 [anyone|plyr, "prison_guard_talk", [],

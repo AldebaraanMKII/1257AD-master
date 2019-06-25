@@ -2,10 +2,101 @@
 
 Taleworlds: https://forums.taleworlds.com/index.php?topic=379851
 
-Current version: v2.9
+Current version: v3.1
 
 NOTE: Things with the "New game:" prefix requires a new game to take effect.
 
+
+
+
+v3.1 
+1). Decapitation now works on town centers/castle courtyards too.
+2). Fixed marshall being appointed even if the player was king. This only happened if the player took control of a existing faction.
+3). Fixed player inability to give a fief to one of his vassals if he became king of a existing faction.
+4). Fixed minister not recognizing the player as the king when talking about the resolve dispute quest.
+5). Fixed town fights not working in the streets and courtyard. Also removed it from taverns.
+6). Fixed plural CTT names not updating.
+7). Fixed town_merc_respawn script errors.
+8). Removed options to replace temporary minister with spouse or companions. Now the minister is the minister and that's it. No need to assign anyone else to do a better job.
+9). Fixed siege bug (besiegers attacking the center after conquering it).
+10). Added player auxiliary feature (take control of one of your troops after you get knocked out) to manor bandit attacks and bandit lairs.
+11). Fixed player kingdom parties spawning without troops and causing crashes when talking to them when the player faction didn't have a culture assigned to it.
+12). Fixed: when asking someone about the location of a created random lord the answer was always incorrect.
+13). Added notification when a random lord is created for the player faction.
+14). Added Azgad town fights to castles.
+15). Fixed town fights happening when the player was the owner of the fief.
+16). Fixed guards that had the same troop ID as the prison guard of that faction having the prison dialogue.
+17). 
+18). 
+19). 
+20). 
+21). 
+22). 
+23). 
+
+
+
+
+
+v3.0 (Requires a new game)
+1). Fixed player being able to take equipment from prisoners a unlimited amount of times.
+2). Fixed all issues related to the player appearing as a option when he wasn't supposed to. Also fixes dead lords appearing (e.g. Fixed player ability to indict himself for treason through the minister).
+3). Fixed bug where the faction culture always got selected when determining what troops would be available in NATIVE recruitment. Now the fief culture is selected (e.g. Hospitaller fiefs will give Hospitaller troops).
+4). Player can customize his troops through the camp menu if he has at least 1 fief and knows the player culture.
+5). Added new dialogue that makes walled fiefs surrender if they don't have food for more than a day during sieges.
+6). Due to several problems, NPC lords no longer change the culture of their fiefs to their own.
+7). Added a new menu to the new game menu where the player can choose NPC party spawn presets.
+8). Nerfed horse archers.
+9). Fixed broken patrol dialogue. The player can give new orders to the patrol if he is the lord of the town that they're patrolling or the king of the faction.
+10). Fixed player not being able to keep the loot he got from the field after a battle.
+11). Fixed Guelphs and Ghibellines (the parties that roamed around the map not the lords) having Iberian troops instead of Italian.
+12). Fixed the minister notification appearing even if the player started as adventurer.
+13). Fixed script errors that sometimes appeared when a siege was lifted.
+14). Lords will receive 4-6 troops of their culture per recruitment round in addition to the lances that they get from fiefs. This is done so that they can get some of their native troops even if their fiefs don't match their culture.
+15). The time it takes for parties to switch to their ship icons when they travel through the sea has increased to 3 seconds from 2. This shall increase world map performance.
+16). Increased the time it takes for the player to automatically (without the player doing anything) return to the fief menu while resting to 30 days from 7.
+17). Fixed Norway and Scotland provoking every other kingdom at the start of the game.
+18). Fixed player receiving king and marshall party size bonuses at adventurer start.
+19). Added new start: Mercenary captain.
+20). Fixed script errors that occurred when the player entered a keep with a lady that didn't have a protector.
+21). Fixed "village idiot" and a copy of the player spawning together with the player castle when that was built.
+22). Minor fixes to strings.
+23). Fixed CTT horse archers not switching to melee when needed.
+24). Fixed bugs related to the player conquering a fief while being a vassal.
+25). Fixed mercenary recruitment bug.
+26). Fixed companion that became lords not having a correct culture. Also fixed their reputation (personality type).
+27). Fixed player being able to hire men exceeding the limit of troops defined in the options in castles or towns.
+28). Fixed all quests involving a lord not being cancelled when that lord dies.
+29). Faction marshall will be displayed in his faction notes.
+30). Fixed welsh low tier troops not having boots.
+31). Fixed hire special mercenaries (cumans, kipchaks, etc) not working for garrisons of towns. 
+32). Removed almost all short versions of leg armors that were giving the invisible leg bug with certain body armors.
+33). Fixed mongol troop tree presentation bug.
+34). Removed plenty of unused troops. This shall improve performance.
+35). Reworked belligerent drunks:
+1. There will be up to 30 of them in the map
+2. They change locations/respawn every 48 hours
+3. They can spawn as troops/mercenaries from the fief they're in
+4. The amount of renown required to discourage them depends on their level
+5. Upon killing them player will receive one of their weapons/shields.
+
+36). Removed one on one tournaments.
+37). Added new troops to scottish troop tree. 
+38). Added town fights from Azgad A Story Of Calradia v1.0 mod. 
+1. The entire garrison will try to fight the player if he starts to kill people.
+2. Will work on taverns too alongside brawls.
+
+39). Reverted arena fights back to normal.
+40). Added dismemberment and decapitation to the mod.
+Decapitation requirements (default):
+  1. Weapon must not be a mace or staff
+  2. Attack direction must be right or left swing
+  3. Damage inflicted must be 30 or more
+  4. Victim must have -10 or less HP after being hit (so if he only had 10 HP left and you dealt 35 damage the script will run)
+  5. After all those variables are met the chance of decap is damage dealt divided by 2 (e.g. 50 damage = 25%)
+  6. Heroes cannot be decapitated.
+Those variables can be changed in the new menu under camp > enhanced options
+  
 
 
 
@@ -270,7 +361,7 @@ v2.2 (Requires a new game)
 12). It will take up to a week for a lord of a defeated faction to join another one.
 13). Fixed player monarch not receiving troops at game start.
 14). Fixed player monarch fiefs having the "foraging party" culture at game start.
-15). Fixed player unable to leave the culture selection dialogue once a culture had been selected.
+15). Fixed player inability to leave the culture selection dialogue once a culture had been selected.
 
 
 

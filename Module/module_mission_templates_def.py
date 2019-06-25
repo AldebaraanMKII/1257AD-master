@@ -5898,7 +5898,7 @@ enhanced_siege_lance_spear_fix = (
 ################# NEW v1.3 - added this from Azgad A Story Of Calradia v1.0
 enhanced_town_resident_behavior_init = (
   0, 0, ti_once, [], [
-      (neg|party_slot_eq, "$current_town", slot_town_lord, "trp_player"),  ####### NEW v1.4 - if fief owner is the player don't activate
+      (neg|party_slot_eq, "$current_town", slot_town_lord, "trp_player"),  ####### NEW v3.1 - if fief owner is the player don't activate
       (get_player_agent_no, ":player_agent"),
       (agent_set_team, ":player_agent", 0),
       (team_set_relation, 0, 1, 1),
