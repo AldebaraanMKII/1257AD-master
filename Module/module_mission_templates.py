@@ -574,19 +574,17 @@ mission_templates = [
    ],
    [
      (try_begin),
-     (this_or_next|eq, "$talk_context", tc_prison_break),
-     (eq, "$talk_context", tc_escape),
-
-     (call_script, "script_deduct_casualties_from_garrison"),
-     (jump_to_menu, "mnu_captivity_start_castle_defeat"),
-
-     (assign, ":end_cond", kingdom_ladies_end),
-     (try_for_range, ":prisoner", active_npcs_begin, ":end_cond"),
-	   (troop_slot_eq, ":prisoner", slot_troop_is_alive, 1),  ## he's alive/active
-       (troop_set_slot, ":prisoner", slot_troop_mission_participation, 0), #new
-     (try_end),
-
-     (mission_enable_talk),
+       (this_or_next|eq, "$talk_context", tc_prison_break),
+       (this_or_next|eq, "$talk_context", tc_escape),
+       (eq, "$town_residents_enraged", 1),  ######## NEW v3.1 - player is taken prisoner if knocked out during a town fight
+       (call_script, "script_deduct_casualties_from_garrison"),
+       (jump_to_menu, "mnu_captivity_start_castle_defeat"),
+       (assign, ":end_cond", kingdom_ladies_end),
+       (try_for_range, ":prisoner", active_npcs_begin, ":end_cond"),
+	     (troop_slot_eq, ":prisoner", slot_troop_is_alive, 1),  ## he's alive/active
+         (troop_set_slot, ":prisoner", slot_troop_mission_participation, 0), #new
+       (try_end),
+       (mission_enable_talk),
        (finish_mission, 0),
      (else_try),
        (set_trigger_result,1),
@@ -850,7 +848,8 @@ mission_templates = [
                                 (troop_set_name, "$bounty_target_6", s51),
                               (try_end),
                               (set_trigger_result,1)], []),
-
+							  
+##############################
       (1, 0, ti_once, [(check_quest_active, "qst_bounty_1"),
                        (neg|check_quest_succeeded, "qst_bounty_1"),
                        (neg|check_quest_failed, "qst_bounty_1"),
@@ -870,11 +869,12 @@ mission_templates = [
           (call_script, "script_fail_quest_bounty", "qst_bounty_1"),
           (finish_mission, 4),
         (else_try),
-          (call_script, "script_change_player_relation_with_center", "$current_town", -1), #chief cambia odio aldeas
+          (call_script, "script_change_player_relation_with_center", "$current_town", -2), #chief cambia odio aldeas
           (call_script, "script_succeed_quest_bounty", "qst_bounty_1"),
         (try_end),
         (troop_set_name, "$bounty_target_1", s51),
         ]),
+##############################
       (1, 0, ti_once, [(check_quest_active, "qst_bounty_2"),
                        (neg|check_quest_succeeded, "qst_bounty_2"),
                        (neg|check_quest_failed, "qst_bounty_2"),
@@ -899,6 +899,7 @@ mission_templates = [
         (try_end),
         (troop_set_name, "$bounty_target_2", s51),
         ]),
+##############################
       (1, 0, ti_once, [(check_quest_active, "qst_bounty_3"),
                        (neg|check_quest_succeeded, "qst_bounty_3"),
                        (neg|check_quest_failed, "qst_bounty_3"),
@@ -923,6 +924,7 @@ mission_templates = [
         (try_end),
         (troop_set_name, "$bounty_target_3", s51),
         ]),
+##############################
       (1, 0, ti_once, [(check_quest_active, "qst_bounty_4"),
                        (neg|check_quest_succeeded, "qst_bounty_4"),
                        (neg|check_quest_failed, "qst_bounty_4"),
@@ -947,6 +949,7 @@ mission_templates = [
         (try_end),
         (troop_set_name, "$bounty_target_4", s51),
         ]),
+##############################
       (1, 0, ti_once, [(check_quest_active, "qst_bounty_5"),
                        (neg|check_quest_succeeded, "qst_bounty_5"),
                        (neg|check_quest_failed, "qst_bounty_5"),
@@ -971,6 +974,7 @@ mission_templates = [
         (try_end),
         (troop_set_name, "$bounty_target_5", s51),
         ]),
+##############################
       (1, 0, ti_once, [(check_quest_active, "qst_bounty_6"),
                        (neg|check_quest_succeeded, "qst_bounty_6"),
                        (neg|check_quest_failed, "qst_bounty_6"),

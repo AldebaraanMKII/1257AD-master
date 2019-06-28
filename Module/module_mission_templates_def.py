@@ -5898,8 +5898,42 @@ enhanced_siege_lance_spear_fix = (
 ################# NEW v1.3 - added this from Azgad A Story Of Calradia v1.0
 enhanced_town_resident_behavior_init = (
   0, 0, ti_once, [], [
-      (neg|party_slot_eq, "$current_town", slot_town_lord, "trp_player"),  ####### NEW v3.1 - if fief owner is the player don't activate
-      (get_player_agent_no, ":player_agent"),
+	  (assign, ":continue", 1),
+	  ####### NEW v3.1 - if fief owner is the player don't activate
+      (try_begin),
+        (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),  
+	      (assign, ":continue", 0),
+	  (try_end),
+	  #########
+	  ########### NEW v3.1 - if bounty quest is active don't activate
+      (try_begin),
+        (check_quest_active, "qst_bounty_1"),
+        (quest_slot_eq, "qst_bounty_1", slot_quest_target_center, "$current_town"),
+	      (assign, ":continue", 0),
+	  (else_try),
+        (check_quest_active, "qst_bounty_2"),
+        (quest_slot_eq, "qst_bounty_2", slot_quest_target_center, "$current_town"),
+	      (assign, ":continue", 0),
+	  (else_try),
+        (check_quest_active, "qst_bounty_3"),
+        (quest_slot_eq, "qst_bounty_3", slot_quest_target_center, "$current_town"),
+	      (assign, ":continue", 0),
+	  (else_try),
+        (check_quest_active, "qst_bounty_4"),
+        (quest_slot_eq, "qst_bounty_4", slot_quest_target_center, "$current_town"),
+	      (assign, ":continue", 0),
+	  (else_try),
+        (check_quest_active, "qst_bounty_5"),
+        (quest_slot_eq, "qst_bounty_5", slot_quest_target_center, "$current_town"),
+	      (assign, ":continue", 0),
+	  (else_try),
+        (check_quest_active, "qst_bounty_6"),
+        (quest_slot_eq, "qst_bounty_6", slot_quest_target_center, "$current_town"),
+	      (assign, ":continue", 0),
+	  (try_end),
+	  (eq, ":continue", 1),
+	  ######################
+	  (get_player_agent_no, ":player_agent"),
       (agent_set_team, ":player_agent", 0),
       (team_set_relation, 0, 1, 1),
       (team_set_relation, 0, 2, -1),
