@@ -5930,6 +5930,10 @@ enhanced_town_resident_behavior_init = (
         (check_quest_active, "qst_bounty_6"),
         (quest_slot_eq, "qst_bounty_6", slot_quest_target_center, "$current_town"),
 	      (assign, ":continue", 0),
+	  (else_try),
+        (check_quest_active, "qst_hunt_down_fugitive"),
+        (quest_slot_eq, "qst_hunt_down_fugitive", slot_quest_target_center, "$current_town"),
+	      (assign, ":continue", 0),
 	  (try_end),
 	  (eq, ":continue", 1),
 	  ######################
