@@ -15218,6 +15218,51 @@ mission_templates = [
     ],
   ),
 #######################################################################################
+
+###################### NEW v3.1 - if one on one fight, use two handed swords
+  ("arena_tournament_fight_1vs1",mtf_arena_fight,-1,
+   "You enter a melee fight in the arena.",
+    [
+      (0,mtef_visitor_source|mtef_team_0,af_override_horse|af_override_weapons,aif_start_alarmed,1,[itm_sword_type_xiiia]),
+      (1,mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[]),
+      (2,mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[]),
+      (3,mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[]),
+      (4,mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[]),
+      (5,mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[]),
+      (6,mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[]),
+      (7,mtef_visitor_source|mtef_team_0,af_override_horse,aif_start_alarmed,1,[]),
+
+      (8,mtef_visitor_source|mtef_team_1,af_override_horse|af_override_weapons,aif_start_alarmed,1,[itm_sword_type_xiiia]),
+      (9,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
+      (10,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
+      (11,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
+      (12,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
+      (13,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
+      (14,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
+      (15,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
+
+      (16,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+      (17,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+      (18,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+      (19,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+      (20,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+      (21,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+      (22,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+      (23,mtef_visitor_source|mtef_team_2,af_override_horse,aif_start_alarmed,1,[]),
+
+      (24,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+      (25,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+      (26,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+      (27,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+      (28,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+      (29,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+      (30,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+      (31,mtef_visitor_source|mtef_team_3,af_override_horse,aif_start_alarmed,1,[]),
+    ],
+    tournament_triggers,
+  ),
+
+#######################################################################################
   
   
   

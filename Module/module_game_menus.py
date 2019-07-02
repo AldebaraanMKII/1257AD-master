@@ -14992,8 +14992,14 @@ game_menus = [ #
         ], "Door to the arena."),
         
       ("town_dungeon",
-       [(eq, 1, 0)],
-       "Never: Enter the prison.",
+       [
+	   ######## NEW v3.1 - player can enter the prison from the town menu
+	   (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),
+	   (this_or_next|party_slot_eq, "$current_town",slot_party_type, spt_town),
+	   (party_slot_eq, "$current_town",slot_party_type, spt_castle),
+	   ################
+	   ],  
+       "Enter the prison.",
        [
            (try_begin),
             (eq, "$talk_context", tc_prison_break),
@@ -15922,7 +15928,11 @@ game_menus = [ #
         (assign, "$current_opponent", 0),
     ],
     [
-      ("join_one_on_one", [(eq, 1, 0)], "Join one on one tournament.",####### NEW v3.0-KOMKE disabled
+      ("join_one_on_one", [
+	  ######### NEW v3.1 - one on one enable but new mission template to use only two handed swords
+      (troop_get_slot, ":plyr_renown", "trp_player", slot_troop_renown),
+      (ge, ":plyr_renown", 125),
+	  ], "Join one on one tournament.",
       [
         (party_set_slot, "$current_town", slot_town_has_tournament, 0),
         (assign, "$tournament_type", 0),
@@ -16085,7 +16095,10 @@ game_menus = [ #
         (assign, "$g_mt_mode", abm_tournament),
         (store_faction_of_party, ":fac", "$current_town"),
         (faction_get_slot, ":culture", ":fac",slot_faction_culture),
-        (try_begin), #foot fighting
+        (try_begin), 
+          (eq, "$tournament_type", 0),
+            (set_jump_mission, "mt_arena_tournament_fight_1vs1"),
+        (else_try),#foot fighting
           (this_or_next|eq, ":culture", "fac_culture_finnish"),
           (this_or_next|eq, ":culture", "fac_culture_rus"),
           (this_or_next|eq, ":culture", "fac_culture_baltic"),

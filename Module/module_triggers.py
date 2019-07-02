@@ -2233,9 +2233,13 @@ triggers = [
 
     ###MONGOL CAMPS
     #spawning, reinforcement, utility
-    (24.0*7, 0.0, 0, 
+    (24*7, 0.0, 0, 
     #(6, 0.0, 0, 
     [
+	######### NEW v3.1 - added limit to mongolian camps
+    (store_num_parties_of_template, ":amount", "pt_mongolian_camp"),
+    (lt, ":amount", 20),
+	#########
     ],
     [    
     #(display_message, "@utility trigger"),

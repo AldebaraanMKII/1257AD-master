@@ -17978,7 +17978,7 @@ presentations = [
         (overlay_set_val, "$g_presentation_obj_8", "$g_lord_creation_rate"),
 
 
-        (create_number_box_overlay, "$g_presentation_obj_9", 1, 6),
+        (create_number_box_overlay, "$g_presentation_obj_9", 0, 6),
         (val_sub, reg1, ":value_difference"),
         (position_set_y, pos1, reg1),
         (overlay_set_position, "$g_presentation_obj_9", pos1),
@@ -17986,21 +17986,21 @@ presentations = [
 
 
 
-        (create_number_box_overlay, "$g_presentation_obj_10", 1, 6),
+        (create_number_box_overlay, "$g_presentation_obj_10", 0, 6),
         (val_sub, reg1, ":value_difference"),
         (position_set_y, pos1, reg1),
         (overlay_set_position, "$g_presentation_obj_10", pos1),
         (overlay_set_val, "$g_presentation_obj_10", "$g_lord_creation_threshold_towns"),
 
 
-        (create_number_box_overlay, "$g_presentation_obj_11", 1, 6),
+        (create_number_box_overlay, "$g_presentation_obj_11", 0, 6),
         (val_sub, reg1, ":value_difference"),
         (position_set_y, pos1, reg1),
         (overlay_set_position, "$g_presentation_obj_11", pos1),
         (overlay_set_val, "$g_presentation_obj_11", "$g_lord_creation_threshold_castles"),
 
 
-        (create_number_box_overlay, "$g_presentation_obj_12", 1, 6),
+        (create_number_box_overlay, "$g_presentation_obj_12", 0, 6),
         (val_sub, reg1, ":value_difference"),
         (position_set_y, pos1, reg1),
         (overlay_set_position, "$g_presentation_obj_12", pos1),

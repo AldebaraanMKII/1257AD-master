@@ -10265,10 +10265,12 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (str_store_troop_name, s10, ":troop_no"),
   (store_faction_of_troop, ":faction_no", ":troop_no"),
   (str_store_faction_name, s11, ":faction_no"),
-  (call_script, "script_troop_get_relation_with_troop", "trp_player", ":troop_no"),
-  (str_store_string, s12, reg0),
+  ######### NEW v3.1 - fixes string error
+  (call_script, "script_troop_get_player_relation", ":troop_no"),
+  (assign, reg10, reg0),
   ],
-  "{s10} of {s11} (Relations: {s12}).", "dplmc_constable_execution_ask_confirm",
+  "{s10} of {s11} (Relations: {reg10}).", "dplmc_constable_execution_ask_confirm",
+  #########
 [
   (store_repeat_object, "$lord_to_execute"),
   ]],

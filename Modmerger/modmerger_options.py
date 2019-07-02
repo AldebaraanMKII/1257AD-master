@@ -29,7 +29,7 @@ mods_active = [
     "cstmmerge",
     "colour",
     "freelancer",
-    "native_bugfix",
+    # "native_bugfix",
     "FlorisBank",  ######## NEW v2.1
     "pcamp",  ######## NEW v2.1
     "outkit",  ######## NEW v2.1
