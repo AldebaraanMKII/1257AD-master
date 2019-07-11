@@ -181,24 +181,24 @@ dialogs    = [
 
     [anyone,"lord_request_enlistment_cavalry", [
         (store_skill_level, ":cur_riding", "skl_riding", "trp_player"),
-        (ge, ":cur_riding", 4)], 
-        "Very good, let's find a mounted troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_cavalry)]],
+        (ge, ":cur_riding", 2)], 
+        "Very good, let's find a mounted troop for you.", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_cavalry)]],
     [anyone,"lord_request_enlistment_cavalry", [], "Sorry, {playername}, but you don't know how to ride a horse.", "lord_pretalk",[]],
     [anyone,"lord_request_enlistment_archers", [
         (store_skill_level, ":cur_power_draw", "skl_power_draw", "trp_player"),
         (store_skill_level, ":cur_power_throw", "skl_power_throw", "trp_player"),
         (store_proficiency_level, ":cur_xbox_proficiency", "trp_player", wpt_crossbow),
-        (this_or_next|ge, ":cur_power_draw", 4),
-        (this_or_next|ge, ":cur_power_throw", 4),
+        (this_or_next|ge, ":cur_power_draw", 2),
+        (this_or_next|ge, ":cur_power_throw", 2),
         (ge, ":cur_xbox_proficiency", 100)], 
-        "Very good, let's find a missile troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_archers)]],
+        "Very good, let's find a missile troop for you.", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_archers)]],
     [anyone,"lord_request_enlistment_archers", [], "Sorry, {playername}, but you don't know how to draw a strong bow, to throw a javelin nor to shoot a crossbow.", "lord_pretalk",[]],
     [anyone,"lord_request_enlistment_infantry", [
         (store_skill_level, ":cur_power_strike", "skl_power_strike", "trp_player"),
         (store_proficiency_level, ":cur_polearm_proficiency", "trp_player", wpt_polearm),
-        (this_or_next|ge, ":cur_power_strike", 4),
+        (this_or_next|ge, ":cur_power_strike", 2),
         (ge, ":cur_polearm_proficiency", 100)], 
-        "Very good, let's find an infantry troop for you", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_infantry)]],
+        "Very good, let's find an infantry troop for you.", "lord_request_enlistment_select",[(call_script, "script_freelancer_find_enlist_troops", grc_infantry)]],
     [anyone,"lord_request_enlistment_infantry", [], "Sorry, {playername}, but you don't know how to strike hard nor to wield a polearm.", "lord_pretalk",[]],        
 
     [anyone|plyr,"lord_request_enlistment_select", [(gt, reg51, 0),(str_store_troop_name, s51, reg51)], 
@@ -207,7 +207,7 @@ dialogs    = [
      "Enlist as a: {s52}", "lord_request_enlistment_confirm", [(assign, "$temp", reg52)]],
     [anyone|plyr,"lord_request_enlistment_select", [(gt, reg53, 0),(str_store_troop_name, s53, reg53)], 
       "Enlist as a: {s53}", "lord_request_enlistment_confirm", [(assign, "$temp", reg53)]],
-    [anyone|plyr,"lord_request_enlistment_select", [], "Mmm, a moment to think my lord", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_select", [], "Mmm, a moment to think my lord.", "lord_pretalk", []],
     [anyone,"lord_request_enlistment_select", [(eq, reg51, 0)], "Sorry, {playername}, there isn't any position available for you now.", "lord_pretalk", []],
 
     [anyone,"lord_request_enlistment_confirm", [(str_store_troop_name, s49, "$temp")], "{playername}, do you want to serve in my company as a {s49}?", "lord_request_enlistment_confirm2", []],

@@ -124,10 +124,10 @@ ranged_attrib_5     = str_14 |agi_14 |int_9  |cha_9  |level(24)                 
 ranged_attrib_elite = str_16 |agi_18 |int_12 |cha_12 |level(28)     # sergeant
 
 horse_attrib_1 = str_9|agi_9|int_6|cha_5|level(4)                     # noble recruit
-horse_attrib_2 = str_12|agi_12|int_7|cha_8|level(7)                   # noble horsemen
+horse_attrib_2 = str_12|agi_12|int_7|cha_8|level(8)                   # noble horsemen
 horse_attrib_3 = str_15|agi_15|int_6|cha_7|level(14)                   # light cav
-horse_attrib_4 = str_18|agi_16|int_6|cha_10|level(22)                   # medium cav
-horse_attrib_5 = str_21|agi_18|int_9|cha_15|level(26)                   # heavy lancers
+horse_attrib_4 = str_18|agi_16|int_6|cha_10|level(20)                   # medium cav
+horse_attrib_5 = str_21|agi_18|int_9|cha_15|level(25)                   # heavy lancers
 horse_attrib_elite = str_25 |agi_18|int_12|cha_20|level(30)   # knight
 
 ################# NEW v1.8

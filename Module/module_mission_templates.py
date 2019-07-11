@@ -733,8 +733,8 @@ mission_templates = [
           (scene_set_slot, ":cur_scene", slot_scene_visited, 1),
           (call_script, "script_init_town_walker_agents"),
           (call_script, "script_music_set_situation_with_culture", mtf_sit_travel),
-          (call_script, "script_init_town_fight"),  #allow player to start a fight by shooting somebody
-          (assign, "$g_init_fight", 1),
+          # (call_script, "script_init_town_fight"),  #allow player to start a fight by shooting somebody
+          # (assign, "$g_init_fight", 1),
         ]),
       (ti_before_mission_start, 0, 0, [], [(call_script, "script_change_banners_and_chest")]),
       (ti_inventory_key_pressed, 0, 0, [(set_trigger_result,1)], []),
