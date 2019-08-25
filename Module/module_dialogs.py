@@ -24024,7 +24024,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 ####### NEW v3.0-KOMKE START-
 
-[anyone|plyr, "lord_talk", [(eq, 1, 1)], "I want to change your culture and equipment.", "lord_change_culture_equipment",[]],##KOMKE set to false when releasing
+[anyone|plyr, "lord_talk", [(eq, "$cheat_mode", 1),], "{!}DEBUG: I want to change your culture and equipment.", "lord_change_culture_equipment",[]],##KOMKE set to false when releasing
 [anyone, "lord_change_culture_equipment",[], "Which culture?", "lord_change_culture_equipment_choose_culture",[]],
 
 [anyone|plyr|repeat_for_factions, "lord_change_culture_equipment_choose_culture",

@@ -14244,28 +14244,25 @@ game_menus = [ #
            (try_begin),
              (this_or_next|eq, "$all_doors_locked", 1),
              (eq, "$sneaked_into_town", 1),
-             (display_message, "str_door_locked",0xFFFFAAAA),
+             (display_message,"str_door_locked",0xFFFFAAAA),
            (else_try),
-             # (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
-             (neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
-                # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),####### NEW v3.1-KOMKE
-             # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),####### NEW v3.1-KOMKE
-             (neg|troop_slot_ge, "trp_player", slot_troop_renown, 200),####### NEW v3.1-KOMKE
-             (neq, "$g_player_eligible_feast_center_no", "$current_town"),
+		     (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),
+				(neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),
+			 (neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),
+			 (neq, "$g_player_eligible_feast_center_no", "$current_town"),
 
-             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),####### NEW v3.1-KOMKE
-             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),####### NEW v3.1-KOMKE
+			 (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),
+			 (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),
 
-             # (neg|check_quest_active, "qst_wed_betrothed"),####### NEW v3.1-KOMKE
-             # (neg|check_quest_active, "qst_wed_betrothed_female"),####### NEW v3.1-KOMKE
+			 (neg|check_quest_active, "qst_wed_betrothed"),
+			 (neg|check_quest_active, "qst_wed_betrothed_female"),
 
-             # (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut####### NEW v3.1-KOMKE
+			 (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut
 
-             (jump_to_menu, "mnu_cannot_enter_court"),
-           (else_try),
+			 (jump_to_menu, "mnu_cannot_enter_court"),
+		   (else_try),
              (assign, "$town_entered", 1),
-             # (call_script, "script_enter_court", "$current_town"),####### NEW v3.1-KOMKE
-             (jump_to_menu, "mnu_castle_entered"),####### NEW v3.1-KOMKE
+             (call_script, "script_enter_court", "$current_town"),
            (try_end),
         ], "Door to the castle."),
 
@@ -14305,28 +14302,25 @@ game_menus = [ #
            (try_begin),
              (this_or_next|eq, "$all_doors_locked", 1),
              (eq, "$sneaked_into_town", 1),
-             (display_message, "str_door_locked",0xFFFFAAAA),
+             (display_message,"str_door_locked",0xFFFFAAAA),
            (else_try),
-             # (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
-             (neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
-                # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),####### NEW v3.1-KOMKE
-             # (this_or_next|neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),####### NEW v3.1-KOMKE
-             (neg|troop_slot_ge, "trp_player", slot_troop_renown, 200),####### NEW v3.1-KOMKE
-             (neq, "$g_player_eligible_feast_center_no", "$current_town"),####### NEW v3.1-KOMKE
+		     (this_or_next|neq, "$players_kingdom", "$g_encountered_party_faction"),
+				(neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),
+			 (neg|troop_slot_ge, "trp_player", slot_troop_renown, 125),
+			 (neq, "$g_player_eligible_feast_center_no", "$current_town"),
 
-             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),####### NEW v3.1-KOMKE
-             # (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),####### NEW v3.1-KOMKE
+			 (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_state, sfai_feast),
+			 (faction_slot_eq, "$g_encountered_party_faction", slot_faction_ai_object, "$g_encountered_party"),
 
-             # (neg|check_quest_active, "qst_wed_betrothed"),####### NEW v3.1-KOMKE
-             # (neg|check_quest_active, "qst_wed_betrothed_female"),####### NEW v3.1-KOMKE
+			 (neg|check_quest_active, "qst_wed_betrothed"),
+			 (neg|check_quest_active, "qst_wed_betrothed_female"),
 
-             # (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut####### NEW v3.1-KOMKE
+			 (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin), #Married players always make the cut
 
              (jump_to_menu, "mnu_cannot_enter_court"),
-            (else_try),
+			(else_try),
              (assign, "$town_entered", 1),
-             # (call_script, "script_enter_court", "$current_town"),####### NEW v3.1-KOMKE
-             (jump_to_menu, "mnu_castle_entered"),####### NEW v3.1-KOMKE
+             (call_script, "script_enter_court", "$current_town"),
            (try_end),
         ], "Door to the castle."),
 

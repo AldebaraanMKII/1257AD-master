@@ -21068,14 +21068,11 @@ itm_spear_p,
     [
     itm_byz_boots_a,
 
-    itm_byz_mail_b,
-
-
-
+    itm_byz_footman_a,
+	
       ##### itm_tab_shield_round_e,
     itm_byz_shield_2,
     itm_byz_helmet_a,
-
 
     itm_spear_d,
     itm_spear_e,
@@ -21109,13 +21106,10 @@ itm_spear_p,
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_8,
     [
-    itm_byz_footman_a,
+    itm_byz_mail_b,
 
     itm_byz_cavalry_boots,
-
-
-
-
+	
     itm_elm10,
     itm_osp_byzantion_a,
     itm_byz_shield_2,
@@ -21155,7 +21149,7 @@ itm_spear_p,
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_8,
     [
-    itm_byz_guard_b,
+    itm_byz_footman_c,
 
     itm_byzantine_sword,
     itm_byzantine_sword_1,
@@ -21199,19 +21193,12 @@ itm_spear_p,
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_8,
     [
-    itm_byz_footman_c,
-
-
-
-
-
-
+    itm_byz_guard_b,
 
     itm_elm10,
 
     itm_byz_helmet_a,
     itm_byz_cavalry_boots,
-
 
       ##### itm_tab_shield_kite_c,
     itm_byz_shield_kite,
@@ -64436,7 +64423,7 @@ itm_rnd_helm_06,
    ["nurse_for_lady","Nurse","Nurse",tf_female|tf_guarantee_armor,0,reserved,fac_commoners,
    [itm_robe, itm_wrapping_boots],
    def_attrib|level(4),wp(60),knows_common,woman_face_1, woman_face_2],
-   ["temporary_minister","Minister","Minister",tf_guarantee_armor|tf_guarantee_boots,0,reserved,fac_commoners,
+   ["temporary_minister","Minister","Minister",tf_hero|tf_male|tf_guarantee_armor|tf_guarantee_boots,0,reserved,fac_commoners,
    [itm_merchant_outfit, itm_wrapping_boots],
    def_attrib|level(4),wp(60),knows_common,man_face_middle_1, man_face_older_2],
 

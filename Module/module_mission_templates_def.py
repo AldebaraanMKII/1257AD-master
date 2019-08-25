@@ -5320,10 +5320,15 @@ common_battle_check_victory_condition = (
     (display_message, "str_msg_battle_won"),
     (assign, "$g_battle_won",1),
     (assign, "$g_battle_result", 1),
-    # (try_begin),
-        # (eq, "$freelancer_state", 1),
-    (call_script, "script_freelancer_keep_field_loot"),  ####### NEW v3.0-KOMKE
-    # (try_end),
+	####### NEW v3.2 - fixes player receiving the items from the troop he bodyslided into
+    (try_begin),        
+	  # (get_player_agent_no, ":player"),
+	  # (agent_get_troop_id, ":troop_id", ":player"),
+      # (eq, ":troop_id", "trp_player"),
+	  (eq, "$auxilary_player_active", 0), 
+        (call_script, "script_freelancer_keep_field_loot"),  ####### NEW v3.0-KOMKE
+    (try_end),
+	##############
     (call_script, "script_play_victorious_sound"),
     ],
   [
@@ -5724,8 +5729,10 @@ common_battle_init_banner, #tom
        (assign, ":added_troop_sequence", "$g_arena_training_num_agents_spawned"),
        (val_mod, ":added_troop_sequence", 1),
        (val_add, ":added_troop", ":added_troop_sequence"),
-       (val_min, ":added_troop", 3),
-       (val_add, ":added_troop", "trp_novice_fighter"),   ############## YES!
+	   #############  NEW v3.2 - reverted back to vanilla 1257 settings
+       (val_min, ":added_troop", 9),
+       (val_add, ":added_troop", "trp_arena_training_fighter_1"),   ############## YES!
+	   ##########################
 	   # (store_random_in_range, ":added_troop", regular_troops_begin, regular_troops_end), ############# YES!
        (assign, ":end_cond", 10000),
        (get_player_agent_no, ":player_agent"),

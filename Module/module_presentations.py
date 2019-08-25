@@ -17004,22 +17004,30 @@ presentations = [
         (position_set_y, pos1, 175),
         (overlay_set_position, reg0, pos1),
 
+        (create_text_overlay, reg0, "@Mongol camp respawn rate:", tf_vertical_align_center),
+        (position_set_y, pos1, 140),
+        (overlay_set_position, reg0, pos1),
+
+        (create_text_overlay, reg0, "@Max Mongol camps on the map:", tf_vertical_align_center),
+        (position_set_y, pos1, 105),
+        (overlay_set_position, reg0, pos1),
+
 
 ########################################## ROW 2 COLUMN 2
         (position_set_x, pos1, 850),
 
 
         (create_number_box_overlay, "$g_presentation_obj_18", 0, 101),
-        (position_set_y, pos1, 651),   #####TAKE 14 OUT OF attached y
+        (position_set_y, pos1, 686),   #####TAKE 14 OUT OF attached y
         (overlay_set_position, "$g_presentation_obj_18", pos1),
         (overlay_set_val, "$g_presentation_obj_18", "$g_party_bandit_spawn_chance_roving_knights"),
 
         (create_number_box_overlay, "$g_presentation_obj_19", 1, 100),
-        (position_set_y, pos1, 686),   #####TAKE 14 OUT OF attached y
+        (position_set_y, pos1, 651),   #####TAKE 14 OUT OF attached y
         (overlay_set_position, "$g_presentation_obj_19", pos1),
         (overlay_set_val, "$g_presentation_obj_19", "$g_party_bandit_max_parties_roving_knights"),
 
-
+		
         (create_number_box_overlay, "$g_presentation_obj_20", 4, 1000),
         (position_set_y, pos1, 616),   #####TAKE 14 OUT OF attached y
         (overlay_set_position, "$g_presentation_obj_20", pos1),
@@ -17096,21 +17104,31 @@ presentations = [
         (overlay_set_position, "$g_presentation_obj_33", pos1),
         (overlay_set_val, "$g_presentation_obj_33", "$g_party_mercenary_warband_max"),
 
+        (create_number_box_overlay, "$g_presentation_obj_34", 0, 721),
+        (position_set_y, pos1, 127),   #####TAKE 14 OUT OF attached y
+        (overlay_set_position, "$g_presentation_obj_34", pos1),
+        (overlay_set_val, "$g_presentation_obj_34", "$g_party_mongol_camp_rate"),
+
+        (create_number_box_overlay, "$g_presentation_obj_35", 1, 100),
+        (position_set_y, pos1, 92),   #####TAKE 14 OUT OF attached y
+        (overlay_set_position, "$g_presentation_obj_35", pos1),
+        (overlay_set_val, "$g_presentation_obj_35", "$g_party_mongol_camp_max"),
+
 
 
 ########################### RESET
-        (create_game_button_overlay, "$g_presentation_obj_35", "@Reset"),
+        (create_game_button_overlay, "$g_presentation_obj_39", "@Reset"),
         (position_set_x, pos1, 500),
         (position_set_y, pos1, 25),
-        (overlay_set_position, "$g_presentation_obj_35", pos1),
+        (overlay_set_position, "$g_presentation_obj_39", pos1),
 
 
 
 ######################################### DONE
-        (create_game_button_overlay, "$g_presentation_obj_36", "@Done"),
+        (create_game_button_overlay, "$g_presentation_obj_40", "@Done"),
         (position_set_x, pos1, 900),
         (position_set_y, pos1, 25),
-        (overlay_set_position, "$g_presentation_obj_36", pos1),
+        (overlay_set_position, "$g_presentation_obj_40", pos1),
 
       ]),
 
@@ -17226,12 +17244,18 @@ presentations = [
         (else_try),
           (eq, ":object", "$g_presentation_obj_33"),
           (assign, "$g_party_mercenary_warband_max", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_34"),
+          (assign, "$g_party_mongol_camp_rate", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_35"),
+          (assign, "$g_party_mongol_camp_max", ":value"),
 
 
 
 
         (else_try),
-          (eq, ":object", "$g_presentation_obj_35"),
+          (eq, ":object", "$g_presentation_obj_39"),
           ############# resets everything to default values
           (assign, "$g_party_bandit_respawn_rate", 36),
 
@@ -17274,13 +17298,16 @@ presentations = [
 
           (assign, "$g_party_mercenary_warband_chance", 40),
           (assign, "$g_party_mercenary_warband_max", 40),
+		  
+          (assign, "$g_party_mongol_camp_rate", 168),
+          (assign, "$g_party_mongol_camp_max", 20),
 
           (presentation_set_duration, 0),
 
 
 
         (else_try),
-          (eq, ":object", "$g_presentation_obj_36"),
+          (eq, ":object", "$g_presentation_obj_40"),
           (presentation_set_duration, 0),
         (try_end),
       ]),

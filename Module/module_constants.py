@@ -664,10 +664,40 @@ slot_number_troops_pending = 274
 slot_recruitment_type = 275
 slot_player_crusade_fief = 276
 
+slot_town_arena_master = 277
+slot_town_seneschal = 278
 
-slot_town_trade_good_prices_begin             = 280
+##########################################################
+# Test : Tavern Recruitment Begin ########################
+##########################################################
+slot_town_mercs = 279
+merc_parties_begin = "p_town_merc_1"
+merc_parties_end = "p_town_merc_end"
+#########################################################
+# Test : Tavern Recruitment End #########################
+#########################################################
 
-slot_center_last_reconnoitered_by_faction_time                 = 350
+
+############### NEW v2.1 - diplomacy stuff
+##diplomacy start+ additional center slots
+dplmc_slot_center_ex_lord                     = 280 #The last lord (not counting those who willingly transferred it)
+dplmc_slot_center_original_lord               = dplmc_slot_center_ex_lord + 1 #The original lord
+dplmc_slot_center_last_transfer_time          = dplmc_slot_center_ex_lord + 2 #The last time it was captured
+dplmc_slot_center_last_attacked_time          = dplmc_slot_center_ex_lord + 3 #Last attempted raid or siege
+dplmc_slot_center_last_attacker               = dplmc_slot_center_ex_lord + 4 #Last lord who attempted to raid or siege
+####################################
+
+
+################## NEW v2.1 - player village donations
+slot_center_donations = 285
+####################################
+
+
+############ NEW v3.2 - slots 295 to 309 is reserved for floris bank
+
+slot_town_trade_good_prices_begin             = 310
+
+slot_center_last_reconnoitered_by_faction_time                 = 380
 #slot_center_last_reconnoitered_by_faction_cached_strength     = 360
 #slot_center_last_reconnoitered_by_faction_friend_strength     = 370
 
@@ -1971,9 +2001,6 @@ arena_tier4_opponents_to_beat = 20
 arena_tier4_prize = 60
 arena_grand_prize = 250
 
-
-slot_town_arena_master = 600
-slot_town_seneschal = 602
 
 #Additions
 price_adjustment = 25 #the percent by which a trade at a center alters price
@@ -3741,16 +3768,6 @@ slot_faction_player_original_template_faction = 250
 
 
 
-##########################################################
-# Test : Tavern Recruitment Begin ########################
-##########################################################
-slot_town_mercs = 360
-merc_parties_begin = "p_town_merc_1"
-merc_parties_end = "p_town_merc_end"
-#########################################################
-# Test : Tavern Recruitment End #########################
-#########################################################
-
 
 
 ######################## NEW v2.1 - Floris diplomacy 
@@ -3816,11 +3833,6 @@ npc_cultures_end_2 = "fac_culture_player"
 
 
 
-################## NEW v2.1 - player village donations
-slot_center_donations = 1150
-
-####################################
-
 
 
 ################## NEW v2.1 - Civil War
@@ -3878,14 +3890,6 @@ language_titles_king_male_begin = "str_ee_language_title_king_finnish"
 ####################################
 
 
-############### NEW v2.1 - diplomacy stuff
-##diplomacy start+ additional center slots
-dplmc_slot_center_ex_lord                     = 401 #The last lord (not counting those who willingly transferred it)
-dplmc_slot_center_original_lord               = 402 #The original lord
-dplmc_slot_center_last_transfer_time          = 403 #The last time it was captured
-dplmc_slot_center_last_attacked_time          = 404 #Last attempted raid or siege
-dplmc_slot_center_last_attacker               = 405 #Last lord who attempted to raid or siege
-####################################
 
 
 

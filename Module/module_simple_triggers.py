@@ -7967,9 +7967,9 @@ simple_triggers = [
              (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 0, 0),
            (try_end),
    (else_try),
-     (call_script, "script_cf_troop_get_random_enemy_lord", "$g_assassination_attempt_cur_npc"),
-     (gt, reg0, 0), 
-       (assign, ":enemy_lord", reg0),
+     # (call_script, "script_cf_troop_get_random_enemy_lord", "$g_assassination_attempt_cur_npc"),
+     # (gt, reg0, 0), 
+       # (assign, ":enemy_lord", reg0),
        (faction_slot_eq, ":troop_faction", slot_faction_leader, "$g_assassination_attempt_cur_npc"),
        (call_script, "script_rand", 0, 1000),
        (lt, reg0, "$g_lord_death_chance_assassination_king"),  ############ King chance

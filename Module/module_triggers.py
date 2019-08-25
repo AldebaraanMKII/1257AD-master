@@ -2233,13 +2233,18 @@ triggers = [
 
     ###MONGOL CAMPS
     #spawning, reinforcement, utility
-    (24*7, 0.0, 0, 
-    #(6, 0.0, 0, 
+    # (24*7, 0.0, 0, 
+    (2, 0.0, 0, 
     [
+    (gt, "$g_party_mongol_camp_rate", 0), ######### NEW v3.2
 	######### NEW v3.1 - added limit to mongolian camps
     (store_num_parties_of_template, ":amount", "pt_mongolian_camp"),
-    (lt, ":amount", 20),
-	#########
+    (lt, ":amount", "$g_party_mongol_camp_max"), ######### NEW v3.2
+	######### NEW v3.2
+    (val_add, "$g_party_mongol_camp_hours_passed", 2), ######### trigger rate 
+    (ge, "$g_party_mongol_camp_hours_passed", "$g_party_mongol_camp_rate"),
+      (assign, "$g_party_mongol_camp_hours_passed", 0),
+    #########
     ],
     [    
     #(display_message, "@utility trigger"),
