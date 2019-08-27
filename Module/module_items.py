@@ -1991,16 +1991,16 @@ items = [
 
 
 ############ TURK
-["armor_medium_tyrk_a","Seljuk Mail Armor", [("armor_medium_tyrk_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
-["armor_medium_tyrk_b","Seljuk Mail Armor", [("armor_medium_tyrk_b", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
-["armor_medium_tyrk_c","Seljuk Mail Armor", [("armor_medium_tyrk_c", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
-["armor_medium_tyrk_d","Seljuk Mail Armor", [("armor_medium_tyrk_d", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
-["armor_medium_tyrk_e","Seljuk Mail Armor", [("armor_medium_tyrk_e", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
-["armor_medium_tyrk_f","Seljuk Mail Armor", [("armor_medium_tyrk_f", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
+["armor_medium_tyrk_a","Seljuk Mail Armor", [("armor_medium_tyrk_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
+["armor_medium_tyrk_b","Seljuk Mail Armor", [("armor_medium_tyrk_b", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
+["armor_medium_tyrk_c","Seljuk Mail Armor", [("armor_medium_tyrk_c", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
+["armor_medium_tyrk_d","Seljuk Mail Armor", [("armor_medium_tyrk_d", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
+["armor_medium_tyrk_e","Seljuk Mail Armor", [("armor_medium_tyrk_e", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
+["armor_medium_tyrk_f","Seljuk Mail Armor", [("armor_medium_tyrk_f", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
 
-["tyrk_armor_heavi_a","Seljuk Heavy Armor", [("tyrk_armor_heavi_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_6_body_armor_price, tier_6_body_armor, imodbits_armor, [], mamluk_factions],
-["tyrk_armor_heavi_b","Seljuk Heavy Armor", [("tyrk_armor_heavi_b", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_6_body_armor_price, tier_6_body_armor, imodbits_armor, [], mamluk_factions],
-["tyrk_armor_heavi_c","Seljuk Heavy Armor", [("tyrk_armor_heavi_c", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_6_body_armor_price, tier_6_body_armor, imodbits_armor, [], mamluk_factions],
+["tyrk_armor_heavi_a","Seljuk Heavy Armor", [("tyrk_armor_heavi_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_6_body_armor_price, tier_6_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
+["tyrk_armor_heavi_b","Seljuk Heavy Armor", [("tyrk_armor_heavi_b", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_6_body_armor_price, tier_6_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
+["tyrk_armor_heavi_c","Seljuk Heavy Armor", [("tyrk_armor_heavi_c", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_6_body_armor_price, tier_6_body_armor, imodbits_armor, [], [fac_culture_anatolian]],
 ############
 
 
@@ -2187,10 +2187,10 @@ items = [
 
 
 ############ DESERT BANDITS
-["turk_bandit_1","Seljuk Armor", [("turk_bandit_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_2_body_armor_price, tier_2_body_armor, imodbits_armor, [], mamluk_factions],
-["turk_bandit_2","Seljuk Armor", [("turk_bandit_b", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
-["turk_bandit_3","Seljuk Armor", [("turk_bandit_c", 0)], itp_type_body_armor|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
-["turk_bandit_4","Seljuk Armor", [("turk_bandit_d", 0)], itp_type_body_armor|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_3_body_armor_price, tier_3_body_armor, imodbits_armor, [], mamluk_factions],
+["turk_bandit_1","Saracen Armor", [("turk_bandit_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_2_body_armor_price, tier_2_body_armor, imodbits_armor, [], mamluk_factions],
+["turk_bandit_2","Saracen Armor", [("turk_bandit_b", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
+["turk_bandit_3","Saracen Armor", [("turk_bandit_c", 0)], itp_type_body_armor|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], mamluk_factions],
+["turk_bandit_4","Saracen Armor", [("turk_bandit_d", 0)], itp_type_body_armor|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_3_body_armor_price, tier_3_body_armor, imodbits_armor, [], mamluk_factions],
 
 ["caravan_armor_1","Saracen Clothes", [("caravan_armor_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_2_body_armor_price, tier_1_body_armor, imodbits_armor, [], arab_factions],
 ["beduin_armor_a","Bedouin Clothes", [("beduin_armor_a", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0, tier_1_body_armor_price, tier_1_body_armor, imodbits_armor, [], arab_factions],
@@ -2331,9 +2331,9 @@ items = [
 
 
 ################### FOOT ARMOR
-["boots_tyrk_a","Seljuk Heavy Boots", [("boots_tyrk_a", 0)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,200, weight(1)|abundance(100)|leg_armor(15), imodbits_cloth, [], mamluk_factions],
-["boots_tyrk_b","Seljuk Heavy Boots", [("boots_tyrk_b", 0)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,200, weight(1)|abundance(100)|leg_armor(15), imodbits_cloth, [], mamluk_factions],
-["boots_tyrk_c","Seljuk Heavy Boots", [("boots_tyrk_c", 0)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,200, weight(1)|abundance(100)|leg_armor(15), imodbits_cloth, [], mamluk_factions],
+["boots_tyrk_a","Seljuk Heavy Boots", [("boots_tyrk_a", 0)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,200, weight(1)|abundance(100)|leg_armor(15), imodbits_cloth, [], [fac_culture_anatolian]],
+["boots_tyrk_b","Seljuk Heavy Boots", [("boots_tyrk_b", 0)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,200, weight(1)|abundance(100)|leg_armor(15), imodbits_cloth, [], [fac_culture_anatolian]],
+["boots_tyrk_c","Seljuk Heavy Boots", [("boots_tyrk_c", 0)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,200, weight(1)|abundance(100)|leg_armor(15), imodbits_cloth, [], [fac_culture_anatolian]],
 
 ["sa_boot_light_crusader","Shoes", [("boot_light_crusader_a", 0),("boot_light_crusader_b", imodbit_sturdy)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,200, weight(1)|abundance(100)|leg_armor(5), imodbits_cloth, [], all_euro_factions],
 ["sa_boot_light_crusader_1","Shoes", [("boot_light_crusader_c", 0),("boot_light_crusader_d", imodbit_sturdy)], itp_type_foot_armor|itp_attach_armature|itp_merchandise, 0,210, weight(1)|abundance(100)|leg_armor(5), imodbits_cloth, [], all_euro_factions],
