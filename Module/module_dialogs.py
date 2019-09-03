@@ -7038,8 +7038,8 @@ dialogs = [
 ##patrol
 [anyone, "start", 
     [
-      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
-      
+      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
+      (eq, "$g_encountered_party_type", spt_patrol), ######## NEW v3.3
       (store_faction_of_troop, ":player_faction", "trp_player"),
       (store_faction_of_party, ":party_faction", "$g_encountered_party"),
       (eq, ":party_faction", ":player_faction"),
@@ -7061,7 +7061,8 @@ dialogs = [
 #####################
 [anyone, "start", 
     [
-      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
+      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
+      (eq, "$g_encountered_party_type", spt_patrol), ######## NEW v3.3
       (store_faction_of_troop, ":player_faction", "trp_player"),
       (store_faction_of_party, ":party_faction", "$g_encountered_party"),
       (eq, ":party_faction", ":player_faction"),
@@ -7071,7 +7072,7 @@ dialogs = [
       (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
       (this_or_next|eq, ":town_lord", "trp_player"),
       (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
-      (str_store_troop_name, s7, ":town_lord"),
+      # (str_store_troop_name, s7, ":town_lord"),
     ], "Greetings, Sire. We are patrolling {s6}. Do you have new orders?", "dplmc_patrol_talk", []
   ],
   
@@ -7125,6 +7126,76 @@ dialogs = [
 #############################################
   
   
+################ NEW v3.3 - added missing dialogue
+##reinforce garrison
+[anyone|plyr, "dplmc_patrol_talk", [], "I need you to reinforce a garrison.", "dplmc_patrol_orders_garrison_ask",
+[]],
+
+[anyone, "dplmc_patrol_orders_garrison_ask", [], "Where should we go?", "dplmc_patrol_garrison_target",
+[]],
+
+[anyone|plyr|repeat_for_parties, "dplmc_patrol_garrison_target",
+[
+(store_repeat_object, ":party_no"),
+(is_between, ":party_no", centers_begin, centers_end),
+(store_faction_of_party, ":party_faction", ":party_no"),
+(eq, ":party_faction", "$players_kingdom"),
+(str_store_party_name, s11, ":party_no"),
+],
+"{!}{s11}.", "dplmc_patrol_garrison_confirm_ask",
+[
+(store_repeat_object, "$diplomacy_var"),
+]
+],
+
+[anyone|plyr, "dplmc_patrol_garrison_target", [], "Nevermind.", "dplmc_patrol_pretalk",
+[]],
+
+[anyone, "dplmc_patrol_garrison_confirm_ask",
+[(str_store_party_name, s5, "$diplomacy_var"),],
+"As you wish, we will reinforce {s5}.", "dplmc_patrol_garrison_confirm",
+[]
+],
+
+[anyone|plyr, "dplmc_patrol_garrison_confirm", [(str_store_party_name, s5, "$diplomacy_var"),], "Thank you.", "close_window",
+[
+#SB : quickstring, fix name
+(party_set_name, "$g_encountered_party", "str_s5_transfer"),
+(party_set_slot, "$g_encountered_party", slot_party_ai_object, "$diplomacy_var"),
+(party_set_slot, "$g_encountered_party", slot_party_ai_state, spai_retreating_to_center),
+(party_set_ai_behavior, "$g_encountered_party", ai_bhvr_travel_to_party),
+(party_set_ai_object, "$g_encountered_party", "$diplomacy_var"),
+(assign, "$g_leave_encounter", 1),
+]],
+
+[anyone|plyr, "dplmc_patrol_garrison_confirm", [], "Wait, I changed my mind.", "dplmc_patrol_pretalk",
+[]],
+
+##give troops
+[anyone|plyr,"dplmc_patrol_talk", [],
+"I want to give some troops to you.", "dplmc_patrol_give_troops",[]],
+
+
+[anyone,"dplmc_patrol_give_troops", [],
+"Well, I could use some good soldiers. Thank you.", "dplmc_patrol_pretalk",
+[
+(change_screen_give_members, "$g_talk_troop_party"),
+(change_screen_exchange_members, 0),
+]],
+
+##disband
+[anyone|plyr, "dplmc_patrol_talk", [], "I don't need you any longer. Please disband.", "close_window",
+[
+(remove_party, "$g_encountered_party"),
+(assign, "$g_leave_encounter", 1),
+]],
+
+[anyone|plyr, "dplmc_patrol_talk", [], "Please continue.", "close_window",
+[(assign, "$g_leave_encounter", 1),]],
+###########################################
+  
+  
+  
  # rafi
  [anyone, "start",
 [
@@ -7137,18 +7208,18 @@ dialogs = [
    (call_script, "script_make_kingdom_hostile_to_player", "$g_encountered_party_faction", -3),
    ]],
 
-[anyone, "start", 
-    [
-      (eq, "$g_encountered_party_type",spt_patrol),
-      (party_is_active, "p_main_party"), #tom
-      (this_or_next | eq, "$g_encountered_party_faction", "$players_kingdom"),
-      (eq, "$g_encountered_party_faction", "fac_player_faction"),      
-    ],
-    "Greetings, friend.", "close_window",
-    [
-      (assign, "$g_leave_encounter",1)
-    ]
-  ],
+# [anyone, "start", 
+    # [
+      # (eq, "$g_encountered_party_type",spt_patrol),
+      # (party_is_active, "p_main_party"), #tom
+      # (this_or_next | eq, "$g_encountered_party_faction", "$players_kingdom"),
+      # (eq, "$g_encountered_party_faction", "fac_player_faction"),      
+    # ],
+    # "Greetings, friend.", "close_window",
+    # [
+      # (assign, "$g_leave_encounter",1)
+    # ]
+  # ],
 
 [anyone, "start", 
     [
@@ -37871,12 +37942,12 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "arena_master_melee_pretalk", [], "There will be a fight here soon. You can go and jump in if you like.", "arena_master_melee_talk",[]],
 ## CC
-[anyone|plyr, "arena_master_melee_talk", [], "Good. That's what I am going to do.", "close_window", 
+######### NEW v3.3 reverted back to vanilla
+[anyone|plyr, "arena_master_melee_talk", [], "Good. That's what I am going to do.", "arena_master_melee_weapon_select", 
 [
-  # (store_random_in_range, ":random_entry", 0, 39),
-  # (assign, "$g_player_entry_point", ":random_entry"),
-  (assign, "$g_player_entry_point", 51),
-# (try_end),
+  (store_random_in_range, ":random_entry", 0, 39),
+  (assign, "$g_player_entry_point", ":random_entry"),
+  # (assign, "$g_player_entry_point", 51),
   (assign, "$last_training_fight_town", "$current_town"),
   (store_current_hours, "$training_fight_time"),
   (assign, "$g_mt_mode", abm_training),

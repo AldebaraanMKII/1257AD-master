@@ -267,13 +267,115 @@ slot_faction_last_ai_calculation = 106
 slot_faction_lord_count = 107
 slot_faction_num_villages = 108
 
+dplmc_slot_faction_policy_time                      = 110 
+dplmc_slot_faction_centralization                   = 111  
+dplmc_slot_faction_aristocracy                      = 112       
+dplmc_slot_faction_serfdom                          = 113 
+dplmc_slot_faction_quality                          = 114 
+dplmc_slot_faction_patrol_time                = 115
+
+
+############### NEW v2.1 - Faction statistics
+kingdoms_begin_1 = fac_player_faction
+kingdoms_end_1 = fac_papacy
+
+kingdoms_begin_2 = fac_papacy
+kingdoms_end_2 = fac_enhanced_kingdom_1
+
+kingdoms_begin_3 = fac_enhanced_kingdom_1
+kingdoms_end_3 = fac_enhanced_kingdom_21
+
+kingdoms_begin_4 = fac_enhanced_kingdom_21
+kingdoms_end_4 = fac_kingdoms_end
+
+slot_faction_days_active = 120
+slot_faction_battles_won = 121
+slot_faction_battles_lost = 122
+
+slot_faction_enemies_killed = 123
+slot_faction_enemies_wounded = 124
+slot_faction_enemies_captured = 125
+
+slot_faction_troops_lost_killed = 126
+slot_faction_troops_lost_wounded = 127
+slot_faction_troops_lost_captured = 128
+
+slot_faction_troops_deployed = 129
+
+slot_faction_lords_lost_battle = 130
+slot_faction_lords_lost_assassination = 131
+slot_faction_lords_lost_execution = 132
+slot_faction_lords_lost_defection = 133
+####################################
+
+
+
+
+################## NEW v2.1 - Civil War
+enhanced_factions_begin = fac_enhanced_kingdom_1
+enhanced_factions_end = fac_kingdoms_end
+
+slot_faction_language = 135    ### used to set a civil war faction nomenclature
+
+faction_language_finnish = 0 
+faction_language_polish = faction_language_finnish + 1 
+faction_language_serbian = faction_language_finnish + 2  
+faction_language_welsh = faction_language_finnish + 3  
+faction_language_german = faction_language_finnish + 4  
+faction_language_bulgarian = faction_language_finnish + 5  
+faction_language_rus = faction_language_finnish + 6  
+faction_language_danish = faction_language_finnish + 7  
+faction_language_norwegian = faction_language_finnish + 8  
+faction_language_swedish = faction_language_finnish + 9  
+faction_language_baltic = faction_language_finnish + 10 
+faction_language_arab = faction_language_finnish + 11  
+faction_language_greek = faction_language_finnish + 12  
+faction_language_spanish = faction_language_finnish + 13  
+faction_language_portuguese = faction_language_finnish + 14  
+faction_language_italian = faction_language_finnish + 15  
+faction_language_gaelic = faction_language_finnish + 16  
+faction_language_armenian = faction_language_finnish + 17  
+faction_language_turkish = faction_language_finnish + 18  
+faction_language_scottish = faction_language_finnish + 19  
+faction_language_english = faction_language_finnish + 20  
+faction_language_french = faction_language_finnish + 21  
+faction_language_hungarian = faction_language_finnish + 22  
+faction_language_czech = faction_language_finnish + 23  
+faction_language_mongol = faction_language_finnish + 24  
+faction_language_mixed_euro = faction_language_finnish + 25  
+faction_language_custom = faction_language_finnish + 26  
+faction_language_end = faction_language_finnish + 27 
+
+slot_faction_rebel_original_faction = 136
+
+culture_titles_male_begin = "str_ee_culture_title_finnish"
+# culture_titles_female_begin = "str_faction_title_female_player"
+
+language_titles_male_begin = "str_ee_language_title_finnish"
+# language_titles_female_begin = "str_faction_title_female_player"
+
+faction_languages_begin = faction_language_finnish
+faction_languages_end = faction_language_end
+
+culture_titles_king_male_begin = "str_ee_culture_title_king_finnish"
+# culture_titles_female_begin = "str_faction_title_king_female_player"
+
+language_titles_king_male_begin = "str_ee_language_title_king_finnish"
+# language_titles_female_begin = "str_faction_title_king_female_player"
+####################################
+
+
+
 ########## NEW v3.0 - about 80 slots per item is enough
 #diplomacy
-slot_faction_truce_days_with_factions_begin             = 120
-slot_faction_provocation_days_with_factions_begin         = 200
-slot_faction_war_damage_inflicted_on_factions_begin     = 280 #tom 210
-slot_faction_sum_advice_about_factions_begin             = 360 #tom 260  
+slot_faction_truce_days_with_factions_begin             = 160
+slot_faction_provocation_days_with_factions_begin         = 220
+slot_faction_war_damage_inflicted_on_factions_begin     = 300 #tom 210
+slot_faction_sum_advice_about_factions_begin             = 380 #tom 260  
 ##########
+
+dplmc_slot_faction_attitude_begin             = 460 #Diplomacy 3.2 new line
+
 #tom - for lance recruitment
 merc_cost = 1000
 
@@ -691,6 +793,23 @@ dplmc_slot_center_last_attacker               = dplmc_slot_center_ex_lord + 4 #L
 ################## NEW v2.1 - player village donations
 slot_center_donations = 285
 ####################################
+
+dplmc_slot_party_mission_diplomacy            = 286
+dplmc_slot_center_taxation                    = 287
+
+##diplomacy begin 
+# recruiter kit begin
+dplmc_slot_party_recruiter_needed_recruits = 288           # Amount of recruits the employer ordered.
+dplmc_slot_party_recruiter_origin = 289                    # Walled center from where the recruiter was hired.
+dplmc_slot_village_reserved_by_recruiter = 290            # This prevents recruiters from going to villages targeted by other recruiters.
+dplmc_slot_party_recruiter_needed_recruits_faction = 291   # Alkhadias Master, you forgot this one from the PM you sent me :D
+dplmc_slot_party_recruiter_recruitment_type = 292
+
+dplmc_spt_recruiter     = 22
+# recruiter kit end
+
+
+
 
 
 ############ NEW v3.2 - slots 295 to 309 is reserved for floris bank
@@ -2093,16 +2212,6 @@ ACHIEVEMENT_IRON_BEAR = 72,
 ACHIEVEMENT_LEGENDARY_RASTAM = 73,
 ACHIEVEMENT_SVAROG_THE_MIGHTY = 74,
 
-##diplomacy begin 
-# recruiter kit begin
-dplmc_slot_party_recruiter_needed_recruits = 233           # Amount of recruits the employer ordered.
-dplmc_slot_party_recruiter_origin = 234                    # Walled center from where the recruiter was hired.
-dplmc_slot_village_reserved_by_recruiter = 235            # This prevents recruiters from going to villages targeted by other recruiters.
-dplmc_slot_party_recruiter_needed_recruits_faction = 236   # Alkhadias Master, you forgot this one from the PM you sent me :D
-dplmc_slot_party_recruiter_recruitment_type = 237
-
-dplmc_spt_recruiter     = 22
-# recruiter kit end
 dplmc_npc_mission_war_request                 = 9
 dplmc_npc_mission_alliance_request            = 10
 dplmc_npc_mission_spy_request                 = 11
@@ -2113,18 +2222,10 @@ dplmc_npc_mission_prisoner_exchange           = 15
 dplmc_npc_mission_defensive_request           = 16
 dplmc_npc_mission_trade_request               = 17
 dplmc_npc_mission_nonaggression_request       = 18
-dplmc_slot_party_mission_diplomacy            = 300
-dplmc_slot_center_taxation                    = 400
 dplmc_spt_spouse                              = 24
 dplmc_spt_gift_caravan                        = 23
 dplmc_spt_messenger                           = 25 #no prefix since its outcommented in native
 spt_patrol                                    = 7 #no prefix since its outcommented in native
-dplmc_slot_faction_policy_time                      = 200 
-dplmc_slot_faction_centralization                   = 201        
-dplmc_slot_faction_aristocracy                      = 202        
-dplmc_slot_faction_serfdom                          = 203 
-dplmc_slot_faction_quality                          = 204 
-dplmc_slot_faction_patrol_time                = 205
 ##diplomacy end 
 
 # rafi constants
@@ -3801,7 +3902,6 @@ dplmc_treaty_alliance_days_half_done = (dplmc_treaty_alliance_days_initial + dpl
 
 ##diplomacy end+
 
-dplmc_slot_faction_attitude_begin             = 160 #Diplomacy 3.2 new line
 #########################################################
 
 
@@ -3834,98 +3934,6 @@ npc_cultures_end_2 = "fac_culture_player"
 
 
 
-
-################## NEW v2.1 - Civil War
-enhanced_factions_begin = fac_enhanced_kingdom_1
-enhanced_factions_end = fac_kingdoms_end
-
-slot_faction_language = 265    ### used to set a civil war faction nomenclature
-
-faction_language_finnish = 0 
-faction_language_polish = faction_language_finnish + 1 
-faction_language_serbian = faction_language_finnish + 2  
-faction_language_welsh = faction_language_finnish + 3  
-faction_language_german = faction_language_finnish + 4  
-faction_language_bulgarian = faction_language_finnish + 5  
-faction_language_rus = faction_language_finnish + 6  
-faction_language_danish = faction_language_finnish + 7  
-faction_language_norwegian = faction_language_finnish + 8  
-faction_language_swedish = faction_language_finnish + 9  
-faction_language_baltic = faction_language_finnish + 10 
-faction_language_arab = faction_language_finnish + 11  
-faction_language_greek = faction_language_finnish + 12  
-faction_language_spanish = faction_language_finnish + 13  
-faction_language_portuguese = faction_language_finnish + 14  
-faction_language_italian = faction_language_finnish + 15  
-faction_language_gaelic = faction_language_finnish + 16  
-faction_language_armenian = faction_language_finnish + 17  
-faction_language_turkish = faction_language_finnish + 18  
-faction_language_scottish = faction_language_finnish + 19  
-faction_language_english = faction_language_finnish + 20  
-faction_language_french = faction_language_finnish + 21  
-faction_language_hungarian = faction_language_finnish + 22  
-faction_language_czech = faction_language_finnish + 23  
-faction_language_mongol = faction_language_finnish + 24  
-faction_language_mixed_euro = faction_language_finnish + 25  
-faction_language_custom = faction_language_finnish + 26  
-faction_language_end = faction_language_finnish + 27 
-
-slot_faction_rebel_original_faction = 266
-
-culture_titles_male_begin = "str_ee_culture_title_finnish"
-# culture_titles_female_begin = "str_faction_title_female_player"
-
-language_titles_male_begin = "str_ee_language_title_finnish"
-# language_titles_female_begin = "str_faction_title_female_player"
-
-faction_languages_begin = faction_language_finnish
-faction_languages_end = faction_language_end
-
-culture_titles_king_male_begin = "str_ee_culture_title_king_finnish"
-# culture_titles_female_begin = "str_faction_title_king_female_player"
-
-language_titles_king_male_begin = "str_ee_language_title_king_finnish"
-# language_titles_female_begin = "str_faction_title_king_female_player"
-
-####################################
-
-
-
-
-
-
-############### NEW v2.1 - Faction statistics
-kingdoms_begin_1 = fac_player_faction
-kingdoms_end_1 = fac_papacy
-
-kingdoms_begin_2 = fac_papacy
-kingdoms_end_2 = fac_enhanced_kingdom_1
-
-kingdoms_begin_3 = fac_enhanced_kingdom_1
-kingdoms_end_3 = fac_enhanced_kingdom_21
-
-kingdoms_begin_4 = fac_enhanced_kingdom_21
-kingdoms_end_4 = fac_kingdoms_end
-
-slot_faction_days_active = 270
-slot_faction_battles_won = 271
-slot_faction_battles_lost = 272
-
-slot_faction_enemies_killed = 273
-slot_faction_enemies_wounded = 274
-slot_faction_enemies_captured = 275
-
-slot_faction_troops_lost_killed = 276
-slot_faction_troops_lost_wounded = 277
-slot_faction_troops_lost_captured = 278
-
-slot_faction_troops_deployed = 279
-
-slot_faction_lords_lost_battle = 280
-slot_faction_lords_lost_assassination = 281
-slot_faction_lords_lost_execution = 282
-slot_faction_lords_lost_defection = 283
-####################################
 
 
 

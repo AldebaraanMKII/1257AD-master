@@ -1800,12 +1800,13 @@ triggers = [
           (try_end),
         (try_end),
         
-        (try_for_range, ":center",walled_centers_begin, walled_centers_end),
+        (assign, ":end", walled_centers_end),  ####### NEW v3.2
+        (try_for_range, ":center", walled_centers_begin, ":end"),
           (store_faction_of_party, ":faction_no", ":center"),
           (eq, "$crusader_faction", ":faction_no"), #player faction
           (assign, "$crusade_start", ":center"),
           (store_num_parties_of_template, ":num_parties", "pt_crusaders"),
-          (lt, ":num_parties",1),
+          (lt, ":num_parties", 1),
           (set_spawn_radius, 5),
           (spawn_around_party, "$crusade_start", "pt_crusaders"),
           (assign, ":party_id", reg0),        
@@ -1816,6 +1817,7 @@ triggers = [
           (str_store_faction_name_link, s2, "$crusade_target_faction"),
           (display_message, "@Crusaders are going to gather near {s1} the start their crusade against {s2}."),
           (assign, ":center", -1),
+          (assign, ":end", -1),  ####### NEW v3.2
         (try_end),  
     ],
     [

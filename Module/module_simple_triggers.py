@@ -7948,28 +7948,25 @@ simple_triggers = [
      (assign, "$g_assassination_attempt_cur_npc", active_npcs_begin),
  (try_end),
  
- (try_begin),   
+ (try_begin),   ########## NEW v3.2 - fixed player being "framed" for a king's assassination
    (troop_slot_eq, "$g_assassination_attempt_cur_npc", slot_troop_is_alive, 1),
    (troop_slot_eq, "$g_assassination_attempt_cur_npc", slot_troop_occupation, slto_kingdom_hero),
-   (store_faction_of_troop, ":troop_faction", "$g_assassination_attempt_cur_npc"),
-   (try_begin),
-     (call_script, "script_cf_troop_get_random_enemy_lord", "$g_assassination_attempt_cur_npc"),
-     (gt, reg0, 0), 
-       (assign, ":enemy_lord", reg0),
-         (neg|faction_slot_eq, ":troop_faction", slot_faction_leader, "$g_assassination_attempt_cur_npc"),
-         (call_script, "script_rand", 0, 1000),
-         (lt, reg0, "$g_lord_death_chance_assassination"), ############ Lord chance
-           (call_script, "script_rand", 0, 100),
-           (try_begin),
-             (lt, reg0, 35), ############ 35% chance of discovery
-               (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 1, ":enemy_lord"),
-           (else_try),
-             (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 0, 0),
-           (try_end),
-   (else_try),
-     # (call_script, "script_cf_troop_get_random_enemy_lord", "$g_assassination_attempt_cur_npc"),
-     # (gt, reg0, 0), 
-       # (assign, ":enemy_lord", reg0),
+   (call_script, "script_cf_troop_get_random_enemy_lord", "$g_assassination_attempt_cur_npc"),
+   (gt, reg0, 0), 
+     (assign, ":enemy_lord", reg0),
+     (store_faction_of_troop, ":troop_faction", "$g_assassination_attempt_cur_npc"),
+     (try_begin),
+       (neg|faction_slot_eq, ":troop_faction", slot_faction_leader, "$g_assassination_attempt_cur_npc"),
+       (call_script, "script_rand", 0, 1000),
+       (lt, reg0, "$g_lord_death_chance_assassination"), ############ Lord chance
+         (call_script, "script_rand", 0, 100),
+         (try_begin),
+           (lt, reg0, 35), ############ 35% chance of discovery
+             (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 1, ":enemy_lord"),
+         (else_try),
+           (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 0, 0),
+         (try_end),
+     (else_try),
        (faction_slot_eq, ":troop_faction", slot_faction_leader, "$g_assassination_attempt_cur_npc"),
        (call_script, "script_rand", 0, 1000),
        (lt, reg0, "$g_lord_death_chance_assassination_king"),  ############ King chance
@@ -7978,9 +7975,9 @@ simple_triggers = [
            (lt, reg0, 60), ############ 60% chance of discovery
              (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 1, ":enemy_lord"),
          (else_try),
-           (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 0, 0),
+           (call_script, "script_kill_lord_assassination", "$g_assassination_attempt_cur_npc", 0, -1),
          (try_end),
-   (try_end),
+     (try_end),
  (try_end),
  ################# proceed to the next npc
  (val_add, "$g_assassination_attempt_cur_npc", 1),
