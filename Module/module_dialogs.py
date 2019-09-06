@@ -7040,15 +7040,15 @@ dialogs = [
     [
       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
       (eq, "$g_encountered_party_type", spt_patrol), ######## NEW v3.3
-      (store_faction_of_troop, ":player_faction", "trp_player"),
-      (store_faction_of_party, ":party_faction", "$g_encountered_party"),
-      (eq, ":party_faction", ":player_faction"),
-      (party_get_slot, ":target_party", "$g_encountered_party", slot_party_ai_object),
-      (str_store_party_name, s6, ":target_party"),
+      # (store_faction_of_troop, ":player_faction", "trp_player"),
+      (eq, "$g_encountered_party_faction", "$players_kingdom"),
+	  (neg|party_slot_eq, "$g_encountered_party", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),  ########## NEW v3.3
+      (party_get_slot, ":target_party", "$g_encountered_party", slot_party_ai_object),    
       (party_slot_ge, ":target_party", slot_town_lord, 0),
       (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
-      (neq, ":town_lord", "trp_player"),
-      (neg|faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
+      # (neq, ":town_lord", "trp_player"),
+      # (neg|faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),   
+      (str_store_party_name, s6, ":target_party"),
       (str_store_troop_name, s7, ":town_lord"),
     ], "Greetings, Sire. We are patrolling {s6} under the orders of {s7}.", "dplmc_patrol_talk_no_action", []
   ],
@@ -7063,16 +7063,17 @@ dialogs = [
     [
       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
       (eq, "$g_encountered_party_type", spt_patrol), ######## NEW v3.3
-      (store_faction_of_troop, ":player_faction", "trp_player"),
-      (store_faction_of_party, ":party_faction", "$g_encountered_party"),
-      (eq, ":party_faction", ":player_faction"),
+      # (store_faction_of_troop, ":player_faction", "trp_player"),
+      # (eq, "$g_encountered_party_faction", ":player_faction"),
       (party_get_slot, ":target_party", "$g_encountered_party", slot_party_ai_object),
+      # (party_slot_ge, ":target_party", slot_town_lord, 0),
+      # (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
+      # (this_or_next|eq, ":town_lord", "trp_player"),
+      # (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
+      # (str_store_troop_name, s7, ":town_lord"),	  
+	  (party_slot_eq, "$g_encountered_party", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),  ########## NEW v3.3
+      # (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
       (str_store_party_name, s6, ":target_party"),
-      (party_slot_ge, ":target_party", slot_town_lord, 0),
-      (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
-      (this_or_next|eq, ":town_lord", "trp_player"),
-      (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
-      # (str_store_troop_name, s7, ":town_lord"),
     ], "Greetings, Sire. We are patrolling {s6}. Do you have new orders?", "dplmc_patrol_talk", []
   ],
   
@@ -7208,18 +7209,18 @@ dialogs = [
    (call_script, "script_make_kingdom_hostile_to_player", "$g_encountered_party_faction", -3),
    ]],
 
-# [anyone, "start", 
-    # [
-      # (eq, "$g_encountered_party_type",spt_patrol),
-      # (party_is_active, "p_main_party"), #tom
-      # (this_or_next | eq, "$g_encountered_party_faction", "$players_kingdom"),
-      # (eq, "$g_encountered_party_faction", "fac_player_faction"),      
-    # ],
-    # "Greetings, friend.", "close_window",
-    # [
-      # (assign, "$g_leave_encounter",1)
-    # ]
-  # ],
+[anyone, "start", 
+    [
+      (eq, "$g_encountered_party_type",spt_patrol),
+      (party_is_active, "p_main_party"), #tom
+      (this_or_next | eq, "$g_encountered_party_faction", "$players_kingdom"),
+      (eq, "$g_encountered_party_faction", "fac_player_faction"),      
+    ],
+    "Greetings, friend.", "close_window",
+    [
+      (assign, "$g_leave_encounter",1)
+    ]
+  ],
 
 [anyone, "start", 
     [
@@ -8426,14 +8427,12 @@ dialogs = [
    
    [anyone, "dplmc_constable_overview",
    [
-
     (assign, ":garrison_size", 0),
     (assign, ":field_size", 0),
     (assign, ":patrol_size", 0),
     (assign, ":castle_count", 0),
     (assign, ":town_count", 0),
     (try_for_parties, ":selected_party"),
-         
       (try_begin),
         (this_or_next|party_slot_eq, ":selected_party", slot_party_type, spt_town),
         (party_slot_eq, ":selected_party", slot_party_type, spt_castle),
@@ -8458,16 +8457,17 @@ dialogs = [
           (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
           (val_add, ":field_size", ":stack_size"),
         (try_end),
-      # (else_try),
-        # (party_slot_eq, ":selected_party", slot_party_type, spt_patrol),
+      (else_try),
+        (party_slot_eq, ":selected_party", slot_party_type, spt_patrol),
         # (store_faction_of_troop, ":player_faction", "trp_player"),
         # (store_faction_of_party, ":party_faction", ":selected_party"),
         # (eq, ":party_faction", ":player_faction"),
-        # (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
-        # (try_for_range, ":i_stack", 0, ":num_stacks"),
-          # (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
-          # (val_add, ":patrol_size", ":stack_size"),
-        # (try_end),
+        (party_slot_eq, ":selected_party", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),  ########## NEW v3.3
+        (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
+        (try_for_range, ":i_stack", 0, ":num_stacks"),
+          (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
+          (val_add, ":patrol_size", ":stack_size"),
+        (try_end),
       (try_end),     
 
     (try_end),   
@@ -9356,7 +9356,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [],
 "Yes.", "dplmc_constable_pretalk",
 [
-(call_script, "script_dplmc_send_patrol_party", "$current_town", "$diplomacy_var", "p_temp_party_2", "$players_kingdom", "trp_player"),
+(call_script, "script_dplmc_send_patrol_party", "$current_town", "$diplomacy_var", "p_temp_party_2", "$players_kingdom", "trp_dplmc_constable"),  ####### NEW v3.3 - changed player to constable since player is 0 and by default all slots have 0
 (party_clear, "p_temp_party_2"),
 ]
 ],
@@ -9474,7 +9474,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
 (store_current_hours, ":current_hours"),
 (faction_set_slot, "fac_player_faction", dplmc_slot_faction_patrol_time, ":current_hours"),
-(call_script, "script_dplmc_send_patrol", "$current_town", "$diplomacy_var", "$temp", "$players_kingdom", "trp_player"),
+(call_script, "script_dplmc_send_patrol", "$current_town", "$diplomacy_var", "$temp", "$players_kingdom", "trp_dplmc_constable"), ####### NEW v3.3 - changed player to constable since player is 0 and by default all slots have 0
 ]
 ],
 
@@ -9498,7 +9498,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
 (store_repeat_object, ":party_no"),
 (party_slot_eq, ":party_no", slot_party_type, spt_patrol),
-(party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_player"),
+########## NEW v3.3 - fixed player being able to change target for any patrol in the map
+# (store_faction_of_troop, ":player_faction", "trp_player"),
+# (store_faction_of_party, ":party_faction", ":party_no"),
+# (eq, ":party_faction", ":player_faction"),
+# (party_get_slot, ":target_party", ":party_no", slot_party_ai_object),
+# (str_store_party_name, s6, ":target_party"),
+# (party_slot_ge, ":target_party", slot_town_lord, 0),
+# (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
+# (this_or_next|eq, ":town_lord", "trp_player"),
+# (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
+(party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
+####################
 (str_store_party_name, s11, ":party_no"),
 ],
 "{!}{s11}.", "dplmc_constable_patrol_change_target_ask",
@@ -9570,7 +9581,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
 (store_repeat_object, ":party_no"),
 (party_slot_eq, ":party_no", slot_party_type, spt_patrol),
-(party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_player"),
+########## NEW v3.3 - fixed player being able to change target for any patrol in the map
+# (store_faction_of_troop, ":player_faction", "trp_player"),
+# (store_faction_of_party, ":party_faction", ":party_no"),
+# (eq, ":party_faction", ":player_faction"),
+# (party_get_slot, ":target_party", ":party_no", slot_party_ai_object),
+# (str_store_party_name, s6, ":target_party"),
+# (party_slot_ge, ":target_party", slot_town_lord, 0),
+# (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
+# (this_or_next|eq, ":town_lord", "trp_player"),
+# (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
+(party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
+####################
 (str_store_party_name, s11, ":party_no"),
 ],
 "{!}{s11}.", "dplmc_constable_patrol_to_center_target_ask",
@@ -9642,7 +9664,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
 (store_repeat_object, ":party_no"),
 (party_slot_eq, ":party_no", slot_party_type, spt_patrol),
-(party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_player"),
+########## NEW v3.3 - fixed player being able to change target for any patrol in the map
+# (store_faction_of_troop, ":player_faction", "trp_player"),
+# (store_faction_of_party, ":party_faction", ":party_no"),
+# (eq, ":party_faction", ":player_faction"),
+# (party_get_slot, ":target_party", ":party_no", slot_party_ai_object),
+# (str_store_party_name, s6, ":target_party"),
+# (party_slot_ge, ":target_party", slot_town_lord, 0),
+# (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
+# (this_or_next|eq, ":town_lord", "trp_player"),
+# (faction_slot_eq, ":player_faction", slot_faction_leader, "trp_player"),
+(party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
+####################
 (str_store_party_name, s11, ":party_no"),
 ],
 "{!}{s11}.", "dplmc_constable_patrol_disband_confirm_ask",

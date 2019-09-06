@@ -14398,18 +14398,18 @@ game_menus = [ #
            (assign, "$g_mt_mode", tcm_default),
            (store_faction_of_party, ":town_faction", "$current_town"),
 
-           (try_begin),
-             (neq, ":town_faction", "fac_player_supporters_faction"),
+           (try_begin),  ######### NEW v3.3 - fixed troops not changing when the player took control of a fief
+             # (neq, ":town_faction", "fac_player_supporters_faction"),
              (faction_get_slot, ":troop_prison_guard", "$g_encountered_party_faction", slot_faction_prison_guard_troop),
              (faction_get_slot, ":troop_castle_guard", "$g_encountered_party_faction", slot_faction_castle_guard_troop),
              (faction_get_slot, ":tier_2_troop", ":town_faction", slot_faction_tier_2_troop),
              (faction_get_slot, ":tier_3_troop", ":town_faction", slot_faction_tier_3_troop),
-           (else_try),
-             (party_get_slot, ":town_original_faction", "$current_town", slot_center_original_faction),
-             (faction_get_slot, ":troop_prison_guard", ":town_original_faction", slot_faction_prison_guard_troop),
-             (faction_get_slot, ":troop_castle_guard", ":town_original_faction", slot_faction_castle_guard_troop),
-             (faction_get_slot, ":tier_2_troop", ":town_original_faction", slot_faction_tier_2_troop),
-             (faction_get_slot, ":tier_3_troop", ":town_original_faction", slot_faction_tier_3_troop),
+           # (else_try),
+             # (party_get_slot, ":town_original_faction", "$current_town", slot_center_original_faction),
+             # (faction_get_slot, ":troop_prison_guard", ":town_original_faction", slot_faction_prison_guard_troop),
+             # (faction_get_slot, ":troop_castle_guard", ":town_original_faction", slot_faction_castle_guard_troop),
+             # (faction_get_slot, ":tier_2_troop", ":town_original_faction", slot_faction_tier_2_troop),
+             # (faction_get_slot, ":tier_3_troop", ":town_original_faction", slot_faction_tier_3_troop),
            (try_end),
              (try_begin), #think about this, should castle guard have to go nearby fire too? If he do not go, killing 2 armored guard is too hard for player. For now he goes too.
                #if guards have not gone to some other important happening at nearby villages, then spawn 4 guards. (example : fire)
@@ -34060,15 +34060,23 @@ game_menus = [ #
         
         #Adding guards
         (store_faction_of_party, ":center_faction", ":center_no"),
-        # (faction_get_slot, ":guard_troop", ":center_faction", slot_faction_castle_guard_troop), #### bugfix
-        
-        ############# NEW v1.8 - checking center culture instead of faction culture  
-        (party_get_slot, ":center_culture", ":center_no", slot_center_culture),
-        (faction_get_slot, ":guard_troop", ":center_culture", slot_faction_castle_guard_troop), #### bugfix
+        # (faction_get_slot, ":guard_troop", ":center_faction", slot_faction_castle_guard_troop), #### bugfix  
+		
+		############## NEW v3.3 - castle guards are taken from the current fief owner's culture
         (try_begin),
-          (le, ":guard_troop", 0),
+          (party_slot_ge, ":center_no", slot_town_lord, 0), 
+            (party_get_slot, ":town_lord", ":center_no", slot_town_lord), 
+		    (troop_get_slot, ":town_lord_culture", ":town_lord", slot_troop_cur_culture), 
+		    (faction_get_slot, ":guard_troop", ":town_lord_culture", slot_faction_castle_guard_troop), 
+        (else_try),
+          # (le, ":guard_troop", 0),
           (assign, ":guard_troop", "trp_euro_spearman_3"),
         (try_end),
+        ############################
+		
+        ############ NEW v1.8 - checking center culture instead of faction culture  
+        # (party_get_slot, ":center_culture", ":center_no", slot_center_culture),
+        # (faction_get_slot, ":guard_troop", ":center_culture", slot_faction_castle_guard_troop), #### bugfix
         (set_visitor, 6, ":guard_troop"),
         (set_visitor, 7, ":guard_troop"),
         (assign, ":cur_pos", 16),

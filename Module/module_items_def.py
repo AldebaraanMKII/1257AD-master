@@ -269,9 +269,9 @@ andalusian_factions = [fac_culture_andalus]
 mamluk_factions = [fac_culture_mamluke, fac_culture_anatolian]
 arab_factions = [fac_culture_mamluke, fac_culture_anatolian, fac_culture_andalus, fac_culture_marinid]
 latin_factions = iberian_factions + italy_factions
-all_euro_factions = euro_factions + latin_factions + nordic_factions + gaelic_factions
 crusader_factions = [fac_kingdom_23, fac_culture_templar, fac_culture_hospitaller, fac_culture_teutonic, fac_culture_antioch, fac_culture_tripoli, fac_culture_ibelin, fac_culture_jerusalem]
-
+all_euro_factions = euro_factions + latin_factions + nordic_factions + gaelic_factions  ####### NEW v3.3
+anatolian_factions = [fac_culture_serbian, fac_culture_balkan, fac_culture_byzantium, fac_culture_anatolian]  ####### NEW v3.3 
 ## CC
 missile_distance_trigger = [
   (ti_on_missile_hit, 

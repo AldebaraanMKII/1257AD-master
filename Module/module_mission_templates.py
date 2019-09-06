@@ -3695,7 +3695,6 @@ mission_templates = [
   ("arena_melee_fight",mtf_arena_fight,-1,
   # ("arena_melee_fight",mtf_battle_mode,charge,
    "You enter a melee fight in the arena.",
-    [ 
     [
       (0,mtef_visitor_source|mtef_team_0,af_override_all,aif_start_alarmed,1,[itm_practice_bow,itm_practice_arrows,itm_practice_horse]),
       (1,mtef_visitor_source|mtef_team_0,af_override_all,aif_start_alarmed,1,[itm_heavy_practice_sword]),
@@ -3770,9 +3769,8 @@ mission_templates = [
 
       (56, mtef_visitor_source|mtef_team_0, af_override_all, aif_start_alarmed, 1, [itm_practice_sword, itm_practice_shield, itm_padded_cloth, itm_footman_helmet]),
       (57, mtef_visitor_source|mtef_team_0, af_override_all, aif_start_alarmed, 1, [itm_practice_sword, itm_practice_shield, itm_padded_cloth, itm_footman_helmet]),
-    ],
-    tournament_triggers,
-    
+    ], 
+	tournament_triggers,
   ),
 
   ("arena_challenge_fight",mtf_arena_fight|mtf_commit_casualties,-1,
