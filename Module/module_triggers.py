@@ -2493,9 +2493,9 @@ triggers = [
       (try_end),
     (try_end),
 	
-    (try_begin),    
-      (call_script, "script_assign_lord_face_type"),    ###### assign face types to lords  
-	(try_end),
+    # (try_begin),    
+      # (call_script, "script_assign_lord_face_type"),    ###### assign face types to lords  
+	# (try_end),
 	
     ############ This will set the religion of faction that have leaders of a different religion
     (faction_set_slot, "fac_kingdom_3", slot_faction_religion, religion_muslim),  ### Golden Horde - Berke Khan

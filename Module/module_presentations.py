@@ -10677,6 +10677,18 @@ presentations = [
           (this_or_next|game_key_clicked, gk_everyone_hear),
           (game_key_clicked, gk_reverse_order_group),
           (call_script, "script_update_order_panel_checked_classes"),
+########################### NEW v3.3
+          (try_begin),
+            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
+            (start_presentation, "prsnt_killcount"),
+          (else_try),
+            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 2),
+            (start_presentation, "prsnt_troop_ratio_bar"),
+          (else_try),
+            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 3),
+            (start_presentation, "prsnt_killcount_and_troop_ratio_bar"),
+          (try_end),
+######################################################
         (try_end),
         (try_begin),
           (this_or_next|game_key_clicked, gk_order_1),
@@ -10688,6 +10700,18 @@ presentations = [
           (get_player_agent_no, ":player_agent"),
           (agent_get_team, ":player_team", ":player_agent"),
           (call_script, "script_update_order_panel", ":player_team"),
+########################### NEW v3.3
+          (try_begin),
+            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
+            (start_presentation, "prsnt_killcount"),
+          (else_try),
+            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 2),
+            (start_presentation, "prsnt_troop_ratio_bar"),
+          (else_try),
+            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 3),
+            (start_presentation, "prsnt_killcount_and_troop_ratio_bar"),
+          (try_end),
+######################################################
         (try_end),
         (try_begin),
           (gt, ":cur_time", 200),
@@ -12124,6 +12148,7 @@ presentations = [
 
         (this_or_next|eq, ":party_no", "p_main_party"),
         (this_or_next|eq, ":party_no", "p_wagon_train"), #### NEW v1.0 - wagon trains
+        (this_or_next|party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),  ########## NEW v3.3 - fixed patrols not appearing in budget report
         (eq, ":garrison_troop", 1),
         (assign, ":total_wage", 0),
         (party_get_num_companion_stacks, ":num_stacks", ":party_no"),

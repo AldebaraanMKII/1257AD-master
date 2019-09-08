@@ -1276,6 +1276,9 @@ slot_troop_death_assassination_found_perpetrators = 179
 slot_troop_face_type = 180 ####### 1 = european, 2 = arab/turk, 3 = asian/mongol
 
 slot_troop_type_num_in_town = 181
+
+slot_troop_face_key = 182 ########### NEW v3.3 
+
 ###################################################################################
 # AutoLoot: Modified Constants
 # Most of these are slot definitions, make sure they do not clash with your mod's other slot usage

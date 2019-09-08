@@ -825,7 +825,7 @@ simple_triggers = [
 #Increasing debts to heroes by 1% (once a week)
 #Adding net incomes to centers (once a week) ######tom: this system is too unpredictable, do not do
 #### (168,
-(0.195,  #################### once a week for each of the 558 active npcs + 300 random lords
+(0.237,  #################### once a week for each of the 558 active npcs + 150 random lords
 [
  ######### (try_for_range, ":center_no", centers_begin, centers_end),
   ######### (party_get_slot, ":town_lord", ":center_no", slot_town_lord),
@@ -1178,7 +1178,7 @@ simple_triggers = [
 ################## NEW v1.8 - https://forums.taleworlds.com/index.php?topic=6575.msg9041351#msg9041351
 #### Give some xp to hero parties
 #### (24,
-(0.028,   ################### Once a day for each of the 858 lord parties
+(0.033,   ################### Once a day for each of the 708 lord parties
 [ 
  (try_begin),
    (eq, "$g_party_npc_trainer", 1),
@@ -1461,7 +1461,7 @@ simple_triggers = [
 ################## NEW v1.8 - https://forums.taleworlds.com/index.php?topic=6575.msg9041351#msg9041351
 ################## splitted in half - this is for npcs
 #### (24,
-(0.028,  ############ once a day for each of the 858 lords
+(0.033,  ############ once a day for each of the 708 lords
 [
  (try_begin),
    (lt, "$g_recalculate_controversy_cur_npc", active_npcs_begin), 
@@ -2089,7 +2089,7 @@ simple_triggers = [
   
 ################## NEW v1.8 - https://forums.taleworlds.com/index.php?topic=6575.msg9041351#msg9041351
 ###################### init_ai_calculation was split into 4 parts - first part is active npcs - execute script 5 times
-(0.029,  ################### roughly once every 5 hours for each of the 858 active npcs
+(0.035,  ################### roughly once every 5 hours for each of the 708 active npcs
 [
  (try_begin),
    (lt, "$g_init_ai_calculation_cur_npc", active_npcs_begin), 
@@ -2292,7 +2292,7 @@ simple_triggers = [
 #### Reset hero quest status
 #### Change hero relation
 #### (36,
-(0.042,   #################### once every 36 hours for each of the 858 active NPCs
+(0.050,   #################### once every 36 hours for each of the 708 active NPCs
 [
  (try_begin),
    (lt, "$g_reset_quest_status_heroes_cur_npc", active_npcs_begin), 
@@ -2965,7 +2965,7 @@ simple_triggers = [
 #### Respawn hero party after kingdom hero is released from captivity.
 #### (24*7, ######48,
 #### (168
-(0.084, ###################### once every 3 days for each of the 858 active NPCs
+(0.101, ###################### once every 3 days for each of the 708 active NPCs
 [
  (try_begin),
    (lt, "$g_respawn_party_after_release_cur_npc", active_npcs_begin), 
@@ -7936,7 +7936,7 @@ simple_triggers = [
 
   
 ######################### New v2.1 - LORD ASSASSINATION ATTEMPTS
-(0.084,   ############################# roughly once every 3 days for each of the 858 lords
+(0.101,   ############################# roughly once every 3 days for each of the 708 lords
 [
  (try_begin),
    (lt, "$g_assassination_attempt_cur_npc", active_npcs_begin), 
@@ -8564,7 +8564,7 @@ simple_triggers = [
 
 
 ####################### Remove dead lords from notes 
-(2.51,   ##### once every 75 days for each of the 858 lords
+(2.54,   ##### once every 75 days for each of the 708 lords
 [
  (try_begin),
    (lt, "$g_remove_from_notes_cur_npc", active_npcs_begin), 
@@ -8589,7 +8589,7 @@ simple_triggers = [
 
 
 ####################### NEW v2.2 - Lords get out of defeated factions ASAP
-(0.1958,   ###### once a week for every of the 858 lords
+(0.2372,   ###### once a week for every of the 708 lords
 [
  (try_begin),
    (lt, "$g_leave_defeated_faction_cur_lord", lords_begin), 

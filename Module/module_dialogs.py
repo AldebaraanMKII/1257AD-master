@@ -546,8 +546,36 @@ dialogs = [
 
 
 
+   
+############################## NEW v3.3 - crusader/jihadist dialogues
+[anyone, "start", [
+  (eq, "$players_kingdom", "$g_encountered_party_faction"),
+  (party_get_template_id, ":template", "$g_encountered_party"),
+  (is_between, ":template", "pt_crusader_raiders_iberian", "pt_jihadist_raiders"),
+  ],
+  "We came here to destroy those Saracen dogs!.", "encounter_crusader_friendly",[]],
 
+[anyone|plyr, "encounter_crusader_friendly", [
+  ],
+  "Very good!", "close_window",
+[ 
+  (assign, "$g_leave_encounter", 1), 
+  ]],
+###################
+[anyone, "start", [
+  (eq, "$players_kingdom", "$g_encountered_party_faction"),
+  (party_get_template_id, ":template", "$g_encountered_party"),
+  (eq, ":template", "pt_jihadist_raiders"),
+  ],
+  "We came here to destroy those infidel pigs!.", "encounter_jihadist_friendly",[]],
 
+[anyone|plyr, "encounter_jihadist_friendly", [
+  ],
+  "Very good!", "close_window",
+[ 
+  (assign, "$g_leave_encounter", 1), 
+  ]],
+##########################################################################
 
 
 
