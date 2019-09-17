@@ -317,6 +317,9 @@ enhanced_factions_end = fac_kingdoms_end
 
 slot_faction_language = 135    ### used to set a civil war faction nomenclature
 
+hero_titles_begin = "str_hero_titles_none"
+hero_specdesc_begin = "str_hero_specdesc_none"
+
 faction_language_finnish = 0 
 faction_language_polish = faction_language_finnish + 1 
 faction_language_serbian = faction_language_finnish + 2  
@@ -343,8 +346,9 @@ faction_language_hungarian = faction_language_finnish + 22
 faction_language_czech = faction_language_finnish + 23  
 faction_language_mongol = faction_language_finnish + 24  
 faction_language_mixed_euro = faction_language_finnish + 25  
-faction_language_custom = faction_language_finnish + 26  
-faction_language_end = faction_language_finnish + 27 
+faction_language_cuman = faction_language_finnish + 26  ########### NEW v3.3
+faction_language_custom = faction_language_finnish + 27  
+faction_language_end = faction_language_finnish + 28 
 
 slot_faction_rebel_original_faction = 136
 
@@ -364,7 +368,11 @@ language_titles_king_male_begin = "str_ee_language_title_king_finnish"
 # language_titles_female_begin = "str_faction_title_king_female_player"
 ####################################
 
-
+########### NEW v3.3
+slot_faction_heir_1 = 137
+slot_faction_heir_2 = 138
+slot_faction_heir_3 = 139
+######################
 
 ########## NEW v3.0 - about 80 slots per item is enough
 #diplomacy
@@ -2708,6 +2716,13 @@ ibelin_culture_start = trp_euro_town_recruit_ibelin
 ibelin_culture_end = trp_euro_town_recruit_jerusalem
 jerusalem_culture_start = trp_euro_town_recruit_jerusalem
 jerusalem_culture_end = trp_looter
+################## NEW v3.3
+crusader_culture_start = trp_euro_town_recruit
+crusader_culture_end = trp_tatar_tribesman
+cuman_culture_start = trp_cuman_tribesman
+cuman_culture_end = trp_crusader_turkopole
+player_culture_start = trp_cstm_custom_troop_3_tiers_0_0_0
+player_culture_end = trp_cstm_custom_troop_3_tiers_1_0_0
 ####################################
 regulars_begin = trp_finn_village_recruit
 regulars_end = trp_looter

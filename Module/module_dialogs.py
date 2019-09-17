@@ -10508,8 +10508,16 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "I want to assassinate someone.", "dplmc_constable_assassination_request",[]],
 #############################################
 
+##### NEW v3.3 - if assassination is scheduled display this
+[anyone, "dplmc_constable_assassination_request",
+[
+(eq, "$g_assassination_scheduled", 1),
+(str_store_troop_name, s1, "$lord_to_assassinate"),
+], "You already have requested to assassinate {s1} my lord. Please wait until it's done before requesting a new one.", "dplmc_constable_pretalk",[]],
 #####
-[anyone, "dplmc_constable_assassination_request",[], "S-speak more quietly my lord! The walls have ears! From which faction is the lord you want to assassinate?", "dplmc_constable_assassination_choose_faction",[]],
+
+#####
+[anyone, "dplmc_constable_assassination_request",[(eq, "$g_assassination_scheduled", 0),], "S-speak more quietly my lord! The walls have ears! From which faction is the lord you want to assassinate?", "dplmc_constable_assassination_choose_faction",[]],
 
 [anyone|plyr|repeat_for_factions, "dplmc_constable_assassination_choose_faction",
 [
@@ -13160,6 +13168,12 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_jerusalem"),
       (assign, "$g_player_know_culture_jerusalem", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_crusader"),
+      (assign, "$g_player_know_culture_crusader", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_cuman"),
+      (assign, "$g_player_know_culture_cuman", 1),
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_player"),
       (assign, "$g_player_know_culture_player", 1),      

@@ -307,6 +307,12 @@ party_templates = [
   ("kingdom_western_reinforcements_c_jerusalem", "{!}kingdom_western_reinforcements_c_jerusalem", 0, 0, fac_kingdom_5, soldier_personality, [(trp_euro_horse_2_jerusalem, 2,5), (trp_euro_horse_4_jerusalem, 1,2)]),
 ##########
 
+########## NEW v3.3
+  ("kingdom_cuman_reinforcements_a", "{!}kingdom_cuman_reinforcements_a", 0, 0, fac_kingdom_5, soldier_personality, [(trp_cuman_tribesman,6,9),(trp_cuman_skirmisher,6,9)]),
+  ("kingdom_cuman_reinforcements_b", "{!}kingdom_cuman_reinforcements_b", 0, 0, fac_kingdom_5, soldier_personality, [(trp_cuman_horseman,2,4),(trp_cuman_skirmisher,6,9)]),
+  ("kingdom_cuman_reinforcements_c", "{!}kingdom_cuman_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_cuman_horse_archer, 2,5), (trp_cuman_lancer, 1,2)]),
+##########
+
 
   ("steppe_bandit_lair" , "Steppe Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_steppe_bandit,15,58)]),
   ("taiga_bandit_lair", "Tundra Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_taiga_bandit,15,58)]),

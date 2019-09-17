@@ -8097,9 +8097,9 @@ simple_triggers = [
    (troop_slot_eq, "$lord_to_assassinate", slot_troop_is_alive, 1),
      (store_faction_of_troop, ":troop_faction", "$lord_to_assassinate"),
      (call_script, "script_rand", 0, 100),
+     (lt, reg0, 40), ######## 40%  ####### NEW v3.3
      (try_begin),
        (neg|faction_slot_eq, ":troop_faction", slot_faction_leader, "$lord_to_assassinate"),
-       (lt, reg0, 40), ######## 40%
          (call_script, "script_rand", 0, 100),
          (try_begin),
            (lt, reg0, 35), ######## 35% chance of discovery

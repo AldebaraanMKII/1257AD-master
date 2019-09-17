@@ -101,6 +101,11 @@ factions = [
   ("culture_jerusalem",  "Jerusalem", 0, 0.9, [], []),
   # ("culture_hre",  "Germanic", 0, 0.9, [], []),  
 ############################
+
+############## NEW v3.3
+  ("culture_crusader",  "Crusader", 0, 0.9, [], []), 
+  ("culture_cuman",  "Cuman", 0, 0.9, [], []), 
+############################
   
   ("culture_player",  "Custom", 0, 0.9, [], []), #####player faction culture needed to make custom troops appear in villages, lances or not
   

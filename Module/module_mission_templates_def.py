@@ -393,6 +393,31 @@ killcount_and_troop_ratio_bar =  (1, 0, ti_once,
 
 
 
+############################# NEW v3.3
+killcount_and_troop_ratio_bar_refresh =  (3, 0, 0, 
+    [
+      # (neg|is_presentation_active, "prsnt_killcount"),
+      # (neg|is_presentation_active, "prsnt_troop_ratio_bar"),
+      # (neg|is_presentation_active, "prsnt_killcount_and_troop_ratio_bar"),
+    ],
+    [
+    (try_begin),
+      (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
+      (start_presentation, "prsnt_killcount"),
+    (else_try),
+      (eq, "$g_misc_troop_ratio_bar_and_kill_count", 2),
+      (start_presentation, "prsnt_troop_ratio_bar"),
+    (else_try),
+      (eq, "$g_misc_troop_ratio_bar_and_kill_count", 3),
+      (start_presentation, "prsnt_killcount_and_troop_ratio_bar"),
+    (try_end),
+    ])
+#######################################################################################
+
+
+
+
+
 ############################# NEW v1.9 - New deathcam - https://forums.taleworlds.com/index.php/topic,282550.0.html
 ##BEAN BEGIN - Deathcam
 common_init_deathcam = (
@@ -6357,6 +6382,7 @@ enhanced_common_battle_triggers = [
 ########################## NEW v2.5
 enhanced_common_siege_triggers = [
 	killcount_and_troop_ratio_bar,
+	killcount_and_troop_ratio_bar_refresh,  ########## NEW v3.3
 	# enhanced_siege_lance_spear_fix,
 ] + lance_usage
 

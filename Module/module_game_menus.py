@@ -8926,16 +8926,42 @@ game_menus = [ #
                 (eq, ":was_he_defeated_player_before", 1),
                 (unlock_achievement, ACHIEVEMENT_BARON_GOT_BACK),
               (try_end),
-              (store_add, "$last_defeated_hero", ":stack_no", 1),
-              (call_script, "script_remove_troop_from_prison", ":stack_troop"),
-              (troop_set_slot, ":stack_troop", slot_troop_leaded_party, -1),
-              (call_script, "script_cf_check_hero_can_escape_from_player", ":stack_troop"),
-              (str_store_troop_name, s1, ":stack_troop"),
-              (str_store_faction_name, s3, ":defeated_faction"),
-              (str_store_string, s17, "@{s1} of {s3} managed to escape."),
-              (display_log_message, "@{!}{s17}"),
-              (jump_to_menu, "mnu_enemy_slipped_away"),
-              (assign, ":break", 1),
+              (store_add, "$last_defeated_hero", ":stack_no", 1),  
+			  ############### NEW v3.3 - lords can be killed in battle with player
+			  (call_script, "script_rand", 0, 100),
+              (assign, ":chance", reg0), 
+              (try_begin), ### King
+                (faction_slot_eq, ":defeated_faction", slot_faction_leader, ":stack_troop"), 
+                (lt, ":chance", "$g_lord_death_chance_battle_king"), 
+                  (str_store_troop_name, s1, ":stack_troop"),
+                  (str_store_faction_name, s3, ":defeated_faction"),
+                  (str_store_string, s17, "@{s1} of {s3} has died from wounds!"),
+                  (display_log_message, "@{!}{s17}"),
+                  (jump_to_menu, "mnu_enemy_died_from_wounds"),
+                  (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),   
+                  (assign, ":break", 1),
+              (else_try),
+                (neg|faction_slot_eq, ":defeated_faction", slot_faction_leader, ":stack_troop"), 
+                (lt, ":chance", "$g_lord_death_chance_battle"), 
+                  (str_store_troop_name, s1, ":stack_troop"),
+                  (str_store_faction_name, s3, ":defeated_faction"),
+                  (str_store_string, s17, "@{s1} of {s3} has died from wounds!"),
+                  (display_log_message, "@{!}{s17}"),
+                  (jump_to_menu, "mnu_enemy_died_from_wounds"),
+                  (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),  
+                  (assign, ":break", 1),
+              (else_try),
+                (call_script, "script_remove_troop_from_prison", ":stack_troop"),
+                (troop_set_slot, ":stack_troop", slot_troop_leaded_party, -1),
+                (call_script, "script_cf_check_hero_can_escape_from_player", ":stack_troop"),
+                (str_store_troop_name, s1, ":stack_troop"),
+                (str_store_faction_name, s3, ":defeated_faction"),
+                (str_store_string, s17, "@{s1} of {s3} managed to escape."),
+                (display_log_message, "@{!}{s17}"),
+                (jump_to_menu, "mnu_enemy_slipped_away"),
+                (assign, ":break", 1),
+			  (try_end),
+			  #############################################
 			(else_try),
               (store_add, "$last_defeated_hero", ":stack_no", 1),
               (call_script, "script_remove_troop_from_prison", ":stack_troop"),
@@ -9212,6 +9238,17 @@ game_menus = [ #
       ("continue",[], "Continue...",[(jump_to_menu, "mnu_total_victory")]),
     ]
   ),
+  
+###################### NEW v3.3
+   ("enemy_died_from_wounds",0,
+    "{s17}",
+    "none",
+    [],
+    [
+      ("continue",[], "Continue...",[(jump_to_menu, "mnu_total_victory")]),
+    ]
+  ),
+######################
 
    ("total_defeat",0,
     "{!}You shouldn't be reading this...",
@@ -26617,9 +26654,9 @@ game_menus = [ #
         ]
        ),              
                      
-       ("debug_options_7",[], "Create a new lord for Navarra.",
+       ("debug_options_7",[], "Create a new lord for a faction.",
        [
-         (call_script, "script_create_new_lord_for_faction", "fac_kingdom_19"),
+         (jump_to_menu, "mnu_choose_faction_to_spawn_lord_1"),
        ]
        ),
        
@@ -32685,6 +32722,34 @@ game_menus = [ #
         (display_message, "@Fief culture changed to Jerusalem.", 0x0000ff),
       ]),
 
+################# NEW v3.3
+      ("change_culture_crusader",
+      [
+        (eq, "$g_player_know_culture_crusader", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_crusader"),
+      ],
+      "Change it to Crusader.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_crusader"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to Crusader.", 0x0000ff),
+      ]),
+
+      
+      ("change_culture_cuman",
+      [
+        (eq, "$g_player_know_culture_cuman", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_cuman"),
+      ],
+      "Change it to Cuman.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_cuman"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to Cuman.", 0x0000ff),
+      ]),
+##################################
       
       ("change_culture_player",
       [
@@ -34008,6 +34073,61 @@ game_menus = [ #
           (try_end),
 	   ]),
 	   #######################################
+       ("debug_options_new_7",[], "Give player staff and culture.",
+	   [
+       (assign, "$g_player_minister", "trp_temporary_minister"),
+       (troop_set_faction, "trp_temporary_minister", "$players_kingdom"),
+       (assign, "$g_player_chamberlain", "trp_dplmc_chamberlain"),
+       (troop_set_faction, "trp_dplmc_chamberlain", "$players_kingdom"),
+       (assign, "$g_player_chancellor", "trp_dplmc_chancellor"),
+       (troop_set_faction, "trp_dplmc_chancellor", "$players_kingdom"),
+       (assign, "$g_player_constable", "trp_dplmc_constable"),
+       (troop_set_faction, "trp_dplmc_constable", "$players_kingdom"),
+       (faction_get_slot, ":culture", "$players_kingdom", slot_faction_culture),
+       (troop_set_slot, "trp_player", slot_troop_cur_culture, ":culture"),
+	   ]),
+	   #######################################
+       ("debug_options_new_8",[], "Remove all non-kingdom parties on the map.",
+	   [
+       (try_for_parties, ":party"),
+         (party_is_active, ":party"),
+         (party_get_template_id, ":party_template", ":party"),
+         (this_or_next|eq, ":party_template", "pt_looters"),
+         (this_or_next|eq, ":party_template", "pt_curonians"),
+         (this_or_next|eq, ":party_template", "pt_prussians"),
+         (this_or_next|eq, ":party_template", "pt_samogitians"),
+         (this_or_next|eq, ":party_template", "pt_yotvingians"),
+         (this_or_next|eq, ":party_template", "pt_welsh"),
+         (this_or_next|eq, ":party_template", "pt_guelphs"),
+         (this_or_next|eq, ":party_template", "pt_ghibellines"),
+         (this_or_next|eq, ":party_template", "pt_crusaders"),
+         (this_or_next|eq, ":party_template", "pt_jihadist_raiders"),
+         (this_or_next|eq, ":party_template", "pt_peasant_rebels_euro"),
+         (this_or_next|eq, ":party_template", "pt_steppe_bandits"),
+         (this_or_next|eq, ":party_template", "pt_taiga_bandits"),
+         (this_or_next|eq, ":party_template", "pt_desert_bandits"),
+         (this_or_next|eq, ":party_template", "pt_forest_bandits"),
+         (this_or_next|eq, ":party_template", "pt_mountain_bandits"),
+         (this_or_next|eq, ":party_template", "pt_sea_raiders"),
+         (this_or_next|eq, ":party_template", "pt_robber_knights"),
+         (this_or_next|eq, ":party_template", "pt_deserters"),
+         (this_or_next|eq, ":party_template", "pt_runaway_serfs"),
+         (this_or_next|eq, ":party_template", "pt_forager_party"),
+         (this_or_next|eq, ":party_template", "pt_scout_party"),
+         (this_or_next|eq, ":party_template", "pt_patrol_party"),
+         (this_or_next|eq, ":party_template", "pt_raider_party"),
+         (this_or_next|eq, ":party_template", "pt_kingdom_caravan_party"),
+         (this_or_next|eq, ":party_template", "pt_prisoner_train_party"),
+         #(this_or_next|eq, ":party_template", "pt_kingdom_hero_party"),
+         (this_or_next|eq, ":party_template", "pt_war_party"),
+         (this_or_next|eq, ":party_template", "pt_mercenary_company"),
+         (this_or_next|eq, ":party_template", "pt_mercenary_warband"),
+         (this_or_next|eq, ":party_template", "pt_rogue_mercenaries"),
+         (eq, ":party_template", "pt_rebels"),
+		   (remove_party, ":party"),
+       (try_end),
+	   ]),
+	   #######################################
 	   
        ("debug_options_new_99",[], "Go back.",
        [
@@ -34286,6 +34406,146 @@ game_menus = [ #
     
 ######################################################
   
+
+
+########################### NEW v2.1 - spawn a lord for a faction
+  ("choose_faction_to_spawn_lord_1", mnf_enable_hot_keys,
+   "Choose a faction to create a new lord.",
+   "none",
+    [],
+    [
+      ("debug_choose_faction_to_spawn_lord_back",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+########################
+    ]+[("choose_faction_1"+str(x+1),
+        [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+        ], "{s0}",
+        [
+        (store_add, ":faction", kingdoms_begin, x),
+        (call_script, "script_create_new_lord_for_faction", ":faction"),
+        ]) for x in range(0, 8)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_2")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_spawn_lord_2", mnf_enable_hot_keys,
+    "Choose a faction to create a new lord.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_1")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (call_script, "script_create_new_lord_for_faction", ":faction"),
+        ]) for x in range(8, 16)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_3")]),
+    ]
+  ),
+
+################################################
+  ("choose_faction_to_spawn_lord_3", mnf_enable_hot_keys,
+    "Choose a faction to create a new lord.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_2")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (call_script, "script_create_new_lord_for_faction", ":faction"),
+        ]) for x in range(16, 24)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_4")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_spawn_lord_4", mnf_enable_hot_keys,
+    "Choose a faction to create a new lord.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_3")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (call_script, "script_create_new_lord_for_faction", ":faction"),
+        ]) for x in range(24, 32)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_5")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_spawn_lord_5", mnf_enable_hot_keys,
+    "Choose a faction to create a new lord.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_4")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (call_script, "script_create_new_lord_for_faction", ":faction"),
+        ]) for x in range(32, 40)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_6")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_spawn_lord_6", mnf_enable_hot_keys,
+    "Choose a faction to create a new lord.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_5")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (call_script, "script_create_new_lord_for_faction", ":faction"),
+        ]) for x in range(40, 42)]
+      # ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_6")]),
+  ),
+################################################
+
+
+
+
 
 
 

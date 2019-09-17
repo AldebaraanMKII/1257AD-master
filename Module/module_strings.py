@@ -6721,11 +6721,17 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ############## NEW v1.8
 ("culture_23_adjective",     "Templar"),
 ("culture_24_adjective",     "Hospitaller"),
+##############
 ############## NEW v2.1
 ("culture_25_adjective",     "Antioch"),
 ("culture_26_adjective",     "Tripoli"),
 ("culture_27_adjective",     "Ibelin"),
 ("culture_28_adjective",     "Jerusalem"),
+##############
+############## NEW v3.3
+("culture_29_adjective",     "Crusader"),
+("culture_30_adjective",     "Cuman"),
+##############
 ("culture_player_adjective", "Player Culture"),
 
 
@@ -9049,6 +9055,44 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("enhanced_surname_bohemian_37", "Šťastný"),
 ########
 
+
+######## NEW v3.3 - Cuman
+("enhanced_name_cuman_1", "Aibak"),
+("enhanced_name_cuman_2", "Bonyak"),
+("enhanced_name_cuman_3", "Maniak"),
+("enhanced_name_cuman_4", "Bongek"),
+("enhanced_name_cuman_5", "Taz"),
+("enhanced_name_cuman_6", "Konchak"),
+("enhanced_name_cuman_7", "Kopyak"),
+("enhanced_name_cuman_8", "Chilbuk"),
+("enhanced_name_cuman_9", "Gzak"),
+("enhanced_name_cuman_10", "Kopti"),
+("enhanced_name_cuman_11", "Eldechyuk"),
+("enhanced_name_cuman_12", "Sharokan"),
+("enhanced_name_cuman_13", "Ayepa"),
+("enhanced_name_cuman_14", "Osen"),
+("enhanced_name_cuman_15", "Toglyy"),
+("enhanced_name_cuman_16", "Sokal"),
+("enhanced_name_cuman_17", "Kutesk "),
+("enhanced_name_cuman_18", "Boricius"),
+("enhanced_name_cuman_19", "Atraka"),
+("enhanced_name_cuman_20", "Vakhtang"),
+("enhanced_name_cuman_21", "Sirchan"),
+("enhanced_name_cuman_22", "Asalup"),
+("enhanced_name_cuman_23", "Girgen"),
+("enhanced_name_cuman_24", "Zeyhan"),
+("enhanced_name_cuman_25", "Arbuz"),
+("enhanced_name_cuman_26", "Menk"),
+("enhanced_name_cuman_27", "Begovars"),
+("enhanced_name_cuman_28", "Kemenche"),
+("enhanced_name_cuman_29", "Baytursun"),
+("enhanced_name_cuman_30", "Quman"),
+("enhanced_name_cuman_31", "Seyhan"),
+########################
+
+
+
+
 ####### Custom Player Names
 ("enhanced_name_custom_1", "Custom"),
 ("enhanced_name_custom_2", "Custom"),
@@ -9206,6 +9250,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_culture_title_tripoli", "Lord {s0}{reg10? -{s61}:}"),
 ("ee_culture_title_ibelin", "Lord {s0}{reg10? -{s61}:}"),
 ("ee_culture_title_jerusalem", "Lord {s0}{reg10? -{s61}:}"),
+("ee_culture_title_crusader", "Lord {s0}{reg10? -{s61}:}"),    ###### NEW v3.3
+("ee_culture_title_cuman", "Chieftain {s0}{reg10? -{s61}:}"),    ###### NEW v3.3
 ("ee_culture_title_custom", "Lord {s0}{reg10? -{s61}:}"),
 
 
@@ -9236,6 +9282,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_language_title_czech", "Pan {s0}{reg10? -{s61}:}"),
 ("ee_language_title_mongol", "{s0}{reg10? -{s61}:} Noyan"),
 ("ee_language_title_mixed_euro", "Lord {s0}{reg10? -{s61}:}"),
+("ee_language_title_mixed_cuman", "Chieftain {s0}{reg10? -{s61}:}"),   ###### NEW v3.3
 ("ee_language_title_custom", "Lord {s0}{reg10? -{s61}:}"),
 
 
@@ -9269,6 +9316,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_culture_title_king_tripoli", "King {s0}{reg10? -{s61}:}"),
 ("ee_culture_title_king_ibelin", "King {s0}{reg10? -{s61}:}"),
 ("ee_culture_title_king_jerusalem", "King {s0}{reg10? -{s61}:}"),
+("ee_culture_title_king_crusader", "King {s0}{reg10? -{s61}:}"),   ###### NEW v3.3
+("ee_culture_title_king_cuman", "Khan {s0}{reg10? -{s61}:}"),   ###### NEW v3.3
 ("ee_culture_title_king_custom", "King {s0}{reg10? -{s61}:}"),
 
 ###### language
@@ -9298,6 +9347,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_language_title_king_czech", "King {s0}{reg10? -{s61}:}"),
 ("ee_language_title_king_mongol", "Great Khan {s0}{reg10? -{s61}:}"),
 ("ee_language_title_king_mixed_euro", "King {s0}{reg10? -{s61}:}"),
+("ee_language_title_king_cuman", "Khan {s0}{reg10? -{s61}:}"),  ###### NEW v3.3
 ("ee_language_title_king_custom", "King {s0}{reg10? -{s61}:}"),
 ##############################################
 

@@ -10677,18 +10677,6 @@ presentations = [
           (this_or_next|game_key_clicked, gk_everyone_hear),
           (game_key_clicked, gk_reverse_order_group),
           (call_script, "script_update_order_panel_checked_classes"),
-########################### NEW v3.3
-          (try_begin),
-            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
-            (start_presentation, "prsnt_killcount"),
-          (else_try),
-            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 2),
-            (start_presentation, "prsnt_troop_ratio_bar"),
-          (else_try),
-            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 3),
-            (start_presentation, "prsnt_killcount_and_troop_ratio_bar"),
-          (try_end),
-######################################################
         (try_end),
         (try_begin),
           (this_or_next|game_key_clicked, gk_order_1),
@@ -10700,18 +10688,6 @@ presentations = [
           (get_player_agent_no, ":player_agent"),
           (agent_get_team, ":player_team", ":player_agent"),
           (call_script, "script_update_order_panel", ":player_team"),
-########################### NEW v3.3
-          (try_begin),
-            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
-            (start_presentation, "prsnt_killcount"),
-          (else_try),
-            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 2),
-            (start_presentation, "prsnt_troop_ratio_bar"),
-          (else_try),
-            (eq, "$g_misc_troop_ratio_bar_and_kill_count", 3),
-            (start_presentation, "prsnt_killcount_and_troop_ratio_bar"),
-          (try_end),
-######################################################
         (try_end),
         (try_begin),
           (gt, ":cur_time", 200),
@@ -10720,7 +10696,13 @@ presentations = [
             (agent_set_slot, ":cur_agent", slot_agent_map_overlay_id, 0),
           (try_end),
           (presentation_set_duration, 0),
-########################### NEW v1.9 - kill count + merged troop ratio bar
+        (try_end),
+########################### NEW v1.9-v3.3 - kill count + merged troop ratio bar
+        (try_begin),
+          (gt, ":cur_time", 200),
+          (this_or_next|game_key_clicked, gk_view_orders),
+          (key_clicked, key_escape),
+          (presentation_set_duration, 0),
           (try_begin),
             (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
             (start_presentation, "prsnt_killcount"),
@@ -21366,6 +21348,126 @@ presentations = [
       (try_end),
       ]),
     ]),
+##############################################################################
+
+
+########################## NEW v3.3 - new vassal player king notification
+  ("lord_vassalage_notify", 0, mesh_load_window,
+  [
+    (ti_on_presentation_load,
+    [
+      (presentation_set_duration, 999999),
+      (set_fixed_point_multiplier, 1000),
+      (create_text_overlay, reg1, "@A new lord wants to join your kingdom!", tf_center_justify),
+      (position_set_x, pos1, 500),
+      (position_set_y, pos1, 695),
+      (overlay_set_position, reg1, pos1),
+	  
+##################### First column
+      (create_text_overlay, reg1, "@Name:", tf_left_align),
+      (position_set_x, pos1, 300),
+      (position_set_y, pos1, 600),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, "@Age:", tf_left_align),
+      (position_set_x, pos1, 300),
+      (position_set_y, pos1, 580),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, "@Renown:", tf_left_align),
+      (position_set_x, pos1, 300),
+      (position_set_y, pos1, 560),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, "@Controversy:", tf_left_align),
+      (position_set_x, pos1, 300),
+      (position_set_y, pos1, 540),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, "@Culture:", tf_left_align),
+      (position_set_x, pos1, 300),
+      (position_set_y, pos1, 520),
+      (overlay_set_position, reg1, pos1),
+	  
+      # (create_text_overlay, reg1, "@Personality:", tf_center_justify),
+      # (position_set_x, pos1, 300),
+      # (position_set_y, pos1, 580),
+      # (overlay_set_position, reg1, pos1),
+#####################
+
+##################### Second column
+      (str_store_troop_name, s1, "$g_ee_cur_troop"),
+      (troop_get_slot, reg20, "$g_ee_cur_troop", slot_troop_age),
+      (troop_get_slot, reg21, "$g_ee_cur_troop", slot_troop_renown),
+      (troop_get_slot, reg22, "$g_ee_cur_troop", slot_troop_controversy),
+	  
+      (troop_get_slot, ":troop_culture", "$g_ee_cur_troop", slot_troop_cur_culture),
+      (assign, ":culture", "str_culture_1_adjective"),
+      (val_add, ":culture", ":troop_culture"),
+      (val_sub, ":culture", 6),
+      (str_store_string, s2, ":culture"),
+	  
+      (create_text_overlay, reg1, s1, tf_left_align),
+      (position_set_x, pos1, 350),
+      (position_set_y, pos1, 600),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, "@{reg20}:", tf_left_align),
+      (position_set_x, pos1, 350),
+      (position_set_y, pos1, 580),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, "@{reg21}:", tf_left_align),
+      (position_set_x, pos1, 350),
+      (position_set_y, pos1, 560),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, "@{reg22}:", tf_left_align),
+      (position_set_x, pos1, 350),
+      (position_set_y, pos1, 540),
+      (overlay_set_position, reg1, pos1),
+	  
+      (create_text_overlay, reg1, s2, tf_left_align),
+      (position_set_x, pos1, 350),
+      (position_set_y, pos1, 520),
+      (overlay_set_position, reg1, pos1),
+##########################################
+	  
+##########################################
+      (create_mesh_overlay_with_tableau_material, reg1, -1, "tableau_lord_vassalage_notify", "$g_ee_cur_troop"),
+      (position_set_x, pos1, 200),
+      (position_set_y, pos1, 180),
+      (overlay_set_position, reg1, pos1),
+      (position_set_x, pos1, 900),
+      (position_set_y, pos1, 900),
+      (overlay_set_size, reg1, pos1),
+	  
+      (create_button_overlay, "$g_presentation_obj_1", "@Accept.", tf_center_justify),
+      (position_set_x, pos1, 500),
+      (position_set_y, pos1, 120),
+      (overlay_set_position, "$g_presentation_obj_1", pos1),
+	  
+      (create_button_overlay, "$g_presentation_obj_2", "@Refuse.", tf_center_justify),
+      (position_set_x, pos1, 500),
+      (position_set_y, pos1, 90),
+      (overlay_set_position, "$g_presentation_obj_2", pos1),
+    ]),
+    (ti_on_presentation_event_state_change,
+    [
+      (store_trigger_param_1, ":var0"),
+      (try_begin),
+        (eq, ":var0", "$g_presentation_obj_1"),
+          (call_script, "script_ee_spawn_lord_party", "$g_ee_cur_troop", "$g_ee_cur_faction"), 
+          (presentation_set_duration, 0),
+          (change_screen_return),
+      (else_try),
+        (eq, ":var0", "$g_presentation_obj_2"),
+          # (call_script, "script_recycle_lord", "$g_ee_cur_troop", "$g_ee_cur_faction"), 
+          (presentation_set_duration, 0),
+          (change_screen_return),
+      (try_end),
+    ]),
+  ]),
 ##############################################################################
 
 
