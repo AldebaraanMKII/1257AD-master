@@ -607,7 +607,8 @@ dialogs = [
      (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
      (neq, "trp_player", ":troop_no"),
      (store_troop_faction, ":faction_no", ":troop_no"),
-     (eq, ":faction_no", "fac_player_supporters_faction"),
+     # (eq, ":faction_no", "fac_player_supporters_faction"),
+     (eq, ":faction_no", "$players_kingdom"), ############# NEW v3.3
      (val_add, ":there_are_vassals", 1),
      (assign, ":end_cond", 0),
    (try_end),
@@ -628,7 +629,8 @@ dialogs = [
    [
    (is_between, "$g_player_court", centers_begin, centers_end),
    (store_faction_of_party, ":player_court_faction", "$g_player_court"),
-   (eq, ":player_court_faction", "fac_player_supporters_faction"),
+   # (eq, ":player_court_faction", "fac_player_supporters_faction"),
+   (eq, ":player_court_faction", "$players_kingdom"),
    ],
 "I wish to defer the appointment of a lord, until I take the counsel of my subjects", "award_fief_to_vassal_defer", []],
 
@@ -664,7 +666,8 @@ dialogs = [
    (neq, ":troop_no", "trp_player"),
    #########
    (store_troop_faction, ":faction_no", ":troop_no"),
-   (eq, ":faction_no", "fac_player_supporters_faction"),
+   # (eq, ":faction_no", "fac_player_supporters_faction"),
+   (eq, ":faction_no", "$players_kingdom"), ########## NEW v3.3
    (str_store_troop_name, s11, ":troop_no"),
    (call_script, "script_print_troop_owned_centers_in_numbers_to_s0", ":troop_no"),
 
@@ -703,7 +706,8 @@ dialogs = [
      (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
      (neq, "trp_player", ":troop_no"),
      (store_troop_faction, ":faction_no", ":troop_no"),
-     (eq, ":faction_no", "fac_player_supporters_faction"),
+     # (eq, ":faction_no", "fac_player_supporters_faction"),
+     (eq, ":faction_no", "$players_kingdom"),  ########### NEW v3.3
      (val_add, ":there_are_vassals", 1),
      (assign, ":end_cond", 0),
    (try_end),
@@ -3970,7 +3974,8 @@ dialogs = [
 [party_tpl|pt_guelphs, "guelphs_hostile", [],
     "Poke 'em with the pointy end men! GAAarrrrGGHhh!!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      # (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"),  ######## NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -3995,7 +4000,8 @@ dialogs = [
 [party_tpl|pt_ghibellines, "ghibellines_hostile", [],
     "Poke 'em with the pointy end men! GAAarrrrGGHhh!!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      # (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"),  ########## NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -4019,7 +4025,8 @@ dialogs = [
 [party_tpl|pt_welsh, "welsh_hostile", [],
     "We would not... ATTACK!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      # (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"),  ######### NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -4053,7 +4060,8 @@ dialogs = [
 [party_tpl|pt_mongolian_camp, "mongolian_camp_hostile", [],
     "What? Me take tribute from you by force then!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      # (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"),  ########### NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -4088,7 +4096,7 @@ dialogs = [
 [party_tpl|pt_prussians, "prussians_hostile", [],
     "These are our lands and you have been desecrating our forests long enough. Die!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -4120,7 +4128,7 @@ dialogs = [
 [party_tpl|pt_curonians, "curonians_hostile", [],
     "These are our lands and you have been desecrating our forests long enough. Die!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -4153,7 +4161,7 @@ dialogs = [
 [party_tpl|pt_samogitians, "samogitians_hostile", [],
     "These are our lands and you have been desecrating our forests long enough. Die!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -4186,7 +4194,7 @@ dialogs = [
 [party_tpl|pt_yotvingians, "yotvingians_hostile", [],
     "These are our lands and you have been desecrating our forests long enough. Die!", "close_window",
     [
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
       (val_sub, ":rel", 5),
       (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
       (assign, "$encountered_party_hostile",1),
@@ -4269,7 +4277,7 @@ dialogs = [
     (call_script, "script_change_player_relation_with_troop", ":village_owner", -2),
     (call_script, "script_diplomacy_party_attacks_neutral", "p_main_party", "$g_encountered_party"),
     
-    (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+    (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
     (try_begin),
       (gt, ":rel", 0),
       (val_sub, ":rel", 5),
@@ -4595,7 +4603,7 @@ dialogs = [
 [anyone|plyr, "member_talk", [
     (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
     (faction_slot_eq,  "$players_kingdom", slot_faction_marshall, "trp_player"),
-  ], "As marshal, I wish you to send a message to the vassals of the realm", "member_direct_campaign",[]],
+  ], "As marshal, I wish you to send a message to the vassals of the realm.", "member_direct_campaign",[]],
 
 
 [anyone|plyr, "member_talk", [],
@@ -4718,7 +4726,7 @@ dialogs = [
         (is_between, "$g_talk_troop", companions_begin, companions_end),
     ],
     
-    "I need your skills for a very delicate matter",
+    "I need your skills for a very delicate matter.",
     
     "roak_dispatch_member",
     
@@ -4747,7 +4755,7 @@ dialogs = [
     
     [],
     
-    "I want you to spy out another kingdom",
+    "I want you to spy out another kingdom.",
     
     "roak_member_as_spy",
     
@@ -4785,7 +4793,7 @@ dialogs = [
         (str_clear, s14),
     ],
     
-    "{s11}{s14}",
+    "{s11}{s14}.",
     
     "roak_member_dispatch",
     
@@ -4802,7 +4810,7 @@ dialogs = [
 
     [],
         
-    "Nevermind",
+    "Nevermind.",
     
     "member_talk",
         
@@ -4818,12 +4826,29 @@ dialogs = [
     
     [],
     
-    "I want you to meet the king of another faction",
+    "I want you to meet the king of another faction.",
     
     "roak_member_as_emissary",
     
     []
 ],
+
+################ NEW v3.3 
+[
+    anyone|plyr,
+    
+    "roak_dispatch_member_2",
+    
+    [],
+    
+    "Nevermind.",
+    
+    "member_talk",
+    
+    []
+],
+################################
+
 
 [
     anyone,
@@ -4863,7 +4888,7 @@ dialogs = [
         #Has/has not recognized us a monarch
     ],
     
-    "{s10} of the {s11}{s14}",
+    "{s10} of the {s11}{s14}.",
     
     "roak_member_as_emissary_what",
     
@@ -4871,6 +4896,22 @@ dialogs = [
         (store_repeat_object, "$g_faction_selected"),
     ]
 ],
+
+############ NEW v3.3
+[
+    anyone|plyr,
+    
+    "roak_member_as_emissary_select",
+
+    [],
+        
+    "Nevermind.",
+    
+    "member_talk",
+        
+    []
+],
+########################
 
 [
     anyone,
@@ -4892,7 +4933,7 @@ dialogs = [
     "roak_member_as_emissary_what_select",
     
     [
-        (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+        (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
         (lt, ":relation", 0),
     ],
     
@@ -4904,6 +4945,27 @@ dialogs = [
         (assign, "$g_initiative_selected", npc_mission_peace_request),
     ]
 ],
+
+################# NEW v3.3
+[
+    anyone|plyr,
+    
+    "roak_member_as_emissary_what_select",
+    
+    [
+        (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
+        (ge, ":relation", 0),
+    ],
+    
+    "That our two kingdoms should make a non-aggression pact.",
+    
+    "roak_member_dispatch",
+    
+    [
+        (assign, "$g_initiative_selected", dplmc_npc_mission_nonaggression_request),
+    ]
+],
+##################################
 
 [
     anyone|plyr,
@@ -4918,9 +4980,7 @@ dialogs = [
         #not a high priority.
         #TODO: Consider if there should be an alternative when the player is married to a pretender.
         (neg|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-        
         (faction_get_slot, ":leader_no", "$g_faction_selected", slot_faction_leader),#Use reg0 for gender
-
         (call_script, "script_dplmc_store_troop_is_female", ":leader_no"),
     ],#next line "his" to {reg0?her:his}
 
@@ -4940,10 +5000,8 @@ dialogs = [
     "roak_member_as_emissary_what_select",
 
     [
-        (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
-
+        (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
         (faction_slot_eq, "$g_faction_selected", slot_faction_recognized_player, 0),
-
         (ge, ":relation", 0),
     ],
         
@@ -6198,7 +6256,8 @@ dialogs = [
         (is_between, ":center", centers_begin, centers_end),
         (neq, ":center", "$g_player_court"),
         (store_faction_of_party, ":center_faction", ":center"),
-        (eq, ":center_faction", "fac_player_supporters_faction"),
+        # (eq, ":center_faction", "fac_player_supporters_faction"),
+        (eq, ":center_faction", "$players_kingdom"), ###### NEW v3.3
         (neg|party_slot_ge, ":center", slot_town_lord, active_npcs_begin), #ie, owned by player or unassigned
         (str_store_party_name, s11, ":center"),
 
@@ -6241,7 +6300,8 @@ dialogs = [
              (troop_set_slot, "$g_talk_troop", slot_troop_banner_scene_prop, ":banner_id"),
      
              (troop_set_slot, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),     
-             (troop_set_faction, "$g_talk_troop", "fac_player_supporters_faction"),
+             # (troop_set_faction, "$g_talk_troop", "fac_player_supporters_faction"),
+             (troop_set_faction, "$g_talk_troop", "$players_kingdom"),  ########## NEW v3.3
         (try_end),
 
         
@@ -6739,7 +6799,8 @@ dialogs = [
     (try_for_range, ":center_no", centers_begin, centers_end),
       (eq, "$g_center_taken_by_player_faction", -1),
       (store_faction_of_party, ":center_faction", ":center_no"),
-      (eq, ":center_faction", "fac_player_supporters_faction"),
+      # (eq, ":center_faction", "fac_player_supporters_faction"),
+      (eq, ":center_faction", "$players_kingdom"),  ########## NEW v3.3
       (neg|party_slot_ge, ":center_no", slot_town_lord, 0),
       (assign, "$g_center_taken_by_player_faction", ":center_no"),
     (try_end),
@@ -6961,7 +7022,8 @@ dialogs = [
    (store_repeat_object, ":center_no"),
    (is_between, ":center_no", centers_begin, centers_end),
    (store_faction_of_party, ":center_faction", ":center_no"),
-   (eq, ":center_faction", "fac_player_supporters_faction"),
+   # (eq, ":center_faction", "fac_player_supporters_faction"),
+   (eq, ":center_faction", "$players_kingdom"),  ########## NEW v3.3
 ####### NEW v2.9-KOMKE START-        
    (neg|party_slot_eq, ":center_no", slot_town_lord, "trp_player"),##KOMKE to exclude the fiefs already assigned to player
 ####### NEW v2.9-KOMKE END-                
@@ -6974,7 +7036,8 @@ dialogs = [
          (ge, ":town_lord", active_npcs_begin),
          (troop_slot_eq, ":town_lord", slot_troop_is_alive, 1),  ## he's alive/active
          (store_faction_of_troop, ":town_lord_faction", ":town_lord"),
-         (neq, ":town_lord_faction", "fac_player_supporters_faction"),
+         # (neq, ":town_lord_faction", "fac_player_supporters_faction"),
+         (neq, ":town_lord_faction", "$players_kingdom"),  ########## NEW v3.3
          (assign, ":town_lord", -1),
      (try_end),
      (le, ":town_lord", 0),
@@ -7230,7 +7293,7 @@ dialogs = [
 [
     (eq, "$g_encountered_party_type",spt_patrol),
     (party_is_active, "p_main_party"), #tom
-    (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+    (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
     (lt, ":rel", 0),
   ],
   "Halt! Enemy, charge!", "close_window",[
@@ -7405,7 +7468,8 @@ dialogs = [
    (try_for_parties, ":party_no"),
       (party_slot_eq, ":party_no", slot_party_type, spt_kingdom_hero_party),
       (store_faction_of_party, ":faction_no", ":party_no"),
-      (eq, "fac_player_supporters_faction", ":faction_no"),
+      # (eq, "fac_player_supporters_faction", ":faction_no"),
+      (eq, "$players_kingdom", ":faction_no"),  ######## NEW v3.3
       (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
       (is_between, ":party_leader", heroes_begin, heroes_end),
       (troop_set_slot, ":party_leader", dplmc_slot_troop_political_stance, 0),
@@ -7414,7 +7478,8 @@ dialogs = [
     (try_for_parties, ":party_no"),
       (party_slot_eq, ":party_no", slot_party_type, spt_kingdom_hero_party),
       (store_faction_of_party, ":faction_no", ":party_no"),
-      (eq, "fac_player_supporters_faction", ":faction_no"),
+      # (eq, "fac_player_supporters_faction", ":faction_no"),
+      (eq, "$players_kingdom", ":faction_no"), ########### NEW v3.3
       (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
       (is_between, ":party_leader", heroes_begin, heroes_end),
       (troop_get_slot, ":fav_troop", ":party_leader", slot_troop_stance_on_faction_issue),
@@ -7429,7 +7494,7 @@ dialogs = [
    (try_for_parties, ":party_no"),
       (party_slot_eq, ":party_no", slot_party_type, spt_kingdom_hero_party),
       (store_faction_of_party, ":faction_no", ":party_no"),
-      (eq, "fac_player_supporters_faction", ":faction_no"),
+      (eq, "$players_kingdom", ":faction_no"), ########### NEW v3.3
       (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
       (is_between, ":party_leader", heroes_begin, heroes_end),
       (troop_get_slot, ":stance", ":party_leader", dplmc_slot_troop_political_stance),
@@ -8269,7 +8334,8 @@ dialogs = [
     (assign, ":num_enemies", 0),
     (try_for_range_backwards, ":cur_faction", kingdoms_begin, kingdoms_end),
       (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
-      (store_relation, ":cur_relation", ":cur_faction", "fac_player_supporters_faction"),
+      # (store_relation, ":cur_relation", ":cur_faction", "fac_player_supporters_faction"),
+      (store_relation, ":cur_relation", ":cur_faction", "$players_kingdom"), ####### NEW v3.3
       (lt, ":cur_relation", 0),
       (try_begin),
         (eq, ":num_enemies", 0),
@@ -8295,7 +8361,8 @@ dialogs = [
 [anyone|plyr|repeat_for_factions, "dplmc_constable_talk_ask_war_2", [(store_repeat_object, ":faction_no"),
                                                                   (is_between, ":faction_no", kingdoms_begin, kingdoms_end),
                                                                   (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
-                                                                     (store_relation, ":cur_relation", ":faction_no", "fac_player_supporters_faction"),
+                                                                     # (store_relation, ":cur_relation", ":faction_no", "fac_player_supporters_faction"),
+                                                                     (store_relation, ":cur_relation", ":faction_no", "$players_kingdom"), ####### NEW v3.3
                                                                      (lt, ":cur_relation", 0),
                                                                      (str_store_faction_name, s1, ":faction_no")],
 "Tell me more about the war with {s1}.", "dplmc_constable_talk_ask_war_details",[(store_repeat_object, "$faction_requested_to_learn_more_details_about_the_war_against")]],
@@ -8384,7 +8451,8 @@ dialogs = [
  
    [anyone|plyr, "dplmc_constable_reports",
    [
-     (eq, "$players_kingdom", "fac_player_supporters_faction"),
+     # (eq, "$players_kingdom", "fac_player_supporters_faction"),  ######### NEW v3.3
+      (gt, "$players_kingdom", 0),  ######### NEW v3.3
    ],
 "Please give me a report about the kingdom's army.", "dplmc_constable_kingdom_overview", []], 
    
@@ -8400,7 +8468,8 @@ dialogs = [
         (this_or_next|party_slot_eq, ":selected_party", slot_party_type, spt_town),
         (party_slot_eq, ":selected_party", slot_party_type, spt_castle),
         (store_faction_of_party, ":party_faction", ":selected_party"),
-        (eq, ":party_faction", "fac_player_supporters_faction"),
+        # (eq, ":party_faction", "fac_player_supporters_faction"),
+        (eq, ":party_faction", "$players_kingdom"), ####### NEW v3.3
         
         (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
         (try_for_range, ":i_stack", 0, ":num_stacks"),
@@ -8417,7 +8486,8 @@ dialogs = [
       (else_try),
         (party_slot_eq, ":selected_party", slot_party_type, spt_kingdom_hero_party),
         (store_faction_of_party, ":party_faction", ":selected_party"),
-        (eq, ":party_faction", "fac_player_supporters_faction"),
+        # (eq, ":party_faction", "fac_player_supporters_faction"),
+        (eq, ":party_faction", "$players_kingdom"), ####### NEW v3.3
         (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
         (try_for_range, ":i_stack", 0, ":num_stacks"),
           (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
@@ -8534,7 +8604,8 @@ dialogs = [
    (troop_slot_ge, ":troop_no", slot_troop_leaded_party, 0),
    (neg|troop_slot_ge, ":troop_no", slot_troop_prisoner_of_party, 0),
    (store_troop_faction, ":faction_no", ":troop_no"),
-   (eq, ":faction_no", "fac_player_supporters_faction"),
+   # (eq, ":faction_no", "fac_player_supporters_faction"),
+   (eq, ":faction_no", "$players_kingdom"), ####### NEW v3.3
    (str_store_troop_name, s11, ":troop_no"),
    ],
 "{s11}.", "dplmc_constable_status_lord_info",
@@ -8646,7 +8717,8 @@ dialogs = [
     (is_between, ":party_no", walled_centers_begin, walled_centers_end),
     (store_faction_of_party, ":party_faction", ":party_no"),
     (this_or_next|party_slot_eq, ":party_no", slot_town_lord, "trp_player"),
-    (eq, ":party_faction", "fac_player_supporters_faction"),
+    # (eq, ":party_faction", "fac_player_supporters_faction"),
+    (eq, ":party_faction", "$players_kingdom"), ####### NEW v3.3
     (str_store_party_name, s60, ":party_no"),
    ],
 "{s60}.", "dplmc_constable_status_info",
@@ -9905,7 +9977,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (neq, ":troop_no", "trp_player"),
    #########
      (store_faction_of_troop, ":troop_faction", ":troop_no"),
-     (eq, ":troop_faction", "fac_player_supporters_faction"),
+     # (eq, ":troop_faction", "fac_player_supporters_faction"),
+     (eq, ":troop_faction", "$players_kingdom"), ######## NEW v3.3
        (troop_get_slot, ":party", ":troop_no", slot_troop_prisoner_of_party), 
        (is_between, ":party", walled_centers_begin, walled_centers_end),
          (store_faction_of_party, ":party_faction", ":party"),
@@ -10202,7 +10275,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (store_repeat_object, ":imprisoned_vassal"),
   (troop_slot_eq, ":imprisoned_vassal", slot_troop_occupation, slto_kingdom_hero),
     (store_troop_faction, ":imprisoned_vassal_faction", ":imprisoned_vassal"),
-    (eq, ":imprisoned_vassal_faction", "fac_player_supporters_faction"),
+    # (eq, ":imprisoned_vassal_faction", "fac_player_supporters_faction"),
+    (eq, ":imprisoned_vassal_faction", "$players_kingdom"), ######## NEW v3.3
     (is_between, ":imprisoned_vassal", lords_begin, lords_end),
     (troop_slot_ge, ":imprisoned_vassal", slot_troop_prisoner_of_party, centers_begin),
       (str_store_troop_name, s4, ":imprisoned_vassal"),
@@ -10290,7 +10364,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_troop_get_relation_with_troop", "trp_player", ":imprisoned_friendly_lord"),
     (ge, reg0, 10),
       (store_troop_faction, ":imprisoned_friendly_lord_faction", ":imprisoned_friendly_lord"),
-      (neq, ":imprisoned_friendly_lord_faction", "fac_player_supporters_faction"),
+      # (neq, ":imprisoned_friendly_lord_faction", "fac_player_supporters_faction"),
+      (neq, ":imprisoned_friendly_lord_faction", "$players_kingdom"), ######## NEW v3.3
         (store_relation, ":imprisoned_friendly_lord_faction_relation", ":imprisoned_friendly_lord_faction", "fac_player_supporters_faction"),
         (gt, ":imprisoned_friendly_lord_faction_relation", -5),
         (troop_slot_ge, ":imprisoned_friendly_lord", slot_troop_prisoner_of_party, centers_begin),
@@ -10373,8 +10448,16 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "I want to execute a prisoner.", "dplmc_constable_execution_request",[]],
 #############################################
 
+##### NEW v3.3 - if execution is scheduled display this
+[anyone, "dplmc_constable_execution_request",
+[
+(eq, "$g_execution_scheduled", 1),
+(str_store_troop_name, s1, "$lord_to_execute"),
+], "You already have requested to execute {s1} my lord. Please wait until it's done before requesting a new execution.", "dplmc_constable_pretalk",[]],
 #####
-[anyone, "dplmc_constable_execution_request",[], "Who do you wish to execute?", "dplmc_constable_execution_choose",[]],
+
+#####
+[anyone, "dplmc_constable_execution_request",[(eq, "$g_execution_scheduled", 0)], "Who do you wish to execute?", "dplmc_constable_execution_choose",[]],
 
 [anyone|plyr|repeat_for_troops, "dplmc_constable_execution_choose",
 [
@@ -10483,7 +10566,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   "No, I changed my mind.", "dplmc_constable_pretalk",[]], 
   
  [anyone, "dplmc_constable_execution_confirm_6", [],
-  "Very well. I will schedule his execution as soon as possible. You will be notified as soon as it happens (will take up to 3 days).", "dplmc_constable_pretalk",[]],
+  "Very well. I will schedule his execution as soon as possible. You will be notified when it happens (will take up to 3 days).", "dplmc_constable_pretalk",[]],
 #####
 
 #############################################
@@ -12710,16 +12793,19 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (str_store_troop_name, s21, "trp_player"),  ####### NEW v2.4 - bugfix
           (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
             (str_store_faction_name, s31, ":mission_object"),        
-      (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+      # (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+      (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$players_kingdom", "$g_talk_troop"), #### NEW v3.3
       (assign, "$g_mission_result", reg0),         
   ],
 "Well, {s21}, at last I've found you. I have returned from my mission to {s31}.", "dplmc_companion_threaten_request_response", 
    [
    (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
-   (store_relation, ":player_relation", ":mission_object", "fac_player_supporters_faction"),
+   # (store_relation, ":player_relation", ":mission_object", "fac_player_supporters_faction"),
+   (store_relation, ":player_relation", ":mission_object", "$players_kingdom"), #### NEW v3.3
    (val_sub, ":player_relation", 3),
    (val_max, ":player_relation", 0),
-   (set_relation, ":mission_object", "fac_player_supporters_faction", ":player_relation"),                   
+   # (set_relation, ":mission_object", "fac_player_supporters_faction", ":player_relation"),                   
+   (set_relation, ":mission_object", "$players_kingdom", ":player_relation"),    #### NEW v3.3             
    ]],
                     
 ##response to threaten request        
@@ -12740,7 +12826,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    (call_script, "script_dplmc_pay_into_treasury", reg0),
    (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object), 
-   (call_script, "script_diplomacy_start_peace_between_kingdoms", ":mission_object", "fac_player_supporters_faction", 1),
+   # (call_script, "script_diplomacy_start_peace_between_kingdoms", ":mission_object", "fac_player_supporters_faction", 1),
+   (call_script, "script_diplomacy_start_peace_between_kingdoms", ":mission_object", "$players_kingdom", 1), ###### NEW v3.3
       ]],
                     
 ##response to threaten request        
@@ -12753,7 +12840,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    "They send you a declaration of war.", "companion_rejoin_response", 
    [
    (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),    
-   (call_script, "script_diplomacy_start_war_between_kingdoms", ":mission_object", "fac_player_supporters_faction"),
+   (call_script, "script_diplomacy_start_war_between_kingdoms", ":mission_object", "$players_kingdom"), ##### NEW v3.3
     ]],
     
 ##response to threaten request        
@@ -12852,7 +12939,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (is_between, ":center_no", centers_begin, centers_end),
     (neq, ":center_no", "$g_player_court"),
     (store_faction_of_party, ":center_faction", ":center_no"),
-    (eq, ":center_faction", "fac_player_supporters_faction"),
+    # (eq, ":center_faction", "fac_player_supporters_faction"),
+    (eq, ":center_faction", "$players_kingdom"), ######### NEW v3.3
     (str_store_party_name, s1, ":center_no"),
    
    ], "{s1}", "minister_diplomatic_emissary",
@@ -13068,7 +13156,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_repeat_object, ":faction_no"),
 (troop_remove_gold, "trp_player", 15000),
 (assign, "$g_player_culture", ":faction_no"),
-(faction_set_slot, "fac_player_supporters_faction", slot_faction_culture, ":faction_no"),
+# (faction_set_slot, "fac_player_supporters_faction", slot_faction_culture, ":faction_no"),
+(faction_set_slot, "$players_kingdom", slot_faction_culture, ":faction_no"), ########## NEW v3.3
 
 (call_script, "script_initialize_faction_troop_types_player"),
 
@@ -13127,7 +13216,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_iberian"),
-      (assign, "$g_player_know_culture_iberian", 1),
+      (assign, "$g_player_know_culture_iberian", 1), 
+      (assign, "$g_ask_for_language", 1),     
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_italian"),
       (assign, "$g_player_know_culture_italian", 1),
@@ -13147,6 +13237,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_western"),
       (assign, "$g_player_know_culture_western", 1),
+      (assign, "$g_ask_for_language", 1),    ########## NEW v3.3 
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_mongol"),
       (assign, "$g_player_know_culture_mongol", 1),
@@ -13168,6 +13259,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_jerusalem"),
       (assign, "$g_player_know_culture_jerusalem", 1),
+############### NEW v3.3 
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_crusader"),
       (assign, "$g_player_know_culture_crusader", 1),
@@ -13175,15 +13267,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (eq, ":cur_faction_culture", "fac_culture_cuman"),
       (assign, "$g_player_know_culture_cuman", 1),
   (else_try),
+################# NEW v2.1 - display a dialogue that makes the player choose a language
     (eq, ":cur_faction_culture", "fac_culture_player"),
       (assign, "$g_player_know_culture_player", 1),      
+      (assign, "$g_ask_for_language", 1),     
   (try_end),
-  
-################# NEW v2.1 - display a dialogue that makes the player choose a language
-   (try_begin),
-     (eq, ":cur_faction_culture", "fac_culture_player"),
-       (assign, "$g_ask_for_language", 1),     
-   (try_end),
 (try_end),
 ]],
 
@@ -13196,7 +13284,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "And what language would you like to use (This affects the names of the lords recruited into your faction)?", "dplmc_chancellor_kingdom_language_select_2", []
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Finnish", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_finnish),
@@ -13206,7 +13297,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ],
 
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Polish", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_polish),
@@ -13215,7 +13310,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Serbian", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_serbian),
@@ -13224,7 +13322,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+],  
 "Welsh", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_welsh),
@@ -13233,7 +13334,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "German", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_german),
@@ -13242,7 +13347,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Bulgarian", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_bulgarian),
@@ -13251,7 +13359,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Rus", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_rus),
@@ -13260,7 +13371,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Danish", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_danish),
@@ -13269,7 +13383,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Norwegian", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_norwegian),
@@ -13278,7 +13395,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Swedish", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_swedish),
@@ -13287,7 +13407,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Baltic", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_baltic), 
@@ -13296,7 +13419,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Arab", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_arab),
@@ -13305,7 +13431,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Greek", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_greek),
@@ -13314,7 +13443,12 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Spanish", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_spanish),
@@ -13323,7 +13457,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Portuguese", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_portuguese),
@@ -13332,7 +13470,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Italian", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_italian),
@@ -13341,7 +13482,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Gaelic", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_gaelic),    
@@ -13350,7 +13494,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Armenian", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_armenian),   
@@ -13359,7 +13506,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",  
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Seljuk", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_turkish),  
@@ -13368,7 +13518,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Scottish", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_scottish),
@@ -13377,7 +13530,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Hungarian", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_hungarian),
@@ -13386,7 +13543,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "English", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_english),
@@ -13395,7 +13556,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "French", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_french),
@@ -13404,7 +13569,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Czech", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_czech),
@@ -13413,7 +13582,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Mongolian", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_mongol),
@@ -13422,7 +13594,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Mixed European", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_mixed_euro),   
@@ -13431,7 +13606,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", [], 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[
+(eq, "$g_player_culture", "fac_culture_player"),
+], 
 "Custom", "minister_pretalk", 
 [
 (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_custom), 
@@ -13708,7 +13886,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     ##alliance request
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
    [
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", "$g_faction_selected"),  ######## NEW v3.3
     (eq, reg0, 1),  #player is at truce with the mission_faction
 
     (assign, ":proceed", 0),
@@ -13745,7 +13924,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                      (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
                      (str_store_faction_name, s31, ":mission_object"),                 
 
-                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     # (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$players_kingdom", "$g_talk_troop"),  ######## NEW v3.3
                      (assign, "$g_mission_result_with_player", reg0),                     
                      ],
 "Well, {s21}, at last I've found you. I have returned from my mission to {s31}. ", "dplmc_companion_alliance_request_response", [
@@ -13755,11 +13935,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "dplmc_companion_alliance_request_response", [
     (troop_slot_eq, "$g_talk_troop", slot_troop_current_mission, dplmc_npc_mission_alliance_request), 
     (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),                   
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", ":mission_object"),  ######### NEW v3.3
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
     (eq, "$g_concession_demanded", 0), #doesn't want a center from us
     (ge, "$g_mission_result_with_player", 1), #doesn't want war with us
-    (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    # (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    (store_relation, ":relation", "$players_kingdom", ":mission_object"), ######### NEW v3.3
     (store_random_in_range, ":random", 40, 50),
     (ge, ":relation", ":random"),  
     (store_random_in_range, ":random", 50, 70),
@@ -13799,14 +13981,16 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     ##defensive request
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
    [
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", "$g_faction_selected"),  ###### NEW v3.3
     (eq, reg0, 1),  #player is at truce with the mission_faction
 
     (assign, ":proceed", 0),
     (try_begin),
       (store_add, ":slot_truce_days", "$g_faction_selected", slot_faction_truce_days_with_factions_begin),
       (val_sub, ":slot_truce_days", kingdoms_begin),
-      (faction_get_slot, ":truce_days", "fac_player_supporters_faction", ":slot_truce_days"),
+      # (faction_get_slot, ":truce_days", "fac_player_supporters_faction", ":slot_truce_days"),
+      (faction_get_slot, ":truce_days", "$players_kingdom", ":slot_truce_days"),  ###### NEW v3.3
       #(gt, ":truce_days", 20), #if we have more than 20 truce days left don't proceed   
       (is_between, ":truce_days", 0, 30), #you need a non-aggression or trade aggreement for an defensive pact
       (assign, ":proceed", 1), 
@@ -13837,7 +14021,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                      (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
                      (str_store_faction_name, s31, ":mission_object"),                 
 
-                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     # (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$players_kingdom", "$g_talk_troop"), ######### NEW v3.3
                      (assign, "$g_mission_result_with_player", reg0),                     
                      ],
 "Well, {s21}, at last I've found you. I have returned from my mission to {s31}. ", "dplmc_companion_defensive_request_response", [
@@ -13847,11 +14032,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "dplmc_companion_defensive_request_response", [
     (troop_slot_eq, "$g_talk_troop", slot_troop_current_mission, dplmc_npc_mission_defensive_request), 
     (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),                   
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", ":mission_object"),
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
     (eq, "$g_concession_demanded", 0), #doesn't want a center from us
     (ge, "$g_mission_result_with_player", 1), #doesn't want war with us
-    (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    # (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    (store_relation, ":relation", "$players_kingdom", ":mission_object"),
     (store_random_in_range, ":random", 25, 30), #20 96 alliance
     (ge, ":relation", ":random"),  
     (store_random_in_range, ":random", 30, 50), #5 75 alliance
@@ -13891,14 +14078,16 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     ##trade request
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
    [
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", "$g_faction_selected"),
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
 
     (assign, ":proceed", 0),
     (try_begin),
       (store_add, ":slot_truce_days", "$g_faction_selected", slot_faction_truce_days_with_factions_begin),
       (val_sub, ":slot_truce_days", kingdoms_begin),
-      (faction_get_slot, ":truce_days", "fac_player_supporters_faction", ":slot_truce_days"), 
+      # (faction_get_slot, ":truce_days", "fac_player_supporters_faction", ":slot_truce_days"), 
+      (faction_get_slot, ":truce_days", "$players_kingdom", ":slot_truce_days"), 
       (lt, ":truce_days", 10), #you need a non-aggression or peace for a trade pact
       (assign, ":proceed", 1), 
     (try_end),
@@ -13928,7 +14117,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                      (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
                      (str_store_faction_name, s31, ":mission_object"),                 
 
-                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     # (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$players_kingdom", "$g_talk_troop"),
                      (assign, "$g_mission_result_with_player", reg0),                     
                      ],
 "Well, {s21}, at last I've found you. I have returned from my mission to {s31}. ", "dplmc_companion_trade_request_response", [
@@ -13938,11 +14128,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "dplmc_companion_trade_request_response", [
     (troop_slot_eq, "$g_talk_troop", slot_troop_current_mission, dplmc_npc_mission_trade_request), 
     (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),                   
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", ":mission_object"),
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
     (eq, "$g_concession_demanded", 0), #doesn't want a center from us
     (ge, "$g_mission_result_with_player", 1), #doesn't want war with us
-    (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    # (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    (store_relation, ":relation", "$players_kingdom", ":mission_object"),
     (store_random_in_range, ":random", 5, 10), #20 96 alliance
     (ge, ":relation", ":random"),  
     (store_random_in_range, ":random", 20, 30), #5 75 alliance
@@ -13983,7 +14175,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
    [
     (eq, 0, 1), #tom - this not working
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", "$g_faction_selected"),
     (eq, reg0, 0),  #player is at peace
 
     (faction_slot_eq, "$g_faction_selected", slot_faction_state, sfs_active),
@@ -14009,7 +14202,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                      (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
                      (str_store_faction_name, s31, ":mission_object"),                 
 
-                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     # (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$players_kingdom", "$g_talk_troop"),
                      (assign, "$g_mission_result_with_player", reg0),                     
                      ],
 "Well, {s21}, at last I've found you. I have returned from my mission to {s31}. ", "dplmc_companion_nonaggression_request_response", [
@@ -14019,11 +14213,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "dplmc_companion_nonaggression_request_response", [
     (troop_slot_eq, "$g_talk_troop", slot_troop_current_mission, dplmc_npc_mission_nonaggression_request), 
     (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),                   
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", ":mission_object"),
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
     (eq, "$g_concession_demanded", 0), #doesn't want a center from us
     (ge, "$g_mission_result_with_player", 1), #doesn't want war with us
-    (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    # (store_relation, ":relation", "fac_player_supporters_faction", ":mission_object"),
+    (store_relation, ":relation", "$players_kingdom", ":mission_object"),
     (store_random_in_range, ":random", 5, 15), #20 96 alliance
     (ge, ":relation", ":random"),  
     (store_random_in_range, ":random", 10, 20), #5 75 alliance
@@ -14068,7 +14264,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (eq, reg0, 2), #truce
       (store_add, ":slot_truce_days", "$g_faction_selected", slot_faction_truce_days_with_factions_begin),
       (val_sub, ":slot_truce_days", kingdoms_begin),
-      (faction_get_slot, ":truce_days", "fac_player_supporters_faction", ":slot_truce_days"), 
+      # (faction_get_slot, ":truce_days", "fac_player_supporters_faction", ":slot_truce_days"), 
+      (faction_get_slot, ":truce_days", "$players_kingdom", ":slot_truce_days"), 
       (gt, ":truce_days", 0), #you need at least a non-aggression pact
       (assign, ":proceed", 0), 
     (try_end),
@@ -14076,12 +14273,16 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
     (store_repeat_object, ":faction_no"),
     (is_between, ":faction_no", kingdoms_begin, kingdoms_end),
-    (neq, ":faction_no", "fac_player_supporters_faction"),
+    # (neq, ":faction_no", "fac_player_supporters_faction"),
+    (neq, ":faction_no", "$players_kingdom"), ########### NEW v3.3
     (neq, ":faction_no", "$g_faction_selected"),
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":faction_no"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":faction_no"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", ":faction_no"),
     (eq, reg0, -2), #player is at war with the target faction
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", "$g_faction_selected"),
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$g_faction_selected", ":faction_no"),
     (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$g_faction_selected", ":faction_no"),
     (is_between, reg0, -1, 1),  #mission_faction provocated or peace with target_faction
     (faction_slot_eq, "$g_faction_selected", slot_faction_recognized_player, 1), #recognized us
@@ -14108,7 +14309,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
     (str_store_faction_name, s31, ":mission_object"),                 
     
-    (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+    # (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+    (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$players_kingdom", "$g_talk_troop"),
     (assign, "$g_mission_result_with_player", reg0),    
     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$diplomacy_var", -1),
     (assign, "$g_mission_result_with_target", reg0),             
@@ -14123,7 +14325,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (ge, "$g_mission_result_with_player", 2), #doesn't want war with us
     (eq, "$g_concession_demanded", 0), #doesn't want a center from us
     (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", ":mission_object"),
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
     (troop_get_slot, ":war_target_faction", "$g_talk_troop", dplmc_slot_troop_mission_diplomacy),
     (str_store_faction_name, s31, ":war_target_faction"),
@@ -14143,7 +14346,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (ge, "$g_mission_result_with_player", 2), #doesn't want war with us
     (eq, "$g_concession_demanded", 0), #doesn't want a center from us
     (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
-    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", ":mission_object"),
+    (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", ":mission_object"),
     (ge, reg0, 0),  #player is at peace or truce with the mission_faction
     (troop_get_slot, ":war_target_faction", "$g_talk_troop", dplmc_slot_troop_mission_diplomacy),
     (str_store_faction_name, s31, ":war_target_faction"),
@@ -14192,7 +14396,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
         (faction_get_slot, ":emissary_object", ":mission_object", slot_faction_leader), 
         (str_store_troop_name, s12, ":emissary_object"),                                                
         (is_between, "$g_mission_result", -2, 1), #-2 or -1 or 0
-    (call_script, "script_dplmc_get_truce_pay_amount", "fac_player_supporters_faction", ":mission_object", "$g_mission_result"),        
+    # (call_script, "script_dplmc_get_truce_pay_amount", "fac_player_supporters_faction", ":mission_object", "$g_mission_result"),        
+    (call_script, "script_dplmc_get_truce_pay_amount", "$players_kingdom", ":mission_object", "$g_mission_result"),        
     (gt, reg0, 0),
     (eq, reg1, -1),
    ],
@@ -14206,7 +14411,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (faction_get_slot, ":emissary_object", ":mission_object", slot_faction_leader),  
     (str_store_troop_name, s12, ":emissary_object"),
     (is_between, "$g_mission_result", -2, 1), #-2 or -1 or 0
-    (call_script, "script_dplmc_get_truce_pay_amount", "fac_player_supporters_faction", ":mission_object", "$g_mission_result"),                                  
+    # (call_script, "script_dplmc_get_truce_pay_amount", "fac_player_supporters_faction", ":mission_object", "$g_mission_result"),                                  
+    (call_script, "script_dplmc_get_truce_pay_amount", "$players_kingdom", ":mission_object", "$g_mission_result"),                                  
     (gt, reg1, 0),                
    ],
 "{s12} says that he is willing to consider a truce of twenty days if you yield to his terms. Either you pay {reg0} denars or you pay {reg1} denars and give him {s18}.", "dplmc_companion_truce_pay", [
@@ -14220,7 +14426,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (faction_get_slot, ":emissary_object", ":mission_object", slot_faction_leader),
     (str_store_troop_name, s12, ":emissary_object"),        
     (is_between, "$g_mission_result", -2, 1), #-2 or -1 or 0        
-    (call_script, "script_dplmc_get_truce_pay_amount", "fac_player_supporters_faction", ":mission_object", "$g_mission_result"),                                  
+    # (call_script, "script_dplmc_get_truce_pay_amount", "fac_player_supporters_faction", ":mission_object", "$g_mission_result"),                                  
+    (call_script, "script_dplmc_get_truce_pay_amount", "$players_kingdom", ":mission_object", "$g_mission_result"),                                  
     (gt, reg0, 0),
     (eq, reg1, 0),
    ],
@@ -14303,20 +14510,24 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     [],
     "I shall be marshal", "minister_pretalk",
     [
-    (call_script, "script_appoint_faction_marshall", "fac_player_supporters_faction", "trp_player"),
+    # (call_script, "script_appoint_faction_marshall", "fac_player_supporters_faction", "trp_player"),
+    (call_script, "script_appoint_faction_marshall", "$players_kingdom", "trp_player"),
     (store_current_hours, ":hours"),
     (assign, "$g_recalculate_ais", 1),
     (assign, "$g_player_faction_last_marshal_appointment", ":hours"),
     
     (try_begin),
-      (faction_slot_eq, "fac_player_supporters_faction", slot_faction_political_issue, 1),
+      # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_political_issue, 1),
+      (faction_slot_eq, "$players_kingdom", slot_faction_political_issue, 1),
       
-      (faction_set_slot, "fac_player_supporters_faction", slot_faction_political_issue, 0),
+      # (faction_set_slot, "fac_player_supporters_faction", slot_faction_political_issue, 0),
+      (faction_set_slot, "$players_kingdom", slot_faction_political_issue, 0),
       (troop_set_slot, "trp_player",  slot_troop_stance_on_faction_issue, -1),
       (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
         (troop_slot_eq, ":active_npc", slot_troop_is_alive, 1),  ## he's alive/active
         (store_faction_of_troop, ":active_npc_faction", ":active_npc"),
-        (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+        # (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+        (eq, ":active_npc_faction", "$players_kingdom"),
         (troop_set_slot, ":active_npc", slot_troop_stance_on_faction_issue, -1),
       (try_end),    
     (try_end),        
@@ -14326,16 +14537,20 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     [],
     "For a short while, we should have no marshal", "minister_pretalk",
     [
-    (call_script, "script_appoint_faction_marshall", "fac_player_supporters_faction", -1),
+    # (call_script, "script_appoint_faction_marshall", "fac_player_supporters_faction", -1),
+    (call_script, "script_appoint_faction_marshall", "$players_kingdom", -1),
     (try_begin),
-        (faction_slot_eq, "fac_player_supporters_faction", slot_faction_political_issue, 1),
-        (faction_set_slot, "fac_player_supporters_faction", slot_faction_political_issue, 0),
+        # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_political_issue, 1),
+        (faction_slot_eq, "$players_kingdom", slot_faction_political_issue, 1),
+        # (faction_set_slot, "fac_player_supporters_faction", slot_faction_political_issue, 0),
+        (faction_set_slot, "$players_kingdom", slot_faction_political_issue, 0),
 
         (troop_set_slot, "trp_player",  slot_troop_stance_on_faction_issue, -1),
         (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
             (troop_slot_eq, ":active_npc", slot_troop_is_alive, 1),  ## he's alive/active
             (store_faction_of_troop, ":active_npc_faction", ":active_npc"),
-            (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+            # (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+            (eq, ":active_npc_faction", "$players_kingdom"),
             (troop_set_slot, ":active_npc", slot_troop_stance_on_faction_issue, -1),
         (try_end),    
     (try_end),    
@@ -14351,25 +14566,30 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (troop_slot_eq, ":lord", slot_troop_is_alive, 1),  ## he's alive/active
     (troop_slot_eq, ":lord", slot_troop_occupation, slto_kingdom_hero),
     (store_faction_of_troop, ":lord_faction", ":lord"),
-    (eq, ":lord_faction", "fac_player_supporters_faction"),
+    # (eq, ":lord_faction", "fac_player_supporters_faction"),
+    (eq, ":lord_faction", "$players_kingdom"),
     (str_store_troop_name, s4, ":lord"),
     ],
     "{s4}", "minister_pretalk",
     [
     (store_repeat_object, ":lord"),
-    (call_script, "script_appoint_faction_marshall", "fac_player_supporters_faction", ":lord"),
+    # (call_script, "script_appoint_faction_marshall", "fac_player_supporters_faction", ":lord"),
+    (call_script, "script_appoint_faction_marshall", "$players_kingdom", ":lord"),
     (store_current_hours, ":hours"),
     (assign, "$g_player_faction_last_marshal_appointment", ":hours"),
     (try_begin),
-        (faction_slot_eq, "fac_player_supporters_faction", slot_faction_political_issue, 1),
+        # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_political_issue, 1),
+        (faction_slot_eq, "$players_kingdom", slot_faction_political_issue, 1),
         
-        (faction_set_slot, "fac_player_supporters_faction", slot_faction_political_issue, 0),
+        # (faction_set_slot, "fac_player_supporters_faction", slot_faction_political_issue, 0),
+        (faction_set_slot, "$players_kingdom", slot_faction_political_issue, 0),
     
         (troop_set_slot, "trp_player",  slot_troop_stance_on_faction_issue, -1),
         (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
             (troop_slot_eq, ":active_npc", slot_troop_is_alive, 1),  ## he's alive/active
             (store_faction_of_troop, ":active_npc_faction", ":active_npc"),
-            (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+            # (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+            (eq, ":active_npc_faction", "$players_kingdom"),
             (troop_set_slot, ":active_npc", slot_troop_stance_on_faction_issue, -1),
         (try_end),    
     (try_end),
@@ -14408,7 +14628,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    (store_repeat_object, ":faction_no"),
    (is_between, ":faction_no", kingdoms_begin, kingdoms_end),
-   (neq, ":faction_no", "fac_player_supporters_faction"),
+   # (neq, ":faction_no", "fac_player_supporters_faction"),
+   (neq, ":faction_no", "$players_kingdom"), ############ NEW v3.3
    (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
    (faction_get_slot, ":leader_no", ":faction_no", slot_faction_leader),
    (str_store_troop_name, s10, ":leader_no"),
@@ -14430,15 +14651,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
    [(eq, "$g_faction_selected", "fac_papacy"),
-    (eq, "$players_kingdom", "fac_player_supporters_faction"),
+    # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+    (eq, "$players_kingdom", "$players_kingdom"), ############ NEW v3.3
     (faction_slot_eq, "$players_kingdom", slot_faction_religion, religion_catholic),
-    (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+    # (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+    (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
     (ge, ":relation", 0),],
 "I would like to ask the holy father to crown me.", "minister_diplomatic_emissary",
    [(assign, "$g_initiative_selected", npc_mission_seek_recognition)]],
 
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
-   [(store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+   # [(store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+   [(store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
     (lt, ":relation", 0),],
 "That our two kingdoms should enter into truce.", "minister_diplomatic_emissary",
    [(assign, "$g_initiative_selected", npc_mission_peace_request)]],
@@ -14449,14 +14673,16 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
    [(neq, "$g_faction_selected", "fac_papacy"), #pope recognizes diffrently
-    (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+    # (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+    (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
     (faction_slot_eq, "$g_faction_selected", slot_faction_recognized_player, 0),
     (ge, ":relation", 0),],
 "That I wish to express my goodwill, as one monarch to another.", "minister_diplomatic_emissary",
    [(assign, "$g_initiative_selected", npc_mission_seek_recognition),]],
  
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
-   [(store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+   # [(store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+   [(store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
     (ge, ":relation", 0),],
 "That I declare war upon him.", "minister_declare_war", []],
  
@@ -14464,11 +14690,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "minister_declare_war",
    [(try_begin),
-     (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+     # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+     (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", "$g_faction_selected"),
         (eq, reg0, 1),
         (str_store_string, s12, "str_in_doing_so_you_will_be_in_violation_of_your_truce_is_that_what_you_want"),
     (else_try),
-     (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+     # (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "fac_player_supporters_faction", "$g_faction_selected"),
+     (call_script, "script_diplomacy_faction_get_diplomatic_status_with_faction", "$players_kingdom", "$g_faction_selected"),
         (neq, reg0, -1),
         (str_store_string, s12, "str_if_you_attack_without_provocation_some_of_your_vassals_may_consider_you_to_be_too_warlike_is_that_what_you_want"),
     (else_try),
@@ -14481,7 +14709,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    ],
 "It is. I wish to make war on {s12}.", "minister_declare_war_confirm_yes",
    [
-    (call_script, "script_diplomacy_start_war_between_kingdoms",  "fac_player_supporters_faction", "$g_faction_selected", 1),
+    # (call_script, "script_diplomacy_start_war_between_kingdoms",  "fac_player_supporters_faction", "$g_faction_selected", 1),
+    (call_script, "script_diplomacy_start_war_between_kingdoms",  "$players_kingdom", "$g_faction_selected", 1),
     ]],
 
 [anyone|plyr, "minister_declare_war_confirm",
@@ -14766,7 +14995,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (neq, ":troop_no", "trp_player"),
    #########
    (store_faction_of_troop, ":faction", ":troop_no"),
-   (eq, ":faction", "fac_player_supporters_faction"),
+   # (eq, ":faction", "fac_player_supporters_faction"),
+   (eq, ":faction", "$players_kingdom"),
    (str_store_troop_name, s11, ":troop_no"),
    ], "{s11}", "minister_indict_confirm",
    [
@@ -14788,7 +15018,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
    [anyone, "minister_indict_conclude", [], "It has been sent, {sire/my lady}.", "minister_pretalk",
    [
-   (call_script, "script_indict_lord_for_treason", "$lord_selected", "fac_player_supporters_faction"),
+   # (call_script, "script_indict_lord_for_treason", "$lord_selected", "fac_player_supporters_faction"),
+   (call_script, "script_indict_lord_for_treason", "$lord_selected", "$players_kingdom"),
    ]],
 
 
@@ -14810,7 +15041,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (neq, ":troop_no", "trp_player"),
    #########
    (store_troop_faction, ":faction_no", ":troop_no"),
-   (eq, ":faction_no", "fac_player_supporters_faction"),
+   # (eq, ":faction_no", "fac_player_supporters_faction"),
+   (eq, ":faction_no", "$players_kingdom"),
    (str_store_troop_name, s11, ":troop_no"),
    (call_script, "script_print_troop_owned_centers_in_numbers_to_s0", ":troop_no"),
 
@@ -15515,7 +15747,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                      (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
                      (str_store_faction_name, s31, ":mission_object"),
 
-                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     # (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "fac_player_supporters_faction", "$g_talk_troop"),
+                     (call_script, "script_npc_decision_checklist_peace_or_war", ":mission_object", "$players_kingdom", "$g_talk_troop"),
                      (assign, "$g_mission_result", reg0),
 
 
@@ -15554,7 +15787,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                    (str_store_troop_name, s12, ":emissary_object"),
                    (neg|party_slot_eq, "$g_player_court", slot_center_original_faction, ":mission_object"),
                    (str_store_party_name, s4, "$g_player_court"),
-                   (str_store_faction_name, s11, "fac_player_supporters_faction"),
+                   # (str_store_faction_name, s11, "fac_player_supporters_faction"),
+                   (str_store_faction_name, s11, "$players_kingdom"),
   ],
 "However, the Holy Father recognize you as the king of {s11} and sends you this crown!", "companion_rejoin_response", [
                       (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
@@ -15564,19 +15798,22 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                         
                         (assign, ":rtr", 10),
                         (try_for_range, ":cur_faction", npc_kingdoms_begin, npc_kingdoms_end),
-                          (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+                          # (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
+                          (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
                           (ge, ":relation", 0),
                           (faction_get_slot, ":faction_leader", ":cur_faction", slot_faction_leader),
                           (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
                           (faction_slot_eq, ":cur_faction", slot_faction_religion, religion_catholic),
                           (faction_set_slot, ":cur_faction", slot_faction_recognized_player, 1),
-                          (call_script, "script_npc_decision_checklist_peace_or_war", ":cur_faction", "fac_player_supporters_faction", ":faction_leader"),
+                          # (call_script, "script_npc_decision_checklist_peace_or_war", ":cur_faction", "fac_player_supporters_faction", ":faction_leader"),
+                          (call_script, "script_npc_decision_checklist_peace_or_war", ":cur_faction", "$players_kingdom", ":faction_leader"),
                           (ge, reg0, 1),
 ####### NEW v2.9-KOMKE START-                          
                           # (val_add, ":rtr", 5),
                           (val_add, ":rtr", 2),##KOMKE changed to 2 because +/- 20 catholic factions * 5 was too much
                           (str_store_faction_name, s1, ":cur_faction"),
-                          (str_store_faction_name, s2, "fac_player_supporters_faction"),
+                          # (str_store_faction_name, s2, "fac_player_supporters_faction"),
+                          (str_store_faction_name, s2, "$players_kingdom"),
                           (display_message, "@{s1} recognize you as the rightful king of {s2}"),
                         (try_end),
                         (call_script, "script_change_player_right_to_rule", ":rtr"),
@@ -15724,9 +15961,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
         (quest_set_slot, "qst_join_faction", slot_quest_expiration_days, 30),
 
         (try_begin),
-            (store_relation, ":relation", "$g_invite_faction", "fac_player_supporters_faction"),
+            # (store_relation, ":relation", "$g_invite_faction", "fac_player_supporters_faction"),
+            (store_relation, ":relation", "$g_invite_faction", "$players_kingdom"),
             (lt, ":relation", 0),
-            (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_invite_faction", "fac_player_supporters_faction", 0),
+            # (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_invite_faction", "fac_player_supporters_faction", 0),
+            (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_invite_faction", "$players_kingdom", 0),
             (quest_set_slot, "qst_join_faction", slot_quest_failure_consequence, 1),
         (try_end),
 
@@ -30284,7 +30523,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     (party_set_slot, "$g_encountered_party", slot_party_last_toll_paid_hours, ":toll_finish_time"),
     (try_begin),
       (ge, "$g_encountered_party_relation", -5),
-      (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
       (try_begin),
         (gt, ":rel", 0),
         (val_sub, ":rel", 1),
@@ -30320,7 +30559,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
   ]],
 
 [anyone, "merchant_attack", [], "Damn you, you won't get anything from us without a fight!", "close_window",
-   [(store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+   [(store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
     (try_begin),
       (gt, ":rel", 0),
       (val_sub, ":rel", 10),
@@ -30384,7 +30623,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 [anyone, "talk_caravan_enemy_2", [],
 "Never. It is our duty to protect these goods. You shall have to fight us, brigand!", "close_window",
    [
-    (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+    (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
     (val_min, ":rel",0),
     (val_sub, ":rel",4),
     (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
@@ -39689,7 +39928,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ################################# NEW v2.1 
 ##Floris - Bugfix for DPLMC patrols 
        (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
-       (store_relation, ":rel", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+       (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
         (try_begin),
           (gt, ":rel", 0),
           (val_sub, ":rel", 10),
