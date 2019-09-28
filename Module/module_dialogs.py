@@ -16614,7 +16614,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                          (assign, "$g_comment_found", 0),
                          ################### NEW v2.1 - music addition
                          (try_begin),
-                             (store_relation, ":relation", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+                             # (store_relation, ":relation", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+                             (store_relation, ":relation", "$g_encountered_party_faction", "$players_kingdom"),
                              # (str_store_faction_name, s0, "$g_encountered_party_faction"),
                              # (assign, reg0, ":relation"),
                              # (display_message, "@[dialog]encountered  faction : {s0}, relation {reg0} "),
@@ -16711,7 +16712,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone , "start",
    [
-    (eq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+    # (eq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+    (eq, "$g_talk_troop_faction", "$players_kingdom"),
     (is_between, "$g_talk_troop", active_npcs_begin, active_npcs_end),
     (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_inactive),
     (neq, "$g_talk_troop", "$g_player_minister"),
@@ -16898,6 +16900,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr , "pretender_discuss_rebellion_2", [],  "You are right. Perhaps, I should think about this some more.", "pretender_end", []],
 
   
+[anyone , "pretender_discuss_rebellion_3", [(this_or_next|neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
 [anyone , "pretender_discuss_rebellion_3", [(this_or_next|neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
                                              (neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
                                              (neg|troop_slot_ge, "trp_player",slot_troop_renown, 200),
@@ -18952,7 +18955,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                             (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),
                             (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
                             (neq, "$g_talk_troop_faction", "$players_kingdom"),
-                            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
+                            # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
+                            (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
 #                            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
                             (faction_get_slot, ":faction_leader", "$g_talk_troop_faction", slot_faction_leader),
                             (str_store_troop_name, s4, ":faction_leader"),
@@ -19015,7 +19019,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                             (neg|is_between, "$g_talk_troop", pretenders_begin, pretenders_end),
                             (neg|faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
                             (neg|troop_slot_eq, "trp_player", slot_troop_spouse, "$g_talk_troop"),
-                            (neq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+                            # (neq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+                            (neq, "$g_talk_troop_faction", "$players_kingdom"),
                             #other requirements
 
                             ],
@@ -19216,7 +19221,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_other_lord", -20),
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 10),
     (try_begin),
-        (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+        # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+        (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
         (call_script, "script_add_log_entry", logent_ruler_intervenes_in_quarrel, "trp_player",  "$g_other_lord", "$g_talk_troop", "fac_player_supporters_faction"),
     (try_end),
     (call_script, "script_end_quest", "qst_resolve_dispute"),
@@ -19269,7 +19275,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -15),
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_other_lord", 10),
     (try_begin),
-        (eq, "$players_kingdom", "fac_player_supporters_faction"),
+        # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+        (gt, "$players_kingdom", 0),
         (call_script, "script_add_log_entry", logent_ruler_intervenes_in_quarrel, "trp_player",  "$g_talk_troop", "$g_other_lord", "fac_player_supporters_faction"),
     (try_end),
     (call_script, "script_end_quest", "qst_resolve_dispute"),
@@ -19815,7 +19822,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "lord_recruit_2", [
   (troop_slot_eq, "$g_talk_troop", slot_troop_spouse, "trp_player"),
-  (neq, "$players_kingdom", "fac_player_supporters_faction"),
+  # (neq, "$players_kingdom", "fac_player_supporters_faction"),
+  (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
   (troop_get_type, ":type", "$g_talk_troop"),
   (eq, ":type", 0),
   (faction_get_slot, ":faction_leader", "$g_encountered_party_faction", slot_faction_leader),
@@ -21667,7 +21675,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                              
                              (this_or_next|ge, ":players_kingdom_relation", 0),
                              (this_or_next|eq, "$players_kingdom", 0),
-                                (eq, "$players_kingdom", "fac_player_supporters_faction"),
+                             # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+                             (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
                                 
                                 
                              (neq, "$players_oath_renounced_against_kingdom", "$g_talk_troop_faction"),
@@ -21686,11 +21695,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "lord_ask_pardon",
    [
-   (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+   # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+   (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
    (assign, ":has_center", 0),
    (try_for_range, ":cur_center", centers_begin, centers_end),
      (store_faction_of_party, ":cur_center_faction", ":cur_center"),
-     (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     # (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     (eq, ":cur_center_faction", "$players_kingdom"),
      (assign, ":has_center", 1),
    (try_end),
    (eq, ":has_center", 1),
@@ -21704,7 +21715,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, ":has_center", 0),
    (try_for_range, ":cur_center", centers_begin, centers_end),
      (store_faction_of_party, ":cur_center_faction", ":cur_center"),
-     (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     # (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     (eq, ":cur_center_faction", "$players_kingdom"),
      (assign, ":has_center", 1),
    (try_end),
    (eq, ":has_center", 1),
@@ -21720,12 +21732,14 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, ":has_center", 0),
    (try_for_range, ":cur_center", centers_begin, centers_end),
      (store_faction_of_party, ":cur_center_faction", ":cur_center"),
-     (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     # (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     (eq, ":cur_center_faction", "$players_kingdom"),
      (assign, ":has_center", 1),
    (try_end),
    (eq, ":has_center", 1),
 
-   (call_script, "script_npc_decision_checklist_peace_or_war", "$g_talk_troop_faction", "fac_player_supporters_faction", "trp_player"), #moto fix here 
+   # (call_script, "script_npc_decision_checklist_peace_or_war", "$g_talk_troop_faction", "fac_player_supporters_faction", "trp_player"), #moto fix here 
+   (call_script, "script_npc_decision_checklist_peace_or_war", "$g_talk_troop_faction", "$players_kingdom", "trp_player"), #moto fix here 
    (lt, reg0, 0),
     ], "I do not see it as being in my current interest to make peace.", "lord_pretalk",[]],
 
@@ -21736,7 +21750,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, ":has_center", 0),
    (try_for_range, ":cur_center", centers_begin, centers_end),
      (store_faction_of_party, ":cur_center_faction", ":cur_center"),
-     (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     # (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+     (eq, ":cur_center_faction", "$players_kingdom"),
      (assign, ":has_center", 1),
    (try_end),
    (eq, ":has_center", 1),
@@ -21753,11 +21768,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "lord_ask_pardon", [
                                 (neg|faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
-                                (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+                                # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+                                (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
                                 (assign, ":has_center", 0),
                                 (try_for_range, ":cur_center", centers_begin, centers_end),
                                        (store_faction_of_party, ":cur_center_faction", ":cur_center"),
-                                       (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+                                       # (eq, ":cur_center_faction", "fac_player_supporters_faction"),
+                                       (eq, ":cur_center_faction", "$players_kingdom"),
                                        (assign, ":has_center", 1),
                                 (try_end),
                                 (eq, ":has_center", 0),
@@ -21780,7 +21797,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "lord_ask_pardon",
    [
     (faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
-    (neg|faction_slot_ge, "fac_player_supporters_faction", slot_faction_leader, 1),
+    # (neg|faction_slot_ge, "fac_player_supporters_faction", slot_faction_leader, 1),
+    (neg|faction_slot_ge, "$players_kingdom", slot_faction_leader, 1),
 
     (store_sub, ":hostility", 4, "$g_talk_troop_faction_relation"),
     (val_mul, ":hostility", ":hostility"), #square it
@@ -22034,7 +22052,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "I have an offer for you.", "lord_talk_preoffer",[]],
 
 
-[anyone|plyr, "lord_talk", [(eq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+# [anyone|plyr, "lord_talk", [(eq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+[anyone|plyr, "lord_talk", [(eq, "$g_talk_troop_faction", "$players_kingdom"),
                              #(troop_slot_eq, "$g_talk_troop", slot_troop_is_prisoner, 0),
                              (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0),
                              ],
@@ -24293,7 +24312,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
      (call_script, "script_make_kingdom_hostile_to_player", "$g_encountered_party_faction", -3),
        ################### NEW v2.1 - music addition
        (try_begin),
-            (store_relation, ":relation", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+            # (store_relation, ":relation", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+            (store_relation, ":relation", "$g_encountered_party_faction", "$players_kingdom"),
             (str_store_faction_name, s0, "$g_encountered_party_faction"),
             (assign, reg0, ":relation"),
             # (display_message, "@[dialog]encountered  faction : {s0}, relation {reg0} "),
@@ -24447,8 +24467,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
             (str_store_string, s43, "str_s43_just_so_you_know_if_you_attack_me_you_will_be_in_violation_of_the_truce_you_signed_with_the_s34"),
         (try_end),
         (try_begin),
-            (eq, "$players_kingdom", "fac_player_supporters_faction"),
-            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ########## NEW v3.3
             (str_store_string, s43, "str_s43_also_you_should_know_that_an_unprovoked_assault_is_declaration_of_war"),
         (try_end),
 
@@ -24484,11 +24504,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),
     (try_begin), #this try is added so that a player  monarch cannot spark a war by attacking a neutral. The player does however cause a provocation, which may allow the other side to go to war
         #If a player can create a hostile faction simply by attacking, this will allow a number of exploits. Therefore, it is quite important to keep this condition in here for active player kingdoms
-        (neq, "$players_kingdom", "fac_player_supporters_faction"),
+        # (neq, "$players_kingdom", "fac_player_supporters_faction"),
+        (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ########## NEW v3.3
         (call_script, "script_make_kingdom_hostile_to_player", "$g_encountered_party_faction", -3),
     (else_try),
-        (eq, "$players_kingdom", "fac_player_supporters_faction"),
-        (call_script, "script_diplomacy_start_war_between_kingdoms",  "fac_player_supporters_faction", "$g_encountered_party_faction", 1),
+        # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+        (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ########## NEW v3.3
+        (call_script, "script_diplomacy_start_war_between_kingdoms",  "$players_kingdom", "$g_encountered_party_faction", 1),
     (try_end),
 
 #   (call_script, "script_make_kingdom_hostile_to_player", "$g_encountered_party_faction", -3),
@@ -24937,7 +24959,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (party_remove_members, "p_main_party", "$g_talk_troop", 1),
 
       (troop_get_slot, ":companions_party", "$g_talk_troop", slot_troop_leaded_party),
-      (party_set_faction, ":companions_party", "fac_player_supporters_faction"),
+      # (party_set_faction, ":companions_party", "fac_player_supporters_faction"),
+      (party_set_faction, ":companions_party", "$players_kingdom"),
       (party_detach, ":companions_party"),
       (party_set_ai_behavior, ":companions_party", ai_bhvr_patrol_location),
       (party_set_flags, ":companions_party", pf_default_behavior, 0),
@@ -24945,7 +24968,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "lord_enter_service_reject", 
    [
-   (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   (eq, "$players_kingdom", "$players_kingdom"),
   ], "Indeed.... Did you offer vassalage, then, just to by time? Very well -- you shall have time to reconsider, but if you are toying with me, it will do your reputation no credit.", "close_window",
    [
    (assign, "$g_leave_encounter", 1),
@@ -24953,7 +24977,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "lord_give_oath_give_up", 
    [
-   (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   (eq, "$players_kingdom", "$players_kingdom"),
   ], "Indeed.... Did you offer vassalage, then, just to buy time? Very well -- you shall have time to reconsider, but if you are toying with me, it will do your reputation no credit.", "close_window",
    [
    (assign, "$g_leave_encounter", 1),
@@ -26327,7 +26352,8 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
 						  (this_or_next|neg|is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
                           (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),   ########## NEW v2.8 - fixes option not appearing when starting as adventurer
                           (neq, "$g_talk_troop_faction", "$players_kingdom"), #no need for this?
-                          (neq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+                          # (neq, "$g_talk_troop_faction", "fac_player_supporters_faction"),
+                          (neq, "$g_talk_troop_faction", "$players_kingdom"), ######### NEW v3.3
                           
                           (call_script, "script_troop_get_relation_with_troop", "trp_player", "$g_talk_troop"),
                           (ge, reg0, 0),
@@ -27991,7 +28017,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
  [anyone, "spouse_organize_feast",
    [
-   (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
    (neg|is_between, "$g_player_court", centers_begin, centers_end),
    ],
 "A splendid idea, my {husband/wife}. However, we must establish a court before hosting a feast.", "spouse_pretalk",[
@@ -27999,7 +28026,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
  [anyone, "spouse_organize_feast",
    [
-   (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
    (store_current_hours, ":hours_since_last_feast"),
    (faction_get_slot, ":last_feast_time", "$players_kingdom", slot_faction_last_feast_start_time),
     (val_sub, ":hours_since_last_feast", ":last_feast_time"),
@@ -28059,7 +28087,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
    
 [anyone, "spouse_feast_confirm_yes",
-   [ (neq, "$players_kingdom", "fac_player_supporters_faction"),],
+   # [ (neq, "$players_kingdom", "fac_player_supporters_faction"),],
+   [(neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),],
 "I shall send word, then, that we will host a feast as soon as conditions in the realm permit. You perhaps should continue to stock our larder, so that we may do justice to our reputation for hospitality.",   "spouse_pretalk",[
 
    
@@ -28235,7 +28264,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
     (call_script, "script_get_kingdom_lady_social_determinants", "$g_talk_troop"),
     (assign, ":guardian", reg0),
-    (neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+    # (neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+    (neq, "$g_encountered_party_faction", "$players_kingdom"),
 
     (store_faction_of_troop, ":guardian_faction", ":guardian"),
     (neq, ":guardian_faction", "$g_encountered_party_faction"),
@@ -30637,7 +30667,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 # Prison Guards
 [anyone, "start", [(eq, "$talk_context", 0),(faction_slot_eq, "$g_encountered_party_faction", slot_faction_prison_guard_troop, "$g_talk_troop"),
-                    (this_or_next|eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+					# (this_or_next|eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+					(this_or_next|eq, "$g_encountered_party_faction", "$players_kingdom"),
                     (             party_slot_eq, "$g_encountered_party", slot_town_lord, "trp_player")
                     ],
 "Good day, my {lord/lady}. Will you be visiting the prison?", "prison_guard_players",[]],
@@ -30846,7 +30877,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 # Castle Guards
 [anyone, "start", [(eq, "$talk_context", 0),(faction_slot_eq, "$g_encountered_party_faction", slot_faction_castle_guard_troop, "$g_talk_troop"),
-                    (this_or_next|eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+                    # (this_or_next|eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+                    (this_or_next|eq, "$g_encountered_party_faction", "$players_kingdom"),
                     (             party_slot_eq, "$g_encountered_party", slot_town_lord, "trp_player")
                     ],
 "Your orders, {Lord/Lady}?", "castle_guard_players",[]],
@@ -30883,7 +30915,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     (neq, "$players_kingdom", "$g_encountered_party_faction"),####### NEW v3.1-KOMKE
         # (neg|troop_slot_ge, "trp_player", slot_troop_renown, 50),####### NEW v3.1-KOMKE
     # (this_or_next|neg|troop_slot_ge, "trp_player", slot_troop_renown,125),####### NEW v3.1-KOMKE
-    (neg|troop_slot_ge, "trp_player", slot_troop_renown,200),####### NEW v3.1-KOMKE
+    (neg|troop_slot_ge, "trp_player", slot_troop_renown, 200),####### NEW v3.1-KOMKE
     (neq, "$g_player_eligible_feast_center_no", "$current_town"),
 
     # (neg|check_quest_active, "qst_wed_betrothed"),####### NEW v3.1-KOMKE
@@ -32220,7 +32252,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     [
        # (store_encountered_party, ":party_id"),
      (store_faction_of_party, ":faction_id", "$current_town"),
-     (store_relation, ":relation", "fac_player_supporters_faction", ":faction_id"),
+     # (store_relation, ":relation", "fac_player_supporters_faction", ":faction_id"),
+     (store_relation, ":relation", "$players_kingdom", ":faction_id"),
      (lt, ":relation", -3),
     ], 
     "I don't think anyone from this town will follow somebody like you. Try your luck elsewhere.", "tavernkeeper_buy_peasants_2",[]],
@@ -33006,7 +33039,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "tavernkeeper_buy_drinks_2", [], "Actually, cancel that order.", "tavernkeeper_pretalk",[]],
 
 [anyone|plyr, "tavernkeeper_talk", [
-  (neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+  # (neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+  (neq, "$g_encountered_party_faction", "$players_kingdom"), ######## NEW v3.3
   ],
 "Have you heard of anyone in this realm who might have a job for a {man/woman} like myself?", "tavernkeeper_job_ask",[
    ]],
@@ -35309,7 +35343,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone , "start", [(is_between, "$g_talk_troop",mayors_begin,mayors_end),(eq, "$g_talk_troop_met",0),
                      (this_or_next|eq, "$players_kingdom", "$g_encountered_party_faction"),
-                     (             eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),],
+                     # (eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),],
+                     (eq, "$g_encountered_party_faction", "$players_kingdom"),],
 "Good day, my lord.", "mayor_begin",[]],
 [anyone , "start", [(is_between, "$g_talk_troop",mayors_begin,mayors_end),(eq, "$g_talk_troop_met",0),
                      (str_store_party_name, s9, "$current_town")],
@@ -37246,7 +37281,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    [
    (assign, ":give_report", 0),
    (party_get_slot, ":original_faction", "$g_encountered_party", slot_center_original_faction),
-   (store_relation, ":original_faction_relation", ":original_faction", "fac_player_supporters_faction"),
+   # (store_relation, ":original_faction_relation", ":original_faction", "fac_player_supporters_faction"),
+   (store_relation, ":original_faction_relation", ":original_faction", "$players_kingdom"),
    (try_begin),
      (gt, ":original_faction_relation", 0),
      (party_slot_ge, "$g_encountered_party", slot_center_player_relation, 0),
@@ -37275,7 +37311,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
      (troop_get_slot, ":cur_party", ":cur_troop", slot_troop_leaded_party),
      (gt, ":cur_party", 0),
      (store_troop_faction, ":cur_faction", ":cur_troop"),
-     (store_relation, ":reln", ":cur_faction", "fac_player_supporters_faction"),
+     # (store_relation, ":reln", ":cur_faction", "fac_player_supporters_faction"),
+     (store_relation, ":reln", ":cur_faction", "$players_kingdom"),
      (lt, ":reln", 0),
      (store_distance_to_party_from_party, ":dist", "$g_encountered_party", ":cur_party"),
      (lt, ":dist", 25), # rafi was 10
@@ -40222,7 +40259,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    [
 #     (eq, "$g_talk_troop_faction", "$players_kingdom"),
    (this_or_next|neg|faction_slot_ge, "$players_kingdom", slot_faction_marshall, active_npcs_begin),
-        (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+   (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
    (this_or_next|faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_default),
         (faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_feast),
    ],
@@ -40727,7 +40765,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "merchant_talk", [], "I'd like to see your wares.", "merchant_trade_request",[]],  
 [anyone, "merchant_trade_request", [(lt, "$g_encountered_party_relation",0)],
   "You must be joking! The crown would not take kindly to us trading with the likes of you.", "merchant_trade_deny",[]],
-[anyone, "merchant_trade_request", [(neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+# [anyone, "merchant_trade_request", [(neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+[anyone, "merchant_trade_request", [(neq, "$g_encountered_party_faction", "$players_kingdom"),
   (store_party_size_wo_prisoners, ":size", "p_main_party"),(this_or_next|lt, ":size", 60),(neg|troop_slot_ge, "trp_player", slot_troop_renown, 200)],
   "My wares? Sorry {sir/ma'am}, I haven't the time to unload the caravan. Deadlines to keep.", "merchant_trade_deny",[]],  	
 [anyone, "merchant_trade_request", [],

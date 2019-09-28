@@ -6569,7 +6569,8 @@ game_menus = [ #
       (str_store_faction_name, s8, "$players_kingdom"),
       (try_begin),
         (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-        (neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+        # (neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+        (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
         #(str_store_string, s9, "@You are a lord of {s8}.^{s9}"),
         (str_store_string, s9, "str_you_are_a_lord_lady_of_s8_s9"),
       (else_try),
@@ -6748,8 +6749,10 @@ game_menus = [ #
    [(str_clear, s2),
     (try_for_range, ":cur_kingdom", kingdoms_begin, kingdoms_end),
       (faction_slot_eq, ":cur_kingdom", slot_faction_state, sfs_active),
-      (neq, ":cur_kingdom", "fac_player_supporters_faction"),
-      (store_relation, ":cur_relation", "fac_player_supporters_faction", ":cur_kingdom"),
+      # (neq, ":cur_kingdom", "fac_player_supporters_faction"),
+      (neq, ":cur_kingdom", "$players_kingdom"),
+      # (store_relation, ":cur_relation", "fac_player_supporters_faction", ":cur_kingdom"),
+      (store_relation, ":cur_relation", "$players_kingdom", ":cur_kingdom"),  ######### NEW v3.3
       (try_begin),
         (ge, ":cur_relation", 90),
         (str_store_string, s3, "@Loyal"),
@@ -7344,8 +7347,10 @@ game_menus = [ #
       ("action_rename_kingdom",
        [
          (eq, "$players_kingdom_name_set", 1),
-         (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
-         (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+         # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
+         (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),  ######### NEW v3.3
+         # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+         (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
          ], "Rename your kingdom.",
        [(start_presentation, "prsnt_name_kingdom"),
         ]
@@ -9168,7 +9173,13 @@ game_menus = [ #
                 (change_screen_return),
                 (start_map_conversation, ":faction_leader", -1),
               (else_try), #player took a walled center for player's kingdom
-                (neg|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+                # (neg|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+                # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+				######## NEW v3.3 
+                (neq, "$g_player_cur_role", role_vassal), 
+                (neq, "$g_player_cur_role", role_mercenary_captain), 
+                (neq, "$g_player_cur_role", role_prince), 
+				########################
                 (assign, "$g_center_taken_by_player_faction", "$g_encountered_party"),
                 (assign, "$talk_context", tc_give_center_to_fief),
                 (change_screen_return),
@@ -9432,7 +9443,8 @@ game_menus = [ #
     [
       ("pre_join_help_attackers",[
           (store_faction_of_party, ":attacker_faction", "$g_encountered_party_2"),
-          (store_relation, ":attacker_relation", ":attacker_faction", "fac_player_supporters_faction"),
+          # (store_relation, ":attacker_relation", ":attacker_faction", "fac_player_supporters_faction"),
+          (store_relation, ":attacker_relation", ":attacker_faction", "$players_kingdom"), ######### NEW v3.3
           # (store_faction_of_party, ":defender_faction", "$g_encountered_party"),
           # (store_relation, ":defender_relation", ":defender_faction", "fac_player_supporters_faction"),
           (assign, reg10, ":attacker_relation"),
@@ -9450,7 +9462,8 @@ game_menus = [ #
           # (store_faction_of_party, ":attacker_faction", "$g_encountered_party_2"),
           # (store_relation, ":attacker_relation", ":attacker_faction", "fac_player_supporters_faction"),
           (store_faction_of_party, ":defender_faction", "$g_encountered_party"),
-          (store_relation, ":defender_relation", ":defender_faction", "fac_player_supporters_faction"),
+          # (store_relation, ":defender_relation", ":defender_faction", "fac_player_supporters_faction"),
+          (store_relation, ":defender_relation", ":defender_faction", "$players_kingdom"), ######### NEW v3.3
           (assign, reg11, ":defender_relation"),
           (str_store_string, s5, "@[Relation: {reg11}]"),
           # (ge, ":defender_relation", 0), #tom was 0
@@ -9819,7 +9832,8 @@ game_menus = [ #
     ],
     [
       ("approach_besiegers",[(store_faction_of_party, ":faction_no", "$g_encountered_party_2"),
-                             (store_relation, ":relation", ":faction_no", "fac_player_supporters_faction"),
+                             # (store_relation, ":relation", ":faction_no", "fac_player_supporters_faction"),
+                             (store_relation, ":relation", ":faction_no", "$players_kingdom"), ######## NEW v3.3
                              (ge, ":relation", -5),
 							 ######## NEW v2.1 - allow joining siege regardless of relation
                              # (store_faction_of_party, ":faction_no", "$g_encountered_party"),
@@ -9829,7 +9843,8 @@ game_menus = [ #
           (jump_to_menu, "mnu_besiegers_camp_with_allies"),
                                 ]),
       ("pass_through_siege",[(store_faction_of_party, ":faction_no", "$g_encountered_party"),
-                             (store_relation, ":relation", ":faction_no", "fac_player_supporters_faction"),
+                             # (store_relation, ":relation", ":faction_no", "fac_player_supporters_faction"),
+                             (store_relation, ":relation", ":faction_no", "$players_kingdom"), ######## NEW v3.3
                              (ge, ":relation", -5),
                              ], "Pass through the siege lines and enter {s1}.",
        [
@@ -10110,7 +10125,8 @@ game_menus = [ #
           (str_store_string, s3, "str_dplmc_place_is_occupied_by_insurgents"),
         (else_try),
         ##diplomacy end
-          (eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+          # (eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+          (eq, "$g_encountered_party_faction", "$players_kingdom"), ####### NEW v3.3
           (str_store_string, s3, "str_place_is_occupied_by_player"),
         (else_try),
           (lt, "$g_encountered_party_relation", 0),
@@ -10326,8 +10342,9 @@ game_menus = [ #
            (neg|party_slot_eq, "$g_encountered_party", slot_village_infested_by_bandits, "trp_peasant_woman"),
            ##diplomacy end
            (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_is_besieged_by, -1),
-           (             party_slot_eq, "$g_encountered_party", slot_center_is_besieged_by, "p_main_party"),
-           (store_relation, ":reln", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+           (party_slot_eq, "$g_encountered_party", slot_center_is_besieged_by, "p_main_party"),
+           # (store_relation, ":reln", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+           (store_relation, ":reln", "$g_encountered_party_faction", "$players_kingdom"),  ####### NEW v3.3
            (lt, ":reln", 0),
            (lt, "$g_encountered_party_2", 1),
            (call_script, "script_party_count_fit_for_battle", "p_main_party"),
@@ -10343,7 +10360,8 @@ game_menus = [ #
        [
          #(neq, "$g_encountered_party", "p_town_21_1"), # rafi
          (assign, "$g_player_besiege_town", "$g_encountered_party"),
-         (store_relation, ":relation", "fac_player_supporters_faction", "$g_encountered_party_faction"),
+         # (store_relation, ":relation", "fac_player_supporters_faction", "$g_encountered_party_faction"),
+         (store_relation, ":relation", "$players_kingdom", "$g_encountered_party_faction"),
          (val_min, ":relation", -40),
          (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":relation"),
          (call_script, "script_update_all_notes"),
@@ -10355,8 +10373,9 @@ game_menus = [ #
          (eq, "$cheat_mode", 1),
          # (neq, "$g_encountered_party", "p_town_21_1"), # rafi
          (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_is_besieged_by, -1),
-         (             party_slot_eq, "$g_encountered_party", slot_center_is_besieged_by, "p_main_party"),
-         (store_relation, ":reln", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+         (party_slot_eq, "$g_encountered_party", slot_center_is_besieged_by, "p_main_party"),
+         # (store_relation, ":reln", "$g_encountered_party_faction", "fac_player_supporters_faction"),
+         (store_relation, ":reln", "$g_encountered_party_faction", "$players_kingdom"),
          (ge, ":reln", 0),
          (lt, "$g_encountered_party_2", 1),
          (call_script, "script_party_count_fit_for_battle", "p_main_party"),
@@ -11163,7 +11182,8 @@ game_menus = [ #
         (party_clear, "$g_encountered_party"),
 
         (try_begin),
-          (eq, "$players_kingdom", "fac_player_supporters_faction"),
+          # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+          (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ######## NEW v3.3
           (party_get_slot, ":new_owner", "$g_encountered_party", slot_town_lord),
           (neq, ":new_owner", "trp_player"),
          
@@ -11211,8 +11231,10 @@ game_menus = [ #
           #   (assign, reg1, 1),
           # (try_end),
           # #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),
-          (call_script, "script_give_center_to_faction", "$g_encountered_party", "fac_player_supporters_faction"),          
-          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "fac_player_supporters_faction"),
+          # (call_script, "script_give_center_to_faction", "$g_encountered_party", "fac_player_supporters_faction"),          
+          (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),      ####### NEW v3.3     
+          # (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "fac_player_supporters_faction"),
+          (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"), ####### NEW v3.3
           (str_store_party_name, s3, "$g_encountered_party"),
           (assign, reg1, 0),
           (try_begin),
@@ -11929,7 +11951,8 @@ game_menus = [ #
     [
       (try_begin),
         (neg|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-        (faction_get_slot, ":faction_leader", "fac_player_supporters_faction", slot_faction_leader),
+        # (faction_get_slot, ":faction_leader", "fac_player_supporters_faction", slot_faction_leader),
+        (faction_get_slot, ":faction_leader", "$players_kingdom", slot_faction_leader), ######## NEW v3.3
         (eq, ":faction_leader", "trp_player"),
         (str_store_string, s10, "@As you approach, you are spotted by the castle guards, who welcome you and open the gates for their {king/queen}."),
       (else_try),
@@ -12838,7 +12861,8 @@ game_menus = [ #
         ("village_loot",[(party_slot_eq, "$current_town", slot_village_state, 0),
                        (neg|party_slot_ge, "$current_town", slot_village_infested_by_bandits, 1),
                        (store_faction_of_party, ":center_faction", "$current_town"),
-                       (store_relation, ":reln", "fac_player_supporters_faction", ":center_faction"),
+                       # (store_relation, ":reln", "fac_player_supporters_faction", ":center_faction"),
+                       (store_relation, ":reln", "$players_kingdom", ":center_faction"),  ####### NEW v3.3
                        (lt, ":reln", 0),
                        ],
        "Loot and burn this village.",
@@ -13931,7 +13955,8 @@ game_menus = [ #
         (call_script, "script_change_player_relation_with_center", "$current_town", ":enmity"),
 
         (store_faction_of_party, ":village_faction", "$current_town"),
-        (store_relation, ":relation", ":village_faction", "fac_player_supporters_faction"),
+        # (store_relation, ":relation", ":village_faction", "fac_player_supporters_faction"),
+        (store_relation, ":relation", ":village_faction", "$players_kingdom"),  ######## NEW v3.3
         (try_begin),
           (lt, ":relation", 0),
           (call_script, "script_change_player_relation_with_faction", ":village_faction", -3),
@@ -14050,7 +14075,8 @@ game_menus = [ #
         (str_clear, s3),
         (party_get_battle_opponent, ":besieger_party", "$current_town"),
         (store_faction_of_party, ":encountered_faction", "$g_encountered_party"),
-        (store_relation, ":faction_relation", ":encountered_faction", "fac_player_supporters_faction"),
+        # (store_relation, ":faction_relation", ":encountered_faction", "fac_player_supporters_faction"),
+        (store_relation, ":faction_relation", ":encountered_faction", "$players_kingdom"),  ######### NEW v3.3
         (try_begin),
           (gt, ":besieger_party", 0),
           (ge, ":faction_relation", -5),
@@ -15040,7 +15066,8 @@ game_menus = [ #
 
             (agent_get_troop_id, ":agent_type", "$g_main_attacker_agent"),
             (try_begin),
-              (eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+              # (eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+              (eq, "$g_encountered_party_faction", "$players_kingdom"),
               (party_get_slot, ":prison_guard_faction", "$current_town", slot_center_original_faction),
             (else_try),
               (assign, ":prison_guard_faction", "$g_encountered_party_faction"),
@@ -15117,7 +15144,8 @@ game_menus = [ #
            (reset_visitors),
 
            (try_begin),
-             (neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+             # (neq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+             (neq, "$g_encountered_party_faction", "$players_kingdom"),
              (faction_get_slot, ":troop_prison_guard", "$g_encountered_party_faction", slot_faction_prison_guard_troop),
            (else_try),
              (party_get_slot, ":town_original_faction", "$current_town", slot_center_original_faction),
@@ -15337,7 +15365,8 @@ game_menus = [ #
              (neg|party_slot_eq, "$current_town", slot_town_lord, ":player_spouse"),
           (party_slot_ge, "$current_town", slot_town_lord, "trp_player"), #can rest for free in castles and towns with unassigned lords
           (store_faction_of_party, ":current_town_faction", "$current_town"),
-          (neq, ":current_town_faction", "fac_player_supporters_faction"),
+          # (neq, ":current_town_faction", "fac_player_supporters_faction"),
+          (neq, ":current_town_faction", "$players_kingdom"),  ########### NEW v3.3
              (party_get_num_companions, ":num_men", "p_main_party"),
              (store_div, reg1, ":num_men", 4),
              (val_add, reg1, 1),
@@ -16827,7 +16856,8 @@ game_menus = [ #
       ## CC
       ("assess_prices",[
          (store_faction_of_party, ":current_town_faction", "$current_town"),
-         (store_relation, ":reln", ":current_town_faction", "fac_player_supporters_faction"),
+         # (store_relation, ":reln", ":current_town_faction", "fac_player_supporters_faction"),
+         (store_relation, ":reln", ":current_town_faction", "$players_kingdom"),  ######## NEW v3.3
          (ge, ":reln", 0),
          ],
        "Assess the local prices.",
@@ -18349,7 +18379,8 @@ game_menus = [ #
     [
       ("peace_offer_accept",[], "Accept",
        [
-         (call_script, "script_diplomacy_start_peace_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         # (call_script, "script_diplomacy_start_peace_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         (call_script, "script_diplomacy_start_peace_between_kingdoms", "$players_kingdom", "$g_notification_menu_var1", 1), ######### NEW v3.3
          (change_screen_return),
         ]),
         ##diplomacy begin
@@ -18949,17 +18980,19 @@ game_menus = [ #
     (assign, "$g_player_court", -1),
     (str_store_string, s14, "str_after_to_the_fall_of_s11_your_court_has_nowhere_to_go"),
     (try_begin),
-        (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_inactive),
+        # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_inactive),
+        (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_inactive),  ######## NEW v3.3
         (str_store_string, s14, "str_as_you_no_longer_maintain_an_independent_kingdom_you_no_longer_maintain_a_court"),
     (try_end),
 
     (try_for_range, ":walled_center", walled_centers_begin, walled_centers_end),
-        (eq, "$g_player_court", -1),
-    ##diplomacy begin
-    (neg|party_slot_eq, ":walled_center", slot_village_infested_by_bandits, "trp_peasant_woman"),
-    ##diplomacy end
+      (eq, "$g_player_court", -1),
+      ##diplomacy begin
+      (neg|party_slot_eq, ":walled_center", slot_village_infested_by_bandits, "trp_peasant_woman"),
+      ##diplomacy end
         (store_faction_of_party, ":walled_center_faction", ":walled_center"),
-        (eq, ":walled_center_faction", "fac_player_supporters_faction"),
+        # (eq, ":walled_center_faction", "fac_player_supporters_faction"),
+        (eq, ":walled_center_faction", "$players_kingdom"),  ####### NEW v3.3
         (neg|party_slot_ge, ":walled_center", slot_town_lord, active_npcs_begin),
 
         (assign, "$g_player_court", ":walled_center"),
@@ -18977,7 +19010,8 @@ game_menus = [ #
         (eq, "$g_player_court", -1),
 
         (store_faction_of_party, ":walled_center_faction", ":walled_center"),
-        (eq, ":walled_center_faction", "fac_player_supporters_faction"),
+        # (eq, ":walled_center_faction", "fac_player_supporters_faction"),
+        (eq, ":walled_center_faction", "$players_kingdom"),  ######## NEW v3.3
 
         (assign, "$g_player_court", ":walled_center"),
 
@@ -19016,7 +19050,8 @@ game_menus = [ #
       (position_set_x, pos0, 65),
       (position_set_y, pos0, 30),
       (position_set_z, pos0, 170),
-      (set_game_menu_tableau_mesh, "tableau_faction_note_mesh_banner", "fac_player_supporters_faction", pos0),
+      # (set_game_menu_tableau_mesh, "tableau_faction_note_mesh_banner", "fac_player_supporters_faction", pos0),
+      (set_game_menu_tableau_mesh, "tableau_faction_note_mesh_banner", "$players_kingdom", pos0), ####### NEW v3.3
       ],
     [
       ("continue",[], "Continue...",
@@ -20892,7 +20927,8 @@ game_menus = [ #
     [
       ("dplmc_alliance_offer_accept",[], "Accept",
        [
-         (call_script, "script_dplmc_start_alliance_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         # (call_script, "script_dplmc_start_alliance_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         (call_script, "script_dplmc_start_alliance_between_kingdoms", "$players_kingdom", "$g_notification_menu_var1", 1), ######### NEW v3.3
          (change_screen_return),
         ]),
       ("dplmc_alliance_offer_reject",[], "Reject",
@@ -20917,7 +20953,8 @@ game_menus = [ #
     [
       ("dplmc_defensive_offer_accept",[], "Accept",
        [
-         (call_script, "script_dplmc_start_defensive_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         # (call_script, "script_dplmc_start_defensive_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         (call_script, "script_dplmc_start_defensive_between_kingdoms", "$players_kingdom", "$g_notification_menu_var1", 1),  ####### NEW v3.3
          (change_screen_return),
         ]),
       ("dplmc_defensive_offer_reject",[], "Reject",
@@ -20942,7 +20979,8 @@ game_menus = [ #
     [
       ("dplmc_trade_offer_accept",[], "Accept",
        [
-         (call_script, "script_dplmc_start_trade_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         # (call_script, "script_dplmc_start_trade_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         (call_script, "script_dplmc_start_trade_between_kingdoms", "$players_kingdom", "$g_notification_menu_var1", 1), ######## NEW v3.3
          (change_screen_return),
         ]),
       ("dplmc_trade_offer_reject",[], "Reject",
@@ -20967,7 +21005,8 @@ game_menus = [ #
     [
       ("dplmc_nonaggression_offer_accept",[], "Accept",
        [
-         (call_script, "script_dplmc_start_nonaggression_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         # (call_script, "script_dplmc_start_nonaggression_between_kingdoms", "fac_player_supporters_faction", "$g_notification_menu_var1", 1),
+         (call_script, "script_dplmc_start_nonaggression_between_kingdoms", "$players_kingdom", "$g_notification_menu_var1", 1), ###### NEW v3.3
          (change_screen_return),
         ]),
       ("dplmc_nonaggression_offer_reject",[], "Reject",
@@ -21049,7 +21088,8 @@ game_menus = [ #
     [
       ("dplmc_demand_4000",[(gt, "$g_player_chamberlain", 0),], "Demand 4000 denars",
       [
-        (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "fac_player_supporters_faction", -1),
+        # (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "fac_player_supporters_faction", -1),
+        (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "$players_kingdom", -1),
         (assign, ":goodwill", reg0),
         (store_random_in_range, ":random", 0, 4),
 
@@ -21057,7 +21097,8 @@ game_menus = [ #
         (try_begin),
           (le, ":random", ":goodwill"),
           (call_script, "script_dplmc_pay_into_treasury", 4000),
-          (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "fac_player_supporters_faction", 1),
+          # (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "fac_player_supporters_faction", 1),
+          (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "$players_kingdom", 1),
           (change_screen_return),
         (else_try),
           (jump_to_menu, "mnu_dplmc_deny_terms"),
@@ -21065,7 +21106,8 @@ game_menus = [ #
       ]),
       ("dplmc_demand_8000",[(gt, "$g_player_chamberlain", 0),], "Demand 8000 denars",
        [
-         (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "fac_player_supporters_faction", -1),
+         # (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "fac_player_supporters_faction", -1),
+         (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "$players_kingdom", -1),
          (assign, ":goodwill", reg0),
          (val_mul, ":goodwill", 2),
                  (store_random_in_range, ":random", 0, 10),
@@ -21074,7 +21116,8 @@ game_menus = [ #
                  (try_begin),
                    (le, ":random", ":goodwill"),
            (call_script, "script_dplmc_pay_into_treasury", 8000),
-           (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "fac_player_supporters_faction", 1),
+           # (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "fac_player_supporters_faction", 1),
+           (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "$players_kingdom", 1),
            (change_screen_return),
          (else_try),
              (jump_to_menu, "mnu_dplmc_deny_terms"),
@@ -21088,7 +21131,8 @@ game_menus = [ #
           (eq, ":castle_faction", "$g_notification_menu_var1"),
           (try_for_range, ":center", centers_begin, centers_end),
             (store_faction_of_party, ":center_faction", ":center"),
-            (eq, ":center_faction", "fac_player_supporters_faction"),
+            # (eq, ":center_faction", "fac_player_supporters_faction"),
+            (eq, ":center_faction", "$players_kingdom"),
             (store_distance_to_party_from_party, ":tmp_distance", ":center", ":castle"),
 
             (lt, ":tmp_distance", ":distance"),
@@ -21100,7 +21144,8 @@ game_menus = [ #
         (is_between, "$demanded_castle", castles_begin,castles_end),
       ], "Demand {s2}.",
        [
-        (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "fac_player_supporters_faction", -1),
+        # (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "fac_player_supporters_faction", -1),
+        (call_script, "script_npc_decision_checklist_peace_or_war", "$g_notification_menu_var1", "$players_kingdom", -1),
         (assign, ":goodwill", reg0),
         (val_mul, ":goodwill", 2),
         (store_random_in_range, ":random", 0, 12),
@@ -21108,8 +21153,10 @@ game_menus = [ #
         (call_script, "script_change_player_relation_with_faction", "$g_notification_menu_var1", -6),
         (try_begin),
           (le, ":random", ":goodwill"),
-          (call_script, "script_give_center_to_faction", "$demanded_castle", "fac_player_supporters_faction"),
-          (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "fac_player_supporters_faction", 1),
+          # (call_script, "script_give_center_to_faction", "$demanded_castle", "fac_player_supporters_faction"),
+          (call_script, "script_give_center_to_faction", "$demanded_castle", "$players_kingdom"),
+          # (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "fac_player_supporters_faction", 1),
+          (call_script, "script_diplomacy_start_peace_between_kingdoms", "$g_notification_menu_var1", "$players_kingdom", 1),
           (change_screen_return),
         (else_try),
           (jump_to_menu, "mnu_dplmc_deny_terms"),
@@ -25983,7 +26030,8 @@ game_menus = [ #
       [
         (party_slot_eq, "$g_encountered_party",slot_mongol_camp_status, status_stationed),
         (store_faction_of_party, ":faction", "$g_encountered_party"),
-        (store_relation, ":player_relation", ":faction", "fac_player_supporters_faction"),
+        # (store_relation, ":player_relation", ":faction", "fac_player_supporters_faction"),
+        (store_relation, ":player_relation", ":faction", "$players_kingdom"),
         (ge, ":player_relation", 0),
       ],
       "Walk around the campsite.",
@@ -26039,7 +26087,8 @@ game_menus = [ #
        (this_or_next|eq, ":town_lord", "trp_player"),
        (eq, "$cheat_mode", 1),
        (store_faction_of_party, ":faction", "$g_encountered_party"),
-       (store_relation, ":player_relation", ":faction", "fac_player_supporters_faction"),
+       # (store_relation, ":player_relation", ":faction", "fac_player_supporters_faction"),
+       (store_relation, ":player_relation", ":faction", "$players_kingdom"),
        (ge, ":player_relation", 0),
        
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
@@ -26726,7 +26775,8 @@ game_menus = [ #
        
        ("debug_options_12",[], "Create a new lord for Player Faction.",
        [
-         (call_script, "script_create_new_lord_for_faction", "fac_player_supporters_faction"),
+         # (call_script, "script_create_new_lord_for_faction", "fac_player_supporters_faction"),
+         (call_script, "script_create_new_lord_for_faction", "$players_kingdom"),
        ]
        ),
        
