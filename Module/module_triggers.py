@@ -450,7 +450,8 @@ triggers = [
          (assign, ":num_available_factions", 0),
          (try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
            (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
-           (neq, ":faction_no", "fac_player_supporters_faction"),
+           # (neq, ":faction_no", "fac_player_supporters_faction"),
+           (neq, ":faction_no", "$players_kingdom"), ######### NEW v3.3
            (neg|quest_slot_eq, "qst_incriminate_loyal_commander", slot_quest_target_faction, ":faction_no"),
            (val_add, ":num_available_factions", 1),
          (try_end),
@@ -461,7 +462,8 @@ triggers = [
            (try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
              (eq, ":target_faction", -1),
              (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
-             (neq, ":faction_no", "fac_player_supporters_faction"),
+             # (neq, ":faction_no", "fac_player_supporters_faction"),
+             (neq, ":faction_no", "$players_kingdom"), ######## NEW v3.3
              (neg|quest_slot_eq, "qst_incriminate_loyal_commander", slot_quest_target_faction, ":faction_no"),
              (val_sub, ":random_faction", 1),
              (lt, ":random_faction", 0),
@@ -2079,7 +2081,8 @@ triggers = [
         (try_end),
         (assign, reg0, 0),
         (try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
-          (neq, ":faction_no", "fac_player_supporters_faction"),
+          # (neq, ":faction_no", "fac_player_supporters_faction"),
+          (neq, ":faction_no", "$players_kingdom"),  ########## NEW v3.3
           (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
           (faction_slot_eq, ":faction_no", slot_faction_religion, religion_catholic),
           (troop_set_slot, "trp_temp_lord",reg0, ":faction_no"), #catholic factions

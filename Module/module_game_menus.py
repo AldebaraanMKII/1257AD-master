@@ -33262,9 +33262,11 @@ game_menus = [ #
       ("walled_center_move_court",
       [
       (neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
-      (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+      # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+      (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ######### NEW v3.3
       (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),
-      (eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      # (eq, "$g_encountered_party_faction", "fac_player_supporters_faction"),
+      (eq, "$g_encountered_party_faction", "$players_kingdom"),  ######### NEW v3.3
       (neq, "$g_player_court", "$current_town"),
       ],
       "Move your court here.",
@@ -33284,7 +33286,8 @@ game_menus = [ #
             (assign, ":player_can_draw_from_garrison", 1),
           (else_try), #option 2 - town is unassigned and part of the player faction
             (store_faction_of_party, ":faction", "$g_encountered_party"),
-            (eq, ":faction", "fac_player_supporters_faction"),
+            # (eq, ":faction", "fac_player_supporters_faction"),
+            (eq, ":faction", "$players_kingdom"), ######## NEW v3.3
             (neg|party_slot_ge, "$g_encountered_party", slot_town_lord, active_npcs_begin), #ie, zero or -1
             (assign, ":player_can_draw_from_garrison", 1),
           (else_try), #option 3 - town was captured by player
@@ -34339,7 +34342,8 @@ game_menus = [ #
           (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
             (troop_slot_eq, ":active_npc", slot_troop_is_alive, 1),  ## he's alive/active
             (store_faction_of_troop, ":active_npc_faction", ":active_npc"),
-            (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+            # (eq, ":active_npc_faction", "fac_player_supporters_faction"),
+            (eq, ":active_npc_faction", "$players_kingdom"), ######## NEW v3.3
             (troop_slot_eq, ":active_npc", slot_troop_occupation, slto_inactive),
             (neg|troop_slot_ge, ":active_npc", slot_troop_prisoner_of_party, 0), #if he/she is not prisoner in any center.
             (neq, ":active_npc", "$g_player_minister"),
