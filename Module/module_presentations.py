@@ -11676,8 +11676,9 @@ presentations = [
       (try_end),
       (try_begin),
         (gt, "$players_kingdom", 0),
-        (neq, "$players_kingdom", "fac_player_supporters_faction"),
-        (neq, "$players_kingdom", "fac_player_faction"),
+        # (neq, "$players_kingdom", "fac_player_supporters_faction"),
+        # (neq, "$players_kingdom", "fac_player_faction"),
+        (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
         (eq, "$player_has_homage", 0),
         (val_add, ":num_lines", 1),
       (try_end),
@@ -11695,11 +11696,13 @@ presentations = [
           (assign, ":garrison_troop", 1),
         (else_try),
           (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_town),
-            (party_slot_eq, ":party_no", slot_party_type, spt_castle),
+          (party_slot_eq, ":party_no", slot_party_type, spt_castle),
           (neg|party_slot_ge, ":party_no", slot_town_lord, 1), #unassigned
           (store_faction_of_party, ":center_faction", ":party_no"),
-          (eq, ":center_faction", "fac_player_supporters_faction"),
-          (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+          # (eq, ":center_faction", "fac_player_supporters_faction"),
+          (eq, ":center_faction", "$players_kingdom"), ########### NEW v3.3
+          # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+          (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
           (assign, ":garrison_troop", 1),
         (try_end),
 
@@ -12009,10 +12012,12 @@ presentations = [
 ######################## MERCENARY CONTRACT
       (try_begin),
         (gt, "$players_kingdom", 0),
-        (neq, "$players_kingdom", "fac_player_supporters_faction"),
-        (neq, "$players_kingdom", "fac_player_faction"),
+        # (neq, "$players_kingdom", "fac_player_supporters_faction"),
+        # (neq, "$players_kingdom", "fac_player_faction"),
+        (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
         (eq, "$player_has_homage", 0),
         (eq, "$freelancer_state", 0),  ############# NEW v2.9-KOMKE - fix mercenary payment when player is in freelancer
+        (eq, "$g_player_cur_role", role_mercenary_captain),  ############# NEW v3.3
         (str_store_faction_name, s0, "$players_kingdom"),
 
         # rafi
@@ -12122,8 +12127,10 @@ presentations = [
           (party_slot_eq, ":party_no", slot_party_type, spt_castle),
           (neg|party_slot_ge, ":party_no", slot_town_lord, 1), #unassigned
           (store_faction_of_party, ":center_faction", ":party_no"),
-          (eq, ":center_faction", "fac_player_supporters_faction"),
-          (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+          # (eq, ":center_faction", "fac_player_supporters_faction"),
+          (eq, ":center_faction", "$players_kingdom"), ####### NEW v3.3
+          # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+          (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
           (party_slot_eq, ":party_no", slot_garrison_control, lord_controled), #tom
           (assign, ":garrison_troop", 1),
         (try_end),

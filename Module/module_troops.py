@@ -1760,7 +1760,6 @@ troops = [
     itm_byz_boots_c,
     itm_leather_fur_boots,
 
-
     itm_tied_up_shoes,
     itm_rus_boots_b,
     itm_grey_hose,
@@ -1768,7 +1767,11 @@ troops = [
     itm_balt_shirt_a,
 
     itm_javelin,
-    itm_raf_one_handed_axe_d,
+    # itm_raf_one_handed_axe_d,
+	########## NEW v3.3
+    itm_raf_two_handed_axe_a,
+    itm_raf_two_handed_axe_b,
+	####################
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     nord_face_young_1, swadian_face_old_2
@@ -3676,7 +3679,11 @@ troops = [
     0, 0, fac_kingdom_29,
     [
     itm_javelin,
-    itm_raf_one_handed_axe_d,
+    # itm_raf_one_handed_axe_d,
+	########## NEW v3.3
+    itm_raf_two_handed_axe_a,
+    itm_raf_two_handed_axe_b,
+	####################
 
 ##KOMKE START
 
@@ -5496,7 +5503,11 @@ troops = [
     0, 0, fac_kingdom_29,
     [
     itm_javelin,
-    itm_raf_one_handed_axe_d,
+    # itm_raf_one_handed_axe_d,
+	########## NEW v3.3
+    itm_raf_two_handed_axe_a,
+    itm_raf_two_handed_axe_b,
+	####################
 
 ##KOMKE START
 

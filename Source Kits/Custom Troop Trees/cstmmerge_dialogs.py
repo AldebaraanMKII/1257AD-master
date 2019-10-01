@@ -66,8 +66,9 @@ dplmc_customise_dialogs = [
     [anyone|plyr, "dplmc_constable_recruits_and_training",
         [
             (neg|is_between, "$g_constable_training_center", walled_centers_begin, walled_centers_end),
-            (eq, "$players_kingdom", "fac_player_supporters_faction"),
-            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            # (eq, "$players_kingdom", "fac_player_supporters_faction"),
+            # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3 
         ],
         "I'd like to customise our kingdom's troops.", "cstm_dplmc_constable_customise_tree_ask",
         []

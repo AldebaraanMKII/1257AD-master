@@ -198,10 +198,12 @@ def modmerge(var_set):
     # Ensure custom troops show up in player faction controlled towns and castles
     old_consequences = menus["town"].options["town_center"].consequences
     #print "\n".join([str(x) for x in old_consequences if (type(x) == tuple and x[0] == neq and x[2] == "fac_player_supporters_faction")])
-    menus["town"].options["town_center"].consequences = [x for x in old_consequences if not (type(x) == tuple and x[0] == neq and x[2] == "fac_player_supporters_faction")]    # Makes sure custom troops show up in player owned towns
+    # menus["town"].options["town_center"].consequences = [x for x in old_consequences if not (type(x) == tuple and x[0] == neq and x[2] == "fac_player_supporters_faction")]    # Makes sure custom troops show up in player owned towns
+    menus["town"].options["town_center"].consequences = [x for x in old_consequences if not (type(x) == tuple and x[0] == neq and x[2] == "$players_kingdom")]     ##### NEW v3.3
     old_consequences = menus["town"].options["castle_inspect"].consequences
     #print "\n".join([str(x) for x in old_consequences if (type(x) == tuple and x[0] == neq and x[2] == "fac_player_supporters_faction")])
-    menus["town"].options["castle_inspect"].consequences = [x for x in old_consequences if not (type(x) == tuple and x[0] == neq and x[2] == "fac_player_supporters_faction")]    # Makes sure custom troops show up in player owned castles
+    # menus["town"].options["castle_inspect"].consequences = [x for x in old_consequences if not (type(x) == tuple and x[0] == neq and x[2] == "fac_player_supporters_faction")]    # Makes sure custom troops show up in player owned castles
+    menus["town"].options["castle_inspect"].consequences = [x for x in old_consequences if not (type(x) == tuple and x[0] == neq and x[2] == "$players_kingdom")]    ##### NEW v3.3
     
     #menus["camp"].add_option(("find_parties", [], "Find Parties With Wrong Troops",
     #[
