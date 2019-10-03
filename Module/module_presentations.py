@@ -18424,7 +18424,7 @@ presentations = [
           (assign, "$g_lord_death_chance_execution_base", 10),
           (assign, "$g_lord_death_chance_execution_king_variation", 10),
           (assign, "$g_lord_death_chance_execution_relation_divider", 3),
-          (assign, "$g_lord_creation_rate", 120),
+          (assign, "$g_lord_creation_rate", 72),
           (assign, "$g_lord_creation_minimum", 3),
           (assign, "$g_lord_creation_threshold_towns", 1),
           (assign, "$g_lord_creation_threshold_castles", 1),
@@ -21372,32 +21372,32 @@ presentations = [
 	  
 ##################### First column
       (create_text_overlay, reg1, "@Name:", tf_left_align),
-      (position_set_x, pos1, 400),
+      (position_set_x, pos1, 300),
       (position_set_y, pos1, 600),
       (overlay_set_position, reg1, pos1),
 	  
       (create_text_overlay, reg1, "@Age:", tf_left_align),
-      (position_set_x, pos1, 400),
+      (position_set_x, pos1, 300),
       (position_set_y, pos1, 580),
       (overlay_set_position, reg1, pos1),
 	  
       (create_text_overlay, reg1, "@Renown:", tf_left_align),
-      (position_set_x, pos1, 400),
+      (position_set_x, pos1, 300),
       (position_set_y, pos1, 560),
       (overlay_set_position, reg1, pos1),
 	  
       (create_text_overlay, reg1, "@Controversy:", tf_left_align),
-      (position_set_x, pos1, 400),
+      (position_set_x, pos1, 300),
       (position_set_y, pos1, 540),
       (overlay_set_position, reg1, pos1),
 	  
       (create_text_overlay, reg1, "@Culture:", tf_left_align),
-      (position_set_x, pos1, 400),
+      (position_set_x, pos1, 300),
       (position_set_y, pos1, 520),
       (overlay_set_position, reg1, pos1),
 	  
       # (create_text_overlay, reg1, "@Personality:", tf_center_justify),
-      # (position_set_x, pos1, 400),
+      # (position_set_x, pos1, 300),
       # (position_set_y, pos1, 580),
       # (overlay_set_position, reg1, pos1),
 #####################
@@ -21415,39 +21415,39 @@ presentations = [
       (str_store_string, s2, ":culture"),
 	  
       (create_text_overlay, reg1, s1, tf_left_align),
-      (position_set_x, pos1, 490),
+      (position_set_x, pos1, 350),
       (position_set_y, pos1, 600),
       (overlay_set_position, reg1, pos1),
 	  
-      (create_text_overlay, reg1, "@{reg20}", tf_left_align),
-      (position_set_x, pos1, 490),
+      (create_text_overlay, reg1, "@{reg20}:", tf_left_align),
+      (position_set_x, pos1, 350),
       (position_set_y, pos1, 580),
       (overlay_set_position, reg1, pos1),
 	  
-      (create_text_overlay, reg1, "@{reg21}", tf_left_align),
-      (position_set_x, pos1, 490),
+      (create_text_overlay, reg1, "@{reg21}:", tf_left_align),
+      (position_set_x, pos1, 350),
       (position_set_y, pos1, 560),
       (overlay_set_position, reg1, pos1),
 	  
-      (create_text_overlay, reg1, "@{reg22}", tf_left_align),
-      (position_set_x, pos1, 490),
+      (create_text_overlay, reg1, "@{reg22}:", tf_left_align),
+      (position_set_x, pos1, 350),
       (position_set_y, pos1, 540),
       (overlay_set_position, reg1, pos1),
 	  
       (create_text_overlay, reg1, s2, tf_left_align),
-      (position_set_x, pos1, 490),
+      (position_set_x, pos1, 350),
       (position_set_y, pos1, 520),
       (overlay_set_position, reg1, pos1),
 ##########################################
 	  
 ##########################################
-      # (create_mesh_overlay_with_tableau_material, reg1, -1, "tableau_lord_vassalage_notify", "$g_ee_cur_troop"),
-      # (position_set_x, pos1, 200),
-      # (position_set_y, pos1, 180),
-      # (overlay_set_position, reg1, pos1),
-      # (position_set_x, pos1, 900),
-      # (position_set_y, pos1, 900),
-      # (overlay_set_size, reg1, pos1),
+      (create_mesh_overlay_with_tableau_material, reg1, -1, "tableau_lord_vassalage_notify", "$g_ee_cur_troop"),
+      (position_set_x, pos1, 200),
+      (position_set_y, pos1, 180),
+      (overlay_set_position, reg1, pos1),
+      (position_set_x, pos1, 900),
+      (position_set_y, pos1, 900),
+      (overlay_set_size, reg1, pos1),
 	  
       (create_button_overlay, "$g_presentation_obj_1", "@Accept.", tf_center_justify),
       (position_set_x, pos1, 500),

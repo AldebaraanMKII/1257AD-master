@@ -34181,25 +34181,6 @@ game_menus = [ #
        (try_end),
 	   ]),
 	   #######################################
-       ("debug_options_new_9",[], "Give king of england a random face (Face key slot undefined).",
-	   [
-       (store_random_in_range, ":random", "str_ee_face_key_euro_1", "str_ee_face_key_muslim_1"),   ### european
-       (troop_set_slot, "trp_kingdom_9_lord", slot_troop_face_key, ":random"),  
-       # (str_store_troop_name_link, s2, ":cur_lord"),  
-       # (display_message, "@{s2} face key is {s1}"),  
-       (troop_set_face_keys, "trp_kingdom_9_lord", ":random"),  
-	   ]),
-	   #######################################
-       ("debug_options_new_10",[], "Give king of england a random face (Both face keys).",
-	   [
-       (store_random_in_range, ":random", "str_ee_face_key_euro_1", "str_ee_face_key_muslim_1"),   ### european
-       (troop_set_slot, "trp_kingdom_9_lord", slot_troop_face_key, ":random"),  
-       # (str_store_troop_name_link, s2, ":cur_lord"),  
-       # (display_message, "@{s2} face key is {s1}"),  
-       (troop_set_face_keys, "trp_kingdom_9_lord", ":random", 0),  
-       (troop_set_face_keys, "trp_kingdom_9_lord", ":random", 1),  
-	   ]),
-	   #######################################
 	   
        ("debug_options_new_99",[], "Go back.",
        [

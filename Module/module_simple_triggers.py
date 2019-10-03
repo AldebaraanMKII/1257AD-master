@@ -679,8 +679,7 @@ simple_triggers = [
    [
       (le, "$auto_menu", 0),
       (gt, "$players_kingdom", 0),
-      # (neq, "$players_kingdom", "fac_player_supporters_faction"),
-      (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ############ NEW v3.3
+      (neq, "$players_kingdom", "fac_player_supporters_faction"),
       (eq, "$player_has_homage", 0),
       (eq, "$freelancer_state", 0),  ############# NEW v2.8 - fix the menu appearing when player is in freelancer
 
@@ -4432,22 +4431,19 @@ simple_triggers = [
   ################ diplomacy end
     (is_between, "$g_player_court", centers_begin, centers_end),
      (store_faction_of_party, ":court_faction", "$g_player_court"),
-     # (neq, ":court_faction", "fac_player_supporters_faction"),
-     (neq, ":court_faction", "$players_kingdom"), ########### NEW v3.3
+     (neq, ":court_faction", "fac_player_supporters_faction"),
      (call_script, "script_add_notification_menu", "mnu_notification_court_lost", 0, 0),
  (else_try),    ######At least one new court has been found
    (lt, "$g_player_court", centers_begin),
    ############### Will by definition not active until a center is taken by the player faction
    ############### Player minister must have been appointed at some point
-   # (this_or_next|faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
-   (this_or_next|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ########### NEW v3.3
+   (this_or_next|faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
    (gt, "$g_player_minister", 0),
      (assign, ":center_found", 0),
      (try_for_range, ":walled_center", walled_centers_begin, walled_centers_end),
        (eq, ":center_found", 0),
          (store_faction_of_party, ":court_faction", ":walled_center"),
-         # (eq, ":court_faction", "fac_player_supporters_faction"),
-         (eq, ":court_faction", "$players_kingdom"), ########### NEW v3.3
+         (eq, ":court_faction", "fac_player_supporters_faction"),
            (assign, ":center_found", ":walled_center"),
      (try_end),
      (ge, ":center_found", 1),
@@ -5653,6 +5649,26 @@ simple_triggers = [
     (party_set_slot, ":town", slot_center_player_enterprise_days_until_complete, ":days_to_completion"),
    (try_end),
     ]),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
+  ######### (24,
+   ######### []),
 
   ######### low food display
   (12, [
@@ -8707,18 +8723,6 @@ simple_triggers = [
 
 
 ####################### Empty triggers for savegame compatible changes
-####
-(24,   
-[
-]),  
-####
-(24,   
-[
-]),  
-####
-(24,   
-[
-]),  
 ####
 (24,   
 [

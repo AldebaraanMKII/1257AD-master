@@ -3289,19 +3289,19 @@ tableaus = [
   [
     (store_script_param, ":troop", 1),
     (set_fixed_point_multiplier, 100),
-    (cur_tableau_set_background_color, 0),
-    (cur_tableau_set_ambient_light, 100, 100, 100),
+    (cur_tableau_set_background_color, 0x00000000),
+    (cur_tableau_set_ambient_light, 10,11,15),
   
     (init_position, pos8),
     (position_set_x, pos8, -210),
     (position_set_y, pos8, 200),
     (position_set_z, pos8, 300),
     (cur_tableau_add_point_light, pos8, 550,500,450),
-	
+  
     # (cur_tableau_set_override_flags, af_override_all),
   
-    (store_random_in_range, ":random", 0, 100),
     (try_begin),
+      (store_random_in_range, ":random", 0, 100),
       (lt, ":random", 33),
         (assign, ":animation", "anim_pose_1"),
     (else_try),
@@ -3323,6 +3323,16 @@ tableaus = [
     (position_set_z, pos5, 96),
     (position_set_y, pos5, 350),
   
+    # (troop_get_inventory_slot, ":horse_item", ":troop", ek_horse),
+    # (try_begin),
+      # (gt, ":horse_item", 0),
+      # (position_rotate_z, pos2, -40),
+      # (cur_tableau_add_horse, ":horse_item", pos2, anim_horse_stand, 0),
+      # (assign, ":animation", anim_ride_0),
+      # (position_set_z, pos5, 125),
+      # (position_set_y, pos5, 480),
+    # (try_end),
+  
     (cur_tableau_add_troop, ":troop", pos2, ":animation" , 0),
   
     (position_rotate_x, pos5, -90),
@@ -3331,7 +3341,6 @@ tableaus = [
     ]),
 ##########################################
 	   
-
 	   
 	   
 	   
