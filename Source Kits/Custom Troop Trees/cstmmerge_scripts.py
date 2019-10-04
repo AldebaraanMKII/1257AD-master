@@ -377,7 +377,7 @@ def modmerge(var_set):
     ]
     
     faction_var = [operation[1] for operation in scripts["cf_reinforce_party"].operations if type(operation) == tuple and operation[0] == store_faction_of_party][-1]
-    index = scripts["cf_reinforce_party"].operations.index((eq, faction_var, "fac_player_supporters_faction")) + 1
+    index = scripts["cf_reinforce_party"].operations.index((eq, faction_var, "$players_kingdom")) + 1
     if index > 0:
         scripts["cf_reinforce_party"].operations[index:index] = [
             (eq, 0, 1),
@@ -387,7 +387,7 @@ def modmerge(var_set):
     index = scripts["cf_reinforce_party"].operations.index((eq, party_type_var, spt_kingdom_hero_party)) + 1
     if index > 0:
         scripts["cf_reinforce_party"].operations[index:index] = [
-            (neq, faction_var, "fac_player_supporters_faction"),
+            (neq, faction_var, "$players_kingdom"),
         ]
     #print "\n".join([str(x) for x in scripts["cf_reinforce_party"].operations])
     

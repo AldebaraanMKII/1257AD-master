@@ -16901,7 +16901,6 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
   
 [anyone , "pretender_discuss_rebellion_3", [(this_or_next|neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
-[anyone , "pretender_discuss_rebellion_3", [(this_or_next|neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
                                              (neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
                                              (neg|troop_slot_ge, "trp_player",slot_troop_renown, 200),
                                              (troop_get_slot, ":original_faction", "$g_talk_troop", slot_troop_original_faction),
