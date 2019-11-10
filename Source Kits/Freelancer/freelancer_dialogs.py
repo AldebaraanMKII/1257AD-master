@@ -50,6 +50,7 @@ lord_talk_addon = [
         (eq, "$freelancer_state", 0),
         (ge, "$g_talk_troop_faction_relation", 0),
         (neq, "$players_kingdom", "$g_talk_troop_faction"),
+        (eq, "$g_player_cur_role", role_adventurer), ######## NEW v3.4
 		############ NEW v2.8 - fixes player inability to enlist in v2.7
         # (eq, "$players_kingdom", 0),
         # (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),

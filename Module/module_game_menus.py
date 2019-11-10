@@ -5616,7 +5616,8 @@ game_menus = [ #
           (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 90),
           (troop_raise_proficiency, "trp_player", wpt_polearm, 90),
           #############
-		  (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain"),
+		  # (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain"),
+		  (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain", 4), ####### NEW v3.4 - fixed merc start not getting any equipment
           #############
 		  (troop_add_item, "trp_player", "itm_smoked_fish", 0),
           (troop_add_item, "trp_player", "itm_smoked_fish", 0),
@@ -8965,15 +8966,15 @@ game_menus = [ #
                 (display_log_message, "@{!}{s17}"),
                 (jump_to_menu, "mnu_enemy_slipped_away"),
                 (assign, ":break", 1),
+			  (else_try),
+                (store_add, "$last_defeated_hero", ":stack_no", 1),
+                (call_script, "script_remove_troop_from_prison", ":stack_troop"),
+                (troop_set_slot, ":stack_troop", slot_troop_leaded_party, -1),
+                (assign, "$talk_context", tc_hero_defeated),
+                (call_script, "script_setup_troop_meeting", ":stack_troop", ":stack_troop_dna"),
+                (assign, ":break", 1),
 			  (try_end),
-			  #############################################
-			(else_try),
-              (store_add, "$last_defeated_hero", ":stack_no", 1),
-              (call_script, "script_remove_troop_from_prison", ":stack_troop"),
-              (troop_set_slot, ":stack_troop", slot_troop_leaded_party, -1),
-              (assign, "$talk_context", tc_hero_defeated),
-              (call_script, "script_setup_troop_meeting", ":stack_troop", ":stack_troop_dna"),
-              (assign, ":break", 1),
+			    #############################################
             (try_end),
           (try_end),
           (eq, ":break", 1),
@@ -9146,6 +9147,7 @@ game_menus = [ #
 			  (faction_set_slot, "$players_kingdom", slot_faction_ai_last_decisive_event, ":hours"),
               (try_begin), #player took a walled center while he is a vassal of npc kingdom.
                 (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+                # (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end), 
                 # rafi - rename Nicae to Roman Empire
                 (try_begin),
                   (eq, "$g_encountered_party", "p_town_26_1"),
@@ -9173,12 +9175,11 @@ game_menus = [ #
                 (change_screen_return),
                 (start_map_conversation, ":faction_leader", -1),
               (else_try), #player took a walled center for player's kingdom
-                # (neg|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-                # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+                (neg|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
 				######## NEW v3.3 
-                (neq, "$g_player_cur_role", role_vassal), 
-                (neq, "$g_player_cur_role", role_mercenary_captain), 
-                (neq, "$g_player_cur_role", role_prince), 
+                # (neq, "$g_player_cur_role", role_vassal), 
+                # (neq, "$g_player_cur_role", role_mercenary_captain), 
+                # (neq, "$g_player_cur_role", role_prince), 
 				########################
                 (assign, "$g_center_taken_by_player_faction", "$g_encountered_party"),
                 (assign, "$talk_context", tc_give_center_to_fief),
@@ -13188,13 +13189,13 @@ game_menus = [ #
                          (jump_to_menu, "mnu_center_improve"),]),
                          
       # rafi
-      ("center_build_castle_1",[(eq, reg6, 0),
-                             (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                             (party_slot_eq, "$g_encountered_party", slot_center_has_manor, 1),
-                             (neg | party_is_active, "p_castle_player"),
-                                  ],
-       "Fortify your manor house.",[(assign, "$g_improvement_type", slot_party_temp_slot_1),
-                         (jump_to_menu, "mnu_center_improve"),]),
+      # ("center_build_castle_1",[(eq, reg6, 0),
+                             # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
+                             # (party_slot_eq, "$g_encountered_party", slot_center_has_manor, 1),
+                             # (neg | party_is_active, "p_castle_player"),
+                                  # ],
+       # "Fortify your manor house.",[(assign, "$g_improvement_type", slot_party_temp_slot_1),
+                         # (jump_to_menu, "mnu_center_improve"),]),
       # rafi
       
       #tom
@@ -14461,8 +14462,8 @@ game_menus = [ #
            (assign, "$g_mt_mode", tcm_default),
            (store_faction_of_party, ":town_faction", "$current_town"),
 
-           (try_begin),  ######### NEW v3.3 - fixed troops not changing when the player took control of a fief
-             # (neq, ":town_faction", "fac_player_supporters_faction"),
+           (try_begin),  
+             # (neq, ":town_faction", "fac_player_supporters_faction"), ######### NEW v3.3 - fixed troops not changing when the player took control of a fief
              (faction_get_slot, ":troop_prison_guard", "$g_encountered_party_faction", slot_faction_prison_guard_troop),
              (faction_get_slot, ":troop_castle_guard", "$g_encountered_party_faction", slot_faction_castle_guard_troop),
              (faction_get_slot, ":tier_2_troop", ":town_faction", slot_faction_tier_2_troop),

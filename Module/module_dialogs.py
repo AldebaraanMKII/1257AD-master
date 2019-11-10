@@ -731,6 +731,16 @@ dialogs = [
    [
    (assign, ":new_owner", "$temp"),
 
+   ############ NEW v3.4 - fixes player being unable to create a new faction after renouncing his oath
+   (try_begin),
+     (eq, ":new_owner", "trp_player"),
+     (neg|is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
+       (assign, "$players_kingdom", "fac_player_supporters_faction"),
+       (troop_set_faction, "trp_player", "fac_player_supporters_faction"),
+       (troop_set_slot, "trp_player", slot_troop_cur_culture, "fac_culture_player"),
+   (try_end),
+   ############
+   
    (call_script, "script_give_center_to_lord", "$g_center_taken_by_player_faction", ":new_owner", 0),
    (try_begin),
         (faction_slot_eq, "$players_kingdom", slot_faction_political_issue, "$g_center_taken_by_player_faction"),
@@ -4947,23 +4957,11 @@ dialogs = [
 ],
 
 ################# NEW v3.3
-[
-    anyone|plyr,
-    
-    "roak_member_as_emissary_what_select",
-    
-    [
-        (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
-        (ge, ":relation", 0),
-    ],
-    
-    "That our two kingdoms should make a non-aggression pact.",
-    
-    "roak_member_dispatch",
-    
-    [
-        (assign, "$g_initiative_selected", dplmc_npc_mission_nonaggression_request),
-    ]
+[anyone|plyr, "roak_member_as_emissary_what_select",
+[(store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
+  (ge, ":relation", 0),
+],"That our two kingdoms should make a non-aggression pact.", "roak_member_dispatch",
+[(assign, "$g_initiative_selected", dplmc_npc_mission_nonaggression_request),]
 ],
 ##################################
 
