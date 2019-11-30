@@ -11708,7 +11708,7 @@ presentations = [
 
         (this_or_next|eq, ":party_no", "p_main_party"),
         ##diplomacy begin
-        (assign, ":patrol_troop", 0),
+        # (assign, ":patrol_troop", 0), ############ NEW v3.4
         # (try_begin),
           # (party_slot_eq, ":party_no",slot_party_type, spt_patrol),
           # (store_faction_of_troop, ":player_faction", "trp_player"),

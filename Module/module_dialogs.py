@@ -1399,6 +1399,7 @@ dialogs = [
 #TAVERN DRUNK DIALOGS
    [anyone, "start",
    [
+    (eq, "$talk_context", tc_tavern_talk), ########## NEW v3.4 - fixed castle and town guards sometimes having the same dialogue as belligerent drunks
     (gt, "$g_cur_belligerent_drunk", 0), ##### NEW v3.0
     (eq, "$g_talk_troop", "$g_cur_belligerent_drunk"),
     ],
