@@ -11716,7 +11716,7 @@ presentations = [
           # (eq, ":party_faction", ":player_faction"),
           # (assign, ":patrol_troop", 1),
         # (try_end),
-        (this_or_next|eq, ":patrol_troop", 1),
+        #(this_or_next|eq, ":patrol_troop", 1),
         ##diplomacy end
         (eq, ":garrison_troop", 1),
         (val_add, ":num_lines", 1), #include empty towns/castles
