@@ -4,7 +4,6 @@ from header_operations import *
 from header_triggers import *
 from ID_sounds import *
 
-
 ####################################################################################################################
 #  Each map icon record contains the following fields:
 #  1) Map icon id: used for referencing map icons in other files.
@@ -762,6 +761,13 @@ map_icons = [
   ("cwe_templar_knight",0, "ikon_templar_knight", avatar_scale, snd_gallop, 0.15, 0.173, 0),
   ("cwe_tevton_knight",0, "ikon_tevton_knight", avatar_scale, snd_gallop, 0.15, 0.173, 0),
   ("cwe_tripoli_knight",0, "ikon_tripoli_knight", avatar_scale, snd_gallop, 0.15, 0.173, 0),
+########################
+
+#########################
+####### Outposts begin
+  ("outpost",mcn_no_shadow,"outpost", 0.22,0),
+  ("fort_a",mcn_no_shadow,"map_fort_a", 0.22,0),
+####### Outposts end
 ########################
   
 ###################

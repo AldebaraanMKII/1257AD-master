@@ -555,10 +555,16 @@ party_templates = [
   ("mercenary_warband", "Mercenary Warband", icon_gray_knight,0,fac_outlaws,bandit_personality,[]),
 
   
-  
-#######
+############################ NEW v3.5 - moved those here because IDs are a pain to deal with
+  # ("manor", "Manor", icon_manor_icon|pf_label_small|pf_is_static|pf_hide_defenders,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]),
+  ("outpost","Outpost",icon_outpost|pf_is_static|pf_always_visible|pf_label_small,0, fac_commoners,ai_bhvr_hold,[]),
+  ("fort","Fort",icon_fort_a|pf_is_static|pf_always_visible|pf_label_medium,0, fac_commoners,ai_bhvr_hold,[]),
+########################################################
+
+
+############################
 ]###### END BRACKET
-#######
+############################
 # modmerger_start version=201 type=2
 try:
     component_name = "party_templates"

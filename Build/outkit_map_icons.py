@@ -12,10 +12,6 @@ from header_triggers import *
 from ID_sounds import *
 
 map_icons = [
-#-## Outposts begin
-  ("outpost",mcn_no_shadow,"outpost", 0.22,0),
-  ("fort_a",mcn_no_shadow,"map_fort_a", 0.22,0),
-#-## Outposts end
 ]
 
 # Used by modmerger framework version >= 200 to merge stuff

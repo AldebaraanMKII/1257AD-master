@@ -1309,16 +1309,20 @@ parties = [
   # ("temp_party_2", "{!}temp party",pf_disabled, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(1,1),[]),
   ("temp_party_3", "{!}temp party",pf_disabled, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(1,1),[]),
 ####################################################################################### 
- 
+
 ("wagon_train","Wagon Train",pf_disabled|icon_mule|carries_goods(20), no_menu, pt_none, fac_player_faction,0,escorted_merchant_personality,0,(-5.23,90.26),[(trp_wagon_master,1,0)]),
  
+####################################################################################### 
+#-## Outposts begin
+  ("outpost_1","Outpost",icon_outpost|pf_disabled|pf_is_static|pf_always_visible|pf_label_small, no_menu, pt_none, fac_commoners,0,ai_bhvr_hold,0,(0, 0),[]),
+  ("outpost_2","Outpost",icon_outpost|pf_disabled|pf_is_static|pf_always_visible|pf_label_small, no_menu, pt_none, fac_commoners,0,ai_bhvr_hold,0,(1, -1),[]),
+  ("fort","Fort",icon_fort_a|pf_disabled|pf_is_static|pf_always_visible|pf_label_medium, no_menu, pt_none, fac_commoners,0,ai_bhvr_hold,0,(1, 1),[]),
+#-## Outposts end
+####################################################################################### 
  
- 
- 
- 
- 
- ] ################################ END BRACKET
- 
+ ################################
+ ]############################### END BRACKET
+ ################################
 
 # modmerger_start version=201 type=2
 try:
