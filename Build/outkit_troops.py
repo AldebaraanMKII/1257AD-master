@@ -218,13 +218,13 @@ troops = [
    [itm_saddle_horse],
    def_attrib|level(11),wp(75),knows_common|knows_riding_2,man_face_young_1, man_face_old_2],
  ["fort_slave","Slave","Slaves",0,0,0,fac_commoners,
-   [itm_shirt],
+   [itm_linen_tunic],
    def_attrib|level(4),wp(20),knows_common,man_face_young_1, man_face_old_2],
 
   ###### NEW v1.0 
-  ["outpost_captain","Outpost Captain","Outpost Captains",tf_hero|tf_unmoveable_in_party_window|tf_female|tf_allways_fall_dead|tf_no_capture_alive, scn_fort|entry(11),reserved,  fac_commoners,[itm_mail_shirt,itm_splinted_greaves],knight_attrib_3|level(20),wp(150),knows_common,0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000, 0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000],
+  ["outpost_captain","Outpost Captain","Outpost Captains",tf_hero|tf_unmoveable_in_party_window|tf_female|tf_allways_fall_dead|tf_no_capture_alive, scn_fort|entry(11),reserved,  fac_commoners,[itm_kau_mail_shirt_b,itm_mail_chausses],knight_attrib_3|level(20),wp(150),knows_common,0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000, 0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000],
   
-  ["fort_captain","Fort Captain","Fort Captains",tf_hero|tf_unmoveable_in_party_window|tf_female|tf_allways_fall_dead|tf_no_capture_alive, scn_fort|entry(11),reserved,  fac_commoners,[itm_coat_of_plates,itm_splinted_greaves,itm_gauntlets],knight_attrib_5|level(40),wp(250),knows_common,0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000, 0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000],
+  ["fort_captain","Fort Captain","Fort Captains",tf_hero|tf_unmoveable_in_party_window|tf_female|tf_allways_fall_dead|tf_no_capture_alive, scn_fort|entry(11),reserved,  fac_commoners,[itm_veteran_surcoat_a,itm_mail_chausses,itm_mail_mittens],knight_attrib_5|level(40),wp(250),knows_common,0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000, 0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000],
 #-## Outposts end
 ]
 

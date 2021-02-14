@@ -11,6 +11,7 @@ from ID_factions import *
 # from module_items import *
 from ID_items import *
 from ID_scenes import *
+from compiler import *
 
 ################### NEW v1.8 - import definitions from newly created module_troops_def.py file
 from module_troops_def import *
@@ -87,7 +88,7 @@ troops = [
    [itm_tutorial_sword,itm_leather_vest,itm_hide_boots],
    str_6|agi_6|level(5),wp(80),knows_common,mercenary_face_1,mercenary_face_2],
 
-    ["novice_fighter",
+  ["novice_fighter",
      "Novice_Fighter",
      "Novice_Fighters",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -122,10 +123,10 @@ troops = [
     knight_wp_1,
     knight_skills_1,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
-    ["regular_fighter",
+  ["regular_fighter",
      "Regular_Fighter",
      "Regular_Fighters",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -184,10 +185,10 @@ troops = [
     knight_wp_2,
     knight_skills_2,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
-    ["veteran_fighter",
+  ["veteran_fighter",
      "Veteran_Fighter",
      "Veteran_Fighters",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -230,10 +231,10 @@ troops = [
     knight_wp_3,
     knight_skills_3,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
-    ["champion_fighter",
+  ["champion_fighter",
      "Champion_Fighter",
      "Champion_Fighters",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -275,10 +276,10 @@ troops = [
     knight_wp_4,
     knight_skills_4,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
-    ["arena_training_fighter_1","Novice Fighter","Novice Fighters",tf_guarantee_boots|tf_guarantee_armor,no_scene,reserved,fac_commoners,
+  ["arena_training_fighter_1","Novice Fighter","Novice Fighters",tf_guarantee_boots|tf_guarantee_armor,no_scene,reserved,fac_commoners,
    [itm_hide_boots],
    str_6|agi_6|level(5),wp(60),knows_common,mercenary_face_1, mercenary_face_2],
   ["arena_training_fighter_2","Novice Fighter","Novice Fighters",tf_guarantee_boots|tf_guarantee_armor,no_scene,reserved,fac_commoners,
@@ -309,7 +310,7 @@ troops = [
    [itm_hide_boots],
    str_12|agi_12|level(23),wp(150),knows_common,mercenary_face_1, mercenary_face_2],
 
-    ["cattle",
+  ["cattle",
      "Cattle",
      "Cattle",
     tf_mounted,
@@ -319,12 +320,12 @@ troops = [
     wp_one_handed(60) | wp_two_handed(60) | wp_polearm(60) | wp_archery(60) | wp_crossbow(60) | wp_throwing(60),
     knows_pathfinding_10 | knows_riding_10,
     mercenary_face_1, mercenary_face_2
-    ],
+  ],
 
 
 
 ###### mercenary troops
-    ["farmer",
+  ["farmer",
      "Libertus",
      "Liberti",
     #####" Freeman",
@@ -336,12 +337,12 @@ troops = [
 
         foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
 ################################ MERC GENERIC NEW
     ##GENERAL EUROPEAN MERCS
-    ["merc_euro_spearman",
+  ["merc_euro_spearman",
      "Euro Spearman",
      "Euro Spearmen",
     #####" Militia Spearman",
@@ -421,10 +422,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_wp_1, merc_meele_skills_1,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_euro_guisarmer",
+  ["merc_euro_guisarmer",
      "Gisarme Stipendiarii",
      "Gisarme Stipendiarii",
     #####" Militia Guisarmer",
@@ -479,10 +480,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_euro_range",
+  ["merc_euro_range",
      "Iaculator Arcoballista Stipendiarii",
      "Iaculatoris Acroballistae Stipendiarii",
     #####" Militia Crossbowman",
@@ -557,10 +558,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_crossbowman_wp_1, merc_crossbowman_skills_1,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_euro_horse",
+  ["merc_euro_horse",
     "Eques Absolvitur",
     "Equites Absolvuntur",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -635,7 +636,7 @@ troops = [
     ],
     ##GENERAL EUROPEAN MERCS
     ##GENERAL BALTIC MERCS
-    ["merc_balt_spearman",
+  ["merc_balt_spearman",
      "Ietininkas Samdinys",
      "Ietininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -693,10 +694,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_wp_1, merc_meele_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_balt_guisarmer",
+  ["merc_balt_guisarmer",
      "Kirvininkas Samdinys",
      "Kirvininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -724,10 +725,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_balt_range",
+  ["merc_balt_range",
      "Akstininkas Samdinys",
      "Akstininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_helmet,
@@ -770,10 +771,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_thrower_wp_1, merc_thrower_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_balt_horse",
+  ["merc_balt_horse",
      "Raitelis Samdinys",
      "Raiteliai Samdiniai",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -810,13 +811,13 @@ troops = [
     itm_noble_cloak, #DrTomas added
 
     itm_little_samogitian #DrTomas revision2
-    ],
+  ],
    horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL BALTIC MERCS
     ##GENERIC MAMLUKE MERCS
-    ["merc_mamluke_spearman",
+  ["merc_mamluke_spearman",
      "Hastatus Stipendiarii(Aegyptium)",
      "Hastati Stipendiarii(Aegyptium)",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -841,10 +842,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_wp_1, merc_meele_skills_1,
     berber_face_1, berber_face_2
-    ],
+  ],
 
 
-    ["merc_mamluke_javalin",
+  ["merc_mamluke_javalin",
      "Sagittarius Stipendiarii(Kurdia)",
      "Sagittarii Stipendiarii(Kurdia)",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -863,10 +864,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_archer_wp_1, merc_archer_skills_1,
     berber_face_1, berber_face_2
-    ],
+  ],
 
 
-    ["merc_mamluke_range",
+  ["merc_mamluke_range",
      "Turkoman Iaculator Arcoballista Stipendiarii",
      "Turkoman Iaculatoris Acroballistae Stipendiarii",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -889,10 +890,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_crossbowman_wp_1, merc_crossbowman_skills_1,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_mamluke_syrian",
+  ["merc_mamluke_syrian",
     "Sagittarius Stipendiarii(Syra)",
     "Sagittarii Stipendiarii(Syra)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -917,12 +918,12 @@ troops = [
     ],
     ranged_merc_attrib_1, cum_horseman_wp, cum_horseman_skills,
     berber_face_1, berber_face_2
-    ],
+  ],
     ##GENERIC MAMLUKE MERCS
     ##GENERIC NORTH AFRICA MERCS
 
 
-    ["merc_maghreb_spearman",
+  ["merc_maghreb_spearman",
     "Hasham Al-Maghrib Rajjala",
     "Hasham Al-Maghrib Rajjala",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_guarantee_helmet,
@@ -969,9 +970,9 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     berber_face_1, berber_face_2
-    ],
+  ],
 
-   ["merc_maghreb_range",
+  ["merc_maghreb_range",
     "Maghreb Archer",
     "Maghreb Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
@@ -1012,9 +1013,9 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_archer_wp_1, merc_archer_skills_1,
     arab_face_3, arab_face_4
-    ],
+  ],
 
-   ["merc_maghreb_horse",
+  ["merc_maghreb_horse",
     "Hasham Al-Zanata Faris",
     "Hasham Al-Zanata Faris",
     tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_shield|tf_guarantee_horse,
@@ -1055,7 +1056,7 @@ troops = [
     ],
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     arab_face_1, arab_face_2
-    ],
+  ],
     ##GENERIC NORTH AFRICA MERCS
     
     ##GENERAL RUS MERCS
@@ -1119,10 +1120,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_wp_1, merc_meele_skills_1,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_rus_guisarmer",
+  ["merc_rus_guisarmer",
      "Volnyi Sekirschik",
      "Volnyt Sekirschiki",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -1165,10 +1166,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_rus_range",
+  ["merc_rus_range",
      "Volnyi Strelec",
      "Volnye Strelci",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -1212,10 +1213,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_archer_wp_1, merc_archer_skills_1,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_rus_horse",
+  ["merc_rus_horse",
      "Konnyi voy",
      "Konyie voi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -1266,11 +1267,11 @@ troops = [
     ],
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
     ##GENERAL RUS MERCS
 
     ##GENERAL LATIN MERCS
-    ["merc_latin_spearman",
+  ["merc_latin_spearman",
      "Hastatus solidarius",
      "Hastati solidari",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -1344,10 +1345,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_wp_1, merc_meele_skills_1,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_latin_guisarmer",
+  ["merc_latin_guisarmer",
      "Ronconiere solidarius",
      "Ronconieri solidari",
     #####" Militia Guisarmer",
@@ -1400,10 +1401,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_latin_range",
+  ["merc_latin_range",
      "Ballistarius solidarius",
      "Ballistari solidari",
     #####" Militia Crossbowman",
@@ -1475,10 +1476,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_crossbowman_wp_1, merc_crossbowman_skills_1,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_latin_horse",
+  ["merc_latin_horse",
      "Eques",
      "Equites",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -1547,9 +1548,9 @@ troops = [
     ],
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-    ["merc_almogavar_1",
+  ["merc_almogavar_1",
      "Almogavar",
      "Almogavars",
     tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged,
@@ -1600,9 +1601,9 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_thrower_wp_1, merc_thrower_skills_1,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-    ["merc_latin_light",
+  ["merc_latin_light",
      "Pedes",
      "Pedites",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -1674,11 +1675,11 @@ troops = [
     ],
     foot_attrib_3, light_infantry_wp_1, light_infantry_skills_1,
     latin_face_1, latin_face_2
-    ],
+  ],
     ##GENERAL IBERIAN MERCS
 
     ##GENERAL BALKAN MERCS
-    ["merc_balkan_spearman",
+  ["merc_balkan_spearman",
      "Hastatus Stipendiarii(Balkan)",
      "Hastati Stipendiarii(Balkan)",
     #####" Militia Spearman",
@@ -1733,10 +1734,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_wp_1, merc_meele_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_balkan_guisarmer",
+  ["merc_balkan_guisarmer",
      "Stipendiarii(Balkan)",
      "Stipendiarii(Balkan)",
     #####" Militia Guisarmer",
@@ -1775,10 +1776,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_balkan_range",
+  ["merc_balkan_range",
      "Sagittarius Stipendiarii(Balkan)",
      "Sagittarii Stipendiarii(Balkan)",
     #####" Militia Crossbowman",
@@ -1816,10 +1817,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_archer_wp_1, merc_archer_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_balkan_horse",
+  ["merc_balkan_horse",
      "Eques Absolvitur(Croatian)",
      "Equites Absolvuntur(Croatian)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -1874,10 +1875,10 @@ troops = [
         ],
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL BALKAN MERCS
     ##GENERAL SCANDINAVIAN MERCS
-    ["merc_scan_spearman",
+  ["merc_scan_spearman",
      "Hastatus Stipendiarii(Scandinavia)",
      "Hastati Stipendiarii(Scandinavia)",
     #####" Militia Spearman",
@@ -1935,10 +1936,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_wp_1, merc_meele_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_scan_guisarmer",
+  ["merc_scan_guisarmer",
      "Gisarme Stipendiarii(Scandinavia)",
      "Gisarme Stipendiarii(Scandinavia)",
     #####" Militia Guisarmer",
@@ -1982,10 +1983,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_scan_range",
+  ["merc_scan_range",
      "Iaculator Arcoballista Stipendiarii(Scandinavia)",
      "Iaculatoris Acroballistae Stipendiarii(Scandinavia)",
     #####" Militia Crossbowman",
@@ -2045,10 +2046,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_crossbowman_wp_1, merc_crossbowman_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_scan_horse",
+  ["merc_scan_horse",
      "Eques Absolvitur(Scandinavia)",
      "Equites Absolvuntur(Scandinavia)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -2107,29 +2108,14 @@ troops = [
         ],
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL SCANDINAVIAN MERCS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 ################################ MERC NEW - VETERAN
     ##GENERAL EUROPEAN MERCS
-    ["merc_veteran_euro_spearman",
+  ["merc_veteran_euro_spearman",
      "Euro Spearman",
      "Euro Spearmen",
     #####" Militia Spearman",
@@ -2210,10 +2196,10 @@ troops = [
     ],
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_veteran_euro_guisarmer",
+  ["merc_veteran_euro_guisarmer",
      "Gisarme Stipendiarii",
      "Gisarme Stipendiarii",
     #####" Militia Guisarmer",
@@ -2273,10 +2259,10 @@ troops = [
     ],
     foot_merc_attrib_2, merc_meele_two_handed_wp_2, merc_meele_two_handed_skills_2,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_veteran_euro_range",
+  ["merc_veteran_euro_range",
      "Iaculator Arcoballista Stipendiarii",
      "Iaculatoris Acroballistae Stipendiarii",
     #####" Militia Crossbowman",
@@ -2358,10 +2344,10 @@ troops = [
     ],
     ranged_merc_attrib_2, merc_crossbowman_wp_2, merc_crossbowman_skills_2,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_veteran_euro_horse",
+  ["merc_veteran_euro_horse",
      "Eques Absolvitur",
      "Equites Absolvuntur",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -2452,7 +2438,7 @@ troops = [
     ],
     ##GENERAL EUROPEAN MERCS
     ##GENERAL BALTIC MERCS
-    ["merc_veteran_balt_spearman",
+  ["merc_veteran_balt_spearman",
      "Ietininkas Samdinys",
      "Ietininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -2509,10 +2495,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_balt_guisarmer",
+  ["merc_veteran_balt_guisarmer",
      "Kirvininkas Samdinys",
      "Kirvininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -2543,10 +2529,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_two_handed_wp_2, merc_meele_two_handed_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_balt_range",
+  ["merc_veteran_balt_range",
      "Akstininkas Samdinys",
      "Akstininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_helmet,
@@ -2590,10 +2576,10 @@ troops = [
 
     ranged_merc_attrib_2, merc_thrower_wp_2, merc_thrower_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_balt_horse",
+  ["merc_veteran_balt_horse",
      "Raitelis Samdinys",
      "Raiteliai Samdiniai",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -2635,10 +2621,10 @@ troops = [
 
    horse_merc_attrib_2, merc_mounted_wp_2, merc_mounted_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL BALTIC MERCS
     ##GENERIC MAMLUKE MERCS
-    ["merc_veteran_mamluke_spearman",
+  ["merc_veteran_mamluke_spearman",
      "Hastatus Stipendiarii(Aegyptium)",
      "Hastati Stipendiarii(Aegyptium)",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -2689,10 +2675,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     berber_face_1, berber_face_2
-    ],
+  ],
 
 
-    ["merc_veteran_mamluke_javalin",
+  ["merc_veteran_mamluke_javalin",
      "Sagittarius Stipendiarii(Kurdia)",
      "Sagittarii Stipendiarii(Kurdia)",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -2740,10 +2726,10 @@ troops = [
 
     ranged_merc_attrib_2, merc_thrower_wp_2, merc_thrower_skills_2,
     berber_face_1, berber_face_2
-    ],
+  ],
 
 
-    ["merc_veteran_mamluke_range",
+  ["merc_veteran_mamluke_range",
      "Turkoman Iaculator Arcoballista Stipendiarii",
      "Turkoman Iaculatoris Acroballistae Stipendiarii",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -2791,10 +2777,10 @@ troops = [
 
     ranged_merc_attrib_2, merc_archer_wp_2, merc_archer_skills_2,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_veteran_mamluke_syrian",
+  ["merc_veteran_mamluke_syrian",
      "Sagittarius Stipendiarii(Syra)",
      "Sagittarii Stipendiarii(Syra)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -2841,7 +2827,7 @@ troops = [
 
     ranged_merc_attrib_2, cum_harcher_wp, cum_harcher_skills,
     berber_face_1, berber_face_2
-    ],
+  ],
     ##GENETIC MAMLUKE MERCS
     ##GENERIC NORTH AFRICA MERCS
 
@@ -2896,9 +2882,9 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     berber_face_1, berber_face_2
-    ],
+  ],
 
-   ["merc_veteran_maghreb_range",
+  ["merc_veteran_maghreb_range",
     "Maghreb Veteran Archer",
     "Maghreb Veteran Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
@@ -2939,9 +2925,9 @@ troops = [
 
     ranged_merc_attrib_2, merc_archer_wp_2 , merc_archer_skills_2,
     arab_face_3, arab_face_4
-    ],
+  ],
 
-   ["merc_veteran_maghreb_horse",
+  ["merc_veteran_maghreb_horse",
     "Hasham Al-Zanata Faris",
     "Hasham Al-Zanata Faris",
     tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_shield|tf_guarantee_horse,
@@ -3050,10 +3036,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_veteran_rus_guisarmer",
+  ["merc_veteran_rus_guisarmer",
      "Volnyi Sekirschik",
      "Volnyt Sekirschiki",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -3101,10 +3087,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_two_handed_wp_2, merc_meele_two_handed_skills_2,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_veteran_rus_range",
+  ["merc_veteran_rus_range",
      "Volnyi Strelec",
      "Volnye Strelci",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -3148,10 +3134,10 @@ troops = [
 
     ranged_merc_attrib_2, merc_archer_wp_2, merc_archer_skills_2,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_veteran_rus_horse",
+  ["merc_veteran_rus_horse",
      "Konnyi voy",
      "Konyie voi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -3202,10 +3188,10 @@ troops = [
 
     horse_merc_attrib_2, merc_mounted_wp_2, merc_mounted_skills_2,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
     ##GENERAL RUS MERCS
     ##GENERAL LATIN MERCS
-    ["merc_veteran_latin_spearman",
+  ["merc_veteran_latin_spearman",
      "Hastatus solidarius",
      "Hastati solidari",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -3280,10 +3266,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_veteran_latin_guisarmer",
+  ["merc_veteran_latin_guisarmer",
      "Ronconiere solidarius",
      "Ronconieri solidari",
     #####" Militia Guisarmer",
@@ -3337,10 +3323,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_two_handed_wp_2, merc_meele_two_handed_skills_2,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_veteran_latin_range",
+  ["merc_veteran_latin_range",
      "Ballistarius solidarius",
      "Ballistari solidari",
     #####" Militia Crossbowman",
@@ -3404,10 +3390,10 @@ troops = [
 
     ranged_merc_attrib_2, merc_crossbowman_wp_2, merc_crossbowman_skills_2,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_veteran_latin_horse",
+  ["merc_veteran_latin_horse",
      "Eques",
      "Equites",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -3482,9 +3468,9 @@ troops = [
 
     horse_merc_attrib_2, merc_mounted_wp_2, merc_mounted_skills_2,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-     ["merc_almogavar_2",
+  ["merc_almogavar_2",
      "Almocaden Almogavar",
      "Almocaden Almogavars",
     tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots |  tf_guarantee_gloves | tf_guarantee_ranged,
@@ -3538,9 +3524,9 @@ troops = [
     ],
     ranged_merc_attrib_2, merc_thrower_wp_2, merc_thrower_skills_2,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-    ["merc_veteran_latin_light",
+  ["merc_veteran_latin_light",
      "Pedes",
      "Pedites",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -3604,12 +3590,12 @@ troops = [
     ]+latin_vet_armors+latin_vet_gear,
     foot_attrib_4, light_infantry_wp_2, light_infantry_skills_2,
     latin_face_1, latin_face_2
-    ],
+  ],
     
     ##GENERAL IBERIAN MERCS
 
     ##GENERAL BALKAN MERCS
-    ["merc_veteran_balkan_spearman",
+  ["merc_veteran_balkan_spearman",
      "Hastatus Stipendiarii(Balkan)",
      "Hastati Stipendiarii(Balkan)",
     #####" Militia Spearman",
@@ -3667,10 +3653,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_balkan_guisarmer",
+  ["merc_veteran_balkan_guisarmer",
      "Stipendiarii(Balkan)",
      "Stipendiarii(Balkan)",
     #####" Militia Guisarmer",
@@ -3710,10 +3696,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_two_handed_wp_2, merc_meele_two_handed_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_balkan_range",
+  ["merc_veteran_balkan_range",
      "Sagittarius Stipendiarii(Balkan)",
      "Sagittarii Stipendiarii(Balkan)",
     #####" Militia Crossbowman",
@@ -3754,10 +3740,10 @@ troops = [
 
     ranged_merc_attrib_2, merc_archer_wp_2, merc_archer_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_balkan_horse",
+  ["merc_veteran_balkan_horse",
      "Eques Absolvitur(Croatian)",
      "Equites Absolvuntur(Croatian)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -3810,10 +3796,10 @@ troops = [
 
     horse_merc_attrib_2, merc_mounted_wp_2, merc_mounted_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL BALKAN MERCS
     ##GENERAL SCANDINAVIAN MERCS
-    ["merc_veteran_scan_spearman",
+  ["merc_veteran_scan_spearman",
      "Hastatus Stipendiarii(Scandinavia)",
      "Hastati Stipendiarii(Scandinavia)",
     #####" Militia Spearman",
@@ -3877,10 +3863,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_wp_2, merc_meele_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_scan_guisarmer",
+  ["merc_veteran_scan_guisarmer",
      "Gisarme Stipendiarii(Scandinavia)",
      "Gisarme Stipendiarii(Scandinavia)",
     #####" Militia Guisarmer",
@@ -3935,10 +3921,10 @@ troops = [
 
     foot_merc_attrib_2, merc_meele_two_handed_wp_2, merc_meele_two_handed_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_scan_range",
+  ["merc_veteran_scan_range",
      "Iaculator Arcoballista Stipendiarii(Scandinavia)",
      "Iaculatoris Acroballistae Stipendiarii(Scandinavia)",
     #####" Militia Crossbowman",
@@ -3995,10 +3981,10 @@ troops = [
 
     ranged_merc_attrib_2, merc_crossbowman_wp_2, merc_crossbowman_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_veteran_scan_horse",
+  ["merc_veteran_scan_horse",
      "Eques Absolvitur(Scandinavia)",
      "Equites Absolvuntur(Scandinavia)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -4066,27 +4052,16 @@ troops = [
 
     horse_merc_attrib_2, merc_mounted_wp_2, merc_mounted_skills_2,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL SCANDINAVIAN MERCS
 
     ######## MERC GENERIC NEW END
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ################################ MERC GENERIC NEW - ELITE
     ##GENERAL EUROPEAN MERCS
-    ["merc_elite_euro_spearman",
+  ["merc_elite_euro_spearman",
      "Euro Spearman",
      "Euro Spearmen",
     #####" Militia Spearman",
@@ -4147,10 +4122,10 @@ troops = [
     ],
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_elite_euro_guisarmer",
+  ["merc_elite_euro_guisarmer",
      "Gisarme Stipendiarii",
      "Gisarme Stipendiarii",
     #####" Militia Guisarmer",
@@ -4197,10 +4172,10 @@ troops = [
     ],
     foot_merc_attrib_3, merc_meele_two_handed_wp_3, merc_meele_two_handed_skills_3,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_elite_euro_range",
+  ["merc_elite_euro_range",
      "Iaculator Arcoballista Stipendiarii",
      "Iaculatoris Acroballistae Stipendiarii",
     #####" Militia Crossbowman",
@@ -4259,10 +4234,10 @@ troops = [
     ],
     ranged_merc_attrib_3, merc_crossbowman_wp_3, merc_crossbowman_skills_3,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_elite_euro_horse",
+  ["merc_elite_euro_horse",
      "Eques Absolvitur",
      "Equites Absolvuntur",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -4313,7 +4288,7 @@ troops = [
     ],
     ##GENERAL EUROPEAN MERCS
     ##GENERAL BALTIC MERCS
-    ["merc_elite_balt_spearman",
+  ["merc_elite_balt_spearman",
      "Ietininkas Samdinys",
      "Ietininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -4368,10 +4343,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_balt_guisarmer",
+  ["merc_elite_balt_guisarmer",
      "Kirvininkas Samdinys",
      "Kirvininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -4400,10 +4375,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_two_handed_wp_3, merc_meele_two_handed_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_balt_range",
+  ["merc_elite_balt_range",
      "Akstininkas Samdinys",
      "Akstininkai Samdiniai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_helmet,
@@ -4444,10 +4419,10 @@ troops = [
 
     ranged_merc_attrib_3, merc_thrower_wp_3, merc_thrower_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_balt_horse",
+  ["merc_elite_balt_horse",
      "Raitelis Samdinys",
      "Raiteliai Samdiniai",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -4489,10 +4464,10 @@ troops = [
 
    horse_merc_attrib_3, merc_mounted_wp_3, merc_mounted_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL BALTIC MERCS
     ##GENERIC MAMLUKE MERCS
-    ["merc_elite_mamluke_spearman",
+  ["merc_elite_mamluke_spearman",
      "Hastatus Stipendiarii(Aegyptium)",
      "Hastati Stipendiarii(Aegyptium)",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -4537,10 +4512,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     berber_face_1, berber_face_2
-    ],
+  ],
 
 
-    ["merc_elite_mamluke_javalin",
+  ["merc_elite_mamluke_javalin",
      "Sagittarius Stipendiarii(Kurdia)",
      "Sagittarii Stipendiarii(Kurdia)",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -4584,10 +4559,10 @@ troops = [
 
     ranged_merc_attrib_3, merc_thrower_wp_3, merc_thrower_skills_3,
     berber_face_1, berber_face_2
-    ],
+  ],
 
 
-    ["merc_elite_mamluke_range",
+  ["merc_elite_mamluke_range",
      "Turkoman Iaculator Arcoballista Stipendiarii",
      "Turkoman Iaculatoris Acroballistae Stipendiarii",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -4630,10 +4605,10 @@ troops = [
 
     ranged_merc_attrib_3, merc_archer_wp_3, merc_archer_skills_3,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_elite_mamluke_syrian",
+  ["merc_elite_mamluke_syrian",
      "Sagittarius Stipendiarii(Syra)",
      "Sagittarii Stipendiarii(Syra)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -4678,7 +4653,7 @@ troops = [
 
     ranged_merc_attrib_3, cum_vharcher_wp, cum_vharcher_skills,
     berber_face_1, berber_face_2
-    ],
+  ],
     ##GENETIC MAMLUKE MERCS
     ##GENERIC NORTH AFRICA MERCS
 
@@ -4731,9 +4706,9 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     berber_face_1, berber_face_2
-    ],
+  ],
 
-   ["merc_elite_maghreb_range",
+  ["merc_elite_maghreb_range",
     "Maghreb Elite Archer",
     "Maghreb Elite Archers",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
@@ -4774,9 +4749,9 @@ troops = [
 
     ranged_merc_attrib_3, merc_archer_wp_3 , merc_archer_skills_3,
     arab_face_3, arab_face_4
-    ],
+  ],
 
-   ["merc_elite_maghreb_horse",
+  ["merc_elite_maghreb_horse",
     "Hasham Al-Zanata Faris",
     "Hasham Al-Zanata Faris",
     tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_shield|tf_guarantee_horse,
@@ -4883,10 +4858,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_elite_rus_guisarmer",
+  ["merc_elite_rus_guisarmer",
      "Volnyi Sekirschik",
      "Volnyt Sekirschiki",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -4934,10 +4909,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_two_handed_wp_3, merc_meele_two_handed_skills_3,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_elite_rus_range",
+  ["merc_elite_rus_range",
      "Volnyi Strelec",
      "Volnye Strelci",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -4981,10 +4956,10 @@ troops = [
 
     ranged_merc_attrib_3, merc_archer_wp_3, merc_archer_skills_3,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["merc_elite_rus_horse",
+  ["merc_elite_rus_horse",
      "Konnyi voy",
      "Konyie voi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -5035,10 +5010,10 @@ troops = [
 
     horse_merc_attrib_3, merc_mounted_wp_3, merc_mounted_skills_3,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
     ##GENERAL RUS MERCS
     ##GENERAL LATIN MERCS
-    ["merc_elite_latin_spearman",
+  ["merc_elite_latin_spearman",
      "Hastatus solidarius",
      "Hastati solidari",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -5114,10 +5089,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_elite_latin_guisarmer",
+  ["merc_elite_latin_guisarmer",
      "Ronconiere solidarius",
      "Ronconieri solidari",
     #####" Militia Guisarmer",
@@ -5171,10 +5146,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_two_handed_wp_3, merc_meele_two_handed_skills_3,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_elite_latin_range",
+  ["merc_elite_latin_range",
      "Ballistarius solidarius",
      "Ballistari solidari",
     #####" Militia Crossbowman",
@@ -5242,10 +5217,10 @@ troops = [
 
     ranged_merc_attrib_3, merc_crossbowman_wp_3, merc_crossbowman_skills_3,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["merc_elite_latin_horse",
+  ["merc_elite_latin_horse",
      "Eques",
      "Equites",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -5307,9 +5282,9 @@ troops = [
 
     horse_merc_attrib_3, merc_mounted_wp_3, merc_mounted_skills_3,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-    ["merc_almogavar_3",
+  ["merc_almogavar_3",
      "Adalid Almogavar",
      "Adalid Almogavars",
     tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged,
@@ -5363,9 +5338,9 @@ troops = [
     ],
     ranged_merc_attrib_3, merc_thrower_wp_3, merc_thrower_skills_3,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-    ["merc_elite_latin_light",
+  ["merc_elite_latin_light",
      "Pedes",
      "Pedites",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -5429,11 +5404,11 @@ troops = [
     ]+latin_elite_armors+latin_elite_gear,
     foot_attrib_5, light_infantry_wp_3, light_infantry_skills_3,
     latin_face_1, latin_face_2
-    ],
+  ],
     ##GENERAL IBERIAN MERCS
 
     ##GENERAL BALKAN MERCS
-    ["merc_elite_balkan_spearman",
+  ["merc_elite_balkan_spearman",
      "Hastatus Stipendiarii(Balkan)",
      "Hastati Stipendiarii(Balkan)",
     #####" Militia Spearman",
@@ -5491,10 +5466,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_balkan_guisarmer",
+  ["merc_elite_balkan_guisarmer",
      "Stipendiarii(Balkan)",
      "Stipendiarii(Balkan)",
     #####" Militia Guisarmer",
@@ -5534,10 +5509,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_two_handed_wp_3, merc_meele_two_handed_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_balkan_range",
+  ["merc_elite_balkan_range",
      "Sagittarius Stipendiarii(Balkan)",
      "Sagittarii Stipendiarii(Balkan)",
     #####" Militia Crossbowman",
@@ -5578,10 +5553,10 @@ troops = [
 
     ranged_merc_attrib_3, merc_archer_wp_3, merc_archer_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_balkan_horse",
+  ["merc_elite_balkan_horse",
      "Eques Absolvitur(Croatian)",
      "Equites Absolvuntur(Croatian)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -5634,10 +5609,10 @@ troops = [
 
     horse_merc_attrib_3, merc_mounted_wp_3, merc_mounted_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL BALKAN MERCS
     ##GENERAL SCANDINAVIAN MERCS
-    ["merc_elite_scan_spearman",
+  ["merc_elite_scan_spearman",
      "Hastatus Stipendiarii(Scandinavia)",
      "Hastati Stipendiarii(Scandinavia)",
     #####" Militia Spearman",
@@ -5701,10 +5676,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_wp_3, merc_meele_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_scan_guisarmer",
+  ["merc_elite_scan_guisarmer",
      "Gisarme Stipendiarii(Scandinavia)",
      "Gisarme Stipendiarii(Scandinavia)",
     #####" Militia Guisarmer",
@@ -5759,10 +5734,10 @@ troops = [
 
     foot_merc_attrib_3, merc_meele_two_handed_wp_3, merc_meele_two_handed_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_scan_range",
+  ["merc_elite_scan_range",
      "Iaculator Arcoballista Stipendiarii(Scandinavia)",
      "Iaculatoris Acroballistae Stipendiarii(Scandinavia)",
     #####" Militia Crossbowman",
@@ -5821,10 +5796,10 @@ troops = [
 
     ranged_merc_attrib_3, merc_crossbowman_wp_3, merc_crossbowman_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_elite_scan_horse",
+  ["merc_elite_scan_horse",
      "Eques Absolvitur(Scandinavia)",
      "Equites Absolvuntur(Scandinavia)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -5892,7 +5867,7 @@ troops = [
 
     horse_merc_attrib_3, merc_mounted_wp_3, merc_mounted_skills_3,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GENERAL SCANDINAVIAN MERCS
     ######## MERC GENERIC NEW END
  ############################################################################################
@@ -5940,10 +5915,10 @@ troops = [
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_gaelic_axeman",
+  ["merc_gaelic_axeman",
      "Gall-Gaedhil Tuanaghta",
      "Gall-Gaedhil Tuanaghta",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -5972,10 +5947,10 @@ troops = [
     ],
     foot_attrib_3, gaelic_spearman_wp_1, gaelic_spearman_skills_1,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["merc_veteran_gaelic_spearman",
+  ["merc_veteran_gaelic_spearman",
      "Gall-Oglaich Hastatus",
      "Gall-Oglaich Hastati",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -6018,10 +5993,10 @@ troops = [
 
     foot_attrib_4, gaelic_spearman_wp_2, gaelic_spearman_skills_2,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_veteran_gaelic_axeman",
+  ["merc_veteran_gaelic_axeman",
      "Gall-Oglaich Tuanaghta",
      "Gall-Oglaich Tuanaghta",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -6055,10 +6030,10 @@ troops = [
 
     foot_attrib_5, gaelic_axeman_skills_2, gaelic_axeman_skills_2,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_elite_gaelic_spearman",
+  ["merc_elite_gaelic_spearman",
      "Gall-Oglaich Hastatus",
      "Gall-Oglaich Hastati",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -6101,10 +6076,10 @@ troops = [
 
     foot_attrib_5, gaelic_spearman_wp_3, gaelic_spearman_skills_3,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["merc_elite_gaelic_axeman",
+  ["merc_elite_gaelic_axeman",
      "Gall-Oglaich Tuanaghta",
      "Gall-Oglaich Tuanaghta",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -6148,7 +6123,7 @@ troops = [
 
     ###HISTORICAL MERCS
     ##GEONESE
-      ["genoese_crossbowman",
+  ["genoese_crossbowman",
      "Balestriere genovese",
      "Balestrieri genovesi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -6195,9 +6170,9 @@ troops = [
     ],
     ranged_attrib_5, genoese_crossbowman_wp, genoese_crossbowman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-      ["genoese_crossbowman_commander",
+  ["genoese_crossbowman_commander",
      "Sergente balestriere genovese",
      "Sergenti balestrieri genovesi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -6250,7 +6225,7 @@ troops = [
     ],
     ranged_attrib_elite, genoese_crossbowman_commander_wp, genoese_crossbowman_commander_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
     ##GEONESE
     ##Brabantines
     [
@@ -6327,10 +6302,10 @@ troops = [
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_brabantine_xbow",
+  ["merc_brabantine_xbow",
      "Brabantine Iaculator Arcoballista",
      "Brabantine Iaculatoris Arcoballistae",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -6406,10 +6381,10 @@ troops = [
     ],
     ranged_attrib_elite, crossbow_sergeant_wp, crossbow_sergeant_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_brabantine_guisarm",
+  ["merc_brabantine_guisarm",
      "Brabantine Gisarme",
      "Brabantine Gisarme",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -6469,10 +6444,10 @@ troops = [
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
     ##Brabantines
     ##Welsh archers
-    ["merc_welsh_bowman",
+  ["merc_welsh_bowman",
      "Cymry Saethydd",
      "Cymry Saethydd",
     tf_guarantee_ranged | tf_guarantee_armor | tf_guarantee_gloves | tf_guarantee_boots,
@@ -6504,10 +6479,10 @@ troops = [
     ],
     ranged_attrib_4, welsh_archer_wp, welsh_archer_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_welsh_veteran_bowman",
+  ["merc_welsh_veteran_bowman",
      "Cymry Saethydd",
      "Cymry Saethydd",
     tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_gloves,
@@ -6547,10 +6522,10 @@ troops = [
 
     ranged_attrib_5, welsh_veteran_archer_wp, welsh_veteran_archer_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_welsh_elite_bowman",
+  ["merc_welsh_elite_bowman",
      "Cymry Saethydd",
      "Cymry Saethydd",
     tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_gloves,
@@ -6592,10 +6567,10 @@ troops = [
 
     ranged_attrib_elite, welsh_elite_archer_wp, welsh_elite_archer_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["merc_kern_infantry",
+  ["merc_kern_infantry",
      "Kern Solidarius",
      "Kern Solidari",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -6639,7 +6614,7 @@ troops = [
     foot_attrib_3, merc_kern_wp, merc_kern_skills,
     euro_face_3, euro_face_4
     ],
-    ["merc_veteran_kern_infantry",
+  ["merc_veteran_kern_infantry",
      "Kern Solidarius",
      "Kern Solidari",
     tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_boots,
@@ -6682,7 +6657,7 @@ troops = [
     foot_attrib_4, merc_veteran_kern_wp, merc_veteran_kern_skills,
     euro_face_3, euro_face_4
     ],
-    ["merc_elite_kern_infantry",
+  ["merc_elite_kern_infantry",
      "Kern Solidarius",
      "Kern Solidari",
     tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_boots,
@@ -6727,7 +6702,7 @@ troops = [
     ],
     ##Welsh archers
     ##SICILY SICILIANS
-     ["merc_sicily_foot_archer_1",
+  ["merc_sicily_foot_archer_1",
      "Jund Al-Siqilliyya Rami",
      "Jund Al-Siqilliyya Rumat",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -6764,10 +6739,10 @@ troops = [
     archer_regulars_wp,
     archer_regulars_skills,
     arab_face_3, arab_face_4
-    ],
+  ],
 
 
-    ["merc_sicily_foot_archer_2",
+  ["merc_sicily_foot_archer_2",
      "Khassakiyya Al-Siqilliyya Rami",
      "Khassakiyya Al-Siqilliyya Rumat",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -6802,10 +6777,10 @@ troops = [
     archer_veteran_wp,
     archer_veteran_skills,
     arab_face_1, arab_face_4
-    ],
+  ],
 
 
-    ["merc_sicily_infantry_1",
+  ["merc_sicily_infantry_1",
     "Jund Al-Siqilliyya Rajjala",
     "Jund Al-Siqilliyya Rajjala",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield | tf_guarantee_helmet,
@@ -6921,10 +6896,10 @@ troops = [
     cum_horseman_wp,
     cum_horseman_skills,
     khergit_face_young_1, khergit_face_older_2
-    ],
+  ],
 
 
-    ["merc_sicily_horse_archer_2",
+  ["merc_sicily_horse_archer_2",
      "Khassakiya Al-Siqilliyya Faris",
      "Khassakiya Al-Siqilliyya Faris",
     tf_guarantee_ranged | tf_guarantee_shield | tf_mounted | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet,
@@ -6965,10 +6940,10 @@ troops = [
     cum_harcher_wp,
     cum_harcher_skills,
     arab_face_1, arab_face_2
-    ],
+  ],
     ##SICILY SICILIANS
     ##CUMANS
-    ["cuman_tribesman",
+  ["cuman_tribesman",
      "Polovtsky_Soplemennik",
      "Polovtsky_Soplemenniki",
     tf_mounted | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_ranged,
@@ -7009,10 +6984,10 @@ troops = [
     cum_tribesman_wp,
     cum_tribesman_skills,
     khergit_face_younger_1, khergit_face_old_2
-    ],
+  ],
 
 
-    ["cuman_skirmisher",
+  ["cuman_skirmisher",
      "Slavyanskiy_Zastrelshik",
      "Slavyanskiy_Zastrelshiki",
     tf_guarantee_ranged | tf_mounted | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
@@ -7045,10 +7020,10 @@ troops = [
     cum_skirmisher_wp,
     cum_skirmisher_skills,
     khergit_face_younger_1, khergit_face_old_2
-    ],
+  ],
 
 
-    ["cuman_horseman",
+  ["cuman_horseman",
      "Polovtsky_Vsadnik",
      "Polovtsky_Vsadniki",
     tf_guarantee_ranged | tf_mounted | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
@@ -7096,10 +7071,10 @@ troops = [
     cum_horseman_wp,
     cum_horseman_skills,
     khergit_face_young_1, khergit_face_older_2
-    ],
+  ],
 
 
-    ["cuman_horse_archer",
+  ["cuman_horse_archer",
      "Chernye Klobuki_Luchnik",
      "Chernye Klobuki_Luchniki",
     tf_guarantee_ranged | tf_mounted | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_shield,
@@ -7135,10 +7110,10 @@ troops = [
     cum_harcher_wp,
     cum_harcher_skills,
     khergit_face_young_1, khergit_face_older_2
-    ],
+  ],
 
 
-    ["cuman_veteran_horse_archer",
+  ["cuman_veteran_horse_archer",
      "Polovtsky_Konnyy_Luchnik",
      "Polovtsky_Konnyy_Luchniki",
     tf_guarantee_ranged | tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet,
@@ -7176,10 +7151,10 @@ troops = [
     cum_vharcher_wp,
     cum_vharcher_skills,
     khergit_face_middle_1, khergit_face_older_2
-    ],
+  ],
 
 
-    ["cuman_lancer",
+  ["cuman_lancer",
      "Polovtsky_Druzhinnik",
      "Polovtsky_Druzhinniki",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7216,10 +7191,10 @@ troops = [
     cum_lancer_wp,
     cum_lancer_skills,
     khergit_face_middle_1, khergit_face_older_2
-    ],
+  ],
 
 
-    ["cuman_heavy_lancer",
+  ["cuman_heavy_lancer",
      "Polovtsky_Boyarin",
      "Polovtsky_Boyariye",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_gloves,
@@ -7255,7 +7230,7 @@ troops = [
     cum_hlancer_wp,
     cum_hlancer_skills,
     khergit_face_middle_1, khergit_face_older_2
-    ],
+  ],
     ##CUMANS
     ###HISTORICAL MERCS
 
@@ -7430,7 +7405,7 @@ troops = [
 
 
 
-    ["saint_lazarus_half_brother",
+  ["saint_lazarus_half_brother",
      "Sergent de l'ordre de Saint-Lazare",
      "Sergents de l'ordre de Saint-Lazare",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7475,10 +7450,10 @@ troops = [
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["saint_lazarus_knight",
+  ["saint_lazarus_knight",
      "Chevalier de l'ordre de Saint-Lazare",
      "Chevaliers de l'ordre de Saint-Lazare",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7536,9 +7511,9 @@ troops = [
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
-    ["santiago_half_brother",
+  ["santiago_half_brother",
      "Sargento de la Orden de Santiago",
      "Sargentos de la Orden de Santiago",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7580,10 +7555,10 @@ troops = [
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["santiago_knight",
+  ["santiago_knight",
      "Caballero de la Orden de Santiago",
      "Caballeros de la Orden de Santiago",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7638,9 +7613,9 @@ troops = [
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
-    ["calatrava_half_brother",
+  ["calatrava_half_brother",
      "Sargento de la Orden de Calatrava",
      "Sargentos de la Orden de Calatrava",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7690,10 +7665,10 @@ troops = [
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["calatrava_knight",
+  ["calatrava_knight",
      "Caballero de la Orden de Calatrava",
      "Caballeros de la Orden de Calatrava",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7750,10 +7725,10 @@ troops = [
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
-    ["saint_thomas_half_brother",
+  ["saint_thomas_half_brother",
      "Sergeant of Saint Thomas of Acre Order",
      "Sergeants of Saint Thomas of Acre Order",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7800,10 +7775,10 @@ troops = [
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["saint_thomas_knight",
+  ["saint_thomas_knight",
      "Knight of Saint Thomas of Acre Order",
      "Knights of Saint Thomas of Acre Order",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -7859,7 +7834,7 @@ troops = [
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
   ["varangian_guard",
@@ -7914,9 +7889,8 @@ troops = [
     ],
     foot_attrib_elite, varangian_wp, varangian_skills,
     0x00000005c00005c9485b92351564350b00000000001dd85a0000000000000000, 0x00000005c00025c9485b92351564350b00000000001dd85a0000000000000000
-    ],
-    [
-     "georgian_lancer",
+  ],
+     ["georgian_lancer",
      "Moqiravne Aznaur",
      "Moqiravne Aznaur",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -7956,10 +7930,9 @@ troops = [
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     rhodok_face_younger_1, rhodok_face_old_2
-    ],
+  ],
 
-    [
-     "goergian_horse_archer",
+     ["goergian_horse_archer",
      "Moqiravne Msakhureuli",
      "Moqiravne Msakhureuli",
     tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -7999,10 +7972,9 @@ troops = [
     cum_horseman_wp,
     cum_horseman_skills,
     rhodok_face_younger_1, rhodok_face_old_2
-    ],
+  ],
 
- [
-   "kwarezmian_range",
+  ["kwarezmian_range",
    "Sagittarius Stipendiarii(Kwarezmia)",
    "Sagittarius Stipendiarii(Kwarezmia)",
    tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -8036,10 +8008,10 @@ troops = [
     ],
     ranged_attrib_3, merc_archer_wp_1, merc_archer_skills_1,
     arab_face_3, arab_face_4
-    ],
+  ],
 
 
-    ["kwarezmian_light_horse",
+  ["kwarezmian_light_horse",
      "Eques Stipendiarii(Kwarezmia)",
      "Eques Stipendiarii(Kwarezmia)",
     tf_mounted | tf_guarantee_ranged |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -8087,10 +8059,10 @@ troops = [
     ],
     horse_attrib_3, cum_harcher_wp, cum_harcher_skills,
     arab_face_3, arab_face_4
-    ],
+  ],
 
 
-    ["kwarezmian_medium_horse",
+  ["kwarezmian_medium_horse",
      "Eques Absolvitur(Kwarezmia)",
      "Equites Absolvuntur(Kwarezmia)",
     tf_mounted | tf_guarantee_ranged |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -8138,10 +8110,10 @@ troops = [
     ],
     horse_attrib_4, cum_vharcher_wp, cum_vharcher_skills,
     arab_face_3, arab_face_4
-    ],
+  ],
 
 
-    ["mordovian_foot",
+  ["mordovian_foot",
      "Hastatus Stipendiarii(Mordovia)",
      "Hastati Stipendiarii(Mordovia)",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -8209,10 +8181,10 @@ troops = [
     ],
     foot_merc_attrib_1, merc_meele_two_handed_wp_1, merc_meele_two_handed_skills_1,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["mordovian_range",
+  ["mordovian_range",
      "Sagittarius Stipendiarii(Mordovia)",
      "Sagittarius Stipendiarii(Mordovia)",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -8257,10 +8229,10 @@ troops = [
     ],
     ranged_merc_attrib_1, merc_archer_wp_1, merc_archer_skills_1,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["mordovian_horse",
+  ["mordovian_horse",
      "Eques Absolvitur(Mordovia)",
      "Equites Absolvuntur(Mordovia)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -8326,9 +8298,9 @@ troops = [
     ],
     horse_merc_attrib_1, merc_mounted_wp_1, merc_mounted_skills_1,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
-   ["kipchak_range",
+  ["kipchak_range",
     "Kipchackij_Konny_Luchnik",
     "Kipchackij_Konny_Luchniki",
    tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -8356,10 +8328,10 @@ troops = [
     ],
     horse_attrib_3, merc_archer_wp_1, merc_archer_skills_1,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["kipchak_light_horse",
+  ["kipchak_light_horse",
      "Kipchackij_Vsadnik",
      "Kipchackij_Vsadniki",
     tf_mounted | tf_guarantee_ranged |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -8396,10 +8368,10 @@ troops = [
     ],
     horse_attrib_3, cum_harcher_wp, cum_harcher_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["kipchak_medium_horse",
+  ["kipchak_medium_horse",
      "Kipchackij_Druzhinnik",
      "Kipchackij_Druzhinnik",
     tf_mounted | tf_guarantee_ranged |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -8435,7 +8407,7 @@ troops = [
     ],
     horse_attrib_4, cum_vharcher_wp, cum_vharcher_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
   ["mamluke_light_horse_archer",
     "Mamluk Al-Sighar Al-Amir",
@@ -8708,12 +8680,13 @@ troops = [
 
   ["mercenaries_end","mercenaries_end","mercenaries_end",0,no_scene,reserved,fac_commoners,
    [],
-   def_attrib|level(4),wp(60),knows_common,mercenary_face_1, mercenary_face_2],
+   def_attrib|level(4),wp(60),knows_common,mercenary_face_1, mercenary_face_2
+  ],
 
 
    ###REGIONAL TROOPS
     ###FINNISH - Natives should look somewhat like balts, but with scandinavian infulances.
-    ["finn_village_recruit",
+  ["finn_village_recruit",
      "Maanviljelijä",
      "Maanviljelijää",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -8760,10 +8733,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_archer_recruit",
+  ["finn_archer_recruit",
      "Maanviljelijä",
      "Maanviljelijää",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -8807,10 +8780,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_footman",
+  ["finn_footman",
      "Jalkamies",
      "Jalkamiestä",
         tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -8855,10 +8828,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_skirmisher",
+  ["finn_skirmisher",
      "Kevyt Jousimies Vähemmän",
      "Kevyttä Jousimiestä Vähemmän",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -8902,10 +8875,10 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_jav",
+  ["finn_jav",
      "Kevyt Jousimies",
      "Kevyttä Jousimiestä",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_helmet,
@@ -8948,10 +8921,10 @@ troops = [
     ],
     ranged_attrib_4, thrown_regulars_wp, thrown_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_billman",
+  ["finn_billman",
      "Kirvessoturi",
      "Kirvessotureita",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -8997,10 +8970,10 @@ troops = [
         ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_veteran_billman",
+  ["finn_veteran_billman",
      "Kokenut Kirvessoturi",
      "Kokenutta Kirvessoturia",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -9032,10 +9005,10 @@ troops = [
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_spearman",
+  ["finn_spearman",
      "Keihäsmies",
      "Keihäsmiestä",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -9087,9 +9060,9 @@ troops = [
         ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["finn_veteran_spearman",
+  ["finn_veteran_spearman",
      "Kokenut Keihäsmies",
      "Kokenutta Keihäsmiestä",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
@@ -9132,11 +9105,11 @@ troops = [
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
 
-    ["finn_archer",
+  ["finn_archer",
      "Jousimies",
      "Jousimiestä",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_helmet,
@@ -9168,10 +9141,10 @@ troops = [
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_veteran_archer",
+  ["finn_veteran_archer",
      "Kokenut Jousimies",
      "Kokenutta Jousimiestä",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -9213,10 +9186,10 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
     #nobles
-    ["finn_noble_1",
+  ["finn_noble_1",
      "Metsästäjä",
      "Metsästäjää",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -9268,7 +9241,7 @@ troops = [
         ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
   ["finn_noble_2",
@@ -9336,10 +9309,10 @@ troops = [
         ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_noble_3",
+  ["finn_noble_3",
      "Kaartin Sotilas",
      "Kaartin Sotilasta",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -9409,10 +9382,10 @@ troops = [
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["finn_noble_4",
+  ["finn_noble_4",
      "Kaartin Veteraan",
      "Kaartin Veteraania",
     tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_gloves,
@@ -9454,12 +9427,11 @@ troops = [
     ],
     foot_attrib_elite, swords_sergeant_wp, swords_sergeant_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 ###FINNISH
 
 ###MAZOVIANS - Eastern/Balt(mainly Eastern) mix with some western things on top. Open helmets
-[
-     "mazovian_town_recruit",
+  ["mazovian_town_recruit",
      "Mazowiecki plebejusz",
      "Mazowieccy plebejusze",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -9514,10 +9486,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["mazovian_village_recruit",
+  ["mazovian_village_recruit",
      "Mazowiecki Chłop",
      "Mazowieccy Chłopi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -9573,10 +9545,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["mazovian_archer_1",
+  ["mazovian_archer_1",
      "Mazowiecki łucznik",
      "Mazowieccy łucznicy",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -9627,10 +9599,10 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["mazovian_archer_2",
+  ["mazovian_archer_2",
      "Mazowiecki doświadczony łucznik",
      "Mazowieccy doświadczeni łucznicy",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -9681,10 +9653,9 @@ troops = [
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-[
-     "mazovian_archer_3",
+  ["mazovian_archer_3",
      "Mazowiecki setnik łucznik",
      "Mazowieccy setnicy łucznicy",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -9740,10 +9711,10 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["mazovian_xbow_1",
+  ["mazovian_xbow_1",
      "Mazowiecki kusznik",
      "Mazowieccy kusznicy",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -9800,7 +9771,7 @@ troops = [
     euro_face_3, euro_face_4
     ],
 
-      ["mazovian_xbow_2",
+  ["mazovian_xbow_2",
      "Mazowiecki doświadczony kusznik",
      "Mazowieccy doświadczeni kusznicy",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -9853,13 +9824,13 @@ troops = [
 
     itm_raf_spangen,
     itm_balt_spiked_helmet, #DrTomas revision2
-    ],
+  ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["mazovian_spearman_1",
+  ["mazovian_spearman_1",
      "Mazowiecki włócznik",
      "Mazowieccy włócznicy",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -9921,13 +9892,13 @@ troops = [
     itm_rus_helmet_a,
     itm_rus_helm_a,
     itm_balt_spiked_helmet, #DrTomas revision2
-    ],
+  ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["mazovian_spearman_2",
+  ["mazovian_spearman_2",
      "Mazowiecki doświadczony włócznik",
      "Mazowieccy doświadczeni włócznicy",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -10002,10 +9973,10 @@ troops = [
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["mazovian_spearman_3",
+  ["mazovian_spearman_3",
      "Mazowiecki setnik kusznik",
      "Mazowiecki setnik kusznik",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -10066,240 +10037,7 @@ troops = [
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
-
-  ###### [
-        ###### "mazovian_swordsman_1",
-    ###### "Mazowiecki tarczownik",
-    ###### "Mazowieccy tarczownicy",
-    ###### tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_gambeson_a,
-    ###### itm_gambeson_b,
-    ###### itm_gambeson_c,
-    ###### itm_gambeson_d,
-    ###### itm_rus_militia_padded_a,
-    ###### itm_kau_rus_e,
-    ###### itm_balt_padded_a,
-    ###### itm_balt_padded_b,
-    ###### itm_militia_tunic_a,
-    ###### itm_militia_tunic_b,
-
-
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-    ###### itm_sword_viking_1,
-    ###### itm_sword_viking_2,
-    ###### itm_sword_viking_3,
-
-    ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_lit_pavise_a_3,
-    ###### itm_lit_pavise_b_3,
-    ###### itm_lit_pavise_c_3,
-    ###### itm_lit_pavise_d_3,
-    ###### itm_lit_pavise_h_3,
-    ###### itm_byz_shield_kite,
-
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-
-    ###### itm_polski_helm,
-    ###### itm_rus_helmet_a,
-    ###### itm_rus_helm_a,
-    ###### itm_balt_spiked_helmet, #DrTomas revision2
-        ###### ],
-    ###### foot_attrib_3, footman_wp, footman_skills,
-    ###### euro_face_3, euro_face_4
-    ###### ],
-
-      ###### [
-        ###### "mazovian_swordsman_2",
-    ###### "Mazowiecki doświadczony tarczownik",
-    ###### "Mazowieccy doświadczeni tarczownicy",
-    ###### tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_sword_viking_1,
-    ###### itm_sword_viking_2,
-    ###### itm_sword_viking_3,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-
-    ###### itm_rus_padded,
-    ###### itm_rus_leather_scale,
-    ###### itm_rus_leather_scale_b,
-    ###### itm_gambeson_a,
-    ###### itm_gambeson_b,
-    ###### itm_gambeson_c,
-    ###### itm_gambeson_d,
-    ###### itm_kau_mail_a,
-    ###### itm_kau_mail_b,
-    ###### itm_kau_mail_shirt_d,
-    ###### itm_kau_lit_mail,
-    ###### itm_balt_lamellar_vest_a,
-    ###### itm_balt_lamellar_vest_b,
-    ###### itm_balt_lamellar_vest_c,
-
-
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_lit_pavise_a_3,
-    ###### itm_lit_pavise_b_3,
-    ###### itm_lit_pavise_c_3,
-    ###### itm_lit_pavise_d_3,
-    ###### itm_lit_pavise_h_3,
-    ###### itm_byz_shield_kite,
-
-
-    ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-
-    ###### itm_polski_helm,
-    ###### itm_rus_helmet_a,
-    ###### itm_rus_helm_a,
-    ###### itm_balt_helmet_a,
-    ###### itm_balt_helmet_b,
-    ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### euro_face_3, euro_face_4
-    ###### ],
-
-  ###### [
-        ###### "mazovian_swordsman_3",
-    ###### "Mazowiecki setnik miecznik",
-    ###### "Mazowieccy setnicy tarczownicy",
-        ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_sword_viking_1,
-    ###### itm_sword_viking_2,
-    ###### itm_sword_viking_3,
-    ###### itm_mace_2,
-    ###### itm_mace_3,
-    ###### itm_mace_4,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiia,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiiia,
-    ###### itm_sword_type_xiv,
-
-    ###### itm_lit_pavise_a_3,
-    ###### itm_lit_pavise_b_3,
-    ###### itm_lit_pavise_c_3,
-    ###### itm_surcoat_pol_b,
-    ###### itm_surcoat_czersk,
-    ###### itm_byz_shield_kite,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-    ###### itm_scale_shirt_a,
-    ###### itm_kau_rus_mail_shirt_a,
-    ###### itm_kau_rus_mail_shirt_b,
-    ###### itm_rus_mail_shirt_c,
-    ###### itm_kau_rus_c,
-    ###### itm_kau_mail_a,
-    ###### itm_kau_mail_b,
-    ###### itm_kau_mail_shirt_d,
-    ###### itm_kau_lit_mail,
-    ###### itm_surcoat_lithuania_b,
-    ###### itm_balt_lamellar_vest_a,
-    ###### itm_balt_lamellar_vest_b,
-    ###### itm_balt_lamellar_vest_c,
-
-
-    ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-
-    ###### itm_polski_helm,
-    ###### itm_raf_spangen,
-    ###### itm_rus_helmet_a,
-    ###### itm_rus_helm_a,
-    ###### itm_balt_helmet_a,
-    ###### itm_balt_helmet_b,
-    ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### euro_face_1, euro_face_2
-    ###### ],
+  ],
 
 
   ["mazovian_guisarm_1",
@@ -10340,10 +10078,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["mazovian_guisarm_2",
+  ["mazovian_guisarm_2",
      "Mazowiecki doświadczony topornik",
      "Mazowieccy doświadczeni topornicy",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -10394,10 +10132,10 @@ troops = [
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["mazovian_guisarm_3",
+  ["mazovian_guisarm_3",
      "Mazowiecki setnik topornik",
      "Mazowieccy setnicy topornicy",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -10444,10 +10182,10 @@ troops = [
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["mazovian_horse_1",
+  ["mazovian_horse_1",
      "Mazowiecki lekki kawalerzysta",
      "Mazowieccy lekcy kawalerzyści",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -10506,10 +10244,10 @@ troops = [
         ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["mazovian_horse_2",
+  ["mazovian_horse_2",
      "Mazowiecki jeździec",
      "Mazowieccy jeźdźcy",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -10572,10 +10310,10 @@ troops = [
         ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["mazovian_horse_3",
+  ["mazovian_horse_3",
      "Mazowiecki ubogi rycerz",
      "Mazowieccy ubodzy rycerze",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -10645,10 +10383,10 @@ troops = [
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["mazovian_horse_4",
+  ["mazovian_horse_4",
      "Mazowiecki zamożny rycerz",
      "Mazowieccy zamożni rycerze",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -10712,11 +10450,10 @@ troops = [
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 ###MAZOVIANS
 ###SERBIANS
-[
-     "serbian_vil_recruit",
+  ["serbian_vil_recruit",
      "Sebar",
      "Sebri",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -10753,10 +10490,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_vil_skirmisher",
+  ["serbian_vil_skirmisher",
      "Suličar",
      "Suličari",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -10793,10 +10530,10 @@ troops = [
           ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_vil_archer",
+  ["serbian_vil_archer",
      "Lukonoša",
      "Lukonoše",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -10837,10 +10574,10 @@ troops = [
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_vil_archer_veteran",
+  ["serbian_vil_archer_veteran",
      "Lukonoša Veteran",
      "Lukonoše Veterani",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -10877,10 +10614,10 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_vil_footman",
+  ["serbian_vil_footman",
      "Sebar Pešak",
      "Sebri Pešaci",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -10922,10 +10659,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_vil_axeman",
+  ["serbian_vil_axeman",
      "Sekiraš",
      "Sekiraši",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -10952,7 +10689,7 @@ troops = [
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
    [
     "serbian_vil_axeman_veteran",
@@ -10979,10 +10716,10 @@ troops = [
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_vil_spearman",
+  ["serbian_vil_spearman",
      "Kopljanik",
      "Kopljanici",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -11018,10 +10755,10 @@ troops = [
         ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_vil_spearman_veteran",
+  ["serbian_vil_spearman_veteran",
      "Kopljanik Veteran",
      "Kopljanici Veterani",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -11061,10 +10798,10 @@ troops = [
         ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_town_recruit",
+  ["serbian_town_recruit",
      "Vojnik",
      "Vojnici",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -11114,158 +10851,9 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ###### [
-        ###### "serbian_town_swordsman",
-    ###### "Pešadinac",
-    ###### "Pešadinci",
-    ###### tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_8,
-    ###### [
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### itm_javelin,
-
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-      ###### ##### itm_sword_khergit_1,
-      ###### ##### itm_sword_khergit_2,
-      ###### ##### itm_sword_khergit_3,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_mace_2,
-    ###### itm_falchion,
-
-    ###### itm_balt_helmet_b,
-    ###### itm_byz_helmet_a,
-    ###### itm_byz_kataphrakt,
-
-
-    ###### itm_kau_rus_d,
-    ###### itm_rus_militia_padded_a,
-    ###### itm_kau_rus_mail_shirt_b,
-
-
-    ###### itm_byz_boots_a,
-    ###### itm_byz_boots_b,
-    ###### itm_byz_boots_c,
-    ###### itm_rus_boots_b,
-    ###### itm_rus_boots_a,
-    ###### itm_leather_fur_boots,
-    ###### itm_tied_up_shoes,
-
-
-    ###### itm_tab_shield_round_d,
-    ###### itm_byz_shield_kite,
-    ###### ],
-    ###### foot_attrib_3, footman_wp, footman_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
-
-  ###### [
-    ###### "serbian_town_swordsman_veteran",
-    ###### "Pešadinac Veteran",
-    ###### "Pešadinci Veterani",
-    ###### tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
-    ###### 0, 0, fac_kingdom_8,
-    ###### [
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### itm_javelin,
-
-    ###### itm_surcoat_g,
-    ###### itm_man_at_arms_c,
-    ###### itm_man_at_arms_b,
-    ###### itm_man_at_arms_a,
-
-    ###### itm_kau_mail_a,
-    ###### itm_kau_mail_b,
-
-    ###### itm_byz_boots_a,
-    ###### itm_byz_boots_b,
-    ###### itm_byz_boots_c,
-    ###### itm_rus_boots_b,
-    ###### itm_rus_boots_a,
-    ###### itm_leather_fur_boots,
-    ###### itm_tied_up_shoes,
-
-     ###### itm_balt_helmet_b,
-    ###### itm_byz_helmet_a,
-
-
-    ###### itm_tab_shield_round_c,
-    ###### itm_byz_shield_kite,
-
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_raf_one_handed_axe_f,
-    ###### itm_falchion,
-    ###### itm_sword_type_xii,
-      ###### ###### itm_sword_khergit_1,
-      ###### ###### itm_sword_khergit_2,
-      ###### ],
-    ###### foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
-
-  ###### [
-        ###### "serbian_town_swordsman_sergeant",
-    ###### "Vlasteličić Pešak",
-    ###### "Vlastelica Pešaci",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
-    ###### 0, 0, fac_kingdom_8,
-    ###### [
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### itm_javelin,
-
-    ###### itm_byz_boots_a,
-    ###### itm_byz_boots_b,
-
-
-    ###### itm_balt_helmet_b,
-    ###### itm_byz_helmet_a,
-
-
-    ###### itm_mail_mittens,
-
-    ###### itm_rus_leather_scale,
-
-    ###### itm_rus_leather_scale_b,
-
-    ###### itm_tab_shield_round_d,
-    ###### itm_byz_shield_kite,
-
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_raf_one_handed_axe_f,
-    ###### itm_falchion,
-    ###### itm_sword_type_xii,
-      ###### ###### itm_sword_khergit_1,
-      ###### ###### itm_sword_khergit_2,
-     ###### ],
-    ###### foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
-
-    ["serbian_town_skirmisher",
+  ["serbian_town_skirmisher",
      "Strelac",
      "Strelci",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -11316,10 +10904,10 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_town_archer",
+  ["serbian_town_archer",
      "Majstor Strelac",
      "Majstori Strelci",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -11355,10 +10943,10 @@ troops = [
       ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_town_archer_veteran",
+  ["serbian_town_archer_veteran",
      "Vlasteličić Strelac",
      "Vlastelica Strelci",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -11389,10 +10977,10 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_horse_1",
+  ["serbian_horse_1",
      "Štitonoša",
      "Štitonoše",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -11448,10 +11036,10 @@ troops = [
     ],
     horse_attrib_2, nbl_skirmisher_wp, nbl_skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_horse_2",
+  ["serbian_horse_2",
      "Vitez",
      "Vitezi",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -11496,10 +11084,10 @@ troops = [
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_horse_3",
+  ["serbian_horse_3",
      "Vlastelin",
      "Vlastela",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -11543,10 +11131,10 @@ troops = [
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["serbian_horse_4",
+  ["serbian_horse_4",
      "Stegonoša",
      "Stegonoše",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -11601,11 +11189,11 @@ troops = [
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 ###SERBIANS
 ###Welsh
-    ["welsh_recruit",
+  ["welsh_recruit",
      "Cymry Mab",
      "Cymry Mab",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -11645,10 +11233,9 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-[
-     "welsh_archer_recruit",
+  ["welsh_archer_recruit",
      "Cymry Mab(range)",
      "Cymry Mab(range)",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -11688,10 +11275,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["welsh_archer_1",
+  ["welsh_archer_1",
      "Cymry Gwr Sagittarius",
      "Cymry Gwr Sagittarii",
     tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_boots,
@@ -11726,10 +11313,10 @@ troops = [
     ],
     ranged_attrib_3, archer_veteran_wp, archer_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["welsh_archer_2",
+  ["welsh_archer_2",
      "Cymry Plaid Sagittarius",
      "Cymry Plaid Sagittarii",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_boots,
@@ -11760,10 +11347,10 @@ troops = [
     ],
     ranged_attrib_5, welsh_archer_wp, welsh_archer_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["welsh_spearman_1",
+  ["welsh_spearman_1",
      "Cymry Gwr Hastatus",
      "Cymry Gwr Hastati",
     tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_boots,
@@ -11821,10 +11408,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["welsh_spearman_2",
+  ["welsh_spearman_2",
      "Cymry Plaid Hastatus",
      "Cymry Plaid Hastati",
     tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_boots,
@@ -11871,8 +11458,7 @@ troops = [
     euro_face_3, euro_face_4
     ],
 
- [
-     "welsh_horse_1",
+  ["welsh_horse_1",
      "Cymry Servio",
      "Cymry Servimus",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_boots,
@@ -11916,10 +11502,10 @@ troops = [
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["welsh_horse_2",
+  ["welsh_horse_2",
      "Cymry Plaid Eques",
      "Cymry Plaid Equites",
     tf_mounted | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_armor |  tf_guarantee_horse | tf_guarantee_boots,
@@ -11978,10 +11564,10 @@ troops = [
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["welsh_horse_3",
+  ["welsh_horse_3",
      "Cymry Uchelwyr",
      "Cymry Uchelwyr",
     tf_mounted |tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
@@ -12059,10 +11645,10 @@ troops = [
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["welsh_horse_4",
+  ["welsh_horse_4",
      "Cymry Teulu",
      "Cymry Teulu",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -12163,7 +11749,7 @@ troops = [
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 ###Welsh
 
@@ -12217,10 +11803,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_balt_1",
+  ["teu_balt_1",
      "Gintus",
      "Gintus",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -12266,10 +11852,10 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_balt_2",
+  ["teu_balt_2",
      "Kareusnikis",
      "Kareusniku",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_helmet,
@@ -12316,10 +11902,10 @@ troops = [
     ],
     ranged_attrib_4, thrown_regulars_wp, thrown_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_balt_3",
+  ["teu_balt_3",
      "Turkopol",
      "Turkopolen",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -12367,7 +11953,7 @@ troops = [
         ],
     horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ["teu_balt_4",
      "Veteran Teutonic Turcopole",
@@ -12431,10 +12017,10 @@ troops = [
         ],
     horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_ger_1",
+  ["teu_ger_1",
      "Deutscher Siedler",
      "Deutsche Siedler",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -12497,10 +12083,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_ger_2_1",
+  ["teu_ger_2_1",
      "Deutschordens-Guisarmier",
      "Deutschordens-Guisarmiere",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -12558,165 +12144,9 @@ troops = [
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-  ###### [
-        ###### "teu_ger_2_2",
-    ###### "Deutschordens-Sergent",
-    ###### "Deutschordens-Sergenten",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-
-    ###### itm_teu_hbrother_mail,
-    ###### itm_teu_sergeant,
-
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-      ###### ##### itm_teutonic_heater_shield,
-
-    ###### itm_teu_kettle_hat_a_mail,
-    ###### itm_teu_kettle_hat_b,
-    ###### itm_liv_sergeant,
-
-
-    ###### itm_mail_coif,
-
-
-    ###### itm_elm2,
-
-
-    ###### itm_elm3,
-    ###### itm_elm8,
-
-
-    ###### itm_priest_cap_2,
-    ###### itm_elm1,
-    ###### itm_flat_kettle_hat,
-
-    ###### itm_kettlehat_b,
-    ###### itm_arming_cap,
-    ###### itm_kolpak_mail,
-    ###### itm_rhodok_nasal_helmet_a,
-    ###### itm_rhodok_kettle_hat_c,
-    ###### itm_rhodok_four_plated_helmet,
-     ###### itm_norman_faceplate,
-
-    ###### itm_leather_gloves,
-    ###### itm_mail_mittens,
-
-    ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_morningstar,
-    ###### itm_military_hammer,
-    ###### itm_mace_2,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_sword_type_xiii,
-
-    ###### itm_military_cleaver_b,
-    ###### itm_military_cleaver_c,
-
-     ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-
-
-        ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### #foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
-
-  ###### [
-        ###### "teu_ger_3_2",
-    ###### "Deutschordens-Sariantbruder zu Fuß",
-    ###### "Deutschordens-Sariantbrüder zu Fuß",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-
-    ###### itm_teu_hbrother_b,
-
-
-    ###### itm_teu_kettle_hat_a_mail,
-    ###### itm_teu_kettle_hat_b,
-      ###### ###### itm_priest_cap_1,
-    ###### itm_mail_coif,
-    ###### itm_great_helmet_d,
-    ###### itm_elm1,
-    ###### itm_elm2,
-    ###### itm_great_helmet_decorative,
-    ###### itm_norman_coif_d,
-      ###### ###### itm_kettle_cloth,
-    ###### itm_elm3,
-    ###### itm_elm8,
-    ###### itm_maciejowski_kettle_hat_b,
-    ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_norman_faceplate,
-      ###### ###### itm_priest_cap_2,
-    ###### itm_norman_coif_a,
-    ###### itm_vik_spangen_a,
-    ###### itm_norman_coif_e,
-    ###### itm_kettlehat_b,
-    ###### itm_arming_cap,
-    ###### itm_flat_topped_helmet_b,
-    ###### itm_rhodok_nasal_helmet_a,
-    ###### itm_rhodok_kettle_hat_c,
-    ###### itm_rhodok_four_plated_helmet,
-
-    ###### itm_morningstar,
-    ###### itm_talak_warhammer,
-    ###### itm_talak_bastard_sword,
-    ###### itm_mace_4,
-    ###### itm_raf_one_handed_axe_h,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_sword_type_xiii,
-
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-
-    ###### itm_leather_boots,
-
-    ###### itm_kettle_cloth_cape_b,
-    ###### itm_kettle_cloth_cape,
-
-    ###### itm_tab_shield_heater_c,
-      ###### ##### itm_teutonic_heater_shield,
-
-     ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-    ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
-
-    ["teu_town_1",
+  ["teu_town_1",
      "Deutscher Heerbann-Fußsoldat",
      "Deutsche Heerbann-Fußsoldaten",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -12776,10 +12206,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_town_2_1",
+  ["teu_town_2_1",
      "Deutscher Bürger-Speerträger",
      "Deutsche Bürger-Speeträger",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -12844,10 +12274,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_town_3_1",
+  ["teu_town_3_1",
      "Deutschordens-Speerträger",
      "Deutschordens-Speerträger",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -12942,10 +12372,10 @@ troops = [
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_town_4_1",
+  ["teu_town_4_1",
      "Deutschordens-Speerträger-Veteran",
      "Deutschordens-Speerträger-Veteranen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -13026,10 +12456,10 @@ troops = [
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_town_2_2",
+  ["teu_town_2_2",
      "Deutscher Bürger-Armbrustschütze",
      "Deutsche Bürger-Armbrustschützen",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -13090,9 +12520,9 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-      ["teu_town_3_2",
+  ["teu_town_3_2",
      "Deutschordens-Armbrustschütze",
      "Deutschordens-Armbrustschützen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -13189,10 +12619,10 @@ troops = [
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_town_4_2",
+  ["teu_town_4_2",
      "Deutschordens-Armbrustschützen-Veteran",
      "Deutschordens-Armbrustschützen-Veteranen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -13265,10 +12695,10 @@ troops = [
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_horse_1",
+  ["teu_horse_1",
      "Deutschordens-Knecht",
      "Deutschordens-Knechte",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
@@ -13325,10 +12755,10 @@ troops = [
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_horse_2",
+  ["teu_horse_2",
      "Deutschordens-Sergent zu Pferd",
      "Deutschordens-Sergenten zu Pferd",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -13377,10 +12807,10 @@ troops = [
     ],
     horse_attrib_3, nbl_mcv_wp, nbl_mcv_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_horse_3",
+  ["teu_horse_3",
      "Deutschordens-Halbbruder",
      "Deutschordens-Halbbrüder",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -13453,10 +12883,10 @@ troops = [
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_horse_4",
+  ["teu_horse_4",
      "Deutschordens-Ritterbruder",
      "Deutschordens-Ritterbrüder",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -13556,10 +12986,10 @@ troops = [
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 ####################################### NEW v1.8 - VETERAN KNIGHTS
-    ["teu_horse_5",
+  ["teu_horse_5",
      "Veteran Teutonic Knight",
      "Veteran Teutonic Knight",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -13612,11 +13042,11 @@ troops = [
     ],
     horse_attrib_elite_veteran, nbl_knight_veteran_wp, nbl_knight_veteran_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 ####################################################################
 
 
-    ["teu_horse_3_dismounted",
+  ["teu_horse_3_dismounted",
      "Dismounted Teutonic Half-Brother",
      "Dismounted Teutonic Half-Brothers",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -13684,10 +13114,10 @@ troops = [
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["teu_horse_4_dismounted",
+  ["teu_horse_4_dismounted",
      "Dismounted Teutonic Knight",
      "Dismounted Teutonic Knights",
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -13782,11 +13212,11 @@ troops = [
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
   #####################
 
 
-    ["balkan_vil_1",
+  ["balkan_vil_1",
      "Selyanin",
      "Selyani",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -13824,10 +13254,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_vil_2_1",
+  ["balkan_vil_2_1",
      "Dubravnij Strelets",
      "Dubravnije Streltsi",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -13865,10 +13295,10 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_vil_3_1",
+  ["balkan_vil_3_1",
      "Naimnij Strelets",
      "Naimnije Streltsi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -13916,10 +13346,10 @@ troops = [
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_vil_4_1",
+  ["balkan_vil_4_1",
      "Opitnij Naimnij Strelets",
      "Opitnije Naimnije Streltsi",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -13960,10 +13390,10 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_vil_2_2",
+  ["balkan_vil_2_2",
      "Dubravnij Peshak",
      "Dubravnije Peshatsi",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -14012,10 +13442,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_vil_3_2_1",
+  ["balkan_vil_3_2_1",
      "Naimnij Sekironosets",
      "Naimnije Sekironostsi",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -14055,7 +13485,7 @@ troops = [
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ###### [
         ###### "balkan_vil_3_2_2",
@@ -14173,8 +13603,7 @@ troops = [
     ###### nord_face_young_1, swadian_face_old_2
     ###### ],
 
-   [
-     "balkan_vil_3_1_1",
+    ["balkan_vil_3_1_1",
      "Akrit",
      "Akriti",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -14229,10 +13658,9 @@ troops = [
     ],
     ranged_attrib_4, thrown_regulars_wp, thrown_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "balkan_vil_4_1_1",
+    ["balkan_vil_4_1_1",
      "Opitnij Akrit",
      "Opitnije Akriti",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -14278,10 +13706,10 @@ troops = [
     ],
     ranged_attrib_5, thrown_veteran_wp, thrown_veteran_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["balkan_town_1",
+  ["balkan_town_1",
      "Grazhdanin",
      "Grazhdanije",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -14331,10 +13759,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_town_2_1",
+  ["balkan_town_2_1",
      "Gradski Koppijnik",
      "Gradskije Kopijniki",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -14382,10 +13810,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_town_3_1",
+  ["balkan_town_3_1",
      "Gradskij Opitnij Kopijnik",
      "Gradskije Opitnije Kopijniki",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -14430,10 +13858,10 @@ troops = [
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_town_4_1",
+  ["balkan_town_4_1",
      "Shtitonosets Kopijnik",
      "Shtitonosetsi Kopijniki",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -14479,10 +13907,10 @@ troops = [
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_town_2_2",
+  ["balkan_town_2_2",
      "Gradskij Strelets",
      "Gradskije Streletsi",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_shield,
@@ -14535,10 +13963,10 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_town_3_2",
+  ["balkan_town_3_2",
      "Opitnij Gradskij Strelets",
      "Opitnije Gradskije Streltsi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -14573,10 +14001,10 @@ troops = [
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_town_4_2",
+  ["balkan_town_4_2",
      "Shtitonosets Strelets",
      "Shtitonostsi Streltsi",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -14623,10 +14051,10 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_horse_1",
+  ["balkan_horse_1",
      "Konnij Voiskar",
      "Konnije Voiskare",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -14685,10 +14113,10 @@ troops = [
     ],
     horse_attrib_2, nbl_skirmisher_wp, nbl_skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_horse_2",
+  ["balkan_horse_2",
      "Oklopnik",
      "Oklopniki",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -14737,10 +14165,10 @@ troops = [
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_horse_3",
+  ["balkan_horse_3",
      "Vitez",
      "Vitezi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -14799,10 +14227,10 @@ troops = [
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balkan_horse_4",
+  ["balkan_horse_4",
      "Bolyar",
      "Bolyare",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -14865,14 +14293,14 @@ troops = [
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ####################################
   #
   ######         Eastern begins
   #
     ###### Eastern troops
-    ["rus_vil_1",
+  ["rus_vil_1",
      "Smerd",
      "Smerdy",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet ,
@@ -14917,10 +14345,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_vil_2_1",
+  ["rus_vil_2_1",
      "Kmet",
      "Kmeti",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -14955,10 +14383,10 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_vil_3_1",
+  ["rus_vil_3_1",
      "Oruyeborets",
      "Oruyebortsi",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -14992,10 +14420,10 @@ troops = [
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_vil_4_1",
+  ["rus_vil_4_1",
      "Stariy Oruyeborets",
      "Stariye Oruyebortsi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -15025,10 +14453,10 @@ troops = [
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_vil_2_2",
+  ["rus_vil_2_2",
      "Okhotnik",
      "Okhotniki",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -15072,10 +14500,10 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_middle_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_vil_3_2",
+  ["rus_vil_3_2",
      "Luchnik",
      "Luchniki",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -15116,10 +14544,10 @@ troops = [
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_vil_4_2",
+  ["rus_vil_4_2",
      "Zastrelshik",
      "Zastrelshiki",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -15168,10 +14596,10 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_town_1",
+  ["rus_town_1",
      "Opolchenets",
      "Opolchentsi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -15219,10 +14647,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_town_2",
+  ["rus_town_2",
      "Peshets",
      "Peshtsi",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -15272,119 +14700,7 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
-
-  ###### [
-        ###### "rus_town_3_1",
-    ###### "Ratnik",
-    ###### "Ratniki",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    ###### 0, 0, fac_kingdom_8,
-    ###### [
-    ###### itm_rus_infantry_helmet,
-    ###### itm_rus_militia_helmet,
-    ###### itm_rus_helm_a,
-    ###### itm_rus_helmet_a,
-    ###### itm_rus_helmet_b,
-      ###### ##### itm_vik_norman_helmet_c,
-      ###### ##### itm_vik_norman_helmet_a,
-
-    ###### itm_sword_viking_1,
-    ###### itm_sword_viking_2,
-    ###### itm_sword_viking_3,
-    ###### itm_sword_viking_1,
-    ###### itm_sword_viking_2,
-    ###### itm_sword_viking_3,
-    ###### itm_raf_one_handed_axe_h,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-
-      ###### itm_kau_rus_a,
-     ###### itm_kau_rus_mail_shirt_a,
-     ###### itm_kau_rus_d,
-
-     ###### itm_rus_mail_shirt_c,
-     ###### itm_rus_militia_padded_a,
-
-    ###### itm_rus_shield_a_3,
-    ###### itm_rus_shield_b_3,
-    ###### itm_rus_shield_c_3,
-    ###### itm_rus_shield_d_3,
-    ###### itm_byz_shield_kite,
-      ###### ##### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_round_c,
-
-    ###### itm_rus_boots_b,
-    ###### itm_lapcie,
-    ###### itm_rus_boots_a,
-    ###### itm_leather_fur_boots,
-    ###### itm_tied_up_shoes,
-
-
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-    ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### nord_face_young_1, vaegir_face_young_2
-    ###### ],
-
-  ###### [
-        ###### "rus_town_4_1",
-    ###### "Voin",
-    ###### "Voini",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
-    ###### 0, 0, fac_kingdom_8,
-    ###### [
-
-    ###### itm_rus_leather_scale_b,
-     ###### itm_rus_padded,
-     ###### itm_surcoat_novgorod,
-     ###### itm_scale_shirt_a,
-
-    ###### itm_rus_helmet_1,
-    ###### itm_rus_helmet_2,
-
-    ###### itm_byz_yoman_c,
-    ###### itm_rus_helmet_b,
-    ###### itm_rus_helmet_a,
-
-    ###### itm_sword_viking_1,
-    ###### itm_sword_viking_2,
-    ###### itm_sword_viking_3,
-    ###### itm_mace_2,
-    ###### itm_mace_3,
-    ###### itm_mace_4,
-    ###### itm_raf_one_handed_axe_h,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-
-    ###### itm_rus_shield_a_3,
-    ###### itm_rus_shield_b_3,
-    ###### itm_rus_shield_c_3,
-    ###### itm_rus_shield_d_3,
-    ###### itm_byz_shield_kite,
-      ###### ##### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_round_d,
-
-    ###### itm_rus_boots_b,
-    ###### itm_lapcie,
-    ###### itm_rus_boots_a,
-    ###### itm_leather_fur_boots,
-    ###### itm_tied_up_shoes,
-
-        ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### nord_face_young_1, vaegir_face_young_2
-    ###### ],
+  ],
 
   ["rus_town_3_2",
      "Kopienosets",
@@ -15436,10 +14752,10 @@ troops = [
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, vaegir_face_young_2
-    ],
+  ],
 
 
-    ["rus_town_4_2",
+  ["rus_town_4_2",
      "Pantsirniy_Kopienosets",
      "Pantsirniye_Kopienostsi",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -15493,7 +14809,7 @@ troops = [
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, vaegir_face_young_2
-    ],
+  ],
 
 
   ["rus_horse_1",
@@ -15543,10 +14859,10 @@ troops = [
     ],
     horse_attrib_2, cum_tribesman_wp, cum_tribesman_skills,
     nord_face_young_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_horse_2",
+  ["rus_horse_2",
      "Otrok",
      "Otroki",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -15600,10 +14916,10 @@ troops = [
     ],
     horse_attrib_3, nbl_mcv_wp, nbl_mcv_skills,
     nord_face_middle_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_horse_3",
+  ["rus_horse_3",
      "Druzhinnik",
      "Druzhinniki",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -15668,10 +14984,10 @@ troops = [
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_middle_1, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["rus_horse_4",
+  ["rus_horse_4",
      "Boyarin",
      "Boyariye",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -15757,7 +15073,7 @@ troops = [
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     nord_face_middle_1, vaegir_face_older_2
-    ],
+  ],
 
   ####################################
   #
@@ -15765,7 +15081,7 @@ troops = [
   #
 
     ###### Nordic troops
-    ["nordic_village_recruit",
+  ["nordic_village_recruit",
      "H"+u_kreska+"skarl",
      "H"+u_kreska+"skarlar",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_shield,
@@ -15842,10 +15158,10 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_town_recruit",
+  ["nordic_town_recruit",
      "B"+y_kreska+"jarma"+eth+"ur",
      "B"+y_kreska+"jarmenn",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_shield,
@@ -15906,195 +15222,7 @@ troops = [
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
-
-
-  ###### ---------------------- Nordic footmen -------------------------#
-    ###### [
-        ###### "nordic_town_footman",
-    ###### "Herma" + eth + "ur",
-    ###### "Hermenn",
-    ###### tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_mace_2,
-    ###### itm_mace_1,
-    ###### itm_military_fork,
-    ###### itm_military_scythe,
-    ###### itm_military_hammer,
-    ###### itm_raf_two_handed_axe_a,
-    ###### itm_raf_one_handed_axe_g,
-
-    ###### itm_sword_type_xiv,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xii,
-
-    ###### itm_flat_kettle_hat,
-    ###### itm_kettle_cloth,
-    ###### itm_kettle_cloth_cape_b,
-    ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-
-    ###### itm_surcoat_a,
-    ###### itm_surcoat_b,
-    ###### itm_surcoat_c,
-    ###### itm_surcoat_d,
-    ###### itm_surcoat_e,
-    ###### itm_surcoat_f,
-    ###### itm_surcoat_g,
-
-     ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-     ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_norman_coif_d,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_gaelic_shield_c,
-    ###### itm_gaelic_shield_b,
-    ###### itm_gaelic_shield_a,
-    ###### ],
-    ###### foot_attrib_2, footman_wp, footman_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
-
-  ###### ###### ---------------------- Nordic swordsmen -------------------------#
-    ###### [
-        ###### "nordic_swordsman",
-    ###### thorn +"aulreyndur Herma" + eth + "ur",
-    ###### thorn +"aulreyndur Hermenn",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-
-    ###### itm_kau_mail_a,
-    ###### itm_kau_mail_b,
-    ###### itm_studden_leather_armour_a,
-
-
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-    ###### itm_leather_fur_boots,
-
-    ###### itm_kettle_cloth,
-    ###### itm_kettle_cloth_cape_b,
-    ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-
-    ###### itm_mail_coif,
-
-    ###### itm_leather_gloves,
-    ###### itm_mail_mittens,
-
-    ###### itm_morningstar,
-    ###### itm_military_hammer,
-    ###### itm_mace_2,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_sword_type_xiii,
-
-     ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_norman_coif_d,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_gaelic_shield_c,
-    ###### itm_gaelic_shield_b,
-    ###### itm_gaelic_shield_a,
-    ###### ],
-    ###### foot_attrib_3, swords_regulars_wp, swords_regulars_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
-
-  ###### [
-        ###### "nordic_veteran_swordsman",
-    ###### "Brynvarinn Herma" + eth + "ur",
-    ###### "Brynvarinn Hermenn",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_veteran_surcoat_a,
-    ###### itm_veteran_surcoat_b,
-    ###### itm_veteran_surcoat_c,
-    ###### itm_veteran_surcoat_d,
-    ###### itm_veteran_surcoat_e,
-
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-    ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-    ###### itm_kettlehat_a,
-    ###### itm_kettlehat_b,
-
-    ###### itm_leather_gloves,
-    ###### itm_mail_mittens,
-
-
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-    ###### itm_leather_fur_boots,
-
-    ###### itm_morningstar,
-    ###### itm_military_hammer,
-    ###### itm_mace_4,
-    ###### itm_raf_one_handed_axe_h,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_sword_type_xiii,
-
-     ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_norman_coif_d,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-
-        ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### nord_face_young_1, swadian_face_old_2
-    ###### ],
+  ],
 
   ["nordic_swords_sergeant",
      "Hir"+eth+"ma"+eth+"ur",
@@ -16148,10 +15276,10 @@ troops = [
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ###### ---------------------- Nordic pikemen -------------------------#
-    ["nordic_billman",
+  ["nordic_billman",
      "Gestur",
      "Gestir",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -16186,10 +15314,10 @@ troops = [
     ],
     foot_attrib_3, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_veteran_billman",
+  ["nordic_veteran_billman",
     thorn + "aulreyndur Gestur",
     thorn + "aulreyndur Gestir",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -16229,10 +15357,10 @@ troops = [
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_bills_sergeant",
+  ["nordic_bills_sergeant",
      "Brynvarinn Gestur",
      "Brynvarinn Gestir",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -16261,10 +15389,10 @@ troops = [
         ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_spearman",
+  ["nordic_spearman",
      "Lei"+ eth + "angsma" + eth + "ur",
      "Lei"+ eth + "angsmenn",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -16307,7 +15435,7 @@ troops = [
     itm_spear_m,
     itm_spear_n,
     itm_spear_o,
-itm_spear_p,
+    itm_spear_p,
 
     itm_raf_two_handed_axe_a,
     itm_raf_one_handed_axe_g,
@@ -16318,10 +15446,10 @@ itm_spear_p,
     ],
     foot_attrib_3, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_veteran_spearman",
+  ["nordic_veteran_spearman",
     thorn + "aulreyndur Lei"+ eth + "angsma" + eth + "ur",
     thorn + "aulreyndur Lei"+ eth + "angsmenn",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -16376,10 +15504,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_spears_sergeant",
+  ["nordic_spears_sergeant",
      "Brynvarinn Lei"+ eth + "angsma" + eth + "ur",
      "Brynvarinn Lei"+ eth + "angsmenn",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -16424,10 +15552,10 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ###### ---------------------- Nordic crossbowmen -------------------------#
-    ["nordic_crossbowman",
+  ["nordic_crossbowman",
      "Lasbogama"+eth+"ur",
      "Lasbogamenn",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_helmet,
@@ -16475,9 +15603,9 @@ itm_spear_p,
     ],
     ranged_attrib_3, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-      ["nordic_veteran_crossbowman",
+  ["nordic_veteran_crossbowman",
     thorn+"aulreyndur Lasbogama"+eth+"ur",
     thorn+"aulreyndur Lasbogamenn",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -16537,10 +15665,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_crossbows_sergeant",
+  ["nordic_crossbows_sergeant",
      "Brynvarinn Lasbogama"+eth+"ur",
      "Brynvarinn Lasbogamenn",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -16590,10 +15718,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_veteran_archer",
+  ["nordic_veteran_archer",
     thorn+"aulreyndur Bogama"+eth+"ur",
     thorn+"aulreyndur Bogamenn",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -16632,10 +15760,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_bows_sergeant",
+  ["nordic_bows_sergeant",
      "Brynvarinn Bogama"+eth+"ur",
      "Brynvarinn Bogamenn",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -16669,10 +15797,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_light_cavalry",
+  ["nordic_light_cavalry",
      "Kon"+u_kreska+"ngsma"+eth+"ur",
      "Kon"+u_kreska+"ngsmenn",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -16719,10 +15847,10 @@ itm_spear_p,
         ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_medium_cavalry",
+  ["nordic_medium_cavalry",
      "Kertilsveinn",
      "Kertilsveinr",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -16762,10 +15890,10 @@ itm_spear_p,
         ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_squire",
+  ["nordic_squire",
      "Sk"+u_kreska+"tilsveinn",
      "Sk"+u_kreska+"tilsveinr",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -16855,10 +15983,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["nordic_knight",
+  ["nordic_knight",
      "Lendur Ma"+eth+"ur",
      "Lendir Menn",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -16980,7 +16108,7 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ####################################
   #
@@ -16988,7 +16116,7 @@ itm_spear_p,
   #
 
     ###### Balt troops
-    ["balt_recruit",
+  ["balt_recruit",
      "Kaimynas",
      "Kaimynai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -17053,10 +16181,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_recruit_range",
+  ["balt_recruit_range",
      "Kaimynas Asktininkas",
      "Kaimynai Akstininkai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -17118,10 +16246,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_footman",
+  ["balt_footman",
      "Pėstininkas",
      "Pėstininkai",
         tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -17186,12 +16314,12 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
 
   ###### ---------------------- Generic skirmishers -------------------------#
-    ["balt_skirmisher",
+  ["balt_skirmisher",
     S_caron + "aulys",
     S_caron + "iauliai",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -17241,10 +16369,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_billman",
+  ["balt_billman",
      "Kirvininkas",
      "Kirvininkai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -17284,10 +16412,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_veteran_billman",
+  ["balt_veteran_billman",
      "Kirvininkas Veteranas",
      "Kirvininkai Veteranai",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -17321,10 +16449,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_spearman",
+  ["balt_spearman",
      "Ietininkas",
      "Ietininkai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -17389,10 +16517,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_veteran_spearman",
+  ["balt_veteran_spearman",
      "Ietininkas Veteranas",
      "Veteranai Ietininkai",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
@@ -17463,10 +16591,10 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ###### ---------------------- Generic archers -------------------------#
-    ["balt_archer",
+  ["balt_archer",
      "Lankininkas",
      "Lankininkai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_helmet,
@@ -17502,10 +16630,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_veteran_archer",
+  ["balt_veteran_archer",
      "Lankininkas Veteranas",
      "Veteranai Lankininkai",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -17549,10 +16677,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_jav",
+  ["balt_jav",
      "Akstininkas ",
      "Akstininkai",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_helmet,
@@ -17606,10 +16734,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, thrown_regulars_wp, thrown_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_veteran_jav",
+  ["balt_veteran_jav",
      "Akstininkas Veteranas",
      "Akstininkai Veteranai",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -17654,10 +16782,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, thrown_veteran_wp, thrown_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ###### ---------------------- Generic nobles -------------------------#
-    ["balt_noble_recruit",
+  ["balt_noble_recruit",
      "Mažasis Bajoras",
      "Mažieji Bajorai",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -17720,10 +16848,10 @@ itm_spear_p,
         ],
     foot_attrib_3, footman_wp, footman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_mounted_skirmisher",
+  ["balt_mounted_skirmisher",
      "Raitas Bajoras",
      "Raiti Bajorai",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -17781,10 +16909,10 @@ itm_spear_p,
     cav_thrower_2_wp,
     cav_thrower_2_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_light_cavalry",
+  ["balt_light_cavalry",
      "Raitas Didysis Bajoras",
      "Raiti Didieji Bajorai",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -17842,10 +16970,10 @@ itm_spear_p,
     cav_thrower_3_wp,
     cav_thrower_3_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_medium_cavalry",
+  ["balt_medium_cavalry",
      "Raitas Didžiūnas",
      "Raiti Didžiūnai",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged,
@@ -17904,10 +17032,10 @@ itm_spear_p,
     cav_thrower_4_wp,
     cav_thrower_4_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_noble_1",
+  ["balt_noble_1",
      "Bajoras",
      "Bajorai",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -17977,10 +17105,10 @@ itm_spear_p,
     ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_noble_2",
+  ["balt_noble_2",
      "Didysis Bajoras",
      "Didieji Bajorai",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -18053,10 +17181,10 @@ itm_spear_p,
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["balt_noble_3",
+  ["balt_noble_3",
      "Didžiūnas",
      "Didžiūnai",
     tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_gloves,
@@ -18110,10 +17238,10 @@ itm_spear_p,
     ],
     foot_attrib_elite, swords_sergeant_wp, swords_sergeant_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["marinid_village_rabble",
+  ["marinid_village_rabble",
     "Awamm Al-Magrib Al-Dehat",
     "Awamm Al-Magrib Al-Dehat",
     tf_guarantee_boots|tf_guarantee_armor,
@@ -19176,7 +18304,7 @@ itm_spear_p,
     arab_face_2, berber_face_2
   ],
 
-    ["bedouin_javelin_1",
+  ["bedouin_javelin_1",
      "Bedouin Warrior",
      "Bedouin Warriors",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
@@ -19239,7 +18367,7 @@ itm_spear_p,
     arab_face_3, berber_face_3
     ],
 
-    ["bedouin_javelin_2",
+  ["bedouin_javelin_2",
     "Bedouin Veteran Warrior",
     "Bedouin Veteran Warriors",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_guarantee_shield|tf_guarantee_helmet,
@@ -19365,7 +18493,7 @@ itm_spear_p,
     arab_face_1, arab_face_2
   ],
 
-   ["bedouin_cavalry_2",
+  ["bedouin_cavalry_2",
     "Bedouin Cavalry",
     "Bedouin Cavalry",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet|tf_guarantee_ranged,
@@ -19732,7 +18860,7 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_veteran_wp, pikes_veteran_skills,
     arab_face_1, berber_face_2
-    ],
+  ],
 
   ["halqa_guisarmer_2",
     "Halqa Veteran Infantryman",
@@ -19949,7 +19077,7 @@ itm_spear_p,
     arab_face_2, arab_face_3
   ],
 
-   ["halqa_cavalry_3",
+  ["halqa_cavalry_3",
     "Halqa Professional Cavalry",
     "Halqa Professional Cavalry",
     tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield|tf_mounted|tf_guarantee_horse|tf_guarantee_helmet,
@@ -20788,8 +19916,7 @@ itm_spear_p,
   #NEW REVISION
 
   ###### byzantine village
-   [
-     "byz_village_1",
+    ["byz_village_1",
      "Paroikoi",
      "Paroikoi",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -20820,10 +19947,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["byz_village_2",
+  ["byz_village_2",
      "Acontistae",
      "Acontistae",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_ranged,
@@ -20854,8 +19981,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "byz_village_3_1",
+    ["byz_village_3_1",
      "Peltastae",
      "Peltastae",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -20889,10 +20015,9 @@ itm_spear_p,
     ],
     ranged_attrib_4, thrown_regulars_wp, thrown_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "byz_village_4_1",
+    ["byz_village_4_1",
      "Acritae",
      "Acritae",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -20925,8 +20050,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "byz_village_3_2",
+    ["byz_village_3_2",
      "Toxotae",
      "Toxotae",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -20952,10 +20076,9 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "byz_village_4_2",
+    ["byz_village_4_2",
      "Mourtati",
      "Mourtati",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -21030,10 +20153,9 @@ itm_spear_p,
 
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "byz_town_2",
+    ["byz_town_2",
      "Contarati",
      "Contarati",
     #####" Lansarii",
@@ -21078,8 +20200,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "byz_town_3_1",  #spearman
+    ["byz_town_3_1",  #spearman
      "Scoutati Akontisths",
      "Scoutati Akontisths",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -21116,10 +20237,9 @@ itm_spear_p,
     ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "byz_town_4_1",
+    ["byz_town_4_1",
      "Beteranos Scoutati Akontisths",
      "Beteranoi Scoutati Akontisths",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -21161,8 +20281,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "byz_town_3_2",
+    ["byz_town_3_2",
      "Scoutati Ksifomaxos", #swordsman
      "Scoutati Ksifomaxos",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -21203,10 +20322,9 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "byz_town_4_2",
+    ["byz_town_4_2",
      "Hoplitae",
      "Hoplitae",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -21251,8 +20369,7 @@ itm_spear_p,
     ],
 
   ###### byzantine castle
-   [
-     "byz_castle_1",
+    ["byz_castle_1",
      "Trapezitae",
      "Trapezitae",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_ranged,
@@ -21286,10 +20403,9 @@ itm_spear_p,
     ],
     horse_attrib_2, cum_skirmisher_wp, cum_skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "byz_castle_2",
+    ["byz_castle_2",
      "Cavalarii",
      "Cavalarii",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_ranged,
@@ -21326,8 +20442,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "byz_castle_3",
+    ["byz_castle_3",
      "Stratiotae",
      "Stratiotae",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -21366,10 +20481,9 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "byz_castle_4",
+    ["byz_castle_4",
      "Cataphractoi",
      "Cataphractoi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -21420,10 +20534,10 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["byz_castle_guard",
+  ["byz_castle_guard",
      "Castle_Guard",
      "Castle_Guards",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -21442,10 +20556,10 @@ itm_spear_p,
     wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
     knows_common |  knows_power_strike_3 | knows_ironflesh_3,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["iberian_village_recruit",
+  ["iberian_village_recruit",
      "Campesino",
      "Campesino",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -21506,10 +20620,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_town_recruit",
+  ["iberian_town_recruit",
      "Ciudadano",
      "Ciudadano",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -21574,10 +20688,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_village_skirmisher",
+  ["iberian_village_skirmisher",
      "Iaculator de Retrobannum",
      "Iaculatores de Retrobannum",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -21633,10 +20747,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_archer",
+  ["iberian_archer",
      "Sagittarius de Retrobannum",
      "Sagittari de Retrobannum",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -21681,10 +20795,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_bows_sergeant",
+  ["iberian_bows_sergeant",
      "Sagittarius Masnadieri",
      "Sagittari Masnadieri",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -21749,10 +20863,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_village_footman",
+  ["iberian_village_footman",
      "Pedes de Retrobannum",
      "Pedess de Retrobannum",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -21823,10 +20937,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_billman",
+  ["iberian_billman",
      "Pedes Masnadieri",
      "Pedess Masnadieri",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -21862,10 +20976,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_bills_sergeant",
+  ["iberian_bills_sergeant",
      "Pedes Serviens",
      "Pedess Serviens",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -21929,10 +21043,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_town_footman_1",
+  ["iberian_town_footman_1",
      "Hastatus de Plebis",
      "Hastati de Plebis",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -21999,74 +21113,8 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-    ###### [
-        ###### "iberian_town_footman_2",
-    ###### "Pedes de Plebis",
-    ###### "Pedess de Plebis",
-    ###### tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-
-    ###### itm_iberian_cleaver,
-    ###### itm_falchion,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_raf_one_handed_axe_f,
-    ###### itm_reiforced_shield_horse,
-    ###### itm_reiforced_shield_infantry,
-
-    ###### itm_peasant_tunic_a,
-    ###### itm_peasant_b,
-    ###### itm_peasant_c,
-    ###### itm_peasant_g,
-    ###### itm_militia_tunic_a,
-    ###### itm_militia_tunic_b,
-    ###### itm_gambeson_a,
-    ###### itm_gambeson_b,
-    ###### itm_gambeson_c,
-    ###### itm_gambeson_d,
-
-     ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-    ###### itm_legs_with_shoes,
-    ###### itm_shoes,
-
-    ###### itm_elm2,
-    ###### itm_vik_spangen_a,
-    ###### itm_vik_spangen_b,
-    ###### itm_vik_norman_helmet_e,
-    ###### itm_arming_cap,
-    ###### itm_1257_hood,
-    ###### itm_1257_hood,
-    ###### itm_padded_coif,
-
-    ###### itm_tab_shield_round_b,
-    ###### itm_tab_shield_small_round_a,
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_iberia_c,
-
-    ###### itm_spear_i,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### latin_face_1, latin_face_2
-    ###### ],
 
   ["iberian_veteran_spearman",
      "Hastatus de Communia",
@@ -22125,10 +21173,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_spears_sergeant",
+  ["iberian_spears_sergeant",
      "Hastatus de Fraternitas",
      "Hastati de Fraternitas",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -22203,118 +21251,9 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-  ###### [
-        ###### "iberian_veteran_swordsman",
-    ###### "Pedes de Communia",
-    ###### "Pedess de Communia",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_studden_leather_armour_a,
-    ###### itm_iberian_cleaver,
-    ###### itm_reiforced_shield_horse,
-    ###### itm_reiforced_shield_infantry,
-
-    ###### itm_kettlehat_a,
-    ###### itm_kettlehat_b,
-    ###### itm_kettlehat_c,
-    ###### itm_flat_kettle_hat,
-    ###### itm_mail_coif,
-    ###### itm_raf_spangen,
-    ###### itm_vik_norman_helmet_a,
-    ###### itm_vik_norman_helmet_b,
-    ###### itm_elm1,
-    ###### itm_kolpak_mail,
-    ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-
-    ###### itm_iberian_leather_armour_a,
-    ###### itm_iberian_leather_armour_b,
-    ###### itm_iberian_leather_armour_c,
-    ###### itm_kau_padded_mail_a,
-    ###### itm_gambeson_a,
-
-     ###### itm_raf_mail_chausses,
-    ###### itm_kau_mail_boots_dark_long,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_splinted_leather_greaves,
-    ###### itm_mail_chausses,
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_round_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_iberia_c,
-
-    ###### itm_spear_i,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### latin_face_1, latin_face_2
-    ###### ],
-
-  ###### [
-        ###### "iberian_swords_sergeant",
-    ###### "Pedes de Fraternitas",
-    ###### "Pedess de Fraternitas",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_iberian_cleaver,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-     ###### itm_studden_leather_armour_a,
-    ###### itm_reiforced_shield_horse,
-    ###### itm_reiforced_shield_infantry,
-
-    ###### itm_kau_mail_a,
-    ###### itm_kau_mail_b,
-
-
-     ###### itm_great_helmet_d,
-     ###### itm_great_helmet_decorative,
-
-     ###### itm_raf_mail_chausses,
-    ###### itm_kau_mail_boots_dark_long,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_splinted_leather_greaves,
-    ###### itm_mail_chausses,
-
-    ###### itm_tab_shield_round_c,
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_iberia_c,
-
-    ###### itm_spear_i,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### latin_face_1, latin_face_2
-    ###### ],
-
-    ["iberian_town_skirmisher",
+  ["iberian_town_skirmisher",
      "Sagittarius de Plebis",
      "Sagittari de Plebis",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -22357,9 +21296,9 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-      ["iberian_veteran_crossbowman",
+  ["iberian_veteran_crossbowman",
      "Balistarius de Communia",
      "Balistari de Communia ",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -22406,10 +21345,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_crossbows_sergeant",
+  ["iberian_crossbows_sergeant",
      "Balistarius de Fraternitas",
      "Balistari de Fraternitas",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -22498,10 +21437,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_light_cavalry",
+  ["iberian_light_cavalry",
      "Servien Equites",
      "Servientes Equites",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
@@ -22566,10 +21505,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_medium_cavalry",
+  ["iberian_medium_cavalry",
      "Homine Ad Arma",
      "Homines Ad Arma",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -22628,10 +21567,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_squire",
+  ["iberian_squire",
      "Scutifer",
      "Scutiferi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -22702,10 +21641,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["iberian_knight",
+  ["iberian_knight",
      "Miles",
      "Milites",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -22832,10 +21771,9 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     latin_face_1, latin_face_2
-    ],
-[
-
-     "italian_village_recruit",
+  ],
+  
+  ["italian_village_recruit",
      "Contado",
      "Contades",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -22884,10 +21822,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_town_recruit",
+  ["italian_town_recruit",
      "Iuvene Inferiori",
      "Iuvenes Inferioris",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
@@ -22944,10 +21882,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_village_skirmisher",
+  ["italian_village_skirmisher",
      "Iaculator de Retrobannum",
      "Iaculatores de Retrobannum",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -23003,10 +21941,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_archer",
+  ["italian_archer",
      "Sagittarius de Retrobannum",
      "Sagittari de Retrobannum",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -23055,10 +21993,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_bows_sergeant",
+  ["italian_bows_sergeant",
      "Sagittarius Masnadieri",
      "Sagittari Masnadieri",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -23103,10 +22041,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_village_footman",
+  ["italian_village_footman",
      "Pedes de Retrobannum",
      "Pedess de Retrobannum",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -23179,10 +22117,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_billman",
+  ["italian_billman",
      "Pedes Masnadieri",
      "Pedess Masnadieri",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -23229,10 +22167,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_bills_sergeant",
+  ["italian_bills_sergeant",
      "Pedes Serviens",
      "Pedess Serviens",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -23293,10 +22231,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_town_footman_1",
+  ["italian_town_footman_1",
      "Pavesari de Popolo",
      "Pavesari de Popolo",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -23354,10 +22292,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_town_footman_2",
+  ["italian_town_footman_2",
      "Pedes de Popolo",
      "Pedess de Popolo",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -23412,10 +22350,10 @@ itm_spear_p,
     ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_veteran_spearman",
+  ["italian_veteran_spearman",
      "Hastatus de Communia",
      "Hastati de Communia",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -23473,10 +22411,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_spears_sergeant",
+  ["italian_spears_sergeant",
      "Hastatus de Fraternitas",
      "Hastati de Fraternitas",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -23553,131 +22491,9 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-  ###### [
-        ###### "italian_veteran_swordsman",
-    ###### "Pedes de Communia",
-    ###### "Pedess de Communia",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_studden_leather_armour_a,
-    ###### itm_iberian_cleaver,
-    ###### itm_reiforced_shield_horse,
-    ###### itm_reiforced_shield_infantry,
-
-       ###### itm_kettle_cloth_cape,
-     ###### itm_kettle_cloth,
-    ###### itm_elm1,
-    ###### itm_elm2,
-    ###### itm_kettle_cloth_cape_b,
-    ###### itm_kolpak_mail,
-    ###### itm_norman_coif_b,
-    ###### itm_rhodok_four_plated_helmet,
-    ###### itm_rhodok_kettle_hat_c,
-    ###### itm_rhodok_nasal_helmet_a,
-    ###### itm_raf_spangen,
-    ###### itm_vik_spangen_a,
-    ###### itm_vik_spangen_b,
-    ###### itm_vik_norman_helmet_e,
-
-    ###### itm_kau_mail_shirt_a,
-    ###### itm_studden_leather_armour_a,
-    ###### itm_gambeson_a,
-    ###### itm_gambeson_b,
-    ###### itm_gambeson_c,
-     ###### itm_footman_helmet,
-
-
-     ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_round_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_iberia_c,
-
-    ###### itm_spear_i,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### latin_face_1, latin_face_2
-    ###### ],
-
-  ###### [
-        ###### "italian_swords_sergeant",
-    ###### "Pedes de Fraternitas",
-    ###### "Pedess de Fraternitas",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_iberian_cleaver,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-     ###### itm_studden_leather_armour_a,
-    ###### itm_reiforced_shield_horse,
-    ###### itm_reiforced_shield_infantry,
-
-    ###### itm_kau_mail_a,
-    ###### itm_kau_mail_b,
-
-
-     ###### itm_kolpak_mail,
-     ###### itm_great_helmet_decorative,
-
-     ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-
-    ###### itm_andalusian_helmet_d,
-     ###### itm_norman_coif_c,
-     ###### itm_elm1,
-     ###### itm_elm2,
-     ###### itm_elm6,
-     ###### itm_flat_topped_helmet_a,
-     ###### itm_flat_topped_helmet_b,
-     ###### itm_rhodok_nasal_helmet_a,
-    ###### itm_raf_spangen,
-
-    ###### itm_tab_shield_round_c,
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_iberia_c,
-
-    ###### itm_spear_i,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_n,
-    ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### latin_face_1, latin_face_2
-    ###### ],
-
-    ["italian_town_skirmisher",
+  ["italian_town_skirmisher",
      "Sagittarius de Plebis",
      "Sagittari de Plebis",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -23721,9 +22537,9 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
-      ["italian_veteran_crossbowman",
+  ["italian_veteran_crossbowman",
      "Balistarius de Communia",
      "Balistari de Communia ",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -23781,10 +22597,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_crossbows_sergeant",
+  ["italian_crossbows_sergeant",
      "Balistarius de Fraternitas",
      "Balistari de Fraternitas",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -23868,10 +22684,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_light_cavalry",
+  ["italian_light_cavalry",
      "Servien Equites",
      "Servientes Equites",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
@@ -23934,10 +22750,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_medium_cavalry",
+  ["italian_medium_cavalry",
      "Berrovieri",
      "Berrovieres",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -23995,10 +22811,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_squire",
+  ["italian_squire",
      "Scutifer",
      "Scutiferi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -24088,10 +22904,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
 
-    ["italian_knight",
+  ["italian_knight",
      "Feditori",
      "Feditores",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -24222,7 +23038,7 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     latin_face_1, latin_face_2
-    ],
+  ],
 
   ["andalus_village_recruit",
     "Awamm Dehat",
@@ -24552,100 +23368,6 @@ itm_spear_p,
     foot_attrib_3, footman_wp, footman_skills,
     arab_face_1, arab_face_2
   ],
-
-  ###### [
-    ###### "andalus_town_infantry_1",
-    ###### "Jundi Mutadawwan Infantry",
-    ###### "Jundi Mutadawwan Infantry",
-    ###### tf_guarantee_shield|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
-    ###### 0,0,fac_kingdom_20,
-    ###### [
-    ###### itm_gambeson_a,
-    ###### itm_kau_arab_aketon_blue,
-    ###### itm_kau_arab_aketon_red,
-    ###### itm_kau_arab_aketon_green,
-    ###### itm_almohad_padded_a,
-    ###### itm_almohad_padded_b,
-    ###### itm_almohad_padded_c,
-
-    ###### itm_leather_boots,
-    ###### itm_ankle_boots,
-    ###### itm_byzantine_sword,
-    ###### itm_jineta_sword,
-    ###### itm_andalusian_sword,
-    ###### itm_arab_mail_coif,
-    ###### itm_arab_helmet_a,
-    ###### itm_kolpak_mail,
-    ###### itm_norman_coif_e,
-
-    ###### itm_arab_shield_a_3,
-    ###### itm_arab_shield_c_3,
-    ###### itm_arab_shield_g_3,
-    ###### itm_arab_shield_i_3,
-    ###### itm_tab_shield_round_c,
-
-    ###### itm_kau_arab_aketon,
-    ###### itm_mail_coif,
-
-    ###### itm_bamboo_spear,
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_e,
-    ###### itm_spear_i,
-    ###### itm_spear_l,
-    ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### arab_face_3, arab_face_4
-  ###### ],
-
-  ###### [
-    ###### "andalus_town_infantry_2",
-    ###### "Murtaziqa Infantry",
-    ###### "Murtaziqa Infantry",
-    ###### tf_guarantee_shield|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,
-    ###### 0,0,fac_kingdom_20,
-    ###### [
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_g,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_andalusian_sword,
-    ###### itm_sword_type_xiii,
-
-    ###### itm_mail_mittens,
-     ###### ###### itm_andalusian_helmet_a,
-    ###### itm_rus_helm_a,
-     ###### itm_moor_helmet_a,
-     ###### itm_moor_helmet_b,
-    ###### itm_moor_helmet_c,
-    ###### itm_moor_helmet_d,
-
-    ###### itm_ankle_boots,
-    ###### itm_splinted_leather_greaves,
-    ###### itm_byz_yoman_c,
-
-    ###### itm_andalusian_heavy_a,
-    ###### itm_andalusian_heavy_b,
-    ###### itm_kau_mail_shirt_d,
-
-    ###### itm_arab_shield_i_3,
-    ###### itm_andalusian_shield_4,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_andalusian_helmet_b,
-    ###### itm_jineta_sword,
-    ###### itm_kolpak_mail,
-    ###### itm_andalusian_helmet_d,
-    ###### itm_tab_shield_iberia_c,
-
-    ###### itm_bamboo_spear,
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_e,
-    ###### itm_spear_i,
-    ###### itm_spear_l,
-    ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### arab_face_3, arab_face_4
-  ###### ],
 
   ["andalus_spearman_1",
     "Husud (Hastatus)",
@@ -25002,10 +23724,10 @@ itm_spear_p,
     ],
     horse_attrib_2, cum_skirmisher_wp, cum_skirmisher_skills,
     arab_face_3, arab_face_4
-    ],
+  ],
 
 
-    ["andalus_horse_2",
+  ["andalus_horse_2",
      "Andalusian (Eques Absolvitur)",
      "Andalusian (Equites Absolvuntur)",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -25049,10 +23771,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     arab_face_1, arab_face_2
-    ],
+  ],
 
 
-    ["andalus_horse_3",
+  ["andalus_horse_3",
      "Andalusian (Armiger Eques)",
      "Andalusian (Armigri Equites)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -25099,10 +23821,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     arab_face_3, arab_face_4
-    ],
+  ],
 
 
-    ["andalus_horse_4",
+  ["andalus_horse_4",
      "Andalusian Miles",
      "Andalusian Milites",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -25156,10 +23878,10 @@ itm_spear_p,
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     arab_face_1, arab_face_2
-    ],
+  ],
 
 
-    ["gaelic_village_recruit",
+  ["gaelic_village_recruit",
      "Gairmsluaigh Retrobannum",
      "Gairmsluaigh Retrobannum",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -25185,10 +23907,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["gaelic_infantry_recruit",
+  ["gaelic_infantry_recruit",
      "Gairmsluaigh Retrobannum",
      "Gairmsluaigh Retrobannum",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots ,
@@ -25211,10 +23933,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["gaelic_village_footman",
+  ["gaelic_village_footman",
      "Ceithernach Pedes",
      "Ceithernach Pedite",
     tf_guarantee_armor | tf_guarantee_shield,
@@ -25260,10 +23982,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["gaelic_infantry_1",
+  ["gaelic_infantry_1",
      "Ceithern Tigh Pedes",
      "Ceithern Tigh Pedites",
     tf_guarantee_shield | tf_guarantee_armor ,
@@ -25331,10 +24053,10 @@ itm_spear_p,
     ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["gaelic_infantry_2",
+  ["gaelic_infantry_2",
      "Cliathaire Pedes",
      "Cliathaire Pedites",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -25400,10 +24122,10 @@ itm_spear_p,
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["gaelic_spearman_1",
+  ["gaelic_spearman_1",
      "Ceithern Tigh Hastatus",
      "Ceithern Tigh Hastati",
     tf_guarantee_armor | tf_guarantee_shield,
@@ -25448,10 +24170,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["gaelic_spearman_2",
+  ["gaelic_spearman_2",
      "Cliathairse Hastatus",
      "Cliathairse Hastati",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_gloves,
@@ -25498,10 +24220,10 @@ itm_spear_p,
         ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["gaelic_archer_1",
+  ["gaelic_archer_1",
      "Ceithernach Boghadair",
      "Ceithernach Boghadair",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_ranged,
@@ -25526,10 +24248,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["gaelic_archer_2",
+  ["gaelic_archer_2",
      "Ceithern Tigh Boghadair",
      "Ceithern Tigh Boghadair",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged,
@@ -25572,10 +24294,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["gaelic_light_cavalry",
+  ["gaelic_light_cavalry",
      "Sgiathadair Ritire",
      "Sgiathadairi Ritire",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse,
@@ -25621,10 +24343,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_skirmisher_wp, nbl_skirmisher_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["gaelic_medium_cavalry",
+  ["gaelic_medium_cavalry",
      "Ceithernach Ritire",
      "Ceithernach Ritire",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -25673,10 +24395,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_skirmisher2_wp, nbl_skirmisher2_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["gaelic_squire",
+  ["gaelic_squire",
      "Teaglach Ritire",
      "Teaglach Ritire",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -25768,10 +24490,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["gaelic_knight",
+  ["gaelic_knight",
      "Lucht Tighe Ritire",
      "Lucht Tighe Ritire",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -25889,13 +24611,13 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
 
 
 ####################################### ANATOLIAN CHRISTIAN
-    ["anatolian_village_recruit_christ",
+  ["anatolian_village_recruit_christ",
      "Paroikos Anatolikon †",
      "Paroikoi Anatolikon †",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -25956,11 +24678,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-   [
-     "anatolian_town_recruit_christ",
+    ["anatolian_town_recruit_christ",
      "Polites Anatolikon †",
      "Politi Anatolikon †",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -26006,7 +24727,7 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
 
@@ -26014,8 +24735,7 @@ itm_spear_p,
 
 
 
-   [
-     "anatolian_christian_spearman_1",
+    ["anatolian_christian_spearman_1",
      "Hai Ramik Nizagamartik †",
      "Hayasdan Ramik Nizagamartik †",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -26060,8 +24780,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "anatolian_christian_spearman_2",
+    ["anatolian_christian_spearman_2",
      "Hai Vahani-Bernakir Nizagamartik †",
      "Hayasdan Vahani-Bernakir Nizagamartik †",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -26101,10 +24820,9 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "anatolian_christian_spearman_3",
+    ["anatolian_christian_spearman_3",
      "Hai Krtser-Azat Nizagamartik †",
      "Hayasdan Krtser-Azat Nizagamartik †",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -26169,10 +24887,10 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["anatolian_christian_archer_1",
+  ["anatolian_christian_archer_1",
      "Hai Ramik Netadzik †",
      "Hayasdan Ramik Netadzik",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_ranged| tf_guarantee_helmet ,
@@ -26219,8 +24937,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "anatolian_christian_archer_2",
+    ["anatolian_christian_archer_2",
      "Hai Vahani-Bernakir Netadzik †",
      "Hayasdan Vahani-Bernakir Netadzik",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -26259,10 +24976,9 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-   [
-     "anatolian_christian_archer_3",
+    ["anatolian_christian_archer_3",
      "Hai Krtser-Azat Netadzik †",
      "Hayasdan Krtser-Azat Netadzik",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -26327,10 +25043,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["anatolian_castle_recruit_christ",
+  ["anatolian_castle_recruit_christ",
      "Mourtatoi Anatolikon Cavallarii †",
      "Mourtatos Anatolikon Cavallarii †",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves|tf_guarantee_horse| tf_mounted,
@@ -26365,7 +25081,7 @@ itm_spear_p,
 
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
   ["anatolian_light_cavalry",
@@ -26418,10 +25134,10 @@ itm_spear_p,
     ],
     horse_attrib_3, cav_thrower_2_wp, cav_thrower_2_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["anatolian_medium_cavalry",
+  ["anatolian_medium_cavalry",
      "Hai Azatugund Ayrudzi",
      "Hayasdan Azatugund Ayrudzi",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -26477,10 +25193,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["anatolian_heavy_cavalry",
+  ["anatolian_heavy_cavalry",
      "Hai Aspet",
      "Hayasdan Aspet",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -26540,15 +25256,14 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 ########################################################
 
 
 
 
 ############################# ANATOLIAN MUSLIM
-   [
-     "anatolian_village_recruit",
+    ["anatolian_village_recruit",
      "Paroikos Anatolikon",
      "Paroikoi Anatolikon",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -26610,11 +25325,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-   [
-     "anatolian_town_recruit",
+    ["anatolian_town_recruit",
      "Polites Anatolikon",
      "Politi Anatolikon",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -26667,10 +25381,9 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-  [
-     "anatolian_muslim_spear_1",
+   ["anatolian_muslim_spear_1",
      "Mızrak Vergisi",
      "Mızrak",
     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield,
@@ -26725,8 +25438,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-   [
-     "anatolian_muslim_spear_2",
+    ["anatolian_muslim_spear_2",
      "Mızrakçı",
      "Mızraklı",
     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield,
@@ -26802,8 +25514,7 @@ itm_spear_p,
     ],
 
 
-   [
-     "anatolian_muslim_infantry_1",
+    ["anatolian_muslim_infantry_1",
      "Fata Rajjala",
      "Fityan Rajjala",
     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_gloves,
@@ -26881,10 +25592,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["anatolian_muslim_infantry_2",
+  ["anatolian_muslim_infantry_2",
      "Igdish Rajjala",
      "Igdish Rajjala",
     tf_guarantee_shield|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_gloves,
@@ -27002,7 +25713,7 @@ itm_spear_p,
     ],
 
 	#Swordsmen
-    ["anatolian_muslim_infantry_3",
+  ["anatolian_muslim_infantry_3",
      "Jira Khvar Rajjala",
      "Jira Khvar Rajjala",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -27115,10 +25826,10 @@ itm_spear_p,
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["anatolian_muslim_javelineer",
+  ["anatolian_muslim_javelineer",
      "Ghazi Rajjala",
      "Ghuzat Rajjala",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -27188,10 +25899,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["anatolian_muslim_archer",
+  ["anatolian_muslim_archer",
      "Jabaliyyun Rami",
      "Jabaliyyun Rumat",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -27263,10 +25974,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["anatolian_muslim_crossbowman",
+  ["anatolian_muslim_crossbowman",
      "Jira Khvar Jarkhariyya",
      "Jira Khvar Jarkhariyya",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -27340,7 +26051,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["anatolian_castle_recruit",
+  ["anatolian_castle_recruit",
      "Mourtatoi Anatolikon Cavallarii",
      "Mourtatos Anatolikon Cavallarii",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves|tf_guarantee_horse| tf_mounted,
@@ -27387,9 +26098,9 @@ itm_spear_p,
 
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-    ["anatolian_turkoman_1",
+  ["anatolian_turkoman_1",
     "Jira Khvar Faris",
     "Jira Khvar Faris",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_mounted|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_horse,
@@ -27603,7 +26314,7 @@ itm_spear_p,
 
 ##################################################
 
-    ["scottish_village_recruit",
+  ["scottish_village_recruit",
      "Nativi Pedes",
      "Nativi Pedes",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots ,
@@ -27645,9 +26356,9 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-    ["scottish_infantry_recruit",
+  ["scottish_infantry_recruit",
      "Scottish Recruit",
      "Scottish Recruits",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots ,
@@ -27670,9 +26381,9 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-    ["scottish_forinsec_spearman",
+  ["scottish_forinsec_spearman",
      "Servitium Forensicum Hastatus",
      "Servitium Forensicum Hastati",
     tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_helmet,
@@ -27714,7 +26425,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["scottish_clansman",
+  ["scottish_clansman",
      "Scottis Clann",
      "Scottis Clann",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet,
@@ -27764,9 +26475,9 @@ itm_spear_p,
     ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-    ["scottish_heavy_swordsman",
+  ["scottish_heavy_swordsman",
      "Gall-Òglaich Spatharius",
      "Gall-Òglaichean Spathari",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -27820,7 +26531,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["scottish_heavy_axeman",
+  ["scottish_heavy_axeman",
      "Gall-Òglaich Axeman",
      "Gall-Òglaichean Axemen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -27850,7 +26561,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["scottish_forinsec_archer",
+  ["scottish_forinsec_archer",
      "Servitium Forensicum Sagittarius",
      "Servitium Forensicum Sagittari",
     tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_helmet,
@@ -27887,9 +26598,9 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
-    ["scottish_archer_2",
+  ["scottish_archer_2",
      "Scottish Veteran Archer",
      "Scottish Veteran Archers",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged,
@@ -27932,10 +26643,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["scottish_light_cavalry",
+  ["scottish_light_cavalry",
      "Scottish Mounted Sergeant",
      "Scottish Mounted Sergeants",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse,
@@ -27981,10 +26692,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_skirmisher_wp, nbl_skirmisher_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["scottish_medium_cavalry",
+  ["scottish_medium_cavalry",
      "Scottish Man-at-arms",
      "Scottish Men-at-arms",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -28033,10 +26744,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_skirmisher2_wp, nbl_skirmisher2_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["scottish_squire",
+  ["scottish_squire",
      "Scottish Lesser Knight",
      "Scottish Lesser Knights",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -28128,10 +26839,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["scottish_knight",
+  ["scottish_knight",
      "Scottish Knight",
      "Scottish Knights",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -28249,10 +26960,10 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_town_recruit",
+  ["euro_town_recruit",
      "Pedes de Cives",
      "Pedi de Cives",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -28301,10 +27012,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_village_recruit",
+  ["euro_village_recruit",
      "Retrobannum Pedes",
      "Retrobannum Pedes",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -28364,10 +27075,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_1",
+  ["euro_archer_1",
      "Vicanus Sagittarius Militaris",
      "Vicani Sagittarii Militares",
     #####" Militia Archer",
@@ -28424,10 +27135,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_2",
+  ["euro_archer_2",
      "Vicanus Sagittarius Militaris Veteranus",
      "Vicani Sagittarii Militares Veterani",
     #####" Militia Veteran Archer",
@@ -28522,10 +27233,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_1",
+  ["euro_xbow_1",
      "Oppidanus Iaculator Arcoballista Militaris",
      "Oppidani Iaculatoris Acroballistae Militares",
     #####" Militia Crossbowman",
@@ -28599,7 +27310,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-      ["euro_xbow_2",
+  ["euro_xbow_2",
      "Oppidanus Iaculator Arcoballista Militaris Veteranus",
      "Oppidani Iaculatoris Acroballistae Militares Veterani",
     #####" Militia Veteran Crossbowman",
@@ -28673,10 +27384,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_3",
+  ["euro_xbow_3",
      "Dux Iaculator Arcoballista Militaris",
      "Duxes Iaculatoris Arcoballista Militares",
     #####" Sergeant Crossbowman",
@@ -28768,10 +27479,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_spearman_1",
+  ["euro_spearman_1",
      "Oppidanus Hastatus Militaris",
      "Oppidani Hastati Militares",
     #####" Militia Spearman",
@@ -28833,10 +27544,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_2",
+  ["euro_spearman_2",
      "Oppidanus Hastatus Militaris Veteranus",
      "Oppidani Hastati Militares Veterani",
     #####" Militia Veteran Spearman",
@@ -28900,10 +27611,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_3",
+  ["euro_spearman_3",
      "Dux Hastatus Militaris",
      "Duxes Hastati Militares",
     #####" Sergeant Spearman",
@@ -28979,299 +27690,7 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
-
-  ###### [
-        ###### "euro_swordsman_1",
-    ###### "Oppidanus Miles Gladius Portat Militaris",
-    ###### "Oppidani Milites Gladii Portant Militares",
-    ###### #####" Militia Swordsman",
-    ###### #####" Militia Swordsmen",
-    ###### tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_kau_mail_shirt_a,
-    ###### itm_kau_padded_mail_a,
-    ###### itm_studden_leather_armour_a,
-    ###### itm_gambeson_a,
-    ###### itm_gambeson_b,
-    ###### itm_gambeson_c,
-    ###### itm_gambeson_d,
-    ###### itm_surcoat_a,
-
-    ###### itm_military_cleaver_b,
-    ###### itm_military_cleaver_c,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_raf_one_handed_axe_f,
-    ###### itm_raf_one_handed_axe_g,
-    ###### itm_mace_2,
-    ###### itm_mace_3,
-    ###### itm_mace_4,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-
-    ###### itm_kettlehat_a,
-    ###### itm_kettlehat_b,
-    ###### itm_flat_kettle_hat,
-    ###### itm_arming_cap,
-    ###### itm_1257_hood,
-    ###### itm_pilgrim_hat,
-    ###### itm_elm2,
-
-    ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-    ###### ],
-    ###### foot_attrib_3, footman_wp, footman_skills,
-    ###### euro_face_3, euro_face_4
-    ###### ],
-
-      ###### [
-        ###### "euro_swordsman_2",
-    ###### "Oppidanus Miles Gladius Portat Militaris Veteranus",
-    ###### "Oppidani Milites Gladii Portant Militares Veterani",
-    ###### #####" Militia Veteran Swordsman",
-    ###### #####" Militia Veteran Swordsmen",
-    ###### tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_kettlehat_a,
-    ###### itm_kettlehat_b,
-    ###### itm_kettlehat_c,
-    ###### itm_flat_kettle_hat,
-    ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-    ###### itm_kolpak_mail,
-    ###### itm_elm2,
-    ###### itm_mail_coif,
-      ###### ###### itm_elm7,
-    ###### itm_mail_coif_b,
-    ###### itm_mail_coif_c,
-    ###### itm_vik_norman_helmet_a,
-    ###### itm_raf_spangen,
-
-    ###### itm_military_cleaver_b,
-    ###### itm_military_cleaver_c,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_raf_one_handed_axe_f,
-    ###### itm_raf_one_handed_axe_g,
-    ###### itm_mace_2,
-    ###### itm_mace_3,
-    ###### itm_mace_4,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiv,
-    ###### itm_falchion,
-
-     ###### itm_man_at_arms_a,
-    ###### itm_man_at_arms_b,
-    ###### itm_surcoat_b,
-    ###### itm_surcoat_c,
-    ###### itm_surcoat_d,
-    ###### itm_surcoat_e,
-    ###### itm_surcoat_f,
-    ###### itm_surcoat_g,
-     ###### itm_man_at_arms_c,
-    ###### itm_kau_haubergeon_a,
-    ###### itm_kau_mail_shirt_c,
-     ###### itm_kau_mail_shirt_d,
-
-
-
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-    ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-
-        ###### ],
-    ###### foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-    ###### euro_face_3, euro_face_4
-    ###### ],
-
-  ###### [
-        ###### "euro_swordsman_3",
-    ###### "Dux Miles Gladius Portat Militaris",
-    ###### "Duxes Milites Gladii Portant Militares",
-        ###### #####" Sergeant Swordsman",
-    ###### #####" Sergeant Swordsmen",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-    ###### itm_military_cleaver_b,
-    ###### itm_military_cleaver_c,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_raf_one_handed_axe_d,
-    ###### itm_raf_one_handed_axe_e,
-    ###### itm_raf_one_handed_axe_f,
-    ###### itm_raf_one_handed_axe_g,
-    ###### itm_mace_2,
-    ###### itm_mace_3,
-    ###### itm_mace_4,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiia,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xiiia,
-    ###### itm_sword_type_xiv,
-    ###### itm_morningstar,
-
-     ###### itm_kau_mail_a,
-    ###### itm_kau_mail_b,
-    ###### itm_veteran_surcoat_a,
-       ###### itm_veteran_surcoat_b,
-    ###### itm_veteran_surcoat_c,
-     ###### itm_veteran_surcoat_d,
-
-
-    ###### itm_tab_shield_heater_c,
-    ###### itm_tab_shield_heater_c,
-
-
-    ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-    ###### itm_kettlehat_a,
-    ###### itm_kettlehat_b,
-    ###### itm_kettlehat_c,
-      ###### ###### itm_elm7,
-    ###### itm_elm6,
-    ###### itm_elm1,
-    ###### itm_elm3,
-    ###### itm_kolpak_mail,
-
-    ###### itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    ###### itm_grey_hose,
-    ###### itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    ###### itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-
-        ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### euro_face_1, euro_face_2
-    ###### ],
-
-  ###### [
-        ###### "town_man_at_arms",
-    ###### "Miles Pro Communitas",
-    ###### "Milites pro Communitas",
-    ###### tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
-    ###### 0, 0, fac_kingdom_1,
-    ###### [
-
-    ###### itm_veteran_surcoat_a,
-    ###### itm_veteran_surcoat_b,
-    ###### itm_veteran_surcoat_c,
-    ###### itm_veteran_surcoat_d,
-    ###### itm_veteran_surcoat_e,
-
-    ###### itm_raf_spangen,
-    ###### itm_norman_coif_a,
-    ###### itm_norman_coif_b,
-    ###### itm_norman_coif_c,
-    ###### itm_norman_coif_d,
-    ###### itm_norman_coif_e,
-
-    ###### itm_morningstar,
-    ###### itm_talak_warhammer,
-    ###### itm_mace_4,
-
-    ###### itm_raf_one_handed_axe_h,
-    ###### itm_raf_one_handed_axe_a,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_sword_type_xiii,
-
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-
-    ###### itm_kau_mail_boots_dark_long,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_tab_shield_kite_c,
-    ###### itm_tab_shield_heater_c,
-
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_h,
-    ###### itm_spear_j,
-    ###### itm_spear_k,
-    ###### itm_spear_l,
-    ###### itm_spear_m,
-    ###### itm_spear_n,
-    ###### itm_spear_o,
-    ###### itm_spear_p,
-    ###### ],
-    ###### foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-    ###### euro_face_3, euro_face_4
-    ###### ],
+  ],
 
   ["euro_guisarm_1",
      "Vicanus Gisarme Militaris",
@@ -29315,10 +27734,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_2",
+  ["euro_guisarm_2",
      "Vicanus Gisarme Militaris Veteranus",
      "Vicani Gisarme Militares Veterani",
     #####" Militia Veteran Guisarmer",
@@ -29375,10 +27794,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_3",
+  ["euro_guisarm_3",
      "Dux Gisarme Militaris",
      "Duxes Gisarme Militares",
     #####" Sergeant Guisarmer",
@@ -29461,10 +27880,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_1",
+  ["euro_horse_1",
      "Servio Eques",
      "Servimus Equites",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
@@ -29533,10 +27952,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_2",
+  ["euro_horse_2",
      "Homo Armatus",
      "Homines Armati",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -29629,10 +28048,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_3",
+  ["euro_horse_3",
      "Armiger Eques",
      "Armigri Equites",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -29752,10 +28171,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_4",
+  ["euro_horse_4",
      "Miles",
      "Milites",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -29884,13 +28303,13 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
 
 
 
-    ["tatar_tribesman",
+  ["tatar_tribesman",
      "Shiine Gishuun",
      "Shiine Gishuun",
     tf_guarantee_ranged | tf_guarantee_horse | tf_guarantee_armor | tf_guarantee_boots | tf_mounted,
@@ -29922,10 +28341,10 @@ itm_spear_p,
     cum_tribesman_wp,
     cum_tribesman_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["tatar_skirmisher",
+  ["tatar_skirmisher",
      "Budagch",
      "Budagch",
     tf_guarantee_ranged | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots| tf_mounted,
@@ -29962,10 +28381,10 @@ itm_spear_p,
     cum_skirmisher_wp,
     cum_skirmisher_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["tatar_horseman",
+  ["tatar_horseman",
      "Duulgat",
      "Duulgat",
     tf_guarantee_ranged | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet| tf_mounted,
@@ -30000,10 +28419,10 @@ itm_spear_p,
     cum_horseman_wp,
     cum_horseman_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["tatar_horse_archer",
+  ["tatar_horse_archer",
      "Num Kharvaach",
      "Num Kharvaach",
     tf_guarantee_ranged | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet| tf_mounted,
@@ -30040,10 +28459,10 @@ itm_spear_p,
     cum_harcher_wp,
     cum_harcher_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["tatar_veteran_horse_archer",
+  ["tatar_veteran_horse_archer",
      "Mergen Kharvaach",
      "Mergen Kharvaach",
     tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet| tf_mounted,
@@ -30084,10 +28503,10 @@ itm_spear_p,
     cum_vharcher_wp,
     cum_vharcher_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["tatar_lancer",
+  ["tatar_lancer",
      "Khuiagt Cereg",
      "Khuiagt Cereg",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -30131,10 +28550,10 @@ itm_spear_p,
     cum_lancer_wp,
     cum_lancer_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
-    ["tatar_heavy_lancer",
+  ["tatar_heavy_lancer",
      "Ba'atur",
      "Ba'atur",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_gloves,
@@ -30174,7 +28593,7 @@ itm_spear_p,
     cum_hlancer_wp,
     cum_hlancer_skills,
     mong_face_1, mong_face_2
-    ],
+  ],
 
 
 
@@ -30182,7 +28601,7 @@ itm_spear_p,
 
 
 ############################################################# NEW v1.9/2.1 - TEMPLAR TREE TROOPS
-    ["euro_town_recruit_templar",
+  ["euro_town_recruit_templar",
      "Templar Town Recruit",
      "Templar Town Recruits",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -30229,10 +28648,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_village_recruit_templar",
+  ["euro_village_recruit_templar",
      "Templar Levy",
      "Templar Levies",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -30291,10 +28710,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_xbow_1_templar",
+  ["euro_xbow_1_templar",
      "Templar Lesser Crossbowman",
      "Templar Lesser Crossbowmen",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -30374,7 +28793,7 @@ itm_spear_p,
 
 
 
-   ["templar_crossbowman_1",
+  ["templar_crossbowman_1",
     "Templar Crossbowman",
     "Templar Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -30448,11 +28867,11 @@ itm_spear_p,
     ],
     ranged_attrib_4, knight_order_crossbow_wp, knight_order_crossbow_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
 
-    ["templar_crossbowman_2",
+  ["templar_crossbowman_2",
      "Templar Serjeant Crossbowman",
      "Templar Serjeant Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -30516,10 +28935,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, knight_order_crossbow_serjeant_wp, knight_order_crossbow_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_spearman_1_templar",
+  ["euro_spearman_1_templar",
      "Templar Lesser Spearman",
      "Templar Lesser Spearmen",
     #####" Militia Spearman",
@@ -30597,7 +29016,7 @@ itm_spear_p,
     ],
 
 
-   ["templar_spearman_1",
+  ["templar_spearman_1",
     "Templar Spearman",
     "Templar Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
@@ -30676,10 +29095,10 @@ itm_spear_p,
     ],
     foot_attrib_4, knight_order_spearman_wp, knight_order_spearman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-   ["templar_spearman_2",
+  ["templar_spearman_2",
     "Templar Serjeant Spearman",
     "Templar Serjeant Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
@@ -30752,13 +29171,13 @@ itm_spear_p,
     ],
     foot_attrib_5, knight_order_spearman_serjeant_wp, knight_order_spearman_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
 
 
 ################################# NEW DISMOUNTED KNIGHTS AND SERJEANTS
-    ["templar_half_brother_dismounted",
+  ["templar_half_brother_dismounted",
      "Dismounted Templar Serjeant",
      "Dismounted Templar Serjeants",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -30838,10 +29257,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["templar_knight_dismounted",
+  ["templar_knight_dismounted",
      "Dismounted Templar Knight",
      "Dismounted Templar Knights",
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -30937,12 +29356,12 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
 
 
-   ["euro_horse_1_templar",
+  ["euro_horse_1_templar",
      "Templar Mounted Serjeant",
      "Templar Mounted Serjeants",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -31016,7 +29435,7 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
   ["euro_horse_2_templar",
@@ -31092,11 +29511,11 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
 
-    ["templar_half_brother",
+  ["templar_half_brother",
      "Sergent de l'ordre  du Temple",
      "Sergents de l'ordre  du Temple",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -31187,10 +29606,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["templar_knight",
+  ["templar_knight",
      "Chevalier de l'ordre  du Temple",
      "Chevaliers de l'ordre  du Temple",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -31304,11 +29723,11 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
 ####################################### NEW v1.8 - VETERAN KNIGHTS
-    ["templar_knight_veteran",
+  ["templar_knight_veteran",
      "Veteran Templar Knight",
      "Veteran Templar Knight",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -31374,7 +29793,7 @@ itm_spear_p,
     ],
     horse_attrib_elite_veteran, nbl_knight_veteran_wp, nbl_knight_veteran_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
 ########################################################
@@ -31387,7 +29806,7 @@ itm_spear_p,
 
 
 ############################################################# NEW v1.9/2.1 - HOSPITALLER TREE TROOPS
-    ["euro_town_recruit_hospitaller",
+  ["euro_town_recruit_hospitaller",
      "Hospitaller Town Recruit",
      "Hospitaller Town Recruits",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -31434,10 +29853,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_village_recruit_hospitaller",
+  ["euro_village_recruit_hospitaller",
      "Hospitaller Levy",
      "Hospitaller Levies",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -31496,10 +29915,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_xbow_1_hospitaller",
+  ["euro_xbow_1_hospitaller",
      "Hospitaller Lesser Crossbowman",
      "Hospitaller Lesser Crossbowmen",
     #####" Militia Crossbowman",
@@ -31581,7 +30000,7 @@ itm_spear_p,
 
 
 
-   ["hospitaller_crossbowman_1",
+  ["hospitaller_crossbowman_1",
     "Hospitaller Crossbowman",
     "Hospitaller Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -31653,11 +30072,11 @@ itm_spear_p,
     ],
     ranged_attrib_4, knight_order_crossbow_wp, knight_order_crossbow_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
 
-    ["hospitaller_crossbowman_2",
+  ["hospitaller_crossbowman_2",
      "Hospitaller Serjeant Crossbowman",
      "Hospitaller Serjeant Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -31721,10 +30140,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, knight_order_crossbow_serjeant_wp, knight_order_crossbow_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_spearman_1_hospitaller",
+  ["euro_spearman_1_hospitaller",
      "Hospitaller Lesser Spearman",
      "Hospitaller Lesser Spearmen",
     #####" Militia Spearman",
@@ -31803,7 +30222,7 @@ itm_spear_p,
     ],
 
 
-   ["hospitaller_spearman_1",
+  ["hospitaller_spearman_1",
     "Hospitaller Spearman",
     "Hospitaller Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
@@ -31881,10 +30300,10 @@ itm_spear_p,
     ],
     foot_attrib_4, knight_order_spearman_wp, knight_order_spearman_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-   ["hospitaller_spearman_2",
+  ["hospitaller_spearman_2",
     "Hospitaller Serjeant Spearman",
     "Hospitaller Serjeant Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
@@ -31957,13 +30376,13 @@ itm_spear_p,
     ],
     foot_attrib_5, knight_order_spearman_serjeant_wp, knight_order_spearman_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
 
 
 ################################# NEW DISMOUNTED KNIGHTS AND SERJEANTS
-    ["hospitaller_half_brother_dismounted",
+  ["hospitaller_half_brother_dismounted",
      "Dismounted Hospitaller Serjeant",
      "Dismounted Hospitaller Serjeants",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -32042,10 +30461,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["hospitaller_knight_dismounted",
+  ["hospitaller_knight_dismounted",
      "Dismounted Hospitaller Knight",
      "Dismounted Hospitaller Knights",
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -32140,12 +30559,12 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
 
 
-   ["euro_horse_1_hospitaller",
+  ["euro_horse_1_hospitaller",
      "Hospitaller Mounted Serjeant",
      "Hospitaller Mounted Serjeants",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -32219,7 +30638,7 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
   ["euro_horse_2_hospitaller",
@@ -32294,11 +30713,11 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
 
-    ["hospitaller_half_brother",
+  ["hospitaller_half_brother",
      "Sergent de l'ordre  du Temple",
      "Sergents de l'ordre  du Temple",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -32389,10 +30808,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["hospitaller_knight",
+  ["hospitaller_knight",
      "Chevalier de l'ordre  du Temple",
      "Chevaliers de l'ordre  du Temple",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -32503,11 +30922,11 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
 ####################################### NEW v1.8 - VETERAN KNIGHTS
-    ["hospitaller_knight_veteran",
+  ["hospitaller_knight_veteran",
      "Veteran Hospitaller Knight",
      "Veteran Hospitaller Knight",
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -32570,7 +30989,7 @@ itm_spear_p,
     ],
     horse_attrib_elite_veteran, nbl_knight_veteran_wp, nbl_knight_veteran_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
 ########################################################
@@ -32588,7 +31007,7 @@ itm_spear_p,
 
 
 ######################### ANTIOCH
-    ["euro_town_recruit_antioch",
+  ["euro_town_recruit_antioch",
      "Antioch Citizen",
      "Antioch Citizens",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -32636,10 +31055,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_village_recruit_antioch",
+  ["euro_village_recruit_antioch",
      "Antioch Levy",
      "Antioch Levies",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -32698,10 +31117,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_1_antioch",
+  ["euro_archer_1_antioch",
      "Antioch Lesser Militia Archer",
      "Antioch Lesser Militia Archers",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -32770,10 +31189,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_2_antioch",
+  ["euro_archer_2_antioch",
      "Antioch Senior Militia Archer",
      "Antioch Senior Militia Archers",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -32847,10 +31266,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_1_antioch",
+  ["euro_xbow_1_antioch",
      "Antioch Lesser Militia Crossbowman",
      "Antioch Lesser Militia Crossbowmen",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -32930,7 +31349,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["euro_xbow_2_antioch",
+  ["euro_xbow_2_antioch",
      "Antioch Senior Militia Crossbowman",
      "Antioch Senior Militia Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -33013,10 +31432,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_3_antioch",
+  ["euro_xbow_3_antioch",
      "Antioch Seargent Crossbowman",
      "Antioch Seargent Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -33100,10 +31519,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_spearman_1_antioch",
+  ["euro_spearman_1_antioch",
      "Antioch Lesser Militia Spearman",
      "Antioch Lesser Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -33177,10 +31596,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_2_antioch",
+  ["euro_spearman_2_antioch",
      "Antioch Senior Militia Spearman",
      "Antioch Senior Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -33263,10 +31682,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_3_antioch",
+  ["euro_spearman_3_antioch",
      "Antioch Seargent Spearman",
      "Antioch Seargent Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -33346,7 +31765,7 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
   ["euro_guisarm_1_antioch",
@@ -33391,10 +31810,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_2_antioch",
+  ["euro_guisarm_2_antioch",
      "Antioch Senior Militia Guisarmer",
      "Antioch Senior Militia Guisarmer",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -33449,10 +31868,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_3_antioch",
+  ["euro_guisarm_3_antioch",
      "Antioch Seargent Guisarmer",
      "Antioch Seargent Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -33510,10 +31929,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_1_antioch",
+  ["euro_horse_1_antioch",
      "Antioch Mounted Sergeant",
      "Antioch Mounted Sergeants",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -33585,10 +32004,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_2_antioch",
+  ["euro_horse_2_antioch",
      "Antioch Man-at-Arms",
      "Antioch Men-at-Arms",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -33660,10 +32079,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_3_antioch",
+  ["euro_horse_3_antioch",
      "Antioch Lesser Knight",
      "Antioch Lesser Knights",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -33752,10 +32171,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_4_antioch",
+  ["euro_horse_4_antioch",
      "Antioch Knight",
      "Antioch Knights",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -33853,7 +32272,7 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 ##############################################################
 
 
@@ -33871,7 +32290,7 @@ itm_spear_p,
 
 
 ######################### TRIPOLI
-    ["euro_town_recruit_tripoli",
+  ["euro_town_recruit_tripoli",
      "Tripoli Citizen",
      "Tripoli Citizens",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -33919,10 +32338,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_village_recruit_tripoli",
+  ["euro_village_recruit_tripoli",
      "Tripoli Levy",
      "Tripoli Levies",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -33981,10 +32400,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_1_tripoli",
+  ["euro_archer_1_tripoli",
      "Tripoli Lesser Militia Archer",
      "Tripoli Lesser Militia Archers",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -34053,10 +32472,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_2_tripoli",
+  ["euro_archer_2_tripoli",
      "Tripoli Senior Militia Archer",
      "Tripoli Senior Militia Archers",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -34130,10 +32549,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_1_tripoli",
+  ["euro_xbow_1_tripoli",
      "Tripoli Lesser Militia Crossbowman",
      "Tripoli Lesser Militia Crossbowmen",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -34213,7 +32632,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["euro_xbow_2_tripoli",
+  ["euro_xbow_2_tripoli",
      "Tripoli Senior Militia Crossbowman",
      "Tripoli Senior Militia Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -34296,10 +32715,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_3_tripoli",
+  ["euro_xbow_3_tripoli",
      "Tripoli Seargent Crossbowman",
      "Tripoli Seargent Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -34383,10 +32802,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_spearman_1_tripoli",
+  ["euro_spearman_1_tripoli",
      "Tripoli Lesser Militia Spearman",
      "Tripoli Lesser Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -34460,10 +32879,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_2_tripoli",
+  ["euro_spearman_2_tripoli",
      "Tripoli Senior Militia Spearman",
      "Tripoli Senior Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -34547,10 +32966,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_3_tripoli",
+  ["euro_spearman_3_tripoli",
      "Tripoli Seargent Spearman",
      "Tripoli Seargent Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -34630,7 +33049,7 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
   ["euro_guisarm_1_tripoli",
@@ -34675,10 +33094,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_2_tripoli",
+  ["euro_guisarm_2_tripoli",
      "Tripoli Senior Militia Guisarmer",
      "Tripoli Senior Militia Guisarmer",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -34733,10 +33152,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_3_tripoli",
+  ["euro_guisarm_3_tripoli",
      "Tripoli Seargent Guisarmer",
      "Tripoli Seargent Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -34794,10 +33213,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_1_tripoli",
+  ["euro_horse_1_tripoli",
      "Tripoli Mounted Sergeant",
      "Tripoli Mounted Sergeants",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -34872,10 +33291,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_2_tripoli",
+  ["euro_horse_2_tripoli",
      "Tripoli Man-at-Arms",
      "Tripoli Men-at-Arms",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -34949,10 +33368,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_3_tripoli",
+  ["euro_horse_3_tripoli",
      "Tripoli Lesser Knight",
      "Tripoli Lesser Knights",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -35041,10 +33460,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_4_tripoli",
+  ["euro_horse_4_tripoli",
      "Tripoli Knight",
      "Tripoli Knights",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -35140,7 +33559,7 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 ##############################################################
 
 
@@ -35152,7 +33571,7 @@ itm_spear_p,
 
 
 ######################### IBELIN
-    ["euro_town_recruit_ibelin",
+  ["euro_town_recruit_ibelin",
      "Ibelin Citizen",
      "Ibelin Citizens",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -35200,10 +33619,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_village_recruit_ibelin",
+  ["euro_village_recruit_ibelin",
      "Ibelin Levy",
      "Ibelin Levies",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -35262,10 +33681,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_1_ibelin",
+  ["euro_archer_1_ibelin",
      "Ibelin Lesser Militia Archer",
      "Ibelin Lesser Militia Archers",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -35334,10 +33753,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_2_ibelin",
+  ["euro_archer_2_ibelin",
      "Ibelin Senior Militia Archer",
      "Ibelin Senior Militia Archers",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -35411,10 +33830,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_1_ibelin",
+  ["euro_xbow_1_ibelin",
      "Ibelin Lesser Militia Crossbowman",
      "Ibelin Lesser Militia Crossbowmen",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -35494,7 +33913,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["euro_xbow_2_ibelin",
+  ["euro_xbow_2_ibelin",
      "Ibelin Senior Militia Crossbowman",
      "Ibelin Senior Militia Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -35577,10 +33996,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_3_ibelin",
+  ["euro_xbow_3_ibelin",
      "Ibelin Seargent Crossbowman",
      "Ibelin Seargent Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -35664,10 +34083,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_spearman_1_ibelin",
+  ["euro_spearman_1_ibelin",
      "Ibelin Lesser Militia Spearman",
      "Ibelin Lesser Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -35741,10 +34160,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_2_ibelin",
+  ["euro_spearman_2_ibelin",
      "Ibelin Senior Militia Spearman",
      "Ibelin Senior Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -35827,10 +34246,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_3_ibelin",
+  ["euro_spearman_3_ibelin",
      "Ibelin Seargent Spearman",
      "Ibelin Seargent Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -35910,7 +34329,7 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
   ["euro_guisarm_1_ibelin",
@@ -35955,10 +34374,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_2_ibelin",
+  ["euro_guisarm_2_ibelin",
      "Ibelin Senior Militia Guisarmer",
      "Ibelin Senior Militia Guisarmer",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -36013,10 +34432,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_3_ibelin",
+  ["euro_guisarm_3_ibelin",
      "Ibelin Seargent Guisarmer",
      "Ibelin Seargent Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -36074,10 +34493,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_1_ibelin",
+  ["euro_horse_1_ibelin",
      "Ibelin Mounted Sergeant",
      "Ibelin Mounted Sergeants",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -36152,10 +34571,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_2_ibelin",
+  ["euro_horse_2_ibelin",
      "Ibelin Man-at-Arms",
      "Ibelin Men-at-Arms",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -36230,10 +34649,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_3_ibelin",
+  ["euro_horse_3_ibelin",
      "Ibelin Lesser Knight",
      "Ibelin Lesser Knights",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -36322,10 +34741,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_4_ibelin",
+  ["euro_horse_4_ibelin",
      "Ibelin Knight",
      "Ibelin Knights",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -36419,7 +34838,7 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 ##############################################################
 
 
@@ -36433,7 +34852,7 @@ itm_spear_p,
 
 
 ######################### JERUSALEM
-    ["euro_town_recruit_jerusalem",
+  ["euro_town_recruit_jerusalem",
      "Jerusalem Citizen",
      "Jerusalem Citizens",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -36481,10 +34900,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_village_recruit_jerusalem",
+  ["euro_village_recruit_jerusalem",
      "Jerusalem Levy",
      "Jerusalem Levies",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -36543,10 +34962,10 @@ itm_spear_p,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_1_jerusalem",
+  ["euro_archer_1_jerusalem",
      "Jerusalem Lesser Militia Archer",
      "Jerusalem Lesser Militia Archers",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -36615,10 +35034,10 @@ itm_spear_p,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_archer_2_jerusalem",
+  ["euro_archer_2_jerusalem",
      "Jerusalem Senior Militia Archer",
      "Jerusalem Senior Militia Archers",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -36692,10 +35111,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_1_jerusalem",
+  ["euro_xbow_1_jerusalem",
      "Jerusalem Lesser Militia Crossbowman",
      "Jerusalem Lesser Militia Crossbowmen",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
@@ -36775,7 +35194,7 @@ itm_spear_p,
     euro_face_3, euro_face_4
     ],
 
-    ["euro_xbow_2_jerusalem",
+  ["euro_xbow_2_jerusalem",
      "Jerusalem Senior Militia Crossbowman",
      "Jerusalem Senior Militia Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
@@ -36858,10 +35277,10 @@ itm_spear_p,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_xbow_3_jerusalem",
+  ["euro_xbow_3_jerusalem",
      "Jerusalem Seargent Crossbowman",
      "Jerusalem Seargent Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
@@ -36945,10 +35364,10 @@ itm_spear_p,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["euro_spearman_1_jerusalem",
+  ["euro_spearman_1_jerusalem",
      "Jerusalem Lesser Militia Spearman",
      "Jerusalem Lesser Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -37022,10 +35441,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_2_jerusalem",
+  ["euro_spearman_2_jerusalem",
      "Jerusalem Senior Militia Spearman",
      "Jerusalem Senior Militia Spearmen",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -37109,10 +35528,10 @@ itm_spear_p,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_spearman_3_jerusalem",
+  ["euro_spearman_3_jerusalem",
      "Jerusalem Seargent Spearman",
      "Jerusalem Seargent Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
@@ -37192,7 +35611,7 @@ itm_spear_p,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
   ["euro_guisarm_1_jerusalem",
@@ -37237,10 +35656,10 @@ itm_spear_p,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_2_jerusalem",
+  ["euro_guisarm_2_jerusalem",
      "Jerusalem Senior Militia Guisarmer",
      "Jerusalem Senior Militia Guisarmer",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -37295,10 +35714,10 @@ itm_spear_p,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_guisarm_3_jerusalem",
+  ["euro_guisarm_3_jerusalem",
      "Jerusalem Seargent Guisarmer",
      "Jerusalem Seargent Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -37356,10 +35775,10 @@ itm_spear_p,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_1_jerusalem",
+  ["euro_horse_1_jerusalem",
      "Jerusalem Mounted Sergeant",
      "Jerusalem Mounted Sergeants",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
@@ -37434,10 +35853,10 @@ itm_spear_p,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_2_jerusalem",
+  ["euro_horse_2_jerusalem",
      "Jerusalem Man-at-Arms",
      "Jerusalem Men-at-Arms",
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -37512,10 +35931,10 @@ itm_spear_p,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
-    ["euro_horse_3_jerusalem",
+  ["euro_horse_3_jerusalem",
      "Jerusalem Lesser Knight",
      "Jerusalem Lesser Knights",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -37604,10 +36023,10 @@ itm_spear_p,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
 
-    ["euro_horse_4_jerusalem",
+  ["euro_horse_4_jerusalem",
      "Jerusalem Knight",
      "Jerusalem Knights",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -37706,7 +36125,7 @@ itm_spear_p,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 ##############################################################
 
 
@@ -37750,7 +36169,7 @@ itm_spear_p,
     ],
    def_attrib|level(4),wp(20),knows_common,bandit_face1, bandit_face2],
 
-    ["raider",
+  ["raider",
      "Latro",
      "Latrones",
     #####" Raider",
@@ -37791,10 +36210,10 @@ itm_spear_p,
     bandit_wp,
     bandit_skills,
     nord_face_young_1, man_face_older_2
-    ],
+  ],
 
 
-    ["peasant_rebel","Peasant Rebel","Peasant Rebels",
+  ["peasant_rebel","Peasant Rebel","Peasant Rebels",
     tf_guarantee_armor,0,0,fac_peasant_rebels,
 
     equipment_tier_1_foot,
@@ -37802,7 +36221,7 @@ itm_spear_p,
     bandit_face1, bandit_face2
   ],
 
-    ["rebel_leader",
+  ["rebel_leader",
      "Rebellion Leader",
      "Rebellion Leaders",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
@@ -37869,10 +36288,10 @@ itm_spear_p,
     bandit_wp,
     bandit_skills,
     bandit_face1, bandit_face2
-    ],
+  ],
 
 
-    ["bandit","Bandit","Bandits",tf_guarantee_armor,0,0,fac_outlaws,
+  ["bandit","Bandit","Bandits",tf_guarantee_armor,0,0,fac_outlaws,
    [itm_arrows,itm_spiked_mace,itm_sword_type_xiv,itm_short_bow,itm_falchion,itm_nordic_shield,itm_rawhide_coat,itm_leather_cap,itm_nomad_armor,itm_coarse_tunic,itm_archer_a,itm_leather_vest,itm_tunic_with_green_cape,itm_linen_tunic,itm_red_shirt,itm_woolen_hose,itm_wrapping_boots,itm_saddle_horse],
    ########## def_attrib|level(60),wp(60),knows_common|knows_power_draw_1,bandit_face1, bandit_face2],
    def_attrib|level(8),wp(60),knows_common|knows_power_draw_1,bandit_face1, bandit_face2],  ########## NEW v2.6 - bugfix
@@ -37919,7 +36338,7 @@ itm_spear_p,
     ###### itm_common_hood,itm_black_hood,itm_linen_tunic,itm_merchant_outfit,itm_leather_jerkin,itm_ragged_outfit,itm_hide_boots,itm_leather_boots],
    ###### def_attrib|level(11),wp(90),knows_common|knows_power_draw_3,swadian_face_young_1, swadian_face_old_2],
 
-    ["forest_bandit",
+  ["forest_bandit",
      "Silva_Sicarius",
      "Silvae_Sicarii",
     ###### "Forest_Bandit",
@@ -37953,14 +36372,14 @@ itm_spear_p,
     bandit_wp,
     bandit_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ###### ["sea_raider","Sea Raider","Sea Raiders",tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield,0,0,fac_outlaws,
    ###### [itm_arrows,itm_sword_viking_1,itm_sword_viking_2,itm_raf_one_handed_axe_d,itm_raf_two_handed_axe_a,itm_spear_i,itm_nordic_shield,itm_nordic_shield,itm_nordic_shield,itm_wooden_shield,itm_long_bow,itm_javelin,itm_throwing_axes,
     ###### itm_nordic_helmet,itm_nordic_helmet,itm_leather_jerkin,itm_kau_mail_shirt_d,itm_leather_jerkin,itm_leather_boots, itm_leather_boots],
    ###### def_attrib|level(16),wp(110),knows_ironflesh_2|knows_power_strike_2|knows_power_draw_3|knows_power_throw_2|knows_riding_1|knows_athletics_2,nord_face_young_1, nord_face_old_2],
 
-    ["sea_raider",
+  ["sea_raider",
      "Pirata",
      "Piratae",
     ###### "Sea_Raider",
@@ -38026,13 +36445,11 @@ itm_spear_p,
     itm_linen_tunic,
     ],
       foot_attrib_3,footman_wp,footman_skills,nord_face_young_1, nord_face_old_2
-    ],
-
-
+  ],
 
 
 ######################### NEW v1.9 - NEW SEA RAIDER UNITS
-    ["sea_raider_veteran",
+  ["sea_raider_veteran",
      "Veteran Sea Raider",
      "Veteran Sea Raiders",
      ###### "Sea_Raider",
@@ -38085,14 +36502,12 @@ itm_spear_p,
     itm_woolen_hose,
     itm_wrapping_boots,
 
-      ],
-      foot_attrib_4, swords_regulars_wp, swords_regulars_skills, nord_face_young_1, nord_face_old_2
-     ],
+    ],
+    foot_attrib_4, swords_regulars_wp, swords_regulars_skills, nord_face_young_1, nord_face_old_2
+  ],
 
 
-
-
-     ["sea_raider_captain",
+  ["sea_raider_captain",
       "Sea Raider Captain",
       "Sea Raider Captains",
       ###### "Sea_Raider",
@@ -38138,31 +36553,20 @@ itm_spear_p,
 
     itm_hide_boots,
 
-      ],
+    ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills, nord_face_young_1, nord_face_old_2
-     ],
-
-
-
-
-
-
+  ],
 ################################################################################
 
-
-
-
-
-
   ["steppe_bandit",
-  "Sicarius Orientis",
-  "Sicarii Orientis",
+   "Sicarius Orientis",
+   "Sicarii Orientis",
     ###### "Steppe Bandit",
     ###### "Steppe Bandits",
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse|tf_guarantee_ranged|tf_mounted,0,0,
     fac_outlaws,
     [
-itm_spear_d,
+    itm_spear_d,
     itm_spear_e,
     itm_spear_f,
     itm_spear_h,
@@ -38306,104 +36710,58 @@ itm_spear_d,
 
   ["black_khergit_horseman","Black Khergit Horseman","Black Khergit Horsemen",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse,0,0,fac_kingdom_3,
    [itm_arrows,itm_sword_khergit_2,itm_scimitar,itm_scimitar,itm_winged_mace,itm_spear_f,itm_lance,itm_khergit_bow,itm_khergit_bow,itm_nomad_bow,itm_nomad_bow,itm_steppe_cap,itm_nomad_cap,itm_khergit_war_helmet,itm_khergit_war_helmet,itm_hide_boots,itm_saddle_horse,itm_steppe_horse],
-   def_attrib|level(21),wp(100),knows_riding_3|knows_ironflesh_3|knows_horse_archery_3|knows_power_draw_3,khergit_face_young_1, khergit_face_old_2],
+   def_attrib|level(21),wp(100),knows_riding_3|knows_ironflesh_3|knows_horse_archery_3|knows_power_draw_3,khergit_face_young_1, khergit_face_old_2
+  ],
 
   ["manhunter","Manhunter","Manhunters",tf_guarantee_armor,0,0,fac_manhunters,
    [itm_spiked_mace,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_woolen_hose,itm_wrapping_boots,itm_sumpter_horse],
-   def_attrib|level(15),wp(120),knows_common,bandit_face1, bandit_face2],
-#######  ["deserter","Deserter","Deserters",tf_guarantee_boots|tf_guarantee_armor,0,0,fac_swadian_deserters,
-#######   [itm_arrows,itm_spear_i,itm_fighting_pick,itm_short_bow,itm_sword,itm_voulge,itm_nordic_shield,itm_round_shield,itm_maciejowski_kettle_hat,itm_leather_cap,itm_narf_gambeson,itm_gambeson_a,itm_saddle_horse],
-#######   def_attrib|level(12),wp(60),knows_common,bandit_face1, bandit_face2],
-
-#fac_slavers
-#######  ["slave_keeper","Slave Keeper","Slave Keepers",tf_guarantee_armor,0,0,fac_slavers,
-#######   [itm_cudgel,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_leather_boots,itm_wrapping_boots,itm_sumpter_horse],
-#######   def_attrib|level(60),wp(60),knows_common,bandit_face1, bandit_face2],
-  ###### ["slave_driver","Slave Driver","Slave Drivers",tf_guarantee_armor,0,0,fac_slavers,
-   ###### [itm_spiked_mace,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_woolen_hose,itm_wrapping_boots,itm_sumpter_horse],
-   ###### def_attrib|level(14),wp(80),knows_common,bandit_face1, bandit_face2],
-  ###### ["slave_hunter","Slave Hunter","Slave Hunters",tf_guarantee_armor,0,0,fac_slavers,
-   ###### [itm_winged_mace,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_woolen_hose,itm_wrapping_boots,itm_sumpter_horse],
-   ###### def_attrib|level(18),wp(90),knows_common,bandit_face1, bandit_face2],
-  ###### ["slave_crusher","Slave Crusher","Slave Crushers",tf_mounted|tf_guarantee_armor|tf_guarantee_horse,0,0,fac_slavers,
-   ###### [itm_maul,itm_winged_mace,itm_leather_vest,itm_nordic_shield,itm_woolen_hose,itm_leather_boots,itm_saddle_horse],
-   ###### def_attrib|level(22),wp(110),knows_common|knows_power_strike_2,bandit_face1, bandit_face2],
-  ###### ["slaver_chief","Slaver Chief","Slaver Chiefs",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_horse,0,0,fac_slavers,
-   ###### [itm_maul,itm_winged_mace,itm_woolen_hose,itm_leather_boots,itm_hunter],
-   ###### def_attrib|level(26),wp(130),knows_common|knows_riding_3|knows_power_strike_3,bandit_face1, bandit_face2],
-
-#Rhodok tribal, Hunter, warrior, veteran, warchief
-
-
-
-
-
-
-######  ["undead_walker","undead_walker","undead_walkers",tf_undead|tf_allways_fall_dead,0,0,fac_undeads,
-######   [],
-######   def_attrib|level(3),wp(60),knows_common,undead_face1, undead_face2],
-######  ["undead_horseman","undead_horseman","undead_horsemen",tf_undead|tf_allways_fall_dead|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_horse,0,0,fac_undeads,
-######   [],
-######   def_attrib|level(19),wp(100),knows_common,undead_face1, undead_face2],
-######  ["undead_nomad","undead_nomad","undead_nomads",tf_undead|tf_allways_fall_dead|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse,0,0,fac_kingdom_3,
-######   [],
-######   def_attrib|level(21),wp(100),knows_common|knows_riding_4,khergit_face1, khergit_face2],
-######  ["undead","undead","undead",tf_undead|tf_allways_fall_dead,0,0,fac_undeads,
-######   [],
-######   def_attrib|level(3),wp(60),knows_common,undead_face1, undead_face2],
-######  ["hell_knight","hell_knight","hell_knights",tf_undead|tf_allways_fall_dead|tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,0,0,fac_undeads,
-######   [],
-######   def_attrib|level(23),wp(100),knows_common|knows_riding_3,undead_face1, undead_face2],
-
-
-
+   def_attrib|level(15),wp(120),knows_common,bandit_face1, bandit_face2
+  ],
+  
   ["follower_woman","Camp Follower","Camp Follower",tf_female|tf_guarantee_armor,0,0,fac_commoners,
    [itm_bolts,itm_light_crossbow,itm_short_bow,itm_crossbow,itm_nordic_shield,itm_hide_covered_round_shield,itm_hatchet,itm_raf_one_handed_axe_f,itm_fighting_pick,itm_club,itm_peasant_dress, itm_wrapping_boots],
-   def_attrib|level(5),wp(60),knows_common,refugee_face1,refugee_face2],
+   def_attrib|level(5),wp(60),knows_common,refugee_face1,refugee_face2
+  ],
+  
   ["hunter_woman","Huntress","Huntresses",tf_female|tf_guarantee_armor,0,0,fac_commoners,
    [itm_bolts,itm_arrows,itm_light_crossbow,itm_short_bow,itm_crossbow,itm_nordic_shield,itm_hide_covered_round_shield,itm_hatchet,itm_raf_one_handed_axe_f,itm_fighting_pick,itm_club,itm_peasant_dress,  itm_wrapping_boots],
-   def_attrib|level(60),wp(90),knows_common,refugee_face1,refugee_face2],
+   def_attrib|level(60),wp(90),knows_common,refugee_face1,refugee_face2
+  ],
+  
   ["fighter_woman","Camp Defender","Camp Defenders",tf_female|tf_guarantee_boots|tf_guarantee_armor,0,0,fac_commoners,
    [itm_bolts,itm_arrows,itm_light_crossbow,itm_short_bow,itm_crossbow,itm_hide_covered_round_shield,itm_hatchet,itm_leather_jerkin,itm_leather_vest,  itm_wrapping_boots],
-   def_attrib|level(16),wp(120),knows_common|knows_riding_3|knows_athletics_2|knows_ironflesh_1,refugee_face1,refugee_face2],
+   def_attrib|level(16),wp(120),knows_common|knows_riding_3|knows_athletics_2|knows_ironflesh_1,refugee_face1,refugee_face2
+  ],
+  
   ["sword_sister","Sword Sister","Sword Sisters",tf_female|tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_gloves|tf_guarantee_shield|tf_guarantee_horse,0,0,fac_commoners,
    [itm_bolts,itm_sword_type_xiii,itm_sword_khergit_3,itm_tab_shield_small_round_c, itm_crossbow,itm_coat_of_plates,itm_vik_norman_helmet_a,itm_courser,itm_leather_gloves],
-   def_attrib|level(22),wp(160),knows_common|knows_riding_5|knows_athletics_3|knows_ironflesh_2|knows_shield_2,refugee_face1,refugee_face2],
+   def_attrib|level(22),wp(160),knows_common|knows_riding_5|knows_athletics_3|knows_ironflesh_2|knows_shield_2,refugee_face1,refugee_face2
+  ],
 
   ["refugee","Refugee","Refugees",tf_female|tf_guarantee_armor,0,0,fac_commoners,
    [itm_knife,itm_pitch_fork,itm_sickle,itm_hatchet,itm_club,itm_peasant_dress,itm_robe, itm_headcloth, itm_1257_hood, itm_wrapping_boots],
-   def_attrib|level(1),wp(45),knows_common,refugee_face1,refugee_face2],
+   def_attrib|level(1),wp(45),knows_common,refugee_face1,refugee_face2
+  ],
+  
   ["peasant_woman","Peasant Woman","Peasant Women",tf_female|tf_guarantee_armor,0,0,fac_commoners,
    [itm_knife,itm_pitch_fork,itm_sickle,itm_hatchet,itm_club,itm_peasant_dress, itm_headcloth, itm_1257_hood, itm_wrapping_boots],
-   def_attrib|level(1),wp(40),knows_common,refugee_face1,refugee_face2],
+   def_attrib|level(1),wp(40),knows_common,refugee_face1,refugee_face2
+  ],
 
 
   ["caravan_master","Caravan Master","Caravan Masters",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse,0,0,fac_commoners,
    [itm_sword_type_xiv,itm_fur_coat,itm_hide_boots,itm_saddle_horse,
     itm_saddle_horse,itm_saddle_horse,itm_saddle_horse,
     itm_leather_jacket, itm_leather_cap],
-   def_attrib|level(9),wp(100),knows_common|knows_riding_4|knows_ironflesh_3,mercenary_face_1, mercenary_face_2],
+   def_attrib|level(9),wp(100),knows_common|knows_riding_4|knows_ironflesh_3,mercenary_face_1, mercenary_face_2
+  ],
 
   ["kidnapped_girl","Kidnapped Girl","Kidnapped Girls",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_commoners,
    [itm_peasant_dress,itm_leather_boots],
-   def_attrib|level(2),wp(50),knows_common|knows_riding_2,woman_face_1, woman_face_2],
-
-
-
+   def_attrib|level(2),wp(50),knows_common|knows_riding_2,woman_face_1, woman_face_2
+  ],
 
 ############################################# NEW v1.8/2.1 - CWE TROOPS
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -38473,2394 +36831,6 @@ itm_spear_d,
 
   ["guide","Quick Jimmy","Quick Jimmy",tf_hero, no_scene,0,  fac_commoners,[itm_coarse_tunic,itm_hide_boots],def_attrib|level(2),wp(20),knows_inventory_management_10, 0x00000000000c318301f24e38a36e38e3],
 ###### Ryan END
-
-    # ["teutonic_messenger",
-     # "Deutschordens-Bote",
-     # "Deutschordens-Boten",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_sword_type_xii,
-
-    # itm_kau_padded_mail_a,
-    # itm_padded_cloth,
-
-
-
-    # itm_woolen_hose,
-
-    # itm_leather_gloves,
-
-    # itm_courser,
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["teutonic_deserter",
-     # "Deutschordens-Deserteur",
-     # "Deutschordens-Deserteure",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_bolts,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-
-    # itm_sword_type_xiv,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xii,
-
-    # itm_wooden_shield,
-
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_hunter,
-
-    # itm_teu_kettle_hat_a,
-    # itm_teu_kettle_hat_b,
-
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["teutonic_prison_guard",
-     # "Deutschordens-Kerkerwache",
-     # "Deutschordens-Kerkerwachen",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_teu_kettle_hat_a_mail,
-    # itm_teu_kettle_hat_b,
-    # itm_teu_sariant_mail,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["teutonic_castle_guard",
-     # "Deutschordens-Burgwache",
-     # "Deutschordens-Burgwachen",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_teu_kettle_hat_a_mail,
-    # itm_teu_kettle_hat_b,
-
-    # itm_teu_hbrother_mail,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  #POLAND
-
-    ###### Polish troops
-
-    # ["polish_messenger",
-     # "Polish_Messenger",
-     # "Polish_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_sword_type_xii,
-    # itm_kau_padded_mail_a,
-
-    # itm_woolen_hose,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["polish_deserter",
-     # "Polish_Deserter",
-     # "Polish_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_sword_type_xii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-    # itm_padded_coif,
-    # itm_leather_cap,
-    # itm_arming_cap,
-    # itm_1257_hood,
-    # itm_elm2,
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["polish_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_b,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-
-
-
-    # itm_lapcie,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["polish_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_maciejowski_kettle_hat_a,
-
-
-
-
-
-    # itm_lapcie,
-
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-  #
-  ######         Poland ends
-  #
-  ####################################
-
-
-  ####################################
-  #
-  ######         Lithuania begins
-  #
-
-    ##### Lithuanian troops
-# [
-     # "lithuanian_messenger",
-     # "Lithuanian_Messenger",
-     # "Lithuanian_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_2,
-    # [
-
-      #### itm_sword_viking_2_small,
-      #### itm_sword_viking_1,
-    # itm_sword_viking_2,
-    # itm_baltic_sword,
-    # itm_baltic_sword_b,
-
-      #### itm_balt_gambeson, DrTomas thinks padded should be used insted
-    # itm_balt_padded_b,  #DrTomas added
-    # itm_lapcie,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["lithuanian_deserter",
-     # "Lithuanian_Deserter",
-     # "Lithuanian_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    #### itm_bolts, DrTomas revision2
-        ##### itm_light_crossbow, DrTomas revision2
-        ##### itm_hunting_crossbow, DrTomas revision2
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-
-    # itm_sword_viking_2_small,
-    # itm_sword_viking_1,
-    # itm_sword_viking_2,
-    # itm_baltic_sword,
-    # itm_baltic_sword_b,
-
-      #### itm_tab_shield_kite_c, DrTomas dislikes triangles
-      #### itm_tab_shield_kite_c, DrTomas dislikes triangles
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-
-    # itm_tribal_warrior_outfit,
-      #### itm_balt_gambeson, DrTomas thinks padded should be used insted
-    # itm_balt_padded_a,  #DrTomas added
-    # itm_balt_padded_b,  #DrTomas added
-    # itm_leather_vest,
-    # itm_hide_boots,
-      #### itm_vaegir_spiked_helmet, #DrTomas ponders is this obsolete?
-      #### itm_vaegir_fur_helmet,  #DrTomas ponders is this obsolete?
-      #### itm_vaegir_fur_cap,  #DrTomas ponders is this obsolete?
-    # itm_nomad_cap,
-
-    # itm_lapcie,
-
-        ##### itm_padded_coif, DrTomas revision2
-    # itm_footman_helmet,
-    # itm_balt_spiked_helmet, #DrTomas revision2
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-            ##### DrTomas revision2
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["lithuanian_prison_guard",
-     # "Kalėjimo sargybinis",
-     # "Kalėjimo sargybiniai",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_2,
-    # [
-    # itm_lit_pavise_a_3,
-    # itm_lit_pavise_b_3,
-    # itm_lit_pavise_c_3,
-    # itm_lit_pavise_d_3,
-    # itm_lit_pavise_e_3,
-    # itm_lit_pavise_f_3,
-    # itm_lit_pavise_g_3,
-    # itm_lit_pavise_h_3,
-
-
-      #### itm_sword_viking_2_small,
-      #### itm_sword_viking_1,
-      #### itm_sword_viking_2,
-    # itm_baltic_sword,
-    # itm_baltic_sword_b,
-
-    # itm_raf_mail_chausses,
-    # itm_leather_gloves,
-
-    # itm_balt_helmet_a,
-    # itm_balt_helmet_b,
-    # itm_balt_helmet_c,
-
-
-    # itm_lapcie,
-
-    # itm_lamellar_vest,
-    # itm_scale_shirt_a,
-
-    # itm_kau_lit_mail,
-
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["lithuanian_castle_guard",
-     # "Pilies sargybinis",
-     # "Pilies sargybiniai",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_2,
-    # [
-      #### itm_tab_shield_kite_c, DrTomas dislikes triangles
-      #### itm_tab_shield_kite_c, DrTomas dislikes triangles
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_balt_helmet_a,
-    # itm_balt_helmet_b,
-    # itm_balt_helmet_c,
-
-
-    # itm_wrapping_boots,
-    # itm_lapcie,
-
-    # itm_balt_lamellar_vest_a,
-
-      #### itm_sword_viking_2_small,
-      #### itm_sword_viking_1,
-      #### itm_sword_viking_2,
-    # itm_baltic_sword,
-    # itm_baltic_sword_b,
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         Lithuania ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         HRE begins
-  
-
-    ##### HRE troops
-
-    # ["hre_messenger",
-     # "HRE_Messenger",
-     # "HRE_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_sword_type_xii,
-
-    # itm_kau_padded_mail_a,
-
-    # itm_woolen_hose,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["hre_deserter",
-     # "HRE_Deserter",
-     # "HRE_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_sword_type_xii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-
-    # itm_maciejowski_kettle_hat_b,
-
-    # itm_mail_coif,
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["hre_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_maciejowski_kettle_hat_a,
-
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["hre_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_maciejowski_kettle_hat_b,
-
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         HRE ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         Hungary begins
-  
-
-    ##### Hungarian troops
-
-    # ["hungarian_messenger",
-     # "Hungarian_Messenger",
-     # "Hungarian_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_sword_type_xii,
-
-    # itm_kau_padded_mail_a,
-
-    # itm_woolen_hose,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["hungarian_deserter",
-     # "Hungarian_Deserter",
-     # "Hungarian_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_sword_type_xii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-    # itm_maciejowski_kettle_hat_a,
-
-
-    # itm_mail_coif,
-    # itm_vik_spangen_a,
-    # itm_vik_spangen_b,
-    # itm_vik_norman_helmet_a,
-    # itm_vik_norman_helmet_c,
-    # itm_vik_norman_helmet_e,
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["hungarian_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_maciejowski_kettle_hat_b,
-
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["hungarian_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_maciejowski_kettle_hat_a,
-
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         Hungary ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         Novgorod begins
-  
-
-    ##### Russian troops
-
-    # ["russian_messenger",
-     # "Russian_Messenger",
-     # "Russian_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_8,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_kau_rus_tunic_a,
-    # itm_kau_rus_tunic_b,
-    # itm_kau_rus_tunic_c,
-
-    # itm_lapcie,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["russian_deserter",
-     # "Russian_Deserter",
-     # "Russian_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-    # itm_sword_type_xii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-
-    # itm_kau_rus_e,
-    # itm_kau_rus_tunic_a,
-    # itm_kau_rus_tunic_b,
-    # itm_kau_rus_tunic_c,
-    # itm_linen_tunic,
-
-    # itm_lapcie,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["russian_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_8,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-    # itm_sword_type_xiii,
-
-    # itm_rus_boots_a,
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-    # itm_ankle_boots,
-    # itm_kau_rus_mail_shirt_a,
-    # itm_kau_rus_mail_shirt_b,
-    # itm_rus_mail_shirt_c,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["russian_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_8,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_maciejowski_kettle_hat_a,
-
-
-    # itm_wrapping_boots,
-    # itm_ankle_boots,
-
-    # itm_kau_rus_mail_shirt_a,
-    # itm_kau_rus_mail_shirt_b,
-    # itm_rus_mail_shirt_c,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         Novgorod ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         Denmark begins
-  
-    # ["danish_messenger",
-     # "Northern_Messenger",
-     # "Northern_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_kau_padded_mail_a,
-
-    # itm_courser,
-    # itm_leather_gloves,
-
-    # itm_woolen_hose,
-    # itm_hunter
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(133) | wp_two_handed(144) | wp_polearm(151) | wp_archery(137) | wp_crossbow(147) | wp_throwing(148),
-    # knows_common | knows_horse_archery_5 | knows_riding_7 | knows_power_draw_5,
-    # nord_face_young_1, nord_face_older_2
-    # ],
-
-
-    # ["danish_deserter",
-     # "Northern_Deserter",
-     # "Northern_Deserters",
-    # tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_sword_type_xii,
-    # itm_arrows,
-    # itm_spiked_mace,
-    # itm_raf_two_handed_axe_a,
-    # itm_falchion,
-    # itm_short_bow,
-
-    # itm_hunting_bow,
-
-    # itm_steppe_cap,
-    # itm_nomad_cap,
-    # itm_leather_vest,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_woolen_hose,
-    ##### itm_norman_helmet,
-    # itm_raf_spangen,
-    # itm_tab_shield_round_a,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-    # itm_tab_shield_round_c,
-    # itm_tab_shield_round_a,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_heater_c,
-    # itm_maciejowski_kettle_hat_b,
-    # itm_woolen_hose,
-    # itm_ankle_boots,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    ##### itm_norman_helmet,
-    # itm_raf_spangen,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_bolts
-    # ],
-    # str_15 | agi_5 | int_4 | cha_4 | level(14),
-    # wp_one_handed(91) | wp_two_handed(93) | wp_polearm(85) | wp_archery(94) | wp_crossbow(81) | wp_throwing(82),
-    # knows_power_draw_1 | knows_ironflesh_1,
-    # nord_face_young_1, nord_face_older_2
-    # ],
-
-
-    # ["danish_prison_guard",
-    # "Fángavǫrður",
-    # "Fangaverðir",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_a,
-
-    # itm_tab_shield_heater_c,
-    # itm_woolen_hose,
-    # itm_sword_type_xii,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_morningstar,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-    # itm_raf_mail_chausses,
-
-
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(135) | wp_two_handed(131) | wp_polearm(136) | wp_archery(142) | wp_crossbow(140) | wp_throwing(143),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # nord_face_middle_1, nord_face_older_2
-    # ],
-
-
-    # ["danish_castle_guard",
-     # "Dyravǫrður",
-     # "Dýraverðir",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_raf_two_handed_axe_a,
-    # itm_raf_one_handed_axe_d,
-
-    # itm_maciejowski_kettle_hat_a,
-    # itm_leather_gloves,
-    # itm_sword_type_xiii,
-    # itm_glaive,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_woolen_hose,
-    # itm_tab_shield_heater_c,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-    # itm_raf_mail_chausses,
-
-
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(149) | wp_two_handed(139) | wp_polearm(131) | wp_archery(150) | wp_crossbow(130) | wp_throwing(136),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # nord_face_middle_1, nord_face_older_2
-    # ],
-
-  
-  #####         Denmark ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         England begins
-  
-
-    ##### english troops
-
-    # ["english_messenger",
-     # "english_Messenger",
-     # "english_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_kau_padded_mail_a,
-
-    # itm_woolen_hose,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["english_deserter",
-     # "english_Deserter",
-     # "english_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_spear_d,
-# itm_spear_e,
-# itm_spear_f,
-# itm_spear_h,
-# itm_spear_j,
-# itm_spear_k,
-# itm_spear_l,
-# itm_spear_m,
-# itm_spear_n,
-# itm_spear_o,
-# itm_spear_p,
-    # itm_sword_type_xiii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_kau_padded_mail_a,
-
-    # itm_maciejowski_kettle_hat_b,
-
-
-    # itm_mail_coif,
-    # itm_vik_spangen_a,
-    # itm_vik_spangen_b,
-    # itm_vik_norman_helmet_a,
-    # itm_vik_norman_helmet_c,
-    # itm_vik_norman_helmet_e,
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["english_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_maciejowski_kettle_hat_a,
-
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["english_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_b,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-    # itm_splinted_greaves_long,
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         England ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         France begins
-  
-
-    ##### french troops
-
-    # ["french_messenger",
-     # "french_Messenger",
-     # "french_Messengers",
-     # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_kau_padded_mail_a,
-
-    # itm_woolen_hose,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["french_deserter",
-     # "french_Deserter",
-     # "french_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-
-# itm_spear_d,
-# itm_spear_e,
-# itm_spear_f,
-# itm_spear_h,
-# itm_spear_j,
-# itm_spear_k,
-# itm_spear_l,
-# itm_spear_m,
-# itm_spear_n,
-# itm_spear_o,
-# itm_spear_p,
-
-        # itm_sword_type_xiii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-
-    # itm_maciejowski_kettle_hat_a,
-
-
-    # itm_mail_coif,
-    # itm_vik_spangen_a,
-    # itm_vik_spangen_b,
-    # itm_vik_norman_helmet_a,
-    # itm_vik_norman_helmet_c,
-    # itm_vik_norman_helmet_e,
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["french_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_b,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["french_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_a,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         France ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         Sweden begins
-  
-
-    ##### swedish troops
-
-    # ["swedish_messenger",
-     # "Northern_Messenger",
-     # "Northern_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_kau_padded_mail_a,
-    # itm_sword_type_xiii,
-    # itm_courser,
-    # itm_leather_gloves,
-
-    # itm_woolen_hose,
-    # itm_hunter
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(133) | wp_two_handed(144) | wp_polearm(151) | wp_archery(137) | wp_crossbow(147) | wp_throwing(148),
-    # knows_common | knows_horse_archery_5 | knows_riding_7 | knows_power_draw_5,
-    # nord_face_young_1, nord_face_older_2
-    # ],
-
-
-    # ["swedish_deserter",
-     # "Northern_Deserter",
-     # "Northern_Deserters",
-    # tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-
-    # itm_sword_type_xiii,
-    # itm_arrows,
-    # itm_spiked_mace,
-    # itm_raf_two_handed_axe_a,
-    # itm_falchion,
-    # itm_short_bow,
-    # itm_short_bow,
-    # itm_hunting_bow,
-
-    # itm_leather_vest,
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-    # itm_woolen_hose,
-    ##### itm_norman_helmet,
-    # itm_tab_shield_round_a,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-    # itm_tab_shield_round_c,
-    # itm_tab_shield_round_a,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-    # itm_maciejowski_kettle_hat_b,
-    # itm_woolen_hose,
-    # itm_ankle_boots,
-    ##### itm_norman_helmet,
-    # itm_raf_spangen,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_bolts
-    # ],
-    # str_15 | agi_5 | int_4 | cha_4 | level(14),
-    # wp_one_handed(91) | wp_two_handed(93) | wp_polearm(85) | wp_archery(94) | wp_crossbow(81) | wp_throwing(82),
-    # knows_power_draw_1 | knows_ironflesh_1,
-    # nord_face_young_1, nord_face_older_2
-    # ],
-
-
-    # ["swedish_prison_guard",
-     # "Fángavǫrður",
-     # "Fangaverðir",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_leather_gloves,
-
-    # itm_tab_shield_heater_c,
-    # itm_woolen_hose,
-    # itm_sword_type_xii,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_morningstar,
-    # itm_tab_shield_heater_c,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-
-    # itm_raf_mail_chausses,
-
-
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(135) | wp_two_handed(131) | wp_polearm(136) | wp_archery(142) | wp_crossbow(140) | wp_throwing(143),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # nord_face_middle_1, nord_face_older_2
-    # ],
-
-
-    # ["swedish_castle_guard",
-     # "Dyravǫrður",
-     # "Dýraverðir",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_raf_two_handed_axe_a,
-    # itm_raf_one_handed_axe_d,
-
-    # itm_leather_gloves,
-    # itm_sword_type_xiii,
-    # itm_glaive,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_woolen_hose,
-    # itm_tab_shield_heater_c,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-    # itm_raf_mail_chausses,
-
-
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(149) | wp_two_handed(139) | wp_polearm(131) | wp_archery(150) | wp_crossbow(130) | wp_throwing(136),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # nord_face_middle_1, nord_face_older_2
-    # ],
-
-  
-  #####         Sweden ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         Norway begins
-  
-
-    ##### norwegian troops
-
-    # ["norwegian_messenger",
-     # "Northern_Messenger",
-     # "Northern_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xiii,
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_kau_padded_mail_a,
-    # itm_courser,
-    # itm_leather_gloves,
-
-    # itm_woolen_hose,
-    # itm_hunter
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(133) | wp_two_handed(144) | wp_polearm(151) | wp_archery(137) | wp_crossbow(147) | wp_throwing(148),
-    # knows_common | knows_horse_archery_5 | knows_riding_7 | knows_power_draw_5,
-    # nord_face_young_1, nord_face_older_2
-    # ],
-
-
-    # ["norwegian_deserter",
-     # "Northern_Deserter",
-     # "Northern_Deserters",
-    # tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-
-    # itm_sword_type_xiii,
-    # itm_arrows,
-    # itm_spiked_mace,
-    # itm_raf_two_handed_axe_a,
-    # itm_falchion,
-    # itm_short_bow,
-    # itm_short_bow,
-    # itm_hunting_bow,
-
-    # itm_leather_vest,
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-    # itm_woolen_hose,
-    ##### itm_norman_helmet,
-    # itm_tab_shield_round_a,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_round_c,
-    # itm_tab_shield_round_c,
-    # itm_tab_shield_round_a,
-    # itm_tab_shield_round_b,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-    # itm_maciejowski_kettle_hat_a,
-    # itm_woolen_hose,
-    # itm_ankle_boots,
-    # itm_spear_d,
-    ##### itm_norman_helmet,
-    # itm_raf_spangen,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_bolts
-    # ],
-    # str_15 | agi_5 | int_4 | cha_4 | level(14),
-    # wp_one_handed(91) | wp_two_handed(93) | wp_polearm(85) | wp_archery(94) | wp_crossbow(81) | wp_throwing(82),
-    # knows_power_draw_1 | knows_ironflesh_1,
-    # nord_face_young_1, nord_face_older_2
-    # ],
-
-
-    # ["norwegian_prison_guard",
-     # "Fángavǫrður",
-     # "Fangaverðir",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_b,
-    # itm_tab_shield_heater_c,
-    # itm_woolen_hose,
-    # itm_sword_type_xii,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_morningstar,
-    # itm_tab_shield_heater_c,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-    # itm_raf_mail_chausses,
-
-
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(135) | wp_two_handed(131) | wp_polearm(136) | wp_archery(142) | wp_crossbow(140) | wp_throwing(143),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # nord_face_middle_1, nord_face_older_2
-    # ],
-
-
-    # ["norwegian_castle_guard",
-     # "Dyravǫrður",
-     # "Dýraverðir",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_raf_two_handed_axe_a,
-    # itm_raf_one_handed_axe_d,
-    # itm_maciejowski_kettle_hat_b,
-    # itm_leather_gloves,
-    # itm_sword_type_xiii,
-    # itm_glaive,
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_woolen_hose,
-    # itm_tab_shield_heater_c,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-    # itm_raf_mail_chausses,
-
-
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(149) | wp_two_handed(139) | wp_polearm(131) | wp_archery(150) | wp_crossbow(130) | wp_throwing(136),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # nord_face_middle_1, nord_face_older_2
-    # ],
-  
-  #####         Norway ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         Scotland begins
-  
-
-    ##### scottish troops
-
-    # ["scottish_messenger",
-     # "Scottish_Messenger",
-     # "Scottish_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_kau_padded_mail_a,
-
-    # itm_woolen_hose,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["scottish_deserter",
-     # "Scottish_Deserter",
-     # "Scottish_Deserters",
-    # tf_guarantee_ranged | tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-# itm_spear_d,
-# itm_spear_e,
-# itm_spear_f,
-# itm_spear_h,
-# itm_spear_j,
-# itm_spear_k,
-# itm_spear_l,
-# itm_spear_m,
-# itm_spear_n,
-# itm_spear_o,
-# itm_spear_p,
-
-    # itm_sword_type_xiii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-
-    # itm_maciejowski_kettle_hat_b,
-
-
-    # itm_mail_coif,
-    # itm_vik_spangen_a,
-    # itm_vik_spangen_b,
-    # itm_vik_norman_helmet_a,
-    # itm_vik_norman_helmet_b,
-    # itm_vik_norman_helmet_c,
-    # itm_vik_norman_helmet_e,
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["scottish_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_a,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["scottish_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_b,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         Scotland ends
-  
-  ###################################
-
-  ###################################
-  
-  #####         England begins
-  
-
-    ##### irish troops
-
-    # ["irish_messenger",
-     # "Irish_Messenger",
-     # "Irish_Messengers",
-    # tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_sword_type_xii,
-
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-    # itm_kau_padded_mail_a,
-
-    # itm_woolen_hose,
-    # itm_courser,
-
-    # itm_leather_gloves,
-
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(132) | wp_two_handed(152) | wp_polearm(134) | wp_archery(147) | wp_crossbow(148) | wp_throwing(147),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["irish_deserter",
-     # "Irish_Deserter",
-     # "Irish_Deserters",
-    # tf_mounted | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_spear_d,
-    # itm_spear_e,
-    # itm_spear_f,
-    # itm_spear_h,
-    # itm_spear_j,
-    # itm_spear_k,
-    # itm_spear_l,
-    # itm_spear_m,
-    # itm_spear_n,
-    # itm_spear_o,
-    # itm_spear_p,
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-
-    # itm_tab_shield_kite_c,
-    # itm_tab_shield_kite_c,
-    # itm_sword_type_xiii,
-    # itm_bolts,
-    # itm_crusade_bolt,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_light_crossbow,
-    # itm_hunting_crossbow,
-    # itm_club,
-    # itm_military_scythe,
-    # itm_wooden_shield,
-    # itm_linen_tunic,
-    # itm_coarse_tunic,
-    # itm_gambeson_a,
-    # itm_gambeson_b,
-    # itm_gambeson_c,
-    # itm_gambeson_d,
-
-    # itm_maciejowski_kettle_hat_a,
-
-
-    # itm_mail_coif,
-    # itm_vik_spangen_a,
-    # itm_vik_spangen_b,
-    # itm_vik_norman_helmet_a,
-    # itm_vik_norman_helmet_b,
-    # itm_vik_norman_helmet_c,
-    # itm_vik_norman_helmet_e,
-
-    # itm_woolen_hose,
-    # itm_padded_coif,
-    # itm_footman_helmet,
-    # itm_sumpter_horse,
-    # itm_saddle_horse,
-    # itm_hunter,
-
-
-    # ],
-    # def_attrib | level(14),
-    # wp_one_handed(90) | wp_two_handed(81) | wp_polearm(95) | wp_archery(91) | wp_crossbow(83) | wp_throwing(89),
-    # knows_common | knows_riding_3 | knows_ironflesh_1,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["irish_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_a,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-
-    # itm_kau_mail_a,
-    # itm_kau_mail_b,
-    # itm_kau_mail_shirt_a,
-    # itm_kau_mail_shirt_b,
-    # itm_kau_mail_shirt_c,
-    # itm_kau_mail_shirt_d,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(137) | wp_two_handed(145) | wp_polearm(155) | wp_archery(140) | wp_crossbow(151) | wp_throwing(134),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-
-
-    # ["irish_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_kingdom_1,
-    # [
-    # itm_tab_shield_heater_c,
-    # itm_tab_shield_heater_c,
-    # itm_sword_type_xiii,
-    # itm_raf_mail_chausses,
-
-    # itm_leather_gloves,
-    # itm_maciejowski_kettle_hat_b,
-
-    # itm_footman_helmet,
-    # itm_skullcap,
-
-    # itm_wrapping_boots,
-    # itm_woolen_hose,
-
-    # itm_veteran_surcoat_a,
-    # itm_veteran_surcoat_b,
-    # itm_veteran_surcoat_c,
-    # itm_veteran_surcoat_d,
-    # itm_veteran_surcoat_e,
-
-    # itm_sword_type_xii,
-    # itm_sword_type_xiii,
-    # itm_sword_type_xiv
-    # ],
-    # def_attrib | level(25),
-    # wp_one_handed(143) | wp_two_handed(145) | wp_polearm(151) | wp_archery(136) | wp_crossbow(144) | wp_throwing(130),
-    # knows_common | knows_power_strike_3 | knows_ironflesh_3,
-    # nord_face_young_1, swadian_face_old_2
-    # ],
-  
-  #####         Ireland ends
-  
-  ###################################
-
-
-
-    # ["tatar_messenger",
-     # "Mongol_Messenger",
-     # "Mongol_Messengers",
-    # tf_guarantee_ranged | tf_mounted | tf_guarantee_gloves | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
-    # 0, 0, fac_neutral,
-    # [
-    # itm_sword_khergit_2,
-    # itm_nomad_armor,
-    # itm_leather_boots,
-    # itm_courser,
-
-    # itm_leather_gloves,
-    # itm_short_bow,
-
-        # itm_arrows,
-    # ],
-    # str_7 | agi_21 | int_4 | cha_4 | level(25),
-    # wp_one_handed(138) | wp_two_handed(144) | wp_polearm(135) | wp_archery(144) | wp_crossbow(143) | wp_throwing(149),
-    # knows_common | knows_horse_archery_5 | knows_riding_7,
-    # mong_face_1, mong_face_2
-    # ],
-
-
-    # ["tatar_deserter",
-     # "Mongol_Deserter",
-     # "Mongol_Deserters",
-    # tf_guarantee_ranged | tf_guarantee_armor | tf_guarantee_boots,
-    # 0, 0, fac_deserters,
-    # [
-    # itm_arrows,
-    # itm_spiked_mace,
-    # itm_raf_two_handed_axe_a,
-    # itm_sword_khergit_1,
-
-    # itm_short_bow,
-    # itm_hunting_bow,
-
-    # itm_javelin,
-    # itm_steppe_cap,
-    # itm_nomad_cap,
-    # itm_leather_vest,
-
-    # itm_nomad_armor,
-    # itm_hide_boots,
-    # ],
-    # str_15 | agi_5 | int_4 | cha_4 | level(14),
-    # wp_one_handed(89) | wp_two_handed(86) | wp_polearm(80) | wp_archery(90) | wp_crossbow(80) | wp_throwing(93),
-    # knows_power_draw_1 | knows_ironflesh_1 | knows_power_throw_1,
-    # mong_face_1, mong_face_2
-    # ],
-
-
-    # ["tatar_prison_guard",
-     # "Prison_Guard",
-     # "Prison_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_neutral,
-    # [
-    # itm_sword_khergit_3,
-    # itm_tab_shield_small_round_b,
-    # itm_tab_shield_small_round_a,
-    # itm_tribal_warrior_outfit,
-    # itm_lamellar_vest,
-    # itm_hide_boots,
-    # itm_mongol_helmet_a,
-    # itm_mongol_helmet_b,
-    # itm_mongol_helmet_c,
-    # itm_leather_boots
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(138) | wp_two_handed(137) | wp_polearm(140) | wp_archery(152) | wp_crossbow(131) | wp_throwing(151),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # mong_face_1, mong_face_2
-    # ],
-
-
-    # ["tatar_castle_guard",
-     # "Castle_Guard",
-     # "Castle_Guards",
-    # tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    # 0, 0, fac_neutral,
-    # [
-    # itm_sword_khergit_4,
-    # itm_tab_shield_small_round_b,
-    # itm_tab_shield_small_round_a,
-    # itm_lamellar_vest,
-    # itm_hide_boots,
-    # itm_leather_boots,
-    # itm_mongol_warrior_a,
-
-    # ],
-    # def_attrib | level(24),
-    # wp_one_handed(130) | wp_two_handed(131) | wp_polearm(140) | wp_archery(146) | wp_crossbow(130) | wp_throwing(151),
-    # knows_athletics_3 | knows_ironflesh_3,
-    # mong_face_1, mong_face_2
-    # ],
-
-   # ["sarranid_messenger","Saracen Messenger","Saracen Messengers",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_gloves|tf_guarantee_horse,0,0,fac_kingdom_1,
-   # [itm_lance,itm_arabian_sword_b,itm_scimitar_b,itm_mace_4,itm_tab_shield_small_round_b,
-    # itm_sarranid_mail_shirt,itm_raf_mail_chausses,itm_courser,itm_hunter],
-   # def_attrib|level(20),wp_melee(100),knows_common|knows_riding_4|knows_ironflesh_2|knows_shield_2|knows_power_strike_3,arab_face_1, arab_face_2],
-  # ["sarranid_deserter","Saracen Deserter","Saracen Deserters",tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor,0,0,fac_deserters,
-   # [itm_lance,itm_arabian_sword_b,itm_scimitar_b,itm_mace_4,itm_tab_shield_small_round_b,
-    # itm_sarranid_mail_shirt,itm_raf_mail_chausses,itm_turban_a,itm_arabian_horse_a,itm_kau_arab_aketon_blue,itm_kau_arab_aketon,itm_sarranid_mail_coif, ],
-   # def_attrib|level(20),wp_melee(100),knows_common|knows_riding_4|knows_ironflesh_2|knows_shield_2|knows_power_strike_3,arab_face_1, arab_face_2],
-  # ["sarranid_prison_guard","Prison Guard","Prison Guards",tf_guarantee_shield|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,0,0,fac_kingdom_1,
-   # [itm_arabian_sword_b,itm_scimitar_b,itm_spear_i,itm_mace_4,itm_sarranid_boots_c,itm_arabian_armor_b,itm_sarranid_mail_coif,itm_sarranid_horseman_helmet,itm_kau_mail_boots_dark_long,itm_mail_mittens,itm_leather_gloves,itm_tab_shield_kite_c],
-   # def_attrib|level(25),wp_melee(135)|wp_throwing(100),knows_common|knows_shield_3|knows_ironflesh_3|knows_power_strike_3,arab_face_1, arab_face_2],
-  ##### ["sarranid_castle_guard","Castle Guard","Castle Guards",tf_guarantee_shield|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,0,0,fac_kingdom_1,
-   ##### [itm_arabian_sword_b,itm_scimitar_b,itm_spear_i,itm_mace_4,itm_sarranid_boots_c, itm_sarranid_boots_d_long,itm_arabian_armor_b,itm_sarranid_mail_coif,itm_sarranid_helmet1,itm_sarranid_horseman_helmet,itm_kau_mail_boots_dark_long,itm_mail_mittens,itm_leather_gloves,itm_tab_shield_kite_c],
-   ##### def_attrib|level(25),wp_melee(135)|wp_throwing(100),knows_common|knows_shield_3|knows_ironflesh_3|knows_power_strike_3,arab_face_1, arab_face_2],
-
-########################################################################
-
-
 
 
   ["Xerina",
@@ -43438,7 +39408,7 @@ itm_spear_d,
 
 
 #governers olgrel rasevas                                                                        Horse          Bodywear                Footwear_in                     Footwear_out                    Armor                       Weapon                  Shield                  Headwaer
-    ["kingdom_1_lord",
+  ["kingdom_1_lord",
      "Anno_von_Sangershausen,Hochmeister des Deutschen Ordens",
      "Anno_von_Sangershausen",
     tf_hero,
@@ -43472,10 +39442,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x00000009e91025d350d46327b08cb87700000000001e21350000000000000000
-    ],
+  ],
 
 
-    ["kingdom_2_lord",
+  ["kingdom_2_lord",
      "Karalius_Mindaugas",
      "Mindaugas",
     tf_hero,
@@ -43505,10 +39475,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000d8b0424422694abeb794d4ff900000000001f96e50000000000000000,
-    ],
+  ],
 
 
-    ["kingdom_3_lord",
+  ["kingdom_3_lord",
      "Berke Khan",
      "Berke",
     tf_hero,
@@ -43532,10 +39502,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000e0210838d73fecdfd1cac092100000000001fdd750000000000000000,
-    ],
+  ],
 
 
-    ["kingdom_4_lord",
+  ["kingdom_4_lord",
      "Cristofær Konung",
      "Cristofær",
     tf_hero,
@@ -43563,10 +39533,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x00000001860c10064ae57546d778d6eb00000000001cc7190000000000000000
-    ],
+  ],
 
 
-    ["kingdom_5_lord",
+  ["kingdom_5_lord",
      "Książe_Bolesław_V_Wstydliwy",
      "Książe_Bolesław",
     tf_hero,
@@ -43595,10 +39565,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000e080454492c9c46caf1b6b3ab00000000001ea72c0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_6_lord",
+  ["kingdom_6_lord",
      "Richard von Cornvall, König des heiligen römischen Reiche",
      "Richard von Cornwall",
     tf_hero,
@@ -43626,10 +39596,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x000000020005114146dc734d1b4612c900000000001db8990000000000000000
-    ],
+  ],
 
 
-    ["kingdom_7_lord",
+  ["kingdom_7_lord",
      "King_B"+e_kreska+"la_IV",
      "Bela",
     tf_hero,
@@ -43657,10 +39627,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000e5e1052c9251a5646da9146ce00000000001fa3430000000000000000
-    ],
+  ],
 
 
-    ["kingdom_8_lord",
+  ["kingdom_8_lord",
      "Grand_Duke_Alexander_Nevski",
      "Alexander Nevski",
     tf_hero,
@@ -43689,10 +39659,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000d890d1341419b41eedb04053200000000001f88dc0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lord",
+  ["kingdom_9_lord",
      "Henry III of England",
      "King Henry III",
     tf_hero,
@@ -43721,10 +39691,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x00000000240411413b6385e92a9da8ff00000000001d44c50000000000000000
-    ],
+  ],
 
 
-    ["kingdom_10_lord",
+  ["kingdom_10_lord",
      "King_Louis_IX",
      "King_Louis",
     tf_hero,
@@ -43753,10 +39723,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x000000003f0920092ae847ffb33827ff00000000001db11d0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_11_lord",
+  ["kingdom_11_lord",
      "Hákon Konungr Hákonarson",
      "Hákon Hákonarson",
     tf_hero,
@@ -43783,10 +39753,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000fff10014938e37538e279c8a500000000001cb69c0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_12_lord",
+  ["kingdom_12_lord",
      "Alaxandair III mac Alaxandair, King of Scots",
      "Alaxandair mac Alaxandair",
     tf_hero,
@@ -43814,10 +39784,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000e020052d3685b45677132101b000000000015151e0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_13_lord",
+  ["kingdom_13_lord",
      "Brian O'Neill, King of Tir Eoghain ",
      "Brian",
     tf_hero,
@@ -43842,10 +39812,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000e000032924d64756965d2972600000000001d42e30000000000000000
-    ],
+  ],
 
 
-    ["kingdom_14_lord",
+  ["kingdom_14_lord",
      "Birger Jarl",
      "Birger",
     tf_hero,
@@ -43872,10 +39842,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000ec0006012232b6bfed5aee52200000000001d14a30000000000000000
-    ],
+  ],
 
 
-    ["kingdom_15_lord",
+  ["kingdom_15_lord",
      "Velikyj_Knyaz_Daniil_Halyckij",
      "Daniil_Halyckij",
     tf_hero,
@@ -43903,10 +39873,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x000000086a04114937234dc263dac6db00000000000546e50000000000000000
-    ],
+  ],
 
 
-    ["kingdom_16_lord",
+  ["kingdom_16_lord",
      "Afonso III de Portugal",
      "Afonso III",
     tf_hero,
@@ -43933,10 +39903,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x000000084004358168e68a484b921c4d00000000001da3140000000000000000
-    ],
+  ],
 
 
-    ["kingdom_17_lord",
+  ["kingdom_17_lord",
      "Chaime lo Conqueridor, Rei de Aragón",
      "Chaime lo Conqueridor",
     tf_hero,
@@ -43964,10 +39934,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000fc00005c65b9b85dc7c9228de00000000001e90950000000000000000
-    ],
+  ],
 
 
-    ["kingdom_18_lord",
+  ["kingdom_18_lord",
      "Alfonso X de Castilla, llamado el Sabio",
      "Alfonso X",
     tf_hero,
@@ -43994,10 +39964,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x00000008400430093ced91eadb4dc6ec00000000001d06d50000000000000000
-    ],
+  ],
 
 
-    ["kingdom_19_lord",
+  ["kingdom_19_lord",
      "Teobaldo II de Navarra",
      "Teobaldo II de Navarra",
     tf_hero,
@@ -44024,10 +39994,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000def00600f4ad67559186dc51e00000000001fb19c0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_20_lord",
+  ["kingdom_20_lord",
      "Sultan Mohammed I Ibn Nasr",
      "Mohammed I Ibn Nasr",
     tf_hero|tf_guarantee_helmet,
@@ -44052,10 +40022,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000dfc0cb34f271c6a36eb92202300000000001cb3620000000000000000
-    ],
+  ],
 
 
-    ["pope",
+  ["pope",
      "Pope Alexander IV",
      "Alexander IV",
     tf_hero,
@@ -44112,10 +40082,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x000000067f0d2181419b41eedb04053200000000001fc8dc0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_23_lord",
+  ["kingdom_23_lord",
      "Jean d'Ibelin, baili du royaume de Jérusalem",
      "Jean d'Ibelin",
     tf_hero,
@@ -44145,10 +40115,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x00000007c008400175e9877e9b6dcdef00000000001d811c0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_24_lord",
+  ["kingdom_24_lord",
      "Manfredi di Sicilia,Rei di Sicilia",
      "Manfredi di Sicilia",
     tf_hero,
@@ -44175,10 +40145,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000ebf0002465b9b85d55c9228de00000000001f90950000000000000000
-    ],
+  ],
 
 
-    ["kingdom_25_lord",
+  ["kingdom_25_lord",
      "Sultan Izz al-Din Aybak",
      "Izz al-Din Aybak",
     tf_hero|tf_guarantee_helmet,
@@ -44213,10 +40183,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000e0008c24175e9877e9b6dcdef00000000001d811c0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_26_lord",
+  ["kingdom_26_lord",
      "Baudouin II de Courtenay,empereur de Constantinople",
      "Baudouin II",
     tf_hero,
@@ -44243,10 +40213,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x000000001c00114127233536622ea85b00000000001f52de0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_27_lord",
+  ["kingdom_27_lord",
      "Hulagu Khan",
      "Hulagu",
     tf_hero,
@@ -44269,10 +40239,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000fda0ca10037fc6db6db60060000000000001db6db0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_28_lord",
+  ["kingdom_28_lord",
      "Khalif Muhammad I al-Mustansir",
      "Muhammad I al-Mustansir",
     tf_hero|tf_guarantee_helmet,
@@ -44300,10 +40270,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000fda0cb34037fc6ddedb60060000000000001db6db0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_29_lord",
+  ["kingdom_29_lord",
      "Kralj Stefan Uroš Nemanjić",
      "Stefan Uroš Nemanjić",
     tf_hero,
@@ -44330,10 +40300,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000dda0c234037fc6ddedb60060000000000001db6db0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_30_lord",
+  ["kingdom_30_lord",
      "Tsar Constantine Tikh",
      "Constantine Tikh",
     tf_hero,
@@ -44360,10 +40330,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000c470c51c0371881dedb05b1ff00000000001f809b0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_31_lord",
+  ["kingdom_31_lord",
      "Sultan Abu Yahya ibn Abd al-Haqq",
      "Abu Yahya ibn Abd al-Haqq",
     tf_hero|tf_guarantee_helmet,
@@ -44392,10 +40362,9 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000c470cb1c0371881dedb05b1ff00000000001f809b0000000000000000
-    ],
+  ],
 
-[
-     "kingdom_32_lord",
+  ["kingdom_32_lord",
      "Dodge Ranieri Zen",
      "Dodge Ranieri Zen",
     tf_hero,
@@ -44421,9 +40390,9 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000ffc052112172a6a58a4719c1400000000001cb05b0000000000000000
-    ],
+  ],
 
-    ["kingdom_33_lord",
+  ["kingdom_33_lord",
      "Vyriausias Jotvingių Kunigas Skolmantas",
      "Skolmantas",
     tf_hero,
@@ -44452,10 +40421,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000aee005447735c3646e692a45e00000000001db0e40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_34_lord",
+  ["kingdom_34_lord",
      "Gruntauktimmis Nadruva Kunegikis Piws",
      "Piws",
     tf_hero,
@@ -44481,10 +40450,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000000006049735c3646e692a45e00000000001fb0e40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_35_lord",
+  ["kingdom_35_lord",
      "Dižukilis Enguris",
      "Enguris",
     tf_hero,
@@ -44512,10 +40481,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000b1801144f735c3646e692a45e00000000001fb0e40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_36_lord",
+  ["kingdom_36_lord",
      "Vyriausias Žemaičių Kunigas Alminas",
      "Alminas",
     tf_hero,
@@ -44540,10 +40509,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000b18000054735c3646e692a45e00000000001fb0e40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_37_lord",
+  ["kingdom_37_lord",
      "Tywysog Cymru Llywelyn ap Gruffydd",
      "Llywelyn ap Gruffydd",
     tf_hero,
@@ -44571,9 +40540,9 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000b26000441735c9646e68ea45e00000000001fd0900000000000000000
-    ],
+  ],
 
-    ["kingdom_38_lord",
+  ["kingdom_38_lord",
      "Capitano del Popolo Guglielmo Boccanegra",
      "Capitano del Popolo Guglielmo Boccanegra",
     tf_hero,
@@ -44600,10 +40569,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000b260025c5735c9646e68ea45e00000000001fd0900000000000000000
-    ],
+  ],
 
 
-    ["kingdom_39_lord",
+  ["kingdom_39_lord",
      "Podestà Ricciardo de Villa",
      "Podestà Ricciardo de Villa",
     tf_hero,
@@ -44629,10 +40598,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000e400055c511628246e68ea45e00000000001e81100000000000000000
-    ],
+  ],
 
 
-    ["kingdom_40_lord",
+  ["kingdom_40_lord",
      "Martino della Torre",
      "Martino della Torre",
     tf_hero,
@@ -44658,10 +40627,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x000000003400600145016e5974562adc00000000001de6cd0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_41_lord",
+  ["kingdom_41_lord",
      "Signore Ezzelino III da Romano",
      "Ezzelino III da Romano",
     tf_hero,
@@ -44686,10 +40655,10 @@ itm_spear_d,
     lord_wp,
     lord_skills,
     0x0000000ca00c201458e34dca61a4bb5100000000001c33520000000000000000
-    ],
+  ],
 
 
-    ["kingdom_42_lord",
+  ["kingdom_42_lord",
      "Přemysl_Otakar_II_,_Král_Český_a_Vévoda_Rakouský",
      "Přemysl Otakar II",
     tf_hero,
@@ -44715,7 +40684,7 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000a470d258974a345ca61a4bb5100000000001c33d20000000000000000
-    ],
+  ],
 
     ###### [
         ###### "kingdom_34_lord",
@@ -44750,7 +40719,7 @@ itm_spear_d,
 
 ###### Teutonic
 
-    ["knight_1_1",
+  ["knight_1_1",
      "Deutschmeister_Konrad_von_Nurnburg ",
      "Konrad_von_Nurnburg ",
     tf_hero,
@@ -44773,10 +40742,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000fdc08328e68fa84dae56aa8e300000000001c825a0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_2",
+  ["knight_1_2",
      "Landmeister_Dietrich von Grüningen",
      "Dietrich von Grüningen",
     tf_hero,
@@ -44798,10 +40767,10 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000c760065d314eb8e5ae379835b000000000009baa90000000000000000
-    ],
+  ],
 
 
-    ["knight_1_3",
+  ["knight_1_3",
      "Landmeister_Burkhard_von_Hornhausen ",
      "Burkhard_von_Hornhausen ",
     tf_hero,
@@ -44823,10 +40792,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000c4004528912f6691f6052131400000000001d032c0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_4",
+  ["knight_1_4",
      "Komtur_Hartmann_von_Heldrungen ",
      "Hartmann_von_Heldrungen ",
     tf_hero,
@@ -44854,10 +40823,10 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000c5c00610936e26d292cb1b2d800000000001d230a0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_5",
+  ["knight_1_5",
      "Komtur_Georg_von_Eichstatt ",
      "Georg_von_Eichstatt ",
     tf_hero,
@@ -44881,10 +40850,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000c550c35c9389a66a4e36ab99a00000000001e36a20000000000000000
-    ],
+  ],
 
 
-    ["knight_1_6",
+  ["knight_1_6",
      "Komtur_Konrad_Welzo",
      "Konrad_Welzo",
     tf_hero,
@@ -44908,10 +40877,10 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000c560435c944a2b0eb1a70c51200000000001c872a0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_7",
+  ["knight_1_7",
      "Albert II Suerbeer, Erzbischof von Riga ",
      "Erzbischof von Riga ",
     tf_hero,
@@ -44934,10 +40903,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000fca0c600946a399c714aec4d300000000000a25660000000000000000
-    ],
+  ],
 
 
-    ["knight_1_8",
+  ["knight_1_8",
      "Ritterbrüder Konrad von Feuchtwangen ",
      "Konrad von Feuchtwangen ",
     tf_hero,
@@ -44960,10 +40929,10 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x00000006160865ce46da763ccb4ea4b200000000001d54dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_9",
+  ["knight_1_9",
      "Ordensmarschall Heinrich Botel",
      "Heinrich Botel ",
     tf_hero,
@@ -44986,10 +40955,10 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x0000000eaf00600e3924a4b2d259356200000000001e46730000000000000000
-    ],
+  ],
 
 
-    ["knight_1_10",
+  ["knight_1_10",
      "Komtur Werner Graf von Battenberg und Wittgenstein",
      "Graf von Battenberg",
     tf_hero,
@@ -45016,10 +40985,10 @@ itm_spear_d,
     knight_wp_2,
     knight_skills_2,
     0x0000000eb90000096c8e6a1773c48cca00000000001245a10000000000000000
-    ],
+  ],
 
 
-    ["knight_1_11",
+  ["knight_1_11",
      "Heinrich,Bischof von Ösel-Wiek  ",
      "Bischof von Ösel-Wiek ",
     tf_hero,
@@ -45043,10 +41012,10 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x0000000eaf005349286389d4cb75b76100000000001dc2530000000000000000
-    ],
+  ],
 
 
-    ["knight_1_12",
+  ["knight_1_12",
      "Anselm von Meißen, Bischof von Ermland ",
      "Bischof von Ermland ",
     tf_hero,
@@ -45067,10 +41036,10 @@ itm_spear_d,
     knight_wp_2,
     knight_skills_2,
     0x000000018f04658e26d264b759b2d8eb00000000001ca84b0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_13",
+  ["knight_1_13",
      "Bernhard I, Bischof von Dorpat",
      "Bischof von Dorpat",
     tf_hero,
@@ -45093,10 +41062,10 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x0000000ea00cb01226d43cc8eb85232d00000000001e376a0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_14",
+  ["knight_1_14",
      "Johann von Bardewis, Herr von Uexküll und Gerzike ",
      "Herr von Uexküll",
     tf_hero,
@@ -45119,10 +41088,10 @@ itm_spear_d,
     knight_wp_2,
     knight_skills_2,
     0x0000000e8d04600e3d696ad4dc71b69400000000001ec4a40000000000000000
-    ],
+  ],
 
 
-    ["knight_1_15",
+  ["knight_1_15",
      "Magister_Livoniae_Werner_von_Wenden",
      "Werner_von_Wenden ",
     tf_hero,
@@ -45145,7 +41114,7 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x0000000f410d15ce38a251e8a04d176100000000001d34b50000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_1_16",
@@ -45276,7 +41245,7 @@ itm_spear_d,
 
     ###### Lithuania
 
-    ["knight_2_1",
+  ["knight_2_1",
      "Kunigas_Tautvilas",
      "Tautvilas",
     tf_hero,
@@ -45298,10 +41267,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000ffa0411441701b628ec76d6f300000000001348620000000000000000
-    ],
+  ],
 
 
-    ["knight_2_2",
+  ["knight_2_2",
      "Kunigas_Treniota",
      "Treniota",
     tf_hero,
@@ -45326,10 +41295,10 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000fdc1023094aa5ab66a49ec5bb00000000000e48e20000000000000000
-    ],
+  ],
 
 
-    ["knight_2_3",
+  ["knight_2_3",
      "Kunigas_Gardenis",
      "Gardenis",
     tf_hero,
@@ -45355,10 +41324,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000fec0864ca58f37627292d277100000000001e5af20000000000000000
-    ],
+  ],
 
 
-    ["knight_2_4",
+  ["knight_2_4",
      "Kunigas_Erdvilas",
      "Erdvilas",
     tf_hero,
@@ -45386,7 +41355,7 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000fde1042894aa9b644b5b1f91a00000000001ee11e0000000000000000
-    ],
+  ],
 
     [
     "knight_2_5",
@@ -45413,10 +41382,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000ffd04334b14a57216b466379c000000000006a71d0000000000000000
-    ],
+  ],
 
 
-    ["knight_2_6",
+  ["knight_2_6",
      "Kunigas_Ligeikis",
      "Ligeikis",
     tf_hero,
@@ -45445,10 +41414,10 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000fda08214539438536b2b0bc21000000000009a7290000000000000000
-    ],
+  ],
 
 
-    ["knight_2_7",
+  ["knight_2_7",
      "Kristijonas, Bishop of Lithuania",
      "Kristijonas",
     tf_hero,
@@ -45475,10 +41444,10 @@ itm_spear_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000fd810400e47934549a2eec8e500000000001ea48a0000000000000000
-    ],
+  ],
 
 
-    ["knight_2_8",
+  ["knight_2_8",
      "Kunigas_Replys",
      "Replys",
     tf_hero,
@@ -45503,10 +41472,10 @@ itm_spear_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000b1508220756da72baec7264cb00000000001f29960000000000000000
-    ],
+  ],
 
 
-    ["knight_2_9",
+  ["knight_2_9",
      "Kunigas_Gerstukas",
      "Gerstukas",
     tf_hero,
@@ -45531,10 +41500,10 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x0000000b121004c758e494c5356a189a00000000001ed9ac0000000000000000
-    ],
+  ],
 
 
-    ["knight_2_10",
+  ["knight_2_10",
      "Kunigas_Traidenis",
      "Traidenis",
     tf_hero,
@@ -45561,10 +41530,10 @@ itm_spear_d,
     knight_wp_2,
     knight_skills_2,
     0x0000000b3604000a165c8cb71398b2d200000000001ca28d0000000000000000
-    ],
+  ],
 
     ###RUS BASTARD
-    ["knight_2_11",
+  ["knight_2_11",
      "Knyaz Fyodor Vladimirovich",
      "Fyodor Vladimirovich",
     tf_hero,
@@ -45588,10 +41557,10 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x0000000b270c6182490a8626a36dc79e000000000005a9950000000000000000
-    ],
+  ],
 
     ###RUS BASTARD
-    ["knight_2_12",
+  ["knight_2_12",
      "Knyaz Yuriy Vladimirovich",
      "Yuriy Vladimirovich",
     tf_hero,
@@ -45614,10 +41583,10 @@ itm_spear_d,
     knight_wp_2,
     knight_skills_2,
     0x0000000b310802d0296476f4e3d9b6d900000000001db7610000000000000000
-    ],
+  ],
 
     ###RUS BASTARD
-    ["knight_2_13",
+  ["knight_2_13",
      "Knyaz Izyaslav Svislochskiy",
      "Izyaslav Svislochskiy",
     tf_hero,
@@ -45640,9 +41609,9 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x00000000430c2591641b57178d2a38aa00000000001fe69c0000000000000000
-    ],
+  ],
     ###RUS BASTARD
-    ["knight_2_14",
+  ["knight_2_14",
      "Knyaz Vasilko Bryachislavovich",
      "Vasilko Bryachislavovich",
     tf_hero,
@@ -45665,10 +41634,10 @@ itm_spear_d,
     knight_wp_2,
     knight_skills_2,
     0x0000000048081009389756a68948c71600000000001d9b1a0000000000000000
-    ],
+  ],
 
     ###RUS BASTARD
-    ["knight_2_15",
+  ["knight_2_15",
      "Knyaz Konstantin Bryachislavovich",
      "Konstantin Bryachislavovich",
     tf_hero,
@@ -45690,7 +41659,7 @@ itm_spear_d,
     knight_wp_3,
     knight_skills_3,
     0x000000000308505127346dec9b91255900000000001f26e40000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_2_16",
@@ -45820,7 +41789,7 @@ itm_spear_d,
     ###### ],
 
     ###### Mongols
-    ["knight_3_1",
+  ["knight_3_1",
      "Möngke Khan",
      "Möngke Khan",
     tf_hero,
@@ -45840,16 +41809,16 @@ itm_spear_d,
     itm_arrows,
     itm_tab_shield_small_round_c,
 
-itm_khergit_war_helmet,
+    itm_khergit_war_helmet,
     ],
     knight_attrib_5,
     knight_wp_5,
     knight_skills_5,
     0x000000097d0481d262b36dc11755c6d300000000001da7230000000000000000, khergit_face_middle_2
-    ],
+  ],
 
 
-    ["knight_3_2",
+  ["knight_3_2",
      "Negudar Noyan",
      "Negudar",
     tf_hero,
@@ -45875,10 +41844,10 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0xc280461004929b334ad632aa200000000001e05120000000000000000, khergit_face_old_2
-    ],
+  ],
 
 
-    ["knight_3_3",
+  ["knight_3_3",
      "Toqa-Temur Noyan",
      "Toqa-Temur",
     tf_hero,
@@ -45891,7 +41860,7 @@ itm_khergit_war_helmet,
     itm_mon_lamellar_b,
     itm_hide_boots,
     itm_mon_lamellar_b,
-itm_light_lance,
+    itm_light_lance,
     itm_khergit_bow,
     itm_arrows,
     itm_mon_lamellar_b,
@@ -45903,10 +41872,10 @@ itm_light_lance,
     knight_wp_5,
     knight_skills_5,
     0x00000009680c8590272552473151e6aa00000000001dc5ab0000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_4",
+  ["knight_3_4",
      "Balaghai Noyan",
      "Balaghai",
     tf_hero,
@@ -45928,10 +41897,10 @@ itm_light_lance,
     knight_wp_4,
     knight_skills_4,
     0x00000005aa108341385390accc958adb00000000001cb9b50000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_5",
+  ["knight_3_5",
      "Tartu-bagatur",
      "Tartu",
     tf_hero,
@@ -45945,7 +41914,7 @@ itm_light_lance,
     itm_hide_boots,
     itm_kau_mail_boots_dark_long,
 
-itm_khergit_war_helmet,
+    itm_khergit_war_helmet,
     itm_sword_khergit_3,
     itm_tab_shield_small_round_c,
     itm_warhorse,
@@ -45955,10 +41924,10 @@ itm_khergit_war_helmet,
     knight_wp_5,
     knight_skills_5,
     0x0000000435108210672a713691b362b300000000001dd4aa0000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_6",
+  ["knight_3_6",
      "Negudar Noyan",
      "Negudar",
     tf_hero,
@@ -45981,10 +41950,10 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0x00000006f608838338dd5656e47644db00000000001ec2b40000000000000000, khergit_face_middle_2
-    ],
+  ],
 
 
-    ["knight_3_7",
+  ["knight_3_7",
      "Baidar Noyan",
      "Baidar",
     tf_hero,
@@ -45998,7 +41967,7 @@ itm_khergit_war_helmet,
     itm_hide_boots,
 
     itm_mon_lamellar_a,
-itm_khergit_war_helmet,
+    itm_khergit_war_helmet,
     itm_sword_khergit_3,
     itm_tab_shield_small_round_c,
     itm_mon_lamellar_a,
@@ -46007,10 +41976,10 @@ itm_khergit_war_helmet,
     knight_wp_5,
     knight_skills_5,
     0x0000000ca210859338548618148a466500000000001d65660000000000000000, khergit_face_old_2
-    ],
+  ],
 
 
-    ["knight_3_8",
+  ["knight_3_8",
      "Kadan_Noyan",
      "Kadan",
     tf_hero,
@@ -46032,10 +42001,10 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0x0000000c9b10858718ee62469536a75100000000001dc3a20000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_9",
+  ["knight_3_9",
      "Buigek_Noyan",
      "Buigek",
     tf_hero,
@@ -46048,7 +42017,7 @@ itm_khergit_war_helmet,
     itm_mon_lamellar_b,
     itm_leather_boots,
     itm_mon_lamellar_b,
-itm_khergit_guard_helmet,
+    itm_khergit_guard_helmet,
     itm_scimitar,
     itm_tab_shield_small_round_c,
     itm_lance,
@@ -46057,10 +42026,10 @@ itm_khergit_guard_helmet,
     knight_wp_5,
     knight_skills_5,
     0x00000006e80881c34d7369d6936dc8ea00000000001e49540000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_10",
+  ["knight_3_10",
      "Bukdai_Noyan",
      "Bukdai",
     tf_hero,
@@ -46073,7 +42042,7 @@ itm_khergit_guard_helmet,
     itm_lamellar_vest,
     itm_hide_boots,
     itm_mon_lamellar_b,
-itm_khergit_war_helmet,
+    itm_khergit_war_helmet,
     itm_sword_khergit_4,
     itm_shortened_military_scythe,
     itm_mon_lamellar_b,
@@ -46083,10 +42052,10 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0x000000091c0481c438a58dfac4cdb6ab00000000001e52cb0000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_11",
+  ["knight_3_11",
      "Baidar_Noyan",
      "Baidar",
     tf_hero,
@@ -46110,10 +42079,10 @@ itm_khergit_war_helmet,
     knight_wp_5,
     knight_skills_5,
     0x000000076410858943133dd4c161b90c00000000001e78a40000000000000000, khergit_face_middle_2
-    ],
+  ],
 
 
-    ["knight_3_12",
+  ["knight_3_12",
      "Tangut_Noyan",
      "Tangut",
     tf_hero,
@@ -46137,10 +42106,10 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0x00000002a908828f12adb248a379269600000000001e39230000000000000000, khergit_face_old_2
-    ],
+  ],
 
 
-    ["knight_3_13",
+  ["knight_3_13",
      "Shiban_Noyan",
      "Shiban",
     tf_hero,
@@ -46163,10 +42132,10 @@ itm_khergit_war_helmet,
     knight_wp_5,
     knight_skills_5,
     0x00000005f40882cc185eda675b76498e00000000001da6ac0000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_14",
+  ["knight_3_14",
      "Berkecher Noyan",
      "Berkecher",
     tf_hero,
@@ -46190,10 +42159,10 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0x000000089d1085d32ad48ce88e91cd6900000000001f54740000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_15",
+  ["knight_3_15",
      "Nogai_Noyan",
      "Nogai",
     tf_hero,
@@ -46215,10 +42184,10 @@ itm_khergit_war_helmet,
     knight_wp_5,
     knight_skills_5,
     0x000000043000838346fc34a48b2d1b2200000000001ccc610000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_16",
+  ["knight_3_16",
      "Kuremsa_Noyan",
      "Kuremsa",
     tf_hero,
@@ -46231,7 +42200,7 @@ itm_khergit_war_helmet,
     itm_mon_lamellar_a,
     itm_hide_boots,
 
-itm_khergit_guard_helmet,
+    itm_khergit_guard_helmet,
     itm_leather_gloves,
     itm_sword_khergit_4,
     itm_khergit_bow,
@@ -46242,10 +42211,10 @@ itm_khergit_guard_helmet,
     knight_wp_4,
     knight_skills_4,
     0x000000041a0885012b5c59c9ac59d73500000000001d36e30000000000000000, khergit_face_middle_2
-    ],
+  ],
 
 
-    ["knight_3_17",
+  ["knight_3_17",
      "Nevrui_Noyan",
      "Nevrui",
     tf_hero,
@@ -46258,7 +42227,7 @@ itm_khergit_guard_helmet,
     itm_courser,
     itm_leather_vest,
     itm_leather_boots,
-itm_khergit_guard_helmet,
+    itm_khergit_guard_helmet,
     itm_leather_gloves,
     itm_long_axe,
     itm_khergit_bow,
@@ -46270,10 +42239,10 @@ itm_khergit_guard_helmet,
     knight_wp_3,
     knight_skills_3,
     0x000000037a0c804b265ad8ba936da51a00000000001db15c0000000000000000, khergit_face_old_2
-    ],
+  ],
 
 
-    ["knight_3_18",
+  ["knight_3_18",
      "Takudar_Noyan",
      "Takudar",
     tf_hero,
@@ -46299,10 +42268,10 @@ itm_khergit_guard_helmet,
     knight_wp_2,
     knight_skills_2,
     0x000000036e0c851062518e488c6d495100000000001a47a90000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_19",
+  ["knight_3_19",
      "Koidan_Noyan",
      "Koidan",
     tf_hero,
@@ -46324,10 +42293,10 @@ itm_khergit_guard_helmet,
     knight_wp_3,
     knight_skills_3,
     0x000000037e108391355971492ad2f934000000000011c74b0000000000000000, khergit_face_older_2
-    ],
+  ],
 
 
-    ["knight_3_20",
+  ["knight_3_20",
      "Voivode Litovoi",
      "Litovoi",
     tf_hero,
@@ -46353,7 +42322,7 @@ itm_khergit_guard_helmet,
     knight_wp_2,
     knight_skills_2,
     0x000000075c0c000339ae0356c847376e00000000001346db0000000000000000, khergit_face_older_2
-    ],
+  ],
 
     ###### [
         ###### "knight_3_21",
@@ -46926,7 +42895,7 @@ itm_khergit_guard_helmet,
     ###### ],
 
   ###### Denmark
-    ["knight_4_1",
+  ["knight_4_1",
      "Præfectus Waldemar aff Slæswich",
      "Waldemar aff Slæswich",
     tf_hero,
@@ -46948,23 +42917,23 @@ itm_khergit_guard_helmet,
     knight_wp_5,
     knight_skills_5,
     0x0000000fe1104005690a7132ea89b96d00000000001cb7550000000000000000
-    ],
+  ],
 
 
-    ["knight_4_2",
+  ["knight_4_2",
      "Dux Erek I Abselsøn aff Holtsteinælande",
      "Erek I Abselsøn aff Holtsteinælande",
     tf_hero,
     0, 0, fac_kingdom_4,
     [
 
-itm_bishop_great_helm,
+    itm_bishop_great_helm,
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
     itm_bishop_a,
     itm_warhorse_denmark_a,
     itm_bishop_a,
-itm_heraldic_lance,
+    itm_heraldic_lance,
     itm_talak_warhammer,
     itm_tab_shield_heater_cav_b,
     ],
@@ -46972,10 +42941,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x0000000fc000300936546e87b452d91100000000001eb6ee0000000000000000
-    ],
+  ],
 
 
-    ["knight_4_3",
+  ["knight_4_3",
      "Ærchibiscop Jacob Erlandsøn",
      "Jacob Erlandsøn",
     tf_hero,
@@ -46998,10 +42967,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x0000000fde0c500e15167963a3c9b7a100000000001ea21a0000000000000000
-    ],
+  ],
 
 
-    ["knight_4_4",
+  ["knight_4_4",
      "Dux Anders Erlandsøn hin Hwithæ",
      "Anders Erlandsøn hin Hwithæ",
     tf_hero,
@@ -47023,10 +42992,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x0000000fd704310a46a959a71c71bcdb00000000001e14ca0000000000000000
-    ],
+  ],
 
 
-    ["knight_4_5",
+  ["knight_4_5",
      "Biscop Petr Skjalmsøn Bang",
      "Petr Skjalmsøn Bang",
     tf_hero,
@@ -47050,10 +43019,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x0000000fff04100e62e24ac6a36e42ad00000000001f38530000000000000000
-    ],
+  ],
 
 
-    ["knight_4_6",
+  ["knight_4_6",
      "Stigr Andersøn hin Hwithæ",
      "Andersøn hin Hwithæ",
     tf_hero,
@@ -47075,10 +43044,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x0000000ffb0065457b5d796a9d79d8e5000000000015eb250000000000000000
-    ],
+  ],
 
 
-    ["knight_4_7",
+  ["knight_4_7",
      "Þyge Bost",
      "Þyge Bost",
     tf_hero,
@@ -47101,10 +43070,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x00000007591010042c9c6e1b928f382300000000001d28db0000000000000000
-    ],
+  ],
 
 
-    ["knight_4_8",
+  ["knight_4_8",
      "Jon Ranæsøn hin Hwithæ",
      "Jon Ranæsøn hin Hwithæ",
     tf_hero,
@@ -47126,10 +43095,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x000000074d0845c932e071b51a6ea08900000000001e1d620000000000000000
-    ],
+  ],
 
 
-    ["knight_4_9",
+  ["knight_4_9",
      "Gialdkære Jakob Hafre aff Skáney",
      "Jakob Hafre aff Skáney",
     tf_hero,
@@ -47145,17 +43114,17 @@ itm_heraldic_lance,
     itm_surcoat_denmark_a,
     itm_heraldic_lance,
 
-itm_sword_type_xiv,
+    itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],
     knight_attrib_3,
     knight_wp_3,
     knight_skills_3,
     0x000000075c0c000339ae0356c847376e00000000001356db0000000000000000
-    ],
+  ],
 
 
-    ["knight_4_10",
+  ["knight_4_10",
      "Regis Danorum Marscalcus Jens Kalfr",
      "Jens Kalfr",
     tf_hero,
@@ -47177,10 +43146,10 @@ itm_sword_type_xiv,
     knight_wp_2,
     knight_skills_2,
     0x00000007661043c73b2572ab5b9738db00000000001f46730000000000000000
-    ],
+  ],
 
 
-    ["knight_4_11",
+  ["knight_4_11",
      "Ivar Þagæsøn",
      "Ivar Þagæsøn",
     tf_hero,
@@ -47202,10 +43171,10 @@ itm_sword_type_xiv,
     knight_wp_3,
     knight_skills_3,
     0x00000007750834c6491a8ac4e5c8d56b00000000001d78d30000000000000000
-    ],
+  ],
 
 
-    ["knight_4_12",
+  ["knight_4_12",
      "Dux Albrecht Dane aff Eberstein",
      "Dux Albrecht Dane aff Eberstein",
     tf_hero,
@@ -47226,10 +43195,10 @@ itm_sword_type_xiv,
     knight_wp_2,
     knight_skills_2,
     0x000000074e0c01453cec72c693669b0a00000000001db6e10000000000000000
-    ],
+  ],
 
 
-    ["knight_4_13",
+  ["knight_4_13",
      "Præfectus Jacob aff Nyrþri Hallandi",
      "Jacob aff Nyrþri Hallandi",
     tf_hero,
@@ -47250,10 +43219,10 @@ itm_sword_type_xiv,
     knight_wp_3,
     knight_skills_3,
     0x000000001f0033c959593158d46ab371000000000012cd040000000000000000
-    ],
+  ],
 
 
-    ["knight_4_14",
+  ["knight_4_14",
      "Capitaneus Revalie Saxo Ágesøn",
      "Revalie Saxo Ágesøn",
     tf_hero,
@@ -47275,10 +43244,10 @@ itm_sword_type_xiv,
     knight_wp_3,
     knight_skills_3,
     0x00000000010c13c46c5345acb3d568d400000000001e5b750000000000000000
-    ],
+  ],
 
 
-    ["knight_4_15",
+  ["knight_4_15",
      "Biscop Þorkell af Reval",
      "Þorkell af Reval",
     tf_hero,
@@ -47300,7 +43269,7 @@ itm_sword_type_xiv,
     knight_wp_2,
     knight_skills_2,
     0x000000000608004e2adb8656e558152c00000000001d352b0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_4_16",
@@ -47428,7 +43397,7 @@ itm_sword_type_xiv,
     ###### ],
 
     ###### Poland
-    ["knight_5_1",
+  ["knight_5_1",
      "Książe_Bolesław_Pobożny", ###### gniezno
      "Książe_Bolesław",
     tf_hero,
@@ -47450,10 +43419,10 @@ itm_sword_type_xiv,
     knight_wp_5,
     knight_skills_5,
     0x0000000e5308314e1754990a6c713cb200000000001db52c0000000000000000
-    ],
+  ],
 
 
-    ["knight_5_2",
+  ["knight_5_2",
     "Książę_Kazimierz_I_Kujawski", ###### kujawy mazowsze wielkopolska
      "Książę_Kazimierz",
     tf_hero,
@@ -47477,10 +43446,10 @@ itm_sword_type_xiv,
     knight_wp_4,
     knight_skills_4,
     0x0000000e7a1013ca3adb3522ab51b40c00000000001d14db0000000000000000
-    ],
+  ],
 
 
-    ["knight_5_3",
+  ["knight_5_3",
     "Książę_Władysław_Wrocławski",
      "Książę_Władysław",
     tf_hero,
@@ -47501,10 +43470,10 @@ itm_sword_type_xiv,
     knight_wp_5,
     knight_skills_5,
     0x0000000e6f0823cd25096dc6dcaed82100000000001d44d90000000000000000
-    ],
+  ],
 
 
-    ["knight_5_4",
+  ["knight_5_4",
      "Książę_Bolesław_II_Rogatka", #legnica
      "Książę_Bolesław",
     tf_hero,
@@ -47530,10 +43499,10 @@ itm_sword_type_xiv,
     knight_wp_4,
     knight_skills_4,
     0x0000000e7f04159336d4abc6ed70b55c00000000001f4a9b0000000000000000
-    ],
+  ],
 
 
-    ["knight_5_5",
+  ["knight_5_5",
      "Ksiąze_Władysław_I_Opolski", ###### opole
      "Ksiąze_Władysław",
     tf_hero,
@@ -47556,10 +43525,10 @@ itm_sword_type_xiv,
     knight_wp_5,
     knight_skills_5,
     0x0000000e480403523b5c6256248eb71a00000000001ca9240000000000000000
-    ],
+  ],
 
 
-    ["knight_5_6",
+  ["knight_5_6",
     "Książę_Henryk_III_Biały", ###### wroclaw
      "Książę_Henryk",
     tf_hero,
@@ -47583,10 +43552,10 @@ itm_sword_type_xiv,
     knight_wp_4,
     knight_skills_4,
     0x0000000e4004040926d4d1c51d6aa6a500000000001dcd5c0000000000000000
-    ],
+  ],
 
 
-    ["knight_5_7",
+  ["knight_5_7",
     "Książę_Świętopełk_II_Wielki", ###### gdansk
      "Książę_Świętopełk",
     tf_hero,
@@ -47599,7 +43568,7 @@ itm_sword_type_xiv,
 
     itm_rnd_surcoat_01,
 
-itm_wenceslav_helmet,
+    itm_wenceslav_helmet,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -47612,10 +43581,10 @@ itm_wenceslav_helmet,
     knight_wp_5,
     knight_skills_5,
     0x0000000e400c038634f28eb4a3295d2000000000001d08f10000000000000000
-    ],
+  ],
 
 
-    ["knight_5_8",
+  ["knight_5_8",
      "Książę_Siemowit_I_Mazowiecki",
      "Książę_Siemowit",
     #####" Duke_Bolko_I", #swidnica
@@ -47642,10 +43611,10 @@ itm_wenceslav_helmet,
     knight_wp_4,
     knight_skills_4,
     0x0000000e56081585131a6e492ad4b91200000000001daac40000000000000000
-    ],
+  ],
 
 
-    ["knight_5_9",
+  ["knight_5_9",
      "Książę_Mściwój_II", ###### swiecki
      "Książę_Mściwój",
     tf_hero,
@@ -47671,10 +43640,10 @@ itm_wenceslav_helmet,
     knight_wp_3,
     knight_skills_3,
     0x0000000e47044011695b64c6d44e391a00000000001894d60000000000000000
-    ],
+  ],
 
 
-    ["knight_5_10",
+  ["knight_5_10",
      "Książę_Racibor_Białogardzki", ###### bialogard
      "Książę_Racibor",
     tf_hero,
@@ -47698,10 +43667,10 @@ itm_wenceslav_helmet,
     knight_wp_2,
     knight_skills_2,
     0x0000000e6608050a415e85c8d0b29c4800000000001cc4620000000000000000
-    ],
+  ],
 
 
-    ["knight_5_11",
+  ["knight_5_11",
     "Książę_Przemysł_I", ###### poznan
      "Książę_Przemysł",
     tf_hero,
@@ -47727,10 +43696,10 @@ itm_wenceslav_helmet,
     knight_wp_3,
     knight_skills_3,
     0x000000070b0811874b795b26db7a4c6c00000000001d56910000000000000000
-    ],
+  ],
 
 
-    ["knight_5_12",
+  ["knight_5_12",
      "Książę_Sambor_II", #lubisz tczew
      "Książę_Sambor",
     tf_hero,
@@ -47754,10 +43723,10 @@ itm_wenceslav_helmet,
     knight_wp_2,
     knight_skills_2,
     0x000000070b103209264455985b6cc5aa00000000001d13120000000000000000
-    ],
+  ],
 
 
-    ["knight_5_13",
+  ["knight_5_13",
     "Książe_Leszek_Czarny", ###### meh
      "Książe_Leszek",
     tf_hero,
@@ -47782,10 +43751,10 @@ itm_wenceslav_helmet,
     knight_wp_3,
     knight_skills_3,
     0x000000073f1021893691b1475acf556d00000000001d96890000000000000000
-    ],
+  ],
 
 
-    ["knight_5_14",
+  ["knight_5_14",
     "Książę_Konrad_I_Głogowski", #glogow
      "Książę_Konrad",
     tf_hero,
@@ -47812,10 +43781,10 @@ itm_wenceslav_helmet,
     knight_wp_2,
     knight_skills_2,
     0x000000070a10124419d45952db6eb51d000000000010c5210000000000000000
-    ],
+  ],
 
 
-    ["knight_5_15",
+  ["knight_5_15",
     " Książę_Siemomysł_Inowrocławski",
      "Książę_Siemomysł",
     tf_hero,
@@ -47831,7 +43800,7 @@ itm_wenceslav_helmet,
     itm_mail_boots_long,
 
 
-itm_wenceslav_helmet,
+    itm_wenceslav_helmet,
 
     itm_heraldic_lance,
     itm_sword_type_xii,
@@ -47841,7 +43810,7 @@ itm_wenceslav_helmet,
     knight_wp_3,
     knight_skills_3,
     0x000000072b081049248daab2dc51d55300000000001e37130000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_5_16",
@@ -47978,7 +43947,7 @@ itm_wenceslav_helmet,
 
     ###### Holy Roman Empire
 
-    ["knight_6_1",
+  ["knight_6_1",
      "Ulrich Von Lichtenstein",
      "Ulrich Von Lichtenstein",
     ###### "Přemysl_Otakar_II_,_Král_Český_a_Vévoda_Rakouský",
@@ -48001,10 +43970,10 @@ itm_wenceslav_helmet,
     knight_wp_5,
     knight_skills_5,
     0x000000070a0c0190599c6d404c49d4e100000000000c97450000000000000000
-    ],
+  ],
 
 
-    ["knight_6_2",
+  ["knight_6_2",
      "Ludwig_II_Der Stern_von Wittelsbach_Herzog_von_Oberbayern",
      "Ludwig II the Stern",
     tf_hero,
@@ -48026,10 +43995,10 @@ itm_wenceslav_helmet,
     knight_wp_4,
     knight_skills_4,
     0x00000007210000d245b370d8cb6e9ada00000000001e34dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_3",
+  ["knight_6_3",
      "Albert_I_,_Herzog_von_Sachsen",
      "Albrecht I",
     tf_hero,
@@ -48051,16 +44020,16 @@ itm_wenceslav_helmet,
     knight_wp_5,
     knight_skills_5,
     0x00000007030813d122a4ae5663b1e4d500000000001cdc5a0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_4",
+  ["knight_6_4",
      "Otto_III_der_Fromme_,_Markgraf_von_Brandenburg",
      "Otto III the Pious",
     tf_hero,
     0, 0, fac_kingdom_6,
     [
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
 
@@ -48076,10 +44045,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000071904418826928dd924ad48dc00000000001da49e0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_5",
+  ["knight_6_5",
      "Heinrich_XII_,_Herzog_von_Niederbayern",
      "Heinrich XIII",
     tf_hero,
@@ -48101,17 +44070,17 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000070f0c3382351a3a16e34e46de00000000001234890000000000000000
-    ],
+  ],
 
 
-    ["knight_6_6",
+  ["knight_6_6",
      "Heinrich_III_der_Gütige_,_Herzog_von_Brabant",
      "Heinrich III der Gütige",
     tf_hero,
     0, 0, fac_kingdom_6,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -48128,10 +44097,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000070108018937358df8527588ab000000000012cb610000000000000000
-    ],
+  ],
 
 
-    ["knight_6_7",
+  ["knight_6_7",
      "Johann_I_,_Herzog_von_Braunschweig_und_Lüneburg",
      "Johann I",
     tf_hero,
@@ -48154,10 +44123,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000070f0842066b9b31bb648b269200000000001f26ec0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_8",
+  ["knight_6_8",
      "Walram V, Herzog von Limburg",
      "Walram V",
     tf_hero,
@@ -48179,10 +44148,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000071404148347218958e18b372200000000000e20e90000000000000000
-    ],
+  ],
 
 
-    ["knight_6_9",
+  ["knight_6_9",
      "Konrad_I_der_Fromme_,_Burggraf_von_Nürnberg",
      "Konrad_I_der_Fromme",
     tf_hero,
@@ -48205,10 +44174,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000007090c140e4a8b298aee53479e00000000001dcca90000000000000000
-    ],
+  ],
 
 
-    ["knight_6_10",
+  ["knight_6_10",
      "Gerhard_I_von_Dhaun_,_Erzbischof_von_Mainz",
      "Gerhard I von Dhaun",
     tf_hero,
@@ -48232,10 +44201,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000072210408e3a5c5dcadd41c8d300000000000db79a0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_11",
+  ["knight_6_11",
      "Arnold_II_von_Isenburg_,_Erzbischof_von_Trier",
      "Arnold II von Isenburg",
     tf_hero,
@@ -48258,10 +44227,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000070f04018e3b54adb464a5b4dc00000000001e45a30000000000000000
-    ],
+  ],
 
 
-    ["knight_6_12",
+  ["knight_6_12",
      "Ulrich_III_von_Spanheim_,_Herzog_von_Kärnten_und_Herr_von_Krain",
      "Ulrich III von Spanheim",
     tf_hero,
@@ -48282,10 +44251,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x00000007040845c92b5a44e893d1baaa000000000005b74b0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_13",
+  ["knight_6_13",
      "Friedrich_III_,_Herzog_von_Lothringen",
      "Friedrich III",
     tf_hero,
@@ -48307,10 +44276,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000071b00028347a36d4d6c721964000000000012b7540000000000000000
-    ],
+  ],
 
 
-    ["knight_6_14",
+  ["knight_6_14",
      "Barnim_I_,_Herzog_von_Pommern",
      "Barnim I",
     tf_hero,
@@ -48332,10 +44301,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000007140420c432e44cb6f6685734000000000012b9090000000000000000
-    ],
+  ],
 
 
-    ["knight_6_15",
+  ["knight_6_15",
      "Gerhard_II_zur_Lippe_,_Erzbischof_von_Bremen_und_Hamburg",
      "Gebhard II of Lippe",
     tf_hero,
@@ -48357,10 +44326,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000070e0c454e38b2b6476350c61d00000000001c272b0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_16",
+  ["knight_6_16",
      "Rudolf_IV_,_Graf_von_Habsburg",
      "Rudolf IV",
     tf_hero,
@@ -48382,10 +44351,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000071f0000894926692a1173492200000000001ee72a0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_17",
+  ["knight_6_17",
      "Rudolf I_,_Markgraf_von_Baden",
      "Rudolf I",
     tf_hero,
@@ -48393,7 +44362,7 @@ itm_rnd_helm_06,
     [
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
     itm_warhorse_hre_a,
     itm_rnd_surcoat_03,
     itm_surcoat_hre_a,
@@ -48405,10 +44374,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x00000007041034c63495560ada723a9b00000000001de51e0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_18",
+  ["knight_6_18",
      "Heinrich_III_der_Erlauchte_,_Markgraf_von_Meißen_und_Landgraf_von_Thüringen",
      "Heinrich III der Erlauchte",
     tf_hero,
@@ -48430,10 +44399,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x00000007370c504f219985a7237a54c700000000000cc7340000000000000000
-    ],
+  ],
 
 
-    ["knight_6_19",
+  ["knight_6_19",
      "Konrad_I_der_Fromm_,_Burggraf_von_Nürnberg",
      "Konrad I der Fromm",
     tf_hero,
@@ -48455,10 +44424,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x000000070400425326cb49cacaaab552000000000002cadb0000000000000000
-    ],
+  ],
 
 
-    ["knight_6_20",
+  ["knight_6_20",
      "Bischof Berthold II von Pfirt",
      "Berthold II von Pfirt",
     tf_hero,
@@ -48481,10 +44450,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x000000073d0033c91cdc25d4a575f91400000000001db5b60000000000000000
-    ],
+  ],
 
     ###### Hungary
-    ["knight_7_1",
+  ["knight_7_1",
      "Prince István V,",
      "Prince István V,",
     tf_hero,
@@ -48506,10 +44475,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007010c2094571bd6aca372569c00000000000f56a20000000000000000
-    ],
+  ],
 
 
-    ["knight_7_2",
+  ["knight_7_2",
      "Erdélyi Vajda,Akus nembeli Erne",
      "Akus nembeli Erne",
     tf_hero,
@@ -48530,10 +44499,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007280c40054c66f648e359a2f600000000001646150000000000000000
-    ],
+  ],
 
 
-    ["knight_7_3",
+  ["knight_7_3",
      "Gutkeled nembeli Istv"+a_kreska+"n",
      "Gutkeled Istv"+a_kreska+"n",
     tf_hero,
@@ -48555,10 +44524,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000073610118354a36e45acb21adb000000000009c3520000000000000000
-    ],
+  ],
 
 
-    ["knight_7_4",
+  ["knight_7_4",
      "Tárnokmester,Haholth nembeli Chak",
      "Haholth nembeli Chak",
     tf_hero,
@@ -48580,10 +44549,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000071508419058db75d519b1c91d00000000001de7220000000000000000
-    ],
+  ],
 
 
-    ["knight_7_5",
+  ["knight_7_5",
      "Királyi Lovászmester,Matucsinai Kemen fia Lőrincz",
      "Matucsinai Kemen fia Lőrincz",
     tf_hero,
@@ -48605,10 +44574,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000072508430a27254a46e56d851b000000000012bae50000000000000000
-    ],
+  ],
 
 
-    ["knight_7_6",
+  ["knight_7_6",
      "Királyi Pincemester,Geur nembeli Konrad",
      "Geur nembeli Konrad",
     tf_hero,
@@ -48630,10 +44599,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000073a0c3110589c55db9ad6150c00000000001d93950000000000000000
-    ],
+  ],
 
 
-    ["knight_7_7",
+  ["knight_7_7",
      "Királyi Etekfogómester,Aba nembeli Lőrincz",
      "Aba nembeli Lőrincz",
     tf_hero,
@@ -48655,10 +44624,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007010032c33322769a9c93d4e200000000000db9730000000000000000
-    ],
+  ],
 
 
-    ["knight_7_8",
+  ["knight_7_8",
      "Királyi Ajtonállómester,Pok nembeli Tamás",
      "Pok nembeli Tamás",
     tf_hero,
@@ -48680,10 +44649,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000073a04154a6523c6c89e6ca96300000000001e25590000000000000000
-    ],
+  ],
 
 
-    ["knight_7_9",
+  ["knight_7_9",
      "Királynéi Udvarbíró,Pok nembeli Moruch",
      "Pok nembeli Moruch",
     tf_hero,
@@ -48705,10 +44674,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000007090435ca14a3a535d34cc6b3000000000016caaa0000000000000000
-    ],
+  ],
 
 
-    ["knight_7_10",
+  ["knight_7_10",
      "Kachich nembeli Falkos",
      "Kachich nembeli Falkos",
     tf_hero,
@@ -48730,17 +44699,17 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x00000007140031433d344e44c9515ada00000000001ebcb10000000000000000
-    ],
+  ],
 
 
-    ["knight_7_11",
+  ["knight_7_11",
      "Gutkeled nembeli Miklós",
      "Gutkeled nembeli Miklós",
     tf_hero,
     0, 0, fac_kingdom_7,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -48756,10 +44725,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000072a0c4305469e5136926948dd00000000001dbb9c0000000000000000
-    ],
+  ],
 
 
-    ["knight_7_12",
+  ["knight_7_12",
      "Országbíró,Henrik Kőszegi",
      "Henrik Kőszegi",
     tf_hero,
@@ -48781,10 +44750,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000072a0c4305469e5136926948dd00000000001dbb9c0000000000000000
-    ],
+  ],
 
 
-    ["knight_7_13",
+  ["knight_7_13",
      "Zoulumi Ispán,Balassa Bitter",
      "Balassa Bitter",
     tf_hero,
@@ -48806,10 +44775,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000071d10340d5b5e294cdb533a7000000000000a371e0000000000000000
-    ],
+  ],
 
 
-    ["knight_7_14",
+  ["knight_7_14",
      "Posoni Ispán,Rátót nembeli Roland",
      "Rátót nembeli Roland",
     tf_hero,
@@ -48831,10 +44800,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000007000034063a5c72b4d4aaab4c00000000001dc68c0000000000000000
-    ],
+  ],
 
 
-    ["knight_7_15",
+  ["knight_7_15",
      "Köten",
      "Köten",
     tf_hero,
@@ -48856,7 +44825,7 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x0000000bbd0ca34016e395eadb4d4d9300000000001d92b50000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_7_16",
@@ -48985,7 +44954,7 @@ itm_rnd_helm_06,
     ###### ],
 
     ###### Novgorod
-    ["knight_8_1",
+  ["knight_8_1",
      "Knyaz_Vsevolod_Yurievich",
      "Vsevolod Yurievich",
     tf_hero,
@@ -49007,10 +44976,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000072c0432cd78eb88cd4c8f479b00000000001642d50000000000000000
-    ],
+  ],
 
 
-    ["knight_8_2",
+  ["knight_8_2",
      "Knyaz_Bryachislav_Vasilkovich",
      "Bryachislav_Vasilkovich",
     tf_hero,
@@ -49031,10 +45000,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007080004d2205479b97cd2361a00000000000e322e0000000000000000
-    ],
+  ],
 
 
-    ["knight_8_3",
+  ["knight_8_3",
      "Knyaz_Svyatoslav_Mstislavich",
      "Svyatoslav_Mstislavich",
     tf_hero,
@@ -49056,10 +45025,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000071a0c148634dbadc7a089c4a3000000000016490a0000000000000000
-    ],
+  ],
 
 
-    ["knight_8_4",
+  ["knight_8_4",
      "Knyaz_Yuriy_Igorevich",
      "Yuriy_Igorevich",
     tf_hero,
@@ -49081,10 +45050,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000073204205024916d46dc6ebedc000000000008b6dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_8_5",
+  ["knight_8_5",
      "Knyaz_Mstislav_Glebovich",
      "Mstislav_Glebovich",
     tf_hero,
@@ -49106,10 +45075,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000007070c14c336e672e6deb244eb00000000000dc71c0000000000000000
-    ],
+  ],
 
 
-    ["knight_8_6",
+  ["knight_8_6",
      "Knyaz_Yaroslav_Vsevolodovich",
      "Yaroslav_Vsevolodovich",
     tf_hero,
@@ -49131,10 +45100,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0xa0100421038da7157aa4e430a00000000001da8bc0000000000000000, vaegir_face_middle_2
-    ],
+  ],
 
 
-    ["knight_8_7",
+  ["knight_8_7",
      "Knyaz_Svyatoslav_Vsevolodovich",
      "Svyatoslav_Vsevolodovich",
     tf_hero,
@@ -49156,10 +45125,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0xc04100153335ba9390b2d277500000000001d89120000000000000000, vaegir_face_old_2
-    ],
+  ],
 
 
-    ["knight_8_8",
+  ["knight_8_8",
      "Knyaz_Daniil_Romanovich",
      "Daniil_Romanovich",
     tf_hero,
@@ -49181,10 +45150,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0xc00046581234e8da2cdd248db00000000001f569c0000000000000000, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["knight_8_9",
+  ["knight_8_9",
      "Knyaz_Yuriy_Mstislavich",
      "Yuriy_Mstislavich",
     tf_hero,
@@ -49206,10 +45175,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0xf7c00520e66b76edd5cd5eb6e00000000001f691e0000000000000000, vaegir_face_older_2
-    ],
+  ],
 
 
-    ["knight_8_10",
+  ["knight_8_10",
      "Knyaz_Yuriy_Davidovich",
      "Yuriy_Davidovich",
     tf_hero,
@@ -49231,18 +45200,18 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ],
+  ],
 
 
     ###### England
-    ["knight_9_1",
+  ["knight_9_1",
      "Prince Edward Longshanks",
      "Prince Edward",
     tf_hero,
     0, 0, fac_kingdom_9,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -49259,10 +45228,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000018005100958fab19d615a246300000000001d324d0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_2",
+  ["knight_9_2",
      "Sir William de Valence, Earl of Wexford and Pembroke",
      "William de Valence",
     tf_hero,
@@ -49284,10 +45253,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000001ad0840092751d0e89c70a4d900000000001f01140000000000000000
-    ],
+  ],
 
 
-    ["knight_9_3",
+  ["knight_9_3",
      "Guy de Montfort, Count of Nola",
      "Guy de Montford",
     tf_hero,
@@ -49309,16 +45278,16 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000009800c600719d16d56e1d14b9b00000000001eb4c80000000000000000
-    ],
+  ],
 
 
-    ["knight_9_4",
+  ["knight_9_4",
      "Count Peter II of Savoy, Earl of Richmond",
      "Peter II of Savoy",
     tf_hero,
     0, 0, fac_kingdom_9,
     [
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
 
@@ -49333,10 +45302,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000ac00c500619d16d56e3723a9a00000000001e94c80000000000000000
-    ],
+  ],
 
 
-    ["knight_9_5",
+  ["knight_9_5",
      "Sir Richard de Clare, Earl of Hertford and Gloucester",
      "Richard de Clare",
     tf_hero,
@@ -49358,10 +45327,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000a640d100919d16d56e1514b9b00000000001eb0c80000000000000000
-    ],
+  ],
 
 
-    ["knight_9_6",
+  ["knight_9_6",
      "Roger Mortimer, Baron Mortimer",
      "Roger Mortimer",
     tf_hero,
@@ -49383,10 +45352,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000ebf0c401319d16d56e1514b9b00000000001eb0c80000000000000000
-    ],
+  ],
 
 
-    ["knight_9_7",
+  ["knight_9_7",
      "Prince Bishop Walter of Durham",
      "Walter of Durham",
     tf_hero,
@@ -49408,10 +45377,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000f6e00401366a57b38ef112c5300000000001db91b0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_8",
+  ["knight_9_8",
      "Lord Marshal Roger Bigod, Earl of Norfolk",
      "Roger Bigod",
     tf_hero,
@@ -49434,10 +45403,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000004c010600145dd8a675400b8b400000000001cd3240000000000000000
-    ],
+  ],
 
 
-    ["knight_9_9",
+  ["knight_9_9",
      "Archbishop Boniface of Canterbury",
      "Boniface of Canterbury",
     tf_hero,
@@ -49460,10 +45429,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000ec010500e4e938a761400b8b400000000001cd1850000000000000000
-    ],
+  ],
 
 
-    ["knight_9_10",
+  ["knight_9_10",
      "Sir John de Warenne, Earl of Surrey",
      "John de Warenne",
     tf_hero,
@@ -49485,10 +45454,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000089b0d200638e46fc9a352ad6300000000001e429d0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_11",
+  ["knight_9_11",
      "Sir William Maudit, Earl of Warick",
      "William Maudit",
     tf_hero,
@@ -49510,10 +45479,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000008820830012e5c89b2ed6e4d6b00000000001ed0dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_12",
+  ["knight_9_12",
      "Sir Baldwin de Redvers, Earl of Devon and Lord of the Isle",
      "Baldwin de Redvers",
     tf_hero,
@@ -49536,10 +45505,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x00000000400810093a59ce454b51466300000000001cb4cc0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_13",
+  ["knight_9_13",
      "Sir Roger de Northwode, Warden of the Cinque Ports",
      "Roger de Northwode",
     tf_hero,
@@ -49562,10 +45531,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000003c0005009279390cd5d9a451c00000000001da25e0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_14",
+  ["knight_9_14",
      "Lord High Constable Humphrey de Bohun, Earl of Hereford and Essex",
      "Humphrey de Bohun",
     tf_hero,
@@ -49588,10 +45557,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x00000003cb0d10062af25358e3b1d48d00000000001da49c0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_15",
+  ["knight_9_15",
      "Sir Edmund de Lacy, Earl of Lincoln and Baron of Halton",
      "Edmund de Lacy",
     tf_hero,
@@ -49614,10 +45583,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000003d1085001051cb0aedc89e2a400000000001e232c0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_16",
+  ["knight_9_16",
      "Sir Hugh de Vere, Earl of Oxford",
      "Hugh de Vere",
     tf_hero,
@@ -49640,10 +45609,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x00000003d90520094f5456bce64ab4db00000000001cc7a20000000000000000
-    ],
+  ],
 
 
-    ["knight_9_17",
+  ["knight_9_17",
      "Sir John FitzAlan, Earl of Arundel",
      "John FitzAlan",
     tf_hero,
@@ -49665,10 +45634,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000003d904100230d3bb24dacdc92200000000001f335c0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_18",
+  ["knight_9_18",
      "Archbishop Sewal of York",
      "Sewal",
     tf_hero,
@@ -49692,10 +45661,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x0000000bc001100e3722cdce948ca71b00000000001da6ac0000000000000000
-    ],
+  ],
 
 
-    ["knight_9_19",
+  ["knight_9_19",
      "Prince Henry of Almain",
      "Henry of Almain",
     tf_hero,
@@ -49719,10 +45688,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x0000000bc3040009197191d92c5db4dc00000000001db6620000000000000000
-    ],
+  ],
 
 
-    ["knight_9_20",
+  ["knight_9_20",
      "Secretary Sir John Maunsell",
      "John Maunsell",
     tf_hero,
@@ -49745,10 +45714,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x0000000bc000500974d34cc6a06dc29600000000001e450b0000000000000000
-    ],
+  ],
 
     ###### France
-    ["knight_10_1",
+  ["knight_10_1",
      "Alphonse de Poitiers, comte de Poitiers",
      "Alphonse de Poitiers",
     tf_hero,
@@ -49770,10 +45739,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000bc40c5009515dd3379cb2351c00000000001ca4eb0000000000000000
-    ],
+  ],
 
 
-    ["knight_10_2",
+  ["knight_10_2",
      "Charles Ier d'Anjou, Comte d’Anjou du Maine",
      "Charles Ier d'Anjou",
     tf_hero,
@@ -49796,10 +45765,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000980104009250a41d8f251c80a00000000001d92960000000000000000
-    ],
+  ],
 
 
-    ["knight_10_3",
+  ["knight_10_3",
      "Jean Ier le Roux, Duc de Bretagne",
      "Jean Ier le Roux",
     tf_hero,
@@ -49821,10 +45790,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000980001009470e4e4a8a498c9c00000000001c951c0000000000000000
-    ],
+  ],
 
 
-    ["knight_10_4",
+  ["knight_10_4",
      "Hugues XII de Lusignan, comte de la Marche et d’Angoulême",
      "Hugues XII de Lusignan",
     tf_hero,
@@ -49847,10 +45816,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000009910c500f292b73ff5b6dad1d00000000001f88e40000000000000000
-    ],
+  ],
 
 
-    ["knight_10_5",
+  ["knight_10_5",
      "Robert V, comte d'Auvergne",
      "Robert V",
     tf_hero,
@@ -49872,10 +45841,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000099208100916e2659749722d9b00000000001db0d50000000000000000
-    ],
+  ],
 
 
-    ["knight_10_6",
+  ["knight_10_6",
      "Robert IVn Comte de Dreux and de Braine",
      "Robert IVn",
     tf_hero,
@@ -49897,10 +45866,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000098c11200114cb2cd6a2acd71600000000001ea2e20000000000000000
-    ],
+  ],
 
 
-    ["knight_10_7",
+  ["knight_10_7",
      "Robert II, Comte d'Artois",
      "Robert II",
     tf_hero,
@@ -49922,10 +45891,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000000230510016cdb86599d4a247400000000001d910a0000000000000000
-    ],
+  ],
 
 
-    ["knight_10_8",
+  ["knight_10_8",
      "Hugues IV, duc de Bourgogne",
      "Hugues IV",
     tf_hero,
@@ -49947,17 +45916,17 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000004085001171c4d12f2ada69d00000000001e15a40000000000000000
-    ],
+  ],
 
 
-    ["knight_10_9",
+  ["knight_10_9",
      "Eudes de Bourgogne, comte de Nevers",
      "Eudes de Bourgogne",
     tf_hero,
     0, 0, fac_kingdom_10,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -49973,10 +45942,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000002e1010011b646b185b2a451100000000001c455b0000000000000000
-    ],
+  ],
 
 
-    ["knight_10_10",
+  ["knight_10_10",
      "Jean de Bourgogne, sire de Bourbon et comte de Charollais",
      "Jean de Bourgogne",
     tf_hero,
@@ -49999,10 +45968,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000003b04100132ac394b2b9254da00000000001e44e30000000000000000
-    ],
+  ],
 
 
-    ["knight_10_11",
+  ["knight_10_11",
      "Guigues VII de Bourgogne, dauphin de Viennois",
      "Guigues VII de Bourgogne",
     tf_hero,
@@ -50024,10 +45993,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000002c1111892b1b6d53232db89400000000001c26a90000000000000000
-    ],
+  ],
 
 
-    ["knight_10_12",
+  ["knight_10_12",
      "Guigues V, comte de Forez",
      "Guigues V",
     tf_hero,
@@ -50050,10 +46019,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000001a012002699a8a369c8ec9a200000000001ea2c90000000000000000
-    ],
+  ],
 
 
-    ["knight_10_13",
+  ["knight_10_13",
      "Gui III, comte de Saint-Pol",
      "Gui III",
     tf_hero,
@@ -50075,10 +46044,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000b7c10500f63a3aad75e5a39a500000000001e36e40000000000000000
-    ],
+  ],
 
 
-    ["knight_10_14",
+  ["knight_10_14",
      "Jean de Nesle, seigneur de Falvy et de La Herelle",
      "Jean de Nesle",
     tf_hero,
@@ -50100,10 +46069,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000098210100328c995cc6131570e00000000001da65b0000000000000000
-    ],
+  ],
 
 
-    ["knight_10_15",
+  ["knight_10_15",
      "Jean de Châtillon, comte de Blois et de Chartres",
      "Jean de Châtillon",
     tf_hero,
@@ -50125,10 +46094,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000b5f0c50015a736d195a05b8fc00000000001f429d0000000000000000
-    ],
+  ],
 
 
-    ["knight_10_16",
+  ["knight_10_16",
      "Louis Ier, comte de Sancerre",
      "Louis Ier",
     tf_hero,
@@ -50150,10 +46119,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x0000000da10d100945236a3e8306c91c00000000001f06aa0000000000000000
-    ],
+  ],
 
 
-    ["knight_10_17",
+  ["knight_10_17",
      "Alain VI, vicomte de Rohan ",
      "Alain VI",
     tf_hero,
@@ -50175,10 +46144,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x0000000d81045012476265a69db538a400000000001e96d90000000000000000
-    ],
+  ],
 
 
-    ["knight_10_18",
+  ["knight_10_18",
      "Olivier Ier de Clisson",
      "Olivier Ier de Clisson",
     tf_hero,
@@ -50200,10 +46169,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x0000000d910455c1350d6b429b66466900000000001cb0500000000000000000
-    ],
+  ],
 
 
-    ["knight_10_19",
+  ["knight_10_19",
      "Olivier II de Clisson",
      "Olivier II de Clisson",
     tf_hero,
@@ -50226,10 +46195,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x00000007d1051001350d6b429b66466900000000001cb0500000000000000000
-    ],
+  ],
 
 
-    ["knight_10_20",
+  ["knight_10_20",
      "Hugues IV de Millau, comte de Rodez",
      "Hugues IV de Millau",
     tf_hero,
@@ -50251,10 +46220,10 @@ itm_rnd_helm_06,
     knight_wp_1,
     knight_skills_1,
     0x00000007d80120093a24515b1a55975b00000000001caab00000000000000000
-    ],
+  ],
 
     ###### Norway
-    ["knight_11_1",
+  ["knight_11_1",
      "Magnús Konungr Hákonarson",
      "Magnús Hákonarson",
     tf_hero,
@@ -50276,10 +46245,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007c30815c14693ceab63511aa200000000001f16930000000000000000
-    ],
+  ],
 
 
-    ["knight_11_2",
+  ["knight_11_2",
      "Knutr Jarl Hákonarson",
      "Knutr Hákonarson",
     tf_hero,
@@ -50301,10 +46270,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000000a00500968eccec2e38e3d6b00000000001db71b0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_3",
+  ["knight_11_3",
      "Gautr Jonsson",
      "Gautr Jonsson",
     tf_hero,
@@ -50326,10 +46295,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000ec400215338929ac8ebd128a300000000001d950c0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_4",
+  ["knight_11_4",
      "Ogmundr Krækidanz",
      "Ogmundr Krækidanz",
     tf_hero,
@@ -50351,10 +46320,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000c1a08258f349368b4e972dacb00000000001da4ea0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_5",
+  ["knight_11_5",
      "Bryniolfr Jonsson",
      "Bryniolfr Jonsson",
     tf_hero,
@@ -50378,10 +46347,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000c191001c9293250271c3238e200000000001ea52d0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_6",
+  ["knight_11_6",
      "Loþinn Gunnason",
      "Loþinn Gunnason",
     tf_hero,
@@ -50404,10 +46373,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000c0e0455c347224dd50dac42ec00000000001d94a40000000000000000
-    ],
+  ],
 
 
-    ["knight_11_7",
+  ["knight_11_7",
      "Gunnarr Konungfrændi",
      "Gunnarr Konungfrændi",
     tf_hero,
@@ -50421,7 +46390,7 @@ itm_rnd_helm_06,
     itm_warhorse_norway_a,
     itm_surcoat_norway_a,
 
-itm_heraldic_lance,
+    itm_heraldic_lance,
     itm_talak_warhammer,
     itm_tab_shield_kite_cav_b
     ],
@@ -50429,10 +46398,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x0000000c0e0052c954de53551c72650d00000000001ec51c0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_8",
+  ["knight_11_8",
      "Jon Drottning",
      "Jon Drottning",
     tf_hero,
@@ -50454,10 +46423,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x0000000c000455811255e8d66cd1382b00000000001db52b0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_9",
+  ["knight_11_9",
      "Gizurr þorvaldsson",
      "Gizurr þorvaldsson",
     tf_hero,
@@ -50480,10 +46449,10 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x0000000c2b08014128d0d212a08ac52100000000001e02930000000000000000
-    ],
+  ],
 
 
-    ["knight_11_10",
+  ["knight_11_10",
      "Munan Byskupsson",
      "Munan Byskupsson",
     tf_hero,
@@ -50506,10 +46475,10 @@ itm_heraldic_lance,
     knight_wp_2,
     knight_skills_2,
     0x0000000c16042009265b9743749e26d300000000001d330d0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_11",
+  ["knight_11_11",
      "Sigurðr Byskupsson",
      "Sigurðr Byskupsson",
     tf_hero,
@@ -50531,10 +46500,10 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x0000000c1704000058538a549ab2572100000000001d30dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_12",
+  ["knight_11_12",
      "Bárðr i Hestbæ",
      "Bárðr i Hestbæ",
     tf_hero,
@@ -50556,10 +46525,10 @@ itm_heraldic_lance,
     knight_wp_2,
     knight_skills_2,
     0x0000000c040821431c5a8d252b4e1b69000000000013435d0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_13",
+  ["knight_11_13",
      "Arnbiórn Poki",
      "Arnbiórn Poki",
     tf_hero,
@@ -50582,10 +46551,10 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x0000000c2704000f3ad931363353491200000000001da3940000000000000000
-    ],
+  ],
 
 
-    ["knight_11_14",
+  ["knight_11_14",
      "Aslakr Guss",
      "Aslakr Guss",
     tf_hero,
@@ -50607,10 +46576,10 @@ itm_heraldic_lance,
     knight_wp_2,
     knight_skills_2,
     0x0000000c280c5002579b52cb2671511c00000000001e20dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_11_15",
+  ["knight_11_15",
      "Biarni Moysesson",
      "Biarni Moysesson",
     tf_hero,
@@ -50633,7 +46602,7 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x0000000c15002583425d4938a449d71200000000001c95120000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_11_16",
@@ -50765,7 +46734,7 @@ itm_heraldic_lance,
     ###### ],
 
     ###### Scotland
-    ["knight_12_1",
+  ["knight_12_1",
      "Ailean Durward, Justiciar of Scotia",
      "Ailean Durward",
     tf_hero,
@@ -50788,10 +46757,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x00000007240c154a48948d154ccce8f400000000001eb50d0000000000000000
-    ],
+  ],
 
 
-    ["knight_12_2",
+  ["knight_12_2",
      "Walter Comyn, Lord of Badenoch and Earl of Menteith",
      "Walter Comyn",
     tf_hero,
@@ -50813,10 +46782,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x0000000c31100049489c9256b486bb1a00000000001f22db0000000000000000
-    ],
+  ],
 
 
-    ["knight_12_3",
+  ["knight_12_3",
      "Maol Choluim II mac Duibh, Mormaer of Fife",
      "Maol Choluim II mac Duibh",
     tf_hero,
@@ -50839,10 +46808,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x0000000c2e0414095a532b3b1b56e55a00000000000f18ec0000000000000000
-    ],
+  ],
 
 
-    ["knight_12_4",
+  ["knight_12_4",
      "Maol Choluim I, Mormaer of Lennox",
      "Maol Choluim I",
     tf_hero,
@@ -50864,10 +46833,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x0000000de000258037210796e276475500000000001da56c0000000000000000
-    ],
+  ],
 
 
-    ["knight_12_5",
+  ["knight_12_5",
      "Uilleam mac Dhonnchaidh, Mormaer of Mar",
      "Uilleam mac Dhonnchaidh",
     tf_hero,
@@ -50889,10 +46858,10 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x0000000dc90c32c9150b69a0e92f433400000000001e94d30000000000000000
-    ],
+  ],
 
 
-    ["knight_12_6",
+  ["knight_12_6",
      "Maol Iosa II, Mormaer of Strathearn",
      "Maol Iosa II",
     tf_hero,
@@ -50914,10 +46883,10 @@ itm_heraldic_lance,
     knight_wp_2,
     knight_skills_2,
     0x0000000dc00c2443494b71b6a04b06ac00000000001eb3530000000000000000
-    ],
+  ],
 
 
-    ["knight_12_7",
+  ["knight_12_7",
      "Alaxandair Stewart, High Steward of Scotland",
      "Alaxandair Stewart",
     tf_hero,
@@ -50939,10 +46908,10 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x0000000dc2003586404b9256e26e476c00000000000993140000000000000000
-    ],
+  ],
 
 
-    ["knight_12_8",
+  ["knight_12_8",
      "William Longleg, Lord of Douglas",
      "William Longleg",
     tf_hero,
@@ -50964,10 +46933,10 @@ itm_heraldic_lance,
     knight_wp_2,
     knight_skills_2,
     0x0000000dc30d10090cda6db89d28a92b00000000001f891e0000000000000000
-    ],
+  ],
 
 
-    ["knight_12_9",
+  ["knight_12_9",
      "Uilleam I mac Ferchar, Mormaer of Ross",
      "Uilleam I mac Ferchar",
     tf_hero,
@@ -50989,10 +46958,10 @@ itm_heraldic_lance,
     knight_wp_1,
     knight_skills_1,
     0x0000000de504500649a3b5575a4e2cb200000000001484b40000000000000000
-    ],
+  ],
 
 
-    ["knight_12_10",
+  ["knight_12_10",
      "Patrick III, Earl of Dunbar",
      "Patrick III",
     tf_hero,
@@ -51015,10 +46984,10 @@ itm_heraldic_lance,
     knight_wp_1,
     knight_skills_1,
     0x00000005ef04200224dc2bf46b9114d300000000001f87190000000000000000
-    ],
+  ],
 
     ###### Ireland
-    ["knight_13_1",
+  ["knight_13_1",
      "Finghen mac Carthaigh, King of Desmond",
      "Finghen mac Carthaigh",
     tf_hero,
@@ -51040,10 +47009,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x00000005d00123c914d182b6dd48b31400000000001fc7050000000000000000
-    ],
+  ],
 
 
-    ["knight_13_2",
+  ["knight_13_2",
      "Conchobar Na Suidaine mac Donnchada, King of Thomond",
      "Conchobar Na Suidaine mac Donnchada",
     tf_hero,
@@ -51065,10 +47034,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x00000005d4105189091d64d89a8936a4000000000019d8ab0000000000000000
-    ],
+  ],
 
 
-    ["knight_13_3",
+  ["knight_13_3",
      "Tadhg O'Brien, Prince of Thomond",
      "Tadhg O'Brien",
     tf_hero,
@@ -51090,10 +47059,10 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x00000005c009100126db7ec69572e92e00000000001e22d40000000000000000
-    ],
+  ],
 
 
-    ["knight_13_4",
+  ["knight_13_4",
      "Muirchertach mac Mael Morda, King of Ui Failghe",
      "Muirchertach mac Mael Morda",
     tf_hero,
@@ -51115,10 +47084,10 @@ itm_heraldic_lance,
     knight_wp_4,
     knight_skills_4,
     0x00000009e901244936f56ecca391b8d400000000001d22dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_13_5",
+  ["knight_13_5",
      "Aedh O'Connor, King of Connacht",
      "Aedh O'Connor",
     tf_hero,
@@ -51140,10 +47109,10 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x00000009f60c100532956938ceb1bc8c00000000001db88b0000000000000000
-    ],
+  ],
 
 
-    ["knight_13_6",
+  ["knight_13_6",
      "Goffraidh O'Donaill, King of Tyrconnell",
      "Goffraidh O'Donaill",
     tf_hero,
@@ -51165,10 +47134,10 @@ itm_heraldic_lance,
     knight_wp_2,
     knight_skills_2,
     0x00000009d004104932d54e4acd2e352300000000001e04ae0000000000000000
-    ],
+  ],
 
 
-    ["knight_13_7",
+  ["knight_13_7",
      "Domnall mac Annaid, King of East Breifne",
      "Domnall mac Annaid",
     tf_hero,
@@ -51189,10 +47158,10 @@ itm_heraldic_lance,
     knight_wp_3,
     knight_skills_3,
     0x00000009dd0814091a94b9d2742db69200000000001f85910000000000000000
-    ],
+  ],
 
 
-    ["knight_13_8",
+  ["knight_13_8",
      "Amlaib O'Ruairc, King of West Breifne",
      "Amlaib O'Ruairc",
     tf_hero,
@@ -51214,10 +47183,10 @@ itm_heraldic_lance,
     knight_wp_1,
     knight_skills_1,
     0x00000009ed0852873b32963c5b8e3da200000000001ea91a0000000000000000
-    ],
+  ],
 
 
-    ["knight_13_9",
+  ["knight_13_9",
      "Magnus O'Cahan, Prince of Limavady",
      "Magnus O'Cahan",
     tf_hero,
@@ -51240,10 +47209,10 @@ itm_heraldic_lance,
     knight_wp_1,
     knight_skills_1,
     0x00000009e3105009496c9236aa88cb1900000000001db44a0000000000000000
-    ],
+  ],
 
 
-    ["knight_13_10",
+  ["knight_13_10",
      "Diarmaid galloglaigh mac Lochlainn, Lord of Inishowen",
     "Diarmaid galloglaigh mac Lochlainn",
     tf_hero,
@@ -51265,17 +47234,17 @@ itm_heraldic_lance,
     knight_wp_1,
     knight_skills_1,
     0x0000000b580524437c0b73fed4512a6b00000000001f81d30000000000000000
-    ],
+  ],
 
     ###### Sweden
-    ["knight_14_1",
+  ["knight_14_1",
      "Konung Valdemar Birgersson",
      "Valdemar Birgersson",
     tf_hero,
     0, 0, fac_kingdom_14,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -51291,10 +47260,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000b4a05114f289c2ebd224c0a4a00000000001c86e30000000000000000
-    ],
+  ],
 
 
-    ["knight_14_2",
+  ["knight_14_2",
      "Magnus Birgersson",
      "Magnus Birgersson",
     tf_hero,
@@ -51316,10 +47285,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000b4705200958d892db244b34b400000000001d44cc0000000000000000
-    ],
+  ],
 
 
-    ["knight_14_3",
+  ["knight_14_3",
      "Johan Filipsson",
      "Johan Filipsson",
     tf_hero,
@@ -51342,10 +47311,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000b4004540936d46d2b8c91d71400000000001ea5240000000000000000
-    ],
+  ],
 
 
-    ["knight_14_4",
+  ["knight_14_4",
      "Johan Karlsson",
      "Johan Karlsson",
     tf_hero,
@@ -51367,10 +47336,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007261032d029244ca6e4b5b6a900000000000d33190000000000000000
-    ],
+  ],
 
 
-    ["knight_14_5",
+  ["knight_14_5",
      "Birger Filipsson",
      "Birger Filipsson",
     tf_hero,
@@ -51393,10 +47362,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000b4210544f32e66e373d49c75400000000001eb6ce0000000000000000
-    ],
+  ],
 
 
-    ["knight_14_6",
+  ["knight_14_6",
      "Björn Näf",
      "Björn Näf",
     tf_hero,
@@ -51418,17 +47387,17 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000b4f092009455c92e44da5cb2100000000001e97210000000000000000
-    ],
+  ],
 
 
-    ["knight_14_7",
+  ["knight_14_7",
      "Karl Tjälfvesson",
      "Karl Tjälfvesson",
     tf_hero,
     0, 0, fac_kingdom_14,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -51436,7 +47405,7 @@ itm_rnd_helm_06,
     itm_warhorse_sweden_a,
     itm_surcoat_sweden_a,
 
-itm_heraldic_lance,
+    itm_heraldic_lance,
     itm_talak_warhammer,
     itm_tab_shield_heater_cav_b,
     ],
@@ -51444,16 +47413,16 @@ itm_heraldic_lance,
     knight_wp_5,
     knight_skills_5,
     0x0000000b4410514947126dc2aaacb89500000000001e96730000000000000000
-    ],
+  ],
 
 
-    ["knight_14_8",
+  ["knight_14_8",
      "Magnus Bengtsson",
      "Magnus Bengtsson",
     tf_hero,
     0, 0, fac_kingdom_14,
     [
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
 
@@ -51468,10 +47437,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000000d051004276b41991446d41300000000001e16ed0000000000000000
-    ],
+  ],
 
 
-    ["knight_14_9",
+  ["knight_14_9",
      "Karl Ulfsson",
      "Karl Ulfsson",
     tf_hero,
@@ -51493,17 +47462,17 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000e400015d3270a7236e3b526d100000000001eb9630000000000000000
-    ],
+  ],
 
 
-    ["knight_14_10",
+  ["knight_14_10",
      "Karl Ingeborgasson",
      "Karl Ingeborgasson",
     tf_hero,
     0, 0, fac_kingdom_14,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -51520,17 +47489,17 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x0000000e0004325328ec69c4d2a8a7cc00000000001d05160000000000000000
-    ],
+  ],
 
 
-    ["knight_14_11",
+  ["knight_14_11",
      "Israel Andersson",
      "Israel Andersson",
     tf_hero,
     0, 0, fac_kingdom_14,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -51546,10 +47515,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000000040141371e77ff522acc6e00000000001cb24d0000000000000000
-    ],
+  ],
 
 
-    ["knight_14_12",
+  ["knight_14_12",
      "Andreas Adreae",
      "Andreas Adreae",
     tf_hero,
@@ -51573,10 +47542,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x0000000000101589249689b71d9635b400000000001eb6690000000000000000
-    ],
+  ],
 
 
-    ["knight_14_13",
+  ["knight_14_13",
      "Algot Brunolfsson",
      "Algot Brunolfsson",
     tf_hero,
@@ -51599,10 +47568,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000000090515c928dcad071488aaed00000000001da4950000000000000000
-    ],
+  ],
 
 
-    ["knight_14_14",
+  ["knight_14_14",
      "Folke Algotsson",
      "Folke Algotsson",
     tf_hero,
@@ -51624,10 +47593,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000001801200f27146e32d22538e300000000001de7250000000000000000
-    ],
+  ],
 
 
-    ["knight_14_15",
+  ["knight_14_15",
      "Johan Ängel",
      "Johan Ängel",
     tf_hero,
@@ -51651,7 +47620,7 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000000005100948da8baf1bb317ff00000000001c87db0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_14_16",
@@ -51778,7 +47747,7 @@ itm_rnd_helm_06,
     ###### ],
 
     ###### Galicia
-    ["knight_15_1",
+  ["knight_15_1",
      "Knyaz_Volodimir_Ivan_Vasilkovich",
      "Volodimir_Ivan_Vasilkovich",
     tf_hero,
@@ -51800,10 +47769,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000e1104428947992e6aaa41b93100000000001dd76b0000000000000000
-    ],
+  ],
 
 
-    ["knight_15_2",
+  ["knight_15_2",
      "Knyaz_Vasylko_Romanovich",
      "Vasylko_Romanovich",
     tf_hero,
@@ -51824,10 +47793,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000770081513344b29b65b8b5c54000000000019c8e20000000000000000
-    ],
+  ],
 
 
-    ["knight_15_3",
+  ["knight_15_3",
      "Knyaz_Lev_Danylovich",
      "Lev_Danylovich",
     tf_hero,
@@ -51849,10 +47818,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000076608514868f4fab65a72588b00000000001e34d20000000000000000
-    ],
+  ],
 
 
-    ["knight_15_4",
+  ["knight_15_4",
      "Knyaz_Roman_Danylovich",
      "Roman_Danylovich",
     tf_hero,
@@ -51874,10 +47843,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000074b08139376f651b9536e38ec000000000011b2e50000000000000000
-    ],
+  ],
 
 
-    ["knight_15_5",
+  ["knight_15_5",
      "Knyaz_Mstislav_Danylovich",
      "Mstislav_Danylovich",
     tf_hero,
@@ -51899,10 +47868,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000075c0c03cd3edb8eb3ab89c4e500000000001d64730000000000000000
-    ],
+  ],
 
 
-    ["knight_15_6",
+  ["knight_15_6",
      "Knyaz_Svarn_Danylovich",
      "Svarn_Danylovich",
     tf_hero,
@@ -51924,10 +47893,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000077710519356abcf48e392ba4a0000000000163d250000000000000000
-    ],
+  ],
 
 
-    ["knight_15_7",
+  ["knight_15_7",
      "Knyaz_Bryachislav_Vasilkovich",
      "Bryachislav_Vasilkovich",
     tf_hero,
@@ -51949,10 +47918,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000074b0c030768ecd2ba5d70c95b00000000001e37540000000000000000
-    ],
+  ],
 
 
-    ["knight_15_8",
+  ["knight_15_8",
      "Knyaz_Gleb_Mstislavich",
      "Gleb_Mstislavich",
     tf_hero,
@@ -51974,10 +47943,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000077c0804136cab3613914aa8db00000000001db65a0000000000000000
-    ],
+  ],
 
 
-    ["knight_15_9",
+  ["knight_15_9",
      "Knyaz_Roman_Vsevolodovich",
      "Roman_Vsevolodovich",
     tf_hero,
@@ -51999,10 +47968,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000749003207689d8d499b55bb9c000000000014a69c0000000000000000
-    ],
+  ],
 
 
-    ["knight_15_10",
+  ["knight_15_10",
      "Knyaz_Andrey_Vsevolodovich",
      "Andrey_Vsevolodovich",
     tf_hero,
@@ -52024,7 +47993,7 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000077604159426d3b256d275b6ab00000000000ab6a30000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_15_11",
@@ -52282,7 +48251,7 @@ itm_rnd_helm_06,
     ###### ],
 
 
-    ["knight_16_1",
+  ["knight_16_1",
      "Paio Peres Correia, Gran Maestre de la Orden de Santiago",
      "Paio Peres Correia",
     tf_hero,
@@ -52304,10 +48273,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000eca10d1123e54ae34a191c56c00000000001e32db0000000000000000
-    ],
+  ],
 
 
-    ["knight_16_2",
+  ["knight_16_2",
      "Dom João Peres de Vasconcelos", #father
      "João Peres de Vasconcelos",
     tf_hero,
@@ -52329,10 +48298,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000ffd10c5865ad4724cdc4cb86900000000001e42e10000000000000000
-    ],
+  ],
 
 
-    ["knight_16_3",
+  ["knight_16_3",
      "Don Rodrigo Anes de Vasconcelos", #son
      "Rodrigo Anes de Vasconcelos",
     tf_hero,
@@ -52355,10 +48324,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000003d10c0075ad4724cdc4cb86900000000001e42e10000000000000000
-    ],
+  ],
 
 
-    ["knight_16_4",
+  ["knight_16_4",
      "Don Pero Soares Coelho",
      "Pero Soares Coelho",
     tf_hero,
@@ -52380,10 +48349,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000078010d0095ad4724cdc4cb86900000000001e42e10000000000000000
-    ],
+  ],
 
 
-    ["knight_16_5",
+  ["knight_16_5",
      "Don João Garcia de Sousa",
      "João Garcia de Sousa",
     tf_hero,
@@ -52405,10 +48374,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007af0c61465b1a8e34ac7246dc00000000001d315c0000000000000000
-    ],
+  ],
 
 
-    ["knight_16_6",
+  ["knight_16_6",
      "Don Afonso Pires Gato",
      "Afonso Pires Gato",
     tf_hero,
@@ -52430,10 +48399,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007af0d21075b1a8e34ac7246dc00000000001d315c0000000000000000
-    ],
+  ],
 
 
-    ["knight_16_7",
+  ["knight_16_7",
      "Don Pero Pais de Alvarenga", #portugal high commanding "officer"
      "Pero Pais de Alvarenga",
     tf_hero,
@@ -52455,10 +48424,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000e6c0d33533d14cd4d2d2d28cb00000000001f65220000000000000000
-    ],
+  ],
 
 
-    ["knight_16_8",
+  ["knight_16_8",
      "Don Fernão Garcia de Sousa",
      "Fernão Garcia de Sousa",
     tf_hero,
@@ -52480,17 +48449,17 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000000d111001371bb2c89c55230b00000000001e16d90000000000000000
-    ],
+  ],
 
 
-    ["knight_16_9",
+  ["knight_16_9",
      "Don Martim Martins Machado",
      "Martim Martins Machado",
     tf_hero,
     0, 0, fac_kingdom_16,
     [
 
-itm_kolpak_mail,
+    itm_kolpak_mail,
 
     itm_mail_mittens,
     itm_splinted_greaves_long,
@@ -52507,10 +48476,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000a5f112002371bb2ce9c9d2f0f00000000001e16d90000000000000000
-    ],
+  ],
 
 
-    ["knight_16_10",
+  ["knight_16_10",
      "Don Rui Gomes de Briteiros",
      "Rui Gomes de Briteiros",
     tf_hero,
@@ -52533,17 +48502,17 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x0000000d3f113143371bb2ce9c9d2f0f00000000001e16d90000000000000000
-    ],
+  ],
 
 
-    ["knight_16_11",
+  ["knight_16_11",
      "Don Afonso Anes de Cambra",
      "Afonso Anes de Cambra",
     tf_hero,
     0, 0, fac_kingdom_16,
     [
 
-itm_andalusian_helmet_d,
+    itm_andalusian_helmet_d,
 
     itm_mail_mittens,
     itm_splinted_greaves_long,
@@ -52560,10 +48529,10 @@ itm_andalusian_helmet_d,
     knight_wp_3,
     knight_skills_3,
     0x0000000d3600d34929729a38f34a36e5000000000013432d0000000000000000
-    ],
+  ],
 
 
-    ["knight_16_12",
+  ["knight_16_12",
      "Don Fernán Gomes de Celanova",
      "Fernán Gomes de Celanova",
     tf_hero,
@@ -52586,10 +48555,10 @@ itm_andalusian_helmet_d,
     knight_wp_2,
     knight_skills_2,
     0x0000000d3d0cb5c945138c54a55545a400000000001eb4b40000000000000000
-    ],
+  ],
 
 
-    ["knight_16_13",
+  ["knight_16_13",
      "Don Pero Gomes de Celanova",
      "Pero Gomes de Celanova",
     tf_hero,
@@ -52612,10 +48581,10 @@ itm_andalusian_helmet_d,
     knight_wp_1,
     knight_skills_1,
     0x0000000d3d0cd00f45138c54a55545a400000000001eb4b40000000000000000
-    ],
+  ],
 
 
-    ["knight_16_14",
+  ["knight_16_14",
      "Don Afonso Pires",
      "Afonso Pires",
     tf_hero,
@@ -52638,10 +48607,10 @@ itm_andalusian_helmet_d,
     knight_wp_1,
     knight_skills_1,
     0x000000003d0c600f45138c5ea55545e400000000001eb4b40000000000000000
-    ],
+  ],
 
 
-    ["knight_16_15",
+  ["knight_16_15",
      "Roberto de Portugal",
      "Roberto de Portugal",
     tf_hero,
@@ -52664,10 +48633,10 @@ itm_andalusian_helmet_d,
     knight_wp_1,
     knight_skills_1,
     0x000000002f01210934ab5b3254d514cb00000000001d46dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_17_1",
+  ["knight_17_1",
      "Archbishop Arnau de Peralta",
      "Arnau de Peralta",
     tf_hero,
@@ -52690,10 +48659,10 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x000000096c092012530a4ae9248b6fb400000000001ee09a0000000000000000
-    ],
+  ],
 
 
-    ["knight_17_2",
+  ["knight_17_2",
      "Pere de Montcada i d'Aragó",
      "Pere de Montcada i d'Aragó",
     tf_hero,
@@ -52715,10 +48684,10 @@ itm_andalusian_helmet_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000a9e00d00927942cda9b6e98ae00000000001f54c40000000000000000
-    ],
+  ],
 
 
-    ["knight_17_3",
+  ["knight_17_3",
      "Àlvar d'Urgell,comte d'Urgell i vescomte d'Àger",
      "Álvar el Castellà",
     tf_hero,
@@ -52740,10 +48709,10 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000a8000b0132863a5e76c5123fa00000000001dd1690000000000000000
-    ],
+  ],
 
 
-    ["knight_17_4",
+  ["knight_17_4",
      "Ponç IV d'Empúries,comte d'Empúries",
      "Ponç IV d'Empúries",
     tf_hero,
@@ -52765,10 +48734,10 @@ itm_andalusian_helmet_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000ab605100106e46ed9758ab77100000000001e00dd0000000000000000
-    ],
+  ],
 
 
-    ["knight_17_5",
+  ["knight_17_5",
      "Arnau Roger I de Pallars Sobirà",
      "Arnau Roger I",
     tf_hero,
@@ -52790,10 +48759,10 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x0000000ab604110506e46ed9758ab77100000000001e00dd0000000000000000
-    ],
+  ],
 
 
-    ["knight_17_6",
+  ["knight_17_6",
      "Don Lope Ferrench de Luna ",
      "Lope Ferrench de Luna ",
     tf_hero,
@@ -52816,10 +48785,10 @@ itm_andalusian_helmet_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000aae1015c96cab8e16e588ba6400000000001da52a0000000000000000
-    ],
+  ],
 
 
-    ["knight_17_7",
+  ["knight_17_7",
      "Don Pero Cornel",
      "Pero Cornel",
     tf_hero,
@@ -52841,10 +48810,10 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x00000000340d15c73496b2275a2d021500000000001c955b0000000000000000
-    ],
+  ],
 
 
-    ["knight_17_8",
+  ["knight_17_8",
      "Gastó de Montcada i de Bearn",
      "Gastó de Montcada",
     tf_hero,
@@ -52867,10 +48836,10 @@ itm_andalusian_helmet_d,
     knight_wp_4,
     knight_skills_4,
     0x00000007ef011010551b75b8f049bb2900000000001ed2d40000000000000000
-    ],
+  ],
 
 
-    ["knight_17_9",
+  ["knight_17_9",
      "Don Jaume de Montagut",
      "Jaume de Montagut",
     tf_hero,
@@ -52893,10 +48862,10 @@ itm_andalusian_helmet_d,
     knight_wp_3,
     knight_skills_3,
     0x00000007ef012001551be1b8f409bb2900000000001ef0d40000000000000000
-    ],
+  ],
 
 
-    ["knight_17_10",
+  ["knight_17_10",
      "Don Berenguer d'Entensa",
      "Berenguer d'Entensa",
     tf_hero,
@@ -52919,10 +48888,10 @@ itm_andalusian_helmet_d,
     knight_wp_2,
     knight_skills_2,
     0x00000007ef0110045f1ae1f8f409bb2900000000001eb0d40000000000000000
-    ],
+  ],
 
 
-    ["knight_17_11",
+  ["knight_17_11",
      "Caunt Artal de Luna",
      "Artal de Luna",
     tf_hero,
@@ -52944,10 +48913,10 @@ itm_andalusian_helmet_d,
     knight_wp_3,
     knight_skills_3,
     0x00000007ef0121055f1ae1f8f409bb2900000000001eb0d40000000000000000
-    ],
+  ],
 
 
-    ["knight_17_12",
+  ["knight_17_12",
      "Infant Pere",
      "Infant Pere",
     tf_hero,
@@ -52969,10 +48938,10 @@ itm_andalusian_helmet_d,
     knight_wp_2,
     knight_skills_2,
     0x00000000000061095f1ae1f8f409bb2900000000001eb0d40000000000000000
-    ],
+  ],
 
 
-    ["knight_17_13",
+  ["knight_17_13",
      "Don Álvar Perez de Azagra",
      "Álvar Perez de Azagra",
     tf_hero,
@@ -52994,10 +48963,10 @@ itm_andalusian_helmet_d,
     knight_wp_3,
     knight_skills_3,
     0x00000000390525c73364ad9c6270bb1900000000001d569b0000000000000000
-    ],
+  ],
 
 
-    ["knight_17_14",
+  ["knight_17_14",
      "Viscount Ramon Folch de Cardona",
      "Ramon Folch de Cardona",
     tf_hero,
@@ -53019,10 +48988,10 @@ itm_andalusian_helmet_d,
     knight_wp_2,
     knight_skills_2,
     0x00000000260d100f538c0ced648d3a6200000000001dd1630000000000000000
-    ],
+  ],
 
 
-    ["knight_17_15",
+  ["knight_17_15",
      "Baron Berenguer d'Entensa",
      "Berenguer d'Entensa",
     tf_hero,
@@ -53045,7 +49014,7 @@ itm_andalusian_helmet_d,
     knight_wp_3,
     knight_skills_3,
     0x00000009e60d2001538c0ced648d3a6200000000001dd1630000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_17_16",
@@ -53173,7 +49142,7 @@ itm_andalusian_helmet_d,
     ###### 0xc130461054af448eb19cd40e400000000001d488a0000000000000000, swadian_face_older_2
     ###### ],
 
-    ["knight_18_1",
+  ["knight_18_1",
      "Infante Felipe de Castilla y Suabia",
      "Infante Felipe de Castilla y Suabia",
     tf_hero,
@@ -53194,10 +49163,10 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x000000003f111008264c45cacdcf492b00000000001e43530000000000000000
-    ],
+  ],
 
 
-    ["knight_18_2",
+  ["knight_18_2",
      "Don Fernando Rodríguez de Castro",
      "Fernando Rodríguez de Castro",
     tf_hero,
@@ -53218,10 +49187,10 @@ itm_andalusian_helmet_d,
     knight_wp_4,
     knight_skills_4,
     0x000000003f112009264d41cacd6f092b00000000001f41530000000000000000
-    ],
+  ],
 
 
-    ["knight_18_3",
+  ["knight_18_3",
      "Don Lope Díaz II d'Haro",
      "Cabeza Brava",
     tf_hero,
@@ -53243,10 +49212,10 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x000000077f106006264d41cacd6f092b00000000001f41530000000000000000
-    ],
+  ],
 
 
-    ["knight_18_4",
+  ["knight_18_4",
      "Infante Fernando de la Cerda",
      "Fernando de la Cerda",
     tf_hero,
@@ -53268,10 +49237,10 @@ itm_andalusian_helmet_d,
     knight_wp_4,
     knight_skills_4,
     0x000000076f0d11062b349240ac4618e900000000001d54950000000000000000
-    ],
+  ],
 
 
-    ["knight_18_5",
+  ["knight_18_5",
      "Don Nuño González de Lara",
      "Nuño González de Lara",
     tf_hero,
@@ -53293,10 +49262,10 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x000000076f0d25882b349240ac4618e900000000001d54950000000000000000
-    ],
+  ],
 
 
-    ["knight_18_6",
+  ["knight_18_6",
      "Don Pedro Núñez de Guzmán",
      "Pedro Núñez de Guzmán",
     tf_hero,
@@ -53318,10 +49287,10 @@ itm_andalusian_helmet_d,
     knight_wp_4,
     knight_skills_4,
     0x0000000e6f0c55892b349240ac4618e900000000001d54950000000000000000
-    ],
+  ],
 
 
-    ["knight_18_7",
+  ["knight_18_7",
      "Infante Fadrique de Castilla",
      "Fadrique de Castilla",
     tf_hero,
@@ -53343,17 +49312,17 @@ itm_andalusian_helmet_d,
     knight_wp_5,
     knight_skills_5,
     0x00000004ef0d15812b349240ac4618e900000000001d54950000000000000000
-    ],
+  ],
 
 
-    ["knight_18_8",
+  ["knight_18_8",
      "Don Ramón de Bonifaz y Camargo",
      "Ramón de Bonifaz y Camargo",
     tf_hero,
     0, 0, fac_kingdom_18,
     [
 
-itm_kolpak_mail,
+    itm_kolpak_mail,
 
     itm_mail_mittens,
     itm_splinted_greaves_long,
@@ -53369,10 +49338,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x00000008af0d25c12b34927ca94618e900000000001d54950000000000000000
-    ],
+  ],
 
 
-    ["knight_18_9",
+  ["knight_18_9",
      "García Fernández de Barrantes,Maestro de ordem Alcantara",
      "García Fernández de Barrantes",
     tf_hero,
@@ -53395,10 +49364,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000eaf0c52812b34927ca94618e900000000001d54950000000000000000
-    ],
+  ],
 
 
-    ["knight_18_10",
+  ["knight_18_10",
      "don Pedro Álvarez de Asturias",
      "Pedro Álvarez de Asturias",
     tf_hero,
@@ -53422,10 +49391,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x000000010f0d25c142f36d5a6589686500000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_18_11",
+  ["knight_18_11",
      "don Gomez González de Aza ",
      "Gomez González de Aza",
     tf_hero,
@@ -53448,10 +49417,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000001290d15c842f36d5a6589686500000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_18_12",
+  ["knight_18_12",
      "don Simon Rodríguez de los Cameros",
      "Simon Rodríguez de los Cameros",
     tf_hero,
@@ -53472,10 +49441,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x00000001290c318842f36d5a6589686500000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_18_13",
+  ["knight_18_13",
      "don Pefro Díaz de Castaneda",
      "don Pefro Díaz",
     tf_hero,
@@ -53497,10 +49466,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000001000c558842f36d5a6589686500000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_18_14",
+  ["knight_18_14",
      "don Alfonso Téllez de Meneses",
      "don Alfonso Téllez",
     tf_hero,
@@ -53522,10 +49491,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x0000000e800cc5d342f36d5a6589686500000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_18_15",
+  ["knight_18_15",
      "Joan Manuel de Borgonya i de Suàbia",
      "Joan Manuel de Borgonya",
     tf_hero,
@@ -53547,7 +49516,7 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000007ca0d20014d336d5b7b6c6f5d00000000001da7140000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_18_16",
@@ -53676,7 +49645,7 @@ itm_kolpak_mail,
     ###### ],
 
 
-    ["knight_19_1",
+  ["knight_19_1",
      "Infante Don Teobaldo de Navarra",
      "Teobaldo",
     tf_hero,
@@ -53698,10 +49667,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x00000007700821842553bc868b90433300000000001c9ba40000000000000000
-    ],
+  ],
 
 
-    ["knight_19_2",
+  ["knight_19_2",
      "Don Guillermo de Navarra",
      "Guillermo",
     tf_hero,
@@ -53722,10 +49691,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x000000075f0444042b2556949449c56800000000001f1acc0000000000000000
-    ],
+  ],
 
 
-    ["knight_19_3",
+  ["knight_19_3",
      "Infante Don Enrique de Navarra ",
      "Enrique",
     tf_hero,
@@ -53747,7 +49716,7 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x000000076d00440745557a244ba8c52200000000000a330c0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_19_4",
@@ -53925,7 +49894,7 @@ itm_kolpak_mail,
     ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
     ###### ],
 
-    ["knight_20_1",
+  ["knight_20_1",
      "Amir Mohammed Al-Faqih",
      "Mohammed Al-Faqih",
     tf_hero|tf_guarantee_helmet,
@@ -53945,10 +49914,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x0000000e6704614538e498b7ab71038c00000000001db6da0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_2",
+  ["knight_20_2",
      "Amir Yusuf Ibn Nasr",
      "Yusuf Ibn Nasr",
     tf_hero|tf_guarantee_helmet,
@@ -53967,10 +49936,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000e790072c638a2d6430b6a5a7400000000001e13b30000000000000000
-    ],
+  ],
 
 
-    ["knight_20_3",
+  ["knight_20_3",
      "Amir Faraj Ibn Nasr",
      "Faraj Ibn Nasr",
     tf_hero|tf_guarantee_helmet,
@@ -53991,10 +49960,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x0000000bdf00610936ac9236b44a2aec00000000001e1c5d0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_4",
+  ["knight_20_4",
      "Amir Isma'il Ibn Nasr",
      "Isma'il Ibn Nasr",
     tf_hero|tf_guarantee_helmet,
@@ -54013,10 +49982,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000bf51075c73b15cde91b655c5400000000001e58930000000000000000
-    ],
+  ],
 
 
-    ["knight_20_5",
+  ["knight_20_5",
      "Amir Ali Ibn Ashqilula",
      "Ali Ibn Ashqilula",
     tf_hero|tf_guarantee_helmet,
@@ -54036,10 +50005,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x0000000bc10c724b44a4cfc79ef5685200000000001ec8d20000000000000000
-    ],
+  ],
 
 
-    ["knight_20_6",
+  ["knight_20_6",
      "Amir Ibrahim Ibn Ashqilula",
      "Ibrahim Ibn Ashqilula",
     tf_hero|tf_guarantee_helmet,
@@ -54059,10 +50028,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000bde006090355bd225746a37a200000000001c3ce40000000000000000
-    ],
+  ],
 
 
-    ["knight_20_7",
+  ["knight_20_7",
      "Amir Nasr Ibn Mohammed",
      "Nasr Ibn Mohammed",
     tf_hero|tf_guarantee_helmet,
@@ -54081,10 +50050,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x0000000bec04649014ea8b489cd2476d00000000001dc55a0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_8",
+  ["knight_20_8",
      "Amir Yusuf Ibn Mohammed",
      "Yusuf Ibn Mohammed",
     tf_hero|tf_guarantee_helmet,
@@ -54103,10 +50072,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000bd80872ca392d6e94c48b38e000000000001e3d240000000000000000
-    ],
+  ],
 
 
-    ["knight_20_9",
+  ["knight_20_9",
      "Amir Faraj Ibn Mohammed",
      "Faraj Ibn Mohammed",
     tf_hero|tf_guarantee_helmet,
@@ -54125,10 +50094,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000bd61072c838e9f594dc2a8ac400000000001d36550000000000000000
-    ],
+  ],
 
 
-    ["knight_20_10",
+  ["knight_20_10",
      "Amir Abu Said Faraj",
      "Abu Said Faraj",
     tf_hero|tf_guarantee_helmet,
@@ -54148,10 +50117,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x00000008cf0c705348a25513942ded9b00000000001d41100000000000000000
-    ],
+  ],
 
 
-    ["knight_20_11",
+  ["knight_20_11",
      "Amir Abdu'llah",
      "Abdu'llah",
     tf_hero|tf_guarantee_helmet,
@@ -54170,8 +50139,8 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000008e30874c64764b1251b51a6da00000000001d259c0000000000000000
-    ],
-    ["knight_20_12",
+  ],
+  ["knight_20_12",
      "Amir Hammad",
      "Hammad",
     tf_hero|tf_guarantee_helmet,
@@ -54190,10 +50159,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x00000008e80c654f366d6e450aade49300000000000756e50000000000000000
-    ],
+  ],
 
 
-    ["knight_20_13",
+  ["knight_20_13",
      "Amir Mansur",
      "Mansur",
     tf_hero|tf_guarantee_helmet,
@@ -54213,10 +50182,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000008d7086446345395c664a9592300000000001d97bb0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_14",
+  ["knight_20_14",
      "Amir Umar",
      "Umar",
     tf_hero|tf_guarantee_helmet,
@@ -54235,10 +50204,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000008de007041392355b8cb4e2cea00000000001cc56d0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_15",
+  ["knight_20_15",
      "Amir Attiyah",
      "Attiyah",
     tf_hero|tf_guarantee_helmet,
@@ -54257,10 +50226,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x00000008d91072523695b2344851996200000000001e175c0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_16",
+  ["knight_20_16",
      "Amir Darras",
      "Darras",
     tf_hero|tf_guarantee_helmet,
@@ -54280,10 +50249,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000008c40c610649556ee2dacd4bab00000000001ca46c0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_17",
+  ["knight_20_17",
      "Amir Jahhaf",
      "Jahhaf",
     tf_hero|tf_guarantee_helmet,
@@ -54302,10 +50271,10 @@ itm_kolpak_mail,
     knight_wp_1,
     knight_skills_1,
     0x00000008cf04604d14e46cb55a61a52300000000001cc91a0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_18",
+  ["knight_20_18",
      "Amir Muhammad",
      "Muhammad",
     tf_hero|tf_guarantee_helmet,
@@ -54324,10 +50293,10 @@ itm_kolpak_mail,
     knight_wp_1,
     knight_skills_1,
     0x00000008cf04758a14e46cb55a61a52300000000001cc91a0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_19",
+  ["knight_20_19",
      "Amir Wasim",
      "Wasim",
     tf_hero|tf_guarantee_helmet,
@@ -54346,10 +50315,10 @@ itm_kolpak_mail,
     knight_wp_1,
     knight_skills_1,
     0x0000000dde0040c4549dd5ca6f4dd56500000000001e291b0000000000000000
-    ],
+  ],
 
 
-    ["knight_20_20",
+  ["knight_20_20",
      "Amir Rashid",
      "Abu Rashid",
     tf_hero|tf_guarantee_helmet,
@@ -54369,10 +50338,10 @@ itm_kolpak_mail,
     knight_wp_1,
     knight_skills_1,
     0x000000000008c0063b538b46946db96300000000001d35560000000000000000
-    ],
+  ],
 
 
-    ["knight_21_1",
+  ["knight_21_1",
      "Tommaso di Aquino",
      "Tommaso di Aquino",
     tf_hero,
@@ -54394,10 +50363,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x000000093c08d0033b538b46946db96300000000001d35560000000000000000
-    ],
+  ],
 
 
-    ["knight_21_2",
+  ["knight_21_2",
      "Riccardo Annibaldi",
      "Riccardo Annibaldi",
     tf_hero,
@@ -54418,10 +50387,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x000000090700315226d674c21337496400000000001f329c0000000000000000
-    ],
+  ],
 
 
-    ["knight_21_3",
+  ["knight_21_3",
      "Giovanni Orsini",
      "Giovanni Orsini",
     tf_hero,
@@ -54443,10 +50412,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x0000000a3108d009531a66c76256cb7600000000001dd0e10000000000000000
-    ],
+  ],
 
 
-    ["knight_21_4",
+  ["knight_21_4",
      "Matteo Rosso",
      "Matteo Rosso",
     tf_hero,
@@ -54468,10 +50437,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000775084194569e92061369bad4000000000010c4a30000000000000000
-    ],
+  ],
 
 
-    ["knight_21_5",
+  ["knight_21_5",
      "Gentile Orsini",
      "Gentile Orsini",
     tf_hero,
@@ -54493,10 +50462,10 @@ itm_kolpak_mail,
     knight_wp_1,
     knight_skills_1,
     0x000000093d08c00827524af674cd96e400000000001de3220000000000000000
-    ],
+  ],
 
 
-    ["knight_22_1",
+  ["knight_22_1",
      "Michael II Komnenos Doukas, Despot of Epirus",
      "Michael II Komnenos Doukas",
     tf_hero,
@@ -54518,10 +50487,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x000000093d10c14832cc924123c9ada200000000001144a60000000000000000
-    ],
+  ],
 
 
-    ["knight_22_2",
+  ["knight_22_2",
      "Strategos Michail Palaeologos",
      "Michail Palaeologos",
     tf_hero,
@@ -54543,10 +50512,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x000000091e0532c8269a4a565c52b8c800000000000752d60000000000000000
-    ],
+  ],
 
 
-    ["knight_22_3",
+  ["knight_22_3",
      "Strategos Georgios Muzalon",
      "Georgios Muzalon",
     tf_hero,
@@ -54568,10 +50537,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x000000090011118a4ed44dc94d56b51400000000001cc0eb0000000000000000
-    ],
+  ],
 
 
-    ["knight_22_4",
+  ["knight_22_4",
      "Strategos Ioannis Doukas",
     "Ioannis Doukas",
     tf_hero,
@@ -54593,10 +50562,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x00000009001033484ed44dc94d56b51400000000001cc0eb0000000000000000
-    ],
+  ],
 
 
-    ["knight_22_5",
+  ["knight_22_5",
      "Strategos Alexios Strategopoulos",
      "Alexios Strategopoulos",
     tf_hero,
@@ -54618,10 +50587,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x00000009001053494ed44dc94d56b51400000000001cc0eb0000000000000000
-    ],
+  ],
 
 
-    ["knight_22_6",
+  ["knight_22_6",
      "Strategos Georgios Eirinikos",
      "Georgios Eirinikos",
     tf_hero,
@@ -54643,10 +50612,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x000000091b00d24a366371a8a5464ca600000000001dd4e70000000000000000
-    ],
+  ],
 
 
-    ["knight_22_7",
+  ["knight_22_7",
      "Strategos Georgios Akropolitis",
      "Georgios Akropolitis",
     tf_hero,
@@ -54668,10 +50637,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x0000000ead04d3544c516ee6b52bbce100000000001d691b0000000000000000
-    ],
+  ],
 
 
-    ["knight_22_8",
+  ["knight_22_8",
      "Strategos Nikolaos Vatatzes",
      "Nikolaos Vatatzes",
     tf_hero,
@@ -54693,10 +50662,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000a3108d110531a66c76256cb7600000000001dd0e10000000000000000
-    ],
+  ],
 
 
-    ["knight_22_9",
+  ["knight_22_9",
      "Strategos Nikiforos Blemmydes",
      "Nikiforos Blemmydes",
     tf_hero,
@@ -54717,10 +50686,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000a0504c290171d74aada51e52b00000000001fa4510000000000000000
-    ],
+  ],
 
 
-    ["knight_22_10",
+  ["knight_22_10",
      "Strategos Georgios Metochites",
      "Georgios Metochites",
     tf_hero,
@@ -54741,10 +50710,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x0000000a040cd2842692aa87738d18f400000000001da6f30000000000000000
-    ],
+  ],
 
 
-    ["knight_22_11",
+  ["knight_22_11",
      "Strategos Ioannis Maniaces",
      "Ioannis Maniaces",
     tf_hero,
@@ -54765,10 +50734,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000a2310c293553546465cadcb6900000000001dc29c0000000000000000
-    ],
+  ],
 
 
-    ["knight_22_12",
+  ["knight_22_12",
      "Strategos Theodoros Psellos",
      "Theodoros Psellos",
     tf_hero,
@@ -54789,10 +50758,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x0000000a020031885b1eaf691c86455200000000001e581d0000000000000000
-    ],
+  ],
 
 
-    ["knight_22_13",
+  ["knight_22_13",
      "Strategos Ioannes Philanthropenos",
      "Ioannes Philanthropenos",
     tf_hero,
@@ -54814,10 +50783,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000a1010b288188a6e56db8ee31a00000000001d09990000000000000000
-    ],
+  ],
 
 
-    ["knight_22_14",
+  ["knight_22_14",
      "Strategos Georgios Agallon",
      "Georgios Agallon",
     tf_hero,
@@ -54839,10 +50808,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x0000000a310d2345375e9ed5546e276600000000001ed2e50000000000000000
-    ],
+  ],
 
 
-    ["knight_22_15",
+  ["knight_22_15",
      "Strategos Nikolaos Aprinos",
      "Nikolaos Aprinos",
     tf_hero,
@@ -54863,7 +50832,7 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x0000000a0909200a18ad50c79d6d435900000000001e03580000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_22_16",
@@ -54992,7 +50961,7 @@ itm_kolpak_mail,
     ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
     ###### ],
 
-    ["knight_23_1",
+  ["knight_23_1",
      "Guillaume de Chateauneuf, Grand Maitre de l'ordre des Hospitaliers",
      "Guillaume de Chateauneuf",
     tf_hero,
@@ -55018,10 +50987,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x0000000fe508559373e3c2dcec53151400000000001e66c60000000000000000
-    ],
+  ],
 
 
-    ["knight_23_2",
+  ["knight_23_2",
      "Thomas Bérard, Grand Maitre de l'ordre du Temple",
      "Thomas Bérard",
     tf_hero,
@@ -55049,10 +51018,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000fff042286399392671b71c48300000000001f831d0000000000000000
-    ],
+  ],
 
 
-    ["knight_23_3",
+  ["knight_23_3",
      "Bohémond VI, prince d' Antioche",
      "Bohémond VI",
     tf_hero,
@@ -55078,10 +51047,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x00000003a90015c94adb4f48d185bb1c00000000001e329a0000000000000000
-    ],
+  ],
 
 
-    ["knight_23_4",
+  ["knight_23_4",
      "Hugues II de Lusignan, Roi de Chypre",
      "Hugues II de Lusignan",
     tf_hero,
@@ -55103,10 +51072,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x000000000a0115c94adb4f48d185bb1c00000000001e329a0000000000000000
-    ],
+  ],
 
 
-    ["knight_23_5",
+  ["knight_23_5",
     "Jean d'Ibelin, seigneur d' Arsouf et Cesarea",
     "Jean d'Ibelin",
     tf_hero,
@@ -55133,10 +51102,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x00000009ec1010094b5494c89a66668b00000000001c04b50000000000000000
-    ],
+  ],
 
 
-    ["knight_23_6",
+  ["knight_23_6",
      "Eberhard von Sayn,Großkomtur des Deutschen Ordens",
      "Eberhard von Sayn",
     tf_hero,
@@ -55161,10 +51130,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000e501055ce4bd480c89a66668b00000000001c04b50000000000000000
-    ],
+  ],
 
 
-    ["knight_23_7",
+  ["knight_23_7",
      "Baudouin d'Ibelin, Seneschal du royaume de Cyprus",
      "Baudouin d'Ibelin",
     tf_hero,
@@ -55192,10 +51161,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x000000000904000f36e382dc1238984e00000000001dc0c60000000000000000
-    ],
+  ],
 
 
-    ["knight_23_8",
+  ["knight_23_8",
      "Geoffroy de Sergines, Maréchal de Jerusalem",
      "Geoffroy de Sergines",
     tf_hero,
@@ -55219,10 +51188,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000ea70c544542d957f959ce971100000000001e23240000000000000000
-    ],
+  ],
 
 
-    ["knight_23_9",
+  ["knight_23_9",
      "Léon III d'Arménie",
      "Léon III d'Arménie",
     tf_hero,
@@ -55245,10 +51214,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x000000000e08b3452b19ad5caa96db1b00000000001f27330000000000000000
-    ],
+  ],
 
 
-    ["knight_23_10",
+  ["knight_23_10",
      "Henri Ier Embriaco,seigneur du Gibelet",
      "Henri Ier Embriaco",
     tf_hero,
@@ -55271,10 +51240,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x000000000f1035d047a557295473695a00000000001f32ed0000000000000000
-    ],
+  ],
 
 
-    ["knight_23_11",
+  ["knight_23_11",
      "Gilles d'Estrain,seigneur du Haifa",
      "Gilles d'Estrain",
     tf_hero,
@@ -55297,10 +51266,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000000360c6006652eb586d2b6486f00000000001d25110000000000000000
-    ],
+  ],
 
 
-    ["knight_23_12",
+  ["knight_23_12",
      "Jean I de Gibelet,seignore de Besmedin",
      "seigneur du Gibelet",
     tf_hero,
@@ -55323,10 +51292,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x00000000080851924914c5c8239924dc00000000001e219a0000000000000000
-    ],
+  ],
 
 
-    ["knight_23_13",
+  ["knight_23_13",
      "Philippe de Montfort, seigneur de Toron et de Tyr",
      "Philippe de Montfort",
     tf_hero,
@@ -55349,10 +51318,10 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x00000000010815c1475b6ce52271b69c00000000001d40520000000000000000
-    ],
+  ],
 
 
-    ["knight_23_14",
+  ["knight_23_14",
      "Julian de Grenier, comte de Sidon",
      "Julian de Grenier",
     tf_hero,
@@ -55375,10 +51344,10 @@ itm_kolpak_mail,
     knight_wp_2,
     knight_skills_2,
     0x0000000a920925c64faa463d337954a900000000001e16d90000000000000000
-    ],
+  ],
 
 
-    ["knight_23_15",
+  ["knight_23_15",
      "Simon Mancel, conetable de Antioche",
      "Simon Mancel",
     tf_hero,
@@ -55409,7 +51378,7 @@ itm_kolpak_mail,
     knight_wp_3,
     knight_skills_3,
     0x000000003f0810094faa463d337954a900000000001e16d90000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_23_16",
@@ -55541,7 +51510,7 @@ itm_kolpak_mail,
     ###### 0x00000000381025863b5990436554b59d00000000001e5b9e0000000000000000
     ###### ],
 
-    ["knight_24_1",
+  ["knight_24_1",
     "Galvano Lancia, Conte di Salerno, Grand Marshall of Sicily",
     "Galvano Lancia",
     tf_hero,
@@ -55563,10 +51532,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x00000007ca0cd0064d336d5b7b6c6f5d00000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_24_2",
+  ["knight_24_2",
      "Federigo Lancia",
      "Federigo Lancia",
     tf_hero,
@@ -55587,10 +51556,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x0000000b0a0d20094d336d5b7b6c6f5d00000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_24_3",
+  ["knight_24_3",
      "Giordano di Anglono",
      "Giordano di Anglono",
     tf_hero,
@@ -55612,10 +51581,10 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x0000000b8a0d10134d336d5b7b6c6f5d00000000001da7140000000000000000
-    ],
+  ],
 
 
-    ["knight_24_4",
+  ["knight_24_4",
      "Mastino della Scala",
      "Mastino della Scala",
     tf_hero,
@@ -55637,10 +51606,10 @@ itm_kolpak_mail,
     knight_wp_4,
     knight_skills_4,
     0x00000009620125c8348e15a274c5af0b00000000001e95330000000000000000
-    ],
+  ],
 
 
-    ["knight_24_5",
+  ["knight_24_5",
      "Enrico di Spernaria",
      "Enrico di Spernaria",
     tf_hero,
@@ -55662,17 +51631,17 @@ itm_kolpak_mail,
     knight_wp_5,
     knight_skills_5,
     0x00000003e2011009348e17fe74c5af0b00000000001e95330000000000000000
-    ],
+  ],
 
 
-    ["knight_24_6",
+  ["knight_24_6",
      "Federigo Maletta",
      "Federigo Maletta",
     tf_hero,
     0, 0, fac_kingdom_24,
     [
 
-itm_elm3,
+    itm_elm3,
 
     itm_mail_mittens,
     itm_splinted_leather_greaves,
@@ -55688,16 +51657,16 @@ itm_elm3,
     knight_wp_4,
     knight_skills_4,
     0x00000003ff00c00e348e17fe74c5af0b00000000001e95330000000000000000
-    ],
+  ],
 
 
-    ["knight_24_7",
+  ["knight_24_7",
      "Riccardo di Caserta",
      "Riccardo di Caserta",
     tf_hero,
     0, 0, fac_kingdom_24,
     [
-itm_mail_coif,
+    itm_mail_coif,
     itm_mail_mittens,
     itm_splinted_leather_greaves,
 
@@ -55713,10 +51682,10 @@ itm_mail_coif,
     knight_wp_5,
     knight_skills_5,
     0x00000003de08c588425d691ea28d59aa00000000001e22c90000000000000000
-    ],
+  ],
 
 
-    ["knight_24_8",
+  ["knight_24_8",
      "Tommaso II d'Aquino,",
      "Tommaso II d'Aquino,",
     tf_hero,
@@ -55738,17 +51707,17 @@ itm_mail_coif,
     knight_wp_4,
     knight_skills_4,
     0x00000003c008c5c9425d691ea28d59aa00000000001e22c90000000000000000
-    ],
+  ],
 
 
-    ["knight_24_9",
+  ["knight_24_9",
      "Manfredo Maletta",
      "Manfredo Maletta",
     tf_hero,
     0, 0, fac_kingdom_24,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_splinted_leather_greaves,
@@ -55765,10 +51734,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000003c908d20a18ad50c79d6d435900000000001e03580000000000000000
-    ],
+  ],
 
 
-    ["knight_24_10",
+  ["knight_24_10",
      "Corrado di Antiochia",
      "Corrado di Antiochia",
     tf_hero,
@@ -55791,7 +51760,7 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000000908c00918ad50c79d6d435900000000001e03580000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_24_11",
@@ -56054,7 +52023,7 @@ itm_rnd_helm_06,
     ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
     ###### ],
 
-    ["knight_25_1",
+  ["knight_25_1",
      "Amiir Al-Mansur Ali",
      "Al-Mansur Ali",
     tf_hero,
@@ -56075,10 +52044,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007660475874b0b0ae91485b4e400000000001db4dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_2",
+  ["knight_25_2",
      "Vice-Sultan Saif ad-Din Qutuz",
      "Saif ad-Din Qutuz",
     tf_hero,
@@ -56099,10 +52068,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000076d046208396e6aa9db6944eb00000000001d34b50000000000000000
-    ],
+  ],
 
 
-    ["knight_25_3",
+  ["knight_25_3",
      "Amiir Faris ad-Din Aktai al-Mostareb",
      "Faris ad-Din Aktai al-Mostareb",
     tf_hero,
@@ -56124,10 +52093,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000076e00638b5b3cc4b6e2ad954900000000001d9d550000000000000000
-    ],
+  ],
 
 
-    ["knight_25_4",
+  ["knight_25_4",
      "Malika al Muzaffar",
      "al Muzaffar",
     tf_hero,
@@ -56148,10 +52117,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000077110734f28a4aea89b76dd1e00000000001e489a0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_5",
+  ["knight_25_5",
      "Izz al din Al Afram",
      "Izz al din",
     tf_hero,
@@ -56173,10 +52142,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007530c71863a0976ba9d2a1b5500000000001d9b2c0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_6",
+  ["knight_25_6",
      "Sayf al din Balban al- Tabhakin",
      "Sayf al din Balban",
     tf_hero,
@@ -56198,10 +52167,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007550c734956e44234eb85cadd00000000001e99190000000000000000
-    ],
+  ],
 
 
-    ["knight_25_7",
+  ["knight_25_7",
      "Sayf al din Ibn al-Mihaffadar",
      "Sayf",
     tf_hero,
@@ -56222,10 +52191,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000075d0071c13b2698c6cc14db6400000000001ccc7d0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_8",
+  ["knight_25_8",
      "Zain al din Kitbugha al-Mansuri",
      "Zain",
     tf_hero,
@@ -56246,10 +52215,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000077e0c604b58e14d59ac4a9c9200000000001dc8a90000000000000000
-    ],
+  ],
 
 
-    ["knight_25_9",
+  ["knight_25_9",
      "Alam al din Sanjar al-Aswabi",
      "Aqtamur",
     tf_hero,
@@ -56271,10 +52240,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000075d0872c4378985c70c71ab2d00000000001ec6a20000000000000000
-    ],
+  ],
 
 
-    ["knight_25_10",
+  ["knight_25_10",
      "Sayf al din Qutuz al-Mansuri",
      "Qutuz al-Mansuri",
     tf_hero,
@@ -56296,10 +52265,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000075a00728267aab7689c85336400000000001f28a30000000000000000
-    ],
+  ],
 
 
-    ["knight_25_11",
+  ["knight_25_11",
      "Sanjar al Shuja'i",
      "Sanjar al Shuja'i",
     tf_hero,
@@ -56320,10 +52289,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000074b08648f3b132a2ad249aca2000000000010b0d90000000000000000
-    ],
+  ],
 
 
-    ["knight_25_12",
+  ["knight_25_12",
      "Amiir Baltaa",
      "Baltaa",
     tf_hero,
@@ -56344,10 +52313,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007780c6588489c6f6aad36c51300000000001cc5260000000000000000
-    ],
+  ],
 
 
-    ["knight_25_13",
+  ["knight_25_13",
      "Amiir Barsbughaa",
      "Barsbughaa",
     tf_hero,
@@ -56369,10 +52338,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000075f0473c4496589d6d15eb6cc00000000001e96dc0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_14",
+  ["knight_25_14",
      "Amiir Baybujaa",
      "Baybujaa",
     tf_hero,
@@ -56394,10 +52363,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000074308720a6b26ad46fdb6450800000000001d3ad70000000000000000
-    ],
+  ],
 
 
-    ["knight_25_15",
+  ["knight_25_15",
      "Amiir Baydamur",
      "Baydamur",
     tf_hero,
@@ -56418,10 +52387,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000772086594655666b6dda5c4a100000000001db90a0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_16",
+  ["knight_25_16",
      "Amiir Biiliik",
      "Biiliik",
     tf_hero,
@@ -56442,10 +52411,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000077f08318c4799b0a6ed64e91b00000000001cb70b0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_17",
+  ["knight_25_17",
      "Amiir Duqmaaq",
      "Duqmaaq",
     tf_hero|tf_guarantee_helmet,
@@ -56466,10 +52435,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000077708740c576c8d3c4c2a96a900000000001e385c0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_18",
+  ["knight_25_18",
      "Amiir Ishiqtamur",
      "Ishiqtamur",
     tf_hero|tf_guarantee_helmet,
@@ -56491,10 +52460,10 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000005104b28834e2422a5c92472300000000001f96ce0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_19",
+  ["knight_25_19",
      "Amiir Iyaas",
      "Iyaas",
     tf_hero|tf_guarantee_helmet,
@@ -56515,10 +52484,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x000000005104d34834e2422a5c92472300000000001f96ce0000000000000000
-    ],
+  ],
 
 
-    ["knight_25_20",
+  ["knight_25_20",
      "Amiir Iyaaz",
      "Iyaaz",
     tf_hero|tf_guarantee_helmet,
@@ -56539,7 +52508,7 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x0000000dd104c34834e2422a5c92472300000000001d96ce0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_25_21",
@@ -57023,7 +52992,7 @@ itm_rnd_helm_06,
     ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
     ###### ],
 
-    ["knight_26_1",
+  ["knight_26_1",
      "Guglielmo VII del Monferrato,Rei di Tessalonica",
      "Guglielmo VII del Monferrato",
     tf_hero,
@@ -57045,10 +53014,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000b31086181395982c715a04edd00000000001ea1150000000000000000
-    ],
+  ],
 
 
-    ["knight_26_2",
+  ["knight_26_2",
      "Guy Ier de La Roche, duc d'Athènes",
      "Guy Ier de La Roche",
     tf_hero,
@@ -57069,10 +53038,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000084009100156ecab54597408dc00000000001d27130000000000000000
-    ],
+  ],
 
 
-    ["knight_26_3",
+  ["knight_26_3",
      "Guillaume de Villehardouin, Prince d'Achaïe",
      "Guillaume de Villehardouin",
     tf_hero,
@@ -57094,10 +53063,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000e1d0d244949e27316ed30d91a00000000001f80d30000000000000000
-    ],
+  ],
 
 
-    ["knight_26_4",
+  ["knight_26_4",
      "Ubertino Pallavicini,margrave de Bodonitsa",
      "Ubertino Pallavicini",
     tf_hero,
@@ -57119,10 +53088,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000030112183552a8d3c5b4e572300000000001d06cc0000000000000000
-    ],
+  ],
 
 
-    ["knight_26_5",
+  ["knight_26_5",
      "Erard de Nully, Baron de Passava",
      "Erard de Nully",
     tf_hero,
@@ -57144,17 +53113,17 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000008c2111009392e895d6c51e26100000000001d39aa0000000000000000
-    ],
+  ],
 
 
-    ["knight_26_6",
+  ["knight_26_6",
      "Gauthier de Rosieres, Baron de la  Matagrifon",
      "Gauthier de Rosieres",
     tf_hero,
     0, 0, fac_kingdom_26,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -57170,16 +53139,16 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000008e21010067015cfff1e6ca6e300000000001fe24b0000000000000000
-    ],
+  ],
 
 
-    ["knight_26_7",
+  ["knight_26_7",
      "Othon de Tournay, Baron de la Colovrate",
      "Othon de Tournay",
     tf_hero,
     0, 0, fac_kingdom_26,
     [
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
 
@@ -57195,10 +53164,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000008e30c100f291a76069cc22b0b00000000001eb4aa0000000000000000
-    ],
+  ],
 
 
-    ["knight_26_8",
+  ["knight_26_8",
      "Geoffroy de Bruyeres, Baron of Karytaina",
      "Geoffroy de Bruyeres",
     tf_hero,
@@ -57220,17 +53189,17 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000008c01065c950e66e6a9a69a67400000000001e07e30000000000000000
-    ],
+  ],
 
 
-    ["knight_26_9",
+  ["knight_26_9",
      "Nicolas de Saint-Omer,seigneur de Thèbes, bailli de Morée",
      "Nicolas de Saint-Omer",
     tf_hero,
     0, 0, fac_kingdom_26,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_kau_mail_boots_dark_long,
@@ -57247,10 +53216,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x00000008f608044676e371dad33667c300000000001ec2950000000000000000
-    ],
+  ],
 
 
-    ["knight_26_10",
+  ["knight_26_10",
      "Maio Orsini, conte di Kefalonia",
      "Maio Orsini",
     tf_hero,
@@ -57273,7 +53242,7 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x000000082a081005289d69c46c6e497200000000001d50b40000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_26_11",
@@ -57405,7 +53374,7 @@ itm_rnd_helm_06,
     ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
     ###### ],
 
-    ["knight_27_1",
+  ["knight_27_1",
      "Manuel I Megas Komnenos, Emperor of Trebizond",
      "Manuel I Megas Komnenos",
     tf_hero,
@@ -57430,10 +53399,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007760c1182271971492d8ec79500000000000344530000000000000000
-    ],
+  ],
 
 
-    ["knight_27_2",
+  ["knight_27_2",
      "Hethum,King of Armenia",
      "Hethum of Armenia",
     tf_hero|tf_guarantee_helmet,
@@ -57454,8 +53423,8 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000ef510d25226db43f6d67409ff00000000001cd0960000000000000000
-    ],
-    ["knight_27_3",
+  ],
+  ["knight_27_3",
      "Kay Kawus II Seljuk Sultan of Rum",
      "Kay Kawus II",
     tf_hero|tf_guarantee_helmet,
@@ -57477,8 +53446,8 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000e7e08d24673d711f1632d269b00000000001d21c40000000000000000
-    ],
-    ["knight_27_4",
+  ],
+  ["knight_27_4",
      "Abaqa Noyan",
      "Abaqa",
     tf_hero,
@@ -57504,8 +53473,8 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x0000000e5d10838d18bec05487800b0000000000001c970f0000000000000000
-    ],
-    ["knight_27_5",
+  ],
+  ["knight_27_5",
      "Tekuder Noyan",
      "Tekuder",
     tf_hero,
@@ -57530,8 +53499,8 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000099d10834b15ff605484800b0000000000001c97300000000000000000
-    ],
-    ["knight_27_6",
+  ],
+  ["knight_27_6",
      "Jumqur Noyan",
      "Jumqur",
     tf_hero,
@@ -57543,7 +53512,7 @@ itm_rnd_helm_06,
     itm_saddle_horse,
     itm_hide_boots,
 
-itm_khergit_war_helmet,
+    itm_khergit_war_helmet,
     itm_khergit_bow,
     itm_arrows,
     itm_mon_lamellar_b,
@@ -57554,8 +53523,8 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0x000000099d10838a75fc605484800b0000000000001e172b0000000000000000
-    ],
-    ["knight_27_7",
+  ],
+  ["knight_27_7",
      "Yashmut Noyan",
      "Yashmut",
     tf_hero,
@@ -57576,8 +53545,8 @@ itm_khergit_war_helmet,
     knight_wp_5,
     knight_skills_5,
     0x000000061d1080067ff862b684800b0000000000001e17280000000000000000
-    ],
-    ["knight_27_8",
+  ],
+  ["knight_27_8",
      "Baiju Noyan",
      "Baiju",
     tf_hero,
@@ -57591,7 +53560,7 @@ itm_khergit_war_helmet,
     itm_hide_boots,
     itm_kau_mail_boots_dark_long,
 
-itm_khergit_war_helmet,
+    itm_khergit_war_helmet,
     itm_sword_khergit_3,
     itm_tab_shield_small_round_c,
     itm_warhorse
@@ -57600,8 +53569,8 @@ itm_khergit_war_helmet,
     knight_wp_4,
     knight_skills_4,
     0x000000061d10a0007ff862b684800b0000000000001e17280000000000000000
-    ],
-    ["knight_27_9",
+  ],
+  ["knight_27_9",
      "Kitbuqa Noyan",
      "Kitbuqa",
     tf_hero,
@@ -57623,8 +53592,8 @@ itm_khergit_war_helmet,
     knight_wp_3,
     knight_skills_3,
     0x0000000e1d10825411f862b684000b0000000000001e15000000000000000000
-    ],
-    ["knight_27_10",
+  ],
+  ["knight_27_10",
      "Mongke-Temur Noyan",
      "Mongke-Temu",
     tf_hero,
@@ -57637,7 +53606,7 @@ itm_khergit_war_helmet,
     itm_leather_boots,
     itm_hide_boots,
 
-itm_khergit_guard_helmet,
+    itm_khergit_guard_helmet,
 
     itm_sword_khergit_3,
     itm_tab_shield_small_round_c,
@@ -57647,8 +53616,8 @@ itm_khergit_guard_helmet,
     knight_wp_2,
     knight_skills_2,
     0x0000000e1d10839401ff62b604c9a66100000000001f95070000000000000000
-    ],
-    ["knight_27_11",
+  ],
+  ["knight_27_11",
      "Taraqai Noyan",
      "Taraqai",
     tf_hero,
@@ -57670,8 +53639,8 @@ itm_khergit_guard_helmet,
     knight_wp_3,
     knight_skills_3,
     0x0000000e1d10a3d401ec82b6e4c9a66100000000001f95470000000000000000
-    ],
-    ["knight_27_12",
+  ],
+  ["knight_27_12",
      "Tutar Noyan",
      "Tutar",
     tf_hero,
@@ -57685,7 +53654,7 @@ itm_khergit_guard_helmet,
     itm_leather_boots,
 
 
-itm_khergit_guard_helmet,
+    itm_khergit_guard_helmet,
     itm_scimitar,
     itm_tab_shield_small_round_c
     ],
@@ -57693,8 +53662,8 @@ itm_khergit_guard_helmet,
     knight_wp_2,
     knight_skills_2,
     0x0000000add1094d471ec82b6e4c9a66100000000001f897c0000000000000000
-    ],
-    ["knight_27_13",
+  ],
+  ["knight_27_13",
      "Balaghai Noyan",
      "Balaghai",
     tf_hero,
@@ -57707,7 +53676,7 @@ itm_khergit_guard_helmet,
     itm_lamellar_vest,
     itm_hide_boots,
 
-itm_khergit_guard_helmet,
+    itm_khergit_guard_helmet,
     itm_sword_khergit_4,
     itm_shortened_military_scythe,
     itm_mon_lamellar_b,
@@ -57717,8 +53686,8 @@ itm_khergit_guard_helmet,
     knight_wp_3,
     knight_skills_3,
     0x000000001d10801471ec82b6e4c9a66100000000001f897c0000000000000000
-    ],
-    ["knight_27_14",
+  ],
+  ["knight_27_14",
      "Buqa-Temur Noyan",
      "Buqa-Temur",
     tf_hero,
@@ -57742,8 +53711,8 @@ itm_khergit_guard_helmet,
     knight_wp_2,
     knight_skills_2,
     0x000000001d10a0147b2b4eb6e4c9a66100000000001f34dc0000000000000000
-    ],
-    ["knight_27_15",
+  ],
+  ["knight_27_15",
      "Koke-Ilgei Noyan",
      "Koke-Ilgei",
     tf_hero,
@@ -57757,7 +53726,7 @@ itm_khergit_guard_helmet,
     itm_hide_boots,
     itm_mon_lamellar_a,
 
-itm_mongol_helmet_b,
+    itm_mongol_helmet_b,
     itm_leather_gloves,
     itm_sword_khergit_3,
     itm_tab_shield_small_round_c
@@ -57766,7 +53735,7 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x000000001d1090127b2b4eb6e4c9a66100000000001f34dc0000000000000000
-    ],
+  ],
 
 
     ###### [
@@ -57897,7 +53866,7 @@ itm_mongol_helmet_b,
     ###### 0xc2a0015d249b68b46a98e176400000000001d95a40000000000000000, vaegir_face_old_2
     ###### ],
 
-    ["knight_28_1",
+  ["knight_28_1",
      "Malika al Muzaffar",
      "Malika",
     tf_hero|tf_guarantee_helmet,
@@ -57918,10 +53887,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x0000000fcb10b3503efb80fc126cbfff00000000001d01000000000000000000
-    ],
+  ],
 
 
-    ["knight_28_2",
+  ["knight_28_2",
      "Abû 'Uthmân Sa'îd ibn Hakam al Qurashi",
      "Hakam al Qurashi",
     tf_hero|tf_guarantee_helmet,
@@ -57942,10 +53911,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x000000000b10b1503efb80fc126cb8c200000000001d01000000000000000000
-    ],
+  ],
 
 
-    ["knight_28_3",
+  ["knight_28_3",
      "Emir Su'ayb,Emir de Taifa de Niebla",
      "Emir Su'ayb",
     tf_hero|tf_guarantee_helmet,
@@ -57966,10 +53935,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x0000000dcb10b1d03efb02fe1274b8c200000000001f81380000000000000000
-    ],
+  ],
 
 
-    ["knight_28_4",
+  ["knight_28_4",
      "Emir Dhakir",
      "Dhakir",
     tf_hero|tf_guarantee_helmet,
@@ -57991,10 +53960,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x0000000dcb10b3503e3b9efe1274b8c200000000001d80380000000000000000
-    ],
+  ],
 
 
-    ["knight_28_5",
+  ["knight_28_5",
      "Emir Fakhir",
      "Fakhir",
     tf_hero|tf_guarantee_helmet,
@@ -58016,10 +53985,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x0000000dcb10c35034bb9efe1274b8c200000000001d80180000000000000000
-    ],
+  ],
 
 
-    ["knight_28_6",
+  ["knight_28_6",
      "Emir Falih",
      "Falih",
     tf_hero|tf_guarantee_helmet,
@@ -58040,10 +54009,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x00000008cb10b35034bb9efe1278b8c200000000001da8180000000000000000
-    ],
+  ],
 
 
-    ["knight_28_7",
+  ["knight_28_7",
      "Emir Fath",
      "Fath",
     tf_hero|tf_guarantee_helmet,
@@ -58065,10 +54034,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x0000000e4b10b35028d36afe5278b8c200000000001da91a0000000000000000
-    ],
+  ],
 
 
-    ["knight_28_8",
+  ["knight_28_8",
      "Emir Gamal",
      "Gamal",
     tf_hero|tf_guarantee_helmet,
@@ -58090,10 +54059,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x0000000a4b10c34f28d36afe5278b8c200000000001da91a0000000000000000
-    ],
+  ],
 
 
-    ["knight_28_9",
+  ["knight_28_9",
      "Emir Habbab",
      "Habbab",
     tf_hero|tf_guarantee_helmet,
@@ -58114,10 +54083,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x0000000dcb00b10f69504dc6e285a76c00000000001d82ec0000000000000000
-    ],
+  ],
 
 
-    ["knight_28_10",
+  ["knight_28_10",
      "Emir Muhammad",
      "Muhammad",
     tf_hero|tf_guarantee_helmet,
@@ -58138,10 +54107,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x0000000dcb00c10669504dc6e285a76c00000000001d82ec0000000000000000
-    ],
+  ],
 
 
-    ["knight_28_11",
+  ["knight_28_11",
      "Emir Hanif",
      "Hanif",
     tf_hero|tf_guarantee_helmet,
@@ -58163,10 +54132,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x0000000fdc0cb3464b214a64e246425800000000001e532a0000000000000000
-    ],
+  ],
 
 
-    ["knight_28_12",
+  ["knight_28_12",
      "Emir Hashim",
      "Hashim",
     tf_hero|tf_guarantee_helmet,
@@ -58188,10 +54157,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x000000001c0cc5c64b214a64e246425800000000001e532a0000000000000000
-    ],
+  ],
 
 
-    ["knight_28_13",
+  ["knight_28_13",
      "Emir Hassan",
      "Hassan",
     tf_hero|tf_guarantee_helmet,
@@ -58213,10 +54182,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x000000003804b348519337eebfaa24ec00000000001c64e50000000000000000
-    ],
+  ],
 
 
-    ["knight_28_14",
+  ["knight_28_14",
      "Emir Isma'il",
      "Isma'il",
     tf_hero|tf_guarantee_helmet,
@@ -58238,10 +54207,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x000000002d04c11407a38de8dc8a192300000000001d34a90000000000000000
-    ],
+  ],
 
 
-    ["knight_28_15",
+  ["knight_28_15",
      "Emir Jabalah",
      "Jabalah",
     tf_hero|tf_guarantee_helmet,
@@ -58263,7 +54232,7 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x00000007400cb340272c53de7b8628ab00000000001f471b0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_28_16",
@@ -58386,7 +54355,7 @@ itm_mongol_helmet_b,
     ###### ],
 
     ###### Serbia
-    ["knight_29_1",
+  ["knight_29_1",
      "Župan Vladislav Nemanjić",
      "Vladislav Nemanjić",
     tf_hero,
@@ -58408,10 +54377,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x00000007400c6340272c53de7b8628ab00000000001f471b0000000000000000
-    ],
+  ],
 
 
-    ["knight_29_2",
+  ["knight_29_2",
      "Župan Dimitrije Vukanović",
      "Dimitrije Vukanović",
     tf_hero,
@@ -58432,10 +54401,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x0000000f1f08634146eab0b46a694f6c00000000001d011a0000000000000000
-    ],
+  ],
 
 
-    ["knight_29_3",
+  ["knight_29_3",
      "Župan Stefan Vukanović",
      "Stefan Vukanović",
     tf_hero,
@@ -58457,10 +54426,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x000000001f08534146eab0b46a694f6c00000000001d011a0000000000000000
-    ],
+  ],
 
 
-    ["knight_29_4",
+  ["knight_29_4",
      "Župan Stefan Vladislavljević",
      "Stefan Vladislavljević",
     tf_hero,
@@ -58482,10 +54451,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x000000003f0d118956dc722fbc52172300000000001f053a0000000000000000
-    ],
+  ],
 
 
-    ["knight_29_5",
+  ["knight_29_5",
      "Župan Desa Vladislavljević",
      "Desa Vladislavljević",
     tf_hero,
@@ -58507,10 +54476,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x00000000020c334248ea4bfed971371a00000000001fb91a0000000000000000
-    ],
+  ],
 
 
-    ["knight_29_6",
+  ["knight_29_6",
      "Župan Bogdan Andrijić",
      "Bogdan Andrijić",
     tf_hero,
@@ -58532,10 +54501,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x000000003f0d234448ea4bfed971371a00000000001d391a0000000000000000
-    ],
+  ],
 
 
-    ["knight_29_7",
+  ["knight_29_7",
      "Knez-ministar Đorđe",
      "Đorđe",
     tf_hero,
@@ -58557,10 +54526,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x000000001a1010014b59b536e94594a300000000001d06840000000000000000
-    ],
+  ],
 
 
-    ["knight_29_8",
+  ["knight_29_8",
      "Knez Desen",
      "Desen",
     tf_hero,
@@ -58582,10 +54551,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x00000001880432831b1c4a1aad74392200000000001e24e30000000000000000
-    ],
+  ],
 
 
-    ["knight_29_9",
+  ["knight_29_9",
      "Vojvoda Pazarićanin",
      "Pazarićanin",
     tf_hero,
@@ -58607,10 +54576,10 @@ itm_mongol_helmet_b,
     knight_wp_1,
     knight_skills_1,
     0x00000002080462411b1c4a1aad74392200000000001e24e30000000000000000
-    ],
+  ],
 
 
-    ["knight_29_10",
+  ["knight_29_10",
      "Vojvoda Grdoman Šumetić",
      "Grdoman Šumetić",
     tf_hero,
@@ -58632,7 +54601,7 @@ itm_mongol_helmet_b,
     knight_wp_1,
     knight_skills_1,
     0x000000021708658949db73ff5c6e4b2d00000000001ca6ab0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_29_11",
@@ -58760,7 +54729,7 @@ itm_mongol_helmet_b,
     ###### ],
 
     ###### Bulgaria
-    ["knight_30_1",
+  ["knight_30_1",
      "Boyar Kyril",
      "Kyril",
     tf_hero,
@@ -58782,10 +54751,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x000000075a10205422dc6b4713cde72d000000000006b8db0000000000000000
-    ],
+  ],
 
 
-    ["knight_30_2",
+  ["knight_30_2",
      "Boyar Mihail",
      "Mihail",
     tf_hero,
@@ -58806,10 +54775,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x00000007410465c2576242491c6d1853000000000012b4e40000000000000000
-    ],
+  ],
 
 
-    ["knight_30_3",
+  ["knight_30_3",
      "Boyar Atanas",
      "Atanas",
     tf_hero,
@@ -58831,10 +54800,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x000000075c105441391c85548b89caa4000000000005dace0000000000000000
-    ],
+  ],
 
 
-    ["knight_30_4",
+  ["knight_30_4",
      "Boyar Anton",
      "Anton",
     tf_hero,
@@ -58856,10 +54825,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x000000077e103249350971c99295e86d000000000011631b0000000000000000
-    ],
+  ],
 
 
-    ["knight_30_5",
+  ["knight_30_5",
      "Boyar Asen",
      "Asen",
     tf_hero,
@@ -58881,10 +54850,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x000000074e0004c5569d6da8daaf68a10000000000062ae90000000000000000
-    ],
+  ],
 
 
-    ["knight_30_6",
+  ["knight_30_6",
      "Boyar Boris",
      "Boris",
     tf_hero,
@@ -58906,10 +54875,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x000000077910401368e389245e4b59130000000000165ce20000000000000000
-    ],
+  ],
 
 
-    ["knight_30_7",
+  ["knight_30_7",
      "Boyar Borislav",
      "Borislav",
     tf_hero,
@@ -58931,10 +54900,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x00000007580823d03edd93336dacacee000000000011d7a30000000000000000
-    ],
+  ],
 
 
-    ["knight_30_8",
+  ["knight_30_8",
      "Boyar Branimir",
      "Branimir",
     tf_hero,
@@ -58956,10 +54925,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x000000076e0422d146d389d2da89494c00000000001c3b1b0000000000000000
-    ],
+  ],
 
 
-    ["knight_30_9",
+  ["knight_30_9",
      "Boyar Dragomir",
      "Dragomir",
     tf_hero,
@@ -58981,10 +54950,10 @@ itm_mongol_helmet_b,
     knight_wp_1,
     knight_skills_1,
     0x0000000746083586595991889a91aca400000000001f452c0000000000000000
-    ],
+  ],
 
 
-    ["knight_30_10",
+  ["knight_30_10",
      "Boyar Ilia",
      "Ilia",
     tf_hero,
@@ -59006,7 +54975,7 @@ itm_mongol_helmet_b,
     knight_wp_1,
     knight_skills_1,
     0x000000076f0c4405312bcdb0accd78b300000000001e58dc0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_30_11",
@@ -59131,7 +55100,7 @@ itm_mongol_helmet_b,
     ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
     ###### ],
 
-    ["knight_31_1",
+  ["knight_31_1",
      "Abu Hafs Umar al-Murtada,Caliph of Marakkesh",
      "Abu Hafs Umar",
     tf_hero|tf_guarantee_helmet,
@@ -59152,10 +55121,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x000000074408750547a5d23111522c65000000000015a7ac0000000000000000
-    ],
+  ],
 
 
-    ["knight_31_2",
+  ["knight_31_2",
      "Abu Yahya I bin Zayyan,Zayyanid Caliph of Marocco",
      "Abu Yahya",
     tf_hero|tf_guarantee_helmet,
@@ -59177,10 +55146,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x00000007420870146ca3526b197974a100000000001ea89a0000000000000000
-    ],
+  ],
 
 
-    ["knight_31_3",
+  ["knight_31_3",
      "Emir Ali",
      "Ali",
     tf_hero|tf_guarantee_helmet,
@@ -59202,10 +55171,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x000000074b0475883b5791d2a1ae356c00000000001d66520000000000000000
-    ],
+  ],
 
 
-    ["knight_31_4",
+  ["knight_31_4",
      "Emir Ibrahim",
      "Ibrahim",
     tf_hero|tf_guarantee_helmet,
@@ -59227,10 +55196,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x000000075c0c7102352b5b379c72272400000000000e956c0000000000000000
-    ],
+  ],
 
 
-    ["knight_31_5",
+  ["knight_31_5",
      "Emir Yahya",
      "Yahya",
     tf_hero|tf_guarantee_helmet,
@@ -59252,10 +55221,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x000000074a1062011953515a91b126a500000000001e388b0000000000000000
-    ],
+  ],
 
 
-    ["knight_31_6",
+  ["knight_31_6",
      "Emir Umar",
      "Umar",
     tf_hero|tf_guarantee_helmet,
@@ -59276,10 +55245,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x00000007460c738b5b3060d8d2b7689b00000000001dd7730000000000000000
-    ],
+  ],
 
 
-    ["knight_31_7",
+  ["knight_31_7",
      "Emir Ishaq",
      "Ishaq",
     tf_hero|tf_guarantee_helmet,
@@ -59300,10 +55269,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x000000074804718248ab9ed6ea71d76500000000001eb8e20000000000000000
-    ],
+  ],
 
 
-    ["knight_31_8",
+  ["knight_31_8",
      "Emir Said",
      "Said",
     tf_hero|tf_guarantee_helmet,
@@ -59324,10 +55293,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x000000075804744468de69a28b90e713000000000015dc9e0000000000000000
-    ],
+  ],
 
 
-    ["knight_31_9",
+  ["knight_31_9",
      "Emir Jafar",
      "Jafar",
     tf_hero|tf_guarantee_helmet,
@@ -59349,10 +55318,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x000000075a10718a66e5cd65a5d3d31000000000001d49210000000000000000
-    ],
+  ],
 
 
-    ["knight_31_10",
+  ["knight_31_10",
      "Emir Abd al-Rahman",
      "Abd al-Rahman",
     tf_hero|tf_guarantee_helmet,
@@ -59374,10 +55343,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x000000076d0c618747318d36ea6a28cb00000000001e46ae0000000000000000
-    ],
+  ],
 
 
-    ["knight_31_11",
+  ["knight_31_11",
      "Emir Ismail",
      "Ismail",
     tf_hero|tf_guarantee_helmet,
@@ -59399,10 +55368,10 @@ itm_mongol_helmet_b,
     knight_wp_3,
     knight_skills_3,
     0x00000007561063d3465b97a86f65a71300000000001daa9b0000000000000000
-    ],
+  ],
 
 
-    ["knight_31_12",
+  ["knight_31_12",
      "Emir Sulayman",
      "Sulayman",
     tf_hero|tf_guarantee_helmet,
@@ -59423,10 +55392,10 @@ itm_mongol_helmet_b,
     knight_wp_2,
     knight_skills_2,
     0x00000007780470c832e3698aec50c6e100000000001e39240000000000000000
-    ],
+  ],
 
 
-    ["knight_31_13",
+  ["knight_31_13",
      "Emir Yusuf",
      "Yusuf",
     tf_hero|tf_guarantee_helmet,
@@ -59448,10 +55417,10 @@ itm_mongol_helmet_b,
     knight_wp_1,
     knight_skills_1,
     0x000000077b08624738e39d385b49471400000000001ed6d30000000000000000
-    ],
+  ],
 
 
-    ["knight_31_14",
+  ["knight_31_14",
      "Emir Salih",
      "Salih",
     tf_hero|tf_guarantee_helmet,
@@ -59472,10 +55441,10 @@ itm_mongol_helmet_b,
     knight_wp_1,
     knight_skills_1,
     0x00000007531060cd3b454ee255aed70b00000000001fc6d20000000000000000
-    ],
+  ],
 
 
-    ["knight_31_15",
+  ["knight_31_15",
      "Emir Yazid",
      "Yazid",
     tf_hero|tf_guarantee_helmet,
@@ -59497,10 +55466,9 @@ itm_mongol_helmet_b,
     knight_wp_1,
     knight_skills_1,
     0x000000077e086486186e4ca774d1c9a300000000001cb1a30000000000000000
-    ],
+  ],
 
-   [
-     "knight_32_1",
+    ["knight_32_1",
     "Lorenzo Tiepolo",
     "Lorenzo Tiepolo",
     tf_hero,
@@ -59522,10 +55490,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x00000007711010c9449393132530bd6300000000001d64ec0000000000000000
-    ],
+  ],
 
 
-    ["knight_32_2",
+  ["knight_32_2",
      "Jacopo Contarini",
      "Jacopo Contarini",
     tf_hero,
@@ -59546,10 +55514,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x000000077e0042ca2ab3d1b3634a9aa300000000001f58a60000000000000000
-    ],
+  ],
 
 
-    ["knight_32_3",
+  ["knight_32_3",
      "Giovanni_Dandolo",
      "Giovanni_Dandolo",
     tf_hero,
@@ -59571,10 +55539,10 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x0000000767002192571bb5d55e35b6d100000000001dbaac0000000000000000
-    ],
+  ],
 
 
-    ["knight_32_4",
+  ["knight_32_4",
      "Angelo Sanudo",
      "Angelo Sanudo",
     tf_hero,
@@ -59596,10 +55564,10 @@ itm_mongol_helmet_b,
     knight_wp_4,
     knight_skills_4,
     0x000000077c04244e18e4ae365a862cab00000000001d39000000000000000000
-    ],
+  ],
 
 
-    ["knight_32_5",
+  ["knight_32_5",
      "Paolo Gradenigo",
      "Paolo Gradenigo",
     tf_hero,
@@ -59622,17 +55590,17 @@ itm_mongol_helmet_b,
     knight_wp_5,
     knight_skills_5,
     0x00000007690c100135254ab75a4e04a200000000001e3d6b0000000000000000
-    ],
+  ],
 
 
-    ["knight_32_6",
+  ["knight_32_6",
      "Narzotto dalle Carceri",
      "Narzotto dalle Carceri",
     tf_hero,
     0, 0, fac_kingdom_32,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_splinted_leather_greaves,
@@ -59648,16 +55616,16 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000077e0c140914e472451d2639aa000000000010b6d70000000000000000
-    ],
+  ],
 
 
-    ["knight_32_7",
+  ["knight_32_7",
      "Pecoraro da Mercanuovo",
      "Pecoraro da Mercanuovo",
     tf_hero,
     0, 0, fac_kingdom_32,
     [
-itm_mail_coif,
+    itm_mail_coif,
     itm_mail_mittens,
     itm_splinted_leather_greaves,
 
@@ -59673,10 +55641,10 @@ itm_mail_coif,
     knight_wp_5,
     knight_skills_5,
     0x0000000759040503274d11580c4b391c000000000011b85d0000000000000000
-    ],
+  ],
 
 
-    ["knight_32_8",
+  ["knight_32_8",
      "Guglielmo I da Verona",
      "Guglielmo I da Verona",
     tf_hero,
@@ -59698,17 +55666,17 @@ itm_mail_coif,
     knight_wp_4,
     knight_skills_4,
     0x00000007421053c766ed52e2e27737a300000000001e49240000000000000000
-    ],
+  ],
 
 
-    ["knight_32_9",
+  ["knight_32_9",
      "Paolo Navigajoso",
      "Paolo Navigajoso",
     tf_hero,
     0, 0, fac_kingdom_32,
     [
 
-itm_rnd_helm_06,
+    itm_rnd_helm_06,
 
     itm_mail_mittens,
     itm_splinted_leather_greaves,
@@ -59725,10 +55693,10 @@ itm_rnd_helm_06,
     knight_wp_3,
     knight_skills_3,
     0x0000000746003044597da74aeb4898e200000000000edaee0000000000000000
-    ],
+  ],
 
 
-    ["knight_32_10",
+  ["knight_32_10",
      "Enrico Pescatore",
      "Enrico Pescatore",
     tf_hero,
@@ -59751,7 +55719,7 @@ itm_rnd_helm_06,
     knight_wp_2,
     knight_skills_2,
     0x0000000741002107551a56b8ee8d28ec00000000001f18d10000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_32_11",
@@ -59884,7 +55852,7 @@ itm_rnd_helm_06,
     ###### 0x00000007590c62012b0cb24b5a56c41a000000000015faea0000000000000000
     ###### ],
 
-    ["knight_33_1",
+  ["knight_33_1",
      "Kunigas Visvaldas",
      "Visvaldas",
     tf_hero,
@@ -59905,10 +55873,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000018b0c32cd195b6d275582da5d000000000011c90b0000000000000000
-    ],
+  ],
 
 
-    ["knight_33_2",
+  ["knight_33_2",
      "Kunigas Margiris",
      "Margiris",
     tf_hero,
@@ -59933,10 +55901,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000001b81022c83cf4cec6dc6a73a100000000000da6e30000000000000000
-    ],
+  ],
 
 
-    ["knight_33_3",
+  ["knight_33_3",
      "Kunigas Dravenis",
      "Dravenis",
     tf_hero,
@@ -59961,10 +55929,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000018b04c2d4094aa185138e96da000000000008d2b50000000000000000
-    ],
+  ],
 
 
-    ["knight_34_1",
+  ["knight_34_1",
      "Vyriausias Scalvių Kunigas Surbantas",
      "Surbantas",
     tf_hero,
@@ -59991,10 +55959,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000001a3082445471d54c5526e568b00000000001d47120000000000000000
-    ],
+  ],
 
 
-    ["knight_34_2",
+  ["knight_34_2",
      "Kunigas Surbantas",
      "Surbantas",
     tf_hero,
@@ -60021,10 +55989,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000001950c02471ae5d2571e92991b000000000016891c0000000000000000
-    ],
+  ],
 
 
-    ["knight_34_3",
+  ["knight_34_3",
      "Kunigas Svirdotas",
      "Svirdotas",
     tf_hero,
@@ -60045,10 +56013,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000001a004140466d32e96a58cc6e100000000001e4af30000000000000000
-    ],
+  ],
 
 
-    ["knight_35_1",
+  ["knight_35_1",
      "Dižukilis Miervaldis",
      "Miervaldis",
     tf_hero,
@@ -60073,10 +56041,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000018e04335246d36a6b1a4d98a200000000001ecae20000000000000000
-    ],
+  ],
 
 
-    ["knight_35_2",
+  ["knight_35_2",
      "Dižukilis Visvaldis",
      "Visvaldis",
     tf_hero,
@@ -60101,10 +56069,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000001a40c420858da7116e3f14adb00000000001ccab30000000000000000
-    ],
+  ],
 
 
-    ["knight_35_3",
+  ["knight_35_3",
      "Dižukilis Lacis",
      "Lacis",
     tf_hero,
@@ -60131,10 +56099,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000018b051351272b9057218e46a600000000001f36ad0000000000000000
-    ],
+  ],
 
 
-    ["knight_36_1",
+  ["knight_36_1",
      "Kunigas Girtautas",
      "Girtautas",
     tf_hero,
@@ -60155,10 +56123,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000001ad0112477653924c5cce5721000000000009b7450000000000000000
-    ],
+  ],
 
 
-    ["knight_36_2",
+  ["knight_36_2",
      "Kunigas Erdvilas",
      "Erdvilas",
     tf_hero,
@@ -60183,10 +56151,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000018604140a4ca2b548e27166d300000000001ec5630000000000000000
-    ],
+  ],
 
 
-    ["knight_36_3",
+  ["knight_36_3",
      "Kunigas Kitenis",
      "Kitenis",
     tf_hero,
@@ -60211,7 +56179,7 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000001a910259356e62e369d2db59b00000000001e270b0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_34_1",
@@ -60337,7 +56305,7 @@ itm_rnd_helm_06,
     ###### 0x000000076308638f50e65938a4aa334a0000000000163b1c0000000000000000
     ###### ],
 
-    ["knight_37_1",
+  ["knight_37_1",
      "Dafydd ap Gruffydd",
      "Dafydd ap Gruffydd",
     tf_hero,
@@ -60359,10 +56327,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000077b08224d5a2bcaba6a91fc9200000000001969230000000000000000
-    ],
+  ],
 
 
-    ["knight_37_2",
+  ["knight_37_2",
      "Maredudd ap Rhys Grug",
      "Maredudd ap Rhys Grug",
     tf_hero,
@@ -60383,10 +56351,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000076c08434954cd65372c69d4a500000000001a5b210000000000000000
-    ],
+  ],
 
 
-    ["knight_37_3",
+  ["knight_37_3",
      "Maredudd ap Owain",
      "Maredudd ap Owain",
     tf_hero,
@@ -60408,7 +56376,7 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007650c124248cb96591c94c10c00000000001d58ec0000000000000000
-    ],
+  ],
 
     ###### [
         ###### "knight_35_4",
@@ -60485,8 +56453,7 @@ itm_rnd_helm_06,
     ###### 0x000000077b08224d5a2bcaba6a91fc9200000000001969230000000000000000
     ###### ],
 
-[
-     "knight_38_1",
+  ["knight_38_1",
      "Guglielmo III Salusio I",
      "Guglielmo III Salusio I",
     tf_hero,
@@ -60508,10 +56475,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007fe000088491f4f492c4e28eb00000000001e44a20000000000000000
-    ],
+  ],
 
 
-    ["knight_38_2",
+  ["knight_38_2",
      "Console Oberto Doria",
      "Console Oberto Doria",
     tf_hero,
@@ -60532,10 +56499,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007fe0cc0122959d1295b69969d00000000001f4cd90000000000000000
-    ],
+  ],
 
 
-    ["knight_38_3",
+  ["knight_38_3",
      "Nicolò Fieschi",
      "Nicolò Fieschi",
     tf_hero,
@@ -60557,10 +56524,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007ff00c00238555148abcaa92e00000000001ee08c0000000000000000
-    ],
+  ],
 
 
-    ["knight_38_4",
+  ["knight_38_4",
      "Oberto Spinola an Oberto",
      "Oberto Spinola an Oberto",
     tf_hero,
@@ -60582,10 +56549,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007df0453d009149557548d2b0900000000000cbce50000000000000000
-    ],
+  ],
 
 
-    ["knight_38_5",
+  ["knight_38_5",
      "Lanfranco Grimaldi",
      "Lanfranco Grimaldi",
     tf_hero,
@@ -60608,10 +56575,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007c004b08a375a6e34e58deb5b00000000001db8720000000000000000
-    ],
+  ],
 
 
-    ["knight_39_1",
+  ["knight_39_1",
      "Giovanni Visconti, giudice di Gallura",
      "Giovanni Visconti, giudice di Gallura",
     tf_hero,
@@ -60633,10 +56600,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007ff0114d034ac8558b251172c00000000001cb6e30000000000000000
-    ],
+  ],
 
 
-    ["knight_39_2",
+  ["knight_39_2",
      "Guglielmo di Capraia, giudice di Arborea",
      "Guglielmo di Capraia, giudice di Arborea",
     tf_hero,
@@ -60657,10 +56624,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007eb10218436de5329626946da0000000000153a8b0000000000000000
-    ],
+  ],
 
 
-    ["knight_39_3",
+  ["knight_39_3",
      "Ugolino della Gherardesca, conte di Donoratico",
      "Ugolino della Gherardesca",
     tf_hero,
@@ -60682,10 +56649,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007c00005c644cd53b4152d4a9d00000000001ca91b0000000000000000
-    ],
+  ],
 
 
-    ["knight_39_4",
+  ["knight_39_4",
      "Conte palatino Gherardo della Gherardesca",
      "Conte palatino Gherardo della Gherardesca",
     tf_hero,
@@ -60707,10 +56674,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007e7005106375c71c95c994b0b00000000000a49930000000000000000
-    ],
+  ],
 
 
-    ["knight_39_5",
+  ["knight_39_5",
      "Conte Guido Bocci",
      "Guido Bocci",
     tf_hero,
@@ -60733,10 +56700,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007e504b39139ab71370448b86a000000000016596d0000000000000000
-    ],
+  ],
 
 
-    ["knight_40_1",
+  ["knight_40_1",
      "Podestà Griffo de Griffi",
      "Podestà Griffo de Griffi",
     tf_hero,
@@ -60758,10 +56725,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007e20c620e289ac84bac91db1200000000001de2940000000000000000
-    ],
+  ],
 
 
-    ["knight_40_2",
+  ["knight_40_2",
      "Capitano del Popolo Bonaccorso da Soresina",
      "Capitano del Popolo Bonaccorso da Soresina",
     tf_hero,
@@ -60782,10 +56749,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007eb04d54014a789391b4de97400000000001ec8ec0000000000000000
-    ],
+  ],
 
 
-    ["knight_40_3",
+  ["knight_40_3",
      "Podestà Luca Grimaldi",
      "Podestà Luca Grimaldi",
     tf_hero,
@@ -60807,10 +56774,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007ee05321233b37639636af4e200000000001a48db0000000000000000
-    ],
+  ],
 
 
-    ["knight_40_4",
+  ["knight_40_4",
      "Podestà Guiscardo da Pietrasanta",
      "Podestà Guiscardo da Pietrasanta",
     tf_hero,
@@ -60832,10 +56799,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000007e11135484c93655ba149375300000000000d48e60000000000000000
-    ],
+  ],
 
 
-    ["knight_40_5",
+  ["knight_40_5",
      "Podestà Tegghiaio d'Aldobrandino degli Adimari",
      "Podestà Tegghiaio d'Aldobrandino degli Adimari",
     tf_hero,
@@ -60858,10 +56825,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x00000007e6091411651a6a4a6ca9b4f4000000000011b8d40000000000000000
-    ],
+  ],
 
 
-    ["knight_41_1",
+  ["knight_41_1",
      "Alberico II da Romano",
      "Alberico II da Romano",
     tf_hero,
@@ -60883,10 +56850,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000e2a0453d338ebc614de6dd56400000000001dcada0000000000000000
-    ],
+  ],
 
 
-    ["knight_41_2",
+  ["knight_41_2",
      "Signore perpetuo Obizzo Pelavicino",
      "Obizzo Pelavicino",
     tf_hero,
@@ -60907,10 +56874,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000061f05351254e28e355b97b6a200000000001c971e0000000000000000
-    ],
+  ],
 
 
-    ["knight_41_3",
+  ["knight_41_3",
      "Signore Buoso da Dovara",
      "Signore Buoso da Dovara",
     tf_hero,
@@ -60932,10 +56899,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000060010001352ec26d8d19056cc00000000001dc4cb0000000000000000
-    ],
+  ],
 
 
-    ["knight_41_4",
+  ["knight_41_4",
      "Podestà Uberto da Bandello",
      "Podestà Uberto da Bandello",
     tf_hero,
@@ -60957,10 +56924,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000060504c49048d4663714ae595b00000000001267330000000000000000
-    ],
+  ],
 
 
-    ["knight_41_5",
+  ["knight_41_5",
      "Podestà Alberto Caccianemic",
      "Podestà Alberto Caccianemic",
     tf_hero,
@@ -60983,10 +56950,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000060b0cc3c45773b632d6acb8c900000000000ae6de0000000000000000
-    ],
+  ],
 
 
-    ["knight_42_1",
+  ["knight_42_1",
      "Pan Smil z Lichtenburka",
      "Smil z Lichtenburka",
     tf_hero,
@@ -61008,10 +56975,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x000000099c09229354a9656694cf391400000000001ea6920000000000000000
-    ],
+  ],
 
 
-    ["knight_42_2",
+  ["knight_42_2",
      "Pan Boček z Jaroslavic a ze Zbraslavi",
      "Boček ze Zbraslavi",
     tf_hero,
@@ -61032,10 +56999,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x00000009b208144154a9656e94cf39ff00000000001ea6920000000000000000
-    ],
+  ],
 
 
-    ["knight_42_3",
+  ["knight_42_3",
      "Pan Boreš z Rýzmburka",
      "Boreš z Rýzmburka",
     tf_hero,
@@ -61057,10 +57024,10 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000eb208205254a9656e94cc9bff00000000001ea6920000000000000000
-    ],
+  ],
 
 
-    ["knight_42_4",
+  ["knight_42_4",
      "Pan Bavor I. ze Strakonic",
      "Bavor I. ze Strakonic",
     tf_hero,
@@ -61082,10 +57049,10 @@ itm_rnd_helm_06,
     knight_wp_4,
     knight_skills_4,
     0x000000070310640950d46327b08cb85600000000001e32f50000000000000000
-    ],
+  ],
 
 
-    ["knight_42_5",
+  ["knight_42_5",
      "Pan Vok I. z Rožmberka ",
      "Pan Vok I. z Rožmberka ",
     tf_hero,
@@ -61108,165 +57075,165 @@ itm_rnd_helm_06,
     knight_wp_5,
     knight_skills_5,
     0x0000000f0310245350d46327b08cb85600000000001fa0f50000000000000000
-    ],
+  ],
 
 
 
 ################################### NEW v2.1 - RANDOM GENERATED LORDS
 
-#################### EUROPEAN
-     ["enhanced_rnd_lord_1", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a7f000450050d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_2", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a3c000450350d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_3", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054d000308d50d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_4", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005f1000030c50d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_5", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000000e000404450d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_6", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000553000155350d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_7", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000311000100650d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_8", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000092400001c650d46327b08cb85600000000001fa0f50000000000000000],
-     ["enhanced_rnd_lord_9", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b8e00002ce50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_10", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000047a000400250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_11", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024000062c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_12", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000959000310e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_13", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000258000531050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_14", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001b4000510250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_15", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000077700023d050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_16", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e06000008150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_17", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000de1000404c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_18", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000fbc000320450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_19", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a5000514050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_20", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f7a000454850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_21", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ae7000151150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_22", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000be500022c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_23", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f50000234950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_24", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e93000121050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_25", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ab00000c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_26", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ab4000105150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_27", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a9000624150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_28", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000865000004850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_29", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000415000120c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_30", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000023e000234b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_31", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e9000528350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_32", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c3900031d350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_33", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004fb000345050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_34", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bd800031c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_35", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000060300023cb50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_36", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c0400054c650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_37", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea00044c850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_38", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005da000548c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_39", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052c000100c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_40", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001ae00010ca50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_41", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027200051c250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_42", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000252000040f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_43", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea000535350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_44", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d7900060c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_45", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000028a000328b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_46", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000078e00022c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_47", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000793000440a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_48", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000015c00020c750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_49", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024100033cf50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_50", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000281000508650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_51", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc2000048750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_52", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a5300064c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_53", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bb7000144250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_54", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000039100043c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_55", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000778000628050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_56", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005fc000124d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_57", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007b1000639150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_58", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f75000511050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_59", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c21000348a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_60", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dfd000210750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_61", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000636000208750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_62", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000113000124e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_63", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006c8000528150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_64", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000050700010c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_65", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004e9000221250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_66", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ea000004550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_67", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000041600063d050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_68", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006f200023c550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_69", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d50000538d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_70", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ebb00003c550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_71", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001f6000628d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_72", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000037f000448550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_73", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000020d000220950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_74", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000230000419150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_75", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c26000408f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_76", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000112000248950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_77", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000074400061c850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_78", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000800000400550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_79", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e8a000330750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_80", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cca000230550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_81", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031c000118250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_82", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a08000010950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_83", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000093f000328f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_84", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e6d000214050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_85", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000566000424450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_86", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f1c000404b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_87", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000080d000354b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_88", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200064cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_89", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000392000328450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_90", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004d4000344050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_91", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000081600060c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_92", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000925000031350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_93", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003ae00021c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_94", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000071a000048350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_95", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002bd00001c850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_96", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f95000248350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_97", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054e000610d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_98", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031d00054c750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_99", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcf000028250d46327b08cb85600000000001fa0f50000000000000000],
+#################### 
+  ["enhanced_rnd_lord_1", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a7f000450050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_2", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a3c000450350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_3", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054d000308d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_4", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005f1000030c50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_5", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000000e000404450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_6", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000553000155350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_7", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000311000100650d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_8", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000092400001c650d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_9", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b8e00002ce50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_10", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000047a000400250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_11", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024000062c450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_12", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000959000310e50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_13", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000258000531050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_14", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001b4000510250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_15", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000077700023d050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_16", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e06000008150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_17", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000de1000404c50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_18", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000fbc000320450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_19", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a5000514050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_20", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f7a000454850d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_21", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ae7000151150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_22", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000be500022c050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_23", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f50000234950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_24", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e93000121050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_25", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ab00000c150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_26", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ab4000105150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_27", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009a9000624150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_28", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000865000004850d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_29", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000415000120c50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_30", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000023e000234b50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_31", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002e9000528350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_32", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c3900031d350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_33", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004fb000345050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_34", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bd800031c050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_35", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000060300023cb50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_36", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c0400054c650d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_37", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea00044c850d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_38", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005da000548c50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_39", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052c000100c50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_40", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001ae00010ca50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_41", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027200051c250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_42", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000252000040f50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_43", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000aea000535350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_44", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d7900060c050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_45", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000028a000328b50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_46", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000078e00022c450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_47", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000793000440a50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_48", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000015c00020c750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_49", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000024100033cf50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_50", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000281000508650d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_51", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc2000048750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_52", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a5300064c950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_53", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bb7000144250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_54", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000039100043c050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_55", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000778000628050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_56", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005fc000124d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_57", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007b1000639150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_58", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f75000511050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_59", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c21000348a50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_60", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dfd000210750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_61", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000636000208750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_62", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000113000124e50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_63", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006c8000528150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_64", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000050700010c150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_65", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004e9000221250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_66", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000000ea000004550d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_67", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000041600063d050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_68", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000006f200023c550d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_69", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d50000538d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_70", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ebb00003c550d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_71", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001f6000628d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_72", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000037f000448550d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_73", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000020d000220950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_74", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000230000419150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_75", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c26000408f50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_76", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000112000248950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_77", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000074400061c850d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_78", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000800000400550d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_79", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e8a000330750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_80", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cca000230550d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_81", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031c000118250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_82", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000a08000010950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_83", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000093f000328f50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_84", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e6d000214050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_85", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000566000424450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_86", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f1c000404b50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_87", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000080d000354b50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_88", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200064cc50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_89", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000392000328450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_90", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000004d4000344050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_91", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000081600060c050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_92", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000925000031350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_93", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003ae00021c150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_94", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000071a000048350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_95", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002bd00001c850d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_96", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f95000248350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_97", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000054e000610d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_98", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000031d00054c750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_99", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcf000028250d46327b08cb85600000000001fa0f50000000000000000],
 	
-    ["enhanced_rnd_lord_100", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084300060c150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_101", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000239000124e50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_102", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000089400051ce50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_103", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c6200022cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_104", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000040100004d150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_105", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200024c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_106", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eb0000628050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_107", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001dd000135350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_108", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000059f00051c550d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_109", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000558000250b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_110", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000035800002c450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_111", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc5000345050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_112", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000079400024d150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_113", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000098b000540950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_114", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cb9000230350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_115", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000018c000225350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_116", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000451000430250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_117", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000331350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_118", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000608d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_119", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b05000605150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_120", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000132000018650d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_121", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000af9000e00b50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_122", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bdb000e40f50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_123", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000056000e11050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_124", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052b000e4cd50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_125", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000063c000e44650d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_100", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084300060c150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_101", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000239000124e50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_102", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000089400051ce50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_103", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c6200022cc50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_104", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000040100004d150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_105", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000009f200024c950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_106", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000eb0000628050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_107", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000001dd000135350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_108", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000059f00051c550d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_109", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000558000250b50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_110", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000035800002c450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_111", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cc5000345050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_112", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000079400024d150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_113", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000098b000540950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_114", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000cb9000230350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_115", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000018c000225350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_116", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000451000430250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_117", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000331350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_118", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b84000608d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_119", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b05000605150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_120", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000132000018650d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_121", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000af9000e00b50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_122", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000bdb000e40f50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_123", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000056000e11050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_124", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000052b000e4cd50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_125", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000063c000e44650d46327b08cb85600000000001fa0f50000000000000000],
 
-    ["enhanced_rnd_lord_126", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000094b000e24750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_127", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ce4000d50350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_128", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcd000e18250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_129", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e59000d2cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_130", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000251000e20950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_131", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005ac000d38350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_132", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000922000d24950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_133", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c40000e24d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_134", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000730000d50750d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_135", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d12000e3c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_136", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b5e000e30150d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_137", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000193000e20450d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_138", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008df000e2cc50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_139", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000360000d0c950d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_140", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e9c000e18250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_141", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000053f000d59350d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_142", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027f000d10d50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_143", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000016b000d39250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_144", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003c1000d2c050d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_145", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084c000d54850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_146", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c79000d34c50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_147", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007aa000e04250d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_148", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002aa000d54850d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_149", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000db4000e50a50d46327b08cb85600000000001fa0f50000000000000000],
-    ["enhanced_rnd_lord_150", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b7d000e3d150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_126", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000094b000e24750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_127", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000ce4000d50350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_128", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000dcd000e18250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_129", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e59000d2cc50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_130", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000251000e20950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_131", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000005ac000d38350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_132", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000922000d24950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_133", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c40000e24d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_134", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000730000d50750d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_135", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000d12000e3c950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_136", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b5e000e30150d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_137", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000193000e20450d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_138", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000008df000e2cc50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_139", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000360000d0c950d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_140", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000e9c000e18250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_141", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000053f000d59350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_142", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000027f000d10d50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_143", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000016b000d39250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_144", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000003c1000d2c050d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_145", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000084c000d54850d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_146", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000c79000d34c50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_147", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000007aa000e04250d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_148", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x00000002aa000d54850d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_149", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000db4000e50a50d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_150", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000b7d000e3d150d46327b08cb85600000000001fa0f50000000000000000],
     
 ############ NEW v3.3 - removed those in favor of facekey randomization
 	# ["enhanced_rnd_lord_151", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000485000e1cc50d46327b08cb85600000000001fa0f50000000000000000],
@@ -61426,7 +57393,7 @@ itm_rnd_helm_06,
     # ["enhanced_rnd_lord_298", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000356000b44b50d46327b08cb85600000000001fa0f50000000000000000],
     # ["enhanced_rnd_lord_299", "Random", "Random", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x000000055a000b54b50d46327b08cb85600000000001fa0f50000000000000000],
 #################
-    ["enhanced_rnd_lord_end", "Random End", "Random End", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f0310245350d46327b08cb85600000000001fa0f50000000000000000],
+  ["enhanced_rnd_lord_end", "Random End", "Random End", tf_hero, 0, 0, fac_neutral, [], knight_attrib_5, knight_wp_5, knight_skills_5, 0x0000000f0310245350d46327b08cb85600000000001fa0f50000000000000000],
 ##########################################################################################
 
 
@@ -61435,7 +57402,7 @@ itm_rnd_helm_06,
 
   ############### PRETENDER ##################################################
 
-    ["kingdom_2_pretender",
+  ["kingdom_2_pretender",
      "Kunigas Daumantas",
      "Daumantas",
     tf_hero,
@@ -61460,10 +57427,10 @@ itm_rnd_helm_06,
     lord_wp,
     lord_skills,
     0x00000007570c544a1952a9385b726b3b00000000001127140000000000000000
-    ],
+  ],
 
 
-    ["kingdom_4_pretender",
+  ["kingdom_4_pretender",
      "Erik Abelson",
      "Erik Abelson",
     tf_hero,
@@ -61489,10 +57456,10 @@ itm_rnd_helm_06,
     lord_wp,
     lord_skills,
     0x000000074c100047545db6b9236939ad00000000001d42cf0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_pretender",
+  ["kingdom_9_pretender",
      "Simon de Montfort, 6th Earl of Leicester",
      "Simon de Montfort",
     tf_unmoveable_in_party_window | tf_hero,
@@ -61516,10 +57483,10 @@ itm_rnd_helm_06,
     lord_wp,
     lord_skills,
     0x00000007610c025436d36f46a10e2ccb00000000000a39560000000000000000
-    ],
+  ],
 
 
-    ["kingdom_12_pretender",
+  ["kingdom_12_pretender",
      "Knut Haakonsson",
      "Knut Haakonsson",
     tf_unmoveable_in_party_window | tf_hero,
@@ -61544,10 +57511,10 @@ itm_rnd_helm_06,
     lord_wp,
     lord_skills,
     0x0000000751100282395571ccdb79b495000000000005f8ad0000000000000000
-    ],
+  ],
 
 
-    ["kingdom_13_pretender",
+  ["kingdom_13_pretender",
      "Sir James de Audley, Justiciar of Ireland",
      "James de Audley",
     tf_unmoveable_in_party_window | tf_hero,
@@ -61571,10 +57538,10 @@ itm_rnd_helm_06,
     lord_wp,
     lord_skills,
     0x00000007410c20493b6b96255acab8ec00000000001248db0000000000000000
-    ],
+  ],
 
 
-    ["knight_1_1_wife","Error - knight_1_1_wife should not appear in game","knight_1_1_wife",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_commoners, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
+  ["knight_1_1_wife","Error - knight_1_1_wife should not appear in game","knight_1_1_wife",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_commoners, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
 
   #Swadian ladies - eight mothers, eight daughters, four sisters
   ###### ["kingdom_1_lady_1","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
@@ -61770,7 +57737,7 @@ itm_rnd_helm_06,
   ###### ["kingdom_8_lady_19","Lady Tamara","Tamara",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_8, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1],
   ###### ["kingdom_8_lady_20","Lady Bohdana","Bohdana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_8, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_2],
 
-    ["kingdom_9_lady_1",
+  ["kingdom_9_lady_1",
      "Reine Eleanor de Provence",
      "Reine Eleanor",
     tf_female | tf_unmoveable_in_party_window | tf_hero,
@@ -61782,10 +57749,10 @@ itm_rnd_helm_06,
     wp_one_handed(55) | wp_two_handed(52) | wp_polearm(50) | wp_archery(50) | wp_crossbow(52) | wp_throwing(54),
     knows_common | knows_riding_3,
     0x7c0101002588caf17142ab93d00000000001ddfa40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lady_2",
+  ["kingdom_9_lady_2",
      "Princesse Eléonore d'Angleterre",
      "Eléonore d'Angleterre",
     tf_female | tf_unmoveable_in_party_window | tf_hero,
@@ -61797,10 +57764,10 @@ itm_rnd_helm_06,
     wp_one_handed(55) | wp_two_handed(52) | wp_polearm(50) | wp_archery(50) | wp_crossbow(52) | wp_throwing(54),
     knows_common | knows_riding_3,
     0x7c0101002588caf17142ab93d00000000001ddfa40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lady_3",
+  ["kingdom_9_lady_3",
      "Lady Joan de Munchensy, Countess of Pembroke",
      "Joan de Munchensy",
     tf_female | tf_unmoveable_in_party_window | tf_hero,
@@ -61812,10 +57779,10 @@ itm_rnd_helm_06,
     wp_one_handed(55) | wp_two_handed(52) | wp_polearm(50) | wp_archery(50) | wp_crossbow(52) | wp_throwing(54),
     knows_common | knows_riding_3,
     0x7c0101002588caf17142ab93d00000000001ddfa40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lady_4",
+  ["kingdom_9_lady_4",
      "Lady Maud de Lacy",
      "Maud de Lacy",
     tf_female | tf_unmoveable_in_party_window | tf_hero,
@@ -61827,10 +57794,10 @@ itm_rnd_helm_06,
     wp_one_handed(55) | wp_two_handed(52) | wp_polearm(50) | wp_archery(50) | wp_crossbow(52) | wp_throwing(54),
     knows_common | knows_riding_3,
     0x7c0101002588caf17142ab93d00000000001ddfa40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lady_5",
+  ["kingdom_9_lady_5",
      "Lady Maud de Braose",
      "Maud de Braose",
     tf_female | tf_unmoveable_in_party_window | tf_hero,
@@ -61842,10 +57809,10 @@ itm_rnd_helm_06,
     wp_one_handed(55) | wp_two_handed(52) | wp_polearm(50) | wp_archery(50) | wp_crossbow(52) | wp_throwing(54),
     knows_common | knows_riding_3,
     0x7c0101002588caf17142ab93d00000000001ddfa40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lady_6",
+  ["kingdom_9_lady_6",
      "Lady Alice le Brun de Lusignan",
      "Alice le Brun de Lusignan",
     tf_female | tf_unmoveable_in_party_window | tf_hero,
@@ -61857,10 +57824,10 @@ itm_rnd_helm_06,
     wp_one_handed(55) | wp_two_handed(52) | wp_polearm(50) | wp_archery(50) | wp_crossbow(52) | wp_throwing(54),
     knows_common | knows_riding_3,
     0x7c0101002588caf17142ab93d00000000001ddfa40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lady_7",
+  ["kingdom_9_lady_7",
      "Lady Avita of Savoy",
      "Avita of Savoy",
     tf_female | tf_unmoveable_in_party_window | tf_hero,
@@ -61872,10 +57839,10 @@ itm_rnd_helm_06,
     wp_one_handed(55) | wp_two_handed(52) | wp_polearm(50) | wp_archery(50) | wp_crossbow(52) | wp_throwing(54),
     knows_common | knows_riding_3,
     0x7c0101002588caf17142ab93d00000000001ddfa40000000000000000
-    ],
+  ],
 
 
-    ["kingdom_9_lady_8","Lady Clara","Clara",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_9, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
+  ["kingdom_9_lady_8","Lady Clara","Clara",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_9, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_9_lady_9","Lady Crystina","Crystina",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_9, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_9_lady_10","Lady Diana","Diana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_9, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
   ["kingdom_9_lady_11","Lady Ebeta","Ebeta",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_9, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
@@ -62849,16 +58816,16 @@ itm_rnd_helm_06,
   ["town_31_2_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
   ["town_31_3_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
 
-    ["town_32_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
+  ["town_32_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
   ["town_32_2_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
 
   ["town_34_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
-   ["town_37_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
-   ["town_38_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
-   ["town_39_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
-   ["town_40_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
-   ["town_40_2_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
-   ["town_41_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
+  ["town_37_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
+  ["town_38_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
+  ["town_39_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
+  ["town_40_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
+  ["town_40_2_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
+  ["town_41_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
   ["town_41_2_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
   ["town_41_3_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
   ["town_41_4_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
@@ -63011,10 +58978,10 @@ itm_rnd_helm_06,
   ["town_31_3_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
 
 
-   ["town_32_1_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
+  ["town_32_1_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_32_2_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
 
-     ["town_34_1_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
+  ["town_34_1_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_35_2_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_38_1_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_39_1_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
@@ -63154,9 +59121,9 @@ itm_rnd_helm_06,
   ["town_31_2_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_31_3_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
 
-   ["town_32_1_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
+  ["town_32_1_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_32_2_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
-   ["town_34_1_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
+  ["town_34_1_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_37_1_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_38_1_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
   ["town_39_1_weaponsmith","Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|          tf_is_merchant, 0, 0, fac_commoners,[itm_leather_jacket,  itm_woolen_hose],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
@@ -63592,7 +59559,7 @@ itm_rnd_helm_06,
   ["town_32_1_horse_merchant","Horse Merchant","{!}Town 11 Horse Merchant",tf_hero|tf_randomize_face|tf_is_merchant,            0, 0, fac_commoners,[itm_nomad_armor,    itm_leather_boots],                     def_attrib|level(5),wp(20),knows_inventory_management_10, man_face_young_1, man_face_older_2],
   ["town_32_2_horse_merchant","Horse Merchant","{!}Town 11 Horse Merchant",tf_hero|tf_randomize_face|tf_is_merchant,            0, 0, fac_commoners,[itm_nomad_armor,    itm_leather_boots],                     def_attrib|level(5),wp(20),knows_inventory_management_10, man_face_young_1, man_face_older_2],
 
-   ["town_34_1_horse_merchant","Horse Merchant","{!}Town 11 Horse Merchant",tf_hero|tf_randomize_face|tf_is_merchant,            0, 0, fac_commoners,[itm_nomad_armor,    itm_leather_boots],                     def_attrib|level(5),wp(20),knows_inventory_management_10, man_face_young_1, man_face_older_2],
+  ["town_34_1_horse_merchant","Horse Merchant","{!}Town 11 Horse Merchant",tf_hero|tf_randomize_face|tf_is_merchant,            0, 0, fac_commoners,[itm_nomad_armor,    itm_leather_boots],                     def_attrib|level(5),wp(20),knows_inventory_management_10, man_face_young_1, man_face_older_2],
   ["town_37_1_horse_merchant","Horse Merchant","{!}Town 11 Horse Merchant",tf_hero|tf_randomize_face|tf_is_merchant,            0, 0, fac_commoners,[itm_nomad_armor,    itm_leather_boots],                     def_attrib|level(5),wp(20),knows_inventory_management_10, man_face_young_1, man_face_older_2],
   ["town_38_1_horse_merchant","Horse Merchant","{!}Town 11 Horse Merchant",tf_hero|tf_randomize_face|tf_is_merchant,            0, 0, fac_commoners,[itm_nomad_armor,    itm_leather_boots],                     def_attrib|level(5),wp(20),knows_inventory_management_10, man_face_young_1, man_face_older_2],
   ["town_39_1_horse_merchant","Horse Merchant","{!}Town 11 Horse Merchant",tf_hero|tf_randomize_face|tf_is_merchant,            0, 0, fac_commoners,[itm_nomad_armor,    itm_leather_boots],                     def_attrib|level(5),wp(20),knows_inventory_management_10, man_face_young_1, man_face_older_2],
@@ -64167,7 +60134,7 @@ itm_rnd_helm_06,
   ["village_32_5_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ["village_32_6_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
 
-   ["village_33_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
+  ["village_33_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ["village_34_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ["village_35_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ["village_36_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
@@ -64177,7 +60144,7 @@ itm_rnd_helm_06,
   ###### ["village_36_3_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ###### ["village_37_4_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
 
-    ["village_37_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
+  ["village_37_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
   ["village_37_2_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
 
   ["village_38_1_elder", "Mayor", "{!}village_1_elder",tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,[itm_coarse_tunic, itm_wrapping_boots,],def_attrib|level(2),wp(20),knows_inventory_management_10,                         man_face_old_1, man_face_older_2],
@@ -64357,10 +60324,10 @@ itm_rnd_helm_06,
   ["town_31_3_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
 
 
-   ["town_32_1_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
+  ["town_32_1_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
   ["town_32_2_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
 
-   ["town_34_1_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
+  ["town_34_1_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
   ["town_37_1_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
 
   ["town_38_1_master_craftsman", "{!}Town 21 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
@@ -64442,10 +60409,10 @@ itm_rnd_helm_06,
    [itm_sword_type_xiii,itm_leather_jerkin,itm_leather_boots,itm_courser,itm_leather_gloves],
    def_attrib|agi_11|level(60),wp(130),knows_common,vaegir_face1, vaegir_face2],
 
-   ["nurse_for_lady","Nurse","Nurse",tf_female|tf_guarantee_armor,0,reserved,fac_commoners,
+  ["nurse_for_lady","Nurse","Nurse",tf_female|tf_guarantee_armor,0,reserved,fac_commoners,
    [itm_robe, itm_wrapping_boots],
    def_attrib|level(4),wp(60),knows_common,woman_face_1, woman_face_2],
-   ["temporary_minister","Minister","Minister",tf_hero|tf_randomize_face|tf_male|tf_guarantee_armor|tf_guarantee_boots,0,reserved,fac_commoners,
+  ["temporary_minister","Minister","Minister",tf_hero|tf_randomize_face|tf_male|tf_guarantee_armor|tf_guarantee_boots,0,reserved,fac_commoners,
    [itm_merchant_outfit, itm_wrapping_boots],
    def_attrib|level(4),wp(60),knows_common,man_face_middle_1, man_face_older_2],
 
@@ -64790,249 +60757,249 @@ itm_rnd_helm_06,
 
 
     #TOM
-    ["manor_monk", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_monk", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_templar", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_templar", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_hospitalier", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_hospitalier", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_temp1", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_temp1", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_temp2", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_temp2", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_temp3", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_temp3", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_temp4", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_temp4", "Monk", "Monk", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_master", "Master", "Master", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["manor_master", "Master", "Master", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_merchant_outfit, itm_leather_boots,itm_gambeson_c, itm_blue_hose, itm_woolen_hose, itm_fur_coat,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["whore","Madame","Madams",tf_female|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["whore","Madame","Madams",tf_female|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_peasant_dress, itm_red_dress, itm_brown_dress, itm_green_dress, itm_hide_boots],
     def_attrib|level(5),wp(70),knows_common,refugee_face1,refugee_face2],
 
-    ["priest_catholic", "Catholic Priest", "Priest", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["priest_catholic", "Catholic Priest", "Priest", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_1, itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["priest_othordox", "Othordox Priest", "Priest", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["priest_othordox", "Othordox Priest", "Priest", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_priest_robe_2, itm_woolen_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["priest_muslim", "Imam", "Imam", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["priest_muslim", "Imam", "Imam", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_robe, itm_woolen_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x00000008fa00b3516cd335d69a2d471c00000000001d27220000000000000000, 0x00000008dd08b3513b2455a68c6e64cd00000000001dd4a20000000000000000
-    ],
+  ],
 
 
-    ["priest_pagan", "Krivis", "Krivis", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["priest_pagan", "Krivis", "Krivis", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_blue_hose, itm_woolen_hose, itm_fur_coat,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["priest_mongol", "Shaman", "Shaman", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
+  ["priest_mongol", "Shaman", "Shaman", tf_male|tf_guarantee_armor|tf_guarantee_boots,0,0,fac_commoners,
     [itm_merchant_outfit, itm_leather_boots,itm_gambeson_c, itm_blue_hose, itm_woolen_hose, itm_fur_coat,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 ####manor guys
-    ["manor_seneschal", "Seneschal", "Seneschal", tf_male|tf_hero,0,0,fac_commoners,
+  ["manor_seneschal", "Seneschal", "Seneschal", tf_male|tf_hero,0,0,fac_commoners,
     [itm_peasant_b,  itm_red_hose,itm_sword_type_xiii, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common, 0x00000001a91064503b126b29d20d2c9c00000000001d4a6a0000000000000000
-    ],
+  ],
 
 
-    ["manor_storage", "Warehouse Master", "Warehouse Master", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ["manor_storage", "Warehouse Master", "Warehouse Master", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_b, itm_blue_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common, 0x00000001af00545356d370bad655c8b400000000001f4ce50000000000000000
-    ],
+  ],
 
-    ["manor_marshal", "Marshall", "Marshall", tf_male|tf_hero,0,0,fac_commoners,
+  ["manor_marshal", "Marshall", "Marshall", tf_male|tf_hero,0,0,fac_commoners,
     [itm_kau_mail_a, itm_leather_boots,itm_sword_type_xiii, itm_blue_hose, itm_woolen_hose,
     ],
     knight_attrib_5,wp(70),knows_common, 0x00000001b108124025b371bcec14975a00000000001e36e20000000000000000
-    ],
+  ],
     #tier4
-    ["manor_armorsmith", "Armorer", "Armorer", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ["manor_armorsmith", "Armorer", "Armorer", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_archer_a,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10, 0x00000001b904d5d1591a8db8e4d4c6de00000000000ac9b40000000000000000
-    ],
+  ],
 
 
-    ["manor_weaponsmith", "Weaponsmith", "Weaponsmith", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_weaponsmith", "Weaponsmith", "Weaponsmith", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_archer_b, itm_blue_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_fletcher", "Fletcher", "Fletcher", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_fletcher", "Fletcher", "Fletcher", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_archer_c,  itm_wrapping_boots, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["manor_breeder", "Stable Master", "Stable Master", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_breeder", "Stable Master", "Stable Master", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_archer_c,  itm_blue_hose, itm_straw_hat,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
     #tier1-3
-    ["manor_grain", "Grain Master Peasant", "Grain Master Peasant", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_grain", "Grain Master Peasant", "Grain Master Peasant", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_d,  itm_woolen_hose, itm_straw_hat,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_livestock", "Livestock Master Peasant", "Livestock Master Peasant", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_livestock", "Livestock Master Peasant", "Livestock Master Peasant", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_g, itm_blue_hose, itm_straw_hat,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_fruit", "Fruit Master Peasant", "Fruit Master Peasant", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_fruit", "Fruit Master Peasant", "Fruit Master Peasant", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [  itm_woolen_hose, itm_straw_hat, itm_peasant_tunic_a,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_fisher", "Fisherman", "Fisherman", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_fisher", "Fisherman", "Fisherman", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_tunic_a,  itm_woolen_hose, itm_straw_hat,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_baker", "Baker", "Baker", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_baker", "Baker", "Baker", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_b, itm_blue_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_winer", "Winer", "Winer", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_winer", "Winer", "Winer", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_c,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_brewer", "Brewer", "Brewer", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_brewer", "Brewer", "Brewer", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_g,  itm_blue_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_potter", "Potter", "Potter", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_potter", "Potter", "Potter", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_blacksmith", "Blacksmith", "Blacksmith", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_blacksmith", "Blacksmith", "Blacksmith", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_f,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_butcher", "Butcher", "Butcher", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_butcher", "Butcher", "Butcher", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_f,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_oilmaker", "Oilmaker", "Oilmaker", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_oilmaker", "Oilmaker", "Oilmaker", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_archer_a,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_linen", "Linen workshop master", "Linen workshop master", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_linen", "Linen workshop master", "Linen workshop master", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_archer_b,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_wool", "Wool workshop master", "Wool workshop master", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_wool", "Wool workshop master", "Wool workshop master", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_archer_c,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_tanner", "Master Tanner", "Master Tanner", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
+  ["manor_tanner", "Master Tanner", "Master Tanner", tf_male|tf_hero|tf_randomize_face|tf_is_merchant,0,0,fac_commoners,
     [itm_peasant_f,  itm_woolen_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_inventory_management_10,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
     #generic walkers and shopekeepers
-    ["manor_seller", "Tradesman", "Tradesman", tf_male|tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face,0,0,fac_commoners,
+  ["manor_seller", "Tradesman", "Tradesman", tf_male|tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face,0,0,fac_commoners,
     [itm_peasant_d, itm_peasant_g,  itm_peasant_f, itm_woolen_hose, itm_short_tunic, itm_blue_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_noble", "Noble", "Noble", tf_male|tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face,0,0,fac_commoners,
+  ["manor_noble", "Noble", "Noble", tf_male|tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face,0,0,fac_commoners,
     [itm_merchant_outfit, itm_leather_boots,itm_sword_type_xiii, itm_blue_hose, itm_woolen_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
-    ["manor_noble2", "Noble", "Noble", tf_female|tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face,0,0,fac_commoners,
+  ["manor_noble2", "Noble", "Noble", tf_female|tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face,0,0,fac_commoners,
     [itm_brown_dress, itm_green_dress, itm_brown_dress, itm_blue_hose, itm_woolen_hose, itm_wimple_a, itm_wimple_with_veil,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
 
     ###### ["manor_burger", "Burger", "Burger", tf_male|tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face,0,0,fac_commoners,
     ###### [
@@ -65110,165 +61077,165 @@ itm_rnd_helm_06,
     ###### def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
     ###### ],
     #mongolian
-    ["manor_trader_silk", "Silk Trader", "Silk Trader", tf_female|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
+  ["manor_trader_silk", "Silk Trader", "Silk Trader", tf_female|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
     [itm_nomad_cap, itm_mongol_tunic_a, itm_leather_boots,
     ],
     def_attrib|level(5),wp(70),knows_common,0x000000086d0ca1086a8992dd23d1ea99000000000015c89d0000000000000000,0x000000086d0ca1086a8992dd23d1ea99000000000015c89d0000000000000000
-    ],
+  ],
     #italian
-    ["manor_trader_spice", "Spice Trader", "Spice Trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
+  ["manor_trader_spice", "Spice Trader", "Spice Trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
     [itm_merchant_outfit, itm_leather_boots, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,0x00000001be10c4d432ada9b48d6558e400000000000a1a5b0000000000000000,0x00000001be10c4d432ada9b48d6558e400000000000a1a5b0000000000000000
-    ],
+  ],
     #arabian?
-    ["manor_trader_dyes", "Dye Trader", "Dye Trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
+  ["manor_trader_dyes", "Dye Trader", "Dye Trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
     [itm_headcloth, itm_sarranid_cloth_robe, itm_leather_boots,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000be400b586397562186a6a54f400000000001ecadc0000000000000000, 0x0000000be400b586397562186a6a54f400000000001ecadc0000000000000000
-    ],
+  ],
     #polish guy?
-    ["manor_trader_salt", "Salt Trader", "Salt Trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
+  ["manor_trader_salt", "Salt Trader", "Salt Trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
     [itm_archer_a, itm_blue_hose, itm_straw_hat,
     ],
     def_attrib|level(5),wp(70),knows_common,0x00000001bf05148d3d1c723b9d91171400000000001da68b0000000000000000, 0x00000001bf05148d3d1c723b9d91171400000000001da68b0000000000000000
-    ],
+  ],
     #furs -balt?
-    ["manor_trader_furs", "Fur trader", "Fur trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
+  ["manor_trader_furs", "Fur trader", "Fur trader", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
     [itm_balt_shirt_a, itm_leather_boots,itm_balt_rus_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000fc30454933e5514b71289579900000000001da5730000000000000000, 0x0000000fc30454933e5514b71289579900000000001da5730000000000000000
-    ],
+  ],
     #bookseler - later
-    ["manor_trader_book", "Amanuensis", "Amanuensis", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
+  ["manor_trader_book", "Amanuensis", "Amanuensis", tf_male|tf_hero|tf_is_merchant|tf_randomize_face,0,0,fac_commoners,
     [itm_priest_robe_1, itm_blue_hose, itm_arming_cap,
     ],
     def_attrib|level(5),wp(70),knows_common,swadian_face_young_1, swadian_face_old_2
-    ],
+  ],
     ###used for p. castles and crusade
-    ["temp_lord","Local village idiot","Local village idiots",tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face|tf_guarantee_helmet, 0,reserved,  fac_neutral,
+  ["temp_lord","Local village idiot","Local village idiots",tf_guarantee_boots|tf_guarantee_armor|tf_randomize_face|tf_guarantee_helmet, 0,reserved,  fac_neutral,
     [itm_straw_hat,
     itm_linen_tunic,
     itm_woolen_hose,
     itm_pitch_fork,
     ],def_attrib|level(18),wp(60),knows_common, 0],
 
-    ["trader_hat1", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ["trader_hat1", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_b, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x000000018404114f630c4a555d69498b00000000001a57530000000000000000
-    ],
-    ["trader_hat2", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_hat2", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_headcloth, itm_archer_a, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x000000019b00104128e3a9dae62b195400000000000daae30000000000000000
-    ],
-    ["trader_hat3", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_hat3", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_arming_cap, itm_archer_b, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a4200258e491b5226e451a6e500000000001f38920000000000000000
-    ],
-    ["trader_hat4", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_hat4", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_fur_hat, itm_archer_c, itm_red_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a610850835902acccd56dc71300000000000544e10000000000000000
-    ],
-    ["trader_hat5", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_hat5", "Hat Merchant", "Hat Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_a, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a6d0832823514966062d59666000000000013196c0000000000000000
-    ],
+  ],
 
 
-    ["trader_sword1", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ["trader_sword1", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_b, itm_red_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a4104938432d27e5b0c34c51100000000000db3b40000000000000000
-    ],
-    ["trader_sword2", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_sword2", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_arming_cap, itm_archer_c, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a5f09320f4a644a38a372455b00000000000e54e10000000000000000
-    ],
-    ["trader_sword3", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_sword3", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_arming_cap, itm_archer_a, itm_leather_boots,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a4d09148d676cae44d36e9922000000000015e9a90000000000000000
-    ],
-    ["trader_sword4", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_sword4", "Sword Merchant", "Sword Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_b, itm_red_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a6f104284476c766d4b70b89500000000001667160000000000000000
-    ],
+  ],
 
 
-    ["trader_helmet1", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ["trader_helmet1", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_arming_cap, itm_archer_c, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a5a0450c524a4af248ba66b2b00000000000da90a0000000000000000
-    ],
-    ["trader_helmet2", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_helmet2", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_a, itm_leather_boots,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a6d04d1915aab4e144c8ec72300000000000647530000000000000000
-    ],
-    ["trader_helmet3", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_helmet3", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_arming_cap, itm_archer_b, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a71041201561274b8258db4d80000000000115a7d0000000000000000
-    ],
-    ["trader_helmet4", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_helmet4", "Helmet Merchant", "Helmet Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_c, itm_red_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a7a1063913299d0eb23af3834000000000011c3210000000000000000
-    ],
+  ],
 
-    ["trader_spice1", "Spice Merchant", "Spice Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ["trader_spice1", "Spice Merchant", "Spice Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_a, itm_leather_boots,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a6e00058e4acd8a56d16db673000000000012c99d0000000000000000
-    ],
-    ["trader_spice2", "Spice Merchant", "Spice Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_spice2", "Spice Merchant", "Spice Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_arming_cap, itm_archer_b, itm_red_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a7804044e3ad46e38dc8748e200000000000a34960000000000000000
-    ],
-    ["trader_spice3", "Spice Merchant", "Spice Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_spice3", "Spice Merchant", "Spice Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_c, itm_leather_boots,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a42104011315556b8dc3ad91b00000000001256a80000000000000000
-    ],
-    ["trader_spice4", "Spice Merchant", "Spice Merchant", tf_female|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_spice4", "Spice Merchant", "Spice Merchant", tf_female|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_arming_cap, itm_archer_a, itm_red_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a490c23c73b5b6f429c8b4cd100000000000dd6610000000000000000
-    ],
+  ],
 
-    ["trader_silk1", "Silk Merchant", "Silk Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ["trader_silk1", "Silk Merchant", "Silk Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_b, itm_red_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a490c23c73b5b6f429c8b4cd100000000000dd6610000000000000000
-    ],
-    ["trader_silk2", "Silk Merchant", "Silk Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_silk2", "Silk Merchant", "Silk Merchant", tf_male|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_archer_c, itm_leather_boots,
     ],
     def_attrib|level(5),wp(70),knows_common,0x0000000a721001d4276bccec5275392e000000000012a7770000000000000000
-    ],
-    ["trader_silk3", "Silk Merchant", "Silk Merchant", tf_female|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_silk3", "Silk Merchant", "Silk Merchant", tf_female|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_nomad_vest, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x000000086d0ca1086a8992dd23d1ea99000000000015c89d0000000000000000
-    ],
-    ["trader_silk4", "Silk Merchant", "Silk Merchant", tf_female|tf_hero|tf_is_merchant,0,0,fac_commoners,
+  ],
+  ["trader_silk4", "Silk Merchant", "Silk Merchant", tf_female|tf_hero|tf_is_merchant,0,0,fac_commoners,
     [itm_straw_hat, itm_nomad_vest, itm_green_hose,
     ],
     def_attrib|level(5),wp(70),knows_common,0x000000086d0ca1086a8992dd23d1ea99000000000015c89d0000000000000000
-    ],
+  ],
 
-    ["maid_1","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
-    ["maid_2","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
-    ["maid_3","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
-    ["maid_4","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
+  ["maid_1","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
+  ["maid_2","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
+  ["maid_3","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
+  ["maid_4","Lady Anna","Anna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_1, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
 
 
 
@@ -65867,7 +61834,7 @@ itm_rnd_helm_06,
 
 
 ################################# BOUNTY TROOPS BEGIN
-    ["bounty_1_knight",
+  ["bounty_1_knight",
      "Rogue Knight",
      "Rogue Knights",
     ###### tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -65991,7 +61958,7 @@ itm_rnd_helm_06,
     ###### horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     horse_attrib_elite, wp(360), nbl_knight_skills,
     euro_face_1, euro_face_2
-    ],
+  ],
 
 
   ["Bounty_2_bandit","Bandit","Bandits",tf_guarantee_armor,0,0,fac_outlaws,
@@ -66051,7 +62018,7 @@ itm_rnd_helm_06,
 
 
 
-   ["bounty_6_pirate",
+  ["bounty_6_pirate",
     "Pirate",
     "Pirates",
     tf_guarantee_all,
@@ -66103,7 +62070,7 @@ itm_rnd_helm_06,
 
 
 
-   ["bounty_7_pirate_captain",
+  ["bounty_7_pirate_captain",
     "Pirate Captain",
     "Pirate Captains",
     tf_guarantee_all,
@@ -66149,7 +62116,7 @@ itm_rnd_helm_06,
     foot_attrib_5|level(24),wp(250),swords_regulars_skills,nord_face_young_1, nord_face_old_2],
 
 
-    ["bounty_8_mercenary",
+  ["bounty_8_mercenary",
      "Mercenary",
      "Mercenary",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
@@ -66210,7 +62177,7 @@ itm_rnd_helm_06,
 
 
 
-    ["bounty_9_mercenary_captain",
+  ["bounty_9_mercenary_captain",
      "Mercenary Captain",
      "Mercenary Captain",
     #####" Militia Spearman",
@@ -66273,7 +62240,7 @@ itm_rnd_helm_06,
 
 
 ############################
-    ["saint_lazarus_half_brother_dismounted",
+  ["saint_lazarus_half_brother_dismounted",
      "Dismounted Saint Lazarus Serjeant",
      "Dismounted Saint Lazarus Serjeants",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66317,10 +62284,10 @@ itm_rnd_helm_06,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["saint_lazarus_knight_dismounted",
+  ["saint_lazarus_knight_dismounted",
      "Dismounted Saint Lazarus Knight",
      "Dismounted Saint Lazarus Knights",
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66376,9 +62343,9 @@ itm_rnd_helm_06,
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
-    ["santiago_half_brother_dismounted",
+  ["santiago_half_brother_dismounted",
      "Dismounted Santiago Serjeant",
      "Dismounted Santiago Serjeants",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66419,10 +62386,10 @@ itm_rnd_helm_06,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["santiago_knight_dismounted",
+  ["santiago_knight_dismounted",
      "Dismounted Santiago Knight",
      "Dismounted Santiago Knights",
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66478,9 +62445,9 @@ itm_rnd_helm_06,
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
-    ["calatrava_half_brother_dismounted",
+  ["calatrava_half_brother_dismounted",
      "Dismounted Calatrava Serjeant",
      "Dismounted Calatrava Serjeants",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66529,10 +62496,10 @@ itm_rnd_helm_06,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["calatrava_knight_dismounted",
+  ["calatrava_knight_dismounted",
      "Dismounted Calatrava Knight",
      "Dismounted Calatrava Knights",
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66589,10 +62556,10 @@ itm_rnd_helm_06,
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
-    ["saint_thomas_half_brother_dismounted",
+  ["saint_thomas_half_brother_dismounted",
      "Dismounted Sergeant of the Order of Saint Thomas of Acre",
      "Dismounted Sergeants of the Order of Saint Thomas of Acre",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66638,10 +62605,10 @@ itm_rnd_helm_06,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
-    ["saint_thomas_knight_dismounted",
+  ["saint_thomas_knight_dismounted",
      "Dismounted Knight of the Order Saint Thomas of Acre",
      "Dismounted Knights of the Order Saint Thomas of Acre",
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
@@ -66694,7 +62661,7 @@ itm_rnd_helm_06,
         ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-    ],
+  ],
 
 
 
@@ -66742,7 +62709,7 @@ itm_rnd_helm_06,
     ],
     ranged_attrib_3, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
 
   ["english_longbowman",
@@ -66779,7 +62746,7 @@ itm_rnd_helm_06,
     ],
     ranged_attrib_4, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 
   ["english_veteran_longbowman",
      "English Veteran Longbowman",
@@ -66815,7 +62782,7 @@ itm_rnd_helm_06,
     ],
     ranged_attrib_elite, archer_veteran_wp, archer_veteran_skills,
     nord_face_young_1, swadian_face_old_2
-    ],
+  ],
 ############################
 
 
@@ -68579,32 +64546,8 @@ itm_rnd_helm_06,
 #Troop upgrade declarations
 ###### Mercenaries
 
-#upgrade2(troops, "looter", "mountain_bandit", "forest_bandit" )
-###### upgrade2 (troops, "forest_bandit", "mercenary_veteran_archer", "mercenary_veteran_crossbowman"),
-###### upgrade2 (troops, "mountain_bandit", "mercenary_veteran_swordsman", "mercenary_veteran_billman"),
 upgrade(troops, "bandit", "brigand"),
-###### upgrade(troops, "manhunter", "slave_driver" )
-###### upgrade(troops, "slave_driver", "slave_hunter" )
-###### upgrade(troops, "slave_hunter", "slave_crusher" )
-###### upgrade(troops, "slave_crusher", "slaver_chief" )
-###### upgrade(troops, "follower_woman", "hunter_woman" )
-###### upgrade(troops, "hunter_woman", "fighter_woman" )
-###### upgrade(troops, "fighter_woman", "sword_sister" )
-###### upgrade(troops, "refugee", "follower_woman" )
-#upgrade(troops, "peasant_woman", "follower_woman" )
-#upgrade(troops, "peasant_woman", "mercenary_town_footman" ) #TOM
 
-##redo this. tribesman -> horseman ->lancer->h. lancer
-#######             tribesman2->skirmisher->horse archer->h.archer
-##NEW RECRUIT!
-###### upgrade(troops, "tatar_tribesman", "tatar_skirmisher" )
-###### upgrade(troops, "tatar_skirmisher", "tatar_horseman" )
-###### upgrade(troops, "tatar_horseman", "tatar_horse_archer" )
-###### upgrade2(troops, "tatar_horse_archer", "tatar_lancer", "tatar_veteran_horse_archer" )
-###### upgrade(troops, "tatar_lancer", "tatar_heavy_lancer" )
-
-#upgrade(troops, "tatar_tribesman", "tatar_horseman"),
-#noble
 upgrade(troops, "tatar_horseman", "tatar_lancer"),
 upgrade(troops, "tatar_lancer", "tatar_heavy_lancer"),
 
@@ -68612,44 +64555,12 @@ upgrade(troops, "tatar_tribesman", "tatar_skirmisher"),
 upgrade(troops, "tatar_skirmisher", "tatar_horse_archer"),
 upgrade(troops, "tatar_horse_archer", "tatar_veteran_horse_archer"),
 
-####### same as above
-##NEW RECRUIT!
-###### upgrade(troops, "cuman_tribesman", "cuman_skirmisher" )
-###### upgrade(troops, "cuman_skirmisher", "cuman_horseman" )
-###### upgrade(troops, "cuman_horseman", "cuman_horse_archer" )
-###### upgrade2(troops, "cuman_horse_archer", "cuman_lancer", "cuman_veteran_horse_archer" )
-###### upgrade(troops, "cuman_lancer", "cuman_heavy_lancer" )
-
-#upgrade2(troops, "cuman_tribesman", "cuman_horseman"),
 upgrade(troops, "cuman_horseman", "cuman_lancer"),
 upgrade(troops, "cuman_lancer", "cuman_heavy_lancer"),
 
 upgrade(troops, "cuman_tribesman", "cuman_skirmisher"),
 upgrade(troops, "cuman_skirmisher", "cuman_horse_archer"),
 upgrade(troops, "cuman_horse_archer", "cuman_veteran_horse_archer"),
-
-#upgrade(troops, "steppe_bandit", "cuman_horseman" )
-###### Teutonic Order
-####### infantry -> spearman -> spearman2 -> spearman3
-#######            -> axeman -> axeman2
-####### skirmisher -> crossbow -> crossbow2 -> crossbow3
-#######              -> javelin -> javelin -> javelin
-####### horse -> horse2->horse3->horse4
-####### Balts as sp.mercs?
-##remove: teu_ger_2_2 teu_ger_3_2
-###### upgrade2(troops,"teu_village_recruit", "teu_ger_1", "teu_balt_1")
-###### upgrade2(troops, "teu_ger_1", "teu_ger_2_1", "teu_ger_2_2"),
-###### upgrade(troops, "teu_ger_2_2", "teu_ger_3_2"),
-###### upgrade(troops, "teu_balt_1", "teu_balt_2"),
-###### upgrade(troops, "teu_balt_2", "teu_balt_3"),
-
-###### upgrade2(troops,"teu_town_1", "teu_town_2_1", "teu_town_2_2")
-###### upgrade(troops, "teu_town_2_1", "teu_town_3_1"),
-###### upgrade2(troops, "teu_town_3_1", "teu_town_4_1", "teu_horse_3"),
-###### upgrade(troops, "teu_town_2_2", "teu_town_3_2"),
-###### upgrade(troops, "teu_town_3_2", "teu_town_4_2"),
-
-###### upgrade(troops, "teu_ger_2_1", "teu_town_3_1"),
 
 #infantry
 upgrade2(troops,"teu_town_1", "teu_ger_1", "teu_town_2_1")
@@ -68672,24 +64583,6 @@ upgrade(troops, "teu_horse_1", "teu_horse_2"),
 upgrade(troops, "teu_horse_2", "teu_horse_3"),
 upgrade(troops, "teu_horse_3", "teu_horse_4"),
 
-###### Eastern
-####### infantry -> spearman -> spearman2 -> spearman3
-#######            -> axeman -> axeman2 -> axeman3
-####### skirmisher ->archer -> archer2 -> archer
-####### horse -> horse2->horse3->horse4
-####### REMOVE: rus_town_3_1 rus_town_4_1
-
-###### upgrade2(troops,"rus_vil_1", "rus_vil_2_1", "rus_vil_2_2")
-###### upgrade(troops,"rus_vil_2_1", "rus_vil_3_1")
-###### upgrade(troops,"rus_vil_3_1", "rus_vil_4_1")
-###### upgrade(troops,"rus_vil_2_2", "rus_vil_3_2")
-###### upgrade(troops,"rus_vil_3_2", "rus_vil_4_2")
-
-###### upgrade(troops,"rus_town_1", "rus_town_2")
-###### upgrade2(troops,"rus_town_2", "rus_town_3_1", "rus_town_3_2")
-###### upgrade(troops,"rus_town_3_1", "rus_town_4_1")
-###### upgrade(troops,"rus_town_3_2", "rus_town_4_2")
-
 #infantry
 upgrade2(troops,"rus_town_1", "rus_town_2" ,"rus_vil_2_1")
 upgrade(troops,"rus_town_2", "rus_town_3_2")
@@ -68704,27 +64597,6 @@ upgrade(troops,"rus_vil_3_2", "rus_vil_4_2")
 upgrade(troops,"rus_horse_1", "rus_horse_2")
 upgrade(troops,"rus_horse_2", "rus_horse_3")
 upgrade(troops,"rus_horse_3", "rus_horse_4")
-
-###### Nordic
-####### infantry -> spearman -> spearman2 -> spearman3
-#######            -> axeman   -> axeman2   -> axeman3
-####### skirmisher -> crossbow -> crossbow2 -> crossbow3
-#######                          -> archer2   -> archer3
-####### horse -> horse2 -> horse3 -> horse4
-##REMOVE: nordic_town_footman nordic_swordsman nordic_veteran_swordsman nordic_swords_sergeant
-##RETARDED
-###### upgrade2(troops,"nordic_village_recruit", "nordic_spearman", "nordic_billman")
-###### upgrade2(troops,"nordic_town_recruit", "nordic_crossbowman", "nordic_town_footman")
-###### upgrade(troops, "nordic_town_footman", "nordic_swordsman"),
-###### upgrade(troops, "nordic_swordsman", "nordic_veteran_swordsman")
-###### upgrade(troops, "nordic_veteran_swordsman", "nordic_swords_sergeant")
-###### upgrade(troops, "nordic_billman", "nordic_veteran_billman")
-###### upgrade(troops, "nordic_veteran_billman", "nordic_bills_sergeant")
-###### upgrade2(troops,"nordic_spearman", "nordic_veteran_spearman", "nordic_veteran_archer"),
-###### upgrade(troops, "nordic_veteran_spearman", "nordic_spears_sergeant")
-###### upgrade(troops,"nordic_veteran_archer", "nordic_bows_sergeant")
-###### upgrade(troops,"nordic_crossbowman", "nordic_veteran_crossbowman")
-###### upgrade(troops,"nordic_veteran_crossbowman", "nordic_crossbows_sergeant")
 
 upgrade2(troops, "nordic_town_recruit", "nordic_spearman", "nordic_billman")
 upgrade(troops, "nordic_spearman", "nordic_veteran_spearman")
@@ -68741,20 +64613,6 @@ upgrade(troops,"nordic_light_cavalry", "nordic_medium_cavalry")
 upgrade(troops,"nordic_medium_cavalry", "nordic_squire")
 upgrade(troops,"nordic_squire", "nordic_knight")
 
-###### Balt
-####### infantry -> spearman -> spearman2 -> spearman3
-#######            -> axeman -> axeman2 -> axeman3
-####### skirmisher -> javelin -> javelin2 -> javelin3
-#######              -> archer -> archer2 -> archer
-####### sword1 -> horse1->horse2->horse3
-#######          -> sword2 ->sword3->sword4
-###### upgrade2(troops,"balt_recruit", "balt_skirmisher", "balt_footman")
-###### upgrade2(troops, "balt_skirmisher", "balt_archer", "balt_jav"),
-###### upgrade2(troops, "balt_footman", "balt_spearman", "balt_billman"),
-###### upgrade(troops, "balt_billman", "balt_veteran_billman")
-###### upgrade(troops, "balt_spearman", "balt_veteran_spearman")
-###### upgrade(troops,"balt_archer", "balt_veteran_archer")
-###### upgrade(troops,"balt_jav", "balt_veteran_jav")
 upgrade(troops,"balt_recruit", "balt_footman")
 upgrade2(troops,"balt_footman", "balt_spearman", "balt_billman")
 upgrade(troops,"balt_spearman", "balt_veteran_spearman")
@@ -68790,27 +64648,6 @@ upgrade(troops,"byz_castle_1", "byz_castle_2"),
 upgrade(troops,"byz_castle_2", "byz_castle_3"),
 upgrade(troops,"byz_castle_3", "byz_castle_4"),
 
-####### Andalus - FUCK, wtf is this?
-##NEED HEAVY WEAPONS?
-####### infantry -> spearman -> spearman2 -> spearman3
-#######            -> light-javelin-infantry -> light-javelin-infantry
-####### skirmisher -> crossbow -> crossbow -> crossbow
-#######              -> archer -> archer2
-####### sword1 -> horse1 ->horse2 -> horse3
-#######          -> sword2 ->sword3 -> sword4
-####### REMOVE: andalus_town_infantry_1 andalus_town_infantry_2
-
-###### upgrade2(troops, "andalus_village_recruit", "andalus_village_footman", "andalus_village_archer_1")
-###### upgrade2(troops, "andalus_village_footman", "andalus_village_infantry", "andalus_village_spearmen")
-###### upgrade2(troops, "andalus_village_archer_1", "andalus_village_archer_2", "andalus_crossbowman_1")
-###### upgrade(troops, "andalus_crossbowman_1", "andalus_crossbowman_2")
-###### upgrade2(troops, "andalus_town_recruit", "andalus_town_footman", "andalus_town_xbow_1")
-###### upgrade2(troops, "andalus_town_footman", "andalus_town_infantry_1", "andalus_spearman_1")
-###### upgrade(troops, "andalus_town_infantry_1", "andalus_town_infantry_2")
-###### upgrade(troops, "andalus_spearman_1", "andalus_spearman_2")
-###### upgrade(troops, "andalus_spearman_2", "andalus_spearman_3")
-###### upgrade(troops, "andalus_town_xbow_1", "andalus_town_xbow_2")
-###### upgrade(troops, "andalus_town_xbow_2", "andalus_town_xbow_3")
 ##iifantry
 upgrade2(troops, "andalus_town_recruit", "andalus_spearman_1", "andalus_village_footman")
 upgrade(troops, "andalus_spearman_1", "andalus_spearman_2")
@@ -68851,22 +64688,6 @@ upgrade(troops, "ghulam_levy", "ghulam_cavalry_1")
 upgrade(troops, "ghulam_cavalry_1", "ghulam_cavalry_2")
 upgrade(troops, "ghulam_cavalry_2", "ghulam_cavalry_3")
 
-###### Marinid - a bit wacky version
-####### Infantry -> bow -> crossbow
-#######            -> l.horse -> l.horse2
-##
-####### rabble    -> skirmisher -> archer
-#######                           -> javelins
-#######              -> spearman -> spearman2
-####### Horse1->Horse2->Horse3
-###### upgrade2(troops, "marinid_village_rabble", "marinid_levy_spearman", "marinid_skirmishers")
-###### upgrade2(troops, "marinid_levy_spearman", "marinid_light_spearmen", "marinid_levy_horseman")
-###### upgrade(troops, "marinid_levy_horseman", "marinid_light_lancer")
-###### upgrade(troops, "marinid_light_lancer", "marinid_lancer")
-###### upgrade2(troops, "marinid_skirmishers", "marinid_javelin_infantry", "marinid_berber_bowman")
-###### upgrade2(troops, "marinid_town_recruit", "marinid_town_bowman", "marinid_light_swordsman")
-###### upgrade(troops, "marinid_town_bowman", "marinid_crossbowman")
-###### upgrade(troops, "marinid_light_swordsman", "marinid_swordsman")
 ##urban
 upgrade2(troops, "marinid_town_recruit", "marinid_town_bowman", "marinid_levy_horseman")
 upgrade(troops, "marinid_town_bowman", "marinid_crossbowman")
@@ -68880,26 +64701,6 @@ upgrade(troops, "marinid_levy_spearman", "marinid_light_spearmen")
 upgrade(troops, "marinid_mounted_skirmisher_1", "marinid_mounted_skirmisher_2")
 upgrade(troops, "marinid_mounted_skirmisher_2", "marinid_mounted_skirmisher_3")
 
-###### Italy-Iberia
-####### levy -> spear1 -> spear2 -> spear3
-#######        -> two-hand->two-hand2->two-hand3
-####### levy -> archer -> archer2 -> archer3
-#######         -> crossbow -> crossbow2 -> crossbow3
-####### hores1->horse2->horse3->horse4
-##REMOVE: iberian_town_footman_2 iberian_veteran_swordsman iberian_swords_sergeant
-###### upgrade2(troops,"iberian_village_recruit", "iberian_village_skirmisher", "iberian_village_footman")
-###### upgrade(troops, "iberian_village_skirmisher", "iberian_archer"),
-###### upgrade(troops, "iberian_archer", "iberian_bows_sergeant"),
-###### upgrade(troops, "iberian_village_footman", "iberian_billman"),
-###### upgrade(troops, "iberian_billman", "iberian_bills_sergeant"),
-
-###### upgrade2(troops,"iberian_town_recruit", "iberian_town_skirmisher", "iberian_town_footman_1")
-###### upgrade(troops, "iberian_town_skirmisher", "iberian_veteran_crossbowman"),
-###### upgrade(troops,"iberian_veteran_crossbowman", "iberian_crossbows_sergeant")
-###### upgrade2(troops,"iberian_town_footman_1", "iberian_town_footman_2", "iberian_veteran_spearman")
-###### upgrade(troops,"iberian_veteran_spearman", "iberian_spears_sergeant")
-###### upgrade(troops,"iberian_town_footman_2", "iberian_veteran_swordsman")
-###### upgrade(troops,"iberian_veteran_swordsman", "iberian_swords_sergeant")
 ##infantry
 upgrade2(troops,"iberian_town_recruit", "iberian_village_footman", "iberian_town_footman_1")
 upgrade(troops, "iberian_village_footman", "iberian_billman"),
@@ -68934,14 +64735,6 @@ upgrade(troops,"italian_light_cavalry", "italian_medium_cavalry")
 upgrade(troops,"italian_medium_cavalry", "italian_squire")
 upgrade(troops,"italian_squire", "italian_knight")
 
-###### Gaelic
-####### recruit -> jav. infantry -> jav. infantry2
-#######          -> spear1 -> spear2
-####### archer1 ->archer2
-####### horse1 -> horse2 -> horse3 -> horse4
-##NEW TROOP: gaelic_skirmisher, new troop tier
-##
-#upgrade2(troops,"gaelic_village_recruit", "gaelic_archer_1", "gaelic_village_footman")
 upgrade(troops,"gaelic_infantry_recruit", "gaelic_village_footman")
 upgrade2(troops,"gaelic_village_footman", "gaelic_infantry_1", "gaelic_spearman_1")
 upgrade(troops,"gaelic_infantry_1", "gaelic_infantry_2")
@@ -68955,9 +64748,6 @@ upgrade(troops,"gaelic_medium_cavalry", "gaelic_squire")
 upgrade(troops,"gaelic_squire", "gaelic_knight")
 
 ###### Anatolian - BOTH OK!!!
-#######  infantry1 -> infantry2->infantry3->infantry4
-#######  range1 -> range2 -> range3 -> range4
-#######  horse1->horse2->horse3->horse4
 upgrade(troops,"anatolian_town_recruit_christ", "anatolian_christian_spearman_1")
 upgrade(troops,"anatolian_christian_spearman_1", "anatolian_christian_spearman_2")
 upgrade(troops,"anatolian_christian_spearman_2", "anatolian_christian_spearman_3")
@@ -68988,10 +64778,6 @@ upgrade(troops,"anatolian_turkoman_2", "anatolian_turkoman_3")
 
 
 ###### Scott common - dunno what to do here
-####### add axeman brand?
-###### upgrade2(troops,"scottish_village_recruit", "scottish_forinsec_archer", "scottish_forinsec_spearman")
-###### upgrade(troops,"scottish_forinsec_spearman", "scottish_clansman")
-###### upgrade2(troops,"scottish_clansman", "scottish_heavy_swordsman", "scottish_heavy_axeman")
 ############ NEW v3.0-KOMKE START-
 upgrade(troops,"scottish_infantry_recruit", "scottish_forinsec_spearman")
 upgrade(troops,"scottish_forinsec_spearman", "scottish_clansman")
@@ -69006,12 +64792,6 @@ upgrade(troops,"scottish_squire", "scottish_knight")
 #upgrade(troops,"scottish_forinsec_archer", "euro_archer_2")
 
 #EURO
-####### levy -> spear1 -> spear2 -> spear3
-#######        -> two-hand->two-hand2->two-hand3
-####### levy -> archer -> archer2
-#######         -> crossbow -> crossbow2 -> crossbow3
-####### hores1->horse2->horse3->horse4
-####### remove: euro_swordsman_1 euro_swordsman_2 euro_swordsman_3 town_man_at_arms
 upgrade2(troops,"euro_town_recruit", "euro_spearman_1", "euro_guisarm_1")
 upgrade(troops,"euro_spearman_1", "euro_spearman_2")
 upgrade(troops,"euro_spearman_2", "euro_spearman_3")
@@ -69027,45 +64807,9 @@ upgrade(troops,"euro_horse_1", "euro_horse_2")
 upgrade(troops,"euro_horse_2", "euro_horse_3")
 upgrade(troops,"euro_horse_3", "euro_horse_4")
 
-###### upgrade2(troops,"euro_village_recruit", "euro_archer_1", "euro_guisarm_1")
-###### upgrade(troops,"euro_archer_1", "euro_archer_2")
-###### upgrade(troops,"euro_guisarm_1", "euro_guisarm_2")#, "euro_spearman_2")     #NTB
-###### upgrade(troops,"euro_guisarm_2", "euro_guisarm_3")
-
-###### upgrade2(troops,"euro_town_recruit", "euro_xbow_1", "euro_spearman_1")    #NTB
-###### upgrade(troops,"euro_xbow_1", "euro_xbow_2")
-###### upgrade(troops,"euro_xbow_2", "euro_xbow_3")
-###### upgrade2(troops,"euro_spearman_1", "euro_spearman_2", "euro_swordsman_1") #tom - euro swordsman added
-###### upgrade(troops,"euro_spearman_2", "euro_spearman_3")
-##NTB
-###### upgrade(troops,"euro_swordsman_1", "euro_swordsman_2")
-###### upgrade(troops,"euro_swordsman_2", "euro_swordsman_3")
-###### upgrade(troops,"euro_swordsman_3", "town_man_at_arms")
-
 
 
 ###bulgaria - UH
-#######                      -> javelin1 -> javelin2
-##infantry -> spear1  -> spear2 -> spear3
-#######         -> axeman1 -> axeman2
-##
-##archer -> archer2 -> arhcer3 -> archer4
-#######       -> t.archer1 -> t.atcher2 -> t.archer4
-##horse1 -> horse2 -> horse3 -> horse4
-##REMOVE: balkan_vil_3_2_2 balkan_vil_4_2_2
-###### upgrade2(troops,"balkan_vil_1", "balkan_vil_2_1", "balkan_vil_2_2")
-###### upgrade(troops,"balkan_vil_2_1", "balkan_vil_3_1")
-###### upgrade(troops,"balkan_vil_3_1", "balkan_vil_4_1")
-###### upgrade2(troops,"balkan_vil_2_2", "balkan_vil_3_2_1", "balkan_vil_3_2_2")
-###### upgrade(troops,"balkan_vil_3_2_2", "balkan_vil_4_2_2")
-###### upgrade(troops,"balkan_vil_3_2_1", "balkan_vil_3_1_1")
-###### upgrade(troops,"balkan_vil_3_1_1", "balkan_vil_4_1_1")
-###### upgrade2(troops,"balkan_town_1", "balkan_town_2_1", "balkan_town_2_2")
-###### upgrade(troops,"balkan_town_2_1", "balkan_town_3_1")
-###### upgrade(troops,"balkan_town_3_1", "balkan_town_4_1")
-###### upgrade(troops,"balkan_town_2_2", "balkan_town_3_2")
-###### upgrade(troops,"balkan_town_3_2", "balkan_town_4_2")
-
 #infantry
 upgrade2(troops,"balkan_town_1", "balkan_town_2_1", "balkan_vil_2_2")
 upgrade2(troops,"balkan_town_2_1", "balkan_town_3_1", "balkan_vil_3_1_1")
@@ -69088,22 +64832,6 @@ upgrade(troops,"merc_sicily_horse_archer_1", "merc_sicily_horse_archer_2")
 upgrade(troops,"merc_sicily_foot_archer_1", "merc_sicily_foot_archer_2")
 upgrade(troops,"merc_sicily_infantry_1", "merc_sicily_infantry_2")
 
-#upgrade2(troops,"finnish_footman", "finnish_spearman", "finnish_archer")
-###### upgrade(troops,"goergian_horse_archer", "georgian_lancer")
-
-#finns
-####### recruit -> footman -> spearman1 -> spearman2
-#######                         -> billman1 -> billman2
-####### recruit -> skirmisher -> archer -> archer2
-#######                         -> jav
-####### noble1 -> noble2 -> noble3 -> noble4
-###### upgrade2(troops,"finn_village_recruit", "finn_footman", "finn_skirmisher")
-###### upgrade2(troops,"finn_skirmisher", "finn_jav", "finn_archer")
-###### upgrade(troops,"finn_archer", "finn_veteran_archer")
-###### upgrade2(troops,"finn_footman", "finn_spearman", "finn_billman")
-###### upgrade(troops,"finn_spearman", "finn_veteran_spearman")
-###### upgrade(troops,"finn_billman", "finn_veteran_billman")
-
 upgrade(troops,"finn_village_recruit", "finn_footman",)
 upgrade2(troops,"finn_footman", "finn_spearman", "finn_billman")
 upgrade(troops,"finn_spearman", "finn_veteran_spearman")
@@ -69116,23 +64844,8 @@ upgrade(troops,"finn_archer", "finn_veteran_archer")
 upgrade(troops,"finn_noble_1", "finn_noble_2")
 upgrade(troops,"finn_noble_2", "finn_noble_3")
 upgrade(troops,"finn_noble_3", "finn_noble_4")
+
 #mazovians
-####### village -> spear -> spear2 -> spear3
-#######            -> bill -> bill2 -> bill3
-####### recruit -> archer -> archer2 -> archer3
-#######            -> crossbow -> crossbow2
-####### horse1 -> horse2 -> horse3 -> horse4
-###### upgrade2(troops,"mazovian_village_recruit", "mazovian_spearman_1", "mazovian_archer_1")
-###### upgrade(troops,"mazovian_archer_1", "mazovian_archer_2")
-###### upgrade(troops,"mazovian_archer_2", "mazovian_archer_3")
-###### upgrade(troops,"mazovian_spearman_1", "mazovian_spearman_2")
-###### upgrade(troops,"mazovian_spearman_2", "mazovian_spearman_3")
-###### upgrade2(troops,"mazovian_town_recruit", "mazovian_guisarm_1", "mazovian_xbow_1")
-###### upgrade2(troops,"mazovian_guisarm_1", "mazovian_guisarm_2", "mazovian_swordsman_1")
-###### upgrade(troops,"mazovian_guisarm_2", "mazovian_guisarm_3")
-###### upgrade(troops,"mazovian_swordsman_1", "mazovian_swordsman_2")
-###### upgrade(troops,"mazovian_swordsman_2", "mazovian_swordsman_3")
-###### upgrade(troops,"mazovian_xbow_1", "mazovian_xbow_2")
 upgrade2(troops,"mazovian_town_recruit", "mazovian_spearman_1", "mazovian_guisarm_1")
 upgrade(troops,"mazovian_spearman_1", "mazovian_spearman_2")
 upgrade(troops,"mazovian_spearman_2", "mazovian_spearman_3")
@@ -69147,22 +64860,8 @@ upgrade(troops,"mazovian_xbow_1", "mazovian_xbow_2")
 upgrade(troops,"mazovian_horse_1", "mazovian_horse_2")
 upgrade(troops,"mazovian_horse_2", "mazovian_horse_3")
 upgrade(troops,"mazovian_horse_3", "mazovian_horse_4")
+
 #serbians
-####### recruit -> footman -> spearman -> spearman2
-#######                    -> axeman -> axeman2
-####### recruit -> archer1 -> archer2 -> archer3
-####### horse1 -> horse2 -> horse3 -> horse4
-###### upgrade2(troops,"serbian_vil_recruit", "serbian_vil_footman", "serbian_vil_skirmisher")
-###### upgrade2(troops,"serbian_vil_footman", "serbian_vil_spearman", "serbian_vil_axeman")
-###### upgrade(troops,"serbian_vil_spearman", "serbian_vil_spearman_veteran")
-###### upgrade(troops,"serbian_vil_axeman", "serbian_vil_axeman_veteran")
-###### upgrade(troops,"serbian_vil_skirmisher", "serbian_vil_archer")
-###### upgrade(troops,"serbian_vil_archer", "serbian_vil_archer_veteran")
-###### upgrade2(troops,"serbian_town_recruit", "serbian_town_swordsman", "serbian_town_skirmisher")
-###### upgrade(troops,"serbian_town_swordsman", "serbian_town_swordsman_veteran")
-###### upgrade(troops,"serbian_town_swordsman_veteran", "serbian_town_swordsman_sergeant")
-###### upgrade(troops,"serbian_town_skirmisher", "serbian_town_archer")
-###### upgrade(troops,"serbian_town_archer", "serbian_town_archer_veteran")
 upgrade(troops,"serbian_town_recruit", "serbian_vil_footman")
 upgrade2(troops,"serbian_vil_footman", "serbian_vil_spearman", "serbian_vil_axeman")
 upgrade(troops,"serbian_vil_spearman", "serbian_vil_spearman_veteran")
@@ -69177,15 +64876,8 @@ upgrade(troops,"serbian_vil_archer", "serbian_vil_archer_veteran")
 upgrade(troops,"serbian_horse_1", "serbian_horse_2")
 upgrade(troops,"serbian_horse_2", "serbian_horse_3")
 upgrade(troops,"serbian_horse_3", "serbian_horse_4")
+
 #welsh
-####### recruit ->spearman1 ->spearman2
-####### recruit -> archer1 -> archer2
-####### horse1 -> horse2 -> horse3
-
-###### upgrade2(troops,"welsh_recruit", "welsh_spearman_1", "welsh_archer_1")
-###### upgrade(troops,"welsh_spearman_1", "welsh_spearman_2")
-###### upgrade(troops,"welsh_archer_1", "welsh_archer_2")
-
 upgrade(troops,"welsh_recruit", "welsh_spearman_1")
 upgrade(troops,"welsh_spearman_1", "welsh_spearman_2")
 upgrade(troops,"welsh_archer_recruit", "welsh_archer_1")
@@ -69249,8 +64941,6 @@ upgrade(troops,"cstm_custom_troop_3_tiers_1_0_3","cstm_custom_troop_3_tiers_1_0_
 upgrade(troops,"cstm_custom_troop_3_tiers_1_1_3","cstm_custom_troop_3_tiers_1_1_4")
 upgrade(troops,"cstm_custom_troop_3_tiers_1_2_3","cstm_custom_troop_3_tiers_1_2_4")
 ################################################## CTT UPGRADE END
-
-
 
 
 ########################################### NEW MERC UPGRADES

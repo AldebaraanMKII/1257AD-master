@@ -12,5 +12,5 @@
 #
 #        Ha-ha, I wrote a short story... ;)
 
-icon_outpost = 189
-icon_fort_a = 190
+icon_outpost = 637
+icon_fort_a = 638

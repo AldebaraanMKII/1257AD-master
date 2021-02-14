@@ -635,3 +635,5 @@ icon_cwe_ibelin_knight = 633
 icon_cwe_templar_knight = 634
 icon_cwe_tevton_knight = 635
 icon_cwe_tripoli_knight = 636
+icon_outpost = 637
+icon_fort_a = 638

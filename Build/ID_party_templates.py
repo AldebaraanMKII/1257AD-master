@@ -334,3 +334,4 @@ pt_cstm_kingdom_player_3_tiers_0_reinforcements_c = 332
 pt_cstm_kingdom_player_3_tiers_1_reinforcements_a = 333
 pt_cstm_kingdom_player_3_tiers_1_reinforcements_b = 334
 pt_cstm_kingdom_player_3_tiers_1_reinforcements_c = 335
+pt_player_camp = 336
