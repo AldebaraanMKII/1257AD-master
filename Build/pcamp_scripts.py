@@ -32,7 +32,7 @@ script_patches = [
 		"game_get_party_companion_limit",
 		D_SEARCH_FROM_BOTTOM | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
 
-		(val_div, ":limit", 100), 0,
+		(val_add, ":limit", ":charisma"), 0,
 
 		[
 			(try_begin),
@@ -64,7 +64,7 @@ script_patches = [
 		"game_get_party_prisoner_limit",
 		D_SEARCH_FROM_BOTTOM | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
 
-		(store_mul, ":limit", ":skill", 5), 0,
+		(store_mul, ":limit", ":skill", "$g_party_prisoners_per_prisoner_management_point"), 0,
 
 		[
 			(try_begin),
@@ -132,7 +132,8 @@ script_patches = [
 		"game_get_troop_note",
 		D_SEARCH_FROM_TOP | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
 
-		(call_script, "script_companion_get_mission_string", ":companion"), 0,
+		# (call_script, "script_companion_get_mission_string", ":companion"), 0,
+		(str_store_string, s5, "str_in_your_party"), 0,
 
 		[
 			(else_try),

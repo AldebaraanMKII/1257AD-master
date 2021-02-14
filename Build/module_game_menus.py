@@ -5966,8 +5966,8 @@ game_menus = [ #
         (try_begin),
             (troop_get_slot, ":days_left", ":companion", slot_troop_days_on_mission),
       # rafi
-            (try_begin),
-                (troop_slot_eq, ":companion", slot_troop_traveling, 1),
+      (try_begin),
+        (troop_slot_eq, ":companion", slot_troop_traveling, 1),
         (neg | troop_slot_eq, ":companion", slot_troop_occupation, slto_player_companion),
         (assign, ":messenger_party", -1),
         (assign, ":destination", -1),
@@ -6006,12 +6006,8 @@ game_menus = [ #
         (str_store_string, s1, "str_s2_s3"),
       (try_end),
       # end rafi
-
             (troop_slot_eq, ":companion", slot_troop_occupation, slto_player_companion),
-
-
             (str_store_troop_name, s4, ":companion"),
-
             (try_begin),
                 (troop_slot_eq, ":companion", slot_troop_current_mission, npc_mission_kingsupport),
                 (str_store_string, s8, "str_gathering_support"),
@@ -6115,9 +6111,7 @@ game_menus = [ #
             (str_store_string, s2, s1),
             (str_store_string, s1, "str_s2_s3"),
             (str_clear, s7), #"no companions in service"
-
         (try_end),
-
    (try_end),
 
 

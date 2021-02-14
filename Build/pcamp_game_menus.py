@@ -17,7 +17,8 @@ init_block_patches = [
 		"companion_report",
 		D_SEARCH_FROM_BOTTOM | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
 
-		(str_store_string, s2, "str_s2_s3"), 0,
+		# (str_store_string, s2, "str_s2_s3"), 0,
+		(str_store_string, s5, "str_whereabouts_unknown"), 0,
 
 		[
 			# (else_try),

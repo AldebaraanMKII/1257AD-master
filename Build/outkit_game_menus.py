@@ -404,7 +404,7 @@ game_menus = [
              # (party_get_slot, ":fort_scene", "$current_town", slot_town_center),
 			 
 			# (call_script, "script_setup_fort_scene"),
-			# (assign, ":fort_scene", "scn_fort"),
+			 (assign, ":fort_scene", "scn_fort"),
 			 
              (modify_visitors_at_site, ":fort_scene"),
              (reset_visitors),
