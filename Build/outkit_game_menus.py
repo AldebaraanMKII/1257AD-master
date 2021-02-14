@@ -212,7 +212,7 @@ game_menus = [
 			    (set_spawn_radius, 3),
 			    (spawn_around_party, "$g_encountered_party", "pt_none"),
 			    (assign, ":outpost_patrol", reg0),
-				(party_add_members, ":outpost_patrol", "trp_watchman", 20), #ADD TROOPS HERE
+				(party_add_members, ":outpost_patrol", "trp_ee_watchman", 20), #ADD TROOPS HERE
 				(store_faction_of_party, ":fac_player", "p_main_party"),
 				(party_set_faction, ":outpost_patrol", ":fac_player"),
 			    (party_set_flags, ":outpost_patrol", pf_default_behavior, 0),
@@ -404,7 +404,7 @@ game_menus = [
              # (party_get_slot, ":fort_scene", "$current_town", slot_town_center),
 			 
 			# (call_script, "script_setup_fort_scene"),
-			(assign, ":fort_scene", "scn_fort"),
+			# (assign, ":fort_scene", "scn_fort"),
 			 
              (modify_visitors_at_site, ":fort_scene"),
              (reset_visitors),
@@ -413,17 +413,17 @@ game_menus = [
              
              # Setup merchants and guard captain
 			 # Lumos: I don't want to make new merchants, so I'll just use some old ones instead.
-             (party_get_slot, ":spawned_troop", "p_town_1", slot_town_merchant),
+             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_merchant),
              (set_visitor, 8, ":spawned_troop"),
              #(add_troop_to_site,":spawned_troop","scn_fort",4),
-             (party_get_slot, ":spawned_troop", "p_town_1", slot_town_armorer),
+             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_armorer),
              (set_visitor, 9, ":spawned_troop"),
-             (party_get_slot, ":spawned_troop", "p_town_1", slot_town_weaponsmith),
+             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_weaponsmith),
              (set_visitor, 10, ":spawned_troop"),
              # (party_get_slot, ":spawned_troop", "p_fort", slot_town_elder),
              # (set_visitor, 11, ":spawned_troop"),
 			 (set_visitor, 11, "trp_fort_captain"),
-             (party_get_slot, ":spawned_troop", "p_town_1", slot_town_horse_merchant),
+             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_horse_merchant),
              (set_visitor, 12, ":spawned_troop"),
              
              # Spawn some animated horses at the stables if we have a horse merchant

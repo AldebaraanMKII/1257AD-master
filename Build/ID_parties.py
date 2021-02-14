@@ -1010,3 +1010,6 @@ p_temp_casualties_player = 1008
 p_temp_party_1 = 1009
 p_temp_party_3 = 1010
 p_wagon_train = 1011
+p_outpost_1 = 1012
+p_outpost_2 = 1013
+p_fort = 1014

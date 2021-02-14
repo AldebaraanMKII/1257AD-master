@@ -323,8 +323,6 @@ varangian_skills     = knows_ironflesh_8| knows_power_strike_7|knows_athletics_6
 varangian_wp         = wp_one_handed(350)|wp_two_handed(350)|wp_polearm(350)|wp_archery(60)|wp_crossbow(60)|wp_throwing(250)
 
 
-
-
 ####################### LE INDOMITABLE MERCENARY
 merc_meele_skills_1    = knows_ironflesh_3|knows_power_strike_3|knows_athletics_2|knows_weapon_master_3|knows_shield_3|knows_inventory_management_10
 merc_meele_skills_2    = knows_ironflesh_5|knows_power_strike_5|knows_athletics_3|knows_weapon_master_5|knows_shield_4|knows_inventory_management_10
@@ -426,6 +424,10 @@ merc_kern_wp                = wp_one_handed(170)|wp_two_handed(60)|wp_polearm(60
 merc_veteran_kern_wp        = wp_one_handed(250)|wp_two_handed(60)|wp_polearm(60)|wp_archery(60)|wp_crossbow(60)|wp_throwing(200)
 merc_elite_kern_wp          = wp_one_handed(330)|wp_two_handed(60)|wp_polearm(60)|wp_archery(60)|wp_crossbow(60)|wp_throwing(250)
 
+
+watchman_attrib            = str_12|agi_8|int_5|cha_6
+watchman_skills            = knows_athletics_2|knows_weapon_master_3|knows_ironflesh_2|knows_power_strike_2|knows_inventory_management_10
+watchman_wp                = wp_one_handed(120)|wp_two_handed(60)|wp_polearm(60)|wp_archery(60)|wp_crossbow(120)|wp_throwing(60)
 
 
 

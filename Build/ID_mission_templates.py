@@ -57,3 +57,4 @@ mt_pagan_stronghold_attack = 55
 mt_castle_attack_walls_defenders_sally_player = 56
 mt_camp = 57
 mt_arena_tournament_fight_1vs1 = 58
+mt_fort_visit = 59

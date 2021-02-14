@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 
 import random
@@ -64536,6 +64535,51 @@ troops = [
 
  ["wagon_master", "Wagon Master", "Wagon Masters", tf_hero|tf_unmoveable_in_party_window|tf_allways_fall_dead|tf_no_capture_alive|tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse,0,0,fac_commoners, [itm_sword_type_xiv,itm_fur_coat,itm_hide_boots,itm_saddle_horse,itm_saddle_horse,itm_saddle_horse,itm_saddle_horse,itm_leather_jacket, itm_leather_cap], def_attrib|level(9),wp(100),knows_common|knows_riding_4|knows_ironflesh_3,mercenary_face_1, mercenary_face_2],
  ["wagon_possessions","{!}wagon_possessions","{!}wagon_possessions",tf_hero|tf_inactive|tf_is_merchant, 0,reserved,  fac_neutral,[],def_attrib|level(18),wp(60),knows_inventory_management_10, 0],
+
+
+################## NEW v3.5
+  ["ee_watchman",
+     "Watchman",
+     "Watchmen",
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
+    0, 0, fac_commoners,
+    [
+    # itm_raf_mail_chausses,
+    itm_tab_shield_heater_c,
+
+    # itm_hunter,
+    
+    itm_norman_coif_c,
+    itm_norman_coif_d,
+    itm_norman_coif_e,
+    itm_surcoat_a,
+    itm_surcoat_b,
+    itm_surcoat_c,
+    itm_surcoat_d,
+    itm_surcoat_e,
+    ###### itm_leather_gloves,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiv,
+    # itm_lance,
+    itm_mace_4,
+    itm_mace_3,
+    itm_mace_2,
+
+    # itm_courser,
+    
+    itm_light_crossbow,
+    itm_bolts,
+    
+    itm_raf_one_handed_axe_a
+    ],
+    watchman_attrib,
+    watchman_skills,
+    watchman_wp,
+    
+    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
+  ],
+########################################
 
 
 ####################
