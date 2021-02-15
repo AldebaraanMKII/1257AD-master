@@ -41,8 +41,7 @@ from header_skills import *
 # If you want to add a new skill, use the reserved skills or use non-hardcoded skills.
 
 skills = [
-  # ("trade", "Trade",sf_base_att_cha|sf_effects_party,10, "Every level of this skill reduces your trade penalty by 5%%. (Party skill)"),####### NEW v3.0-KOMKE
-  ("trade", "Trade",sf_base_att_int|sf_effects_party,10, "Every level of this skill reduces your trade penalty by 5%%. (Party skill)"),####### NEW v3.0-KOMKE
+  ("trade", "Trade",sf_base_att_cha|sf_effects_party,10, "Every level of this skill reduces your trade penalty by 5%%. (Party skill)"),####### NEW v3.0-KOMKE
   ("leadership", "Leadership",sf_base_att_cha,10, "Every point increases maximum number of troops you can command by 5, increases your party morale and reduces troop wages by 5%%. (Leader skill)"),
   ("prisoner_management", "Prisoner Management",sf_base_att_cha,10, "Every level of this skill increases maximum number of prisoners by %d. (Leader skill)"), 
   ("reserved_1", "Reserved Skill 1",sf_base_att_cha|sf_inactive,10, "This is a reserved skill."), 
@@ -60,8 +59,7 @@ skills = [
   ("pathfinding", "Path-finding",sf_base_att_int|sf_effects_party,10, "Party map speed is increased by 3%% per skill level. (Party skill)"), 
   ("tactics", "Tactics",sf_base_att_int|sf_effects_party,10, "Every two levels of this skill increases starting battle advantage by 1. (Party skill)"),
   ("tracking", "Tracking",sf_base_att_int|sf_effects_party,10, "Tracks become more informative. (Party skill)"),
-  # ("trainer", "Trainer",sf_base_att_int,10, "Every day, each hero with this skill adds some experience to every other member of the party whose level is lower than his/hers. Experience gained goes as: {0,4,10,16,23,30,38,46,55,65,80}. (Personal skill)"),####### NEW v3.0-KOMKE
-  ("trainer", "Trainer",sf_base_att_cha,10, "Every day, each hero with this skill adds some experience to every other member of the party whose level is lower than his/hers. Experience gained goes as: {0,4,10,16,23,30,38,46,55,65,80}. (Personal skill)"),####### NEW v3.0-KOMKE
+  ("trainer", "Trainer",sf_base_att_int,10, "Every day, each hero with this skill adds some experience to every other member of the party whose level is lower than his/hers. Experience gained goes as: {0,4,10,16,23,30,38,46,55,65,80}. (Personal skill)"),####### NEW v3.0-KOMKE
   ("reserved_5", "Reserved Skill 5",sf_base_att_int|sf_inactive,10, "This is a reserved skill."), 
   ("reserved_6", "Reserved Skill 6",sf_base_att_int|sf_inactive,10, "This is a reserved skill."), 
   ("reserved_7", "Reserved Skill 7",sf_base_att_int|sf_inactive,10, "This is a reserved skill."), 

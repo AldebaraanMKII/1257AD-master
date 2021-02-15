@@ -3949,13 +3949,6 @@ npc_cultures_end_2 = "fac_culture_player"
 ##########################################
 
 
-
-
-
-
-
-
-
 ########### NEW v3.0 - role variables
 role_none = 0
 role_adventurer = 1
@@ -3966,6 +3959,21 @@ role_prince = 5
 role_king = 6
 ######################
 
+##### NEW v3.5
+cb_vassal = 8
+cb_prince = 9
+cb_king = 10
+cb_bandit = 11
+cb_adventurer = 12
+cb_mercenary_captain = 13
+# cb_vassal = 14
+# cb_vassal = 15
+# cb_vassal = 16
+# cb_vassal = 17
+# cb_vassal = 18
+##############
+
+####################################################################################
 # modmerger_start version=201 type=1
 try:
     from util_common import logger

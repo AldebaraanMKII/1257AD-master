@@ -4720,16 +4720,6 @@ game_menus = [ #
         (str_store_string, s10, "@As the {reg3?daughter:son} of a thief, you had very little 'formal' education. Instead you were out on the street, begging until you learned how to cut purses, cutting purses until you learned how to pick locks, all the way through your childhood. Still, these long years made you streetwise and sharp to the secrets of cities and shadowy backways."),
     (jump_to_menu, "mnu_start_character_2"),
     ]),
-##    ("start_priest",[], "Priests.",[
-##      (assign, "$background_type",cb_priest),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s10, "@A {reg3?daughter:son} that nobody wanted, you were left to the church as a baby,\
-## a foundling raised by the priests and nuns to their own traditions.\
-## You were only one of many other foundlings and orphans, but you nonetheless received a lot of attention\
-## as well as many years of study in the church library and before the altar. They taught you many things.\
-## Gradually, faith became such a part of your life that it was no different from the blood coursing through your veins."),
-##    (jump_to_menu, "mnu_start_character_2"),
-##    ]),
     ("go_back",[], "Go back",
      [(jump_to_menu, "mnu_start_game_1"),
     ]),
@@ -4779,61 +4769,6 @@ game_menus = [ #
       (str_store_string,s11, "@As a {reg3?girl:boy} growing out of childhood, you rode the great steppes on a horse of your own, learning the ways of the grass and the desert. Although you sometimes went hungry, you became a skillful hunter and pathfinder in this trackless country. Your body too started to harden with muscle as you grew into the life of a nomad {reg3?woman:man}."),
     (jump_to_menu, "mnu_start_character_3"),
     ]),
-
-##      ("mummer",[], "Mummer.",[
-##      (assign, "$background_answer_2",5),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13, "@{reg3?woman:man}"),
-##      (str_store_string,s12, "@{reg3?girl:boy}"),
-##      (str_store_string,s11, "@As a {s12} growing out of childhood,\
-## you attached yourself to a troupe of wandering entertainers, going from town to town setting up mummer's\
-## shows. It was a life of hard work, selling, begging and stealing your living from the punters who flocked\
-## to watch your antics. Over time you became a performer well capable of attracting a crowd."),
-##    (jump_to_menu, "mnu_start_character_3"),
-##    ]),
-##      ("courtier",[], "Courtier.",[
-##      (assign, "$background_answer_2",6),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13, "@{reg3?woman:man}"),
-##      (str_store_string,s12, "@{reg3?girl:boy}"),
-##      (str_store_string,s11, "@As a {s12} growing out of childhood,\
-## you spent much of your life at court, inserting yourself into the tightly-knit circles of nobility.\
-## With the years you became more and more involved with the politics and intrigue demanded of a high-born {s13}.\
-## You could not afford to remain a stranger to backstabbing and political violence, even if you wanted to."),
-##    (jump_to_menu, "mnu_start_character_3"),
-##    ]),
-##      ("noble",[], "Noble in training.",[
-##      (assign, "$background_answer_2",7),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13, "@{reg3?woman:man}"),
-##      (str_store_string,s12, "@{reg3?girl:boy}"),
-##      (try_begin),
-##      (eq, "$character_gender",tf_male),
-##      (str_store_string,s11, "@As a {s12} growing out of childhood,\
-## you were trained and educated to perform the duties and wield the rights of a noble landowner.\
-## The managing of taxes and rents were equally important in your education as diplomacy and even\
-## personal defence. You learned everything you needed to become a lord of your own hall."),
-##      (else_try),
-##      (str_store_string,s11, "@As a {s12} growing out of childhood,\
-## you were trained and educated to the duties of a noble {s13}. You learned much about the household arts,\
-## but even more about diplomacy and decorum, and all the things that a future husband might choose to speak of.\
-## Truly, you became every inch as shrewd as any lord, though it would be rude to admit it aloud."),
-##      (try_end),
-##    (jump_to_menu, "mnu_start_character_3"),
-##    ]),
-##      ("acolyte",[], "Cleric acolyte.",[
-##    (assign, "$background_answer_2",8),
-##      (assign, reg3, "$character_gender"),
-##      (str_store_string,s13, "@{reg3?woman:man}"),
-##      (str_store_string,s12, "@{reg3?girl:boy}"),
-##      (str_store_string,s11, "@As a {s12} growing out of childhood,\
-## you became an acolyte in the church, the lowest rank on the way to priesthood.\
-## Years of rigorous learning and hard work followed. You were one of several acolytes,\
-## performing most of the menial labour in the church in addition to being trained for more holy tasks.\
-## On the night of your adulthood you were allowed to conduct your first service.\
-## After that you were no longer an acolyte {s12}, but a {s13} waiting to take your vows into the service of God."),
-##    (jump_to_menu, "mnu_start_character_3"),
-##    ]),
       ("go_back",[], "Go back.",
      [(jump_to_menu, "mnu_start_character_1"),
     ]),
@@ -4849,29 +4784,6 @@ game_menus = [ #
     "none",
     [(assign, reg3, "$character_gender"),],
     [
-##      ("bravo",[], "A travelling bravo.",[
-##        (assign, "$background_answer_3",1),
-##      (str_store_string,s14, "@{reg3?daughter:man}"),
-##      (str_store_string,s13, "@{reg3?woman:man}"),
-##      (str_store_string,s12, "@Though the distinction felt sudden to you,\
-## somewhere along the way you had become a {s13}, and the whole world seemed to change around you.\
-## You left your old life behind to travel the roads as a mercenary, a bravo, guarding caravans for coppers\
-## or bashing in heads for silvers. You became a {s14} of the open road, working with bandits as often as against.\
-## Going from fight to fight, you grew experienced at battle, and you learned what it was to kill."),
-##    (jump_to_menu, "mnu_start_character_4"),
-##        ]),
-##      ("merc",[], "A sellsword in foreign lands.",[
-##        (assign, "$background_answer_3",2),
-##      (str_store_string,s14, "@{reg3?daughter:man}"),
-##      (str_store_string,s13, "@{reg3?woman:man}"),
-##      (str_store_string,s12, "@Though the distinction felt sudden to you,\
-## somewhere along the way you had become a {s13}, and the whole world seemed to change around you.\
-## You signed on with a mercenary company and travelled far from your home. The life you found was rough and\
-## ready, marching to the beat of strange drums and learning unusual ways of fighting.\
-## There were men who taught you how to wield any weapon you desired, and plenty of battles to hone your skills.\
-## You were one of the charmed few who survived through every campaign in which you marched."),
-##    (jump_to_menu, "mnu_start_character_4"),
-##        ]),
 
       ("squire",[(eq, "$character_gender",tf_male)], "A squire.",[
         (assign, "$background_answer_3",cb3_squire),
@@ -4919,18 +4831,6 @@ game_menus = [ #
       (str_store_string,s12, "@Though the distinction felt sudden to you, somewhere along the way you had become a {s13}, and the whole world seemed to change around you. Dissatisfied with common men's desperate scrabble for coin, you took to your local lord's own forests and decided to help yourself to its bounty, laws be damned. You hunted stags, boars and geese and sold the precious meat under the table. You cut down trees right under the watchmen's noses and turned them into firewood that warmed many freezing homes during winter. All for a few silvers, of course."),
     (jump_to_menu, "mnu_start_character_4"),
         ]),
-##      ("preacher",[], "Itinerant preacher.",[
-##        (assign, "$background_answer_3",6),
-##      (str_store_string,s14, "@{reg3?daughter:man}"),
-##      (str_store_string,s13, "@{reg3?woman:man}"),
-##      (str_store_string,s12, "@Though the distinction felt sudden to you,\
-## somewhere along the way you had become a {s13}, and the whole world seemed to change around you.\
-## You packed your few belongings and went out into the world to spread the word of God. You preached to\
-## anyone who would listen, and impressed many with the passion of your sermons. Though you had taken a vow\
-## to remain in poverty through your itinerant years, you never lacked for food, drink or shelter; the\
-## hospitality of the peasantry was always generous to a rising {s13} of God."),
-##    (jump_to_menu, "mnu_start_character_4"),
-##        ]),
       ("go_back",[], "Go back.",
        [(jump_to_menu, "mnu_start_character_2"),
         ]
@@ -5052,107 +4952,142 @@ game_menus = [ #
           (troop_raise_skill, "trp_player", "skl_leadership", 1),
           (troop_raise_skill, "trp_player", "skl_riding", 1),
         (try_begin),
-          (eq, "$background_type", 8),
+          (eq, "$background_type", cb_king),
           (troop_raise_attribute, "trp_player", ca_strength, 10),
           (troop_raise_attribute, "trp_player", ca_intelligence, 4),
           (troop_raise_attribute, "trp_player", ca_charisma, 6),
-          (troop_raise_skill, "trp_player", 24, 6),
-          (troop_raise_skill, "trp_player", 27, 5),
-          (troop_raise_skill, "trp_player", 26, 6),
-          (troop_raise_skill, "trp_player", 15, 3),
-          (troop_raise_skill, "trp_player", 1, 3),
-          (troop_raise_skill, "trp_player", 35, 1),
-          (troop_raise_skill, "trp_player", 36, 1),
-          (troop_raise_skill, "trp_player", 27, 2),
-          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 80),
-          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 80),
-          (troop_raise_proficiency, "trp_player", wpt_polearm, 100),
-          # (troop_add_item, "trp_player", "itm_leather_gloves", 5),
-          # (troop_add_item, "trp_player", "itm_arming_cap", 5),
-          # (troop_add_item, "trp_player", "itm_noble_cloak", 5),
-          # (troop_add_item, "trp_player", "itm_tab_shield_round_a", 5),
-          
-          # (troop_add_item, "trp_player", "itm_smoked_fish", 0),
-          # (troop_add_item, "trp_player", "itm_smoked_fish", 0),
-          # (troop_add_item, "trp_player", "itm_dried_meat", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          
-          (troop_set_slot, "trp_player", 7, 800),
+          (troop_raise_skill, "trp_player", "skl_trade", 5),
+          (troop_raise_skill, "trp_player", "skl_leadership", 6),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 4),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 6),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 5),
+          (troop_raise_skill, "trp_player", "skl_tactics", 5),
+          (troop_raise_skill, "trp_player", "skl_trainer", 3),
+          (troop_raise_skill, "trp_player", "skl_looting", 3),
+          (troop_raise_skill, "trp_player", "skl_riding", 7),
+          (troop_raise_skill, "trp_player", "skl_athletics", 3),
+          (troop_raise_skill, "trp_player", "skl_shield", 4),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 5),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 6),
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 5),
+          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 120),
+          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 100),
+          (troop_raise_proficiency, "trp_player", wpt_polearm, 120),
+          # (troop_set_slot, "trp_player", 7, 800),   ###### NEW 3.5 - this is now set in the init script
           (call_script, "script_change_player_honor", 50),
           (assign, ":player_gold", 0),
           (store_random_in_range, ":player_gold", 60000, 80000),
           (troop_add_gold, "trp_player", ":player_gold"),
           (party_add_xp, "p_main_party", 10000),
         (else_try),
-          (eq, "$background_type", 9),
+          (eq, "$background_type", cb_vassal),
           (troop_raise_attribute, "trp_player", ca_strength, 8),
           (troop_raise_attribute, "trp_player", ca_intelligence, 2),
           (troop_raise_attribute, "trp_player", ca_charisma, 4),
-          (troop_raise_skill, "trp_player", 24, 4),
-          (troop_raise_skill, "trp_player", 27, 4),
-          (troop_raise_skill, "trp_player", 15, 2),
-          (troop_raise_skill, "trp_player", 1, 3),
-          (troop_raise_skill, "trp_player", 35, 1),
-          (troop_raise_skill, "trp_player", 36, 1),
-          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 50),
-          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 50),
-          (troop_raise_proficiency, "trp_player", wpt_polearm, 70),
-          # (troop_add_item, "trp_player", "itm_leather_gloves", 5),
-          # (troop_add_item, "trp_player", "itm_arming_cap", 5),
-          # (troop_add_item, "trp_player", "itm_noble_cloak", 5),
-          # (troop_add_item, "trp_player", "itm_tab_shield_round_a", 5),
-          
-          # (troop_add_item, "trp_player", "itm_smoked_fish", 0),
-          # (troop_add_item, "trp_player", "itm_dried_meat", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          
-          (troop_set_slot, "trp_player", 7, 400),
-          (call_script, "script_change_player_honor", 20),
+          (troop_raise_skill, "trp_player", "skl_trade", 3),
+          (troop_raise_skill, "trp_player", "skl_leadership", 4),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 3),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 4),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 3),
+          (troop_raise_skill, "trp_player", "skl_tactics", 3),
+          (troop_raise_skill, "trp_player", "skl_trainer", 3),
+          (troop_raise_skill, "trp_player", "skl_looting", 4),
+          (troop_raise_skill, "trp_player", "skl_riding", 5),
+          (troop_raise_skill, "trp_player", "skl_athletics", 5),
+          (troop_raise_skill, "trp_player", "skl_shield", 4),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 5),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 5),
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 80),
+          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 60),
+          (troop_raise_proficiency, "trp_player", wpt_polearm, 80),
+          # (troop_set_slot, "trp_player", 7, 400),  ###### NEW 3.5 - this is now set in the init script
+          (call_script, "script_change_player_honor", 30),
           (assign, ":player_gold", 0),
           (store_random_in_range, ":player_gold", 25000, 40000),
           (troop_add_gold, "trp_player", ":player_gold"),
           (party_add_xp, "p_main_party", 4500),
-		  
-		  
         (else_try),
-          (eq, "$background_type", 10),
+          (eq, "$background_type", cb_prince),
           (troop_raise_attribute, "trp_player", ca_strength, 8),
           (troop_raise_attribute, "trp_player", ca_intelligence, 2),
           (troop_raise_attribute, "trp_player", ca_charisma, 4),
-          (troop_raise_skill, "trp_player", 24, 5),
-          (troop_raise_skill, "trp_player", 27, 4),
-          (troop_raise_skill, "trp_player", 26, 6),
-          (troop_raise_skill, "trp_player", 15, 2),
-          (troop_raise_skill, "trp_player", 1, 3),
-          (troop_raise_skill, "trp_player", 35, 1),
-          (troop_raise_skill, "trp_player", 36, 1),
-          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 50),
-          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 50),
-          (troop_raise_proficiency, "trp_player", wpt_polearm, 70),
-          # (troop_add_item, "trp_player", "itm_leather_gloves", 5),
-          # (troop_add_item, "trp_player", "itm_arming_cap", 5),
-          # (troop_add_item, "trp_player", "itm_noble_cloak", 5),
-          # (troop_add_item, "trp_player", "itm_tab_shield_round_a", 5),
-          
-          # (troop_add_item, "trp_player", "itm_smoked_fish", 0),
-          # (troop_add_item, "trp_player", "itm_dried_meat", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          # (troop_add_item, "trp_player", "itm_bread", 0),
-          
-          (troop_set_slot, "trp_player", 7, 500),
+          (troop_raise_skill, "trp_player", "skl_trade", 4),
+          (troop_raise_skill, "trp_player", "skl_leadership", 5),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 3),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 5),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 4),
+          (troop_raise_skill, "trp_player", "skl_tactics", 4),
+          (troop_raise_skill, "trp_player", "skl_trainer", 2),
+          (troop_raise_skill, "trp_player", "skl_looting", 3),
+          (troop_raise_skill, "trp_player", "skl_riding", 6),
+          (troop_raise_skill, "trp_player", "skl_athletics", 4),
+          (troop_raise_skill, "trp_player", "skl_shield", 4),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 4),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 5),
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 100),
+          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 80),
+          (troop_raise_proficiency, "trp_player", wpt_polearm, 100),
+          # (troop_set_slot, "trp_player", 7, 500), ###### NEW 3.5 - this is now set in the init script
           (call_script, "script_change_player_honor", 20),
           (assign, ":player_gold", 0),
           (store_random_in_range, ":player_gold", 35000, 50000),
           (troop_add_gold, "trp_player", ":player_gold"),
           (party_add_xp, "p_main_party", 6000),
-		  
-		  
+########## NEW v3.0 - mercenary captain start   NEW v3.5 - moved this here
+        (try_begin),
+          (eq, "$background_type", cb_mercenary_captain),
+          (troop_raise_attribute, "trp_player", ca_strength, 6),
+          (troop_raise_attribute, "trp_player", ca_intelligence, 3),
+          (troop_raise_attribute, "trp_player", ca_charisma, 3),
+		  #############
+          (troop_raise_skill, "trp_player", "skl_trade", 2),
+          (troop_raise_skill, "trp_player", "skl_leadership", 3),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 2),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 2),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 2),
+          (troop_raise_skill, "trp_player", "skl_tactics", 2),
+          (troop_raise_skill, "trp_player", "skl_trainer", 3),
+          (troop_raise_skill, "trp_player", "skl_looting", 3),
+          (troop_raise_skill, "trp_player", "skl_riding", 3),
+          (troop_raise_skill, "trp_player", "skl_athletics", 2),
+          (troop_raise_skill, "trp_player", "skl_shield", 2),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 3),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 3),
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+		  #############
+          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 120),
+          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 90),
+          (troop_raise_proficiency, "trp_player", wpt_polearm, 90),
+          #############
+		  # (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain"),
+		  (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain", 4), ####### NEW v3.4 - fixed merc start not getting any equipment
+          #############
+		  (troop_add_item, "trp_player", "itm_smoked_fish", 0),
+          (troop_add_item, "trp_player", "itm_smoked_fish", 0),
+          (troop_add_item, "trp_player", "itm_dried_meat", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+          (troop_add_item, "trp_player", "itm_hunter", imod_heavy),
+		  #############
+          (store_random_in_range, ":random", 100, 200),
+          (troop_set_slot, "trp_player", slot_troop_renown, ":random"),  ####### NEW 3.5 - random
+          (assign, ":random", 0),
+          (store_random_in_range, ":random", 5000, 8000),
+          (troop_add_gold, "trp_player", ":random"),
+		  #############		  
+		  (call_script, "script_ee_get_closest_town", "p_main_party"),
+		  (assign, ":town", reg0),
+          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+          (party_upgrade_with_xp, "p_main_party", 6000, 0),
+          (party_upgrade_with_xp, "p_main_party", 6000, 0),
+        (try_end),
+#############################		  
+###################### vanilla starts
         (else_try),
           (eq, "$background_type", 1),
           (eq, "$character_gender", 0),
@@ -5590,57 +5525,6 @@ game_menus = [ #
           (change_screen_return, 0),
         (try_end),
         (troop_add_gold, "trp_player", 1000),
-########## NEW v3.0 - mercenary captain start
-        (try_begin),
-          (eq, "$background_type", 11),
-          (troop_raise_attribute, "trp_player", ca_strength, 6),
-          (troop_raise_attribute, "trp_player", ca_intelligence, 3),
-          (troop_raise_attribute, "trp_player", ca_charisma, 3),
-		  #############
-          (troop_raise_skill, "trp_player", "skl_trade", 2),
-          (troop_raise_skill, "trp_player", "skl_leadership", 3),
-          (troop_raise_skill, "trp_player", "skl_prisoner_management", 2),
-          (troop_raise_skill, "trp_player", "skl_persuasion", 2),
-          (troop_raise_skill, "trp_player", "skl_inventory_management", 2),
-          (troop_raise_skill, "trp_player", "skl_tactics", 2),
-          (troop_raise_skill, "trp_player", "skl_trainer", 3),
-          (troop_raise_skill, "trp_player", "skl_looting", 3),
-          (troop_raise_skill, "trp_player", "skl_riding", 3),
-          (troop_raise_skill, "trp_player", "skl_athletics", 2),
-          (troop_raise_skill, "trp_player", "skl_shield", 2),
-          (troop_raise_skill, "trp_player", "skl_weapon_master", 3),
-          (troop_raise_skill, "trp_player", "skl_power_strike", 3),
-          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
-		  #############
-          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 120),
-          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 90),
-          (troop_raise_proficiency, "trp_player", wpt_polearm, 90),
-          #############
-		  # (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain"),
-		  (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain", 4), ####### NEW v3.4 - fixed merc start not getting any equipment
-          #############
-		  (troop_add_item, "trp_player", "itm_smoked_fish", 0),
-          (troop_add_item, "trp_player", "itm_smoked_fish", 0),
-          (troop_add_item, "trp_player", "itm_dried_meat", 0),
-          (troop_add_item, "trp_player", "itm_bread", 0),
-          (troop_add_item, "trp_player", "itm_bread", 0),
-          (troop_add_item, "trp_player", "itm_bread", 0),
-          (troop_add_item, "trp_player", "itm_hunter", imod_heavy),
-		  #############
-          (troop_set_slot, "trp_player", slot_troop_renown, 100),
-          (assign, ":player_gold", 0),
-          (store_random_in_range, ":player_gold", 5000, 8000),
-          (troop_add_gold, "trp_player", ":player_gold"),
-		  #############		  
-		  (call_script, "script_ee_get_closest_town", "p_main_party"),
-		  (assign, ":town", reg0),
-          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
-          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
-          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
-          (party_upgrade_with_xp, "p_main_party", 6000, 0),
-          (party_upgrade_with_xp, "p_main_party", 6000, 0),
-        (try_end),
-#############################		  
         (try_begin),
           (gt, "$g_start_faction", 0),
           (try_begin),
@@ -33846,6 +33730,17 @@ game_menus = [ #
        # (display_message, "@{s2} face key is {s1}"),  
        (troop_set_face_keys, "trp_kingdom_9_lord", ":random", 0),  
        (troop_set_face_keys, "trp_kingdom_9_lord", ":random", 1),  
+	   ]),
+	   ####################################### NEW 3.5
+       ("debug_options_new_11",[], "Test marshall elections for current player faction.",
+	   [
+         (try_for_range, ":cur_lord", lords_begin, lords_end),
+           (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
+             (store_troop_faction, ":cur_faction", ":cur_lord"),
+             (eq, ":cur_faction", "$players_kingdom"),
+               (troop_set_slot, ":cur_lord",  slot_troop_controversy, 100),
+         (try_end),
+         (call_script, "script_decide_faction_ai", "$players_kingdom"),
 	   ]),
 	   #######################################
 	   

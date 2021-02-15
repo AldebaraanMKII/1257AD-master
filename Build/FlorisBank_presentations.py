@@ -692,19 +692,6 @@ presentations = [
       [
 	    (presentation_set_duration, 999999),
         (set_fixed_point_multiplier, 1000),
-		
-#		(str_clear, s0),
- #       (create_text_overlay, reg0, "@Hello, {s0}", tf_scrollable),
- #       (position_set_x, pos1, 50),
-  #      (position_set_y, pos1, 50),
- ###       (overlay_set_position, reg0, pos1),
- #       (position_set_x, pos1, 550),
- #       (position_set_y, pos1, 630),
-  #      (overlay_set_area_size, reg0, pos1),
- #       (set_container_overlay, reg0),
-		
-
-		
 
 		###HEADLINES###
 		(assign, ":x_poshl", 155),
@@ -721,13 +708,13 @@ presentations = [
 		
         (create_text_overlay, reg1, "@Acres", tf_center_justify),
        	(overlay_set_size, reg1, ":jq_size"),
-		(val_add, ":x_poshl", 80),
+		(val_add, ":x_poshl", 65),
  		(position_set_x, pos1, ":x_poshl"),
         (overlay_set_position, reg1, pos1),	
 
         (create_text_overlay, reg1, "@Owned", tf_center_justify),
        	(overlay_set_size, reg1, ":jq_size"),
-		(val_add, ":x_poshl", 44),
+		(val_add, ":x_poshl", 50),
  		(position_set_x, pos1, ":x_poshl"),
         (overlay_set_position, reg1, pos1),
 		
