@@ -1,7 +1,3 @@
- #script_game_get_troop_note
-  # This script is called from the game engine when the notes of a troop is needed.
-  # INPUT: arg1 = troop_no, arg2 = note_index
-  # OUTPUT: s0 = note
   ("game_get_troop_note",
     [
       (store_script_param_1, ":troop_no"),
@@ -227,6 +223,15 @@
             (eq, ":faction_leader", ":troop_no"),
             (assign, ":troop_is_faction_leader", 1),
           (try_end),
+		  ########### NEW v3.5
+          #SB: add marshal check
+          (try_begin),
+            (faction_slot_eq, ":troop_faction", slot_faction_marshall, ":troop_no"),
+            (assign, ":troop_is_marshal", 1),
+          (else_try),
+            (assign, ":troop_is_marshal", 0),
+          (try_end),
+		  #################################
           (assign, ":num_centers", 0),
           (str_store_string, s58, "@nowhere"),
           (try_for_range_backwards, ":cur_center", centers_begin, centers_end),
@@ -257,14 +262,12 @@
           (troop_get_type, reg3, ":troop_no"),
           (troop_get_slot, reg5, ":troop_no", slot_troop_renown),
           (assign, reg4, ":troop_is_faction_leader"),
+          (assign, reg5, ":troop_is_marshal"), ######## NEW v3.5
           (assign, reg6, ":troop_is_player_faction"),
           
           (troop_get_slot, reg17, ":troop_no", slot_troop_wealth), #DEBUGS
 ######################### NEW v2.1 - extra information
-####### NEW v2.9-KOMKE START-
-          # (str_clear, s68),
-          # (try_begin),
-          #   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),     
+####### NEW v2.9-KOMKE START-   
           (str_clear, s53),##KOMKE reputation string is stored in s53 because s68 didn't work
           (try_begin),
             (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),

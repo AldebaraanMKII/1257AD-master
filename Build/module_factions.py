@@ -1,5 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
 from header_factions import *
+# from compiler import *
 
 
 ####################################################################################################################
@@ -831,11 +832,6 @@ factions = [
 ###############################
 # modmerger_start version=201 type=4
 
-##diplomacy start+ Define these for convenience
-dplmc_factions_begin = 1 #As mentioned in the notes above, this is hardcoded and shouldn't be altered.  Deliberately excludes "no faction".
-dplmc_non_generic_factions_begin = [x[0] for x in enumerate(factions) if x[1][0] == "merchants"][0] + 1
-dplmc_factions_end   = len(factions)
-##diplomacy end+
 
 try:
     component_name = "factions"
