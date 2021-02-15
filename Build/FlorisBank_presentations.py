@@ -721,13 +721,13 @@ presentations = [
 		
         (create_text_overlay, reg1, "@Acres", tf_center_justify),
        	(overlay_set_size, reg1, ":jq_size"),
-		(val_add, ":x_poshl", 60),
+		(val_add, ":x_poshl", 80),
  		(position_set_x, pos1, ":x_poshl"),
         (overlay_set_position, reg1, pos1),	
 
         (create_text_overlay, reg1, "@Owned", tf_center_justify),
        	(overlay_set_size, reg1, ":jq_size"),
-		(val_add, ":x_poshl", 54),
+		(val_add, ":x_poshl", 44),
  		(position_set_x, pos1, ":x_poshl"),
         (overlay_set_position, reg1, pos1),
 		
