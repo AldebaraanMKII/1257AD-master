@@ -15080,11 +15080,19 @@ game_menus = [ #
     ## CC
        ("ee_recruits_garrison_options_1",
         [
-         (party_slot_eq, "$current_town",slot_party_type, spt_town),
-         (party_slot_eq, "$current_town",slot_party_type, spt_castle),
-		   (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
+         (this_or_next|party_slot_eq, "$current_town", slot_party_type, spt_town),
+         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+         (assign, ":ok", 0),
+		 (store_faction_of_party, ":castle_faction", "$current_town"),
+		 (try_begin),
+           (eq, ":castle_faction", "$players_kingdom"),
+             (assign, ":ok", 1),
+		 (else_try),
            (store_relation, ":relation", ":castle_faction", "$players_kingdom"),
            (gt, ":relation", -5),
+             (assign, ":ok", 1),
+		 (try_end),
+         (eq, ":ok", 1),
         ],
          "Recruit and garrison options.",
          [
@@ -24994,11 +25002,13 @@ game_menus = [ #
      ], "Go back",
      [
        (try_begin),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_town"),
-       (else_try),
+         (this_or_next|party_slot_eq, "$current_town", slot_party_type, spt_town),
          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
-         (jump_to_menu, "mnu_town"),
+         # (jump_to_menu, "mnu_town"),
+         (jump_to_menu, "mnu_ee_recruits_garrison_options"), ######## NEW v3.5
+       # (else_try),
+         # (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+         # (jump_to_menu, "mnu_town"),
        (else_try),
          (jump_to_menu, "mnu_village"),
        (try_end),
@@ -25696,7 +25706,8 @@ game_menus = [ #
      ], "Go back.",
      [
        # (jump_to_menu, "mnu_town"),
-       (jump_to_menu, "mnu_ee_center_manage"),  #### NEW v2.4
+       # (jump_to_menu, "mnu_ee_center_manage"),  #### NEW v2.4
+       (jump_to_menu, "mnu_ee_recruits_garrison_options"),  #### NEW v3.5
      ]),
    ]
   ),
