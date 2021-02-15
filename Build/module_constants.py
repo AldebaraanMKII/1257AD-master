@@ -3919,7 +3919,8 @@ dplmc_treaty_defense_days_half_done = (dplmc_treaty_defense_days_initial + dplmc
 dplmc_treaty_alliance_days_half_done = (dplmc_treaty_alliance_days_initial + dplmc_treaty_alliance_days_expire) // 2
 
 ##diplomacy end+
-
+######## NEW 3.5
+dplmc_slot_troop_affiliated                   = 165 ##notes: 0 is default, 1 is asked; on newer games 3 is affiliated and 4 is betrayed
 #########################################################
 
 

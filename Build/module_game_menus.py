@@ -9367,10 +9367,10 @@ game_menus = [ #
             (eq, ":random_attribute", ca_agility),
             (str_store_string, s0, "@You took a nasty wound which will cause you to limp slightly even after it heals. You lose 1 agility."),
 ##          (else_try),
-##            (eq, ":random_attribute", ca_charisma),
-##            (str_store_string, s0, "@After the battle you are aghast to find that one of the terrible blows you suffered has left a deep, disfiguring scar on your face, horrifying those around you. Your charisma is reduced by 1."),
+            ###(eq, ":random_attribute", ca_charisma),
+            ###(str_store_string, s0, "@After the battle you are aghast to find that one of the terrible blows you suffered has left a deep, disfiguring scar on your face, horrifying those around you. Your charisma is reduced by 1."),
           (else_try),
-##            (eq, ":random_attribute", ca_intelligence),
+            ###(eq, ":random_attribute", ca_intelligence),
             (str_store_string, s0, "@You have trouble thinking straight after the battle, perhaps from a particularly hard hit to your head, and frequent headaches now plague your existence. Your intelligence is reduced by 1."),
           (try_end),
         (else_try),
@@ -11647,14 +11647,14 @@ game_menus = [ #
 ##          (assign, ":num_enemy_regulars_remaining", reg(0)),
 ##          (assign, ":enemy_finished",0),
 ##          (try_begin),
-##            (eq, "$g_battle_result", 1),
-##            (eq, ":num_enemy_regulars_remaining", 0), #battle won
-##            (assign, ":enemy_finished",1),
+            ###(eq, "$g_battle_result", 1),
+            ###(eq, ":num_enemy_regulars_remaining", 0), #battle won
+            ###(assign, ":enemy_finished",1),
 ##          (else_try),
-##            (eq, "$g_engaged_enemy", 1),
-##            (le, "$g_enemy_fit_for_battle",0),
-##            (ge, "$g_friend_fit_for_battle",1),
-##            (assign, ":enemy_finished",1),
+            ###(eq, "$g_engaged_enemy", 1),
+            ###(le, "$g_enemy_fit_for_battle",0),
+            ###(ge, "$g_friend_fit_for_battle",1),
+            ###(assign, ":enemy_finished",1),
 ##          (try_end),
 ##          (this_or_next|eq, ":enemy_finished",1),
 ##          (eq, "$g_enemy_surrenders",1),
@@ -11664,8 +11664,8 @@ game_menus = [ #
 ##        (else_try),
 ##          (assign, ":battle_lost", 0),
 ##          (try_begin),
-##            (eq, "$g_battle_result", -1),
-##            (assign, ":battle_lost",1),
+            ###(eq, "$g_battle_result", -1),
+            ###(assign, ":battle_lost",1),
 ##          (try_end),
 ##          (this_or_next|eq, ":battle_lost",1),
 ##          (eq, "$g_player_surrenders",1),
@@ -11676,12 +11676,12 @@ game_menus = [ #
 ##    # Ordinary victory.
 ##          (try_begin),
 ##          #check whether enemy retreats
-##            (eq, "$g_battle_result", 1),
-##            (store_mul, ":min_enemy_str", "$g_enemy_fit_for_battle", 2),
-##            (lt, ":min_enemy_str", "$g_friend_fit_for_battle"),
-##            (party_set_slot, "$g_enemy_party", slot_party_retreat_flag, 1),
+            ###(eq, "$g_battle_result", 1),
+            ###(store_mul, ":min_enemy_str", "$g_enemy_fit_for_battle", 2),
+            ###(lt, ":min_enemy_str", "$g_friend_fit_for_battle"),
+            ###(party_set_slot, "$g_enemy_party", slot_party_retreat_flag, 1),
 ##
-##            (try_for_range, ":troop_no", kingdom_heroes_begin, kingdom_heroes_end),
+            ###(try_for_range, ":troop_no", kingdom_heroes_begin, kingdom_heroes_end),
 ##              (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
 ##              (troop_slot_eq, ":troop_no", slot_troop_is_prisoner, 0),
 ##              (troop_get_slot, ":party_no", ":troop_no", slot_troop_leaded_party),
@@ -11691,9 +11691,9 @@ game_menus = [ #
 ##              (party_slot_eq, ":party_no", slot_party_ai_substate, 1),
 ##              (call_script, "script_party_set_ai_state", ":party_no", spai_undefined, -1),
 ##              (call_script, "script_party_set_ai_state", ":party_no", spai_besieging_center, ":center_no"),
-##            (try_end),
-##            (display_message, "@{!}TODO: Enemy retreated. The assault has ended, siege continues."),
-##            (change_screen_return),
+            ###(try_end),
+            ###(display_message, "@{!}TODO: Enemy retreated. The assault has ended, siege continues."),
+            ###(change_screen_return),
 ##          (try_end),
 ####          (assign, "$g_center_under_siege_battle", 0),
 ##        (try_end),
@@ -11759,8 +11759,8 @@ game_menus = [ #
             (try_begin),
             #check whether enemy retreats
               (eq, "$g_battle_result", 1),
-  ##            (store_mul, ":min_enemy_str", "$g_enemy_fit_for_battle", 2),
-  ##            (lt, ":min_enemy_str", "$g_friend_fit_for_battle"),
+              ###(store_mul, ":min_enemy_str", "$g_enemy_fit_for_battle", 2),
+              ###(lt, ":min_enemy_str", "$g_friend_fit_for_battle"),
               (assign, ":attackers_retreat", 1),
             (else_try),
               (eq, "$g_battle_result", 0),
@@ -13182,55 +13182,6 @@ game_menus = [ #
        "Build a manor house.",[(assign, "$g_improvement_type", slot_center_has_manor),
                          (jump_to_menu, "mnu_center_improve"),]),
                          
-      # rafi
-      # ("center_build_castle_1",[(eq, reg6, 0),
-                             # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                             # (party_slot_eq, "$g_encountered_party", slot_center_has_manor, 1),
-                             # (neg | party_is_active, "p_castle_player"),
-                                  # ],
-       # "Fortify your manor house.",[(assign, "$g_improvement_type", slot_party_temp_slot_1),
-                         # (jump_to_menu, "mnu_center_improve"),]),
-      # rafi
-      
-      #tom
-      # ("center_build_temple",[(eq, reg6, 0),
-                                 # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                 # (party_slot_eq, "$g_encountered_party", slot_center_has_temple, 0),
-                                  # ],
-       # "Build a temple.",[(assign, "$g_improvement_type", slot_center_has_temple),
-                             # (jump_to_menu, "mnu_center_improve"),]),
-      # ("center_build_weaponsmith",[(eq, reg6, 0),
-                                 # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                 # (party_slot_eq, "$g_encountered_party", slot_center_has_weaponsmith, 0),
-                                  # ],
-       # "Build a weapon smithy.",[(assign, "$g_improvement_type", slot_center_has_weaponsmith),
-                             # (jump_to_menu, "mnu_center_improve"),]),
-                             
-      # ("center_build_armorsmith",[(eq, reg6, 0),
-                                 # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                 # (party_slot_eq, "$g_encountered_party", slot_center_has_armorsmith, 0),
-                                  # ],
-       # "Build a armor smithy.",[(assign, "$g_improvement_type", slot_center_has_armorsmith),
-                             # (jump_to_menu, "mnu_center_improve"),]),
-      # ("center_build_stable",[(eq, reg6, 0),
-                                 # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                 # (party_slot_eq, "$g_encountered_party", slot_center_has_stable, 0),
-                                  # ],
-       # "Build a stable.",[(assign, "$g_improvement_type", slot_center_has_stable),
-                             # (jump_to_menu, "mnu_center_improve"),]),
-      # ("center_build_tavern",[(eq, reg6, 0),
-                                 # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                 # (party_slot_eq, "$g_encountered_party", slot_center_has_tavern, 0),
-                                  # ],
-       # "Build a tavern.",[(assign, "$g_improvement_type", slot_center_has_tavern),
-                             # (jump_to_menu, "mnu_center_improve"),]),
-      # ("center_build_market",[(eq, reg6, 0),
-                                 # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                 # (party_slot_eq, "$g_encountered_party", slot_center_has_market, 0),
-                                  # ],
-       # "Build a market.",[(assign, "$g_improvement_type", slot_center_has_market),
-                             # (jump_to_menu, "mnu_center_improve"),]),
-      #tom
       ("center_build_fish_pond",[(eq, reg6, 0),
                                  (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                                  (party_slot_eq, "$g_encountered_party", slot_center_has_fish_pond, 0),
@@ -13285,13 +13236,6 @@ game_menus = [ #
        "Improve the fortifications.",[(assign, "$g_improvement_type", slot_center_has_fortifications_2),
                                   (jump_to_menu, "mnu_center_improve"),]),
       # rafi
-
-      
-      
-      
-      
-      
-      
       
 #################################################### NEW IMPROVEMENTS
 
@@ -13315,9 +13259,7 @@ game_menus = [ #
        # "Build military improvements.",[(jump_to_menu, "mnu_improvement_military_select"),]),
       
 ####################################################
-      
-      
-
+     
       
       ("go_back_dot",[], "Go back.",[(jump_to_menu, "$g_next_menu")]),
     ],
@@ -14043,7 +13985,7 @@ game_menus = [ #
     [],
   ),
 
-   ("town",mnf_enable_hot_keys|mnf_scale_picture,
+  ("town",mnf_enable_hot_keys|mnf_scale_picture,
     "{s10} {s14}^{s11}{s12}{s13}",
     "none",
     [
@@ -14115,9 +14057,6 @@ game_menus = [ #
         (try_end),
 
         (try_begin),
-##          (eq, "$g_center_under_siege_battle", 1),
-##          (jump_to_menu, "mnu_siege_started_defender"),
-##        (else_try),
           (eq, "$g_town_assess_trade_goods_after_rest", 1),
           (assign, "$g_town_assess_trade_goods_after_rest", 0),
           (jump_to_menu, "mnu_town_trade_assessment"),
@@ -14162,7 +14101,7 @@ game_menus = [ #
             (display_message, "@{!}DEBUG -- Prosperity: {reg4}"),
           (try_end),
 
-     #          (val_add, ":prosperity", 5),
+          #    (val_add, ":prosperity", 5),
           (store_div, ":str_id", ":prosperity", 10),
           (val_min, ":str_id", 9),
           (val_add, ":str_id", "str_town_prosperity_0"),
@@ -14193,7 +14132,7 @@ game_menus = [ #
             (ge, ":center_lord", 0),
             (str_store_string,s11, "@ You see the banner of {s7} over the castle gate."),
           (else_try),
-##            (str_store_string,s11, "@ This castle seems to belong to no one."),
+            ###(str_store_string,s11, "@ This castle seems to belong to no one."),
             (str_store_string,s11, "@ This castle has no garrison."),
           (try_end),
         (else_try),
@@ -14208,7 +14147,7 @@ game_menus = [ #
             (ge, ":center_lord", 0),
             (str_store_string,s11, "@ You see the banner of {s7} over the town gates."),
           (else_try),
-##            (str_store_string,s11, "@ The townsfolk here have declared their independence."),
+            ###(str_store_string,s11, "@ The townsfolk here have declared their independence."),
             (str_store_string,s11, "@ This town has no garrison."),
           (try_end),
         (try_end),
@@ -14261,29 +14200,9 @@ game_menus = [ #
 
         ##TOM - new
         (call_script, "script_set_town_picture"),
-        # (call_script, "script_get_settlement_mesh", "$current_town"),
-        # (try_begin),
-          # (party_slot_eq, "$current_town",slot_party_type, spt_castle),
-          # (set_background_mesh, reg1),
-        # (else_try),
-          # (set_background_mesh, reg2),
-        # (try_end),
-        
-        
-#        (str_clear, s5), #alert player that there are new rumors
-#        (try_begin),
-#            (eq, 1, 0),
-#            (neg|is_currently_night),
-#            (str_store_string, s5, "@^The buzz of excited voices as you come near the gate suggests to you that news of some import is circulating among the townsfolk."),
-#            (lt, "$last_town_log_entry_checked", "$num_log_entries"),
-#            (assign, "$g_town_rumor_log_entry", 0),
-#            (try_for_range, ":log_entry", "$last_town_log_entry_checked", "$num_log_entries"),
-#                (eq, ":log_entry", 4123), #placeholder to avoid having unused variable error message
-#            (try_end),
-#            (assign, "$last_town_log_entry_checked", "$num_log_entries"),
-#        (try_end),
         ],
     [
+########################################
       ("castle_castle",
       [
         (party_slot_eq, "$current_town",slot_party_type, spt_castle),
@@ -14323,7 +14242,7 @@ game_menus = [ #
              (call_script, "script_enter_court", "$current_town"),
            (try_end),
         ], "Door to the castle."),
-
+########################################
       ("join_tournament", 
       [
         (neg|is_currently_night),
@@ -14343,7 +14262,7 @@ game_menus = [ #
            #(jump_to_menu, "mnu_town_tournament"),
            (jump_to_menu, "mnu_town_tournament_start_new"),
         ]),
-
+########################################
       ("town_castle",[
           (party_slot_eq, "$current_town",slot_party_type, spt_town),
           (eq, "$entry_to_town_forbidden",0),
@@ -14381,7 +14300,7 @@ game_menus = [ #
              (call_script, "script_enter_court", "$current_town"),
            (try_end),
         ], "Door to the castle."),
-
+########################################
       ("town_center",
       [
         (party_slot_eq, "$current_town", slot_party_type, spt_town),
@@ -14462,12 +14381,6 @@ game_menus = [ #
              (faction_get_slot, ":troop_castle_guard", "$g_encountered_party_faction", slot_faction_castle_guard_troop),
              (faction_get_slot, ":tier_2_troop", ":town_faction", slot_faction_tier_2_troop),
              (faction_get_slot, ":tier_3_troop", ":town_faction", slot_faction_tier_3_troop),
-           # (else_try),
-             # (party_get_slot, ":town_original_faction", "$current_town", slot_center_original_faction),
-             # (faction_get_slot, ":troop_prison_guard", ":town_original_faction", slot_faction_prison_guard_troop),
-             # (faction_get_slot, ":troop_castle_guard", ":town_original_faction", slot_faction_castle_guard_troop),
-             # (faction_get_slot, ":tier_2_troop", ":town_original_faction", slot_faction_tier_2_troop),
-             # (faction_get_slot, ":tier_3_troop", ":town_original_faction", slot_faction_tier_3_troop),
            (try_end),
              (try_begin), #think about this, should castle guard have to go nearby fire too? If he do not go, killing 2 armored guard is too hard for player. For now he goes too.
                #if guards have not gone to some other important happening at nearby villages, then spawn 4 guards. (example : fire)
@@ -14540,10 +14453,7 @@ game_menus = [ #
          (try_end),
          (call_script, "script_ee_set_town_troop_names"),
       ], "Door to the town center."),
-
-
-
-
+########################################
       ("town_tavern",[
           (party_slot_eq, "$current_town",slot_party_type, spt_town),
           (this_or_next|eq, "$entry_to_town_forbidden",0),
@@ -14788,137 +14698,6 @@ game_menus = [ #
                  (assign, ":end_cond", 0),
                (try_end),
              (try_end),
-
-             # (try_begin),
-               # (eq, "$g_starting_town", "$current_town"),
-
-               # (this_or_next|neg|check_quest_finished, "qst_collect_men"),
-               # (this_or_next|neg|check_quest_finished, "qst_learn_where_merchant_brother_is"),
-               # (this_or_next|neg|check_quest_finished, "qst_save_relative_of_merchant"),
-               # (this_or_next|neg|check_quest_finished, "qst_save_town_from_bandits"),
-               # (eq,  "$g_do_one_more_meeting_with_merchant", 1),
-
-               # (assign, ":troop_of_merchant", 0),
-               # (try_begin),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_1"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_1"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_2"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_3"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_3"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_4"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_4"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_5"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_5"),
-               # (else_try),
-                 # (this_or_next|eq, "$g_encountered_party_faction", "fac_kingdom_42"),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_6"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_6"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_7"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_7"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_8"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_8"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_9"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_9"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_10"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_10"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_11"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_11"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_12"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_12"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_13"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_13"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_14"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_14"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_15"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_15"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_16"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_16"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_17"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_17"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_18"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_18"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_19"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_19"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_20"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_20"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_papacy"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_21"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_22"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_22"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_23"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_23"),
-               # (else_try),
-                 # (this_or_next|eq, "$g_encountered_party_faction", "fac_kingdom_24"),
-                 # (this_or_next|eq, "$g_encountered_party_faction", "fac_kingdom_38"),
-                 # (this_or_next|eq, "$g_encountered_party_faction", "fac_kingdom_39"),
-                 # (this_or_next|eq, "$g_encountered_party_faction", "fac_kingdom_40"),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_41"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_24"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_25"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_25"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_25"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_26"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_26"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_27"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_27"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_28"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_28"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_29"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_29"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_30"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_30"),
-               # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_31"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_31"),
-              # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_32"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_32"),    
-              # (else_try),
-                 # (this_or_next| eq, "$g_encountered_party_faction", "fac_kingdom_34"),
-                 # (this_or_next| eq, "$g_encountered_party_faction", "fac_kingdom_35"),
-                 # (this_or_next| eq, "$g_encountered_party_faction", "fac_kingdom_36"),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_33"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_2"),    
-              # (else_try),
-                 # (eq, "$g_encountered_party_faction", "fac_kingdom_37"),
-                 # (assign, ":troop_of_merchant", "trp_merchant_kingdom_37"),    
-               # (try_end),
-               # (gt, ":troop_of_merchant", 0),
-
-               # (set_visitor, ":cur_entry", ":troop_of_merchant"),
-               # (val_add, ":cur_entry", 1),
-             # (try_end),
-			 
 ############################ NEW v2.1 - tavern townspeople 
             #dedal begin
             (party_get_slot, ":center_faction", "$current_town", slot_center_original_faction), #dckplmc - tavern patrons same culture as town
@@ -14944,19 +14723,7 @@ game_menus = [ #
              (change_screen_mission),
            (try_end),
         ], "Door to the tavern."),
-
-#      ("town_smithy",[
-#          (eq, "$entry_to_town_forbidden",0),
-#          (eq, "$town_nighttime",0),
-#          ],
-#       "Visit the smithy.",
-#       [
-#           (set_jump_mission, "mt_town_default"),
-#           (jump_to_scene, "$pout_scn_smithy"),
-#           (change_screen_mission,0),
-#        ]),
-
-
+########################################
       ("town_merchant",
        [(party_slot_eq, "$current_town",slot_party_type, spt_town),
            (eq, 1, 0),
@@ -14994,7 +14761,7 @@ game_menus = [ #
              (change_screen_mission),
            (try_end),
         ], "Door to the shop."),
-
+########################################
       ("town_arena",
        [(party_slot_eq, "$current_town",slot_party_type, spt_town),
         (eq, "$sneaked_into_town", 0),
@@ -15042,7 +14809,7 @@ game_menus = [ #
              (change_screen_mission),
            (try_end),
         ], "Door to the arena."),
-        
+########################################
       ("town_dungeon",
        [
 	   ######## NEW v3.1 - player can enter the prison from the town menu
@@ -15084,7 +14851,7 @@ game_menus = [ #
              (display_message, "str_door_locked",0xFFFFAAAA),
            (try_end),
         ], "Door to the dungeon."),
-
+########################################
       ("castle_inspect",
       [
          (party_slot_eq, "$current_town",slot_party_type, spt_castle),
@@ -15197,7 +14964,7 @@ game_menus = [ #
            (change_screen_mission),
          (try_end),
         ], "To the castle courtyard."),
-
+########################################
     # rafi player sally out
       ("castle_player_sally_out",
         [
@@ -15228,19 +14995,8 @@ game_menus = [ #
           (leave_encounter),
           (change_screen_return),          
         ]),
+########################################
     # end rafi
-    #tom
-    # ("town_property",
-      # [
-        # # (eq, 0, 1),        
-        # (party_slot_eq, "$current_town", slot_party_type, spt_town),
-      # ],
-      # "Fief properties",
-      # [
-         # (jump_to_menu, "mnu_inspect_property"),
-      # ]
-    # ),
-    #tom    
      ("town_enterprise",
       [
         (party_slot_eq, "$current_town",slot_party_type, spt_town),
@@ -15292,11 +15048,7 @@ game_menus = [ #
         (jump_to_scene, ":enterprise_scene"),
         (change_screen_mission),
       ], "Door to your enterprise."),
-
-    
-        
-        
-        
+########################################
     ## CC
       ("meet_with_guild_master",
        [
@@ -15310,6 +15062,7 @@ game_menus = [ #
              (call_script, "script_start_town_conversation", slot_town_elder, 11),
            (try_end),
           ]),
+########################################
     ## CC
       ("trade_with_merchants",
        [
@@ -15323,8 +15076,21 @@ game_menus = [ #
              (jump_to_menu, "mnu_town_trade"),
            (try_end),
           ]),
-
-
+############### NEW v3.5
+    ## CC
+       ("ee_recruits_garrison_options_1",
+        [
+         (party_slot_eq, "$current_town",slot_party_type, spt_town),
+         (party_slot_eq, "$current_town",slot_party_type, spt_castle),
+		   (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
+           (store_relation, ":relation", ":castle_faction", "$players_kingdom"),
+           (gt, ":relation", -5),
+        ],
+         "Recruit and garrison options.",
+         [
+         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+       ]),
+########################################
       ("walled_center_manage",
       [
 ####### NEW v3.0-KOMKE below line commented out because it was blocking access to garrison while center is under siege
@@ -15341,12 +15107,7 @@ game_menus = [ #
            (assign, "$g_next_menu", "mnu_town"),
            (jump_to_menu, "mnu_ee_center_manage"),
        ]),
-
-
-
-      
-        #tom
-
+########################################
       ("castle_wait",
        [
         #(party_slot_eq, "$current_town",slot_party_type, spt_castle),
@@ -15393,50 +15154,9 @@ game_menus = [ #
            (rest_for_hours_interactive, 24 * 30, 3, 0), #rafi slow this down
            (change_screen_return),
           ]),
+########################################
 
-    # recruitment
-      ("recruit_volunteers",
-      [
-        (call_script, "script_cf_town_recruit_volunteers_cond"),
-        #tom
-        (assign, ":continue", 0),
-        (try_begin),
-          (eq, "$use_feudal_lance", 1),
-          (assign, ":continue", 1),
-          # (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
-          #(eq, ":town_lord", "trp_player"),
-          (assign, ":continue", 0),
-        (try_end),
-        (eq, ":continue", 0),
-        #tom
-      ]
-       , "Recruit Volunteers.",
-       [
-         (try_begin),
-           (call_script, "script_cf_enter_center_location_bandit_check"),
-         (else_try),
-           (eq, "$use_feudal_lance", 0),
-           (jump_to_menu, "mnu_recruit_volunteers"),
-         (else_try),
-           (eq, "$use_feudal_lance", 1),
-           (jump_to_menu, "mnu_lance_recruitment"),
-         (try_end),
-        ]),
-      # recruitment end
-#retinue
-   ("recruit_specialists",
-       [
-          #only in towns:
-          (is_between, "$current_town", towns_begin, towns_end),
-        ],
-       "Recruit mercenary companions.",
-       [
-            (start_presentation, "prsnt_recruit_npc"),
-        ]),
-        
-
-
-
+########################################
       ("collect_taxes_qst",
       [
         (check_quest_active, "qst_collect_taxes"),
@@ -15450,10 +15170,7 @@ game_menus = [ #
       [
         (jump_to_menu, "mnu_collect_taxes"),
       ]),
-
-
-
-
+########################################
       ("debug_town_cheat_menus",
       [
         (eq, "$cheat_mode", 1),
@@ -15462,8 +15179,7 @@ game_menus = [ #
       [
         (jump_to_menu, "mnu_town_cheat_menus"),
       ]),
-
-      
+########################################
       ("fief_misc_options_menus",
       [
       ],
@@ -15471,24 +15187,17 @@ game_menus = [ #
       [
         (jump_to_menu, "mnu_fief_misc_options"),
       ]),
-
-
-
-
+########################################
      ("town_leave",[], "Leave...",
       [
         (assign, "$g_permitted_to_center",0),
         # (change_screen_return,0),
         (change_screen_return),
       ], "Leave Area."),
-      
-
-      
-      
-      
+########################################
     ]
-   ),
-
+  ),
+################################################################################
 
 
    ("cannot_enter_court",0,
@@ -33269,73 +32978,6 @@ game_menus = [ #
            (jump_to_menu, "mnu_establish_court"),
         ]),
 		
-		
-     ("castle_station_troops",
-      [
-          (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
-          (str_clear, s10),
-
-          (assign, ":player_can_draw_from_garrison", 0),
-          (try_begin), #option 1 - player is town lord
-            (eq, ":town_lord", "trp_player"),
-            (assign, ":player_can_draw_from_garrison", 1),
-          (else_try), #option 2 - town is unassigned and part of the player faction
-            (store_faction_of_party, ":faction", "$g_encountered_party"),
-            # (eq, ":faction", "fac_player_supporters_faction"),
-            (eq, ":faction", "$players_kingdom"), ######## NEW v3.3
-            (neg|party_slot_ge, "$g_encountered_party", slot_town_lord, active_npcs_begin), #ie, zero or -1
-            (assign, ":player_can_draw_from_garrison", 1),
-          (else_try), #option 3 - town was captured by player
-            (lt, ":town_lord", 0), #ie, unassigned
-            (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
-            (eq, "$players_kingdom", ":castle_faction"),
-            (eq, "$g_encountered_party", "$g_castle_requested_by_player"),
-            (str_store_string, s10, "str_retrieve_garrison_warning"),
-            (assign, ":player_can_draw_from_garrison", 1),
-          (else_try),
-            (lt, ":town_lord", 0), #ie, unassigned
-            (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
-            (eq, "$players_kingdom", ":castle_faction"),
-            (store_party_size_wo_prisoners, ":party_size", "$g_encountered_party"),
-            (eq, ":party_size", 0),
-            (str_store_string, s10, "str_retrieve_garrison_warning"),
-            (assign, ":player_can_draw_from_garrison", 1),
-          (else_try),
-            (party_slot_ge, "$g_encountered_party", slot_town_lord, active_npcs_begin),
-            (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
-            (eq, "$players_kingdom", ":castle_faction"),
-            (troop_slot_eq, "trp_player", slot_troop_spouse, ":town_lord"),
-            (assign, ":player_can_draw_from_garrison", 1),
-          (try_end),
-          (eq, ":player_can_draw_from_garrison", 1),
-       ],
-         "Manage the garrison {s10}.",
-
-         [
-           #(change_screen_exchange_members,1),
-           
-           #tom
-           # (try_begin), #feudal lance recruitment system
-             # #(eq, "$use_feudal_lance", 1),
-             # #(eq, "$auto_recruitment", 1),
-             # (party_slot_eq, "$current_town", slot_recruitment_type, town_controled),
-             
-             # (party_clear, "p_temp_party"),
-             # (jump_to_menu, "mnu_lance_prison"),
-           # (else_try), #native recruitment system
-             # #(eq, "$use_feudal_lance", 0),
-             # #(eq, "$auto_recruitment", 0),
-             # (change_screen_exchange_members,1),
-           # (try_end),
-           
-           (party_clear, "p_temp_party"),
-           (jump_to_menu, "mnu_lance_prison"),
-           #tom
-          ]),
-		  
-		  
-		  
-
 ######################### NEW v1.8
       ("change_culture_walled_center",
       [
@@ -34617,6 +34259,141 @@ game_menus = [ #
 
 
 
+######################## NEW v3.5 - moved those things here because they weren't appearing when player conquered a castle/town
+  ("ee_recruits_garrison_options",0,
+    "Recruits and garrison options.",
+    "none",
+    [
+    ],
+    [
+########################
+    # recruitment
+      ("recruit_volunteers",
+      [
+        (call_script, "script_cf_town_recruit_volunteers_cond"),
+        #tom
+        (assign, ":continue", 0),
+        (try_begin),
+          (eq, "$use_feudal_lance", 1),
+          (assign, ":continue", 1),
+          # (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
+          # (eq, ":town_lord", "trp_player"),
+          (assign, ":continue", 0),
+        (try_end),
+        (eq, ":continue", 0),
+        #tom
+      ]
+       , "Recruit Volunteers.",
+       [
+         (try_begin),
+           (call_script, "script_cf_enter_center_location_bandit_check"),
+         (else_try),
+           (eq, "$use_feudal_lance", 0),
+           (jump_to_menu, "mnu_recruit_volunteers"),
+         (else_try),
+           (eq, "$use_feudal_lance", 1),
+           (jump_to_menu, "mnu_lance_recruitment"),
+         (try_end),
+        ]),
+########################################
+#retinue
+       ("recruit_specialists",
+       [
+         #only in towns:
+         (is_between, "$current_town", towns_begin, towns_end),
+       ],
+       "Recruit mercenary companions.",
+       [
+         (start_presentation, "prsnt_recruit_npc"),
+       ]),
+########################################
+      ("castle_station_troops",
+      [
+        (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
+        (str_clear, s10),
+        
+        (assign, ":player_can_draw_from_garrison", 0),
+        (try_begin), #option 1 - player is town lord
+          (eq, ":town_lord", "trp_player"),
+          (assign, ":player_can_draw_from_garrison", 1),
+        (else_try), #option 2 - town is unassigned and part of the player faction
+          (store_faction_of_party, ":faction", "$g_encountered_party"),
+          # (eq, ":faction", "fac_player_supporters_faction"),
+          (eq, ":faction", "$players_kingdom"), ######## NEW v3.3
+          (neg|party_slot_ge, "$g_encountered_party", slot_town_lord, active_npcs_begin), #ie, zero or -1
+          (assign, ":player_can_draw_from_garrison", 1),
+        (else_try), #option 3 - town was captured by player
+          (lt, ":town_lord", 0), #ie, unassigned
+          (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
+          (eq, "$players_kingdom", ":castle_faction"),
+          (eq, "$g_encountered_party", "$g_castle_requested_by_player"),
+          (str_store_string, s10, "str_retrieve_garrison_warning"),
+          (assign, ":player_can_draw_from_garrison", 1),
+		############## NEW v3.5
+        (else_try),          
+		  (party_get_slot, ":last_besieger", "$g_encountered_party", slot_center_last_besieger), 
+          (eq, ":last_besieger", "$players_kingdom"),
+            (str_store_string, s10, "str_retrieve_garrison_warning"),
+            (assign, ":player_can_draw_from_garrison", 1),
+	    ############################
+        (else_try),
+          (lt, ":town_lord", 0), #ie, unassigned
+          (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
+          (eq, "$players_kingdom", ":castle_faction"),
+          # (store_party_size_wo_prisoners, ":party_size", "$g_encountered_party"),
+          # (eq, ":party_size", 0),
+          (str_store_string, s10, "str_retrieve_garrison_warning"),
+          (assign, ":player_can_draw_from_garrison", 1),
+        (else_try),
+          (party_slot_ge, "$g_encountered_party", slot_town_lord, active_npcs_begin),
+          (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
+          (eq, "$players_kingdom", ":castle_faction"),
+          (troop_slot_eq, "trp_player", slot_troop_spouse, ":town_lord"),
+          (assign, ":player_can_draw_from_garrison", 1),
+        (try_end),
+        (eq, ":player_can_draw_from_garrison", 1),
+      ],
+         "Manage the garrison {s10}.",
+         [
+           (party_clear, "p_temp_party"),
+           (jump_to_menu, "mnu_lance_prison"),
+           #tom
+      ]),
+########################################
+	  ##diplomacy start+
+	  #Other option to add troops to garrison
+      ("dplmc_castle_give_troops",
+      [
+		(party_get_slot, ":town_lord", "$current_town", slot_town_lord),
+		(store_faction_of_party, ":castle_faction", "$g_encountered_party"),
+		(is_between, ":castle_faction", kingdoms_begin, kingdoms_end),
+
+		#The player can add troops but not remove them:
+		#Not owned by the player
+		(neq, ":town_lord", "trp_player"),
+		#Not unassigned
+		(ge, ":town_lord", heroes_begin),
+		#Not owned by the player's spouse
+		(neg|troop_slot_eq, "trp_player", slot_troop_spouse, ":town_lord"),
+		(neg|troop_slot_eq, ":town_lord", slot_troop_spouse, "trp_player"),
+		#But nevertheless the owner will accept troops
+		(call_script, "script_dplmc_player_can_give_troops_to_troop", ":town_lord"),
+        (ge, reg0, 1),
+      ],
+      "Give troops to the garrison (cannot remove)",
+      [
+        (change_screen_give_members, "$current_town"),
+      ]),
+      ##diplomacy end+
+########################################
+      ("ee_back_to_town_menu",[], "Go back.",
+      [
+        (jump_to_menu, "mnu_town"),
+      ]),
+########################################
+########################
+    ]
+  ),
 ######################################################
 
   
