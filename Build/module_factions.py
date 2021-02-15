@@ -30,44 +30,6 @@ factions = [
   ("innocents", "Innocents", ff_always_hide_label, 0.5,[("outlaws",-0.05)], [],0xFFFFFF),
   ("merchants", "Merchants", ff_always_hide_label, 0.5,[("outlaws",-0.5),], [],0xFFFFFF),
 
-  # ("dark_knights", "{!}Dark Knights", 0, 0.5,[("innocents",-0.9),("player_faction",-0.4)], []),
-
-  #("culture_1",  "{!}culture_1", 0, 0.9, [], []),
-  #("culture_2",  "{!}culture_2", 0, 0.9, [], []),
- # ("culture_3",  "{!}culture_3", 0, 0.9, [], []),
- # ("culture_4",  "{!}culture_4", 0, 0.9, [], []),
-  #("culture_5",  "{!}culture_5", 0, 0.9, [], []),
- # ("culture_6",  "{!}culture_6", 0, 0.9, [], []),
-  #("culture_7",  "{!}culture_7", 0, 0.9, [], []),
-  #("culture_8",  "{!}culture_8", 0, 0.9, [], []),
-  #("culture_9",  "{!}culture_9", 0, 0.9, [], []),
-  #("culture_10",  "{!}culture_10", 0, 0.9, [], []),
-  #("culture_11",  "{!}culture_11", 0, 0.9, [], []),
- # ("culture_12",  "{!}culture_12", 0, 0.9, [], []),
-  #("culture_13",  "{!}culture_13", 0, 0.9, [], []),
-  #("culture_14",  "{!}culture_14", 0, 0.9, [], []),
-  #("culture_15",  "{!}culture_15", 0, 0.9, [], []),
-  #("culture_16",  "{!}culture_16", 0, 0.9, [], []),
-  #("culture_17",  "{!}culture_17", 0, 0.9, [], []),
-  #("culture_18",  "{!}culture_18", 0, 0.9, [], []),
-  #("culture_19",  "{!}culture_19", 0, 0.9, [], []),
-  #("culture_20",  "{!}culture_20", 0, 0.9, [], []),
-  #("culture_21",  "{!}culture_21", 0, 0.9, [], []),
-  #("culture_22",  "{!}culture_22", 0, 0.9, [], []),
-  #("culture_23",  "{!}culture_23", 0, 0.9, [], []),
-  #("culture_24",  "{!}culture_24", 0, 0.9, [], []),
-  #("culture_25",  "{!}culture_25", 0, 0.9, [], []),
-  #("culture_26",  "{!}culture_26", 0, 0.9, [], []),
-  #("culture_27",  "{!}culture_27", 0, 0.9, [], []),
-  #("culture_28",  "{!}culture_28", 0, 0.9, [], []),
-  #("culture_29",  "{!}culture_29", 0, 0.9, [], []),
-  #("culture_30",  "{!}culture_30", 0, 0.9, [], []),
-  #("culture_31",  "{!}culture_31", 0, 0.9, [], []),
-  #("culture_32",  "{!}culture_32", 0, 0.9, [], []),
-  #("culture_33",  "{!}culture_33", 0, 0.9, [], []),
-  # ("culture_34",  "{!}culture_31", 0, 0.9, [], []),
-  #("culture_37",  "{!}culture_37", 0, 0.9, [], []),
-  
   ("culture_finnish",  "Finnish", 0, 0.9, [], []),  #
   ("culture_mazovian",  "Mazovian", 0, 0.9, [], []), #
   ("culture_serbian",  "Serbian", 0, 0.9, [], []), #kingdom_29
@@ -109,12 +71,6 @@ factions = [
   
   ("culture_player",  "Custom", 0, 0.9, [], []), #####player faction culture needed to make custom troops appear in villages, lances or not
   
-  
- # ("culture_hafsid",  "{!}culture_hafsid", 0, 0.9, [], []), 
-  
-#  ("swadian_caravans", "Swadian Caravans", 0, 0.5,[("outlaws",-0.8), ("dark_knights",-0.2)], []),
-#  ("vaegir_caravans", "Vaegir Caravans", 0, 0.5,[("outlaws",-0.8), ("dark_knights",-0.2)], []),
-
   ("player_faction", "Player",0, 0.9, [], [], 0x00FFFF),
   ("player_supporters_faction", "Player's Kingdom",0, 0.9, [("player_faction",1.00),("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0x00FFFF), #changed name so that can tell difference if shows up on map
 
@@ -132,10 +88,6 @@ factions = [
       ("deserters", -0.02),
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
-      # ("curonians", -1),
-      # ("prussians", -1),
-      # ("samogitians", -1),
-      # ("yotvingians", -1),
     ],
     [],
     0xe9e9e9
@@ -152,10 +104,6 @@ factions = [
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
       ("kingdom_33", 0.5),
-      # ("curonians", 1),
-      # ("prussians", 1),
-      # ("samogitians", 1),
-      # ("yotvingians", 1),
     ],
     [],
     0xbadeb2
@@ -185,7 +133,6 @@ factions = [
     [
       ("papacy",0.0),
       ("kingdom_1",0.10),
-      #("kingdom_2",-0.01),
       ("outlaws",-0.05),
       ("peasant_rebels", -0.1),
       ("deserters", -0.02),
@@ -254,10 +201,6 @@ factions = [
       ("deserters", -0.02),
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
-      # ("curonians", 1),
-      # ("prussians", 1),
-      # ("samogitians", 1),
-      # ("yotvingians", 1),
     ],
     [],
     0x9e0b6f
@@ -267,7 +210,6 @@ factions = [
     0, 0.9,
     [
       ("papacy",0.0),
-      #("kingdom_10",-0.5),
       ("outlaws",-0.05),
       ("peasant_rebels", -0.1),
       ("deserters", -0.02),
@@ -282,7 +224,6 @@ factions = [
     0, 0.9,
     [
       ("papacy",0.0),
-      #("kingdom_9",-0.5),
       ("outlaws",-0.05),
       ("peasant_rebels", -0.1),
       ("deserters", -0.02),
@@ -340,7 +281,6 @@ factions = [
     [
       ("papacy",0.0),
       ("kingdom_1",0.1),
-      #("kingdom_2",-0.01),
       ("kingdom_8",-0.2),
       ("outlaws",-0.05),
       ("peasant_rebels", -0.1),
@@ -453,9 +393,7 @@ factions = [
       ("peasant_rebels", -0.1),
       ("deserters", -0.02),
       ("mountain_bandits", -0.05),
-      ("forest_bandits", -0.05),
-     # ("guelphs", 1),
-      
+      ("forest_bandits", -0.05),      
     ],
     [],
     0xfff17a
@@ -503,7 +441,6 @@ factions = [
       ("deserters", -0.02),
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
-      #("guelphs", -1.0),
     ],
     [],
     0x799cb5
@@ -643,10 +580,6 @@ factions = [
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
       ("kingdom_2", 0.5),
-      # ("kingdom_34", 1),
-      # ("kingdom_33", 1),
-      # ("kingdom_36", 1),
-      #("kingdom_1",-0.1),
     ],
     [],
     0x3e7583
@@ -663,15 +596,6 @@ factions = [
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
       ("kingdom_2", 0.5),
-      # ("kingdom_34", 1),
-      # ("kingdom_35", 1),
-      # ("kingdom_36", 1),
-      #("kingdom_1",-0.1),
-      # ("kingdom_1",-1.0),
-      # ("kingdom_4",-1.0),
-      # ("kingdom_14",-1.0),
-      # ("kingdom_5",-1.0),
-      # ("player_faction",0.0)
     ],
     [],
     0x65c0d7
@@ -689,10 +613,6 @@ factions = [
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
       ("kingdom_2", 0.5),
-      # ("kingdom_34", 1),
-      # ("kingdom_35", 1),
-      # ("kingdom_33", 1),
-      #("kingdom_1",-0.1),
     ],
     [],
     0x3e7583
@@ -709,33 +629,11 @@ factions = [
       ("mountain_bandits", -0.05),
       ("forest_bandits", -0.05),
       ("kingdom_2", 0.5),
-      # ("kingdom_33", 1),
-      # ("kingdom_35", 1),
-      # ("kingdom_36", 1),
-      #("kingdom_1",-0.1),
     ],
     [],
     0x529cae
   ),
 
-
-
-
-  
-    # ("kingdom_34",  "Granducato di Toscana",
-    #####"Duchy of Tuscany",
-
-    # 0, 0.9,
-    # [
-      # ("outlaws",-0.05),
-      # ("peasant_rebels", -0.1),
-      # ("deserters", -0.02),
-      # ("mountain_bandits", -0.05),
-      # ("forest_bandits", -0.05),
-    # ],
-    # [],
-    # 0x00aaaa
-  # ),
 
       ("kingdom_37",  "Cymry",
   #"Welsh",
@@ -773,7 +671,6 @@ factions = [
     #"Pisa",
     0, 0.9,
     [
-      #("papacy",0.0),
       ("kingdom_38", -0.5),
       ("outlaws",-0.05),
       ("peasant_rebels", -0.1),
@@ -821,7 +718,6 @@ factions = [
     #"Bohemia",
     0, 0.9,
     [
-      #("kingdom_40",-0.80),
       ("kingdom_6",1.0),
       ("outlaws",-0.05),
       ("peasant_rebels", -0.1),
@@ -874,51 +770,11 @@ factions = [
  # ("enhanced_kingdom_38", "Random Faction", 0, 0.9,[], [], 0xe8e8e8),
  # ("enhanced_kingdom_39", "Random Faction", 0, 0.9,[], [], 0xe8e8e8),
  # ("enhanced_kingdom_40", "Random Faction", 0, 0.9,[], [], 0xe8e8e8),
-
-
 ##########################################
-  
-  # ("crusade",  "Crusaders",
-    # 0, 0.9,
-    # [
-      # ("outlaws",-0.05),
-      # ("peasant_rebels", -0.1),
-      # ("deserters", -0.02),
-      # ("mountain_bandits", -0.05),
-      # ("forest_bandits", -0.05),
-      # ("papacy", -0.5)
-    # ],
-    # [],
-    # 0xfff17a
-  # ),
-
-  # ("jihad",  "Jihadists",
-    # 0, 0.9,
-    # [
-      # ("outlaws",-0.05),
-      # ("peasant_rebels", -0.1),
-      # ("deserters", -0.02),
-      # ("mountain_bandits", -0.05),
-      # ("forest_bandits", -0.05)
-    # ],
-    # [],
-    # 0xfff17a
-  # ),
-
-##  ("kingdom_1_rebels",  "Swadian rebels", 0, 0.9, [("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0xCC2211),
-##  ("kingdom_2_rebels",  "Vaegir rebels",    0, 0.9, [("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0xCC2211),
-##  ("kingdom_3_rebels",  "Khergit rebels", 0, 0.9, [("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0xCC2211),
-##  ("kingdom_4_rebels",  "Nord rebels",    0, 0.9, [("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0xCC2211),
-##  ("kingdom_5_rebels",  "Rhodok rebels",  0, 0.9, [("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0xCC2211),
 
   ("kingdoms_end", "{!}kingdoms_end", 0, 0,[], []),
 
   ("robber_knights",  "{!}robber_knights", 0, 0.1, [], []),
-
-  # ("khergits", "{!}Khergits", 0, 0.5,[("player_faction",0.0)], []),
-  # ("black_khergits", "{!}Black Khergits", 0, 0.5,[("player_faction",-0.3),("kingdom_1",-0.02),("kingdom_2",-0.02)], []),
-
-##  ("rebel_peasants", "Rebel Peasants", 0, 0.5,[("vaegirs",-0.5),("player_faction",0.0)], []),
 
   ("manhunters", "Manhunters", 0, 0.5,[("outlaws",-0.6),("player_faction",0.1)], [],0xFFFFFF),
   ("deserters", "Deserters", 0, 0.5,[("manhunters",-0.6),("merchants",-0.5),("player_faction",-0.1)], [], 0xFF00FF),
@@ -926,10 +782,8 @@ factions = [
   ("forest_bandits", "Friendly Factions", 0, 0.5,[("commoners",-0.2),("merchants",-0.5),("manhunters",-0.6),("player_faction",-0.15)], [], 0x00FF00),
 
   ("undeads", "Enemy Factions", max_player_rating(-30), 0.5,[("commoners",-0.7),("player_faction",-0.5)], [], 0xFF0000),
-  # ("slavers", "{!}Slavers", 0, 0.1, [], []),
   ("peasant_rebels", "Peasant Rebels", 0, 1.0,
     [
-      # ("noble_refugees",-1.0),
       ("outlaws",-0.1),
       ("deserters", -0.05),
       ("mountain_bandits", -0.1),
@@ -938,29 +792,6 @@ factions = [
     ], 
     []
   , 0xFF00FF),
-  # ("noble_refugees", "{!}Noble Refugees", 0, 0.5,[], []),
-
-  # ("guelphs", "guelphs ", 0, 0.9,
-    # [
-      # ("papacy", 1),
-      # ("ghibellines", -1),
-      # ("kingdom_24",-1.0),
-      # ("player_faction",0.0),
-    # ],
-    # [],
-    # 0xfff10a
-  # ),
-  
-  # ("ghibellines", "ghibellines", 0, 0.9,
-    # [
-      # ("papacy", -1.0),
-      # ("guelphs", -1),
-      # ("kingdom_24",1.0),
-      # ("player_faction",0.0),
-    # ],
-    # [],
-    # 0x6fc0da
-  # ),  
   
     ("crusade",  "Crusaders",
     0, 0.9,
@@ -979,7 +810,6 @@ factions = [
  ############### NEW v2.1 - escaped prisoner faction
   ("escaped_prisoners_faction", "Escaped Prisoners", 0, 1.0,
     [
-      # ("noble_refugees",-0.1),
       ("outlaws",-0.2),
       ("deserters", -0.1),
       ("mountain_bandits", -0.2),
@@ -988,32 +818,25 @@ factions = [
       ("peasant_rebels", -0.1),
     ], 
     [], 0x00FFFF),
-  
+##############################
   ("end_minor_faction", "Village Idiots",
   0, 0.9,
   [],
   [],
   0xfff17a
   ),
-
-
-  # ("kingdom_32",  "Kingdom of Bohemia",
-    # 0, 0.9,
-    # [
-      # ("papacy",0.0),
-      # ("kingdom_1",0.50),
-      # ("outlaws",-0.05),
-      # ("peasant_rebels", -0.1),
-      # ("deserters", -0.02),
-      # ("mountain_bandits", -0.05),
-      # ("forest_bandits", -0.05)
-    # ], [],
-    # 0xffcc00
-  # ),
-
-  #("lordship_of_ireland", "Lordship of Ireland", 0, 0.9,[("kingdom_9",1.0),("kingdom_13",-1.0),("outlaws",-0.05),("peasant_rebels", -0.1),("deserters", -0.02),("mountain_bandits", -0.05),("forest_bandits", -0.05)], [], 0x4269f8),
-]
+  
+###############################
+]##############################
+###############################
 # modmerger_start version=201 type=4
+
+##diplomacy start+ Define these for convenience
+dplmc_factions_begin = 1 #As mentioned in the notes above, this is hardcoded and shouldn't be altered.  Deliberately excludes "no faction".
+dplmc_non_generic_factions_begin = [x[0] for x in enumerate(factions) if x[1][0] == "merchants"][0] + 1
+dplmc_factions_end   = len(factions)
+##diplomacy end+
+
 try:
     component_name = "factions"
     var_set = { "factions":factions, "default_kingdom_relations":default_kingdom_relations, }
