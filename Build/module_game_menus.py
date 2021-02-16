@@ -6444,18 +6444,44 @@ game_menus = [ #
     (try_end),
     (try_begin),
       (gt, "$players_kingdom", 0),
-
       (str_store_faction_name, s8, "$players_kingdom"),
+      (neq, "$players_kingdom", fac_player_supporters_faction),  ######### NEW v3.5
       (try_begin),
-        (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-        # (neg|faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
-        (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
-        #(str_store_string, s9, "@You are a lord of {s8}.^{s9}"),
-        (str_store_string, s9, "str_you_are_a_lord_lady_of_s8_s9"),
+        (eq, "$player_cur_role", role_mercenary_captain),
+          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (str_store_string, s9, "str_you_are_a_mercenary_captain_of_s8_s9"),
       (else_try),
-        (str_store_string, s9, "str_you_are_king_queen_of_s8_s9"),
+        (eq, "$player_cur_role", role_vassal),
+          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (str_store_string, s9, "str_you_are_a_lord_lady_of_s8_s9"),
+      (else_try),
+        (eq, "$player_cur_role", role_prince),
+          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (str_store_string, s9, "str_you_are_prince_princess_of_s8_s9"),
+      (else_try),
+	    ######### NEW v3.5
+        (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+        (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+		###########################
+          (str_store_string, s9, "str_you_are_king_queen_of_s8_s9"),
       (try_end),
-
+    ######### NEW v3.5
+    (else_try),
+      (eq, "$players_kingdom", fac_player_supporters_faction),
+      (try_begin),
+        (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+          (str_store_string, s9, "str_you_are_king_queen_of_s8_s9"),
+      (else_try),
+        (eq, "$player_cur_role", role_mercenary_captain),
+          (str_store_string, s9, "str_you_are_a_mercenary_captain_s9"),
+      (else_try),
+        # (eq, "$player_cur_role", role_adventurer),
+          (str_store_string, s9, "str_you_are_a_adventurer_s9"),
+      (try_end),
+	###########################
     (try_end),
     ],
     [

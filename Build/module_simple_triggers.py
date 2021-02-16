@@ -3036,7 +3036,7 @@ simple_triggers = [
 
     ######This is a backup script to activate the player faction if it doesn't happen automatically, for whatever reason
   ######### (3,
-  (6,
+  (3,
     [
     (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_inactive),
     (try_for_range, ":center", walled_centers_begin, walled_centers_end),

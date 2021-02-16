@@ -4039,7 +4039,9 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   # ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^It occupies {s8}.^Its vassals are {s10}.^Its religion is: {s11}^^{s21}"),
   # ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^It occupies {s8}.^Its vassals are {s10}.^Its religion is: {s11}^^{s21}"),
 ####### NEW v3.1-KOMKE s22 faction culture displayed in faction notes
-  ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^It occupies {s8}.^Its vassals are {s10}.^Its culture is: {s22}.^Its religion is: {s11}^^{s21}."),
+####### NEW v3.5 - added language
+  ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^^It occupies {s8}.^^Its vassals are {s10}.^^Its culture is: {s22}.^Its religion is: {s11}^Its language is: {s12}^^{s21}."),
+############################
   ####### NEW v3.0-KOMKE END- 
   ("assigned_lord_reputation_and_relations_cheat_mode_reg3", "{!}Assigned lord reputation and relations, cheat mode: {reg3}"),
   ("caravan_trades_in_s5_originally_from_s4_", "{!}Caravan trades in {s5}, originally from {s4} "),
@@ -5560,8 +5562,6 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("map_name_s0", "Map Name: {s0}"),
   ("game_type_s0", "Game Type: {s0}"),  
   ("remaining_time_s0reg0_s1reg1", "Remaining Time: {s0}{reg0}:{s1}{reg1}"),
-  ("you_are_a_lord_lady_of_s8_s9", "You are a {lord/lady} of {s8}.^{s9}"),
-  ("you_are_king_queen_of_s8_s9", "You are {king/queen} of {s8}.^{s9}"),
   ("for_s4", " for {s4}"),
 
   ("cancel_fiancee_quest", " Also, you should please consider that other matter I had asked of you to have been successfully completed. It is not fit for me to commission you with tasks."),
@@ -9179,11 +9179,11 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 # ("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of {s56}.^:{s54} is a vassal of {s55} of {s56}.^}}Renown: {reg5}. Controversy: {reg15}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}"),
 ####### NEW v2.9-KOMKE START-##KOMKE reputation string is stored in s53 because s68 didn't work
 # ("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is a vassal of {s55} of the {s56}.^}}Renown: {reg5}. Controversy: {reg15}. Reputation: {s68}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Culture: {s62}.^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
-("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is {reg5?the marshal for:a vassal of} {s55} of {s56}.^}}Renown: {reg5}. Controversy: {reg15}. Reputation: {s53}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Culture: {s62}.^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
+("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is {reg5?the marshal for:a vassal of} {s55} of {s56}.^}}Renown: {reg7}. Controversy: {reg15}. Reputation: {s53}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Culture: {s62}.^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
 
 ####### NEW v2.9-KOMKE END-             
 # ("lord_info_string", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is a vassal of {s55} of the {s56}.^}}Renown: {reg5}. Controversy: {reg15}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}^^Wealth: {reg17}.^Soldiers fit: {reg37}. Ideal army size: {reg38} ({reg39}%).^Relation with liege: {reg40}."),
-("lord_info_string_short", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is {reg5?the marshal for:a vassal of} {s55} of {s56}.^}}Renown: {reg5}. Controversy: {reg15}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}"),
+("lord_info_string_short", "{reg6?:{reg4?{s54} is the ruler of the {s56}.^:{s54} is {reg5?the marshal for:a vassal of} {s55} of {s56}.^}}Renown: {reg7}. Controversy: {reg15}.^{reg9?{reg3?She:He} is the {reg3?lady:lord} of {s58}.:{reg3?She:He} has no fiefs.}{s59}^{s49}"),
 #######################
 
 
@@ -9679,6 +9679,48 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_face_key_asian_29", "0x000000055a000b54b50d46327b08cb85600000000001fa0f50000000000000000"),
 
 ("ee_face_key_end", "0x000000055a000b54b50d46327b08cb85600000000001fa0f50000000000000000"),
+#####################
+
+
+############ NEW v3.5
+("faction_language_finnish", "Finnish"),
+("faction_language_polish", "Polish"),
+("faction_language_serbian", "Serbian"),
+("faction_language_welsh", "Welsh"),
+("faction_language_german", "German"),
+("faction_language_bulgarian", "Bulgarian"),
+("faction_language_rus", "Rus"),
+("faction_language_danish", "Danish"),
+("faction_language_norwegian", "Nowergian"),
+("faction_language_swedish", "Swedish"),
+("faction_language_baltic", "Baltic"),
+("faction_language_arab", "Arabic"),
+("faction_language_greek", "Greek"),
+("faction_language_spanish", "Spanish"),
+("faction_language_portuguese", "Portuguese"),
+("faction_language_italian", "Italian"),
+("faction_language_gaelic", "Gaelic"),
+("faction_language_armenian", "Armenian"),
+("faction_language_turkish", "Turkish"),
+("faction_language_scottish", "Scottish"),
+("faction_language_english", "English"),
+("faction_language_french", "French"),
+("faction_language_hungarian", "Hungarian"),
+("faction_language_czech", "Czech"),
+("faction_language_mongol", "Mongolian"),
+("faction_language_mixed_euro", "European Dialects"),
+("faction_language_cuman", "Cuman"),
+("faction_language_custom", "Custom"),
+("faction_language_end", "End"),
+#####################
+
+############## NEW v3.5
+  ("you_are_a_lord_lady_of_s8_s9", "You are a {lord/lady} of {s8}.^^{s9}"),
+  ("you_are_king_queen_of_s8_s9", "You are the {king/queen} of {s8}.^^{s9}"),
+  ("you_are_a_mercenary_captain_of_s8_s9", "You are a mercenary captain of {s8}.^^{s9}"),
+  ("you_are_prince_princess_of_s8_s9", "You are {prince/princess} of {s8}.^^{s9}"),
+  ("you_are_a_mercenary_captain_s9", "You are a mercenary captain under the service of no one.^^{s9}"),
+  ("you_are_a_adventurer_s9", "You are a unaffiliated adventurer.^^{s9}"),
 #####################
 
 
