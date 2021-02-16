@@ -9721,6 +9721,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("you_are_prince_princess_of_s8_s9", "You are {prince/princess} of {s8}.^^{s9}"),
   ("you_are_a_mercenary_captain_s9", "You are a mercenary captain under the service of no one.^^{s9}"),
   ("you_are_a_adventurer_s9", "You are a unaffiliated adventurer.^^{s9}"),
+  ("you_are_a_soldier_of_s8_s10_s9", "You are a soldier enlisted in the party of {s8} of the {s10}.^^{s9}"),
 #####################
 
 

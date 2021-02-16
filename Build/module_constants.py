@@ -1368,35 +1368,6 @@ slot_team_flag_situation                       = 0
 
 
 #Rebellion changes end
-# character backgrounds
-cb_noble = 1
-cb_merchant = 2
-cb_guard = 3
-cb_forester = 4
-cb_nomad = 5
-cb_thief = 6
-cb_priest = 7
-
-cb2_page = 0
-cb2_apprentice = 1
-cb2_urchin  = 2
-cb2_steppe_child = 3
-cb2_merchants_helper = 4
-
-cb3_poacher = 3
-cb3_craftsman = 4
-cb3_peddler = 5
-cb3_troubadour = 7
-cb3_squire = 8
-cb3_lady_in_waiting = 9
-cb3_student = 10
-
-cb4_revenge = 1
-cb4_loss    = 2
-cb4_wanderlust =  3
-cb4_disown  = 5
-cb4_greed  = 6
-
 #NPC system changes end
 #Encounter types
 enctype_fighting_against_village_raid = 1
@@ -3960,6 +3931,15 @@ role_king = 6
 ######################
 
 ##### NEW v3.5
+# character backgrounds
+cb_noble = 1
+cb_merchant = 2
+cb_guard = 3
+cb_forester = 4
+cb_nomad = 5
+cb_thief = 6
+cb_priest = 7
+
 cb_vassal = 8
 cb_prince = 9
 cb_king = 10
@@ -3971,6 +3951,26 @@ cb_mercenary_captain = 13
 # cb_vassal = 16
 # cb_vassal = 17
 # cb_vassal = 18
+
+cb2_page = 0
+cb2_apprentice = 1
+cb2_urchin  = 2
+cb2_steppe_child = 3
+cb2_merchants_helper = 4
+
+cb3_poacher = 3
+cb3_craftsman = 4
+cb3_peddler = 5
+cb3_troubadour = 7
+cb3_squire = 8
+cb3_lady_in_waiting = 9
+cb3_student = 10
+
+cb4_revenge = 1
+cb4_loss    = 2
+cb4_wanderlust =  3
+cb4_disown  = 5
+cb4_greed  = 6
 ##############
 
 ####################################################################################

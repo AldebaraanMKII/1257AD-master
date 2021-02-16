@@ -4465,7 +4465,7 @@ game_menus = [ #
         (str_clear, s15),
         (assign, "$kaos_monarch_var", 1),
         (assign, "$g_start_faction", -1),
-        (assign, "$background_type", 8),
+        (assign, "$background_type", cb_king),
 	    (assign, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
@@ -4490,7 +4490,7 @@ game_menus = [ #
         (str_clear, s15),
         (assign, "$g_start_faction", -1),
         (assign, "$kaos_monarch_var", 1),
-        (assign, "$background_type", 8),
+        (assign, "$background_type", cb_king),
 	    (assign, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
@@ -4515,7 +4515,7 @@ game_menus = [ #
         (str_clear, s15),
         (assign, "$g_start_faction", -1),
         (assign, "$kaos_heir", 1),
-        (assign, "$background_type", 10),
+        (assign, "$background_type", cb_prince),
 	    (assign, "$g_player_cur_role", role_prince),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
@@ -4540,7 +4540,7 @@ game_menus = [ #
         (str_clear, s15),
         (assign, "$g_start_faction", -1),
         (assign, "$kaos_heir", 1),
-        (assign, "$background_type", 10),
+        (assign, "$background_type", cb_prince),
         (assign, reg3, "$character_gender"),
 	    (assign, "$g_player_cur_role", role_prince),  ####### NEW v3.0 - player role
         (try_begin),
@@ -4564,7 +4564,7 @@ game_menus = [ #
         (str_clear, s15),
         (assign, "$g_start_faction", -1),
         (assign, "$start_as_vassal_gvar1", 1),
-        (assign, "$background_type", 9),
+        (assign, "$background_type", cb_vassal),
         (assign, reg3, "$character_gender"),
 	    (assign, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role
         (try_begin),
@@ -4581,6 +4581,7 @@ game_menus = [ #
       "Start_as_a_Adventurer.",
       [
         (assign, "$g_start_faction", -1),
+        (assign, "$background_type", cb_adventurer),
 	    (assign, "$g_player_cur_role", role_adventurer),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
@@ -4597,6 +4598,7 @@ game_menus = [ #
       [
         (assign, "$g_start_faction", -1),
         (assign, "$bandit_start", 1),
+        (assign, "$background_type", cb_bandit),
 	    (assign, "$g_player_cur_role", role_bandit),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
@@ -4613,7 +4615,7 @@ game_menus = [ #
       "Start_as_a_mercenary_captain.",
       [
         (assign, "$g_start_faction", -1),
-        (assign, "$background_type", 11),
+        (assign, "$background_type", cb_mercenary_captain),
 	    (assign, "$g_player_cur_role", role_mercenary_captain),  
         (try_begin),
           (eq, "$quickstart", 0),
@@ -5036,7 +5038,7 @@ game_menus = [ #
           (troop_add_gold, "trp_player", ":player_gold"),
           (party_add_xp, "p_main_party", 6000),
 ########## NEW v3.0 - mercenary captain start   NEW v3.5 - moved this here
-        (try_begin),
+        (else_try),
           (eq, "$background_type", cb_mercenary_captain),
           (troop_raise_attribute, "trp_player", ca_strength, 6),
           (troop_raise_attribute, "trp_player", ca_intelligence, 3),
@@ -5085,7 +5087,7 @@ game_menus = [ #
           (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
           (party_upgrade_with_xp, "p_main_party", 6000, 0),
           (party_upgrade_with_xp, "p_main_party", 6000, 0),
-        (try_end),
+        # (try_end),
 #############################		  
 ###################### vanilla starts
         (else_try),
@@ -6447,6 +6449,13 @@ game_menus = [ #
       (str_store_faction_name, s8, "$players_kingdom"),
       (neq, "$players_kingdom", fac_player_supporters_faction),  ######### NEW v3.5
       (try_begin),
+        (eq, "$freelancer_state", 1),        
+          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (str_store_troop_name, s8, "$enlisted_lord"),
+          (str_store_faction_name, s10, "$players_kingdom"),
+          (str_store_string, s9, "str_you_are_a_soldier_of_s8_s10_s9"),
+      (else_try),
         (eq, "$player_cur_role", role_mercenary_captain),
           (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
           (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3

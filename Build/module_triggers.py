@@ -1911,14 +1911,14 @@ triggers = [
         (try_begin),
           (store_num_parties_of_template, ":num_parties", "pt_crusaders"),
           (lt, ":num_parties",1),
-          (assign, "$crusader_faction", -5),
-          (assign, "$crusader_party_id", -1),
-          (assign, "$crusade_start", 0),
-          (assign, "$crusade_target", -1),  ######## NEW v2.6 - shall fix the crusade attacking player bug
-          (assign, "$crusade_target_faction", 0),
-          (assign, "$crusader_party_id", -1),
-          (assign, "$crusader_state", -1), #-1 no crusade, 1 crusade started, 2 sieging, 3 storming
-          (display_message, "@Crusaders have been defeated!"),
+            (assign, "$crusader_faction", -5),
+            (assign, "$crusader_party_id", -1),
+            (assign, "$crusade_start", 0),
+            (assign, "$crusade_target", -1),  ######## NEW v2.6 - shall fix the crusade attacking player bug
+            (assign, "$crusade_target_faction", 0),
+            (assign, "$crusader_party_id", -1),
+            (assign, "$crusader_state", -1), #-1 no crusade, 1 crusade started, 2 sieging, 3 storming
+            (display_message, "@Crusaders have been defeated!"),
         (else_try),
           #(party_get_slot, ":ai_object", "$crusader_party_id", slot_party_ai_object),
           (store_distance_to_party_from_party, ":distance", "$crusader_party_id", "$crusade_target"),

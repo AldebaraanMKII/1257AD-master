@@ -228,7 +228,7 @@ scripts = [
             # (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
         # (try_end),
 		
-        (assign, "$players_kingdom", -1),  #### NEW v2.1 - player no longer part of faction
+        (assign, "$players_kingdom", fac_player_supporters_faction),  #### NEW v2.1 - player no longer part of faction
         # (call_script, "script_freelancer_unequip_troop", "$player_cur_troop"),        
         # (troop_equip_items, "trp_player"),
         
