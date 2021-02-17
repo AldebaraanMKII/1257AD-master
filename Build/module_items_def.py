@@ -278,7 +278,7 @@ missile_distance_trigger = [
     [
       (store_trigger_param_1, ":shooter_agent"),
       
-      #(eq, "$g_report_shot distance", 1),
+      (eq, "$g_report_shot distance", 1),
       (get_player_agent_no, ":player_agent"),
       (try_begin),
         (eq, ":shooter_agent", ":player_agent"),

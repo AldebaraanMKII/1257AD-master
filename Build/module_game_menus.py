@@ -21394,7 +21394,7 @@ game_menus = [ #
             (assign, ":num_stacks", 0),
           (try_end),
           # (start_presentation, "prsnt_autoloot_upgrade_management"),
-          (start_presentation, "prsnt_dplmc_autoloot_upgrade_management"),
+          (start_presentation, "prsnt_dplmc_autoloot_upgrade_management"), ######### NEW v3.5
         ]
       ),
       ("auto_loot_leave_with_nothing",
@@ -21411,7 +21411,7 @@ game_menus = [ #
             (is_between, ":stack_troop", companions_begin, companions_end),
             (call_script, "script_transfer_special_inventory", "$pool_troop", ":stack_troop"), #special items
           (try_end),
-          (call_script, "script_sort_food", "trp_player"),
+          # (call_script, "script_sort_food", "trp_player"),  ########## NEW v3.5
           (jump_to_menu, "$return_menu"),
         ]
       ),
@@ -21424,7 +21424,7 @@ game_menus = [ #
             (is_between, ":stack_troop", companions_begin, companions_end),
             (call_script, "script_transfer_inventory", "$pool_troop", ":stack_troop", 1), #include book
           (try_end),
-          (call_script, "script_sort_food", "trp_player"),
+          # (call_script, "script_sort_food", "trp_player"),  ########## NEW v3.5
           (jump_to_menu, "$return_menu"),
         ]
       ),

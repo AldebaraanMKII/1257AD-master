@@ -18126,6 +18126,13 @@ presentations = [
         (overlay_set_position, reg0, pos1),
         ##########
 
+        ########## NEW v3.5
+        (create_text_overlay, reg0, "@Report projectile hit distance:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+        ##########
+
         # (create_text_overlay, reg0, "@Remove deserter recruit penalty:", tf_vertical_align_center),
         # (position_set_y, pos1, 525),
         # (overlay_set_position, reg0, pos1),
@@ -18244,6 +18251,14 @@ presentations = [
         (position_set_y, pos1, reg1),
         (overlay_set_position, "$g_presentation_obj_29", pos1),
         (overlay_set_val, "$g_presentation_obj_29", "$cheat_mode"),
+        ######################
+
+		########### NEW v3.5 - cheat menu
+        (create_check_box_overlay, "$g_presentation_obj_30", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_30", pos1),
+        (overlay_set_val, "$g_presentation_obj_30", "$g_report_shot"),
         ######################
 
 
@@ -18381,6 +18396,11 @@ presentations = [
           (eq, ":object", "$g_presentation_obj_29"),
           (assign, "$cheat_mode", ":value"),
         ###############
+		############### NEW v3.5
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_30"),
+          (assign, "$g_report_shot", ":value"),
+        ###############
 
 
         (else_try),
@@ -18417,6 +18437,7 @@ presentations = [
           (assign, "$native_wages", 0),  ### disabled by default
           (assign, "$ee_freelancer_upgrade_unequip", 0),  ### disabled by default
           (assign, "$cheat_mode", 0),
+          (assign, "$g_report_shot", 1),  ######### NEW v3.5
           (presentation_set_duration, 0),
 
         (else_try),

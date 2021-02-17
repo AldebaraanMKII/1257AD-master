@@ -38169,6 +38169,39 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   ]],
 
 
+############### NEW v3.5 - execute lord
+[anyone|plyr, "prisoner_chat_noble", [], "I decided to kill you.", "prisoner_chat_noble_execute",[]],
+[anyone|plyr, "prisoner_chat_noble_execute", [(lt, "$g_talk_troop_relation", 10)], "I am sick of your disgusting face. Prepare to die!", "prisoner_chat_noble_execute_2",[]],
+
+[anyone, "prisoner_chat_noble_execute_2", 
+[
+], "P-Please don't! I have a family!. And t-think about the consequences to your reputation!", "prisoner_chat_noble_execute_3",[]],
+[anyone|plyr, "prisoner_chat_noble_execute_3", [], "I don't care about that. Now die!", "prisoner_chat_noble_execute_4_kill",[]],
+[anyone|plyr, "prisoner_chat_noble_execute_3", [], "Very well. You may live then.", "prisoner_chat_noble_execute_4_leave",[]],
+
+[anyone, "prisoner_chat_noble_execute_4_leave", [], "A-A wise decision...", "close_window",[]],
+
+[anyone|plyr, "prisoner_chat_noble_execute_4_kill", [(str_store_troop_name, s1, "$g_talk_troop")], "({s1} struggles against his shackles, desperate to free himself and escape you, but to no avail. You strike him with a knife to the gut and watch, satisfied, as his corpse sags to the floor.)", "close_window",
+[
+(assign, "$g_method_of_execution", 5),
+(call_script, "script_kill_lord_execution", "trp_player", "$g_talk_troop", "p_main_party", "$g_method_of_execution"),
+]],
+
+######## This one made the game crash
+# [anyone, "prisoner_chat_noble_execute_4", [], "D-Damn youuuu......", "close_window",
+# [
+# (try_for_agents, ":agent_no"),
+  # (agent_is_human, ":agent_no"),
+  # (agent_get_troop_id, ":troop_no", ":agent_no"),
+  # (neq, ":troop_no", "trp_player"),
+  # (get_player_agent_no, ":player_agent"),
+  # (agent_deliver_damage_to_agent, ":player_agent", ":agent_no", 999),
+# (try_end),
+# (assign, "$g_method_of_execution", 5),
+# (call_script, "script_kill_lord_execution", "trp_player", "$g_talk_troop", "p_main_party", "$g_method_of_execution"),
+# ]
+# ],
+#############################################
 
 
 [anyone|plyr, "prisoner_chat_noble", [], "You will remain my prisoner.", "prisoner_chat_noble_prekeep",[]],
@@ -38176,7 +38209,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 # [anyone|plyr, "prisoner_chat_noble_prekeep", [], "You will understand if I keep you hostage until your family can afford to... compensate me for certain expenses and hardships I have endured to keep you fed and ...safe... these past weeks.", "prisoner_chat_noble_keep",[]],
 [anyone|plyr, "prisoner_chat_noble_prekeep", [], "Your family has already been informed of your unfortunate state... i will keep you hostage until they can afford to compensate me for certain expenses and hardships I have endured to keep you fed and ...safe... for the time i held you.", "prisoner_chat_noble_keep",[]],
 
-[anyone,     "prisoner_chat_noble_keep", 
+[anyone, "prisoner_chat_noble_keep", 
 [
 (ge, "$player_honor", 10),
 (ge, "$g_talk_troop_relation", 0)
@@ -38245,7 +38278,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone,     "prisoner_chat_die2", [(neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),], "Please, {sir/madam}, don't kill me. I am a defenceless prisoner. Surely you're not that cruel?", "prisoner_chat_die3",[]],
 [anyone|plyr, "prisoner_chat_die3", [(neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),], "(Kill the prisoner)", "prisoner_chat_die4",[]],
 [anyone|plyr, "prisoner_chat_die3", [(neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),], "No, I will not sink that low.", "close_window",[]],
-[anyone|plyr, "prisoner_chat_die4", [(neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),], "(The prisoner struggles against his shackles, desperate to free himself and escape you, but to no avail. You slit their throat with a knife and watch, satisfied, as his corpse sags to the floor.)", "close_window",
+[anyone|plyr, "prisoner_chat_die4", [(neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),], "(The prisoner struggles against his shackles, desperate to free himself and escape you, but to no avail. You strike him with a knife to the gut and watch, satisfied, as his corpse sags to the floor.)", "close_window",
    [(remove_troops_from_prisoners, "$g_talk_troop", 1),
     (call_script, "script_change_player_honor", -1)]],
   

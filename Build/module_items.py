@@ -1153,7 +1153,7 @@ items = [
 ["felt_hat", "Felt Hat", [("felt_hat_a_new",0)], itp_merchandise|itp_type_head_armor |itp_civilian,0, head_armor_hat_price, head_armor_hat, imodbits_cloth],
 ["felt_hat_b", "Felt Hat", [("felt_hat_b_new",0)], itp_merchandise|itp_type_head_armor |itp_civilian,0, head_armor_hat_price, head_armor_hat, imodbits_cloth],
 ["leather_cap", "Leather Cap", [("leather_cap_a_new",0)], itp_merchandise|itp_type_head_armor|itp_civilian ,0, head_armor_light_price, head_armor_light, imodbits_cloth],
-["1257_hood", "Hood", [("1257_hood",0), ("inv_1257_hood", ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature,0, head_armor_light_price, head_armor_light, imodbits_plate, [], all_euro_factions],
+["1257_hood", "Hood", [("1257_hood",0), ("inv_1257_hood", ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature,0, head_armor_light_price, head_armor_light, imodbits_cloth, [], all_euro_factions],
 ["priest_cap_3", "Cap", [("priest_cap_2",0)], itp_merchandise|itp_type_head_armor  |itp_civilian ,0, head_armor_hat_price, head_armor_hat, imodbits_cloth, [], euro_factions],
 ["crown_european", "Crown", [("crown_european",0)], itp_merchandise|itp_type_head_armor|itp_civilian,0, get_headgear_price(2) *100, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth, [], euro_factions],
 ["crown", "Crown", [("crown",0)], itp_merchandise|itp_type_head_armor|itp_civilian|itp_doesnt_cover_hair,0, get_headgear_price(2) * 100, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth, [], euro_factions],
