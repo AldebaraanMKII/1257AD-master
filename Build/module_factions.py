@@ -730,7 +730,7 @@ factions = [
     0xe8e8e8
   ),
   
-################################ NEW v2.1 - factions for the civil war
+################################ NEW v2.1 - factions for the civil war - if editing this make sure that slot_faction_truce_days_with_factions_begin has enough slots
  ("enhanced_kingdom_1", "Random Faction", 0, 0.9,[], [], 0xe8e8e8),
  ("enhanced_kingdom_2", "Random Faction", 0, 0.9,[], [], 0xe8e8e8),
  ("enhanced_kingdom_3", "Random Faction", 0, 0.9,[], [], 0xe8e8e8),
@@ -805,7 +805,8 @@ factions = [
       ("papacy", -0.5),
       ("kingdom_33", -0.5)
     ],
-    [],0xFF00FF),
+    # [],0xFF00FF),
+    [],0xE5E5E5),  ######### NEW v3.5
  
  
  ############### NEW v2.1 - escaped prisoner faction

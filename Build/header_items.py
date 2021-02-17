@@ -107,7 +107,29 @@ ek_body   = 5
 ek_foot   = 6
 ek_gloves = 7
 ek_horse  = 8
-ek_food   = 9
+ek_food   = 9##diplomacy start+
+dplmc_ek_alt_item_a = 10
+dplmc_ek_alt_item_b = 11
+dplmc_ek_alt_item_c = 12
+dplmc_ek_alt_item_d = 13
+
+dplmc_ek_alt_items_begin = dplmc_ek_alt_item_a
+dplmc_ek_alt_items_end   = dplmc_ek_alt_item_d + 1
+
+#SB : meta-item type
+meta_itp_mask = 100
+meta_dmg_mask = 1000
+dplmc_itp_morningstar = meta_itp_mask + itp_type_two_handed_wpn
+dplmc_itp_lance =       meta_itp_mask + itp_type_polearm
+dplmc_itp_pike =    2 * meta_itp_mask + itp_type_polearm
+dplmc_itp_halberd = 3 * meta_itp_mask + itp_type_polearm
+
+dplmc_pike_length_cutoff = 165
+
+armor_cloth = 0 #basic stuff
+armor_armor = 1 #can be mail
+armor_plate = 2 #usually heavy plate
+##diplomacy end+
 
 
 max_inventory_items = 96

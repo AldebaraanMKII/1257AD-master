@@ -1789,6 +1789,12 @@ meshes = [
   ("tableau_mesh_tableau_bandit_shield_2", 0, "tableau_mesh_tableau_bandit_shield_2", 0, 0, 0, 0, 0, 0, 1, 1, 1),
  
 #############################################
+##SB : icons to represent item type meta-upgrades
+  ("icon_morningstar", 0, "ico_morningstar", 0, 0, 0, 0, 0, 0, 0.3, 0.3, 0.3),
+  ("icon_lance", 0, "ico_couchedlance", 0, 0, 0, 0, 0, 0, 0.3, 0.3, 0.3),
+  ("icon_spear", 0, "ico_spear", 0, 0, 0, 0, 0, 0, 0.3, 0.3, 0.3),
+  ("icon_bardiche", 0, "ico_axetwo", 0, 0, 0, 0, 0, 0, 0.3, 0.3, 0.3),
+#############################################
 
 
 

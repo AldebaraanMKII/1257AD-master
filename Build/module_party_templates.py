@@ -60,8 +60,6 @@ party_templates = [
   ("crusaders", "Crusaders", icon_crusaders,0, fac_crusade, soldier_personality, [(trp_euro_horse_4, 10, 25), (trp_euro_spearman_2, 150, 200), (trp_merc_euro_range, 50, 100), (trp_merc_euro_guisarmer, 50, 100), (trp_merc_euro_spearman, 50, 100), (trp_merc_euro_horse, 25, 50)]),
   ("merc_party", "Angry band of alchoholics", icon_gray_knight|pf_show_faction, 0 , fac_commoners, soldier_personality,[]),
   
-  
-
 
 ########################### NEW CRUSADER VARIANTS
   ("crusader_raiders_iberian", "Iberian Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_iberian_knight,1,4), (trp_iberian_light_cavalry,5, 10), (trp_iberian_town_footman_1, 10, 15), (trp_iberian_veteran_spearman, 5, 8), (trp_iberian_veteran_crossbowman, 5, 15), (trp_iberian_billman, 5,10),]),

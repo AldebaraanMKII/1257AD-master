@@ -6445,42 +6445,39 @@ game_menus = [ #
       (str_store_string, s9, "@Your estates are: {s8}.^{s9}"),
     (try_end),
     (try_begin),
+	  ######### NEW v3.5
       (gt, "$players_kingdom", 0),
       (str_store_faction_name, s8, "$players_kingdom"),
-      (neq, "$players_kingdom", fac_player_supporters_faction),  ######### NEW v3.5
+      (neq, "$players_kingdom", fac_player_supporters_faction), 
+      (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
       (try_begin),
         (eq, "$freelancer_state", 1),        
-          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), 
           (str_store_troop_name, s8, "$enlisted_lord"),
           (str_store_faction_name, s10, "$players_kingdom"),
           (str_store_string, s9, "str_you_are_a_soldier_of_s8_s10_s9"),
       (else_try),
         (eq, "$player_cur_role", role_mercenary_captain),
-          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), 
           (str_store_string, s9, "str_you_are_a_mercenary_captain_of_s8_s9"),
       (else_try),
         (eq, "$player_cur_role", role_vassal),
-          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), 
           (str_store_string, s9, "str_you_are_a_lord_lady_of_s8_s9"),
       (else_try),
         (eq, "$player_cur_role", role_prince),
-          (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.3
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), 
           (str_store_string, s9, "str_you_are_prince_princess_of_s8_s9"),
       (else_try),
-	    ######### NEW v3.5
-        (this_or_next|is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+        # (eq, "$player_cur_role", role_king),
         (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
-		###########################
           (str_store_string, s9, "str_you_are_king_queen_of_s8_s9"),
       (try_end),
-    ######### NEW v3.5
+    ###########################
     (else_try),
       (eq, "$players_kingdom", fac_player_supporters_faction),
       (try_begin),
+        # (eq, "$player_cur_role", role_king),
         (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
           (str_store_string, s9, "str_you_are_king_queen_of_s8_s9"),
       (else_try),
@@ -14371,8 +14368,165 @@ game_menus = [ #
            (change_screen_mission),
          (try_end),
          (call_script, "script_ee_set_town_troop_names"),
-      ], "Door to the town center."),
-########################################
+      ], "Door to the town center."),    
+	  
+################### NEW v3.5 - tranports player to prison entrance
+	  ("town_center_prison",
+      [
+        (eq, 0, 1), 
+        (this_or_next|party_slot_eq, "$current_town", slot_party_type, spt_castle),
+        (party_slot_eq, "$current_town", slot_party_type, spt_town),
+        (this_or_next|eq, "$entry_to_town_forbidden", 0),
+        (eq, "$sneaked_into_town", 1)
+      ],
+      "Go to the prison.",
+       [
+         #If the player is fighting his or her way out
+         (try_begin),
+           (eq, "$talk_context", tc_prison_break),
+           (assign, "$talk_context", tc_escape),
+           (assign, "$g_mt_mode", tcm_escape),
+           (store_faction_of_party, ":town_faction", "$current_town"),
+           (faction_get_slot, ":tier_2_troop", ":town_faction", slot_faction_tier_3_troop),
+           (faction_get_slot, ":tier_3_troop", ":town_faction", slot_faction_tier_3_troop),
+           (faction_get_slot, ":tier_4_troop", ":town_faction", slot_faction_tier_4_troop),
+           (party_get_slot, ":town_scene", "$current_town", slot_town_center),
+           (modify_visitors_at_site, ":town_scene"),
+           (reset_visitors),
+           #ideally we could alarm troops at locations
+           (try_begin),
+             #if guards have not gone to some other important happening at nearby villages, then spawn 4 guards. (example : fire)
+             (party_get_slot, ":last_nearby_fire_time", "$current_town", slot_town_last_nearby_fire_time),
+             (store_current_hours, ":cur_time"),
+             (store_add, ":fire_finish_time", ":last_nearby_fire_time", fire_duration),
+
+             (neg|is_between, ":cur_time", ":last_nearby_fire_time", ":fire_finish_time"),
+             (store_time_of_day, ":cur_day_hour"),
+             (try_begin), #there are 6 guards at day time (no fire ext)
+               (ge, ":cur_day_hour", 6),
+               (lt, ":cur_day_hour", 22),
+               (set_visitors, 25, ":tier_2_troop", 2),
+               (set_visitors, 26, ":tier_2_troop", 2),
+               (set_visitors, 27, ":tier_3_troop", 1),
+               (set_visitors, 28, ":tier_4_troop", 1),
+             (else_try),  #only 4 guards because of night
+               (set_visitors, 25, ":tier_2_troop", 1),
+               (set_visitors, 26, ":tier_2_troop", 1),
+               (set_visitors, 27, ":tier_3_troop", 1),
+               (set_visitors, 28, ":tier_4_troop", 1),
+             (try_end),
+           (else_try),
+             #if guards have gone to some other important happening at nearby villages, then spawn only 1 guard. (example : fire)
+             (store_time_of_day, ":cur_day_hour"),
+             (try_begin), #only 2 guard because there is a fire at one owned village
+               (ge, ":cur_day_hour", 6),
+               (lt, ":cur_day_hour", 22),
+               (set_visitors, 25, ":tier_2_troop", 1),
+               (set_visitors, 26, ":tier_2_troop", 0),
+               (set_visitors, 27, ":tier_3_troop", 1),
+               (set_visitors, 28, ":tier_4_troop", 0),
+             (else_try), #only 1 guard because both night and there is a fire at one owned village
+               (set_visitors, 25, ":tier_2_troop", 0),
+               (set_visitors, 26, ":tier_2_troop", 0),
+               (set_visitors, 27, ":tier_3_troop", 1),
+               (set_visitors, 28, ":tier_4_troop", 0),
+             (try_end),
+           (try_end),
+           
+           (set_jump_mission, "mt_town_center"),
+           (jump_to_scene, ":town_scene"),
+           (change_screen_mission),
+            #If you're already at escape, then talk context will reset
+         (else_try),
+           (call_script, "script_cf_enter_center_location_bandit_check"),
+           #All other circumstances...
+         (else_try),
+           (party_get_slot, ":town_scene", "$current_town", slot_town_center),
+           (modify_visitors_at_site, ":town_scene"),
+           (reset_visitors),
+           (assign, "$g_mt_mode", tcm_default),
+           (store_faction_of_party, ":town_faction", "$current_town"),
+
+           (try_begin),  
+             # (neq, ":town_faction", "fac_player_supporters_faction"), ######### NEW v3.3 - fixed troops not changing when the player took control of a fief
+             (faction_get_slot, ":troop_prison_guard", "$g_encountered_party_faction", slot_faction_prison_guard_troop),
+             (faction_get_slot, ":troop_castle_guard", "$g_encountered_party_faction", slot_faction_castle_guard_troop),
+             (faction_get_slot, ":tier_2_troop", ":town_faction", slot_faction_tier_2_troop),
+             (faction_get_slot, ":tier_3_troop", ":town_faction", slot_faction_tier_3_troop),
+           (try_end),
+             (try_begin), #think about this, should castle guard have to go nearby fire too? If he do not go, killing 2 armored guard is too hard for player. For now he goes too.
+               #if guards have not gone to some other important happening at nearby villages, then spawn 4 guards. (example : fire)
+               (party_get_slot, ":last_nearby_fire_time", "$current_town", slot_town_last_nearby_fire_time),
+               (store_current_hours, ":cur_time"),
+             (store_add, ":fire_finish_time", ":last_nearby_fire_time", fire_duration),
+
+               (neg|is_between, ":cur_time", ":last_nearby_fire_time", ":fire_finish_time"),
+               (set_visitor, 23, ":troop_castle_guard"),
+             (try_end),
+           (set_visitor, 24, ":troop_prison_guard"),
+
+           (try_begin),
+             (gt, ":tier_2_troop", 0),
+             (assign,reg0, ":tier_3_troop"),
+             (assign,reg1, ":tier_3_troop"),
+             (assign,reg2, ":tier_2_troop"),
+             (assign,reg3, ":tier_2_troop"),
+           (else_try),
+             (assign,reg0, "trp_euro_spearman_3"),
+             (assign,reg1, "trp_euro_spearman_3"),
+             (assign,reg2, "trp_euro_archer_2"),
+             (assign,reg3, "trp_euro_spearman_2"),
+           (try_end),
+           (shuffle_range,0,4),
+
+           (try_begin),
+             #if guards have not gone to some other important happening at nearby villages, then spawn 4 guards. (example : fire)
+             (party_get_slot, ":last_nearby_fire_time", "$current_town", slot_town_last_nearby_fire_time),
+             (store_current_hours, ":cur_time"),
+             (store_add, ":fire_finish_time", ":last_nearby_fire_time", fire_duration),
+
+             (neg|is_between, ":cur_time", ":last_nearby_fire_time", ":fire_finish_time"),
+             (set_visitor,25,reg0),
+             (set_visitor,26,reg1),
+             (set_visitor,27,reg2),
+             (set_visitor,28,reg3),
+           (try_end),
+
+           (party_get_slot, ":spawned_troop", "$current_town", slot_town_armorer),
+           (set_visitor, 9, ":spawned_troop"),
+           (party_get_slot, ":spawned_troop", "$current_town", slot_town_weaponsmith),
+           (set_visitor, 10, ":spawned_troop"),
+           (party_get_slot, ":spawned_troop", "$current_town", slot_town_elder),
+           (set_visitor, 11, ":spawned_troop"),
+           (party_get_slot, ":spawned_troop", "$current_town", slot_town_horse_merchant),
+           (set_visitor, 12, ":spawned_troop"),
+           (call_script, "script_init_town_walkers"),
+           (set_jump_mission, "mt_town_center"),
+           (assign, ":override_state", af_override_horse),
+           (try_begin),
+             (eq, "$sneaked_into_town", 1), #setup disguise
+             (assign, ":override_state", af_override_all),
+           (try_end),
+           (mission_tpl_entry_set_override_flags, "mt_town_center", 0, ":override_state"),
+           (mission_tpl_entry_set_override_flags, "mt_town_center", 2, ":override_state"),
+           (mission_tpl_entry_set_override_flags, "mt_town_center", 3, ":override_state"),
+           (mission_tpl_entry_set_override_flags, "mt_town_center", 4, ":override_state"),
+           (mission_tpl_entry_set_override_flags, "mt_town_center", 5, ":override_state"),
+           (mission_tpl_entry_set_override_flags, "mt_town_center", 6, ":override_state"),
+           (mission_tpl_entry_set_override_flags, "mt_town_center", 7, ":override_state"),
+           (try_begin),
+             (eq, "$town_entered", 0),
+             (assign, "$town_entered", 1),
+             (eq, "$town_nighttime", 0),
+             (set_jump_entry, 24),  ########## NEW v3.5 - to the prison
+           (try_end),
+           (jump_to_scene, ":town_scene"),
+           (change_screen_mission),
+         (try_end),
+         (call_script, "script_ee_set_town_troop_names"),
+      ], "Door to the prison."),
+######################################
+######################################
       ("town_tavern",[
           (party_slot_eq, "$current_town",slot_party_type, spt_town),
           (this_or_next|eq, "$entry_to_town_forbidden",0),
@@ -21239,7 +21393,8 @@ game_menus = [ #
             (assign, "$temp", ":stack_troop"),
             (assign, ":num_stacks", 0),
           (try_end),
-          (start_presentation, "prsnt_autoloot_upgrade_management"),
+          # (start_presentation, "prsnt_autoloot_upgrade_management"),
+          (start_presentation, "prsnt_dplmc_autoloot_upgrade_management"),
         ]
       ),
       ("auto_loot_leave_with_nothing",
@@ -33776,6 +33931,21 @@ game_menus = [ #
                (troop_set_slot, ":cur_lord",  slot_troop_controversy, 100),
          (try_end),
          (call_script, "script_decide_faction_ai", "$players_kingdom"),
+	   ]),
+	   #######################################
+       ("debug_options_new_12",[], "Test marshall elections for all factions.",
+	   [
+         (try_for_range, ":cur_lord", lords_begin, lords_end),
+           (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
+             # (store_troop_faction, ":lord_faction", ":cur_lord"),
+             # (eq, ":lord_faction", ":cur_faction"),
+               (troop_set_slot, ":cur_lord",  slot_troop_controversy, 100),
+         (try_end),
+		   
+         (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
+		   (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
+           (call_script, "script_decide_faction_ai", ":cur_faction"),
+         (try_end),
 	   ]),
 	   #######################################
 	   

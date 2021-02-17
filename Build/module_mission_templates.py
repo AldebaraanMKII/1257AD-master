@@ -648,7 +648,7 @@ mission_templates = [
        (eq, ":entry_point", 24),
        (eq, ":killer_agent_troop_no", "trp_player"),
        ###############
-       (display_message, "@You got keys of dungeon."),
+       (display_message, "@You got keys to the dungeon."),
      (try_end),
    ]),
   ] + must_1257_triggers + sp_shield_bash_triggers + bodyguard_triggers + fief_civilian_triggers

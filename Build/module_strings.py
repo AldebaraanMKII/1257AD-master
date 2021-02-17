@@ -9723,9 +9723,57 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("you_are_a_adventurer_s9", "You are a unaffiliated adventurer.^^{s9}"),
   ("you_are_a_soldier_of_s8_s10_s9", "You are a soldier enlisted in the party of {s8} of the {s10}.^^{s9}"),
 #####################
+###################################################################################
+# Autoloot
+###################################################################################
+	("dplmc_none", "none"),
 
+	("dplmc_item_pool_no_items", "There are currently no items in the item pool."),
+	("dplmc_item_pool_one_item", "There is one item left in the item pool."),
+	("dplmc_item_pool_many_items", "There are {reg20} items left in the item pool."),
+	("dplmc_item_pool_abandon", "Leave the items in the item pool and continue."),
+	("dplmc_item_pool_leave", "Done."),
 
+	("dplmc_hero_not_upgrading_armor","not upgrading my armor"),
+	("dplmc_hero_upgrading_armor","upgrading my own armor"),
+	("dplmc_hero_not_upgrading_horse","not upgrading my horses"),
+	("dplmc_hero_upgrading_horse","upgrading my own horses"),
 
+	("dplmc_hero_wpn_slot_none","Keep current ({s10})"), #0
+	("dplmc_hero_wpn_slot_horse","Horse"), #1 to maintain compatibility with header_items (item type 1 is horse)
+	("dplmc_hero_wpn_slot_one_handed","One-handed Weapon"), #2
+	("dplmc_hero_wpn_slot_two_handed","Two-handed Weapon"),  #3
+	("dplmc_hero_wpn_slot_polearm_all","Polearms"), #4
+	("dplmc_hero_wpn_slot_arrows","Arrows"), #5
+	("dplmc_hero_wpn_slot_bolts","Bolts"), #6
+	("dplmc_hero_wpn_slot_shield","Shield"), #7
+	("dplmc_hero_wpn_slot_bow","Bow"), #8
+	("dplmc_hero_wpn_slot_crossbow","Crossbow"), #9
+	("dplmc_hero_wpn_slot_throwing","Throwing Weapon"), #10
+  ##diplomacy start+ importing latest CC autoloot
+	("dplmc_hero_wpn_slot_goods", "Goods "), #11
+	("dplmc_hero_wpn_slot_head_armor", "Head armor "), #12
+	("dplmc_hero_wpn_slot_body_armor", "Body armor "), #13
+	("dplmc_hero_wpn_slot_foot_armor", "Foot armor "), #14
+	("dplmc_hero_wpn_slot_hand_armor", "Hand armor "), #15
+	("dplmc_hero_wpn_slot_pistol", "Pistol "), #16
+	("dplmc_hero_wpn_slot_musket", "Musket "), #17
+	("dplmc_hero_wpn_slot_bullets", "Bullets "), #18
+	("dplmc_hero_wpn_slot_animal", "Animal "), #19
+	("dplmc_hero_wpn_slot_book", "Book "), #20
+  ##diplomacy end+
+  #### Autoloot improved by rubik begin
+	("dplmc_hero_wpn_slot_two_handed_one_handed","Two-handed/One-handed"), #11
+  #### Autoloot improved by rubik end 
+  #auxiliary item types
+ ("dplmc_hero_wpn_slot_morningstar","Two-handed/One-handed"), #21
+ ("dplmc_hero_wpn_slot_lance","Lances"), #22
+ ("dplmc_hero_wpn_slot_pikes","Pikes"), #23
+ ("dplmc_hero_wpn_slot_halberd","Bladed Polearms"), #23
+ ("dplmc_hero_wpn_slot_no_metatype","No Preference"), #23
+###################################################################################
+# End Autoloot
+###################################################################################
 ##################################
 ]################################# END BRACKET
 ##################################

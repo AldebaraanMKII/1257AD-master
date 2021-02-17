@@ -31,6 +31,7 @@ simple_triggers = [
 #### This trigger is deprecated. Use "script_game_event_simulate_battle" in module_scripts.py instead
   (ti_simulate_battle,
    [
+    (troop_set_slot, "trp_player", slot_troop_spawned_before, 5000),
     ]),
 
 
