@@ -32,6 +32,8 @@ simple_triggers = [
   (ti_simulate_battle,
    [
     # (troop_set_slot, "trp_player", slot_troop_spawned_before, 5000),
+     # (party_set_slot, "p_town_21_1",slot_crusade,0),
+   # (party_slot_eq, "p_main_party", slot_party_ai_state, spai_accompanying_army),
     ]),
 
 

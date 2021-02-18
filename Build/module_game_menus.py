@@ -9074,7 +9074,7 @@ game_menus = [ #
                       (party_set_slot, "p_town_26_1", slot_spec_mercs2_party_template, "pt_company_varangian_1"),
                       (party_set_slot, "p_town_26_1", slot_spec_mercs2_number, 1),
                       ####### NEW
-                      (party_set_slot, "p_town_26_1", slot_center_has_quarters_major_varangian, 1),
+                      (party_set_slot, "p_town_26_1", slot_center_has_quarters_varangian, 1),
                 (try_end),
                 # rafi
                 (jump_to_menu, "$g_next_menu"),
@@ -13220,118 +13220,116 @@ game_menus = [ #
 
 #################### MASON'S GUILD
 #################### TIME
-     (try_begin),  
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_masons_guild, 1),
-          # (store_add, ":mason_reduction", 100, slot_center_has_tier_1_masons_guild_cost_time_reduction),
-          (val_div, ":improvement_time_original", 100),
-          (val_mul, ":improvement_time_original", tier_1_masons_guild_cost_time_reduction),
-          (val_sub, ":improvement_time", ":improvement_time_original"),
+     # (try_begin),  
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_masons_guild, 1),
+          # (val_div, ":improvement_time_original", 100),
+          # (val_mul, ":improvement_time_original", tier_1_masons_guild_cost_time_reduction),
+          # (val_sub, ":improvement_time", ":improvement_time_original"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_masons_guild, 1),
-          (val_div, ":improvement_time_original", 100),
-          (val_mul, ":improvement_time_original", tier_2_master_masons_guild_cost_time_reduction),
-          (val_sub, ":improvement_time", ":improvement_time_original"),
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_masons_guild, 1),
+          # (val_div, ":improvement_time_original", 100),
+          # (val_mul, ":improvement_time_original", tier_2_master_masons_guild_cost_time_reduction),
+          # (val_sub, ":improvement_time", ":improvement_time_original"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_masons_guild_hq, 1),
-          (val_div, ":improvement_time_original", 100),
-          (val_mul, ":improvement_time_original", tier_3_masons_guild_hq_cost_time_reduction),
-          (val_sub, ":improvement_time", ":improvement_time_original"),
-     (try_end),     
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_masons_guild_hq, 1),
+          # (val_div, ":improvement_time_original", 100),
+          # (val_mul, ":improvement_time_original", tier_3_masons_guild_hq_cost_time_reduction),
+          # (val_sub, ":improvement_time", ":improvement_time_original"),
+     # (try_end),     
      
      
-#################### COST
-     (try_begin),  
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_masons_guild, 1),
-          # (store_add, ":mason_reduction", 100, tier_1_masons_guild_cost_time_reduction),
-          (val_div, ":improvement_cost_original", 100),
-          (val_mul, ":improvement_cost_original", tier_1_masons_guild_cost_time_reduction),
-          (val_sub, ":improvement_cost", ":improvement_cost_original"),
+################### COST
+     # (try_begin),  
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_masons_guild, 1),
+          # (val_div, ":improvement_cost_original", 100),
+          # (val_mul, ":improvement_cost_original", tier_1_masons_guild_cost_time_reduction),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_masons_guild, 1),
-          (val_div, ":improvement_cost_original", 100),
-          (val_mul, ":improvement_cost_original", tier_2_master_masons_guild_cost_time_reduction),
-          (val_sub, ":improvement_cost", ":improvement_cost_original"),
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_masons_guild, 1),
+          # (val_div, ":improvement_cost_original", 100),
+          # (val_mul, ":improvement_cost_original", tier_2_master_masons_guild_cost_time_reduction),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_masons_guild_hq, 1),
-          (val_div, ":improvement_cost_original", 100),
-          (val_mul, ":improvement_cost_original", tier_3_masons_guild_hq_cost_time_reduction),
-          (val_sub, ":improvement_cost", ":improvement_cost_original"),
-     (try_end),     
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_masons_guild_hq, 1),
+          # (val_div, ":improvement_cost_original", 100),
+          # (val_mul, ":improvement_cost_original", tier_3_masons_guild_hq_cost_time_reduction),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original"),
+     # (try_end),     
      
      
-#################### TOWN ADMINISTRATION BUILDINGS
-#################### TIME
-     (try_begin),  
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 1),
-          (val_div, ":improvement_time_original2", 100),
-          (val_mul, ":improvement_time_original2", tier_1_town_hall_reduce_time_costs),
-          (val_sub, ":improvement_time", ":improvement_time_original2"),
+################### TOWN ADMINISTRATION BUILDINGS
+################### TIME
+     # (try_begin),  
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 1),
+          # (val_div, ":improvement_time_original2", 100),
+          # (val_mul, ":improvement_time_original2", tier_1_town_hall_reduce_time_costs),
+          # (val_sub, ":improvement_time", ":improvement_time_original2"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 1),
-          (val_div, ":improvement_time_original2", 100),
-          (val_mul, ":improvement_time_original2", tier_2_city_hall_reduce_time_costs),
-          (val_sub, ":improvement_time", ":improvement_time_original2"),
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 1),
+          # (val_div, ":improvement_time_original2", 100),
+          # (val_mul, ":improvement_time_original2", tier_2_city_hall_reduce_time_costs),
+          # (val_sub, ":improvement_time", ":improvement_time_original2"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 1),
-          (val_div, ":improvement_time_original2", 100),
-          (val_mul, ":improvement_time_original2", tier_3_governors_palace_reduce_time_costs),
-          (val_sub, ":improvement_time", ":improvement_time_original2"),
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 1),
+          # (val_div, ":improvement_time_original2", 100),
+          # (val_mul, ":improvement_time_original2", tier_3_governors_palace_reduce_time_costs),
+          # (val_sub, ":improvement_time", ":improvement_time_original2"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 1),
-          (val_div, ":improvement_time_original2", 100),
-          (val_mul, ":improvement_time_original2", tier_4_royal_palace_reduce_time_costs),
-          (val_sub, ":improvement_time", ":improvement_time_original2"),
-     (try_end),     
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 1),
+          # (val_div, ":improvement_time_original2", 100),
+          # (val_mul, ":improvement_time_original2", tier_4_royal_palace_reduce_time_costs),
+          # (val_sub, ":improvement_time", ":improvement_time_original2"),
+     # (try_end),     
      
      
-#################### COST
-     (try_begin),  
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 1),
-          (val_div, ":improvement_cost_original2", 100),
-          (val_mul, ":improvement_cost_original2", tier_1_town_hall_reduce_time_costs),
-          (val_sub, ":improvement_cost", ":improvement_cost_original2"),
+################### COST
+     # (try_begin),  
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 1),
+          # (val_div, ":improvement_cost_original2", 100),
+          # (val_mul, ":improvement_cost_original2", tier_1_town_hall_reduce_time_costs),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original2"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 1),
-          (val_div, ":improvement_cost_original2", 100),
-          (val_mul, ":improvement_cost_original2", tier_2_city_hall_reduce_time_costs),
-          (val_sub, ":improvement_cost", ":improvement_cost_original2"),
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 1),
+          # (val_div, ":improvement_cost_original2", 100),
+          # (val_mul, ":improvement_cost_original2", tier_2_city_hall_reduce_time_costs),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original2"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 1),
-          (val_div, ":improvement_cost_original2", 100),
-          (val_mul, ":improvement_cost_original2", tier_3_governors_palace_reduce_time_costs),
-          (val_sub, ":improvement_cost", ":improvement_cost_original2"),
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 1),
+          # (val_div, ":improvement_cost_original2", 100),
+          # (val_mul, ":improvement_cost_original2", tier_3_governors_palace_reduce_time_costs),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original2"),
           
-      (else_try),
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 1),
-          (val_div, ":improvement_cost_original2", 100),
-          (val_mul, ":improvement_cost_original2", tier_4_royal_palace_reduce_time_costs),
-          (val_sub, ":improvement_cost", ":improvement_cost_original2"),
-     (try_end),     
+      # (else_try),
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 1),
+          # (val_div, ":improvement_cost_original2", 100),
+          # (val_mul, ":improvement_cost_original2", tier_4_royal_palace_reduce_time_costs),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original2"),
+     # (try_end),     
      
      
-#################### VILLAGE COUNCIL
-     (try_begin),  
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_village_council_hall, 1),
-          (val_div, ":improvement_time_original3", 100),
-          (val_mul, ":improvement_time_original3", tier_1_village_council_hall_reduction_costs_time),
-          (val_sub, ":improvement_time", ":improvement_time_original3"),
-     (try_end),     
+################### VILLAGE COUNCIL
+     # (try_begin),  
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_village_council_hall, 1),
+          # (val_div, ":improvement_time_original3", 100),
+          # (val_mul, ":improvement_time_original3", tier_1_village_council_hall_reduction_costs_time),
+          # (val_sub, ":improvement_time", ":improvement_time_original3"),
+     # (try_end),     
      
-     (try_begin),  
-        (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_village_council_hall, 1),
-          (val_div, ":improvement_cost_original3", 100),
-          (val_mul, ":improvement_cost_original3", tier_1_village_council_hall_reduction_costs_time),
-          (val_sub, ":improvement_cost", ":improvement_cost_original3"),
-     (try_end),     
+     # (try_begin),  
+        # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_village_council_hall, 1),
+          # (val_div, ":improvement_cost_original3", 100),
+          # (val_mul, ":improvement_cost_original3", tier_1_village_council_hall_reduction_costs_time),
+          # (val_sub, ":improvement_cost", ":improvement_cost_original3"),
+     # (try_end),     
      
 ##############################################################
 
@@ -22350,33 +22348,23 @@ game_menus = [ #
      (try_begin),
        (is_between,  "$current_town", centers_begin, centers_end),
        (try_begin),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_quarters_minor_genoese, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_quarters_major_genoese, 1),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_genoese, 1),
+         (party_slot_ge, "$current_town", slot_center_has_quarters_genoese, 1),
          (str_store_string, s42, "@Genoese crossbowman are stationed here."),
          
        (else_try),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_outpost_minor_crusader_turcopole, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_outpost_large_crusader_turcopole, 1),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_crusader_turcopole, 1),
+         (party_slot_ge, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
          (str_store_string, s43, "@Turkopole mercenaries have a outpost here."),
          
        (else_try),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_minor_georgian, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_large_georgian, 1),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_georgian, 1),
+         (party_slot_ge, "$current_town", slot_center_has_camp_georgian, 1),
          (str_store_string, s44, "@Georgian mercenaries have a camp here."), 
          
        (else_try),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_minor_cuman, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_large_cuman, 1),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_cuman, 1),
+         (party_slot_ge, "$current_town", slot_center_has_camp_cuman, 1),
          (str_store_string, s45, "@Cuman mercenaries have a camp here."), 
          
        (else_try),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_quarters_minor_brabantine, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_quarters_major_brabantine, 1),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_brabantine, 1),
+         (party_slot_ge, "$current_town", slot_center_has_quarters_brabantine, 1),
          (str_store_string, s46, "@Brabantine mercenaries are stationed here."), 
          
        (else_try),
@@ -22388,9 +22376,7 @@ game_menus = [ #
          (str_store_string, s48, "@Maghreb mercenaries often pass-by here."),        
          
        (else_try),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_minor_kwarezmian, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_large_kwarezmian, 1),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kwarezmian, 1),
+         (party_slot_ge, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (str_store_string, s49, "@Kwarezmian mercenaries have a camp here."),    
          
        (else_try),
@@ -22398,15 +22384,11 @@ game_menus = [ #
          (str_store_string, s50, "@Mordovian mercenaries often pass-by here."),    
          
        (else_try),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_minor_kipchak, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_camp_large_kipchak, 1),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kipchak, 1),
+         (party_slot_ge, "$current_town", slot_center_has_camp_kipchak, 1),
          (str_store_string, s51, "@Kipchak mercenaries have a camp here."),    
          
        (else_try),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_outpost_minor_finnish, 1),
-         (this_or_next|party_slot_eq, "$current_town", slot_center_has_outpost_large_finnish, 1),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_finnish, 1),
+         (party_slot_ge, "$current_town", slot_center_has_outpost_finnish, 1),
          (str_store_string, s52, "@Finnish mercenaries have a outpost here."),    
        (try_end),
      (try_end),
@@ -22414,53 +22396,35 @@ game_menus = [ #
      (try_begin),
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
          (try_begin),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_quarters_major_varangian, 1),
-           (party_slot_eq, "$current_town", slot_center_has_quarters_hq_varangian, 1),
+           (party_slot_ge, "$current_town", slot_center_has_quarters_varangian, 1),
            (str_store_string, s53, "@The Varangians are stationed here."),
            
          (else_try),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_minor_teutonic, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_major_teutonic, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
-           (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+           (party_slot_ge, "$current_town", slot_center_has_chapter_teutonic, 1),
            (str_store_string, s54, "@The Teutonic Order is stationed here."),
            
          (else_try),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_minor_hospitaller, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_major_hospitaller, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
-           (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+           (party_slot_ge, "$current_town", slot_center_has_chapter_hospitaller, 1),
            (str_store_string, s55, "@The Hospitalier Order is stationed here."),
            
          (else_try),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_minor_templar, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_major_templar, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_hq_templar, 1),
-           (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+           (party_slot_ge, "$current_town", slot_center_has_chapter_templar, 1),
            (str_store_string, s56, "@The Templar Order is stationed here."),
            
          (else_try),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_lazarus, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_lazarus, 1),
-           (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_lazarus, 1),
+           (party_slot_ge, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
            (str_store_string, s57, "@The Order of Saint Lazarus is stationed here."),
            
          (else_try),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_minor_santiago, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_major_santiago, 1),
-           (party_slot_eq, "$current_town", slot_center_has_chapter_hq_santiago, 1),
+           (party_slot_ge, "$current_town", slot_center_has_chapter_santiago, 1),
            (str_store_string, s58, "@The Order of Santiago is stationed here."),
            
          (else_try),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_minor_calatrava, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_major_calatrava, 1),
-           (party_slot_eq, "$current_town", slot_center_has_chapter_hq_calatrava, 1),
+           (party_slot_ge, "$current_town", slot_center_has_chapter_calatrava, 1),
            (str_store_string, s59, "@The Order of Calatrava is stationed here."),
            
          (else_try),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_thomas, 1),
-           (this_or_next|party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_thomas, 1),
-           (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_thomas, 1),
+           (party_slot_ge, "$current_town", slot_center_has_chapter_saint_thomas, 1),
            (str_store_string, s60, "@The Order of Saint Thomas is stationed here."),    
          (try_end),
      (try_end),
@@ -22658,9 +22622,7 @@ game_menus = [ #
      ("recruit_company_special_genoese",
      [
        (is_between,  "$current_town", towns_begin, towns_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_minor_genoese, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_major_genoese, 1),
-       (party_slot_ge, "$current_town", slot_center_has_quarters_hq_genoese, 1),
+       (party_slot_ge, "$current_town", slot_center_has_quarters_genoese, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_genoese),
@@ -22691,17 +22653,17 @@ game_menus = [ #
              (str_store_string, s4, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
          (str_store_string, s20, "@Genoese Crossbowmen (Normal)"),
          # (assign, "$current_mercs", "pt_company_genoese_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 2),
          (str_store_string, s20, "@Genoese Crossbowmen (Large)"),
          # (assign, "$current_mercs", "pt_company_genoese_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 3),
          (str_store_string, s20, "@Genoese Crossbowmen (Very Large)"),
          # (assign, "$current_mercs", "pt_company_genoese_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -22721,13 +22683,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
          (assign, "$current_mercs", "pt_company_genoese_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 2),
          (assign, "$current_mercs", "pt_company_genoese_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 3),
          (assign, "$current_mercs", "pt_company_genoese_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -22754,9 +22716,7 @@ game_menus = [ #
      ("recruit_company_special_finnish",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_minor_finnish, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_large_finnish, 1),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_major_finnish, 1),
+       (party_slot_ge, "$current_town", slot_center_has_outpost_finnish, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_finnish),
@@ -22787,17 +22747,17 @@ game_menus = [ #
              (str_store_string, s5, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_finnish, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 1),
          (str_store_string, s21, "@Finnish mercenaries (Normal)"),
          # (assign, "$current_mercs", "pt_company_finnish_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_finnish, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 2),
          (str_store_string, s21, "@Finnish mercenaries (Large)"),
          # (assign, "$current_mercs", "pt_company_finnish_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_finnish, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 3),
          (str_store_string, s21, "@Finnish mercenaries (Very Large)"),
          # (assign, "$current_mercs", "pt_company_finnish_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -22817,13 +22777,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_finnish, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 1),
          (assign, "$current_mercs", "pt_company_finnish_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_finnish, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 2),
          (assign, "$current_mercs", "pt_company_finnish_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_finnish, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 3),
          (assign, "$current_mercs", "pt_company_finnish_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -22850,9 +22810,7 @@ game_menus = [ #
      ("recruit_company_special_turcopole",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_minor_crusader_turcopole, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_large_crusader_turcopole, 1),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_major_crusader_turcopole, 1),
+       (party_slot_ge, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_turkopole),
@@ -22883,17 +22841,17 @@ game_menus = [ #
              (str_store_string, s6, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
          (str_store_string, s22, "@Turcopoles (Normal)"),
          #(assign, "$current_mercs", "pt_company_turkopoles_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 2),
          (str_store_string, s22, "@Turcopoles (Large)"),
          #(assign, "$current_mercs", "pt_company_turkopoles_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 3),
          (str_store_string, s22, "@Turcopoles (Very Large)"),
          #(assign, "$current_mercs", "pt_company_turkopoles_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -22913,13 +22871,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
          (assign, "$current_mercs", "pt_company_turkopoles_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 2),
          (assign, "$current_mercs", "pt_company_turkopoles_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 3),
          (assign, "$current_mercs", "pt_company_turkopoles_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -22946,9 +22904,7 @@ game_menus = [ #
      ("recruit_company_special_brabantine",
      [
        (is_between,  "$current_town", towns_begin, towns_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_minor_brabantine, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_major_brabantine, 1),
-       (party_slot_ge, "$current_town", slot_center_has_quarters_hq_brabantine, 1),
+       (party_slot_ge, "$current_town", slot_center_has_quarters_brabantine, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_brabantine),
@@ -22979,17 +22935,17 @@ game_menus = [ #
              (str_store_string, s7, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
          (str_store_string, s23, "@Brabantine mercenaries (Normal)"),
          # (assign, "$current_mercs", "pt_company_brabantine_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 2),
          (str_store_string, s23, "@Brabantine mercenaries (Large)"),
          # (assign, "$current_mercs", "pt_company_brabantine_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 3),
          (str_store_string, s23, "@Brabantine mercenaries (Very Large)"),
          # (assign, "$current_mercs", "pt_company_brabantine_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23009,13 +22965,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
          (assign, "$current_mercs", "pt_company_brabantine_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 2),
          (assign, "$current_mercs", "pt_company_brabantine_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 3),
          (assign, "$current_mercs", "pt_company_brabantine_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23047,9 +23003,7 @@ game_menus = [ #
      ("recruit_company_special_welsh_kern",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_minor_welsh_kern, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_large_welsh_kern, 1),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_major_welsh_kern, 1),
+       (party_slot_ge, "$current_town", slot_center_has_outpost_welsh_kern, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_welsh_kern),
@@ -23080,17 +23034,17 @@ game_menus = [ #
              (str_store_string, s8, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
          (str_store_string, s24, "@Welsh mercenaries (Normal)"),
          # (assign, "$current_mercs", "pt_company_welsh_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 2),
          (str_store_string, s24, "@Welsh mercenaries (Large)"),
          # (assign, "$current_mercs", "pt_company_welsh_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 3),
          (str_store_string, s24, "@Welsh mercenaries (Very Large)"),
          # (assign, "$current_mercs", "pt_company_welsh_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23110,13 +23064,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
          (assign, "$current_mercs", "pt_company_welsh_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 2),
          (assign, "$current_mercs", "pt_company_welsh_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 3),
          (assign, "$current_mercs", "pt_company_welsh_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23145,9 +23099,7 @@ game_menus = [ #
      ("recruit_company_special_gaelic",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_minor_gaelic, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_outpost_large_gaelic, 1),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_major_gaelic, 1),
+       (party_slot_ge, "$current_town", slot_center_has_outpost_gaelic, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_gaelic),
@@ -23178,17 +23130,17 @@ game_menus = [ #
              (str_store_string, s8, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_gaelic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 1),
          (str_store_string, s25, "@Gaelic mercenaries (Normal)"),
          # (assign, "$current_mercs", "pt_generic_gaelic_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_gaelic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 2),
          (str_store_string, s25, "@Gaelic mercenaries (Large)"),
          # (assign, "$current_mercs", "pt_generic_gaelic_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_gaelic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 3),
          (str_store_string, s25, "@Gaelic mercenaries (Very Large)"),
          # (assign, "$current_mercs", "pt_generic_gaelic_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23208,13 +23160,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_gaelic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 1),
          (assign, "$current_mercs", "pt_generic_gaelic_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_gaelic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 2),
          (assign, "$current_mercs", "pt_generic_gaelic_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_gaelic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 3),
          (assign, "$current_mercs", "pt_generic_gaelic_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23244,9 +23196,7 @@ game_menus = [ #
      ("recruit_company_special_cuman",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_minor_cuman, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_large_cuman, 1),
-       (party_slot_ge, "$current_town", slot_center_has_camp_major_cuman, 1),
+       (party_slot_ge, "$current_town", slot_center_has_camp_cuman, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cuman),
@@ -23277,17 +23227,17 @@ game_menus = [ #
              (str_store_string, s8, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
          (str_store_string, s26, "@Cumans (Normal)"),
          # (assign, "$current_mercs", "pt_company_cuman_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 2),
          (str_store_string, s26, "@Cumans (Large)"),
          # (assign, "$current_mercs", "pt_company_cuman_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 3),
          (str_store_string, s26, "@Cumans (Very Large)"),
          # (assign, "$current_mercs", "pt_company_cuman_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23307,13 +23257,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
          (assign, "$current_mercs", "pt_company_cuman_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 2),
          (assign, "$current_mercs", "pt_company_cuman_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 3),
          (assign, "$current_mercs", "pt_company_cuman_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23341,9 +23291,7 @@ game_menus = [ #
      ("recruit_company_special_kipchak",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_minor_kipchak, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_large_kipchak, 1),
-       (party_slot_ge, "$current_town", slot_center_has_camp_major_kipchak, 1),
+       (party_slot_ge, "$current_town", slot_center_has_camp_kipchak, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kipchak),
@@ -23374,17 +23322,17 @@ game_menus = [ #
              (str_store_string, s8, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
          (str_store_string, s27, "@Kipchaks (Normal)"),
          # (assign, "$current_mercs", "pt_company_kipchak_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 2),
          (str_store_string, s27, "@Kipchaks (Large)"),
          # (assign, "$current_mercs", "pt_company_kipchak_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 3),
          (str_store_string, s27, "@Kipchaks (Very Large)"),
          # (assign, "$current_mercs", "pt_company_kipchak_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23404,13 +23352,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
          (assign, "$current_mercs", "pt_company_kipchak_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 2),
          (assign, "$current_mercs", "pt_company_kipchak_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 3),
          (assign, "$current_mercs", "pt_company_kipchak_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23438,9 +23386,7 @@ game_menus = [ #
      ("recruit_company_special_mongol",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_minor_mongol, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_large_mongol, 1),
-       (party_slot_ge, "$current_town", slot_center_has_camp_major_mongol, 1),
+       (party_slot_ge, "$current_town", slot_center_has_camp_mongol, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mongol),
@@ -23471,17 +23417,17 @@ game_menus = [ #
              (str_store_string, s8, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
          (str_store_string, s28, "@Mongols (Normal)"),
          # (assign, "$current_mercs", "pt_company_mongol_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 2),
          (str_store_string, s28, "@Mongols (Large)"),
          # (assign, "$current_mercs", "pt_company_mongol_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 3),
          (str_store_string, s28, "@Mongols (Very Large)"),
          # (assign, "$current_mercs", "pt_company_mongol_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23501,13 +23447,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
          (assign, "$current_mercs", "pt_company_mongol_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 2),
          (assign, "$current_mercs", "pt_company_mongol_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 3),
          (assign, "$current_mercs", "pt_company_mongol_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23536,9 +23482,7 @@ game_menus = [ #
      ("recruit_company_special_georgian",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_minor_georgian, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_large_georgian, 1),
-       (party_slot_ge, "$current_town", slot_center_has_camp_major_georgian, 1),
+       (party_slot_ge, "$current_town", slot_center_has_camp_georgian, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_georgian),
@@ -23569,17 +23513,17 @@ game_menus = [ #
              (str_store_string, s8, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
          (str_store_string, s29, "@Georgians (Normal)"),
          # (assign, "$current_mercs", "pt_company_georgian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 2),
          (str_store_string, s29, "@Georgians (Large)"),
          # (assign, "$current_mercs", "pt_company_georgian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 3),
          (str_store_string, s29, "@Georgians (Very Large)"),
          # (assign, "$current_mercs", "pt_company_georgian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23599,13 +23543,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
          (assign, "$current_mercs", "pt_company_georgian_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 2),
          (assign, "$current_mercs", "pt_company_georgian_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 3),
          (assign, "$current_mercs", "pt_company_georgian_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23635,9 +23579,7 @@ game_menus = [ #
      ("recruit_company_special_kwarezmian",
      [
        (is_between,  "$current_town", centers_begin, centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_minor_kwarezmian, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_camp_large_kwarezmian, 1),
-       (party_slot_ge, "$current_town", slot_center_has_camp_major_kwarezmian, 1),
+       (party_slot_ge, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kwarezmian),
@@ -23668,17 +23610,17 @@ game_menus = [ #
              (str_store_string, s8, "@Cost: {reg8}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (str_store_string, s30, "@Kwarezmians (Normal)"),
          # (assign, "$current_mercs", "pt_company_kwarezmian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 2),
          (str_store_string, s30, "@Kwarezmians (Large)"),
          # (assign, "$current_mercs", "pt_company_kwarezmian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 3),
          (str_store_string, s30, "@Kwarezmians (Very Large)"),
          # (assign, "$current_mercs", "pt_company_kwarezmian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -23698,13 +23640,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (assign, "$current_mercs", "pt_company_kwarezmian_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 2),
          (assign, "$current_mercs", "pt_company_kwarezmian_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 3),
          (assign, "$current_mercs", "pt_company_kwarezmian_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23744,9 +23686,7 @@ game_menus = [ #
      ("recruit_crusaders_teutonic",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_minor_teutonic, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_major_teutonic, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_teutonic, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic),
@@ -23762,22 +23702,22 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (str_store_string, s31, "@The Teutonic Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_teutonic_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 2),
          (str_store_string, s31, "@The Teutonic Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_teutonic_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 3),
          (str_store_string, s31, "@The Teutonic Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_teutonic_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 4),
          (str_store_string, s31, "@The Teutonic Knights (Very Large)"),
          # (assign, "$current_mercs", "pt_company_teutonic_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -23798,16 +23738,16 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (assign, "$current_mercs", "pt_company_teutonic_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 2),
          (assign, "$current_mercs", "pt_company_teutonic_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 3),
          (assign, "$current_mercs", "pt_company_teutonic_3"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 4),
          (assign, "$current_mercs", "pt_company_teutonic_4"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23837,9 +23777,7 @@ game_menus = [ #
      ("recruit_crusaders_templar",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_minor_templar, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_major_templar, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_hq_templar, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_templar, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar),
@@ -23855,22 +23793,22 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (str_store_string, s32, "@The Templar Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_templar_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 2),
          (str_store_string, s32, "@The Templar Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_templar_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 3),
          (str_store_string, s32, "@The Templar Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_templar_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 4),
          (str_store_string, s32, "@The Templar Knights (Very Large)"),
          # (assign, "$current_mercs", "pt_company_templar_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -23891,16 +23829,16 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (assign, "$current_mercs", "pt_company_templar_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 2),
          (assign, "$current_mercs", "pt_company_templar_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 3),
          (assign, "$current_mercs", "pt_company_templar_3"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 4),
          (assign, "$current_mercs", "pt_company_templar_4"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -23930,9 +23868,7 @@ game_menus = [ #
      ("recruit_crusaders_hospitaller",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_minor_hospitaller, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_major_hospitaller, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller),
@@ -23948,22 +23884,22 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (str_store_string, s33, "@The Hospitaller Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 2),
          (str_store_string, s33, "@The Hospitaller Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 3),
          (str_store_string, s33, "@The Hospitaller Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 4),
          (str_store_string, s33, "@The Hospitaller Knights (Very Large)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -23984,16 +23920,16 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (assign, "$current_mercs", "pt_company_hospitaller_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 2),
          (assign, "$current_mercs", "pt_company_hospitaller_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 3),
          (assign, "$current_mercs", "pt_company_hospitaller_3"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 4),
          (assign, "$current_mercs", "pt_company_hospitaller_4"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24020,9 +23956,7 @@ game_menus = [ #
      ("recruit_crusaders_saint_lazarus",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_minor_saint_lazarus, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_major_saint_lazarus, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_hq_saint_lazarus, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_lazarus),
@@ -24038,17 +23972,17 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
          (str_store_string, s34, "@The Saint Lazarus Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 2),
          (str_store_string, s34, "@The Saint Lazarus Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 3),
          (str_store_string, s34, "@The Saint Lazarus Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -24068,13 +24002,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
          (assign, "$current_mercs", "pt_company_saint_lazarus_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 2),
          (assign, "$current_mercs", "pt_company_saint_lazarus_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 3),
          (assign, "$current_mercs", "pt_company_saint_lazarus_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24103,9 +24037,7 @@ game_menus = [ #
      ("recruit_crusaders_santiago",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_minor_santiago, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_major_santiago, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_hq_santiago, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_santiago, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_santiago),
@@ -24121,17 +24053,17 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
          (str_store_string, s35, "@The Santiago Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_santiago_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 2),
          (str_store_string, s35, "@The Santiago Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_santiago_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 3),
          (str_store_string, s35, "@The Santiago Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_santiago_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -24151,13 +24083,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
          (assign, "$current_mercs", "pt_company_santiago_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 2),
          (assign, "$current_mercs", "pt_company_santiago_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 3),
          (assign, "$current_mercs", "pt_company_santiago_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24184,9 +24116,7 @@ game_menus = [ #
      ("recruit_crusaders_calatrava",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_minor_calatrava, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_major_calatrava, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_hq_calatrava, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_calatrava, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_calatrava),
@@ -24202,17 +24132,17 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
          (str_store_string, s36, "@The Calatrava Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_calatrava_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 2),
          (str_store_string, s36, "@The Calatrava Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_calatrava_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 3),
          (str_store_string, s36, "@The Calatrava Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_calatrava_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -24232,13 +24162,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
          (assign, "$current_mercs", "pt_company_calatrava_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 2),
          (assign, "$current_mercs", "pt_company_calatrava_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 3),
          (assign, "$current_mercs", "pt_company_calatrava_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24264,9 +24194,7 @@ game_menus = [ #
      ("recruit_crusaders_saint_thomas",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_minor_saint_thomas, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_major_saint_thomas, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_hq_saint_thomas, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_saint_thomas, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_thomas),
@@ -24282,17 +24210,17 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
          (str_store_string, s37, "@The Saint Thomas Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 2),
          (str_store_string, s37, "@The Saint Thomas Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 3),
          (str_store_string, s37, "@The Saint Thomas Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -24312,13 +24240,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
          (assign, "$current_mercs", "pt_company_saint_thomas_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 2),
          (assign, "$current_mercs", "pt_company_saint_thomas_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 3),
          (assign, "$current_mercs", "pt_company_saint_thomas_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24348,8 +24276,7 @@ game_menus = [ #
      ("recruit_spec2_varangians",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_major_varangian, 1),
-       (party_slot_ge, "$current_town", slot_center_has_quarters_hq_varangian, 1),
+       (party_slot_ge, "$current_town", slot_center_has_quarters_varangian, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_varangian),
@@ -24365,12 +24292,12 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_varangian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 1),
          (str_store_string, s38, "@The Varangians (Normal)"),
          # (assign, "$current_mercs", "pt_company_varangian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_varangian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 2),
          (str_store_string, s38, "@The Varangians (Large)"),
          # (assign, "$current_mercs", "pt_company_varangian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
@@ -24391,10 +24318,10 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_varangian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 1),
          (assign, "$current_mercs", "pt_company_varangian_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_varangian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 2),
          (assign, "$current_mercs", "pt_company_varangian_2"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24421,9 +24348,7 @@ game_menus = [ #
      ("recruit_spec2_cataphract",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_minor_cataphract, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_major_cataphract, 1),
-       (party_slot_ge, "$current_town", slot_center_has_quarters_hq_cataphract, 1),
+       (party_slot_ge, "$current_town", slot_center_has_quarters_cataphract, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cataphract),
@@ -24439,17 +24364,17 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_cataphract, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 1),
          (str_store_string, s39, "@The Cataphracts (Small)"),
          # (assign, "$current_mercs", "pt_company_cataphract_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_cataphract, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 2),
          (str_store_string, s39, "@The Cataphracts (Medium)"),
          # (assign, "$current_mercs", "pt_company_cataphract_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_cataphract, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 3),
          (str_store_string, s39, "@The Cataphracts (Large)"),
          # (assign, "$current_mercs", "pt_company_cataphract_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -24469,13 +24394,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_cataphract, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 1),
          (assign, "$current_mercs", "pt_company_cataphract_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_cataphract, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 2),
          (assign, "$current_mercs", "pt_company_cataphract_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_cataphract, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 3),
          (assign, "$current_mercs", "pt_company_cataphract_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24505,9 +24430,7 @@ game_menus = [ #
      ("recruit_spec2_mamluk",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_minor_mamluk, 1),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_quarters_major_mamluk, 1),
-       (party_slot_ge, "$current_town", slot_center_has_quarters_hq_mamluk, 1),
+       (party_slot_ge, "$current_town", slot_center_has_quarters_mamluk, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mamluk),
@@ -24523,17 +24446,17 @@ game_menus = [ #
            (str_store_string, s9, "@Cost: {reg9}"),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
          (str_store_string, s40, "@The Mamluks (Small)"),
          # (assign, "$current_mercs", "pt_company_mamlukes_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 2),
          (str_store_string, s40, "@The Mamluks (Medium)"),
          # (assign, "$current_mercs", "pt_company_mamlukes_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 3),
          (str_store_string, s40, "@The Mamluks (Large)"),
          # (assign, "$current_mercs", "pt_company_mamlukes_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
@@ -24553,13 +24476,13 @@ game_menus = [ #
        
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
          (assign, "$current_mercs", "pt_company_mamlukes_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 2),
          (assign, "$current_mercs", "pt_company_mamlukes_2"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 3),
          (assign, "$current_mercs", "pt_company_mamlukes_3"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24587,8 +24510,7 @@ game_menus = [ #
      ("recruit_crusader_aux_teutonic",
      [
        (is_between,  "$current_town", towns_begin, towns_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_teutonic, 1),
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
        (ge, ":free_capacity", 30),
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic_aux),
@@ -24613,12 +24535,12 @@ game_menus = [ #
        (str_store_string, s9, "@Cost: {reg9}"),
        
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (str_store_string, s41, "@The Teutonic Knights Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_teutonic_aux_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 
       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 2),
          (str_store_string, s41, "@The Teutonic Knights Auxiliaries (Large)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_teutonic_aux_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (try_end),
@@ -24630,10 +24552,10 @@ game_menus = [ #
        (party_set_slot, "$current_town", slot_spec_mercs_number_teutonic_aux, ":manpower"),
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (assign, "$current_mercs", "pt_company_teutonic_aux_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 2),
          (assign, "$current_mercs", "pt_company_teutonic_aux_2"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24669,8 +24591,7 @@ game_menus = [ #
      ("recruit_crusader_aux_templar",
      [
        (is_between,  "$current_town", towns_begin, towns_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_hq_templar, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_templar, 1),
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
        (ge, ":free_capacity", 30),
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar_aux),
@@ -24695,12 +24616,12 @@ game_menus = [ #
        (str_store_string, s9, "@Cost: {reg9}"),
        
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (str_store_string, s42, "@The Knights Templar Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_templar_aux_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 2),
          (str_store_string, s42, "@The Knights Templar Auxiliaries (Large)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_templar_aux_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (try_end),
@@ -24712,10 +24633,10 @@ game_menus = [ #
        (party_set_slot, "$current_town", slot_spec_mercs_number_templar_aux, ":manpower"),
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (assign, "$current_mercs", "pt_company_templar_aux_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 2),
          (assign, "$current_mercs", "pt_company_templar_aux_2"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -24750,8 +24671,7 @@ game_menus = [ #
      ("recruit_crusader_aux_hospitaller",
      [
        (is_between,  "$current_town", towns_begin, towns_end),
-       (this_or_next|party_slot_ge, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
-       (party_slot_ge, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+       (party_slot_ge, "$current_town", slot_center_has_chapter_hospitaller, 1),
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
        (ge, ":free_capacity", 30),
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller_aux),
@@ -24776,12 +24696,12 @@ game_menus = [ #
        (str_store_string, s9, "@Cost: {reg9}"),
        
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (str_store_string, s43, "@The Knights Hospitaller Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_hospitaller_aux_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 2),
          (str_store_string, s43, "@The Knights Hospitaller Auxiliaries (Large)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_hospitaller_aux_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (try_end),
@@ -24793,10 +24713,10 @@ game_menus = [ #
        (party_set_slot, "$current_town", slot_spec_mercs_number_hospitaller_aux, ":manpower"),
 ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (assign, "$current_mercs", "pt_company_hospitaller_aux_1"),
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 2),
          (assign, "$current_mercs", "pt_company_hospitaller_aux_2"),
        (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -25227,67 +25147,67 @@ game_menus = [ #
         (str_clear, s60),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
          (str_store_string, s50, "@Genoese crossbowmen"),
          # (assign, "$current_mercs", "pt_company_genoese_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
          (str_store_string, s50, "@Genoese crossbowmen"),
          # (assign, "$current_mercs", "pt_company_genoese_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_genoese, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
          (str_store_string, s50, "@Genoese crossbowmen"),
          # (assign, "$current_mercs", "pt_company_genoese_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
          (str_store_string, s51, "@Turkopoles"),
          # (assign, "$current_mercs", "pt_company_turkopoles_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
          (str_store_string, s51, "@Turkopoles"),
          # (assign, "$current_mercs", "pt_company_turkopoles_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_crusader_turcopole, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
          (str_store_string, s51, "@Turkopoles"),
          # (assign, "$current_mercs", "pt_company_turkopoles_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
          (str_store_string, s52, "@Georgians"),
          # (assign, "$current_mercs", "pt_company_georgian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
          (str_store_string, s52, "@Georgians"),
          # (assign, "$current_mercs", "pt_company_georgian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_georgian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
          (str_store_string, s52, "@Georgians"),
          # (assign, "$current_mercs", "pt_company_georgian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
          (str_store_string, s53, "@Cumans"),
          # (assign, "$current_mercs", "pt_company_cuman_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
          (str_store_string, s53, "@Cumans"),
          # (assign, "$current_mercs", "pt_company_cuman_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_cuman, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
          (str_store_string, s53, "@Cumans"),
          # (assign, "$current_mercs", "pt_company_cuman_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
          (str_store_string, s54, "@Brabantines"),
          # (assign, "$current_mercs", "pt_company_brabantine_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
          (str_store_string, s54, "@Brabantines"),
          # (assign, "$current_mercs", "pt_company_brabantine_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_brabantine, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
          (str_store_string, s54, "@Brabantines"),
          # (assign, "$current_mercs", "pt_company_brabantine_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
@@ -25297,28 +25217,28 @@ game_menus = [ #
          # (assign, "$current_mercs", "pt_company_templar_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_minor_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
          (str_store_string, s56, "@Welsh archers"),
          # (assign, "$current_mercs", "pt_company_welsh_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_large_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
          (str_store_string, s56, "@Welsh archers"),
          # (assign, "$current_mercs", "pt_company_welsh_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_major_welsh_kern, 1),
+         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
          (str_store_string, s56, "@Welsh archers"),
          # (assign, "$current_mercs", "pt_company_welsh_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
          (str_store_string, s57, "@Kipchaks"),
          # (assign, "$current_mercs", "pt_company_kipchak_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
          (str_store_string, s57, "@Kipchaks"),
          # (assign, "$current_mercs", "pt_company_kipchak_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kipchak, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
          (str_store_string, s57, "@Kipchaks"),
          # (assign, "$current_mercs", "pt_company_kipchak_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
@@ -25328,28 +25248,28 @@ game_menus = [ #
          # (assign, "$current_mercs", "pt_company_mordovian"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (str_store_string, s59, "@Kwarezmians"),
          # (assign, "$current_mercs", "pt_company_kwarezmian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (str_store_string, s59, "@Kwarezmians"),
          # (assign, "$current_mercs", "pt_company_kwarezmian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_kwarezmian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (str_store_string, s59, "@Kwarezmians"),
          # (assign, "$current_mercs", "pt_company_kwarezmian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_minor_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
          (str_store_string, s60, "@Mongols"),
          # (assign, "$current_mercs", "pt_company_mongol_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_large_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
          (str_store_string, s60, "@Mongols"),
          # (assign, "$current_mercs", "pt_company_mongol_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_major_mongol, 1),
+         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
          (str_store_string, s60, "@Mongols"),
          # (assign, "$current_mercs", "pt_company_mongol_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
@@ -25373,63 +25293,63 @@ game_menus = [ #
           (party_set_slot, "$current_town", slot_spec_mercs1_number, ":mercs_number"),
            (try_begin),
              # (eq, s50, "@Genoese crossbowmen"),
-             (party_slot_eq, "$current_town", slot_center_has_quarters_minor_genoese, 1),
+             (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
              (assign, "$current_mercs", "pt_company_genoese_1"),
            (else_try),
              # (eq, s50, "@Genoese crossbowmen"),
-             (party_slot_eq, "$current_town", slot_center_has_quarters_major_genoese, 1),
+             (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
              (assign, "$current_mercs", "pt_company_genoese_2"),
            (else_try),
              # (eq, s50, "@Genoese crossbowmen"),
-             (party_slot_eq, "$current_town", slot_center_has_quarters_hq_genoese, 1),
+             (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
              (assign, "$current_mercs", "pt_company_genoese_3"),
            (else_try),
              # (eq, s51, "@Turkopoles"),
-             (party_slot_eq, "$current_town", slot_center_has_outpost_minor_crusader_turcopole, 1),
+             (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
              (assign, "$current_mercs", "pt_company_turkopoles_1"),
            (else_try),
              # (eq, s51, "@Turkopoles"),
-             (party_slot_eq, "$current_town", slot_center_has_outpost_large_crusader_turcopole, 1),
+             (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
              (assign, "$current_mercs", "pt_company_turkopoles_2"),
            (else_try),
              # (eq, s51, "@Turkopoles"),
-             (party_slot_eq, "$current_town", slot_center_has_outpost_major_crusader_turcopole, 1),
+             (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
              (assign, "$current_mercs", "pt_company_turkopoles_3"),
            (else_try),
              # (eq, s52, "@Georgians"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_minor_georgian, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
              (assign, "$current_mercs", "pt_company_georgian_1"),
            (else_try),
              # (eq, s52, "@Georgians"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_large_georgian, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
              (assign, "$current_mercs", "pt_company_georgian_2"),
            (else_try),
              # (eq, s52, "@Georgians"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_major_georgian, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
              (assign, "$current_mercs", "pt_company_georgian_3"),
            (else_try),
              # (eq, s53, "@Cumans"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_minor_cuman, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
              (assign, "$current_mercs", "pt_company_cuman_1"),
            (else_try),
              # (eq, s53, "@Cumans"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_large_cuman, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
              (assign, "$current_mercs", "pt_company_cuman_2"),
            (else_try),
              # (eq, s53, "@Cumans"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_major_cuman, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
              (assign, "$current_mercs", "pt_company_cuman_3"),
            (else_try),
              # (eq, s54, "@Brabantines"),
-             (party_slot_eq, "$current_town", slot_center_has_quarters_minor_brabantine, 1),
+             (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
              (assign, "$current_mercs", "pt_company_brabantine_1"),
            (else_try),
              # (eq, s54, "@Brabantines"),
-             (party_slot_eq, "$current_town", slot_center_has_quarters_major_brabantine, 1),
+             (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
              (assign, "$current_mercs", "pt_company_brabantine_2"),
            (else_try),
              # (eq, s54, "@Brabantines"),
-             (party_slot_eq, "$current_town", slot_center_has_quarters_hq_brabantine, 1),
+             (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
              (assign, "$current_mercs", "pt_company_brabantine_3"),
            (else_try),
              # (eq, s55, "@Sicily Muslims"),
@@ -25437,27 +25357,27 @@ game_menus = [ #
              (assign, "$current_mercs", "pt_company_sicily"),
            (else_try),
              # (eq, s56, "@Welsh archers"),
-             (party_slot_eq, "$current_town", slot_center_has_outpost_minor_welsh_kern, 1),
+             (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
              (assign, "$current_mercs", "pt_company_welsh_1"),
            (else_try),
              # (eq, s56, "@Welsh archers"),
-             (party_slot_eq, "$current_town", slot_center_has_outpost_large_welsh_kern, 1),
+             (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
              (assign, "$current_mercs", "pt_company_welsh_2"),
            (else_try),
              # (eq, s56, "@Welsh archers"),
-             (party_slot_eq, "$current_town", slot_center_has_outpost_major_welsh_kern, 1),
+             (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
              (assign, "$current_mercs", "pt_company_welsh_3"),
            (else_try),
              # (eq, s57, "@Kipchaks"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_minor_kipchak, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
              (assign, "$current_mercs", "pt_company_kipchak_1"),
            (else_try),
              # (eq, s57, "@Kipchaks"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_large_kipchak, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
              (assign, "$current_mercs", "pt_company_kipchak_2"),
            (else_try),
              # (eq, s57, "@Kipchaks"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_major_kipchak, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
              (assign, "$current_mercs", "pt_company_kipchak_3"),
            (else_try),
              # (eq, s58, "@Mordovians"),
@@ -25465,27 +25385,27 @@ game_menus = [ #
              (assign, "$current_mercs", "pt_company_mordovian"),
            (else_try),
              # (eq, s59, "@Kwarezmians"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_minor_kwarezmian, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
              (assign, "$current_mercs", "pt_company_kwarezmian_1"),
            (else_try),
              # (eq, s59, "@Kwarezmians"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_large_kwarezmian, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
              (assign, "$current_mercs", "pt_company_kwarezmian_2"),
            (else_try),
              # (eq, s59, "@Kwarezmians"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_major_kwarezmian, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
              (assign, "$current_mercs", "pt_company_kwarezmian_3"),
            (else_try),
              # (eq, s60, "@Mongols"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_minor_mongol, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
              (assign, "$current_mercs", "pt_company_mongol_1"),
            (else_try),
              # (eq, s60, "@Mongols"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_large_mongol, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
              (assign, "$current_mercs", "pt_company_mongol_2"),
            (else_try),
              # (eq, s60, "@Mongols"),
-             (party_slot_eq, "$current_town", slot_center_has_camp_major_mongol, 1),
+             (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
              (assign, "$current_mercs", "pt_company_mongol_3"),
            (try_end),
 ####### NEW v3.0-KOMKE END- 
@@ -25511,127 +25431,127 @@ game_menus = [ #
         (str_clear, s19),
 ############################################
        (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (str_store_string, s11, "@The Knights Templar"),
          # (assign, "$current_mercs", "pt_company_templar_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (str_store_string, s11, "@The Knights Templar"),
          # (assign, "$current_mercs", "pt_company_templar_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (str_store_string, s11, "@The Knights Templar"),
          # (assign, "$current_mercs", "pt_company_templar_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
          (str_store_string, s11, "@The Knights Templar"),
          # (assign, "$current_mercs", "pt_company_templar_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (str_store_string, s12, "@The Knights Hospitalier"),
          # (assign, "$current_mercs", "pt_company_hospitaller_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (str_store_string, s12, "@The Knights Hospitalier"),
          # (assign, "$current_mercs", "pt_company_hospitaller_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (str_store_string, s12, "@The Knights Hospitalier"),
          # (assign, "$current_mercs", "pt_company_hospitaller_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
          (str_store_string, s12, "@The Knights Hospitalier"),
          # (assign, "$current_mercs", "pt_company_hospitaller_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
          (str_store_string, s13, "@The Knights of Saint Lazarus"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
          (str_store_string, s13, "@The Knights of Saint Lazarus"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_lazarus, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
          (str_store_string, s13, "@The Knights of Saint Lazarus"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
          (str_store_string, s14, "@The Knights of Santiago"),
          # (assign, "$current_mercs", "pt_company_santiago_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
          (str_store_string, s14, "@The Knights of Santiago"),
          # (assign, "$current_mercs", "pt_company_santiago_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_santiago, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
          (str_store_string, s14, "@The Knights of Santiago"),
          # (assign, "$current_mercs", "pt_company_santiago_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
          (str_store_string, s15, "@The Knights of Calatrava"),
          # (assign, "$current_mercs", "pt_company_calatrava_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
          (str_store_string, s15, "@The Knights of Calatrava"),
          # (assign, "$current_mercs", "pt_company_calatrava_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_calatrava, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
          (str_store_string, s15, "@The Knights of Calatrava"),
          # (assign, "$current_mercs", "pt_company_calatrava_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
          (str_store_string, s16, "@The Knights of Saint Thomas of Acre"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
          (str_store_string, s16, "@The Knights of Saint Thomas of Acre"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_thomas, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
          (str_store_string, s16, "@The Knights of Saint Thomas of Acre"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_minor_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (str_store_string, s17, "@The Teutonic Knights"),
          # (assign, "$current_mercs", "pt_company_teutonic_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (str_store_string, s17, "@The Teutonic Knights"),
          # (assign, "$current_mercs", "pt_company_teutonic_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (str_store_string, s17, "@The Teutonic Knights"),
          # (assign, "$current_mercs", "pt_company_teutonic_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+         (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
          (str_store_string, s17, "@The Teutonic Knights"),
          # (assign, "$current_mercs", "pt_company_teutonic_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_varangian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 1),
          (str_store_string, s18, "@The Varangians"),
          # (assign, "$current_mercs", "pt_company_varangian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_varangian, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 1),
          (str_store_string, s18, "@The Varangians"),
          # (assign, "$current_mercs", "pt_company_varangian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 ############################################
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_minor_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
          (str_store_string, s19, "@The Mamlukes"),
          # (assign, "$current_mercs", "pt_company_mamlukes_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_major_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
          (str_store_string, s19, "@The Mamlukes"),
          # (assign, "$current_mercs", "pt_company_mamlukes_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_hq_mamluk, 1),
+         (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
          (str_store_string, s19, "@The Mamlukes"),
          # (assign, "$current_mercs", "pt_company_mamlukes_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (try_end),
@@ -25655,119 +25575,119 @@ game_menus = [ #
         (party_set_slot, "$current_town", slot_spec_mercs2_number, ":mercs_number"),
         (try_begin),
             # (eq, s11, "@The Knights Templar"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_minor_templar, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
             (assign, "$current_mercs", "pt_company_templar_1"),
         (else_try),
             # (eq, s11, "@The Knights Templar"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_templar, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
             (assign, "$current_mercs", "pt_company_templar_2"),
         (else_try),
             # (eq, s11, "@The Knights Templar"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_hq_templar, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
             (assign, "$current_mercs", "pt_company_templar_3"),
         (else_try),
             # (eq, s11, "@The Knights Templar"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_templar, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
             (assign, "$current_mercs", "pt_company_templar_4"),
         (else_try),
             # (eq, s12, "@The Knights Hospitalier"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_minor_hospitaller, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
             (assign, "$current_mercs", "pt_company_hospitaller_1"),
         (else_try),
             # (eq, s12, "@The Knights Hospitalier"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_hospitaller, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
             (assign, "$current_mercs", "pt_company_hospitaller_2"),
         (else_try),
             # (eq, s12, "@The Knights Hospitalier"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_hq_hospitaller, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
             (assign, "$current_mercs", "pt_company_hospitaller_3"),
         (else_try),
             # (eq, s12, "@The Knights Hospitalier"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_hospitaller, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
             (assign, "$current_mercs", "pt_company_hospitaller_4"),
         (else_try),
             # (eq, s13, "@The Knights of Saint Lazarus"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_lazarus, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
             (assign, "$current_mercs", "pt_company_saint_lazarus_1"),
         (else_try),
             # (eq, s13, "@The Knights of Saint Lazarus"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_lazarus, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
             (assign, "$current_mercs", "pt_company_saint_lazarus_2"),
         (else_try),
             # (eq, s13, "@The Knights of Saint Lazarus"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_lazarus, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
             (assign, "$current_mercs", "pt_company_saint_lazarus_3"),
         (else_try),
             # (eq, s14, "@The Knights of Santiago"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_minor_santiago, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
             (assign, "$current_mercs", "pt_company_santiago_1"),
         (else_try),
             # (eq, s14, "@The Knights of Santiago"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_santiago, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
             (assign, "$current_mercs", "pt_company_santiago_2"),
         (else_try),
             # (eq, s14, "@The Knights of Santiago"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_hq_santiago, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
             (assign, "$current_mercs", "pt_company_santiago_3"),
         (else_try),
             # (eq, s15, "@The Knights of Calatrava"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_minor_calatrava, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
             (assign, "$current_mercs", "pt_company_calatrava_1"),
         (else_try),
             # (eq, s15, "@The Knights of Calatrava"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_calatrava, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
             (assign, "$current_mercs", "pt_company_calatrava_2"),
         (else_try),
             # (eq, s15, "@The Knights of Calatrava"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_hq_calatrava, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
             (assign, "$current_mercs", "pt_company_calatrava_3"),
         (else_try),
             # (eq, s16, "@The Knights of Saint Thomas of Acre"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_minor_saint_thomas, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
             (assign, "$current_mercs", "pt_company_saint_thomas_1"),
         (else_try),
             # (eq, s16, "@The Knights of Saint Thomas of Acre"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_saint_thomas, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
             (assign, "$current_mercs", "pt_company_saint_thomas_2"),
         (else_try),
             # (eq, s16, "@The Knights of Saint Thomas of Acre"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_hq_saint_thomas, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
             (assign, "$current_mercs", "pt_company_saint_thomas_3"),
         (else_try),
             # (eq, s17, "@The Teutonic Knights"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_minor_teutonic, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
             (assign, "$current_mercs", "pt_company_teutonic_1"),
         (else_try),
             # (eq, s17, "@The Teutonic Knights"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_teutonic, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
             (assign, "$current_mercs", "pt_company_teutonic_2"),
         (else_try),
             # (eq, s17, "@The Teutonic Knights"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_hq_teutonic, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
             (assign, "$current_mercs", "pt_company_teutonic_3"),
         (else_try),
             # (eq, s17, "@The Teutonic Knights"),
-            (party_slot_eq, "$current_town", slot_center_has_chapter_major_hq_teutonic, 1),
+            (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
             (assign, "$current_mercs", "pt_company_teutonic_4"),
         (else_try),
             # (eq, s18, "@The Varangians"),
-            (party_slot_eq, "$current_town", slot_center_has_quarters_major_varangian, 1),
+            (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 1),
             (assign, "$current_mercs", "pt_company_varangian_1"),
         (else_try),
             # (eq, s18, "@The Varangians"),
-            (party_slot_eq, "$current_town", slot_center_has_quarters_hq_varangian, 1),
+            (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 1),
             (assign, "$current_mercs", "pt_company_varangian_2"),
         (else_try),
             # (eq, s19, "@The Mamlukes"),
-            (party_slot_eq, "$current_town", slot_center_has_quarters_minor_mamluk, 1),
+            (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
             (assign, "$current_mercs", "pt_company_mamlukes_1"),
         (else_try),
             # (eq, s19, "@The Mamlukes"),
-            (party_slot_eq, "$current_town", slot_center_has_quarters_major_mamluk, 1),
+            (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
             (assign, "$current_mercs", "pt_company_mamlukes_2"),
         (else_try),
             # (eq, s19, "@The Mamlukes"),
-            (party_slot_eq, "$current_town", slot_center_has_quarters_hq_mamluk, 1),
+            (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
             (assign, "$current_mercs", "pt_company_mamlukes_3"),
         (try_end),
         (call_script, "script_fill_company_new", "$current_town", "$current_town", "$current_mercs"),
@@ -26956,11 +26876,9 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_town_27_1"),
 
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_merchants_wharf, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_warehouse, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_docklands, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_docks, 0)
                                        ],
-       "Build a Merchant's Warf.",[(assign, "$g_improvement_type", slot_center_has_tier_1_merchants_wharf),
+       "Build a Merchant's Warf.",[(assign, "$g_improvement_type", slot_center_tier_docks),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27013,11 +26931,9 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_town_27_1"),
 
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_merchants_wharf, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_warehouse, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_docklands, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_docks, 1),
                                        ],
-       "Build a Warehouse.",[(assign, "$g_improvement_type", slot_center_has_tier_2_warehouse),
+       "Build a Warehouse.",[(assign, "$g_improvement_type", slot_center_tier_docks),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27069,11 +26985,9 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_town_27_1"),
 
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_merchants_wharf, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_warehouse, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_docklands, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_docks, 2),
                                        ],
-       "Build Docklands.",[(assign, "$g_improvement_type", slot_center_has_tier_3_docklands),
+       "Build Docklands.",[(assign, "$g_improvement_type", slot_center_tier_docks),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27085,22 +26999,18 @@ game_menus = [ #
        ("center_build_merchants_guild",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_merchants_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_merchants_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_merchants_guild_hq, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_merchants_guild, 1),
                                        ],
-       "Build a Merchant's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_1_merchants_guild),
+       "Build a Merchant's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_tier_merchants_guild),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
        ("center_build_master_merchants_guild",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_merchants_guild, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_merchants_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_merchants_guild_hq, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_merchants_guild, 2),
                                        ],
-       "Build a Master Merchant's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_2_master_merchants_guild),
+       "Build a Master Merchant's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_tier_merchants_guild),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27108,11 +27018,9 @@ game_menus = [ #
        ("center_build_hq_merchants_guild",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_merchants_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_merchants_guild, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_merchants_guild_hq, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_merchants_guild, 3),
                                        ],
-       "Build a Merchant's Guild HQ.",[(assign, "$g_improvement_type", slot_center_has_tier_3_merchants_guild_hq),
+       "Build a Merchant's Guild HQ.",[(assign, "$g_improvement_type", slot_center_tier_merchants_guild),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27128,22 +27036,18 @@ game_menus = [ #
        ("center_build_masons_guild",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_masons_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_masons_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_masons_guild_hq, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_masons_guild, 0),
                                        ],
-       "Build a Mason's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_1_masons_guild),
+       "Build a Mason's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_masons_guild),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
        ("center_build_master_masons_guild",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_masons_guild, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_masons_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_masons_guild_hq, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_masons_guild, 1),
                                        ],
-       "Build a Master Mason's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_2_master_masons_guild),
+       "Build a Master Mason's Guild Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_masons_guild),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27151,11 +27055,9 @@ game_menus = [ #
        ("center_build_hq_masons_guild",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_masons_guild, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_master_masons_guild, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_masons_guild_hq, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_masons_guild, 2),
                                        ],
-       "Build a Mason's Guild HQ.",[(assign, "$g_improvement_type", slot_center_has_tier_3_masons_guild_hq),
+       "Build a Mason's Guild HQ.",[(assign, "$g_improvement_type", slot_center_has_tier_masons_guild),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27169,22 +27071,18 @@ game_menus = [ #
        ("center_build_fairground",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_fairground, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_great_market, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_merchants_quarter, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_market, 0),
                                        ],
-       "Build a Fairground.",[(assign, "$g_improvement_type", slot_center_has_tier_1_fairground),
+       "Build a Fairground.",[(assign, "$g_improvement_type", slot_center_has_tier_market),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
        ("center_build_great_market",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_fairground, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_great_market, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_merchants_quarter, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_market, 1),
                                        ],
-       "Build a Great Market.",[(assign, "$g_improvement_type", slot_center_has_tier_2_great_market),
+       "Build a Great Market.",[(assign, "$g_improvement_type", slot_center_has_tier_market),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
 
@@ -27192,11 +27090,9 @@ game_menus = [ #
        ("center_build_merchants_quarter",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_fairground, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_great_market, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_merchants_quarter, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_market, 2),
                                        ],
-       "Build a Merchant's Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_3_merchants_quarter),
+       "Build a Merchant's Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_market),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27239,12 +27135,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_land_clearance, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_communal_farming, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_crop_rotation, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_irrigation, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_farm, 0),
                                        ],
-       "Develop Land Clearance.",[(assign, "$g_improvement_type", slot_center_has_tier_1_land_clearance),
+       "Develop Land Clearance.",[(assign, "$g_improvement_type", slot_center_has_tier_farm),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27253,12 +27146,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_land_clearance, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_communal_farming, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_crop_rotation, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_irrigation, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_farm, 1),
                                        ],
-       "Develop Communal Farming.",[(assign, "$g_improvement_type", slot_center_has_tier_2_communal_farming),
+       "Develop Communal Farming.",[(assign, "$g_improvement_type", slot_center_has_tier_farm),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
 
@@ -27268,12 +27158,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_land_clearance, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_communal_farming, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_crop_rotation, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_irrigation, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_farm, 2),
                                        ],
-       "Develop Crop Rotation.",[(assign, "$g_improvement_type", slot_center_has_tier_3_crop_rotation),
+       "Develop Crop Rotation.",[(assign, "$g_improvement_type", slot_center_has_tier_farm),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
 
@@ -27284,12 +27171,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_land_clearance, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_communal_farming, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_crop_rotation, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_irrigation, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_farm, 3),
                                        ],
-       "Develop Irrigation.",[(assign, "$g_improvement_type", slot_center_has_tier_4_irrigation),
+       "Develop Irrigation.",[(assign, "$g_improvement_type", slot_center_has_tier_farm),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
 ################################################
@@ -27323,12 +27207,9 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_town_hall, 0),
                                        ],
-       "Build a Town Hall.",[(assign, "$g_improvement_type", slot_center_has_tier_1_town_hall),
+       "Build a Town Hall.",[(assign, "$g_improvement_type", slot_center_tier_town_hall),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27336,12 +27217,9 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_town_hall, 1),
                                        ],
-       "Build a City Hall.",[(assign, "$g_improvement_type", slot_center_has_tier_2_city_hall),
+       "Build a City Hall.",[(assign, "$g_improvement_type", slot_center_tier_town_hall),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27350,12 +27228,9 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_town_hall, 0),
                                        ],
-       "Build a Governors Palace.",[(assign, "$g_improvement_type", slot_center_has_tier_3_governors_palace),
+       "Build a Governors Palace.",[(assign, "$g_improvement_type", slot_center_tier_town_hall),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27364,21 +27239,18 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_town_hall, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_city_hall, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_governors_palace, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_royal_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_town_hall, 0),
                                        ],
-       "Build a Royal Palace.",[(assign, "$g_improvement_type", slot_center_has_tier_4_royal_palace),
+       "Build a Royal Palace.",[(assign, "$g_improvement_type", slot_center_tier_town_hall),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
                                                                     
        ("center_build_village_council_hall",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_village_council_hall, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_town_hall, 1),
                                        ],
-       "Build a Village Council Hall.",[(assign, "$g_improvement_type", slot_center_has_tier_1_village_council_hall),
+       "Build a Village Council Hall.",[(assign, "$g_improvement_type", slot_center_tier_town_hall),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -27403,1536 +27275,13 @@ game_menus = [ #
                                       (this_or_next|faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_orthodox),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_religious_building, 0),
                                       
                                        ],
                                       
-       "Build a small Church.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_church),
+       "Build a small Church.",[(assign, "$g_improvement_type", slot_center_tier_religious_building),
                                   (jump_to_menu, "mnu_center_improve"),]),
                                   
-                                  
-                                  
-                                  
-       ("center_build_small_masjid",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a small Masjid.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_masjid),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_small_balt_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_balt),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a small Balt Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_balt_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_small_mongol_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_mongol),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a small Mongol Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_mongol_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_small_satan_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_heretic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a small Satanist Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_satan_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_small_nordic_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a small Nordic Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_nordic_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-################################################
-
-
-
-
-######################## TIER 2
-       ("center_build_church",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (this_or_next|faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_orthodox),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Church.",[(assign, "$g_improvement_type", slot_center_has_tier_2_church),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-                                  
-                                  
-                                  
-                                  
-       ("center_build_masjid",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Masjid.",[(assign, "$g_improvement_type", slot_center_has_tier_2_masjid),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_balt_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_balt),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Balt Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_2_balt_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_mongol_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_mongol),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Mongol Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_2_mongol_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_satan_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_heretic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Satanist Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_2_satan_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_nordic_temple",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-                                      
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 1),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Nordic Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_2_nordic_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-################################################
-                                  
-
-
-                                  
-######################## TIER 3
-       ("center_build_abbey",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (this_or_next|faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_orthodox),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Abbey.",[(assign, "$g_improvement_type", slot_center_has_tier_3_abbey),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-                                  
-                                  
-                                  
-                                  
-       ("center_build_minaret",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Minaret.",[(assign, "$g_improvement_type", slot_center_has_tier_3_minaret),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_large_balt_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_balt),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Large Balt Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_3_large_balt_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_large_mongol_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_mongol),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Large Mongol Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_3_large_mongol_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_large_satan_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_heretic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a large Satanist Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_3_large_satan_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_large_nordic_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 1),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a large Nordic Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_3_large_nordic_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-################################################
-                                  
-                                  
-                                  
-
-
-                                  
-######################## TIER 4
-       ("center_build_cathedral",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (this_or_next|faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_orthodox),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Cathedral.",[(assign, "$g_improvement_type", slot_center_has_tier_4_cathedral),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-                                  
-                                  
-                                  
-                                  
-       ("center_build_jama",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Jama.",[(assign, "$g_improvement_type", slot_center_has_tier_4_jama),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_balt_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_balt),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a huge Balt Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_4_huge_balt_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_mongol_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_mongol),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a huge Mongol Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_4_huge_mongol_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_satan_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_heretic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a huge Satanist Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_4_huge_satan_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_nordic_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 1),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a huge Nordic Pagan Temple.",[(assign, "$g_improvement_type", slot_center_has_tier_4_huge_nordic_temple),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-################################################
-                                  
-                                  
-                                  
-                                  
-                                  
-
-
-                                  
-######################## TIER 5
-       ("center_build_huge_cathedral",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (this_or_next|faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_orthodox),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a huge Cathedral.",[(assign, "$g_improvement_type", slot_center_has_tier_5_huge_cathedral),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_jama",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a huge Jama.",[(assign, "$g_improvement_type", slot_center_has_tier_5_great_jama),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_balt_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_balt),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Great Temple of Dievas.",[(assign, "$g_improvement_type", slot_center_has_tier_5_great_temple_of_dievas),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_mongol_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_mongol),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Great Temple of Tengri.",[(assign, "$g_improvement_type", slot_center_has_tier_5_great_temple_of_tengri),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_satan_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_heretic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Great Synagogue of Satan.",[(assign, "$g_improvement_type", slot_center_has_tier_5_great_synagogue_of_satan),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
-
-                                  
-                                  
-                                  
-                                  
-       ("center_build_huge_nordic_temple",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-                                      (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_church, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_masjid, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_minaret, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_large_nordic_temple, 0),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_balt_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_mongol_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_satan_temple, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_huge_nordic_temple, 1),
-                                      
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_jama, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_dievas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_tengri, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_synagogue_of_satan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_great_temple_of_odin, 0),
-                                      
-                                       ],
-                                      
-       "Build a Great Temple of Odin.",[(assign, "$g_improvement_type", slot_center_has_tier_5_great_temple_of_odin),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-
 ################################################
                                   
                                   
@@ -28952,16 +27301,10 @@ game_menus = [ #
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
                                       
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_college_of_surgeons, 0),
-
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_great_bimaristan, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_hospital, 0),
 
                                        ],
-       "Build a small Hospital.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_hospital),
+       "Build a small Hospital.",[(assign, "$g_improvement_type", slot_center_tier_hospital),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                             
@@ -28979,16 +27322,10 @@ game_menus = [ #
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
                                       
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_hospital, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_college_of_surgeons, 0),
-
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_great_bimaristan, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_hospital, 1),
 
                                        ],
-       "Build a Hospital.",[(assign, "$g_improvement_type", slot_center_has_tier_2_hospital),
+       "Build a Hospital.",[(assign, "$g_improvement_type", slot_center_tier_hospital),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                             
@@ -29006,16 +27343,9 @@ game_menus = [ #
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
                                       
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_hospital, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_college_of_surgeons, 0),
-
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_great_bimaristan, 0),
-
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_hospital, 2),
                                        ],
-       "Build a College of Surgeons.",[(assign, "$g_improvement_type", slot_center_has_tier_3_college_of_surgeons),
+       "Build a College of Surgeons.",[(assign, "$g_improvement_type", slot_center_tier_hospital),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
 
@@ -29029,16 +27359,10 @@ game_menus = [ #
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_college_of_surgeons, 0),
-
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_great_bimaristan, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_hospital, 3),
 
                                        ],
-       "Build a small Bimaristan.",[(assign, "$g_improvement_type", slot_center_has_tier_1_small_bimaristan),
+       "Build a small Bimaristan.",[(assign, "$g_improvement_type", slot_center_tier_hospital),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -29050,16 +27374,10 @@ game_menus = [ #
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_college_of_surgeons, 0),
-
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_bimaristan, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_great_bimaristan, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_hospital, 4),
 
                                        ],
-       "Build a Bimaristan.",[(assign, "$g_improvement_type", slot_center_has_tier_2_bimaristan),
+       "Build a Bimaristan.",[(assign, "$g_improvement_type", slot_center_tier_hospital),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                               
@@ -29071,16 +27389,10 @@ game_menus = [ #
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_hospital, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_college_of_surgeons, 0),
-
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_small_bimaristan, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_bimaristan, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_great_bimaristan, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_hospital, 5),
 
                                        ],
-       "Build a great Bimaristan.",[(assign, "$g_improvement_type", slot_center_has_tier_3_great_bimaristan),
+       "Build a great Bimaristan.",[(assign, "$g_improvement_type", slot_center_tier_hospital),
                                   (jump_to_menu, "mnu_center_improve"),]),
                                   
 ################################################
@@ -29168,13 +27480,10 @@ game_menus = [ #
                                       # (this_or_next|faction_slot_eq, ":fief_faction", slot_faction_religion, religion_heretic),
                                       # (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_brothel, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_coaching_house, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_wayfarers_rest, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_pleasure_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_brothel, 0),
 
                                        ],
-       "Build a Brothel.",[(assign, "$g_improvement_type", slot_center_has_tier_1_brothel),
+       "Build a Brothel.",[(assign, "$g_improvement_type", slot_center_tier_brothel),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                                   
@@ -29191,13 +27500,10 @@ game_menus = [ #
                                       (this_or_next|faction_slot_eq, ":fief_faction", slot_faction_religion, religion_heretic),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_pagan_nordic),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_brothel, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_coaching_house, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_wayfarers_rest, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_pleasure_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_brothel, 1),
 
                                        ],
-       "Build a Coaching House.",[(assign, "$g_improvement_type", slot_center_has_tier_2_coaching_house),
+       "Build a Coaching House.",[(assign, "$g_improvement_type", slot_center_tier_brothel),
                                   (jump_to_menu, "mnu_center_improve"),]),
                               
                     
@@ -29208,13 +27514,10 @@ game_menus = [ #
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_brothel, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_coaching_house, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_wayfarers_rest, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_pleasure_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_brothel, 2),
 
                                        ],
-       "Build a Wayfarer's Rest.",[(assign, "$g_improvement_type", slot_center_has_tier_2_wayfarers_rest),
+       "Build a Wayfarer's Rest.",[(assign, "$g_improvement_type", slot_center_tier_brothel),
                                   (jump_to_menu, "mnu_center_improve"),]),
                                   
                                   
@@ -29223,13 +27526,10 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_brothel, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_coaching_house, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_wayfarers_rest, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_pleasure_palace, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_brothel, 3),
 
                                        ],
-       "Build a Pleasure Palace.",[(assign, "$g_improvement_type", slot_center_has_tier_3_pleasure_palace),
+       "Build a Pleasure Palace.",[(assign, "$g_improvement_type", slot_center_tier_brothel),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                     
@@ -29244,11 +27544,10 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_improved_school, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_university, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_school, 0),
 
                                        ],
-       "Build a Improved School.",[(assign, "$g_improvement_type", slot_center_has_tier_1_improved_school),
+       "Build a Improved School.",[(assign, "$g_improvement_type", slot_center_tier_school),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29257,11 +27556,10 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_improved_school, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_university, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_school, 1),
 
                                        ],
-       "Build a University.",[(assign, "$g_improvement_type", slot_center_has_tier_2_university),
+       "Build a University.",[(assign, "$g_improvement_type", slot_center_tier_school),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29279,17 +27577,10 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 0),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_1_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29298,17 +27589,10 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 1),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_2_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29319,17 +27603,10 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 2),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_3_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29340,17 +27617,10 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 3),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_4_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29361,17 +27631,10 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 4),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_5_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29381,17 +27644,10 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 5),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_6_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29401,17 +27657,10 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 6),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_7_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29421,17 +27670,10 @@ game_menus = [ #
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_6_housing_town, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_7_housing_town, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_8_housing_town, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_housing, 7),
 
                                        ],
-       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_has_tier_8_housing_town),
+       "Improve Housing.",[(assign, "$g_improvement_type", slot_center_tier_housing),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
                 
@@ -29478,38 +27720,15 @@ game_menus = [ #
        (eq, reg6, 0),
        (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
        (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
+       (party_slot_ge, "$g_encountered_party", slot_center_tier_religious_building, 3),
        
-       (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-       (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_teutonic, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_templar, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_hospitaller, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_lazarus, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_santiago, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_calatrava, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_thomas, 0),
-
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_teutonic, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_templar, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hospitaller, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_lazarus, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_santiago, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_calatrava, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_thomas, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_teutonic, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_templar, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_hospitaller, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_lazarus, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_santiago, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_calatrava, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_thomas, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_teutonic, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_templar, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_hospitaller, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_teutonic, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_templar, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hospitaller, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_saint_lazarus, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_santiago, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_calatrava, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_saint_thomas, 0),
        (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
        (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
        
@@ -29526,25 +27745,11 @@ game_menus = [ #
        (eq, reg6, 0),
        (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
        (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_genoese, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_genoese, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_genoese, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_brabantine, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_brabantine, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_brabantine, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_mamluk, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_mamluk, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_mamluk, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_cataphract, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_cataphract, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_cataphract, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_varangian, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_varangian, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_varangian, 0),
        ],
        "Build mercenary quarters.",[(jump_to_menu, "mnu_merc_quarter_select"),]
        ),
@@ -29562,26 +27767,11 @@ game_menus = [ #
        (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
        (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
        
-              
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_cuman, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_cuman, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_cuman, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kipchak, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kipchak, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kipchak, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_mongol, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_mongol, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_mongol, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_georgian, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_georgian, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_georgian, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kwarezmian, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kwarezmian, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kwarezmian, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
        # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
        # (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
        
@@ -29599,26 +27789,10 @@ game_menus = [ #
        (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
        (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
        (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_crusader_turcopole, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_crusader_turcopole, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_crusader_turcopole, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_finnish, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_finnish, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_finnish, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_welsh_kern, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_welsh_kern, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_welsh_kern, 0),
-       
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_gaelic, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_gaelic, 0),
-       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_gaelic, 0),
-       
-       # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
-       # (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_catholic),
-       
+       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
+       (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
        ],
        "Build a mercenary outpost.",[(jump_to_menu, "mnu_merc_outpost_select"),]),
        
@@ -29635,12 +27809,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_garrison_quarters, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_drill_square, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_barracks, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_armoury, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_garrison_quarters, 0),
                                        ],
-       "Build a Garrison Quarters.",[(assign, "$g_improvement_type", slot_center_has_tier_1_garrison_quarters),
+       "Build a Garrison Quarters.",[(assign, "$g_improvement_type", slot_center_tier_garrison_quarters),
                                   (jump_to_menu, "mnu_center_improve"),]),
                  
       
@@ -29648,12 +27819,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_garrison_quarters, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_drill_square, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_barracks, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_armoury, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_garrison_quarters, 1),
                                        ],
-       "Build a Drill Square.",[(assign, "$g_improvement_type", slot_center_has_tier_2_drill_square),
+       "Build a Drill Square.",[(assign, "$g_improvement_type", slot_center_tier_garrison_quarters),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
                  
@@ -29662,12 +27830,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_garrison_quarters, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_drill_square, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_barracks, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_armoury, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_garrison_quarters, 2),
                                        ],
-       "Build a Barracks.",[(assign, "$g_improvement_type", slot_center_has_tier_3_barracks),
+       "Build a Barracks.",[(assign, "$g_improvement_type", slot_center_tier_garrison_quarters),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -29676,12 +27841,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_garrison_quarters, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_drill_square, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_barracks, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_armoury, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_garrison_quarters, 3),
                                        ],
-       "Build a Armoury.",[(assign, "$g_improvement_type", slot_center_has_tier_4_armoury),
+       "Build a Armoury.",[(assign, "$g_improvement_type", slot_center_tier_garrison_quarters),
                                   (jump_to_menu, "mnu_center_improve"),]),
 ################################################
 
@@ -29751,10 +27913,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_training_grounds, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_training_facilities, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_training_grounds, 0),
                                        ],
-       "Build Training Grounds.",[(assign, "$g_improvement_type", slot_center_has_tier_1_training_grounds),
+       "Build Training Grounds.",[(assign, "$g_improvement_type", slot_center_tier_training_grounds),
                                   (jump_to_menu, "mnu_center_improve"),]),
                  
       
@@ -29762,10 +27923,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_1_training_grounds, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_2_training_facilities, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_training_grounds, 1),
                                        ],
-       "Build Training Facilities.",[(assign, "$g_improvement_type", slot_center_has_tier_2_training_facilities),
+       "Build Training Facilities.",[(assign, "$g_improvement_type", slot_center_tier_training_grounds),
                                   (jump_to_menu, "mnu_center_improve"),]),
 
 
@@ -29861,400 +28021,13 @@ game_menus = [ #
        ("center_build_chapter_minor_teutonic",[(eq, reg6, 0),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_teutonic, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_teutonic, 0),
+                                      # (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
                                        ],
-       "Build a minor Teutonic chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_minor_teutonic),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_minor_templar",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_templar, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a minor Templar chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_minor_templar),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_minor_hospitaller",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_hospitaller, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a minor Hospitaller chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_minor_hospitaller),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_minor_saint_lazarus",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_lazarus, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_lazarus, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_lazarus, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a minor Saint Lazarus chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_minor_saint_lazarus),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_minor_santiago",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_santiago, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_santiago, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_santiago, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a minor Santiago chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_minor_santiago),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-        
-        
-       ("center_build_chapter_minor_calatrava",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_calatrava, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_calatrava, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_calatrava, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a minor Calatrava chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_minor_calatrava),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-              
-        
-       ("center_build_chapter_minor_saint_thomas",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_thomas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_thomas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_thomas, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a minor Saint_Thomas chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_minor_saint_thomas),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-                    
-        ############# TIER 2
-       ("center_build_chapter_major_teutonic",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_teutonic, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_teutonic, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Teutonic chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_teutonic),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_major_templar",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_templar, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_templar, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Templar chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_templar),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_major_hospitaller",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_hospitaller, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_hospitaller, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Hospitaller chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_hospitaller),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-      
-      
-       ("center_build_chapter_major_saint_lazarus",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_lazarus, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_lazarus, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_lazarus, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Saint Lazarus chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_saint_lazarus),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-      
-      
-       ("center_build_chapter_major_santiago",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_santiago, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_santiago, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_santiago, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Santiago chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_santiago),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-      
-      
-       ("center_build_chapter_major_calatrava",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_calatrava, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_calatrava, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_calatrava, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Calatrava chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_calatrava),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-      
-      
-       ("center_build_chapter_major_saint_thomas",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_thomas, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_thomas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_thomas, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Saint Thomas chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_saint_thomas),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-                    
-                
-       ############# TIER 3
-       ("center_build_chapter_hq_teutonic",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_teutonic, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_teutonic, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Teutonic Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_teutonic),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_hq_templar",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_templar, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_templar, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Templar Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_templar),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_hq_hospitaller",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hospitaller, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_hospitaller, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Hospitaller HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_hospitaller),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_hq_saint_lazarus",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_lazarus, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_lazarus, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_lazarus, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Saint Lazarus Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_saint_lazarus),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_hq_santiago",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_santiago, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_santiago, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_santiago, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Santiago Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_santiago),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_hq_teutonic",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_teutonic, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_teutonic, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Teutonic Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_teutonic),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_hq_calatrava",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_calatrava, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_calatrava, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_calatrava, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Calatrava Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_calatrava),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_hq_saint_thomas",[(eq, reg6, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_saint_thomas, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_saint_thomas, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_saint_thomas, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a Saint Thomas Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_hq_saint_thomas),
+       "Build a minor Teutonic chapter.",[(assign, "$g_improvement_type", slot_center_has_chapter_teutonic),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
 
-      
-      
-       ############# TIER 4
-       ("center_build_chapter_major_hq_teutonic",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_teutonic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_teutonic, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_teutonic, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Teutonic Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_hq_teutonic),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_major_hq_templar",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_templar, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_templar, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_templar, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Templar Order HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_hq_templar),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
-      
-       ("center_build_chapter_major_hq_hospitaller",[(eq, reg6, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
-                                      # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle), #only for towns
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_minor_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hospitaller, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_hq_hospitaller, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_chapter_major_hq_hospitaller, 0),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_3_abbey, 1),
-                                      (this_or_next|party_slot_eq, "$g_encountered_party", slot_center_has_tier_4_cathedral, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_tier_5_huge_cathedral, 1),
-                                       ],
-       "Build a major Hospitaller HQ.",[(assign, "$g_improvement_type", slot_center_has_chapter_major_hq_hospitaller),
-                                  (jump_to_menu, "mnu_center_improve"),]),
-      
-      
       
       ("center_build_chapter_exit",[], "Go back.",
        [
@@ -30284,9 +28057,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_cuman, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_cuman, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_cuman, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
                                       ########### HUNGARY
                                       (this_or_next|eq, "$g_encountered_party", "p_town_7_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_7_2"),
@@ -30363,7 +28136,7 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_village_15_12"),
 
                                        ],
-       "Build a minor Cuman camp.",[(assign, "$g_improvement_type", slot_center_has_camp_minor_cuman),
+       "Build a minor Cuman camp.",[(assign, "$g_improvement_type", slot_center_has_camp_cuman),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30371,9 +28144,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_cuman, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_cuman, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_cuman, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
                                       ########### HUNGARY
                                       (this_or_next|eq, "$g_encountered_party", "p_town_7_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_7_2"),
@@ -30411,7 +28184,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_15_5"),
                                       (eq, "$g_encountered_party", "p_castle_15_6"),
                                        ],
-       "Build a large Cuman camp.",[(assign, "$g_improvement_type", slot_center_has_camp_large_cuman),
+       "Build a large Cuman camp.",[(assign, "$g_improvement_type", slot_center_has_camp_cuman),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30419,9 +28192,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_cuman, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_cuman, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_cuman, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_cuman, 0),
                                       ########### HUNGARY
                                       (this_or_next|eq, "$g_encountered_party", "p_town_7_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_7_2"),
@@ -30459,7 +28232,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_15_5"),
                                       (eq, "$g_encountered_party", "p_castle_15_6"),
                                        ],
-       "Build a major Cuman camp.",[(assign, "$g_improvement_type", slot_center_has_camp_major_cuman),
+       "Build a major Cuman camp.",[(assign, "$g_improvement_type", slot_center_has_camp_cuman),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30469,9 +28242,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kipchak, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kipchak, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kipchak, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
                                       ########### GOLDEN HORDE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_2"),
@@ -30548,7 +28321,7 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_village_15_12"),
                                       
                                        ],
-       "Build a minor Kipchak camp.",[(assign, "$g_improvement_type", slot_center_has_camp_minor_kipchak),
+       "Build a minor Kipchak camp.",[(assign, "$g_improvement_type", slot_center_has_camp_kipchak),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30556,9 +28329,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kipchak, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kipchak, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kipchak, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
                                       ########### GOLDEN HORDE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_2"),
@@ -30596,7 +28369,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_15_5"),
                                       (eq, "$g_encountered_party", "p_castle_15_6"),
                                        ],
-       "Build a large Kipchak camp.",[(assign, "$g_improvement_type", slot_center_has_camp_large_kipchak),
+       "Build a large Kipchak camp.",[(assign, "$g_improvement_type", slot_center_has_camp_kipchak),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30604,9 +28377,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kipchak, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kipchak, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kipchak, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kipchak, 0),
                                       ########### GOLDEN HORDE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_2"),
@@ -30644,7 +28417,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_15_5"),
                                       (eq, "$g_encountered_party", "p_castle_15_6"),
                                        ],
-       "Build a major Kipchak camp.",[(assign, "$g_improvement_type", slot_center_has_camp_major_kipchak),
+       "Build a major Kipchak camp.",[(assign, "$g_improvement_type", slot_center_has_camp_kipchak),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30656,9 +28429,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_mongol, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_mongol, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_mongol, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
                                       ########### GOLDEN HORDE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_2"),
@@ -30732,7 +28505,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_village_27_8"),
                                       (eq, "$g_encountered_party", "p_village_27_9"),
                                        ],
-       "Build a minor Mongol camp.",[(assign, "$g_improvement_type", slot_center_has_camp_minor_mongol),
+       "Build a minor Mongol camp.",[(assign, "$g_improvement_type", slot_center_has_camp_mongol),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30740,9 +28513,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_mongol, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_mongol, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_mongol, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
                                       ########### GOLDEN HORDE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_2"),
@@ -30781,7 +28554,7 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_castle_27_6"),
                                       
                                        ],
-       "Build a large Mongol camp.",[(assign, "$g_improvement_type", slot_center_has_camp_large_mongol),
+       "Build a large Mongol camp.",[(assign, "$g_improvement_type", slot_center_has_camp_mongol),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30789,9 +28562,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_mongol, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_mongol, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_mongol, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_mongol, 0),
                                       ########### GOLDEN HORDE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_1"),
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_2"),
@@ -30829,7 +28602,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_27_5"),
                                       (eq, "$g_encountered_party", "p_castle_27_6"),
                                        ],
-       "Build a major Mongol camp.",[(assign, "$g_improvement_type", slot_center_has_camp_major_mongol),
+       "Build a major Mongol camp.",[(assign, "$g_improvement_type", slot_center_has_camp_mongol),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30840,9 +28613,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_georgian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_georgian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_georgian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
                                       
                                       ########### IL-KHANATE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_27_1"),
@@ -30870,7 +28643,7 @@ game_menus = [ #
                                       ############ GOLDEN HORDE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_3_1"),
                                        ],
-       "Build a minor Georgian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_minor_georgian),
+       "Build a minor Georgian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_georgian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30878,9 +28651,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_georgian, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_georgian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_georgian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
                                       
                                       ########### IL-KHANATE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_27_1"),
@@ -30898,7 +28671,7 @@ game_menus = [ #
                                       ############ GOLDEN HORDE
                                       (eq, "$g_encountered_party", "p_town_3_1"),
                                        ],
-       "Build a large Georgian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_large_georgian),
+       "Build a large Georgian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_georgian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30906,9 +28679,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_georgian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_georgian, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_georgian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_georgian, 0),
                                       
                                       ########### IL-KHANATE
                                       (this_or_next|eq, "$g_encountered_party", "p_town_27_1"),
@@ -30926,7 +28699,7 @@ game_menus = [ #
                                       ############ GOLDEN HORDE
                                       (eq, "$g_encountered_party", "p_town_3_1"),
                                        ],
-       "Build a major Georgian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_major_georgian),
+       "Build a major Georgian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_georgian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30936,14 +28709,14 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kwarezmian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kwarezmian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kwarezmian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
                                       
                                       ############ GOLDEN HORDE
                                       (eq, "$g_encountered_party", "p_town_3_1"),
                                        ],
-       "Build a minor Kwarezmian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_minor_kwarezmian),
+       "Build a minor Kwarezmian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_kwarezmian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30951,14 +28724,14 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kwarezmian, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kwarezmian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kwarezmian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
                                       
                                       ############ GOLDEN HORDE
                                       (eq, "$g_encountered_party", "p_town_3_1"),
                                        ],
-       "Build a large Kwarezmian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_large_kwarezmian),
+       "Build a large Kwarezmian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_kwarezmian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -30966,14 +28739,14 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_minor_kwarezmian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_large_kwarezmian, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_major_kwarezmian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_camp_kwarezmian, 0),
                                       
                                       ############ GOLDEN HORDE
                                       (eq, "$g_encountered_party", "p_town_3_1"),
                                        ],
-       "Build a major Kwarezmian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_major_kwarezmian),
+       "Build a major Kwarezmian camp.",[(assign, "$g_improvement_type", slot_center_has_camp_kwarezmian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       ("center_build_camp_exit",[], "Go back.",
@@ -31003,9 +28776,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_crusader_turcopole, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_crusader_turcopole, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_crusader_turcopole, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
                                       
                                       ######## only Christians can recruit
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
@@ -31117,7 +28890,7 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_village_28_10"),
                              
                                        ],
-       "Build a minor Turcopole outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_minor_crusader_turcopole),
+       "Build a minor Turcopole outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_crusader_turcopole),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31125,9 +28898,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_crusader_turcopole, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_crusader_turcopole, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_crusader_turcopole, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
                                       
                                       ######## only Christians can recruit
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
@@ -31186,7 +28959,7 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_castle_28_6"),
                              
                                        ],
-       "Build a large Turcopole outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_large_crusader_turcopole),
+       "Build a large Turcopole outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_crusader_turcopole),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31194,9 +28967,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_crusader_turcopole, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_crusader_turcopole, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_crusader_turcopole, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_crusader_turcopole, 0),
                                       
                                       ######## only Christians can recruit
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
@@ -31255,7 +29028,7 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_castle_28_6"),
                              
                                        ],
-       "Build a major Turcopole outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_major_crusader_turcopole),
+       "Build a major Turcopole outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_crusader_turcopole),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
           
@@ -31266,9 +29039,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_finnish, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_finnish, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_finnish, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
                                       
                                       ########### SWEDEN
                                       (this_or_next|eq, "$g_encountered_party", "p_town_14_1"),
@@ -31295,7 +29068,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_village_14_11"),
                                       (eq, "$g_encountered_party", "p_village_14_12"),
                                        ],
-       "Build a minor Finnish outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_minor_finnish),
+       "Build a minor Finnish outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_finnish),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31303,9 +29076,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_finnish, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_finnish, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_finnish, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
                                       
                                       ########### SWEDEN
                                       (this_or_next|eq, "$g_encountered_party", "p_town_14_1"),
@@ -31319,7 +29092,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_14_5"),
                                       (eq, "$g_encountered_party", "p_castle_14_6"),
                                        ],
-       "Build a large Finnish outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_large_finnish),
+       "Build a large Finnish outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_finnish),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31327,9 +29100,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_finnish, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_finnish, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_finnish, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_finnish, 0),
                                       
                                       ########### SWEDEN
                                       (this_or_next|eq, "$g_encountered_party", "p_town_14_1"),
@@ -31343,7 +29116,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_14_5"),
                                       (eq, "$g_encountered_party", "p_castle_14_6"),
                                        ],
-       "Build a major Finnish outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_major_finnish),
+       "Build a major Finnish outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_finnish),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31355,9 +29128,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_welsh_kern, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_welsh_kern, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_welsh_kern, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
                                       
                                       ########### WELSH
                                       (this_or_next|eq, "$g_encountered_party", "p_town_37_1"),
@@ -31409,7 +29182,7 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_village_9_20"),
                                       
                                        ],
-       "Build a minor Welsh outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_minor_welsh_kern),
+       "Build a minor Welsh outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_welsh_kern),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31417,9 +29190,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_welsh_kern, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_welsh_kern, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_welsh_kern, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
                                       
                                       ########### WELSH
                                       (this_or_next|eq, "$g_encountered_party", "p_town_37_1"),
@@ -31445,7 +29218,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_9_8"),
                                       (eq, "$g_encountered_party", "p_castle_9_9"),
                                        ],
-       "Build a large Welsh outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_large_welsh_kern),
+       "Build a large Welsh outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_welsh_kern),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31453,9 +29226,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_welsh_kern, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_welsh_kern, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_welsh_kern, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_welsh_kern, 0),
                                       
                                       ########### WELSH
                                       (this_or_next|eq, "$g_encountered_party", "p_town_37_1"),
@@ -31481,7 +29254,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_9_8"),
                                       (eq, "$g_encountered_party", "p_castle_9_9"),
                                        ],
-       "Build a major Welsh outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_major_welsh_kern),
+       "Build a major Welsh outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_welsh_kern),
                                   (jump_to_menu, "mnu_center_improve"),]),
             
           
@@ -31491,9 +29264,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), #### yeah they can station here
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_gaelic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_gaelic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_gaelic, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
                                       
                                       ########### IRELAND
                                       (this_or_next|eq, "$g_encountered_party", "p_town_13_1"),
@@ -31532,7 +29305,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_village_12_7"),
                                       (eq, "$g_encountered_party", "p_village_12_8"),
                                        ],
-       "Build a minor Gaelic outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_minor_gaelic),
+       "Build a minor Gaelic outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_gaelic),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31540,9 +29313,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_gaelic, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_gaelic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_gaelic, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
                                       
                                       ########### IRELAND
                                       (this_or_next|eq, "$g_encountered_party", "p_town_13_1"),
@@ -31563,7 +29336,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_12_3"),
                                       (eq, "$g_encountered_party", "p_castle_12_4"),
                                        ],
-       "Build a large Gaelic outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_large_gaelic),
+       "Build a large Gaelic outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_gaelic),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31571,9 +29344,9 @@ game_menus = [ #
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_village), 
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_minor_gaelic, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_large_gaelic, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_major_gaelic, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_outpost_gaelic, 0),
                                       
                                       ########### IRELAND
                                       (this_or_next|eq, "$g_encountered_party", "p_town_13_1"),
@@ -31594,7 +29367,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_castle_12_3"),
                                       (eq, "$g_encountered_party", "p_castle_12_4"),
                                        ],
-       "Build a major Gaelic outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_major_gaelic),
+       "Build a major Gaelic outpost.",[(assign, "$g_improvement_type", slot_center_has_outpost_gaelic),
                                   (jump_to_menu, "mnu_center_improve"),]),
                                  
                                  
@@ -31630,13 +29403,13 @@ game_menus = [ #
        ("center_build_quarters_minor_mamluk",[(eq, reg6, 0),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_mamluk, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_mamluk, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_mamluk, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
                                        ],
-       "Build a minor Mamluk quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_minor_mamluk),
+       "Build a minor Mamluk quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_mamluk),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31645,13 +29418,13 @@ game_menus = [ #
        ("center_build_quarters_major_mamluk",[(eq, reg6, 0),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_mamluk, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_mamluk, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_mamluk, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
                                        ],
-       "Build a major Mamluk quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_major_mamluk),
+       "Build a major Mamluk quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_mamluk),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31660,13 +29433,13 @@ game_menus = [ #
        ("center_build_quarters_hq_mamluk",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_mamluk, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_mamluk, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_mamluk, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_mamluk, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (faction_slot_eq, ":fief_faction", slot_faction_religion, religion_muslim),
                                        ],
-       "Build a Mamluk HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_hq_mamluk),
+       "Build a Mamluk HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_mamluk),
                                   (jump_to_menu, "mnu_center_improve"),]),
 ################################################
 
@@ -31678,14 +29451,14 @@ game_menus = [ #
        ("center_build_quarters_major_varangian",[(eq, reg6, 0),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_varangian, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_varangian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_varangian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_varangian, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (this_or_next|eq, ":fief_faction", "fac_kingdom_22"), #### only Byzantines
                                       (eq, "$kaos_kings_kingdom", 22), #### only Byzantines
                                       
                                        ],
-       "Build a major Varangian quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_major_varangian),
+       "Build a major Varangian quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_varangian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
         
@@ -31693,14 +29466,14 @@ game_menus = [ #
        ("center_build_quarters_hq_varangian",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_varangian, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_varangian, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_varangian, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_varangian, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (this_or_next|eq, ":fief_faction", "fac_kingdom_22"), #### only Byzantines
                                       (eq, "$kaos_kings_kingdom", 22), #### only Byzantines
                                       
                                        ],
-       "Build a Varangian HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_hq_varangian),
+       "Build a Varangian HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_varangian),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
       
@@ -31708,15 +29481,15 @@ game_menus = [ #
        ("center_build_quarters_minor_cataphract",[(eq, reg6, 0),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_cataphract, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_cataphract, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_cataphract, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (this_or_next|eq, ":fief_faction", "fac_kingdom_22"), #### only Byzantines
                                       (eq, "$kaos_kings_kingdom", 22), #### only Byzantines
                                       
                                        ],
-       "Build a minor Cataphract quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_minor_cataphract),
+       "Build a minor Cataphract quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_cataphract),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
             
@@ -31724,15 +29497,15 @@ game_menus = [ #
        ("center_build_quarters_major_cataphract",[(eq, reg6, 0),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_cataphract, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_cataphract, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_cataphract, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (this_or_next|eq, ":fief_faction", "fac_kingdom_22"), #### only Byzantines
                                       (eq, "$kaos_kings_kingdom", 22), #### only Byzantines
                                       
                                        ],
-       "Build a major Cataphract quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_major_cataphract),
+       "Build a major Cataphract quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_cataphract),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
                   
@@ -31740,15 +29513,15 @@ game_menus = [ #
        ("center_build_quarters_hq_cataphract",[(eq, reg6, 0),
                                       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_cataphract, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_cataphract, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_cataphract, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_cataphract, 0),
                                       (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       (this_or_next|eq, ":fief_faction", "fac_kingdom_22"), #### only Byzantines
                                       (eq, "$kaos_kings_kingdom", 22), #### only Byzantines
                                       
                                        ],
-       "Build a Cataphract HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_hq_cataphract),
+       "Build a Cataphract HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_cataphract),
                                   (jump_to_menu, "mnu_center_improve"),]),
 ################################################
       
@@ -31760,9 +29533,9 @@ game_menus = [ #
        ("center_build_quarters_minor_genoese",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_genoese, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_genoese, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_genoese, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
                                       # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       
                                       
@@ -31794,16 +29567,16 @@ game_menus = [ #
                                       (eq, "$g_encountered_party", "p_town_41_2"),
                                       
                                        ],
-       "Build a minor Genoese Crossbowmen quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_minor_genoese),
+       "Build a minor Genoese Crossbowmen quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_genoese),
                                   (jump_to_menu, "mnu_center_improve"),]),
                           
             
        ("center_build_quarters_major_genoese",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_genoese, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_genoese, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_genoese, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
                                       # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       
                                       
@@ -31836,16 +29609,16 @@ game_menus = [ #
                                       
                                       
                                        ],
-       "Build a major Genoese Crossbowmen quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_major_genoese),
+       "Build a major Genoese Crossbowmen quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_genoese),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
               
        ("center_build_quarters_hq_genoese",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_genoese, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_genoese, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_genoese, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_genoese, 0),
                                       # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       
                                       
@@ -31879,7 +29652,7 @@ game_menus = [ #
                                       
                                       
                                        ],
-       "Build a Genoese Crossbowmen HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_hq_genoese),
+       "Build a Genoese Crossbowmen HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_genoese),
                                   (jump_to_menu, "mnu_center_improve"),]),
                                   
 ########################################################################
@@ -31891,9 +29664,9 @@ game_menus = [ #
        ("center_build_quarters_minor_brabantine",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_brabantine, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_brabantine, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_brabantine, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
                                       # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       
 
@@ -31907,16 +29680,16 @@ game_menus = [ #
                                       
                                       
                                        ],
-       "Build a minor Brabantine Mercenary quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_minor_brabantine),
+       "Build a minor Brabantine Mercenary quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_brabantine),
                                   (jump_to_menu, "mnu_center_improve"),]),
                           
             
        ("center_build_quarters_major_brabantine",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_brabantine, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_brabantine, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_brabantine, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
                                       # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       
                                       ########### HOLY ROMAN EMPIRE
@@ -31927,16 +29700,16 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_town_6_5"),
                                       (eq, "$g_encountered_party", "p_town_6_6"),
                                        ],
-       "Build a major Brabantine Mercenary quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_major_brabantine),
+       "Build a major Brabantine Mercenary quarters.",[(assign, "$g_improvement_type", slot_center_has_quarters_brabantine),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
               
        ("center_build_quarters_hq_brabantine",[(eq, reg6, 0),
                                       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
                                       # (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_minor_brabantine, 0),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_major_brabantine, 1),
-                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_hq_brabantine, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 1),
+                                      (party_slot_eq, "$g_encountered_party", slot_center_has_quarters_brabantine, 0),
                                       # (store_faction_of_party, ":fief_faction", "$g_encountered_party"),
                                       
                                       ########### HOLY ROMAN EMPIRE
@@ -31947,7 +29720,7 @@ game_menus = [ #
                                       (this_or_next|eq, "$g_encountered_party", "p_town_6_5"),
                                       (eq, "$g_encountered_party", "p_town_6_6"),
                                        ],
-       "Build a Brabantine Mercenary HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_hq_brabantine),
+       "Build a Brabantine Mercenary HQ.",[(assign, "$g_improvement_type", slot_center_has_quarters_brabantine),
                                   (jump_to_menu, "mnu_center_improve"),]),
       
 

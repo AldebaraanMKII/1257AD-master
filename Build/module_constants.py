@@ -2833,17 +2833,6 @@ tavern_goer_end = "trp_spy_walker_1"
 
 
 
-###################### NEW MERC SLOTS
-slot_regional_party_template_2 = 710
-slot_regional_party_template_3 = 711
-slot_regional_mercs_2 = 712
-slot_regional_mercs_3 = 713
-slot_regional_mercs2_number = 714
-slot_regional_mercs3_number = 715
-##########################################
-
-
-
 ################## NEW CULTURE 
 cultures_begin = "fac_culture_finnish"
 cultures_end = "fac_player_faction"
@@ -2926,410 +2915,377 @@ MODDED2x_AIAgentResetNow = 29
 ########################
 
 
-
 ######################## NEW IMPROVEMENT CONSTANTS
 
+temp = slot_center_last_reconnoitered_by_faction_time + 80
+
+def get_next_constant_value():
+  global temp # makes the variable refer to the global one
+  temp = temp + 1
+  return temp
+  
 ########## cristian knight orders
-slot_center_has_chapter_minor_teutonic = 420
-slot_center_has_chapter_minor_templar = 421
-slot_center_has_chapter_minor_hospitaller = 422
-slot_center_has_chapter_minor_saint_lazarus = 423
-slot_center_has_chapter_minor_santiago = 424
-slot_center_has_chapter_minor_calatrava = 425
-slot_center_has_chapter_minor_saint_thomas = 426
+slot_center_has_chapter_teutonic = get_next_constant_value()
+slot_center_has_chapter_templar = get_next_constant_value()
+slot_center_has_chapter_hospitaller = get_next_constant_value()
+slot_center_has_chapter_saint_lazarus = get_next_constant_value()
+slot_center_has_chapter_santiago = get_next_constant_value()
+slot_center_has_chapter_calatrava = get_next_constant_value()
+slot_center_has_chapter_saint_thomas = get_next_constant_value()
 
-slot_center_has_chapter_major_teutonic = 427
-slot_center_has_chapter_major_templar = 428
-slot_center_has_chapter_major_hospitaller = 429
-slot_center_has_chapter_major_saint_lazarus = 430
-slot_center_has_chapter_major_santiago = 431
-slot_center_has_chapter_major_calatrava = 432
-slot_center_has_chapter_major_saint_thomas = 433
+# slot_center_has_chapter_major_teutonic = 427
+# slot_center_has_chapter_major_templar = 428
+# slot_center_has_chapter_major_hospitaller = 429
+# slot_center_has_chapter_major_saint_lazarus = 430
+# slot_center_has_chapter_major_santiago = 431
+# slot_center_has_chapter_major_calatrava = 432
+# slot_center_has_chapter_major_saint_thomas = 433
 
-slot_center_has_chapter_hq_teutonic = 434
-slot_center_has_chapter_hq_templar = 435
-slot_center_has_chapter_hq_hospitaller = 436
-slot_center_has_chapter_hq_saint_lazarus = 437
-slot_center_has_chapter_hq_santiago = 438
-slot_center_has_chapter_hq_calatrava = 439
-slot_center_has_chapter_hq_saint_thomas = 440
+# slot_center_has_chapter_hq_teutonic = 434
+# slot_center_has_chapter_hq_templar = 435
+# slot_center_has_chapter_hq_hospitaller = 436
+# slot_center_has_chapter_hq_saint_lazarus = 437
+# slot_center_has_chapter_hq_santiago = 438
+# slot_center_has_chapter_hq_calatrava = 439
+# slot_center_has_chapter_hq_saint_thomas = 440
 
-slot_center_has_chapter_major_hq_teutonic = 441
-slot_center_has_chapter_major_hq_templar = 442
-slot_center_has_chapter_major_hq_hospitaller = 443
+# slot_center_has_chapter_major_hq_teutonic = 441
+# slot_center_has_chapter_major_hq_templar = 442
+# slot_center_has_chapter_major_hq_hospitaller = 443
 
 ##### Muslim
-slot_center_has_quarters_minor_mamluk = 444
-slot_center_has_quarters_major_mamluk = 445
-slot_center_has_quarters_hq_mamluk = 446
+slot_center_has_quarters_mamluk = get_next_constant_value()
+# slot_center_has_quarters_major_mamluk = 445
+# slot_center_has_quarters_hq_mamluk = 446
 
 ######### Byzantine
-slot_center_has_quarters_major_varangian = 447
-slot_center_has_quarters_hq_varangian = 448
+slot_center_has_quarters_varangian = get_next_constant_value()
+# slot_center_has_quarters_hq_varangian = get_next_constant_value()
 
-slot_center_has_quarters_minor_cataphract = 449
-slot_center_has_quarters_major_cataphract = 450
-slot_center_has_quarters_hq_cataphract = 451
+slot_center_has_quarters_cataphract = get_next_constant_value()
+# slot_center_has_quarters_major_cataphract = 450
+# slot_center_has_quarters_hq_cataphract = 451
 
 ######## more mobile mercs 
-slot_center_has_camp_minor_cuman = 452
-slot_center_has_camp_large_cuman = 453
-slot_center_has_camp_major_cuman = 454
+slot_center_has_camp_cuman = get_next_constant_value()
+# slot_center_has_camp_large_cuman = 453
+# slot_center_has_camp_major_cuman = 454
 
-slot_center_has_camp_minor_kipchak = 455
-slot_center_has_camp_large_kipchak = 456
-slot_center_has_camp_major_kipchak = 457
+slot_center_has_camp_kipchak = get_next_constant_value()
+# slot_center_has_camp_large_kipchak = 456
+# slot_center_has_camp_major_kipchak = 457
 
-slot_center_has_camp_minor_mongol = 458
-slot_center_has_camp_large_mongol = 459
-slot_center_has_camp_major_mongol = 460
+slot_center_has_camp_mongol = get_next_constant_value()
+# slot_center_has_camp_large_mongol = 459
+# slot_center_has_camp_major_mongol = 460
 
-slot_center_has_camp_minor_georgian = 461
-slot_center_has_camp_large_georgian = 462
-slot_center_has_camp_major_georgian = 463
+slot_center_has_camp_georgian = get_next_constant_value()
+# slot_center_has_camp_large_georgian = 462
+# slot_center_has_camp_major_georgian = 463
 
-slot_center_has_camp_minor_kwarezmian = 464
-slot_center_has_camp_large_kwarezmian = 465
-slot_center_has_camp_major_kwarezmian = 466
+slot_center_has_camp_kwarezmian = get_next_constant_value()
+# slot_center_has_camp_large_kwarezmian = 465
+# slot_center_has_camp_major_kwarezmian = 466
 
-slot_center_has_outpost_minor_crusader_turcopole = 467
-slot_center_has_outpost_large_crusader_turcopole = 468
-slot_center_has_outpost_major_crusader_turcopole = 469
+slot_center_has_outpost_crusader_turcopole = get_next_constant_value()
+# slot_center_has_outpost_large_crusader_turcopole = 468
+# slot_center_has_outpost_major_crusader_turcopole = 469
 
 
   
 ############ other
-slot_center_has_quarters_minor_genoese = 470
-slot_center_has_quarters_major_genoese = 471
-slot_center_has_quarters_hq_genoese = 472
+slot_center_has_quarters_genoese = get_next_constant_value()
+# slot_center_has_quarters_major_genoese = 471
+# slot_center_has_quarters_hq_genoese = 472
 
-slot_center_has_outpost_minor_finnish = 473
-slot_center_has_outpost_large_finnish = 474
-slot_center_has_outpost_major_finnish = 475
+slot_center_has_outpost_finnish = get_next_constant_value()
+# slot_center_has_outpost_large_finnish = 474
+# slot_center_has_outpost_major_finnish = 475
 
-slot_center_has_quarters_minor_brabantine = 476
-slot_center_has_quarters_major_brabantine = 477
-slot_center_has_quarters_hq_brabantine = 478
+slot_center_has_quarters_brabantine = get_next_constant_value()
+# slot_center_has_quarters_major_brabantine = 477
+# slot_center_has_quarters_hq_brabantine = 478
 
-slot_center_has_outpost_minor_welsh_kern = 479
-slot_center_has_outpost_large_welsh_kern = 480
-slot_center_has_outpost_major_welsh_kern = 481
+slot_center_has_outpost_welsh_kern = get_next_constant_value()
+# slot_center_has_outpost_large_welsh_kern = 480
+# slot_center_has_outpost_major_welsh_kern = 481
 
-slot_center_has_outpost_minor_gaelic = 482
-slot_center_has_outpost_large_gaelic = 483
-slot_center_has_outpost_major_gaelic = 484
+slot_center_has_outpost_gaelic = get_next_constant_value()
+# slot_center_has_outpost_large_gaelic = 483
+# slot_center_has_outpost_major_gaelic = 484
 
 
 
 ############# center improvements
-slot_center_has_tier_1_improved_school = 520
-slot_center_has_tier_2_university = 521
+slot_center_tier_school = get_next_constant_value()
+# slot_center_has_tier_2_university = 521
 
-slot_center_has_tier_1_training_grounds = 522
-slot_center_has_tier_2_training_facilities = 523
+slot_center_tier_training_grounds = get_next_constant_value()
+# slot_center_has_tier_2_training_facilities = 523
 
-slot_center_has_tier_1_town_hall = 524
-slot_center_has_tier_2_city_hall = 525
-slot_center_has_tier_3_governors_palace = 526
-slot_center_has_tier_4_royal_palace = 527
+slot_center_tier_town_hall = get_next_constant_value()
+# slot_center_has_tier_2_city_hall = 525
+# slot_center_has_tier_3_governors_palace = 526
+# slot_center_has_tier_4_royal_palace = 527
 
-slot_center_has_tier_1_brothel = 528
-slot_center_has_tier_2_coaching_house = 529
-slot_center_has_tier_2_wayfarers_rest = 530
-slot_center_has_tier_3_pleasure_palace = 531
+slot_center_tier_brothel = get_next_constant_value()
+# slot_center_has_tier_2_coaching_house = 529
+# slot_center_has_tier_2_wayfarers_rest = 530
+# slot_center_has_tier_3_pleasure_palace = 531
 
-slot_center_has_tier_1_dirt_roads = 532
-slot_center_has_tier_2_paved_roads  = 533
+slot_center_has_tier_1_dirt_roads = get_next_constant_value()
+slot_center_has_tier_2_paved_roads  = get_next_constant_value()
 
-slot_center_has_tier_1_land_clearance  = 534
-slot_center_has_tier_2_communal_farming  = 535
-slot_center_has_tier_3_crop_rotation  = 536
-slot_center_has_tier_4_irrigation  = 537
+slot_center_has_tier_farm  = get_next_constant_value()
+# slot_center_has_tier_2_communal_farming  = 535
+# slot_center_has_tier_3_crop_rotation  = 536
+# slot_center_has_tier_4_irrigation  = 537
 
+slot_center_has_tier_1_jousting_lists  = get_next_constant_value()
+slot_center_has_tier_2_tournament_grounds  = get_next_constant_value()
 
-slot_center_has_tier_1_jousting_lists  = 540
-slot_center_has_tier_2_tournament_grounds  = 541
-
-slot_center_has_tier_1_village_guards  = 545
+slot_center_has_tier_1_village_guards  = get_next_constant_value()
 
 
 ############# religious buildings
-slot_center_has_tier_1_small_church  = 570
-slot_center_has_tier_1_small_masjid  = 571
-slot_center_has_tier_1_small_balt_temple  = 572
-slot_center_has_tier_1_small_mongol_temple  = 573
-slot_center_has_tier_1_small_satan_temple  = 574
-slot_center_has_tier_1_small_nordic_temple  = 575
+slot_center_tier_religious_building  = get_next_constant_value()
+# slot_center_has_tier_1_small_masjid  = 571
+# slot_center_has_tier_1_small_balt_temple  = 572
+# slot_center_has_tier_1_small_mongol_temple  = 573
+# slot_center_has_tier_1_small_satan_temple  = 574
+# slot_center_has_tier_1_small_nordic_temple  = 575
 
-slot_center_has_tier_2_church  = 580
-slot_center_has_tier_2_masjid  = 581
-slot_center_has_tier_2_balt_temple  = 582
-slot_center_has_tier_2_mongol_temple  = 583
-slot_center_has_tier_2_satan_temple  = 584
-slot_center_has_tier_2_nordic_temple  = 585
+# slot_center_has_tier_2_church  = 580
+# slot_center_has_tier_2_masjid  = 581
+# slot_center_has_tier_2_balt_temple  = 582
+# slot_center_has_tier_2_mongol_temple  = 583
+# slot_center_has_tier_2_satan_temple  = 584
+# slot_center_has_tier_2_nordic_temple  = 585
 
-slot_center_has_tier_3_abbey  = 590
-slot_center_has_tier_3_minaret  = 591
-slot_center_has_tier_3_large_balt_temple  = 592
-slot_center_has_tier_3_large_mongol_temple  = 593
-slot_center_has_tier_3_large_satan_temple  = 594
-slot_center_has_tier_3_large_nordic_temple  = 595
+# slot_center_has_tier_3_abbey  = 590
+# slot_center_has_tier_3_minaret  = 591
+# slot_center_has_tier_3_large_balt_temple  = 592
+# slot_center_has_tier_3_large_mongol_temple  = 593
+# slot_center_has_tier_3_large_satan_temple  = 594
+# slot_center_has_tier_3_large_nordic_temple  = 595
 
-slot_center_has_tier_4_cathedral  = 600
-slot_center_has_tier_4_jama  = 601
-slot_center_has_tier_4_huge_balt_temple  = 602
-slot_center_has_tier_4_huge_mongol_temple  = 603
-slot_center_has_tier_4_huge_satan_temple  = 604
-slot_center_has_tier_4_huge_nordic_temple  = 605
+# slot_center_has_tier_4_cathedral  = 600
+# slot_center_has_tier_4_jama  = 601
+# slot_center_has_tier_4_huge_balt_temple  = 602
+# slot_center_has_tier_4_huge_mongol_temple  = 603
+# slot_center_has_tier_4_huge_satan_temple  = 604
+# slot_center_has_tier_4_huge_nordic_temple  = 605
 
-slot_center_has_tier_5_huge_cathedral  = 610
-slot_center_has_tier_5_great_jama  = 611
-slot_center_has_tier_5_great_temple_of_dievas = 612
-slot_center_has_tier_5_great_temple_of_tengri  = 613
-slot_center_has_tier_5_great_synagogue_of_satan  = 614
-slot_center_has_tier_5_great_temple_of_odin  = 615
+# slot_center_has_tier_5_huge_cathedral  = 610
+# slot_center_has_tier_5_great_jama  = 611
+# slot_center_has_tier_5_great_temple_of_dievas = 612
+# slot_center_has_tier_5_great_temple_of_tengri  = 613
+# slot_center_has_tier_5_great_synagogue_of_satan  = 614
+# slot_center_has_tier_5_great_temple_of_odin  = 615
 ######################
 
  
-slot_center_has_tier_1_masons_guild  = 620
-slot_center_has_tier_2_master_masons_guild  = 621
-slot_center_has_tier_3_masons_guild_hq  = 622
+slot_center_has_tier_masons_guild  = get_next_constant_value()
+# slot_center_has_tier_2_master_masons_guild  = get_next_constant_value()
+# slot_center_has_tier_3_masons_guild_hq  = get_next_constant_value()
 
-slot_center_has_tier_1_fairground  = 630
-slot_center_has_tier_2_great_market   = 631
-slot_center_has_tier_3_merchants_quarter  = 632
+slot_center_has_tier_market  = get_next_constant_value()
+# slot_center_has_tier_2_great_market   = 631
+# slot_center_has_tier_3_merchants_quarter  = 632
 
-slot_center_has_tier_1_mines  = 640
-slot_center_has_tier_2_mining_network   = 641
+slot_center_has_tier_1_mines  = get_next_constant_value()
+slot_center_has_tier_2_mining_network   = get_next_constant_value()
 
-slot_center_has_tier_1_mercenary_quarters   = 650
-slot_center_has_tier_2_mercenary_hq   = 651
+slot_center_has_tier_1_mercenary_quarters   = get_next_constant_value()
+slot_center_has_tier_2_mercenary_hq   = get_next_constant_value()
 
-slot_center_has_tier_1_village_watch    = 660
+slot_center_has_tier_1_village_watch    = get_next_constant_value()
 
-slot_center_has_tier_1_garrison_quarters    = 670
-slot_center_has_tier_2_drill_square    = 671
-slot_center_has_tier_3_barracks   = 672
-slot_center_has_tier_4_armoury    = 673
+slot_center_tier_garrison_quarters    = get_next_constant_value()
+# slot_center_has_tier_2_drill_square    = 671
+# slot_center_has_tier_3_barracks   = 672
+# slot_center_has_tier_4_armoury    = 673
 
+slot_center_tier_merchants_guild     = get_next_constant_value()
+# slot_center_has_tier_2_master_merchants_guild    = 681
+# slot_center_has_tier_3_merchants_guild_hq   = 682
 
-slot_center_has_tier_1_merchants_guild     = 680
-slot_center_has_tier_2_master_merchants_guild    = 681
-slot_center_has_tier_3_merchants_guild_hq   = 682
-
-
-slot_center_has_tier_1_small_hospital    = 690
-slot_center_has_tier_1_small_bimaristan    = 691
-slot_center_has_tier_2_hospital    = 692
-slot_center_has_tier_2_bimaristan    = 693
-slot_center_has_tier_3_college_of_surgeons    = 694
-slot_center_has_tier_3_great_bimaristan    = 695
+slot_center_tier_hospital    = get_next_constant_value()
+# slot_center_has_tier_1_small_bimaristan    = 691
+# slot_center_has_tier_2_hospital    = 692
+# slot_center_has_tier_2_bimaristan    = 693
+# slot_center_has_tier_3_college_of_surgeons    = 694
+# slot_center_has_tier_3_great_bimaristan    = 695
 
 
-slot_center_has_tier_1_siege_works    = 700
-slot_center_has_tier_2_great_siege_works    = 701
+slot_center_has_tier_1_siege_works    = get_next_constant_value()
+slot_center_has_tier_2_great_siege_works    = get_next_constant_value()
 
-slot_center_has_tier_1_merchants_wharf     = 710
-slot_center_has_tier_2_warehouse     = 711
-slot_center_has_tier_3_docklands    = 712
+slot_center_tier_docks     = get_next_constant_value()
+# slot_center_has_tier_2_warehouse     = 711
+# slot_center_has_tier_3_docklands    = 712
 
-slot_center_has_tier_1_small_chapel     = 720
-slot_center_has_tier_2_chapel     = 721
+slot_center_has_tier_1_small_chapel     = get_next_constant_value()
+slot_center_has_tier_2_chapel     = get_next_constant_value()
 
-slot_center_has_tier_1_sewers    = 730
-slot_center_has_tier_2_improved_sewers   = 731
+slot_center_has_tier_1_sewers    = get_next_constant_value()
+slot_center_has_tier_2_improved_sewers   = get_next_constant_value()
 
-slot_center_has_tier_1_town_plumbers    = 740
-slot_center_has_tier_2_city_plumbing_quarters   = 741
+slot_center_has_tier_1_town_plumbers    = get_next_constant_value()
+slot_center_has_tier_2_city_plumbing_quarters   = get_next_constant_value()
 
-slot_center_has_tier_1_village_council_hall = 745
+slot_center_has_tier_1_village_council_hall = get_next_constant_value()
 
-slot_center_has_tier_1_housing_town = 750
-slot_center_has_tier_2_housing_town = 751
-slot_center_has_tier_3_housing_town = 752
-slot_center_has_tier_4_housing_town = 753
-slot_center_has_tier_5_housing_town = 754
-slot_center_has_tier_6_housing_town = 755
-slot_center_has_tier_7_housing_town = 756
-slot_center_has_tier_8_housing_town = 757
-
-slot_center_has_tier_1_housing_castle = 765
-slot_center_has_tier_2_housing_castle = 766
-slot_center_has_tier_3_housing_castle = 767
-slot_center_has_tier_4_housing_castle = 768
-slot_center_has_tier_5_housing_castle = 769
-
-slot_center_has_tier_1_housing_village = 775
-slot_center_has_tier_2_housing_village = 776
-slot_center_has_tier_3_housing_village = 777
-slot_center_has_tier_4_housing_village = 778
-slot_center_has_tier_5_housing_village = 779
-
+slot_center_tier_housing = get_next_constant_value()
 ########################
 
 
-
-
-
 ############# NEW FIEF CONSTANTS
-slot_center_population = 800
-slot_center_squalor = 801
-slot_center_healthy_percentage = 802
-slot_center_unrest = 803
-slot_center_population_max = 804
-slot_center_faction_support = 805
-slot_center_law_level = 806
+slot_center_population = get_next_constant_value()
+slot_center_squalor = get_next_constant_value()
+slot_center_healthy_percentage = get_next_constant_value()
+slot_center_unrest = get_next_constant_value()
+slot_center_population_max = get_next_constant_value()
+slot_center_faction_support = get_next_constant_value()
+slot_center_law_level = get_next_constant_value()
 # slot_center_population_default = 806
 
+slot_center_very_poor_percentage = get_next_constant_value()
+slot_center_poor_percentage = get_next_constant_value()
+slot_center_middle_percentage = get_next_constant_value()
+slot_center_rich_percentage = get_next_constant_value()
+slot_center_very_rich_percentage = get_next_constant_value()
 
-slot_center_very_poor_percentage = 810
-slot_center_poor_percentage = 811
-slot_center_middle_percentage = 812
-slot_center_rich_percentage = 813
-slot_center_very_rich_percentage = 814
+slot_center_catholic_percentage = get_next_constant_value()
+slot_center_orthodox_percentage = get_next_constant_value()
+slot_center_muslim_percentage = get_next_constant_value()
+slot_center_balt_percentage = get_next_constant_value()
+slot_center_mongol_pagan_percentage = get_next_constant_value()
+slot_center_heretic_percentage = get_next_constant_value()
+slot_center_nordic_percentage = get_next_constant_value()
 
-slot_center_catholic_percentage = 820
-slot_center_orthodox_percentage = 821
-slot_center_muslim_percentage = 823
-slot_center_balt_percentage = 822
-slot_center_mongol_pagan_percentage = 824
-slot_center_heretic_percentage = 825
-slot_center_nordic_percentage = 826
+slot_center_mandatory_draft = get_next_constant_value()
+slot_center_mandatory_military_training = get_next_constant_value()
 
+slot_center_personnel_doctors = get_next_constant_value()
+slot_center_personnel_accountants = get_next_constant_value()
 
-slot_center_mandatory_draft = 835
-slot_center_mandatory_military_training = 836
+slot_center_personnel_spies = get_next_constant_value()
+slot_center_personnel_saboteurs = get_next_constant_value()
 
-slot_center_personnel_doctors = 850
-slot_center_personnel_accountants = 851
+slot_center_personnel_trainers = get_next_constant_value()
 
-slot_center_personnel_spies = 852
-slot_center_personnel_saboteurs = 853
+slot_center_rebellion_original_faction = get_next_constant_value()
+slot_center_rebellion_active = get_next_constant_value()
 
-slot_center_personnel_trainers = 853
+slot_faction_population_support = get_next_constant_value()
 
-
-slot_center_rebellion_original_faction = 865
-slot_center_rebellion_active = 866
-
-slot_faction_population_support = 870
-
-slot_center_food_stores = 875
-slot_center_food_production_day = 876
-slot_center_food_consumption_day = 877
-
+slot_center_food_stores = get_next_constant_value()
+slot_center_food_production_day = get_next_constant_value()
+slot_center_food_consumption_day = get_next_constant_value()
 # slot_center_max_enterprises = 900
-
-
 ################################################
-
-
 
 
 ##################### NEW MERC CONSTANTS
-slot_spec_mercs_number_genoese = 950
-slot_spec_mercs_number_turkopole = 951
-slot_spec_mercs_number_georgian = 952
-slot_spec_mercs_number_cuman = 953
-slot_spec_mercs_number_brabantine = 954
-slot_spec_mercs_number_sicily_muslims = 955
-slot_spec_mercs_number_welsh_kern = 956
-slot_spec_mercs_number_kipchak = 957
-slot_spec_mercs_number_mordovians = 958
-slot_spec_mercs_number_kwarezmian = 959
-slot_spec_mercs_number_mongol = 960
-slot_spec_mercs_number_finnish = 961
-slot_spec_mercs_number_gaelic = 1032
+slot_spec_mercs_number_genoese = get_next_constant_value()
+slot_spec_mercs_number_turkopole = get_next_constant_value()
+slot_spec_mercs_number_georgian = get_next_constant_value()
+slot_spec_mercs_number_cuman = get_next_constant_value()
+slot_spec_mercs_number_brabantine = get_next_constant_value()
+slot_spec_mercs_number_sicily_muslims = get_next_constant_value()
+slot_spec_mercs_number_welsh_kern = get_next_constant_value()
+slot_spec_mercs_number_kipchak = get_next_constant_value()
+slot_spec_mercs_number_mordovians = get_next_constant_value()
+slot_spec_mercs_number_kwarezmian = get_next_constant_value()
+slot_spec_mercs_number_mongol = get_next_constant_value()
+slot_spec_mercs_number_finnish = get_next_constant_value()
+slot_spec_mercs_number_gaelic = get_next_constant_value()
 
 
-slot_spec_mercs_number_templar = 962
-slot_spec_mercs_number_hospitaller = 963
-slot_spec_mercs_number_saint_lazarus = 964
-slot_spec_mercs_number_santiago = 965
-slot_spec_mercs_number_calatrava = 966
-slot_spec_mercs_number_saint_thomas = 967
-slot_spec_mercs_number_teutonic = 968
-slot_spec_mercs_number_varangian = 969
-slot_spec_mercs_number_mamluk = 970
-slot_spec_mercs_number_cataphract = 1013
+slot_spec_mercs_number_templar = get_next_constant_value()
+slot_spec_mercs_number_hospitaller = get_next_constant_value()
+slot_spec_mercs_number_saint_lazarus = get_next_constant_value()
+slot_spec_mercs_number_santiago = get_next_constant_value()
+slot_spec_mercs_number_calatrava = get_next_constant_value()
+slot_spec_mercs_number_saint_thomas = get_next_constant_value()
+slot_spec_mercs_number_teutonic = get_next_constant_value()
+slot_spec_mercs_number_varangian = get_next_constant_value()
+slot_spec_mercs_number_mamluk = get_next_constant_value()
+slot_spec_mercs_number_cataphract = get_next_constant_value()
 
 
-slot_spec_mercs_number_genoese_npc = 971
-slot_spec_mercs_number_turkopole_npc = 972
-slot_spec_mercs_number_georgian_npc = 973
-slot_spec_mercs_number_cuman_npc = 974
-slot_spec_mercs_number_brabantine_npc = 975
-slot_spec_mercs_number_sicily_muslims_npc = 976
-slot_spec_mercs_number_welsh_kern_npc = 977
-slot_spec_mercs_number_kipchak_npc = 978
-slot_spec_mercs_number_mordovians_npc = 979
-slot_spec_mercs_number_kwarezmian_npc = 980
-slot_spec_mercs_number_mongol_npc = 981
-slot_spec_mercs_number_finnish_npc = 982
-slot_spec_mercs_number_gaelic_npc = 1033
+slot_spec_mercs_number_genoese_npc = get_next_constant_value()
+slot_spec_mercs_number_turkopole_npc = get_next_constant_value()
+slot_spec_mercs_number_georgian_npc = get_next_constant_value()
+slot_spec_mercs_number_cuman_npc = get_next_constant_value()
+slot_spec_mercs_number_brabantine_npc = get_next_constant_value()
+slot_spec_mercs_number_sicily_muslims_npc = get_next_constant_value()
+slot_spec_mercs_number_welsh_kern_npc = get_next_constant_value()
+slot_spec_mercs_number_kipchak_npc = get_next_constant_value()
+slot_spec_mercs_number_mordovians_npc = get_next_constant_value()
+slot_spec_mercs_number_kwarezmian_npc = get_next_constant_value()
+slot_spec_mercs_number_mongol_npc = get_next_constant_value()
+slot_spec_mercs_number_finnish_npc = get_next_constant_value()
+slot_spec_mercs_number_gaelic_npc = get_next_constant_value()
 
 
-slot_spec_mercs_number_templar_npc = 983
-slot_spec_mercs_number_hospitaller_npc = 984
-slot_spec_mercs_number_saint_lazarus_npc = 985
-slot_spec_mercs_number_santiago_npc = 986
-slot_spec_mercs_number_calatrava_npc = 987
-slot_spec_mercs_number_saint_thomas_npc = 988
-slot_spec_mercs_number_teutonic_npc = 989
-slot_spec_mercs_number_varangian_npc = 990
-slot_spec_mercs_number_mamluk_npc = 991
+slot_spec_mercs_number_templar_npc = get_next_constant_value()
+slot_spec_mercs_number_hospitaller_npc = get_next_constant_value()
+slot_spec_mercs_number_saint_lazarus_npc = get_next_constant_value()
+slot_spec_mercs_number_santiago_npc = get_next_constant_value()
+slot_spec_mercs_number_calatrava_npc = get_next_constant_value()
+slot_spec_mercs_number_saint_thomas_npc = get_next_constant_value()
+slot_spec_mercs_number_teutonic_npc = get_next_constant_value()
+slot_spec_mercs_number_varangian_npc = get_next_constant_value()
+slot_spec_mercs_number_mamluk_npc = get_next_constant_value()
 # slot_spec_mercs_number_kwarezmian = 970
 # slot_spec_mercs_number_mongols = 971
-slot_spec_mercs_number_cataphract_npc = 1014
-slot_spec_mercs_number_teutonic = 968
-slot_spec_mercs_number_hospitaller = 963
-slot_spec_mercs_number_templar = 962
+slot_spec_mercs_number_cataphract_npc = get_next_constant_value()
+slot_spec_mercs_number_teutonic = get_next_constant_value()
+slot_spec_mercs_number_hospitaller = get_next_constant_value()
+slot_spec_mercs_number_templar = get_next_constant_value()
 
+slot_spec_mercs_genoese = get_next_constant_value()
+slot_spec_mercs_turkopole = get_next_constant_value()
+slot_spec_mercs_georgian = get_next_constant_value()
+slot_spec_mercs_cuman = get_next_constant_value()
+slot_spec_mercs_brabantine = get_next_constant_value()
+slot_spec_mercs_sicily_muslims = get_next_constant_value()
+slot_spec_mercs_welsh_kern = get_next_constant_value()
+slot_spec_mercs_kipchak = get_next_constant_value()
+slot_spec_mercs_mordovians = get_next_constant_value()
+slot_spec_mercs_kwarezmian = get_next_constant_value()
+slot_spec_mercs_mongol = get_next_constant_value()
+slot_spec_mercs_finnish = get_next_constant_value()
+slot_spec_mercs_gaelic = get_next_constant_value()
 
-slot_spec_mercs_genoese = 992
-slot_spec_mercs_turkopole = 993
-slot_spec_mercs_georgian = 994
-slot_spec_mercs_cuman = 995
-slot_spec_mercs_brabantine = 996
-slot_spec_mercs_sicily_muslims = 997
-slot_spec_mercs_welsh_kern = 998
-slot_spec_mercs_kipchak = 999
-slot_spec_mercs_mordovians = 1000
-slot_spec_mercs_kwarezmian = 1001
-slot_spec_mercs_mongol = 1002
-slot_spec_mercs_finnish = 1003
-slot_spec_mercs_gaelic = 1034
+slot_spec_mercs_templar = get_next_constant_value()
+slot_spec_mercs_hospitaller = get_next_constant_value()
+slot_spec_mercs_saint_lazarus = get_next_constant_value()
+slot_spec_mercs_santiago = get_next_constant_value()
+slot_spec_mercs_calatrava = get_next_constant_value()
+slot_spec_mercs_saint_thomas = get_next_constant_value()
+slot_spec_mercs_teutonic = get_next_constant_value()
+slot_spec_mercs_varangian = get_next_constant_value()
+slot_spec_mercs_mamluk = get_next_constant_value()
+slot_spec_mercs_cataphract = get_next_constant_value()
 
-slot_spec_mercs_templar = 1004
-slot_spec_mercs_hospitaller = 1005
-slot_spec_mercs_saint_lazarus = 1006
-slot_spec_mercs_santiago = 1007
-slot_spec_mercs_calatrava = 1008
-slot_spec_mercs_saint_thomas = 1009
-slot_spec_mercs_teutonic = 1010
-slot_spec_mercs_varangian = 1011
-slot_spec_mercs_mamluk = 1012
-slot_spec_mercs_cataphract = 1015
+slot_spec_mercs_number_teutonic_aux = get_next_constant_value()
+slot_spec_mercs_number_templar_aux = get_next_constant_value()
+slot_spec_mercs_number_hospitaller_aux = get_next_constant_value()
 
+slot_spec_mercs_number_teutonic_aux_npc = get_next_constant_value()
+slot_spec_mercs_number_templar_aux_npc = get_next_constant_value()
+slot_spec_mercs_number_hospitaller_aux_npc = get_next_constant_value()
 
-slot_spec_mercs_number_teutonic_aux = 1016
-slot_spec_mercs_number_templar_aux = 1017
-slot_spec_mercs_number_hospitaller_aux = 1018
+slot_spec_mercs_teutonic_aux = get_next_constant_value()
+slot_spec_mercs_templar_aux = get_next_constant_value()
+slot_spec_mercs_hospitaller_aux = get_next_constant_value()
 
-slot_spec_mercs_number_teutonic_aux_npc = 1019
-slot_spec_mercs_number_templar_aux_npc = 1020
-slot_spec_mercs_number_hospitaller_aux_npc = 1021
-
-slot_spec_mercs_teutonic_aux = 1022
-slot_spec_mercs_templar_aux = 1023
-slot_spec_mercs_hospitaller_aux = 1024
-
-slot_spec_mercs_number_tournament_knights = 1030
-slot_spec_mercs_number_tournament_knights_npc = 1031
-
-
+slot_spec_mercs_number_tournament_knights = get_next_constant_value()
+slot_spec_mercs_number_tournament_knights_npc = get_next_constant_value()
 ################################################
-
 
 
 
