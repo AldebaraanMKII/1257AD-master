@@ -203,22 +203,22 @@ script_patches = [
 		]
 	],
 	# Use player's banner for camp troops in battle
-	[
-		SD_OP_BLOCK_INSERT,
-		"agent_troop_get_banner_mesh",
-		D_SEARCH_FROM_TOP | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
+	# [
+		# SD_OP_BLOCK_INSERT,
+		# "agent_troop_get_banner_mesh",
+		# D_SEARCH_FROM_TOP | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
 
-		(ge, ":troop_no", 0), 0,  ####### BAH
+		# (ge, ":troop_no", 0), 0,  ####### BAH
 
-		[
-        (try_begin),
-          (agent_get_party_id, ":agent_party", ":agent_no"),
-          (party_get_template_id, ":party_template", ":agent_party"),
-		  (eq, ":party_template", "pt_player_camp"),
-		  (assign, ":banner_troop", "trp_player"),
-        (try_end),
-		]
-	],
+		# [
+        # (try_begin),
+          # (agent_get_party_id, ":agent_party", ":agent_no"),
+          # (party_get_template_id, ":party_template", ":agent_party"),
+		  # (eq, ":party_template", "pt_player_camp"),
+		  # (assign, ":banner_troop", "trp_player"),
+        # (try_end),
+		# ]
+	# ],
 	# Fix a bug in a native script
 	[
 		SD_OP_BLOCK_INSERT,

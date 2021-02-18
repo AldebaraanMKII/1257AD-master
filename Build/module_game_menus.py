@@ -5517,9 +5517,13 @@ game_menus = [ #
           (troop_raise_attribute, "trp_player", ca_intelligence, 1),
           (troop_raise_skill, "trp_player", "skl_looting", 1),
         (try_end),
+		################################
         (try_begin),
-          (this_or_next|eq, "$background_type", 10),
-          (this_or_next|eq, "$background_type", 9),
+		  ############# NEW v3.5
+          (this_or_next|eq, "$background_type", cb_prince),
+          (this_or_next|eq, "$background_type", cb_king),
+          (this_or_next|eq, "$background_type", cb_vassal),
+		  #############
           (eq, "$background_type", cb_noble),####### NEW v3.0-KOMKE
           (jump_to_menu, "mnu_auto_return"),
           (start_presentation, "prsnt_banner_selection"),
@@ -5534,20 +5538,17 @@ game_menus = [ #
             # (faction_get_slot, ":culture", "$g_start_faction", slot_faction_culture),
             # (faction_get_slot, ":var2", ":culture", slot_faction_tier_1_castle_troop),
             (try_begin),
-              # (eq, "$kaos_kings_kingdom", 0),
-              # (eq, "$kaos_kings_prince", 0),
-                # (call_script, "script_equip_companion", "trp_player", ":var2"),
-            # (else_try),
               (gt, "$kaos_kings_kingdom", 0),
                 (call_script, "script_equip_troop_king_start"),  ######### NEW v2.0
             (else_try),
 			######### NEW v2.0
               (this_or_next|gt, "$kaos_kings_prince", 0),
-              (eq, "$background_type", 9),
+              (eq, "$background_type", cb_vassal),
                 (store_faction_of_troop, ":player_faction", "trp_player"),  
                 (call_script, "script_equip_troop_royal_start", ":player_faction"),  
             #########
             (try_end),
+			########################################
           (try_end),
         (try_end),
         (set_show_messages, 1),
@@ -20005,9 +20006,9 @@ game_menus = [ #
         (faction_get_slot, ":issue", "$players_kingdom", slot_faction_political_issue),
         (try_begin),
             (is_between, ":issue", centers_begin, centers_end),
-            (assign, "$g_dont_give_fief_to_player_days", 30),
+            (assign, "$g_dont_give_fief_to_player_days", 14),
         (else_try),
-            (assign, "$g_dont_give_marshalship_to_player_days", 30),
+            (assign, "$g_dont_give_marshalship_to_player_days", 14),
         (try_end),
 
         (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
@@ -33928,7 +33929,7 @@ game_menus = [ #
            (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
              (store_troop_faction, ":cur_faction", ":cur_lord"),
              (eq, ":cur_faction", "$players_kingdom"),
-               (troop_set_slot, ":cur_lord",  slot_troop_controversy, 100),
+               (troop_set_slot, ":cur_lord",  slot_troop_controversy, 85),
          (try_end),
          (call_script, "script_decide_faction_ai", "$players_kingdom"),
 	   ]),
@@ -33939,7 +33940,7 @@ game_menus = [ #
            (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
              # (store_troop_faction, ":lord_faction", ":cur_lord"),
              # (eq, ":lord_faction", ":cur_faction"),
-               (troop_set_slot, ":cur_lord",  slot_troop_controversy, 100),
+               (troop_set_slot, ":cur_lord",  slot_troop_controversy, 85),
          (try_end),
 		   
          (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),

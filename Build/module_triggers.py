@@ -1970,6 +1970,7 @@ triggers = [
 		  (str_store_party_name_link, s1, "$crusade_target"),
           (display_message, "@Crusaders have besieged {s1}!"),
 		  ############
+          (party_set_slot, "$crusade_target", slot_center_last_besieger, "fac_crusade"), ####### NEW v3.5
           (assign, "$crusader_state", 3),    
         (else_try),
           (assign, "$crusader_state", 1),    

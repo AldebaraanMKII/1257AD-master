@@ -9771,6 +9771,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("dplmc_hero_wpn_slot_pikes","Pikes"), #23
  ("dplmc_hero_wpn_slot_halberd","Bladed Polearms"), #23
  ("dplmc_hero_wpn_slot_no_metatype","No Preference"), #23
+ 
+  ("dplmc_political_explanation_original_lord", "In this case, the fortress should go its original owner."),
 ###################################################################################
 # End Autoloot
 ###################################################################################

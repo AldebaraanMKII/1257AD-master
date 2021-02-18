@@ -988,8 +988,7 @@ simple_triggers = [
 
 #Individual lord political calculations
 #Check for lords without fiefs, auto-defections, etc
-#(0.5, rafi slowing this down
-(0.5,
+(0.5, ######## rafi slowing this down
 [
  (val_add, "$g_lord_long_term_count", 1),
  (try_begin),
@@ -1011,9 +1010,9 @@ simple_triggers = [
  (try_end),
  
  ######Penalty for no fief
- (try_begin),
-   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+ (try_begin),   
    (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ####### NEW v2.7 - fixes bug where random lords that didn't spawn yet got angry at the player for not having a fief. This happens because the no faction (id: 0) doesn't have a leader so it the slot is assigned to 0 in the game start. And 0 is the player.
+   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
    (neq, ":troop_no", "trp_player"),
    (assign, ":fief_found", -1),
    (try_for_range, ":center", centers_begin, centers_end),
@@ -1123,8 +1122,9 @@ simple_triggers = [
        
  ######Auto-indictment or defection
  (try_begin),
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),   ####### NEW v3.5
    (this_or_next|troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
-   (eq, ":troop_no", "trp_player"),        
+   (eq, ":troop_no", "trp_player"),     
    (try_begin),
      (eq, ":troop_no", "trp_player"),
      (assign, ":faction", "$players_kingdom"),
@@ -1136,7 +1136,7 @@ simple_triggers = [
    (neq, ":troop_no", ":faction_leader"),
      
    ######I don't know why these are necessary, but they appear to be
-   (neg|is_between, ":troop_no", "trp_kingdom_1_lord", "trp_knight_1_1"),
+   (neg|is_between, ":troop_no", kings_begin, kings_end),
    (neg|is_between, ":troop_no", pretenders_begin, pretenders_end),
    
    (assign, ":num_centers", 0),          
@@ -1200,7 +1200,7 @@ simple_triggers = [
        (faction_set_slot, ":faction", slot_faction_lords_lost_defection, ":cur_slot_value"),
        #####################
        (try_begin),
-         (eq, "$cheat_mode", 1),
+         # (eq, "$cheat_mode", 1),    ############## NEW v3.5
          (this_or_next|eq, ":new_faction", "$players_kingdom"),
          (eq, ":faction", "$players_kingdom"),
          (call_script, "script_add_notification_menu", "mnu_notification_lord_defects", ":troop_no", ":faction"),
@@ -1209,20 +1209,23 @@ simple_triggers = [
    (else_try),    
      (neq, ":faction_leader", "trp_player"),
      (call_script, "script_troop_get_relation_with_troop", ":troop_no", ":faction_leader"),
-     (le, reg0, -60), ######was -75
+     # (le, reg0, -60), ######was -75
+     (le, reg0, -50), ###### NEW v3.5
      (call_script, "script_indict_lord_for_treason", ":troop_no", ":faction"),
    (try_end),          
- (else_try),  ######Take a stand on an issue
-   (neq, ":troop_no", "trp_player"),
-   (store_faction_of_troop, ":faction", ":troop_no"),
-   (faction_slot_ge, ":faction", slot_faction_political_issue, 1),
-   ######This bit of complication is needed for savegame compatibility -- if zero is in the slot, they'll choose anyway            
-   (neg|troop_slot_ge, ":troop_no", slot_troop_stance_on_faction_issue, 1), 
-   (this_or_next|troop_slot_eq, ":troop_no", slot_troop_stance_on_faction_issue, -1),
-   (neq, "$players_kingdom", ":faction"),
-   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
-   (call_script, "script_npc_decision_checklist_take_stand_on_issue", ":troop_no"),
-   (troop_set_slot, ":troop_no", slot_troop_stance_on_faction_issue, reg0),
+ ########## NEW v3.5 - moved this below - it needed to be more frequent
+ # (else_try),  ######Take a stand on an issue 
+   # (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  
+   # (neq, ":troop_no", "trp_player"),
+   # (store_faction_of_troop, ":faction", ":troop_no"),
+   # (faction_slot_ge, ":faction", slot_faction_political_issue, 1),
+   #####This bit of complication is needed for savegame compatibility -- if zero is in the slot, they'll choose anyway            
+   # (neg|troop_slot_ge, ":troop_no", slot_troop_stance_on_faction_issue, 1), 
+   # (this_or_next|troop_slot_eq, ":troop_no", slot_troop_stance_on_faction_issue, -1),
+   # (neq, "$players_kingdom", ":faction"),
+   # (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   # (call_script, "script_npc_decision_checklist_take_stand_on_issue", ":troop_no"),
+   # (troop_set_slot, ":troop_no", slot_troop_stance_on_faction_issue, reg0),
  (try_end),
 
  (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
@@ -1239,7 +1242,39 @@ simple_triggers = [
 ]),
 ########################################################################
 
+############## NEW v3.5 - lords take a stand on an issue 
+(0.101,  ####### once every 3 days for each of the 708 lords
+[
+ (try_begin),
+   (lt, "$g_resolve_issue_cur_lord", active_npcs_begin), 
+     (assign, "$g_resolve_issue_cur_lord", active_npcs_begin),
+ (try_end),
 
+ (try_begin),
+   (ge, "$g_resolve_issue_cur_lord", active_npcs_end), 
+     (assign, "$g_resolve_issue_cur_lord", active_npcs_begin),
+ (try_end),
+ 
+ (assign, ":troop_no", "$g_resolve_issue_cur_lord"),
+ 
+ (try_begin),  ######Take a stand on an issue
+   (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),   ####### NEW v3.5
+   (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   (neq, ":troop_no", "trp_player"),
+   (store_faction_of_troop, ":faction", ":troop_no"),
+   (faction_slot_ge, ":faction", slot_faction_political_issue, 1),
+   ######This bit of complication is needed for savegame compatibility -- if zero is in the slot, they'll choose anyway            
+   (neg|troop_slot_ge, ":troop_no", slot_troop_stance_on_faction_issue, 1), 
+   (this_or_next|troop_slot_eq, ":troop_no", slot_troop_stance_on_faction_issue, -1),
+   (neq, "$players_kingdom", ":faction"),
+   (call_script, "script_npc_decision_checklist_take_stand_on_issue", ":troop_no"),
+   (troop_set_slot, ":troop_no", slot_troop_stance_on_faction_issue, reg0),
+ (try_end),
+ 
+ ################ proceeds to the next NPC
+ (val_add, "$g_resolve_issue_cur_lord", 1),
+]),
+##########################################
     
 ################## NEW v1.8 - https://forums.taleworlds.com/index.php?topic=6575.msg9041351#msg9041351
 ##tom made - new trigger for alarms. they will react only to sieges/raids and will be more effective in response.
