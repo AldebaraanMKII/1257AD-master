@@ -36,80 +36,80 @@ simple_triggers = [
 
 patches = [
 	# Let lords escape from camps
-	([
-		(call_script, "script_randomly_make_prisoner_heroes_escape_from_party", "$g_randomly_make_prisoner_heroes_escape_from_party_cur_center", ":chance"),
-	 ],[
-		[
-			SD_OP_BLOCK_INSERT, "",
-			D_SEARCH_FROM_BOTTOM | D_SEARCH_LINENUMBER | D_INSERT_AFTER,
-			0, 0,
-			[
-				(try_for_range, ":chest", pcamp_chests_begin, pcamp_chests_end),
-					(troop_get_slot, ":party", ":chest", slot_pcamp_chest_party),
-					(gt, ":party", 0),
-					(party_is_active, ":party"),
-					(call_script, "script_randomly_make_prisoner_heroes_escape_from_party", ":party", pcamp_lord_escape_chance),
-				(try_end),
-			]
-		],
-	 ]),
+	# ([
+		# (call_script, "script_randomly_make_prisoner_heroes_escape_from_party", "$g_randomly_make_prisoner_heroes_escape_from_party_cur_center", ":chance"),
+	 # ],[
+		# [
+			# SD_OP_BLOCK_INSERT, "",
+			# D_SEARCH_FROM_BOTTOM | D_SEARCH_LINENUMBER | D_INSERT_AFTER,
+			# 0, 0,
+			# [
+				# (try_for_range, ":chest", pcamp_chests_begin, pcamp_chests_end),
+					# (troop_get_slot, ":party", ":chest", slot_pcamp_chest_party),
+					# (gt, ":party", 0),
+					# (party_is_active, ":party"),
+					# (call_script, "script_randomly_make_prisoner_heroes_escape_from_party", ":party", pcamp_lord_escape_chance),
+				# (try_end),
+			# ]
+		# ],
+	 # ]),
 	# Make troops desert from camps if unpaid
-	([
-		(party_get_morale, ":main_party_morale", "p_main_party"),
-		(val_add, ":num_deserters_total", ":num_deserters_from_that_troop"),
-	 ],[
-		[
-			SD_OP_BLOCK_INSERT, "",
-			D_SEARCH_FROM_BOTTOM | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
+	# ([
+		# (party_get_morale, ":main_party_morale", "p_main_party"),
+		# (val_add, ":num_deserters_total", ":num_deserters_from_that_troop"),
+	 # ],[
+		# [
+			# SD_OP_BLOCK_INSERT, "",
+			# D_SEARCH_FROM_BOTTOM | D_SEARCH_SCRIPTLINE | D_INSERT_AFTER,
 
-			(val_add, ":num_deserters_total", ":num_deserters_from_that_troop"), 0,
+			# (val_add, ":num_deserters_total", ":num_deserters_from_that_troop"), 0,
 
-			[
-					(try_end),
-				(try_end),
-				(try_begin),
-					(store_div, ":desert_prob", "$g_player_party_morale_modifier_debt", pcamp_desertion_divisor),
-					(gt, ":desert_prob", 0),
+			# [
+					# (try_end),
+				# (try_end),
+				# (try_begin),
+					# (store_div, ":desert_prob", "$g_player_party_morale_modifier_debt", pcamp_desertion_divisor),
+					# (gt, ":desert_prob", 0),
 
-					(try_for_range, ":chest", pcamp_chests_begin, pcamp_chests_end),
-						(troop_get_slot, ":party", ":chest", slot_pcamp_chest_party),
-						(gt, ":party", 0),
-						(party_is_active, ":party"),
-						(call_script, "script_party_inflict_attrition", ":party", ":desert_prob", 1),
-						(party_get_num_companions, ":num_deserters_from_camp", "p_temp_casualties"),
-						(try_begin),
-							(gt, ":num_deserters_from_camp", 0),
-							(str_store_party_name, s3, ":party"),
-							(str_store_string, s2, "str_pcamp_soldiers_from_s3"),
-							(assign, reg0, ":num_deserters_from_camp"),
-							(try_begin),
-								(ge, ":num_deserters_total", 1),
-								(str_store_string, s1, "str_s1_reg0_s2"),
-							(else_try),
-								(str_store_string, s3, s1),
-								(str_store_string, s1, "str_s3_reg0_s2"),
-							(try_end),
-							(val_add, ":num_deserters_total", ":num_deserters_from_camp"),
-						(try_end),
-				#   (try_end), <- from code already there
-				#(try_end),
-			]
-		],
-	 ]),
+					# (try_for_range, ":chest", pcamp_chests_begin, pcamp_chests_end),
+						# (troop_get_slot, ":party", ":chest", slot_pcamp_chest_party),
+						# (gt, ":party", 0),
+						# (party_is_active, ":party"),
+						# (call_script, "script_party_inflict_attrition", ":party", ":desert_prob", 1),
+						# (party_get_num_companions, ":num_deserters_from_camp", "p_temp_casualties"),
+						# (try_begin),
+							# (gt, ":num_deserters_from_camp", 0),
+							# (str_store_party_name, s3, ":party"),
+							# (str_store_string, s2, "str_pcamp_soldiers_from_s3"),
+							# (assign, reg0, ":num_deserters_from_camp"),
+							# (try_begin),
+								# (ge, ":num_deserters_total", 1),
+								# (str_store_string, s1, "str_s1_reg0_s2"),
+							# (else_try),
+								# (str_store_string, s3, s1),
+								# (str_store_string, s1, "str_s3_reg0_s2"),
+							# (try_end),
+							# (val_add, ":num_deserters_total", ":num_deserters_from_camp"),
+						# (try_end),
+				#######   (try_end), <- from code already there
+				#########(try_end),
+			# ]
+		# ],
+	 # ]),
 	# Auto-ransom prisoners every 6 hours
-	([
-		(assign, ":resting_at_manor_or_walled_center", 0),
-		(assign, "$g_half_payment_checkpoint", 0),
-	 ],[
-		[
-			SD_OP_BLOCK_INSERT, "",
-			D_SEARCH_FROM_TOP | D_SEARCH_LINENUMBER | D_INSERT_BEFORE,
-			0, 0,
-			[
-				(call_script, "script_pcamp_ransom_prisoners"),
-			]
-		],
-	 ]),
+	# ([
+		# (assign, ":resting_at_manor_or_walled_center", 0),
+		# (assign, "$g_half_payment_checkpoint", 0),
+	 # ],[
+		# [
+			# SD_OP_BLOCK_INSERT, "",
+			# D_SEARCH_FROM_TOP | D_SEARCH_LINENUMBER | D_INSERT_BEFORE,
+			# 0, 0,
+			# [
+				# (call_script, "script_pcamp_ransom_prisoners"),
+			# ]
+		# ],
+	 # ]),
 ]
 
 new_triggers = [

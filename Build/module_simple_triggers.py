@@ -25,21 +25,29 @@ simple_triggers = [
 #### This trigger is deprecated. Use "script_game_event_party_encounter" in module_scripts.py instead
   (ti_on_party_encounter,
    [
-    ]),
+ 
+      # ####(display_message, "@Executing Simple Trigger "),
+   ]),
 
 
 #### This trigger is deprecated. Use "script_game_event_simulate_battle" in module_scripts.py instead
   (ti_simulate_battle,
    [
-    # (troop_set_slot, "trp_player", slot_troop_spawned_before, 5000),
+ 
+      # ####(display_message, "@Executing Simple Trigger "),
+   # (troop_set_slot, "trp_player", slot_troop_spawned_before, 5000),
      # (party_set_slot, "p_town_21_1",slot_crusade,0),
    # (party_slot_eq, "p_main_party", slot_party_ai_state, spai_accompanying_army),
-    ]),
+    
+    ]
+  ),
 
 
   (0.1,
    [
-      (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 1"),
+     (try_begin),
         (eq, "$bug_fix_version", 0),
 
         ######fix for hiding test_scene in older savegames
@@ -75,12 +83,16 @@ simple_triggers = [
       (gt, "$capturer_party", 0),
       (party_is_active, "$capturer_party"),
       (party_relocate_near_party, "p_main_party", "$capturer_party", 0),
-    ]),
+    
+    ]
+  ),
 
 #Auto-menu
   (0,
    [
-     (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 2"),
+    (try_begin),
        (gt, "$g_last_rest_center", 0),
        (party_get_battle_opponent, ":besieger_party", "$g_last_rest_center"),
        (gt, ":besieger_party", 0),
@@ -129,7 +141,9 @@ simple_triggers = [
 ####### NEW v2.9-KOMKE this trigger makes the previous no longer necessary(see NEW v2.9-KOMKE)
 (0.25,
    [
-      (gt, "$auto_besiege_town",0),
+ 
+      ####(display_message, "@Executing Simple Trigger 3"),
+     (gt, "$auto_besiege_town",0),
       (gt, "$g_player_besiege_town", 0),
       (ge, "$g_siege_method", 1),
    
@@ -159,7 +173,9 @@ simple_triggers = [
 #Notification menus
   (0,
    [
-     (troop_slot_ge, "trp_notification_menu_types", 0, 1),
+ 
+      ####(display_message, "@Executing Simple Trigger 4"),
+    (troop_slot_ge, "trp_notification_menu_types", 0, 1),
      (troop_get_slot, ":menu_type", "trp_notification_menu_types", 0),
      (troop_get_slot, "$g_notification_menu_var1", "trp_notification_menu_var1", 0),
      (troop_get_slot, "$g_notification_menu_var2", "trp_notification_menu_var2", 0),
@@ -178,12 +194,16 @@ simple_triggers = [
        (troop_get_slot, ":local_temp", "trp_notification_menu_var2", ":cur_slot"),
        (troop_set_slot, "trp_notification_menu_var2", ":cur_slot_minus_one", ":local_temp"),
      (try_end),
-    ]),
+    
+    ]
+  ),
 
   ######Music,
   (3,
    [
-    (map_free),         
+ 
+      ####(display_message, "@Executing Simple Trigger 5"),
+   (map_free),         
       (try_begin),        
         (call_script, "script_music_set_situation_with_culture", mtf_sit_travel), 
       (try_end),
@@ -192,7 +212,9 @@ simple_triggers = [
 
   (0,
     [
-      ######escort caravan quest auto dialog trigger
+ 
+      ####(display_message, "@Executing Simple Trigger 6"),
+     ######escort caravan quest auto dialog trigger
       (try_begin),
         (eq, "$caravan_escort_state", 1),
         (party_is_active, "$caravan_escort_party_id"),
@@ -218,10 +240,14 @@ simple_triggers = [
                 (troop_set_slot, ":troop", slot_troop_mission_participation, 0),
             (try_end),
         (try_end),
-    ]),
+    
+    ]
+  ),
 
 (24,
-[   ######this was an unused trigger for some strange religion thing - tom
+[   
+      ####(display_message, "@Executing Simple Trigger 7"),
+######this was an unused trigger for some strange religion thing - tom
     (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
     (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
     (faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_feast),
@@ -241,7 +267,9 @@ simple_triggers = [
 ############### NEW v1.8 - 06/10/2018 - https://forums.taleworlds.com/index.php?topic=6575.msg9041351#msg9041351
 (0.057, ######Locate kingdom ladies - once every 24 hours for each of the 420 ladies
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 8"),
+(try_begin),
    (lt, "$g_locate_ladies_cur_lady", kingdom_ladies_begin), 
    (assign, "$g_locate_ladies_cur_lady", kingdom_ladies_begin),
  (try_end),
@@ -265,7 +293,9 @@ simple_triggers = [
 
  (24, ######Kingdom ladies send messages
  [
-    (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 9"),
+   (try_begin),
         (neg|check_quest_active, "qst_visit_lady"),
         (neg|troop_slot_ge, "trp_player", slot_troop_prisoner_of_party, 1),
         (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin),
@@ -304,14 +334,18 @@ simple_triggers = [
         (try_end),
 
     (try_end),
-    ]),
+    
+    ]
+  ),
 
 
 #Player raiding a village
 #### This trigger will check if player's raid has been completed and will lead control to village menu.
   (1,
    [
-      (ge, "$g_player_raiding_village",1),
+ 
+      ####(display_message, "@Executing Simple Trigger 10"),
+     (ge, "$g_player_raiding_village",1),
       (try_begin),
         (neq, "$g_player_is_captive", 0),
         ######(rest_for_hours, 0, 0, 0), ######stop resting - abort
@@ -337,11 +371,15 @@ simple_triggers = [
         (assign, "$g_player_raiding_village",0),
         (assign, "$g_player_raid_complete",0),
       (try_end),
-    ]),
+    
+    ]
+  ),
     
 (0.25,
    [
-      (ge, "$g_player_raiding_village",1),
+ 
+      ####(display_message, "@Executing Simple Trigger 11"),
+     (ge, "$g_player_raiding_village",1),
       (store_distance_to_party_from_party, ":distance", "$g_player_raiding_village", "p_main_party"),
       (try_begin),
         (gt, ":distance", raid_distance),
@@ -361,6 +399,7 @@ simple_triggers = [
 #Pay day.
 (168,
 [ 
+      ####(display_message, "@Executing Simple Trigger 12"),
 ################## NEW v1.9 - fixes presentation being displayed a few hours after game start
  (try_begin),
    (eq, "$do_once_budget_presentation", 0),
@@ -400,7 +439,9 @@ simple_triggers = [
   ######### Oath fulfilled -- ie, mercenary contract expired?
   (24,
    [
-      (le, "$auto_menu", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 13"),
+     (le, "$auto_menu", 0),
       (gt, "$players_kingdom", 0),
       # (neq, "$players_kingdom", "fac_player_supporters_faction"),
       (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ############ NEW v3.3
@@ -422,25 +463,35 @@ simple_triggers = [
       (store_current_day, ":cur_day"),
       (gt, ":cur_day", "$mercenary_service_next_renew_day"),
       (jump_to_menu, "mnu_oath_fulfilled"),
-    ]),
+    
+    ]
+  ),
 
   ######### Reducing luck by 1 in every 180 hours
   ######### (180,
    ######### [
-     ######### (val_sub, "$g_player_luck", 1),
+ 
+      # ####(display_message, "@Executing Simple Trigger 14"),
+    ######### (val_sub, "$g_player_luck", 1),
      ######### (val_max, "$g_player_luck", 0),
     ######### ]),
 
     ######courtship reset
   (72,
    [
-     (assign, "$lady_flirtation_location", 0),
-    ]),
+ 
+      ####(display_message, "@Executing Simple Trigger 15"),
+    (assign, "$lady_flirtation_location", 0),
+    
+    ]
+  ),
 
     ######reset time to spare
   (4,
    [
-     (assign, "$g_time_to_spare", 1),
+ 
+      ####(display_message, "@Executing Simple Trigger 16"),
+    (assign, "$g_time_to_spare", 1),
 
     (try_begin),
         (troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin),
@@ -453,19 +504,25 @@ simple_triggers = [
   ######### Banner selection menu
   (24,
    [
-    (eq, "$g_player_banner_granted", 1),
+ 
+      ####(display_message, "@Executing Simple Trigger 17"),
+   (eq, "$g_player_banner_granted", 1),
     (troop_slot_eq, "trp_player", slot_troop_banner_scene_prop, 0),
     (le, "$auto_menu",0),
 #normal_banner_begin
     (start_presentation, "prsnt_banner_selection"),
 #custom_banner_begin
 ####    (start_presentation, "prsnt_custom_banner"),
-    ]),
+    
+    ]
+  ),
 
   ######### Party Morale: Move morale towards target value.
   (24,
    [
-      (call_script, "script_get_player_party_morale_values"),
+ 
+      ####(display_message, "@Executing Simple Trigger 18"),
+     (call_script, "script_get_player_party_morale_values"),
 
       (assign, ":target_morale", reg0),
       (party_get_morale, ":cur_morale", "p_main_party"),
@@ -483,7 +540,9 @@ simple_triggers = [
       (try_end),
       (val_add, ":cur_morale", ":dif_to_add"),
       (party_set_morale, "p_main_party", ":cur_morale"),
-    ]),
+    
+    ]
+  ),
 
 
     
@@ -493,7 +552,9 @@ simple_triggers = [
 #### (168,
 (0.54,       #################### once a week for each of the 311 walled centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 19"),
+(try_begin),
    (eq, "$g_prison_culling", 0),
    (try_begin),
      (lt, "$g_prison_culling_cur_center", walled_centers_begin), 
@@ -551,7 +612,9 @@ simple_triggers = [
 #### (168,
 (0.237,  #################### once a week for each of the 558 active npcs + 150 random lords
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 20"),
+(try_begin),
    (lt, "$g_calculate_weekly_income_cur_npc", active_npcs_begin), 
    (assign, "$g_calculate_weekly_income_cur_npc", active_npcs_begin),
  (try_end),
@@ -580,7 +643,9 @@ simple_triggers = [
 
   ######Checking if the troops are resting at a half payment point
   (6,
-   [(store_current_day, ":cur_day"),
+   [
+      ####(display_message, "@Executing Simple Trigger 21"),
+   (store_current_day, ":cur_day"),
     (try_begin),
       (neq, ":cur_day", "$g_last_half_payment_check_day"),
       (assign, "$g_last_half_payment_check_day", ":cur_day"),
@@ -589,6 +654,7 @@ simple_triggers = [
         (val_add, "$g_cur_week_half_daily_wage_payments", 1), ######half payment for yesterday
       (try_end),
       (assign, "$g_half_payment_checkpoint", 1),
+	  (call_script, "script_pcamp_ransom_prisoners"),
     (try_end),
     (assign, ":resting_at_manor_or_walled_center", 0),
     (try_begin),
@@ -600,14 +666,18 @@ simple_triggers = [
     (try_end),
     (eq, ":resting_at_manor_or_walled_center", 0),
     (assign, "$g_half_payment_checkpoint", 0),
-    ]),
+    
+    ]
+  ),
 
 
 ######################## This trigger has been split up. The other half is in the new trigger below.
 # (24,  
 (8,  ######## NEW v2.6 - 3x more incidents
 [
- ##################(display_message, "@incidents start...", 0xff0000),
+ 
+      ####(display_message, "@Executing Simple Trigger 22"),
+##################(display_message, "@incidents start...", 0xff0000),
  (try_begin),
    (call_script, "script_raf_create_incidents"),
    (assign, ":acting_village", reg0),
@@ -645,6 +715,7 @@ simple_triggers = [
 #### (24,
 (0.328,  ################## Once a day for each of the factions + player faction
 [   
+      ####(display_message, "@Executing Simple Trigger 23"),
  (try_begin),
    (lt, "$g_update_faction_notes_cur_fac", kingdoms_begin), 
    (assign, "$g_update_faction_notes_cur_fac", kingdoms_begin),
@@ -748,6 +819,7 @@ simple_triggers = [
 #### (24,
 (0.033,   ################### Once a day for each of the 708 lord parties
 [ 
+      ####(display_message, "@Executing Simple Trigger 24"),
  (try_begin),
    (eq, "$g_party_npc_trainer", 1),
    (try_begin),
@@ -784,6 +856,7 @@ simple_triggers = [
 #### (24,
 (0.07,   ################### Once a day for each of the 311 walled centers
 [ 
+      ####(display_message, "@Executing Simple Trigger 25"),
  (try_begin),
    (eq, "$g_party_npc_trainer", 1),
    (try_begin),
@@ -820,7 +893,9 @@ simple_triggers = [
 #### (24,
 (0.07, ################ once a day for each of the 311 centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 26"),
+(try_begin),
    (lt, "$g_process_sieges_cur_center", walled_centers_begin), 
    (assign, "$g_process_sieges_cur_center", walled_centers_begin),
  (try_end),
@@ -850,7 +925,9 @@ simple_triggers = [
 ### (4,
 (0.033,        ########################### once every 2 hours for each of the 423 villages - execute script 7 times
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 27"),
+(try_begin),
    (lt, "$g_process_village_raids_cur_village", villages_begin), 
    (assign, "$g_process_village_raids_cur_village", villages_begin),
  (try_end),
@@ -896,7 +973,8 @@ simple_triggers = [
  ###### Process village raids
  ###### (2,
    ###### [
-     ###### (call_script, "script_process_village_raids"),
+ 
+    ###### (call_script, "script_process_village_raids"),
  ###### ]),
 ###########################################################################
 
@@ -906,7 +984,9 @@ simple_triggers = [
 ########################################################
 (24, ######tom made - 1257 utilities
 [
- ######walker variables update
+ 
+      ####(display_message, "@Executing Simple Trigger 28"),
+######walker variables update
  (assign, "$men_are_pleased", 0),
  #######centre culture changes
 ]),
@@ -918,7 +998,9 @@ simple_triggers = [
 #### (24,
 (0.033,  ############ once a day for each of the 708 lords
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 29"),
+(try_begin),
    (lt, "$g_recalculate_controversy_cur_npc", active_npcs_begin), 
      (assign, "$g_recalculate_controversy_cur_npc", active_npcs_begin),
  (try_end),
@@ -960,7 +1042,9 @@ simple_triggers = [
 ################## other half - this is for the player
 (24,  ############ once a day
 [
- (store_random_in_range, ":controversy_deduction", 1, 3),
+ 
+      ####(display_message, "@Executing Simple Trigger 30"),
+(store_random_in_range, ":controversy_deduction", 1, 3),
  (val_min, ":controversy_deduction", 2),
  (troop_get_slot, ":controversy", "trp_player", slot_troop_controversy),
  (val_sub, ":controversy", ":controversy_deduction"),
@@ -978,7 +1062,9 @@ simple_triggers = [
    ######### rafi slowing this down (8, ######increased from 12
    (6, ######TOM was 6
     [
-      ######(display_message, "@random political event start...", 0xff0000),
+ 
+      ####(display_message, "@Executing Simple Trigger 31"),
+     ######(display_message, "@random political event start...", 0xff0000),
       (call_script, "script_cf_random_political_event"),
       ######Added Nov 2010 begins - do this twice
       (call_script, "script_cf_random_political_event"),
@@ -992,7 +1078,9 @@ simple_triggers = [
 #Check for lords without fiefs, auto-defections, etc
 (0.5, ######## rafi slowing this down
 [
- (val_add, "$g_lord_long_term_count", 1),
+ 
+      ####(display_message, "@Executing Simple Trigger 32"),
+(val_add, "$g_lord_long_term_count", 1),
  (try_begin),
    (neg|is_between, "$g_lord_long_term_count", "trp_kingdom_heroes_including_player_begin", active_npcs_end),
    (assign, "$g_lord_long_term_count", "trp_kingdom_heroes_including_player_begin"),
@@ -1247,7 +1335,9 @@ simple_triggers = [
 ############## NEW v3.5 - lords take a stand on an issue 
 (0.101,  ####### once every 3 days for each of the 708 lords
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 34"),
+(try_begin),
    (lt, "$g_resolve_issue_cur_lord", active_npcs_begin), 
      (assign, "$g_resolve_issue_cur_lord", active_npcs_begin),
  (try_end),
@@ -1283,7 +1373,9 @@ simple_triggers = [
 #### (3,
 (0.024,     #################### once every 3 hours for each of the 733 centers / execute script 6 times to achieve this
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 35"),
+(try_begin),
    (lt, "$g_process_alarms_cur_center", centers_begin), 
    (assign, "$g_process_alarms_cur_center", centers_begin),
  (try_end),
@@ -1402,7 +1494,9 @@ simple_triggers = [
     
 (1,
 [
-  ########(display_message, "@script_allow_vassals_to_join_indoor_battle start...", 0xff0000),
+ 
+      ####(display_message, "@Executing Simple Trigger 36"),
+ ########(display_message, "@script_allow_vassals_to_join_indoor_battle start...", 0xff0000),
   ###### (call_script, "script_allow_vassals_to_join_indoor_battle"),  ############# NEW v2.1 - MOTO - Now that aggressiveness gets set properly, you can comment out expensive and badly written script_allow_vassals_to_join_indoor_battle
   ########(display_message, "@script_allow_vassals_to_join_indoor_battle end...", 0x00ff00),
   ########(display_message, "@script_process_kingdom_parties_ai start...", 0xff0000),
@@ -1417,7 +1511,9 @@ simple_triggers = [
 #### (3,
 (0.028,         ######################### roughly once every 3 hours for each of the 311 walled centers - executed 3 times to achieve this
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 37"),
+(try_begin),
    (lt, "$g_process_sieges_new_cur_center", walled_centers_begin), 
      (assign, "$g_process_sieges_new_cur_center", walled_centers_begin),
  (try_end),
@@ -1451,8 +1547,9 @@ simple_triggers = [
 #### Decide faction ai flag check
 #(0 - rafi too much ...
 # (0.35, ######TOM was 0.1
-(0.1, ######TOM was 0.1
+(0.5, ######TOM was 0.1
 [
+      ####(display_message, "@Executing Simple Trigger 38"),
 ######################################
  (try_begin),
    (lt, "$g_recalculate_ais_cur_fac", kingdoms_begin), 
@@ -1499,7 +1596,9 @@ simple_triggers = [
 ###################### init_ai_calculation was split into 4 parts - first part is active npcs - execute script 5 times
 (0.035,  ################### roughly once every 5 hours for each of the 708 active npcs
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 39"),
+(try_begin),
    (lt, "$g_init_ai_calculation_cur_npc", active_npcs_begin), 
    (assign, "$g_init_ai_calculation_cur_npc", active_npcs_begin),
  (try_end),
@@ -1555,7 +1654,9 @@ simple_triggers = [
 ###################### second part is kingdom ladies - execute script 3 times 
 (0.036,  ################### roughly once every 5 hours for each of the 420 ladies
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 40"),
+(try_begin),
    (lt, "$g_init_ai_calculation_cur_lady", kingdom_ladies_begin), 
    (assign, "$g_init_ai_calculation_cur_lady", kingdom_ladies_begin),
  (try_end),
@@ -1592,7 +1693,9 @@ simple_triggers = [
 ###################### third part is walled centers - execute script 2 times 
 (0.032,############## roughly once every 5 hours for each of the 311 walled centers - execute script 2 times
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 41"),
+(try_begin),
    (lt, "$g_init_ai_calculation_cur_center", walled_centers_begin), 
    (assign, "$g_init_ai_calculation_cur_center", walled_centers_begin),
  (try_end),
@@ -1625,7 +1728,9 @@ simple_triggers = [
 ################# last part - for player party
 (5,
 [
- (call_script, "script_party_calculate_strength", "p_main_party", 0), ######will update slot_party_cached_strength
+ 
+      ####(display_message, "@Executing Simple Trigger 42"),
+(call_script, "script_party_calculate_strength", "p_main_party", 0), ######will update slot_party_cached_strength
  (call_script, "script_party_calculate_and_set_nearby_friend_enemy_follower_strengths", "p_main_party"),
 ]),
 ####################################################################################
@@ -1641,7 +1746,9 @@ simple_triggers = [
 #### (24,
 (0.33,   #################### once daily for each of the 72 factions + player faction
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 43"),
+(try_begin),
    (lt, "$g_faction_recalculate_strenght_cur_fac", kingdoms_begin), 
    (assign, "$g_faction_recalculate_strenght_cur_fac", kingdoms_begin),
  (try_end),
@@ -1668,7 +1775,9 @@ simple_triggers = [
 ################## the other half
 (24,
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 44"),
+(try_begin),
    # (eq, "$cheat_mode", 4), 
    (try_for_range, ":active_npc", active_npcs_begin, active_npcs_end),
      (troop_slot_eq, ":active_npc", slot_troop_is_alive, 1),  ####### he's alive/active
@@ -1702,7 +1811,9 @@ simple_triggers = [
 #### (36,
 (0.050,   #################### once every 36 hours for each of the 708 active NPCs
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 45"),
+(try_begin),
    (lt, "$g_reset_quest_status_heroes_cur_npc", active_npcs_begin), 
    (assign, "$g_reset_quest_status_heroes_cur_npc", active_npcs_begin),
  (try_end),
@@ -1729,7 +1840,9 @@ simple_triggers = [
 ################## the other half - village elders
 (0.085,   #################### once every 36 hours for each of the 423 elders
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 46"),
+(try_begin),
    (lt, "$g_reset_quest_status_elders_cur_npc", village_elders_begin), 
      (assign, "$g_reset_quest_status_elders_cur_npc", village_elders_begin),
  (try_end),
@@ -1758,7 +1871,9 @@ simple_triggers = [
 #### (168, 
 (0.397,   #################### once every week for each of the 423 villages
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 47"),
+(try_begin),
    (lt, "$g_refresh_village_inventory_cur_village", villages_begin), 
    (assign, "$g_refresh_village_inventory_cur_village", villages_begin),
  (try_end),
@@ -1790,7 +1905,9 @@ simple_triggers = [
 ### (48,
 (0.113,  ##################### once every 48 hours for each of the 422 villages
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 48"),
+(try_begin),
    (lt, "$g_refresh_village_defenders_cur_village", villages_begin), 
    (assign, "$g_refresh_village_defenders_cur_village", villages_begin),
  (try_end),
@@ -1819,7 +1936,9 @@ simple_triggers = [
 #### (168,
 (0.229,       ##################### once every week for each of the 422 villages + 111 towns = 533
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 49"),
+(try_begin),
    (lt, "$g_calculate_center_production_cur_center", centers_begin), 
    (assign, "$g_calculate_center_production_cur_center", centers_begin),
  (try_end),
@@ -1933,7 +2052,9 @@ simple_triggers = [
 #### (168,
 (0.23,    ##################### once every week for each of the 733 centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 50"),
+(try_begin),
    (lt, "$g_accumulate_taxes_cur_center", centers_begin), 
    (assign, "$g_accumulate_taxes_cur_center", centers_begin),
  (try_end),
@@ -2012,7 +2133,9 @@ simple_triggers = [
   ######### Only if the player is male -- female characters will be told that they should seek out a faction through NPCs, possibly
    (32,
    [
-     (eq, "$players_kingdom", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 51"),
+    (eq, "$players_kingdom", 0),
      (le, "$g_invite_faction", 0),
      (eq, "$g_player_is_captive", 0),
      (troop_get_type, ":type", "trp_player"),
@@ -2079,7 +2202,9 @@ simple_triggers = [
            (jump_to_menu, "mnu_invite_player_to_faction_without_center"),
          (try_end),
      (try_end),
-    ]),
+    
+    ]
+  ),
 
     
     
@@ -2088,7 +2213,9 @@ simple_triggers = [
 #### (168,
 (2.3,  ##################### once every week for each of the 72 factions + player faction
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 52"),
+(try_begin),
    (lt, "$g_recalculate_random_decision_seed_cur_faction", kingdoms_begin), 
    (assign, "$g_recalculate_random_decision_seed_cur_faction", kingdoms_begin),
  (try_end),
@@ -2142,7 +2269,9 @@ simple_triggers = [
 #(0.1,
 (0.3,
 [
-  ######(display_message, "@attach lord parties start...", 0xff0000),
+ 
+      ####(display_message, "@Executing Simple Trigger 53"),
+ ######(display_message, "@attach lord parties start...", 0xff0000),
  (try_for_range, ":troop_no", heroes_begin, heroes_end),
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
    (troop_get_slot, ":troop_party_no", ":troop_no", slot_troop_leaded_party),
@@ -2183,7 +2312,9 @@ simple_triggers = [
 # (0.5,
 (1,
 [
- ##########SB : add spotting check, moved to less time-consuming slot
+ 
+      ####(display_message, "@Executing Simple Trigger 54"),
+##########SB : add spotting check, moved to less time-consuming slot
  (call_script, "script_get_max_skill_of_player_party", "skl_spotting"),
  (store_add, ":spotting", reg0, 3),
  (val_div, ":spotting", 2), ##########1 to 9 now
@@ -2214,7 +2345,9 @@ simple_triggers = [
 #### Check escape chances of hero prisoners. MOTO chief call more frequently with less chances.
 (10,
 [
- (assign, ":troop_no", "trp_player"),
+ 
+      ####(display_message, "@Executing Simple Trigger 55"),
+(assign, ":troop_no", "trp_player"),
  (store_skill_level, ":skill", "skl_prisoner_management", ":troop_no"),
  (assign, ":ratio_chance", 30),
  (val_mul, ":skill", 2), ############### 2% less chance per point in prisoner management
@@ -2223,6 +2356,13 @@ simple_triggers = [
  ######### (try_begin), ######not on water
  ######### (party_slot_eq, "p_main_party", slot_party_on_water, 0), ######player on land.
  (call_script, "script_randomly_make_prisoner_heroes_escape_from_party", "p_main_party", ":ratio_chance"),
+ 
+  (try_for_range, ":chest", pcamp_chests_begin, pcamp_chests_end),
+  	(troop_get_slot, ":party", ":chest", slot_pcamp_chest_party),
+  	(gt, ":party", 0),
+  	(party_is_active, ":party"),
+  	(call_script, "script_randomly_make_prisoner_heroes_escape_from_party", ":party", pcamp_lord_escape_chance),
+  (try_end),
  ######### (try_end),
 ]),
 ################
@@ -2231,7 +2371,9 @@ simple_triggers = [
 ################### other half - now for walled center prisoners
 (0.154,  ######################### once every 48 hours for each of 311 walled centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 56"),
+(try_begin),
    (lt, "$g_randomly_make_prisoner_heroes_escape_from_party_cur_center", walled_centers_begin), 
    (assign, "$g_randomly_make_prisoner_heroes_escape_from_party_cur_center", walled_centers_begin),
  (try_end),
@@ -2266,7 +2408,9 @@ simple_triggers = [
 #### (168
 (0.101, ###################### once every 3 days for each of the 708 active NPCs
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 57"),
+(try_begin),
    (lt, "$g_respawn_party_after_release_cur_npc", active_npcs_begin), 
    (assign, "$g_respawn_party_after_release_cur_npc", active_npcs_begin),
  (try_end),
@@ -2347,7 +2491,9 @@ simple_triggers = [
 #### (24, ######was 24
 (0.170,   ######once every 72 hours for each of the 422 villages - removed randomization
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 58"),
+(try_begin),
    (lt, "$g_village_center_trade_cur_village", villages_begin), 
    (assign, "$g_village_center_trade_cur_village", villages_begin),
  (try_end),
@@ -2415,7 +2561,9 @@ simple_triggers = [
    ######### (72,
    ###### (0.098, ######once every 72 hours for each of the 733 centers
    ###### [
-    ###### (try_begin),
+ 
+      # ####(display_message, "@Executing Simple Trigger 59"),
+   ###### (try_begin),
       ###### (lt, "$g_calculate_player_odds_cur_center", centers_begin), 
       ###### (assign, "$g_calculate_player_odds_cur_center", centers_begin),
     ###### (try_end),
@@ -2457,7 +2605,9 @@ simple_triggers = [
 
    (72,
    [
-  ###### Updating trade good prices according to the productions
+ 
+      ####(display_message, "@Executing Simple Trigger 60"),
+ ###### Updating trade good prices according to the productions
        (call_script, "script_update_trade_good_prices"),
  ###### Updating player odds
        (try_for_range, ":cur_center", centers_begin, centers_end),
@@ -2475,7 +2625,9 @@ simple_triggers = [
          (try_end),
          (party_set_slot, ":cur_center", slot_town_player_odds, ":player_odds"),
        (try_end),
-    ]),
+    
+    ]
+  ),
 
 ##################################################################
    
@@ -2483,7 +2635,9 @@ simple_triggers = [
   ######Troop AI: Merchants thinking
   (8,
    [
-      ######(display_message, "@merchants thinking start...", 0xff0000),
+ 
+      ####(display_message, "@Executing Simple Trigger 61"),
+     ######(display_message, "@merchants thinking start...", 0xff0000),
        (try_for_parties, ":party_no"),
          (party_slot_eq, ":party_no", slot_party_type, spt_kingdom_caravan),
          (party_is_in_any_town, ":party_no"),
@@ -2567,12 +2721,16 @@ simple_triggers = [
          (try_end),
        (try_end),
        ######(display_message, "@merchants thinking end...", 0x00ff00),
-    ]),
+    
+    ]
+  ),
 
   ######Troop AI: Village farmers thinking
   (8,
    [
-     
+ 
+      ####(display_message, "@Executing Simple Trigger 62"),
+    
      (eq, 0, 1),
       ########(display_message, "@farmers thinking start...", 0xff0000),
        (try_for_parties, ":party_no"),
@@ -2658,7 +2816,9 @@ simple_triggers = [
          (try_end),
        (try_end),
        ##########(display_message, "@farmers thinking end...", 0xff0000),
-    ]),
+    
+    ]
+  ),
 
     
     
@@ -2667,7 +2827,9 @@ simple_triggers = [
   ######### (6,
 (0.06,      ###################### once every 12 hours for each of the 200 castles
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 63"),
+(try_begin),
    (lt, "$g_increase_castle_food_stores_cur_castle", castles_begin), 
    (assign, "$g_increase_castle_food_stores_cur_castle", castles_begin),
  (try_end),
@@ -2744,7 +2906,9 @@ simple_triggers = [
   # (0.2, ######TOM was 0.1
   (0.5, 
    [
-      ######(display_message, "@heroes running away start...", 0xff0000),
+ 
+      ####(display_message, "@Executing Simple Trigger 64"),
+     ######(display_message, "@heroes running away start...", 0xff0000),
 
        (try_for_range, ":cur_troop", heroes_begin, heroes_end),
          (troop_slot_eq, ":cur_troop", slot_troop_occupation, slto_kingdom_hero),
@@ -2804,13 +2968,17 @@ simple_triggers = [
          (try_end),
        (try_end),
        ######(display_message, "@heroes running away end...", 0xff0000),
-    ]),
+    
+    ]
+  ),
 
   ######### Centers give alarm if the player is around
   ######### (0.5,
    (1,
     [
-      ######(display_message, "@player center alarms start...", 0xff0000),
+ 
+      ####(display_message, "@Executing Simple Trigger 65"),
+     ######(display_message, "@player center alarms start...", 0xff0000),
       (store_current_hours, ":cur_hours"),
       (store_mod, ":cur_hours_mod", ":cur_hours", 11),
       (store_sub, ":hour_limit", ":cur_hours", 5),
@@ -2857,11 +3025,15 @@ simple_triggers = [
         (try_end),
       (try_end),
       ######(display_message, "@player center alarms end...", 0x00ff00),
-    ]),
+    
+    ]
+  ),
 ######################### Consuming food at every 14 hours
 (12,
 [
- (eq, "$g_player_is_captive", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 66"),
+(eq, "$g_player_is_captive", 0),
  (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
  (assign, ":num_men", 0),
  (try_for_range, ":i_stack", 0, ":num_stacks"),
@@ -2994,7 +3166,9 @@ simple_triggers = [
   ######### Setting item modifiers for food
   (24,
    [
-     (troop_get_inventory_capacity, ":inv_size", "trp_player"),
+ 
+      ####(display_message, "@Executing Simple Trigger 67"),
+    (troop_get_inventory_capacity, ":inv_size", "trp_player"),
      (try_for_range, ":i_slot", 0, ":inv_size"),
        (troop_get_inventory_slot, ":item_id", "trp_player", ":i_slot"),
        (this_or_next|eq, ":item_id", "itm_cattle_meat"),
@@ -3012,18 +3186,24 @@ simple_triggers = [
          (troop_set_inventory_slot_modifier, "trp_player", ":i_slot", imod_fresh),
        (try_end),
      (try_end),
-    ]),
+    
+    ]
+  ),
 
   ######### Assigning lords to centers with no leaders
   ###### (72,
    ###### [
-   ######(call_script, "script_assign_lords_to_empty_centers"),
+ 
+      # ####(display_message, "@Executing Simple Trigger 68"),
+  ######(call_script, "script_assign_lords_to_empty_centers"),
     ###### ]),
 
   ######### Updating player icon in every frame
   ######### (0,
   (0.2,
-   [(troop_get_inventory_slot, ":cur_horse", "trp_player", 8), ######horse slot
+   [
+      ####(display_message, "@Executing Simple Trigger 69"),
+   (troop_get_inventory_slot, ":cur_horse", "trp_player", 8), ######horse slot
     (assign, ":new_icon", -1),
     (try_begin),
       (eq, "$g_player_icon_state", pis_normal),
@@ -3049,12 +3229,16 @@ simple_triggers = [
     (neq, ":new_icon", "$g_player_party_icon"),
     (assign, "$g_player_party_icon", ":new_icon"),
     (party_set_icon, "p_main_party", ":new_icon"),
-    ]),
+    
+    ]
+  ),
 
  ######Update how good a target player is for bandits
   (4, ######TOM was 2
    [
-       (store_troop_gold, ":total_value", "trp_player"),
+ 
+      ####(display_message, "@Executing Simple Trigger 70"),
+      (store_troop_gold, ":total_value", "trp_player"),
        (store_div, ":bandit_attraction", ":total_value", (10000/100)), ######10000 gold = excellent_target
 
        (troop_get_inventory_capacity, ":inv_size", "trp_player"),
@@ -3069,24 +3253,32 @@ simple_triggers = [
        (try_end),
        (val_clamp, ":bandit_attraction", 0, 100),
        (party_set_bandit_attraction, "p_main_party", ":bandit_attraction"),
-    ]),
+    
+    ]
+  ),
 
 
     ######This is a backup script to activate the player faction if it doesn't happen automatically, for whatever reason
   ######### (3,
   (3,
     [
-    (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_inactive),
+ 
+      ####(display_message, "@Executing Simple Trigger 71"),
+   (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_inactive),
     (try_for_range, ":center", walled_centers_begin, walled_centers_end),
       (store_faction_of_party, ":center_faction", ":center"),
       (eq, ":center_faction", "fac_player_supporters_faction"),
         (call_script, "script_activate_player_faction", "trp_player"),
     (try_end),
-    ]),
+    
+    ]
+  ),
 
   ######### Checking escape chances of prisoners that joined the party recently.
   (6,
-   [(gt, "$g_prisoner_recruit_troop_id", 0),
+   [
+      ####(display_message, "@Executing Simple Trigger 72"),
+   (gt, "$g_prisoner_recruit_troop_id", 0),
     (gt, "$g_prisoner_recruit_size", 0),
     (gt, "$g_prisoner_recruit_last_time", 0),
     (is_currently_night),
@@ -3116,11 +3308,15 @@ simple_triggers = [
     (try_end),
     (assign, "$g_prisoner_recruit_troop_id", 0),
     (assign, "$g_prisoner_recruit_size", 0),
-    ]),
+    
+    ]
+  ),
 
   ######### Offering ransom fees for player's prisoner heroes
   (24,
-   [(neq, "$g_ransom_offer_rejected", 1),
+   [
+      ####(display_message, "@Executing Simple Trigger 73"),
+   (neq, "$g_ransom_offer_rejected", 1),
     (call_script, "script_offer_ransom_amount_to_player_for_prisoners_in_party", "p_main_party"),
     (eq, reg0, 0),#no prisoners offered
     (assign, ":end_cond", walled_centers_end),
@@ -3130,7 +3326,9 @@ simple_triggers = [
       (eq, reg0, 1),#a prisoner is offered
       (assign, ":end_cond", 0),#break
     (try_end),
-    ]),
+    
+    ]
+  ),
 
     
     
@@ -3140,7 +3338,9 @@ simple_triggers = [
 #### Exchanging hero prisoners between factions and clearing old ransom offers
 (0.23,   ###################### roughly once every 72 hours for each of the 311 walled centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 74"),
+(try_begin),
    (lt, "$g_exchange_prisoners_cur_center", walled_centers_begin), 
    (assign, "$g_exchange_prisoners_cur_center", walled_centers_begin),
  (try_end),
@@ -3198,7 +3398,9 @@ simple_triggers = [
 ##################### other half 
 (72,   
 [
- (assign, "$g_ransom_offer_rejected", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 75"),
+(assign, "$g_ransom_offer_rejected", 0),
 ]),
 #####################
     
@@ -3207,7 +3409,9 @@ simple_triggers = [
   ######### Adding mercenary troops to the towns #### this is in the enhanced menu simple trigger far below
   ######### (72,
    ######### [
-     ######### (call_script, "script_update_mercenary_units_of_towns"),
+ 
+      # ####(display_message, "@Executing Simple Trigger "),
+    ######### (call_script, "script_update_mercenary_units_of_towns"),
      ######### ######NPC changes begin
      ######### ######### removes   (call_script, "script_update_companion_candidates_in_taverns"),
      ######### ######NPC changes end
@@ -3226,7 +3430,9 @@ simple_triggers = [
 ##################### splitted in 3, others are below this
   (72,
    [
-   ######### (call_script, "script_update_mercenary_units_of_towns"),
+ 
+      ####(display_message, "@Executing Simple Trigger 76"),
+  ######### (call_script, "script_update_mercenary_units_of_towns"),
 #NPC changes begin
 #### removes   (call_script, "script_update_companion_candidates_in_taverns"),
 #NPC changes end
@@ -3244,7 +3450,9 @@ simple_triggers = [
 ################ other 1/3 - for villages
 (0.17,            ######################## once every 72 hours for each of the 422 villages
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 77"),
+(try_begin),
    (lt, "$g_update_villages_cur_village", villages_begin), 
    (assign, "$g_update_villages_cur_village", villages_begin),
  (try_end),
@@ -3279,7 +3487,9 @@ simple_triggers = [
 ################ other 1/3 - for castles
 (0.36,            ######################## once every 72 hours for each of the 200 castles
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 78"),
+(try_begin),
    (eq, "$use_feudal_lance", 0), #######tom - if using old recruitment system
    (try_begin),
      (lt, "$g_update_villages_cur_castle", castles_begin), 
@@ -3310,8 +3520,12 @@ simple_triggers = [
 
   (48,
    [
-    (call_script, "script_update_other_taverngoers"),
-    ]),
+ 
+      ####(display_message, "@Executing Simple Trigger 79"),
+   (call_script, "script_update_other_taverngoers"),
+    
+    ]
+  ),
 
     
     
@@ -3319,7 +3533,9 @@ simple_triggers = [
 #### Setting random walker types
 (0.049,  ########################## once every 36 hours for each of the 733 centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 80"),
+(try_begin),
    (lt, "$g_set_random_walker_types_cur_center", centers_begin), 
    (assign, "$g_set_random_walker_types_cur_center", centers_begin),
  (try_end),
@@ -3359,7 +3575,9 @@ simple_triggers = [
 #### Checking center upgrades
 (0.032,   ##################### twice a day for each of the 733 centers - script executed twice
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 81"),
+(try_begin),
    (lt, "$g_check_center_improvements_cur_center", centers_begin), 
    (assign, "$g_check_center_improvements_cur_center", centers_begin),
  (try_end),
@@ -3392,7 +3610,9 @@ simple_triggers = [
 #### (24,
 (0.032,  ################### once a day for each of the 733 centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 82"),
+(try_begin),
    (lt, "$g_add_bandit_to_fief_cur_fief", centers_begin), 
    (assign, "$g_add_bandit_to_fief_cur_fief", centers_begin),
  (try_end),
@@ -3417,7 +3637,9 @@ simple_triggers = [
 #### Adding tournaments to towns
 (24,
 [
- (assign, ":num_active_tournaments", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 83"),
+(assign, ":num_active_tournaments", 0),
  (try_for_range, ":center_no", towns_begin, towns_end),
    (party_get_slot, ":has_tournament", ":center_no", slot_town_has_tournament),
    (try_begin),
@@ -3480,7 +3702,9 @@ simple_triggers = [
     
 (3,
 [
- (assign, "$g_player_tournament_placement", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 84"),
+(assign, "$g_player_tournament_placement", 0),
 ]),
 
 
@@ -3509,14 +3733,20 @@ simple_triggers = [
       (gt, ":gold", 0),
       (troop_remove_gold, "trp_player", ":gold"),
     (try_end),
-    ]),
+    
+    ]
+  ),
 
     
   ######### Make parties larger as game progresses.
   (24,
    [
-       (call_script, "script_update_party_creation_random_limits"),
-    ]),
+ 
+      ####(display_message, "@Executing Simple Trigger 85"),
+      (call_script, "script_update_party_creation_random_limits"),
+    
+    ]
+  ),
 
 	
 	
@@ -3524,7 +3754,9 @@ simple_triggers = [
   ######### Check if a faction is defeated every day
   (24,
    [
-    (assign, ":num_active_factions", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 86"),
+   (assign, ":num_active_factions", 0),
     (try_for_range, ":cur_kingdom", kingdoms_begin, kingdoms_end),
       (faction_set_slot, ":cur_kingdom", slot_faction_number_of_parties, 0),
     (try_end),
@@ -3604,7 +3836,9 @@ simple_triggers = [
         (call_script, "script_add_notification_menu", "mnu_notification_one_faction_left", ":cur_kingdom", 0),
       (try_end),
     (try_end),
-    ]),
+    
+    ]
+  ),
 
     
     
@@ -3613,7 +3847,9 @@ simple_triggers = [
 ################### cut in half, other half below
 (3, ######check to see if player's court has been captured
 [
- (try_begin), ######The old court has been lost
+ 
+      ####(display_message, "@Executing Simple Trigger 87"),
+(try_begin), ######The old court has been lost
   ################ diplomacy begin
     (is_between, "$g_player_court", centers_begin, centers_end),
     (party_slot_eq, "$g_player_court", slot_village_infested_by_bandits, "trp_peasant_woman"),
@@ -3662,6 +3898,7 @@ simple_triggers = [
 # (3,
 (6,
 [
+      ####(display_message, "@Executing Simple Trigger 88"),
 #Also, piggy-backing on this -- having bandits go to lairs and back
 (try_for_parties, ":bandit_party"),
   (gt, ":bandit_party", "p_spawn_points_end"),
@@ -3709,7 +3946,9 @@ simple_triggers = [
 #### Reduce renown slightly by 0.5% every week
 (168,
 [
- (eq, "$g_misc_disable_renown_weekly_reduction", 0), ######### NEW v2.1
+ 
+      ####(display_message, "@Executing Simple Trigger 89"),
+(eq, "$g_misc_disable_renown_weekly_reduction", 0), ######### NEW v2.1
   (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
   (store_div, ":renown_decrease", ":player_renown", 200),  ######## 0.5%
   (val_sub, ":player_renown", ":renown_decrease"),
@@ -3718,7 +3957,9 @@ simple_triggers = [
 
 
   ######### Read books if player is resting.
-  (1, [(neg|map_free),
+  (1, [
+      ####(display_message, "@Executing Simple Trigger 90"),
+  (neg|map_free),
        (gt, "$g_player_reading_book", 0),
        (player_has_item, "$g_player_reading_book"),
        (store_attribute_level, ":int", "trp_player", ca_intelligence),
@@ -3774,7 +4015,10 @@ simple_triggers = [
        ]),
 
 #### Removing cattle herds if they are way out of range
-  (12, [(try_for_parties, ":cur_party"),
+  (12, [
+  
+      ####(display_message, "@Executing Simple Trigger 91"),
+  (try_for_parties, ":cur_party"),
           (party_slot_eq, ":cur_party", slot_party_type, spt_cattle_herd),
           (store_distance_to_party_from_party, ":dist", ":cur_party", "p_main_party"),
           (try_begin),
@@ -3793,7 +4037,9 @@ simple_triggers = [
             (party_set_ai_behavior, ":cur_party", ai_bhvr_hold),
           (try_end),
         (try_end),
-    ]),
+    
+    ]
+  ),
 
 
 #####!!!!!
@@ -3806,7 +4052,9 @@ simple_triggers = [
 #### (168,
 (0.397,  ################### once a week for each of the 423 villages
  [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 92"),
+(try_begin),
    (lt, "$g_player_school_bonus_cur_village", villages_begin), 
      (assign, "$g_player_school_bonus_cur_village", villages_begin),
  (try_end),
@@ -3839,7 +4087,9 @@ simple_triggers = [
 #### Quest triggers:
 
 #### Remaining days text update
-  (24, [(try_for_range, ":cur_quest", all_quests_begin, all_quests_end),
+  (24, [
+      ####(display_message, "@Executing Simple Trigger 93"),
+  (try_for_range, ":cur_quest", all_quests_begin, all_quests_end),
           (try_begin),
             (check_quest_active, ":cur_quest"),
             (try_begin),
@@ -3863,12 +4113,16 @@ simple_triggers = [
             (quest_set_slot, ":cur_quest", slot_quest_dont_give_again_remaining_days, ":value"),
           (try_end),
         (try_end),
-    ]),
+    
+    ]
+  ),
 
 #### Report to army quest
   (2,
    [
-     (eq, "$g_infinite_camping", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 94"),
+    (eq, "$g_infinite_camping", 0),
      (eq, "$g_player_crusading", 0),
      (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
      (eq, "$g_player_is_captive", 0),
@@ -3968,7 +4222,9 @@ simple_triggers = [
 #### Army quest initializer
   (3,
    [
-     (assign, "$g_random_army_quest", -1),
+ 
+      ####(display_message, "@Executing Simple Trigger 95"),
+    (assign, "$g_random_army_quest", -1),
      (check_quest_active, "qst_follow_army", 1),
      (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
 #Rebellion changes begin
@@ -4107,10 +4363,14 @@ simple_triggers = [
          (jump_to_menu, "mnu_kingdom_army_follow_failed"),
        (try_end),
      (try_end),
-    ]),
+    
+    ]
+  ),
 
 #### Move cattle herd
-  (0.5, [(check_quest_active, "qst_move_cattle_herd"),
+  (0.5, [
+      ####(display_message, "@Executing Simple Trigger 96"),
+  (check_quest_active, "qst_move_cattle_herd"),
          (neg|check_quest_concluded, "qst_move_cattle_herd"),
          (quest_get_slot, ":target_party", "qst_move_cattle_herd", slot_quest_target_party),
          (quest_get_slot, ":target_center", "qst_move_cattle_herd", slot_quest_target_center),
@@ -4118,13 +4378,17 @@ simple_triggers = [
          (lt, ":dist", 3),
          (remove_party, ":target_party"),
          (call_script, "script_succeed_quest", "qst_move_cattle_herd"),
-    ]),
+    
+    ]
+  ),
 
     
   ######### (2, 
   (3, 
   [
-       (try_for_range, ":troop_no", active_npcs_begin, active_npcs_end),
+ 
+      ####(display_message, "@Executing Simple Trigger 97"),
+      (try_for_range, ":troop_no", active_npcs_begin, active_npcs_end),
          (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ####### he's alive/active
          (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
          (troop_get_slot, ":party_no", ":troop_no", slot_troop_leaded_party),
@@ -4139,12 +4403,16 @@ simple_triggers = [
          (store_add, ":dont_follow_time", ":cur_time", ":dont_follow_period"),
          (party_set_slot, ":party_no", slot_party_dont_follow_player_until_time,  ":dont_follow_time"),
        (try_end),
-    ]),
+    
+    ]
+  ),
 
 #### Deliver cattle and deliver cattle to army
   (0.5,
    [
-     (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 98"),
+    (try_begin),
        (check_quest_active, "qst_deliver_cattle"),
        (neg|check_quest_succeeded, "qst_deliver_cattle"),
        (quest_get_slot, ":target_center", "qst_deliver_cattle", slot_quest_target_center),
@@ -4183,7 +4451,9 @@ simple_triggers = [
 #### Train peasants against bandits
   (1,
    [
-     (neg|map_free),
+ 
+      ####(display_message, "@Executing Simple Trigger 99"),
+    (neg|map_free),
      (check_quest_active, "qst_train_peasants_against_bandits"),
      (neg|check_quest_concluded, "qst_train_peasants_against_bandits"),
      (eq, "$qst_train_peasants_against_bandits_currently_training", 1),
@@ -4202,7 +4472,9 @@ simple_triggers = [
 #### Scout waypoints
   (1,
    [
-     (check_quest_active, "qst_scout_waypoints"),
+ 
+      ####(display_message, "@Executing Simple Trigger 100"),
+    (check_quest_active, "qst_scout_waypoints"),
      (neg|check_quest_succeeded, "qst_scout_waypoints"),
      (try_begin),
        (eq, "$qst_scout_waypoints_wp_1_visited", 0),
@@ -4236,7 +4508,10 @@ simple_triggers = [
 
 #### Kill local merchant
 
-  (3, [(neg|map_free),
+  (3, [
+  
+      ####(display_message, "@Executing Simple Trigger 101"),
+  (neg|map_free),
        (check_quest_active, "qst_kill_local_merchant"),
        (quest_slot_eq, "qst_kill_local_merchant", slot_quest_current_state, 0),
        (quest_set_slot, "qst_kill_local_merchant", slot_quest_current_state, 1),
@@ -4246,7 +4521,9 @@ simple_triggers = [
        ]),
 
 #### Collect taxes
-  (1, [(neg|map_free),
+  (1, [
+      ####(display_message, "@Executing Simple Trigger 102"),
+  (neg|map_free),
        (check_quest_active, "qst_collect_taxes"),
        (eq, "$g_player_is_captive", 0),
        (eq, "$qst_collect_taxes_currently_collecting", 1),
@@ -4309,7 +4586,9 @@ simple_triggers = [
        ]),
 
 #persuade_lords_to_make_peace begin
-  (72, [(gt, "$g_force_peace_faction_1", 0),
+  (72, [
+      ####(display_message, "@Executing Simple Trigger 103"),
+  (gt, "$g_force_peace_faction_1", 0),
         (gt, "$g_force_peace_faction_2", 0),
         (try_begin),
           (store_relation, ":relation", "$g_force_peace_faction_1", "$g_force_peace_faction_2"),
@@ -4324,7 +4603,9 @@ simple_triggers = [
 #Resolve one issue each hour
 (1,
    [
-        (str_store_string, s51, "str_no_trigger_noted"),
+ 
+      ####(display_message, "@Executing Simple Trigger 104"),
+       (str_store_string, s51, "str_no_trigger_noted"),
 
         ######### Rejoining party
         (try_begin),
@@ -4460,7 +4741,9 @@ simple_triggers = [
 
 (1,
    [
-   (try_for_range, ":troop_no", active_npcs_begin, active_npcs_end),
+ 
+      ####(display_message, "@Executing Simple Trigger 105"),
+  (try_for_range, ":troop_no", active_npcs_begin, active_npcs_end),
       (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ####### he's alive/active
       (troop_slot_ge, ":troop_no", slot_troop_change_to_faction, 1),
       (store_troop_faction, ":faction_no", ":troop_no"),
@@ -4528,13 +4811,17 @@ simple_triggers = [
         (try_end),
       (try_end),
     (try_end),
-    ]),
+    
+    ]
+  ),
 
 
 
 (1,
    [
-     (store_current_day, ":cur_day"),
+ 
+      ####(display_message, "@Executing Simple Trigger 106"),
+    (store_current_day, ":cur_day"),
      (gt, ":cur_day", "$g_last_report_control_day"),
      (store_time_of_day, ":cur_hour"),
      (ge, ":cur_hour", 18),
@@ -4641,6 +4928,34 @@ simple_triggers = [
              (str_store_string, s1, "str_s3_reg0_s2"),
            (try_end),
            (val_add, ":num_deserters_total", ":num_deserters_from_that_troop"),
+			(try_end),
+				(try_end),
+				(try_begin),
+					(store_div, ":desert_prob", "$g_player_party_morale_modifier_debt", pcamp_desertion_divisor),
+					(gt, ":desert_prob", 0),
+
+					(try_for_range, ":chest", pcamp_chests_begin, pcamp_chests_end),
+						(troop_get_slot, ":party", ":chest", slot_pcamp_chest_party),
+						(gt, ":party", 0),
+						(party_is_active, ":party"),
+						(call_script, "script_party_inflict_attrition", ":party", ":desert_prob", 1),
+						(party_get_num_companions, ":num_deserters_from_camp", "p_temp_casualties"),
+						(try_begin),
+							(gt, ":num_deserters_from_camp", 0),
+							(str_store_party_name, s3, ":party"),
+							(str_store_string, s2, "str_pcamp_soldiers_from_s3"),
+							(assign, reg0, ":num_deserters_from_camp"),
+							(try_begin),
+								(ge, ":num_deserters_total", 1),
+								(str_store_string, s1, "str_s1_reg0_s2"),
+							(else_try),
+								(str_store_string, s3, s1),
+								(str_store_string, s1, "str_s3_reg0_s2"),
+							(try_end),
+							(val_add, ":num_deserters_total", ":num_deserters_from_camp"),
+						(try_end),
+				#   (try_end), <- from code already there
+				#(try_end),
          (try_end),
        (try_end),
 
@@ -4666,7 +4981,9 @@ simple_triggers = [
 
   ######### (1,
    ######### [
-     #######PROSPERITY SYSTEM
+ 
+      # ####(display_message, "@Executing Simple Trigger 107"),
+    #######PROSPERITY SYSTEM
      ######(call_script, "script_calculate_castle_prosperities_by_using_its_villages"),
      #######PROSPERITY SYSTEM
 
@@ -4687,7 +5004,9 @@ simple_triggers = [
 
   (1,
    [
-     (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 108"),
+    (try_begin),
        (eq, "$g_player_is_captive", 1),
        (neg|party_is_active, "$capturer_party"),
        (rest_for_hours, 0, 0, 0),
@@ -4729,7 +5048,9 @@ simple_triggers = [
 
   (24,
    [
-   (val_sub, "$g_dont_give_fief_to_player_days", 1),
+ 
+      ####(display_message, "@Executing Simple Trigger 109"),
+  (val_sub, "$g_dont_give_fief_to_player_days", 1),
    (val_max, "$g_dont_give_fief_to_player_days", -1),
    (val_sub, "$g_dont_give_marshalship_to_player_days", 1),
    (val_max, "$g_dont_give_marshalship_to_player_days", -1),
@@ -4829,11 +5150,15 @@ simple_triggers = [
     (val_sub, ":days_to_completion", 1),
     (party_set_slot, ":town", slot_center_player_enterprise_days_until_complete, ":days_to_completion"),
    (try_end),
-    ]),
+    
+    ]
+  ),
 
   ######### low food display
   (12, [
-    (eq, "$g_player_is_captive", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 110"),
+   (eq, "$g_player_is_captive", 0),
     (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
     (assign, ":num_men", 0),
     (try_for_range, ":i_stack", 0, ":num_stacks"),
@@ -4884,7 +5209,9 @@ simple_triggers = [
   ######### (3,
   (8,
    [
-    (try_for_parties, ":spouse_party"),
+ 
+      ####(display_message, "@Executing Simple Trigger 111"),
+   (try_for_parties, ":spouse_party"),
       (party_slot_eq, ":spouse_party", slot_party_type, dplmc_spt_spouse),
 
       (party_get_slot, ":spouse_target", ":spouse_party", slot_party_orders_object),
@@ -4917,7 +5244,9 @@ simple_triggers = [
         (try_end),
       (try_end),
     (try_end),
-    ]),
+    
+    ]
+  ),
 
     
 #Recruiter kit begin
@@ -4925,7 +5254,9 @@ simple_triggers = [
  ###### (24*30, ######0.5, tom make them slow 4 now. VERY Slow -recruiters not working anyway
  (3, 
    [
-   (gt, "$g_recruiter_count", 0),  ################ NEW v2.0
+ 
+      ####(display_message, "@Executing Simple Trigger 112"),
+  (gt, "$g_recruiter_count", 0),  ################ NEW v2.0
    (try_for_parties, ":party_no"),
       (party_slot_eq, ":party_no", slot_party_type, dplmc_spt_recruiter),
 
@@ -5136,7 +5467,9 @@ simple_triggers = [
 #### (12,
 (0.056, ###################### once a day for each of the 423 villages
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 113"),
+(try_begin),
    (lt, "$g_recruiter_reserved_cur_village", villages_begin), 
      (assign, "$g_recruiter_reserved_cur_village", villages_begin),
  (try_end),
@@ -5167,7 +5500,9 @@ simple_triggers = [
  ######### (2, ######tom was 0.5
  (2, ######tom was 0.5
  [
-  (eq, "$g_player_chancellor", "trp_dplmc_chancellor"),
+ 
+      ####(display_message, "@Executing Simple Trigger 114"),
+ (eq, "$g_player_chancellor", "trp_dplmc_chancellor"),
   #################### NEW v1.8 - checks a global to see if there's any gift caravan spawned, if there's none don't execute the try_for_parties
   (gt, "$g_gift_caravan_count", 0),
         
@@ -5290,7 +5625,9 @@ simple_triggers = [
  ######process messengers
  (2, ######0.5, ######tom was 2.
  [
-  #################### NEW v1.8 - checks a global to see if there's any messenger spawned, if there's none don't execute the try_for_parties
+ 
+      ####(display_message, "@Executing Simple Trigger 115"),
+ #################### NEW v1.8 - checks a global to see if there's any messenger spawned, if there's none don't execute the try_for_parties
   (gt, "$g_player_messenger_count", 0),
   (try_for_parties, ":party_no"),
     (party_slot_eq, ":party_no", slot_party_type, dplmc_spt_messenger),
@@ -5396,7 +5733,8 @@ simple_triggers = [
    ######### Constable training
    ######### (24,
    ######### [
-   ######### (eq, "$g_player_constable", "trp_dplmc_constable"),
+ 
+  ######### (eq, "$g_player_constable", "trp_dplmc_constable"),
    ######### (is_between, "$g_constable_training_center", walled_centers_begin, walled_centers_end),
    ######### (party_slot_eq, "$g_constable_training_center", slot_town_lord, "trp_player"),
 
@@ -5526,6 +5864,7 @@ simple_triggers = [
    ######### (4, ######TOM was 2 ################## NOW 4
    (6, 
    [
+      ####(display_message, "@Executing Simple Trigger 116"),
 
     (try_for_parties, ":party"),
       (party_get_template_id, ":party_template", ":party"),
@@ -5625,12 +5964,15 @@ simple_triggers = [
         ######### (remove_party, ":party_no"),
       ######### (try_end),
     ######### (try_end),
-    ]),
+    
+    ]
+  ),
 
   ######### Policy
    ######### (30 * 24,
    ######### [
-    ######### (try_for_range, ":kingdom", kingdoms_begin, kingdoms_end),
+ 
+   ######### (try_for_range, ":kingdom", kingdoms_begin, kingdoms_end),
       ######### (faction_slot_eq, ":kingdom", slot_faction_state, sfs_active),
 
       ######### (faction_get_slot, ":centralization", ":kingdom", dplmc_slot_faction_centralization),
@@ -5668,6 +6010,7 @@ simple_triggers = [
  (2, ######TOM was 1
  [
 
+      ####(display_message, "@Executing Simple Trigger 117"),
 ############# NEW v1.8
 (gt, "$g_raf_spt_messenger", 0),
   (try_for_parties, ":party_no"),
@@ -5729,6 +6072,7 @@ simple_triggers = [
   ###### (0,
   (6,
     [   
+      ####(display_message, "@Executing Simple Trigger 118"),
     (eq, "$g_battle_preparation_phase", 2),
         
     (party_set_slot, "$g_battle_preparation", slot_party_battle_preparation, 1),
@@ -5769,11 +6113,15 @@ simple_triggers = [
     (assign, "$g_battle_preparation_start", ":cur_hours"),
     ######(party_stack_get_troop_id, ":leader", "$g_battle_preparation", 0),
     ######(start_map_conversation, ":leader", -1),
-    ]),
+    
+    ]
+  ),
 
    (0,
    [
-    (is_between, "$g_player_sally_town", centers_begin, centers_end),
+ 
+      ####(display_message, "@Executing Simple Trigger 119"),
+   (is_between, "$g_player_sally_town", centers_begin, centers_end),
     (party_is_active, "$g_player_sallies"),
     (start_encounter, "$g_player_sallies"),
   ]),
@@ -5788,7 +6136,9 @@ simple_triggers = [
  
  
  (4,
- [  ######tom - weather
+ [  
+      ####(display_message, "@Executing Simple Trigger 120"),
+      ######tom - weather
         ######(call_script, "script_get_closest_center", "p_main_party"),
         ######(party_get_slot, ":faction_no", reg0, slot_center_original_faction), 
         (party_get_current_terrain, ":terrain_type", "p_main_party"),
@@ -5832,14 +6182,18 @@ simple_triggers = [
           (store_random_in_range, ":fog", 0, 101), ######autumn - cloudy
           (set_global_cloud_amount, ":fog"),
         (try_end),
-    ]),
+    
+    ]
+  ),
     
   
   ########manor trigger
   (168,
   ######(1,
   [
-  ######### slot_town_wealth        = 49 ######total amount of accumulated wealth in the center, pays for the garrison
+ 
+      ####(display_message, "@Executing Simple Trigger 121"),
+ ######### slot_town_wealth        = 49 ######total amount of accumulated wealth in the center, pays for the garrison
   ######### slot_town_prosperity    = 50 ######affects the amount of wealth generated
     ######TODO: global - bandits
     (troop_get_slot, ":manor_amount", "trp_manor_array", 0),
@@ -6102,7 +6456,9 @@ simple_triggers = [
   
   (168,#developing buildings
   [
-    (troop_get_slot, ":amount", "trp_manor_array", 0),
+ 
+      ####(display_message, "@Executing Simple Trigger 122"),
+   (troop_get_slot, ":amount", "trp_manor_array", 0),
     (try_for_range, ":slot", 1, ":amount"),
       (troop_get_slot, ":manor_id", "trp_manor_array", ":slot"),
       (party_get_slot, ":village", ":manor_id", slot_village_bound_center), 
@@ -6174,7 +6530,9 @@ simple_triggers = [
   ######traveling merchant cycle!
   (24*3,
   [
-    (try_for_range, ":merchant", traders_begin, traders_end),
+ 
+      ####(display_message, "@Executing Simple Trigger 123"),
+   (try_for_range, ":merchant", traders_begin, traders_end),
       (store_random_in_range, ":town", towns_begin, towns_end),
       (troop_set_slot, ":merchant", slot_troop_cur_center, ":town"),
       
@@ -6249,7 +6607,9 @@ simple_triggers = [
  ########PROSPERITY SYSTEM 
  (24,
  [
-    (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
+ 
+      ####(display_message, "@Executing Simple Trigger 124"),
+   (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
       (faction_set_slot, ":faction", slot_faction_at_war, 0),
       (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
       (call_script, "script_check_if_faction_is_at_war", ":faction"),
@@ -6264,7 +6624,9 @@ simple_triggers = [
 #### (168,
 (0.23,  ########################## once a week for each of the 733 centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 125"),
+(try_begin),
    (lt, "$g_change_prosperity_cur_center", centers_begin), 
    (assign, "$g_change_prosperity_cur_center", centers_begin),
  (try_end),
@@ -6357,7 +6719,9 @@ simple_triggers = [
 
  (24,
    [
-      ######### Setting food bonuses in every 6 hours again and again because of a bug (we could not find its reason) which decreases especially slot_item_food_bonus slots of items to 0.
+ 
+      ####(display_message, "@Executing Simple Trigger 126"),
+     ######### Setting food bonuses in every 6 hours again and again because of a bug (we could not find its reason) which decreases especially slot_item_food_bonus slots of items to 0.
       ######Staples
       (item_set_slot, "itm_bread", slot_item_food_bonus, 8), ######brought up from 4
       (item_set_slot, "itm_grain", slot_item_food_bonus, 2), ######new - can be boiled as porridge
@@ -6397,7 +6761,9 @@ simple_triggers = [
   
     (168,
     [
-    (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 127"),
+   (try_begin),
       (eq, "$kaos_restore", 1),
       (assign, ":continue", 1),
       (try_for_range, ":cur_troop", "trp_npc1", "trp_knight_1_1_wife"),
@@ -6625,6 +6991,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_garrison_reinforcement_rate_hours_passed", "$g_party_garrison_reinforcement_rate"),
      (assign, "$g_party_garrison_reinforcement_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 128"),
      #######set player lost controled centers to auto recruitmen type
      (try_for_range, ":center_no", walled_centers_begin, walled_centers_end),
        (neg|party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
@@ -6660,6 +7027,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_npc_reinforcement_rate_hours_passed", "$g_party_npc_reinforcement_rate"),
      (assign, "$g_party_npc_reinforcement_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 129"),
      (try_for_range, ":troop_no", active_npcs_begin, active_npcs_end),
        (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ####### he's alive/active
        (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
@@ -6711,6 +7079,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_player_reinforcement_rate_hours_passed", "$g_party_player_reinforcement_rate"),
      (assign, "$g_party_player_reinforcement_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 130"),
      (try_for_range, ":village_no", towns_begin, towns_end),
        (call_script, "script_feudal_lance_manpower_update", ":village_no", "$g_party_lances_max_town"),
        (call_script, "script_update_npc_volunteer_troops_in_village", ":village_no"),
@@ -6734,6 +7103,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_town_merc_refill_rate_hours_passed", "$g_party_town_merc_refill_rate"),
      (assign, "$g_party_town_merc_refill_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 131"),
      (try_begin),
        (call_script, "script_town_merc_respawn"),
      (try_end),  
@@ -6748,6 +7118,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_faction_respawn_rate_hours_passed", "$g_party_faction_respawn_rate"),
      (assign, "$g_party_faction_respawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 132"),
      (try_for_range, ":cur_kingdom", kingdoms_begin, kingdoms_end),
        (faction_slot_eq, ":cur_kingdom", slot_faction_state, sfs_active),
        (try_begin),
@@ -6817,6 +7188,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_bandit_respawn_rate_hours_passed", "$g_party_bandit_respawn_rate"),
      (assign, "$g_party_bandit_respawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 133"),
      ######(call_script, "script_spawn_bandit_lairs"),#tom
      ######### rafi
      ######### (try_begin),
@@ -6836,6 +7208,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_mercenary_company_spawn_rate_hours_passed", "$g_party_mercenary_company_spawn_rate"),
      (assign, "$g_party_mercenary_company_spawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 134"),
      (try_begin),
        (store_random_in_range, ":random_no", 0, 100),
        (lt, ":random_no", "$g_party_mercenary_company_spawn_chance"),
@@ -6851,6 +7224,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_rebellion_respawn_rate_hours_passed", "$g_party_rebellion_respawn_rate"),
      (assign, "$g_party_rebellion_respawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 135"),
      (try_begin),
        (store_random_in_range, ":random_no", 0, 100),
        (lt, ":random_no", "$g_party_rebellion_chance"),
@@ -6865,6 +7239,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_rebellion_strong_respawn_rate_hours_passed", "$g_party_rebellion_strong_respawn_rate"),
      (assign, "$g_party_rebellion_strong_respawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 136"),
      (try_begin),
        (store_random_in_range, ":random_no", 0, 100),
        (lt, ":random_no", "$g_party_rebellion_strong_chance"),
@@ -6881,6 +7256,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_party_fugitive_serf_hours_passed", "$g_party_fugitive_serf_respawn_rate"),
      (assign, "$g_party_fugitive_serf_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 137"),
      (try_begin),
        (store_random_in_range, ":random_no", 0, 100),
        (lt, ":random_no", "$g_party_fugitive_serf_chance"),
@@ -6895,6 +7271,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_misc_merchant_respawn_rate_hours_passed", "$g_misc_merchant_respawn_rate"),
      (assign, "$g_misc_merchant_respawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 138"),
      (try_begin),
        (call_script, "script_refresh_center_inventories"),
        (call_script, "script_refresh_center_armories"),
@@ -6914,6 +7291,7 @@ simple_triggers = [
  (try_begin),
    (ge, "$g_misc_mercenary_respawn_rate_hours_passed", "$g_misc_tavern_mercenaries_respawn_rate"),
      (assign, "$g_misc_mercenary_respawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 139"),
        (call_script, "script_update_mercenary_units_of_towns"),
  (try_end),    
 ]),
@@ -6925,7 +7303,9 @@ simple_triggers = [
 ############################# Sending troops from your party to any walled fief you own by Leonion https://forums.taleworlds.com/index.php?topic=348796.0]
 (2,
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 140"),
+(try_begin),
    (gt, "$send_troops_tweak", 0),
    (party_is_active, "$send_troops_tweak"),
      (get_party_ai_object, ":target_fief", "$send_troops_tweak"),
@@ -6952,7 +7332,9 @@ simple_triggers = [
 ##################################### NEW v2.1 - prisoners escaped from walled fiefs
 (0.54,   ###################### roughly once every week for each of the 311 walled centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 141"),
+(try_begin),
    (lt, "$g_prisoners_escape_cur_center", walled_centers_begin), 
      (assign, "$g_prisoners_escape_cur_center", walled_centers_begin),
  (try_end),
@@ -7001,7 +7383,9 @@ simple_triggers = [
 ######################### New v2.1 - LORD ASSASSINATION ATTEMPTS
 (0.101,   ############################# roughly once every 3 days for each of the 708 lords
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 142"),
+(try_begin),
    (lt, "$g_assassination_attempt_cur_npc", active_npcs_begin), 
      (assign, "$g_assassination_attempt_cur_npc", active_npcs_begin),
  (try_end),
@@ -7054,7 +7438,9 @@ simple_triggers = [
 # (0.54,   ###################### roughly once a week for each of the 311 walled centers
 (0.23,   ###################### roughly once every 3 days for each of the 311 walled centers
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 143"),
+(try_begin),
    (lt, "$g_execute_lord_cur_center", walled_centers_begin), 
      (assign, "$g_execute_lord_cur_center", walled_centers_begin),
  (try_end),
@@ -7136,7 +7522,9 @@ simple_triggers = [
 ############################# New v2.1 - LORD EXECUTION BY PLAYER
 (72,   
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 144"),
+(try_begin),
    (eq, "$g_execution_scheduled", 1),  
      (troop_get_slot, ":cur_prison", "$lord_to_execute", slot_troop_prisoner_of_party),
      (eq, ":cur_prison", "$g_execution_center"), ######## must check that he's still there
@@ -7155,7 +7543,9 @@ simple_triggers = [
 ############################# New v2.1 - LORD ASSASSINATION BY PLAYER
 (168,   
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 145"),
+(try_begin),
    (eq, "$g_assassination_scheduled", 1),  
    (troop_slot_eq, "$lord_to_assassinate", slot_troop_is_alive, 1),
      (store_faction_of_troop, ":troop_faction", "$lord_to_assassinate"),
@@ -7209,6 +7599,7 @@ simple_triggers = [
    (val_div, ":diplomacy_rate", 73),  ######### 43 factions
    (ge, "$g_misc_diplomacy_rate_hours_passed", ":diplomacy_rate"),
      (assign, "$g_misc_diplomacy_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 145"),
      (call_script, "script_randomly_start_war_peace_new", 1),
      (store_sub, ":kingdoms_end", kingdoms_end, 1),
      (try_begin),
@@ -7233,13 +7624,15 @@ simple_triggers = [
 ############################# New v2.1 - LORD GENERATION
 (0.2,   
 [
- (gt, "$g_lord_creation_rate", 0),  ######### if set to 0 don't create any
+ 
+(gt, "$g_lord_creation_rate", 0),  ######### if set to 0 don't create any
  (val_add, "$g_misc_lord_creation_rate_hours_passed", 0.2*100), ######### trigger rate x 100 for rounding values
  (try_begin),
    (store_mul, ":creation_rate", "$g_lord_creation_rate", 100),  ######### simulates a float number 
    (val_div, ":creation_rate", 73),  ######### 43 original factions but it depends if civil war exist or not
    (ge, "$g_misc_lord_creation_rate_hours_passed", ":creation_rate"),
      (assign, "$g_misc_lord_creation_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 146"),
      (try_begin),
        (lt, "$g_misc_lord_generation_cur_faction", kingdoms_begin), 
          (assign, "$g_misc_lord_generation_cur_faction", kingdoms_begin),
@@ -7270,7 +7663,9 @@ simple_triggers = [
 # (0.98,   ###################### roughly once every month for each of the 733 centers
 (720,   
 [
- # (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 147"),
+# (try_begin),
    # (lt, "$g_change_culture_cur_center", centers_begin), 
    # (assign, "$g_change_culture_cur_center", centers_begin),
  # (try_end),
@@ -7298,7 +7693,9 @@ simple_triggers = [
 ############################ NEW v2.1 - gives prosperity to villages the player has invested on
 (0.056, ###################### roughly once every day for each of the 423 villages
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 148"),
+(try_begin),
    (lt, "$g_donation_changes_cur_village", villages_begin), 
    (assign, "$g_donation_changes_cur_village", villages_begin),
  (try_end),
@@ -7338,7 +7735,9 @@ simple_triggers = [
 ############################## NEW v2.1 - Patrols drop prisoners into a walled fief
 (48,
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 149"),
+(try_begin),
    (eq, "$g_misc_parties_drop_prisoners_to_walled_fief", 1),
    (try_for_parties, ":party"),
      (party_is_active, ":party"),
@@ -7408,13 +7807,15 @@ simple_triggers = [
 ############################## NEW v2.1 - Civil War
 (720,   
 [
- (gt, "$g_misc_civil_war_chance", 9999999), ######### if disabled don't do anything
+ 
+(gt, "$g_misc_civil_war_chance", 9999999), ######### if disabled don't do anything
  (val_add, "$g_misc_civil_war_hours_passed", 0.3*100), ######### trigger rate x 100 for rounding values
  (try_begin),
    (store_mul, ":rate", "$g_misc_civil_war_rate", 100),  ######### simulates a float number 
    (val_div, ":rate", 73),  ######### 43 original factions but it depends if civil war exist or not
    (ge, "$g_misc_civil_war_hours_passed", ":rate"),
      (assign, "$g_misc_civil_war_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 150"),
      (try_begin),
        (lt, "$g_misc_civil_war_cur_faction", kingdoms_begin), 
          (assign, "$g_misc_civil_war_cur_faction", kingdoms_begin),
@@ -7447,6 +7848,7 @@ simple_triggers = [
 ############################## NEW v2.1 - This runs once every 72 hours to evaluate the amount of factions active
 (72,
 [  
+      ####(display_message, "@Executing Simple Trigger 151"),
  (try_begin),
    (assign, "$g_current_factions_active_temp", 0), ######## set it to 0 every time it runs
    (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
@@ -7487,6 +7889,7 @@ simple_triggers = [
 ############################## NEW v2.1 - This runs to check if a rebel faction has defeated its original faction - if yes change its name to the former's name
 (48,
 [  
+      ####(display_message, "@Executing Simple Trigger 152"),
  (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
    (try_begin),
      (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),  ######## is still active
@@ -7506,6 +7909,7 @@ simple_triggers = [
 ############################## NEW v2.1 - This runs once every 24 hours to count the amount of days a faction has been active
 (24,
 [  
+      ####(display_message, "@Executing Simple Trigger 153"),
  (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
    (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
      (faction_get_slot, ":days", ":cur_faction", slot_faction_days_active),
@@ -7526,6 +7930,7 @@ simple_triggers = [
    (val_div, ":rate", 73),  ############## 13 original factions but it depends if civil war exist or not
    (ge, "$g_party_faction_respawn_rate_hours_passed", ":rate"),
      (assign, "$g_party_faction_respawn_rate_hours_passed", 0),
+      ####(display_message, "@Executing Simple Trigger 154"),
      (try_begin),
        (lt, "$g_party_faction_respawn_rate_cur_faction", kingdoms_begin), 
          (assign, "$g_party_faction_respawn_rate_cur_faction", kingdoms_begin),
@@ -7604,7 +8009,9 @@ simple_triggers = [
 ############################ NEW v2.1 - mill prosperity
 (0.794, ###################### roughly once every two weeks for each of the 423 villages
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 155"),
+(try_begin),
    (lt, "$g_mill_prosperity_cur_village", villages_begin), 
    (assign, "$g_mill_prosperity_cur_village", villages_begin),
  (try_end),
@@ -7629,7 +8036,9 @@ simple_triggers = [
 ####################### Remove dead lords from notes 
 (2.54,   ##### once every 75 days for each of the 708 lords
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 156"),
+(try_begin),
    (lt, "$g_remove_from_notes_cur_npc", active_npcs_begin), 
      (assign, "$g_remove_from_notes_cur_npc", active_npcs_begin),
  (try_end),
@@ -7654,7 +8063,9 @@ simple_triggers = [
 ####################### NEW v2.2 - Lords get out of defeated factions ASAP
 (0.2372,   ###### once a week for every of the 708 lords
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 157"),
+(try_begin),
    (lt, "$g_leave_defeated_faction_cur_lord", lords_begin), 
      (assign, "$g_leave_defeated_faction_cur_lord", lords_begin),
  (try_end),
@@ -7695,6 +8106,7 @@ simple_triggers = [
 ################# 
 (2,   
 [
+      ####(display_message, "@Executing Simple Trigger 158"),
 (map_free),
 (call_script, "script_music_set_situation_with_culture", mtf_sit_travel),
 ]),  
@@ -7705,7 +8117,9 @@ simple_triggers = [
 #################  NEW v2.7 - makes ladies fall under the protection of someone if they haven't one already or their former protector is dead
 (0.4,   ######## once every week for each of the 420 ladies
 [
- (try_begin),
+ 
+      ####(display_message, "@Executing Simple Trigger 159"),
+(try_begin),
    (lt, "$g_place_lady_under_protection_cur_lady", kingdom_ladies_begin), 
      (assign, "$g_place_lady_under_protection_cur_lady", kingdom_ladies_begin),
  (try_end),
@@ -7769,7 +8183,9 @@ simple_triggers = [
 # (24,   ##KOMKE Changed to 24 to avoid activation before "party-size-player-king-of-supporters" fix
 ####### NEW v2.9-KOMKE END-
 [
- (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
+ 
+      ####(display_message, "@Executing Simple Trigger 160"),
+(faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
  (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
  (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
  (le, "$g_player_minister", 0),
