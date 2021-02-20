@@ -563,7 +563,7 @@ troops = [
   ["merc_euro_horse",
     "Eques Absolvitur",
     "Equites Absolvuntur",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
     itm_light_lance,
@@ -1481,7 +1481,7 @@ troops = [
   ["merc_latin_horse",
      "Eques",
      "Equites",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_16,
     [
     itm_spear_n,
@@ -1822,7 +1822,7 @@ troops = [
   ["merc_balkan_horse",
      "Eques Absolvitur(Croatian)",
      "Equites Absolvuntur(Croatian)",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_29,
     [
     itm_javelin,
@@ -2051,7 +2051,7 @@ troops = [
   ["merc_scan_horse",
      "Eques Absolvitur(Scandinavia)",
      "Equites Absolvuntur(Scandinavia)",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_4,
     [
     itm_nordic_fur_cap,
@@ -2349,7 +2349,7 @@ troops = [
   ["merc_veteran_euro_horse",
      "Eques Absolvitur",
      "Equites Absolvuntur",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
     itm_light_lance,
@@ -3395,7 +3395,7 @@ troops = [
   ["merc_veteran_latin_horse",
      "Eques",
      "Equites",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_16,
     [
     itm_spear_n,
@@ -3745,7 +3745,7 @@ troops = [
   ["merc_veteran_balkan_horse",
      "Eques Absolvitur(Croatian)",
      "Equites Absolvuntur(Croatian)",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_29,
     [
     itm_javelin,
@@ -3986,7 +3986,7 @@ troops = [
   ["merc_veteran_scan_horse",
      "Eques Absolvitur(Scandinavia)",
      "Equites Absolvuntur(Scandinavia)",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_4,
     [
     itm_tab_shield_heater_c,
@@ -4239,7 +4239,7 @@ troops = [
   ["merc_elite_euro_horse",
      "Eques Absolvitur",
      "Equites Absolvuntur",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
     itm_heavy_lance,
@@ -5222,7 +5222,7 @@ troops = [
   ["merc_elite_latin_horse",
      "Eques",
      "Equites",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_16,
     [
     itm_heavy_lance,
@@ -5558,7 +5558,7 @@ troops = [
   ["merc_elite_balkan_horse",
      "Eques Absolvitur(Croatian)",
      "Equites Absolvuntur(Croatian)",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_29,
     [
     itm_javelin,
@@ -5801,7 +5801,7 @@ troops = [
   ["merc_elite_scan_horse",
      "Eques Absolvitur(Scandinavia)",
      "Equites Absolvuntur(Scandinavia)",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_4,
     [
     itm_lance,
@@ -7889,7 +7889,7 @@ troops = [
     foot_attrib_elite, varangian_wp, varangian_skills,
     0x00000005c00005c9485b92351564350b00000000001dd85a0000000000000000, 0x00000005c00025c9485b92351564350b00000000001dd85a0000000000000000
   ],
-     ["georgian_lancer",
+   ["georgian_lancer",
      "Moqiravne Aznaur",
      "Moqiravne Aznaur",
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -7931,7 +7931,7 @@ troops = [
     rhodok_face_younger_1, rhodok_face_old_2
   ],
 
-     ["goergian_horse_archer",
+   ["goergian_horse_archer",
      "Moqiravne Msakhureuli",
      "Moqiravne Msakhureuli",
     tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -10187,7 +10187,7 @@ troops = [
   ["mazovian_horse_1",
      "Mazowiecki lekki kawalerzysta",
      "Mazowieccy lekcy kawalerzyści",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
     itm_light_lance,
@@ -13602,7 +13602,7 @@ troops = [
     ###### nord_face_young_1, swadian_face_old_2
     ###### ],
 
-    ["balkan_vil_3_1_1",
+  ["balkan_vil_3_1_1",
      "Akrit",
      "Akriti",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -13659,7 +13659,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["balkan_vil_4_1_1",
+  ["balkan_vil_4_1_1",
      "Opitnij Akrit",
      "Opitnije Akriti",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -19915,7 +19915,7 @@ troops = [
   #NEW REVISION
 
   ###### byzantine village
-    ["byz_village_1",
+  ["byz_village_1",
      "Paroikoi",
      "Paroikoi",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -19978,9 +19978,9 @@ troops = [
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
-    ["byz_village_3_1",
+  ["byz_village_3_1",
      "Peltastae",
      "Peltastae",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -20016,7 +20016,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["byz_village_4_1",
+  ["byz_village_4_1",
      "Acritae",
      "Acritae",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -20047,9 +20047,9 @@ troops = [
     ],
     ranged_attrib_5, thrown_veteran_wp, thrown_veteran_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
-    ["byz_village_3_2",
+  ["byz_village_3_2",
      "Toxotae",
      "Toxotae",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -20077,7 +20077,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["byz_village_4_2",
+  ["byz_village_4_2",
      "Mourtati",
      "Mourtati",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged | tf_guarantee_shield,
@@ -20106,7 +20106,7 @@ troops = [
     ],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
   ###### byzantine town
   ["byz_town_1",
@@ -20154,7 +20154,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["byz_town_2",
+  ["byz_town_2",
      "Contarati",
      "Contarati",
     #####" Lansarii",
@@ -20197,9 +20197,9 @@ troops = [
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
-    ["byz_town_3_1",  #spearman
+  ["byz_town_3_1",  #spearman
      "Scoutati Akontisths",
      "Scoutati Akontisths",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -20238,7 +20238,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["byz_town_4_1",
+  ["byz_town_4_1",
      "Beteranos Scoutati Akontisths",
      "Beteranoi Scoutati Akontisths",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -20278,9 +20278,9 @@ troops = [
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
-    ["byz_town_3_2",
+  ["byz_town_3_2",
      "Scoutati Ksifomaxos", #swordsman
      "Scoutati Ksifomaxos",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -20323,7 +20323,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["byz_town_4_2",
+  ["byz_town_4_2",
      "Hoplitae",
      "Hoplitae",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -20365,10 +20365,10 @@ troops = [
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
   ###### byzantine castle
-    ["byz_castle_1",
+  ["byz_castle_1",
      "Trapezitae",
      "Trapezitae",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_ranged,
@@ -20404,7 +20404,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["byz_castle_2",
+  ["byz_castle_2",
      "Cavalarii",
      "Cavalarii",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_ranged,
@@ -20439,9 +20439,9 @@ troops = [
     ],
     horse_attrib_4, cum_horseman_wp, cum_horseman_skills,
     euro_face_3, euro_face_4
-    ],
+  ],
 
-    ["byz_castle_3",
+  ["byz_castle_3",
      "Stratiotae",
      "Stratiotae",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
@@ -20482,7 +20482,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["byz_castle_4",
+  ["byz_castle_4",
      "Cataphractoi",
      "Cataphractoi",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
@@ -23184,7 +23184,7 @@ troops = [
     itm_berber_tunic_a,
     itm_berber_tunic_b,
     itm_andalusian_archers_vest,
-  ],
+    ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     arab_face_1, arab_face_2
   ],
@@ -24680,7 +24680,7 @@ troops = [
   ],
 
 
-    ["anatolian_town_recruit_christ",
+  ["anatolian_town_recruit_christ",
      "Polites Anatolikon †",
      "Politi Anatolikon †",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -24734,7 +24734,7 @@ troops = [
 
 
 
-    ["anatolian_christian_spearman_1",
+  ["anatolian_christian_spearman_1",
      "Hai Ramik Nizagamartik †",
      "Hayasdan Ramik Nizagamartik †",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -24779,7 +24779,7 @@ troops = [
     euro_face_3, euro_face_4
     ],
 
-    ["anatolian_christian_spearman_2",
+  ["anatolian_christian_spearman_2",
      "Hai Vahani-Bernakir Nizagamartik †",
      "Hayasdan Vahani-Bernakir Nizagamartik †",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -24821,7 +24821,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["anatolian_christian_spearman_3",
+  ["anatolian_christian_spearman_3",
      "Hai Krtser-Azat Nizagamartik †",
      "Hayasdan Krtser-Azat Nizagamartik †",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
@@ -24936,7 +24936,7 @@ troops = [
     euro_face_3, euro_face_4
     ],
 
-    ["anatolian_christian_archer_2",
+  ["anatolian_christian_archer_2",
      "Hai Vahani-Bernakir Netadzik †",
      "Hayasdan Vahani-Bernakir Netadzik",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -24977,7 +24977,7 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-    ["anatolian_christian_archer_3",
+  ["anatolian_christian_archer_3",
      "Hai Krtser-Azat Netadzik †",
      "Hayasdan Krtser-Azat Netadzik",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_ranged,
@@ -25262,7 +25262,7 @@ troops = [
 
 
 ############################# ANATOLIAN MUSLIM
-    ["anatolian_village_recruit",
+  ["anatolian_village_recruit",
      "Paroikos Anatolikon",
      "Paroikoi Anatolikon",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -25327,7 +25327,7 @@ troops = [
   ],
 
 
-    ["anatolian_town_recruit",
+  ["anatolian_town_recruit",
      "Polites Anatolikon",
      "Politi Anatolikon",
     tf_guarantee_armor | tf_guarantee_boots,
@@ -25437,7 +25437,7 @@ troops = [
     euro_face_3, euro_face_4
     ],
 
-    ["anatolian_muslim_spear_2",
+  ["anatolian_muslim_spear_2",
      "Mızrakçı",
      "Mızraklı",
     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield,
@@ -25513,7 +25513,7 @@ troops = [
     ],
 
 
-    ["anatolian_muslim_infantry_1",
+  ["anatolian_muslim_infantry_1",
      "Fata Rajjala",
      "Fityan Rajjala",
     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_gloves,
@@ -29363,7 +29363,7 @@ troops = [
   ["euro_horse_1_templar",
      "Templar Mounted Serjeant",
      "Templar Mounted Serjeants",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
     itm_light_lance,
@@ -30566,7 +30566,7 @@ troops = [
   ["euro_horse_1_hospitaller",
      "Hospitaller Mounted Serjeant",
      "Hospitaller Mounted Serjeants",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
     itm_light_lance,
@@ -31934,7 +31934,7 @@ troops = [
   ["euro_horse_1_antioch",
      "Antioch Mounted Sergeant",
      "Antioch Mounted Sergeants",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
     itm_light_lance,
@@ -33218,7 +33218,7 @@ troops = [
   ["euro_horse_1_tripoli",
      "Tripoli Mounted Sergeant",
      "Tripoli Mounted Sergeants",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
     itm_light_lance,
@@ -34498,7 +34498,7 @@ troops = [
   ["euro_horse_1_ibelin",
      "Ibelin Mounted Sergeant",
      "Ibelin Mounted Sergeants",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
     itm_light_lance,
@@ -35780,7 +35780,7 @@ troops = [
   ["euro_horse_1_jerusalem",
      "Jerusalem Mounted Sergeant",
      "Jerusalem Mounted Sergeants",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
     itm_light_lance,
@@ -36894,8 +36894,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_1",
+  ["tournament_knight_1",
     "Olivier III de Termes,Seigneur de Termes",
     "Olivier III de Termes",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -36943,8 +36942,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_2",
+  ["tournament_knight_2",
     "Guy de Dampierre ,Comte de Flandre",
     "Guy de Dampierre ,Comte de Flandre",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37041,8 +37039,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_4",
+  ["tournament_knight_4",
     "Henry de Blamont",
     "Henry de Blamont",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37139,8 +37136,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_6",
+  ["tournament_knight_6",
     "Gérard de Ligne",
     "Gérard de Ligne",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37237,8 +37233,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_8",
+  ["tournament_knight_8",
     "Philip of Flanders",
     "Philip of Flanders",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37286,8 +37281,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_9",
+  ["tournament_knight_9",
     "Theobald of Blois",
     "Theobald of Blois",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37335,8 +37329,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_10",
+  ["tournament_knight_10",
     "James d'Avesnes",
     "James d'Avesnes",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37384,8 +37377,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_11",
+  ["tournament_knight_11",
     "Guy de Chatillian",
     "Guy de Chatillian",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37433,8 +37425,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_12",
+  ["tournament_knight_12",
     "Raoul of Clermont",
     "Raoul of Clermont",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37482,8 +37473,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_13",
+  ["tournament_knight_13",
     "Hugh of Burgandy",
     "Hugh of Burgandy",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37531,8 +37521,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_14",
+  ["tournament_knight_14",
     "William des Barres",
     "William des Barres",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37580,8 +37569,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_15",
+  ["tournament_knight_15",
     "Matthew de Walincourt",
     "Matthew de Walincourt",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37629,8 +37617,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_16",
+  ["tournament_knight_16",
     "Robert de Beaumont",
     "Robert de Beaumont",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37678,8 +37665,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_17",
+  ["tournament_knight_17",
     "Roger de Gaugi",
     "Roger de Gaugi",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37727,8 +37713,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_18",
+  ["tournament_knight_18",
     "Robert of Dreux",
     "Robert of Dreux",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37776,8 +37761,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_19",
+  ["tournament_knight_19",
     "David of Huntingdon",
     "David of Huntingdon",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -37825,8 +37809,7 @@ troops = [
     0x0000000f5b1052c61ce1a9521db1375200000000001ed31b0000000000000000
   ],
 
-    [
-    "tournament_knight_20",
+  ["tournament_knight_20",
     "Henry of Champagne ",
     "Henry of Champagne ",
     tf_hero|tf_mounted | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
@@ -38025,715 +38008,9 @@ troops = [
   ["tavern_minstrel_19","Wandering Skald","Minstrel",tf_hero|tf_randomize_face|tf_guarantee_shield|tf_guarantee_armor|tf_guarantee_boots, 0, reserved, fac_commoners,[itm_fur_coat, itm_hide_boots, itm_lyre],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2], #No instrument or lyre
   ["tavern_minstrel_20","Wandering Troubadour","Minstrel",tf_hero|tf_randomize_face|tf_guarantee_shield|tf_guarantee_armor|tf_guarantee_boots, 0, reserved, fac_commoners,[itm_short_tunic, itm_hide_boots, itm_lute],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2], #Lute or Byzantine/Occitan lyra
 
-  #COMMONERS BEGIN
-  #####BALT
-  ###### [
-    ###### "commoner1",
-    ###### "commoner1",
-    ###### "commoner1",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_teu_gambeson,
-    ###### itm_woolen_hose,
-    ###### itm_military_cleaver_b,
-    ###### itm_tab_shield_heater_c,
-    ###### ],
-    ###### companion_engineer,
-    ###### companion_engineer_wp,
-    ###### companion_engineer_skills,
-    ###### 0x00000000190c000e085b96c31c4038e200000000001dc6c10000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner2",
-    ###### "commoner2",
-    ###### "commoner2",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_balt_padded_a,
-    ###### itm_lapcie,
-    ###### itm_javelin,
-    ###### itm_lit_pavise_a_3,
-    ###### ],
-    ###### companion_priest,
-    ###### companion_priest_wp,
-    ###### companion_priest_skills,
-    ###### 0x00000000170c224f3464adc91e8dd95b00000000001dd9090000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner3",
-    ###### "commoner3",
-    ###### "commoner3",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_mon_lamellar_a,
-    ###### itm_cuman_boots,
-    ###### itm_nomad_bow,
-    ###### itm_arrows,
-    ###### itm_cuman_shield_a_3,
-    ###### itm_spear_f,
-    ###### itm_steppe_horse
-    ###### ],
-    ###### companion_trader,
-    ###### companion_trader_wp,
-    ###### companion_trader_skills,
-    ###### 0x000000001e0c504c46a62a2a6351b71300000000001279590000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner4",
-    ###### "commoner4",
-    ###### "commoner4",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_gambeson_c,
-    ###### itm_woolen_hose,
-    ###### itm_arming_cap,
-    ###### itm_light_crossbow,
-    ###### itm_bolts,
-    ###### itm_falchion,
-    ###### itm_tab_shield_heater_c,
-    ###### ],
-    ###### companion_pathfinder,
-    ###### companion_pathfinder_wp,
-    ###### companion_pathfinder_skills,
-    ###### 0x00000000150401491ba44a3262a61b1c00000000001ddb1d0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner5",
-    ###### "commoner5",
-    ###### "commoner5",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_gambeson_c,
-    ###### itm_lapcie,
-    ###### itm_arming_cap,
-    ###### itm_spear_f,
-    ###### itm_raf_one_handed_axe_b,
-    ###### itm_lit_pavise_b_3,
-    ###### ],
-    ###### companion_trainer,
-    ###### companion_trainer_wp,
-    ###### companion_trainer_skills,
-    ###### 0x000000002704104944cca63f5ca5522400000000001d36ce0000000000000000
-  ###### ],
-#####WESTERN
-  ###### [
-    ###### "commoner6",
-    ###### "commoner6",
-    ###### "commoner6",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_leather_vest,
-    ###### itm_woolen_hose,
-    ###### itm_leather_cap,
-    ###### itm_military_pick,
-    ###### ],
-    ###### companion_engineer,
-    ###### companion_engineer_wp,
-    ###### companion_engineer_skills,
-    ###### 0x000000000300028e1a6d85c75991c55900000000001cd91a0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner7",
-    ###### "commoner7",
-    ###### "commoner7",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_spear_l,
-
-    ###### itm_nomad_bow,
-    ###### itm_arrows,
-
-    ###### itm_cuman_shirt_a,
-    ###### itm_cuman_boots,
-    ###### itm_cuman_shield_a_3,
-    ###### itm_cuman_cap_a,
-
-    ###### itm_steppe_horse,
-    ###### ],
-    ###### companion_priest,
-    ###### companion_priest_wp,
-    ###### companion_priest_skills,
-    ###### 0x000000001108010c41176d34d94db6d900000000001d595c0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner8",
-    ###### "commoner8",
-    ###### "commoner8",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_kau_rus_tunic_a,
-    ###### itm_lapcie,
-    ###### itm_tab_shield_kite_c,
-    ###### itm_fur_hat,
-    ###### itm_pitch_fork,
-    ###### ],
-    ###### companion_trader,
-    ###### companion_trader_wp,
-    ###### companion_trader_skills,
-    ###### 0x000000000a0432c9353319cad3acbaa400000000001e57700000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner9",
-    ###### "commoner9",
-    ###### "commoner9",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_gambeson_b,
-    ###### itm_leather_boots,
-    ###### itm_leather_cap,
-
-    ###### itm_short_bow,
-    ###### itm_arrows,
-
-    ###### itm_dagger,
-    ###### ],
-    ###### companion_pathfinder,
-    ###### companion_pathfinder_wp,
-    ###### companion_pathfinder_skills,
-    ###### 0x0000000033103409451290c86c52d81d00000000001e33a90000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner10",
-    ###### "commoner10",
-    ###### "commoner10",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_linen_tunic,
-    ###### itm_blue_hose,
-
-    ###### ],
-    ###### companion_trainer,
-    ###### companion_trainer_wp,
-    ###### companion_trainer_skills,
-    ###### 0x000000001110244e48a28d1ddc6dd8a300000000001659110000000000000000
-  ###### ],
-####ORTHODOX
-  ###### [
-    ###### "commoner11",
-    ###### "commoner11",
-    ###### "commoner11",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_padded_cloth,
-    ###### itm_blue_hose,
-    ###### itm_arming_cap,
-
-    ###### itm_long_axe,
-    ###### ],
-    ###### companion_engineer,
-    ###### companion_engineer_wp,
-    ###### companion_engineer_skills,
-    ###### 0x0000000000100309569471115b6d2c9400000000001eb6b60000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner12",
-    ###### "commoner12",
-    ###### "commoner12",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_gambeson_c,
-    ###### itm_lapcie,
-    ###### itm_arming_cap,
-    ###### itm_light_crossbow,
-    ###### itm_bolts,
-    ###### itm_falchion,
-    ###### itm_tab_shield_heater_c,
-    ###### ],
-    ###### companion_priest,
-    ###### companion_priest_wp,
-    ###### companion_priest_skills,
-    ###### 0x00000000250c25863493ba286c31b78b00000000001de9140000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner13",
-    ###### "commoner13",
-    ###### "commoner13",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_gambeson_c,
-    ###### itm_lapcie,
-    ###### itm_arming_cap,
-    ###### itm_light_crossbow,
-    ###### itm_bolts,
-    ###### itm_falchion,
-    ###### itm_tab_shield_heater_c,
-    ###### ],
-    ###### companion_trader,
-    ###### companion_trader_wp,
-    ###### companion_trader_skills,
-    ###### 0x00000000141021893b0d291394676b5500000000001939520000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner14",
-    ###### "commoner14",
-    ###### "commoner14",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_gambeson_c,
-    ###### itm_lapcie,
-    ###### itm_arming_cap,
-    ###### itm_light_crossbow,
-    ###### itm_bolts,
-    ###### itm_falchion,
-    ###### itm_tab_shield_heater_c,
-    ###### ],
-    ###### companion_pathfinder,
-    ###### companion_pathfinder_wp,
-    ###### companion_pathfinder_skills,
-    ###### 0x000000001d0800105a946544928d56e500000000001d49250000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner15",
-    ###### "commoner15",
-    ###### "commoner15",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_kipchak_shirt_a,
-    ###### itm_lapcie,
-
-    ###### itm_cuman_shield_a_3,
-    ###### itm_sword_khergit_1,
-    ###### ],
-    ###### companion_trainer,
-    ###### companion_trainer_wp,
-    ###### companion_trainer_skills,
-    ###### 0x000000000004500d64dd66395370cae500000000001e6b590000000000000000
-  ###### ],
-####MUSLIM
-  ###### [
-    ###### "commoner16",
-    ###### "commoner16",
-    ###### "commoner16",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_surgeon,
-    ###### itm_leather_boots,
-    ###### itm_priest_cap_1,
-
-    ###### itm_butchering_knife,
-    ###### ],
-    ###### companion_engineer,
-    ###### companion_engineer_wp,
-    ###### companion_engineer_skills,
-    ###### 0x000000003d04230664da64995370cae500000000001c65590000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner17",
-    ###### "commoner17",
-    ###### "commoner17",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_almogavar_c,
-    ###### itm_lapcie,
-    ###### itm_throwing_spears,
-    ###### itm_almogavar_sword,
-
-    ###### itm_tab_shield_round_a,
-    ###### itm_falchion,
-    ###### ],
-    ###### companion_priest,
-    ###### companion_priest_wp,
-    ###### companion_priest_skills,
-    ###### 0x000000003008354946e4ca688b75149c00000000001e67540000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner18",
-    ###### "commoner18",
-    ###### "commoner18",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_blue_hose,
-    ###### itm_leather_cap,
-
-    ###### itm_sumpter_horse,
-    ###### ],
-    ###### companion_trader,
-    ###### companion_trader_wp,
-    ###### companion_trader_skills,
-    ###### 0x000000002e04400f36d9a5e7ac6d652a00000000001e54950000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner20",
-    ###### "commoner20",
-    ###### "commoner20",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_sarranid_boots_a_long,
-    ###### itm_kau_arab_tunic_a,
-    ###### itm_turban_a,
-
-    ###### itm_light_crossbow,
-    ###### itm_bolts,
-
-    ###### itm_arab_shield_a_3,
-    ###### itm_andalusian_sword,
-    ###### ],
-    ###### companion_pathfinder,
-    ###### companion_pathfinder_wp,
-    ###### companion_pathfinder_skills,
-    ###### 0x000000002e04654636d9a5e7ac6d652a00000000001e54950000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner20",
-    ###### "commoner20",
-    ###### "commoner20",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_sarranid_boots_a_long,
-    ###### itm_kau_arab_tunic_a,
-    ###### itm_turban_a,
-
-    ###### itm_light_crossbow,
-    ###### itm_bolts,
-
-    ###### itm_arab_shield_a_3,
-    ###### itm_andalusian_sword,
-    ###### ],
-    ###### companion_trainer,
-    ###### companion_trainer_wp,
-    ###### companion_trainer_skills,
-    ###### 0x000000002e04654636d9a5e7ac6d652a00000000001e54950000000000000000
-  ###### ],
-###MONGOL
-  ###### [
-    ###### "commoner22",
-    ###### "commoner22",
-    ###### "commoner22",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_byz_boots_a,
-    ###### itm_byz_footman_a,
-
-    ###### itm_spatha,
-    ###### itm_byz_shield,
-    ###### itm_sword_khergit_1
-    ###### ],
-    ###### companion_engineer,
-    ###### companion_engineer_wp,
-    ###### companion_engineer_skills,
-    ###### 0x000000002e04320936d9a5e7ac6d652a00000000001e54950000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner23",
-    ###### "commoner23",
-    ###### "commoner23",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_templar_tunic_a,
-    ###### itm_blue_hose,
-    ###### itm_arming_cap,
-
-    ###### itm_sword_type_xii,
-    ###### itm_tab_shield_heater_c,
-    ###### ],
-    ###### companion_priest,
-    ###### companion_priest_wp,
-    ###### companion_priest_skills,
-    ###### 0x00000000070c318a5ce3cb36c36ac76300000000001e365c0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner24",
-    ###### "commoner24",
-    ###### "commoner24",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_peasant_g,
-      #
-    ###### itm_straw_hat,
-
-    ###### itm_raf_one_handed_axe_c,
-    ###### ],
-    ###### companion_trader,
-    ###### companion_trader_wp,
-    ###### companion_trader_skills,
-    ###### 0x00000000070c43c25ce3cb6c4b6ac76300000000001e365c0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner25",
-    ###### "commoner25",
-    ###### "commoner25",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_scimitar,
-
-    ###### itm_mamluke_boots,
-    ###### itm_turban_b,
-    ###### itm_arab_shield_b_3,
-    ###### itm_robe,
-    ###### itm_arabian_horse_a,
-    ###### ],
-    ###### companion_pathfinder,
-    ###### companion_pathfinder_wp,
-    ###### companion_pathfinder_skills,
-    ###### 0x00000000070c63c35ce3cb6c4b6ac76300000000001e365c0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "commoner26",
-    ###### "commoner26",
-    ###### "commoner26",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_gambeson_c,
-    ###### itm_woolen_hose,
-    ###### itm_leather_cap,
-
-    ###### ],
-    ###### companion_trainer,
-    ###### companion_trainer_wp,
-    ###### companion_trainer_skills,
-    ###### 0x00000009f604300a3c5c4ea32548c92300000000001eb2620000000000000000
-  ###### ],
-  #COMMONERS END
-
 #NPC system changes begin
 #Companions
   ["kingdom_heroes_including_player_begin",  "kingdom_heroes_including_player_begin",  "kingdom_heroes_including_player_begin",  tf_hero, 0,reserved,  fac_kingdom_1,[],          lord_attrib,wp(220),knows_lord_1, 0x000000000010918a01f248377289467d],
-
-  ###### ["npc1","Borcha","Borcha",tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_khergit_armor,itm_leather_boots,itm_knife],
-   ###### str_8|agi_7|int_12|cha_7|level(3),wp(60),knows_tracker_npc|
-   ###### knows_ironflesh_1|knows_power_strike_1|knows_pathfinding_3|knows_athletics_2|knows_tracking_1|knows_riding_2, #skills 2/3 player at that level
-   ###### 0x00000004bf086143259d061a9046e23500000000001db52c0000000000000000],
-  ###### ["npc2","Marnid","Marnid", tf_hero|tf_unmoveable_in_party_window, 0,reserved, fac_commoners,[itm_linen_tunic,itm_hide_boots,itm_club],
-   ###### str_7|agi_7|int_11|cha_6|level(1),wp(40),knows_merchant_npc|
-   ###### knows_trade_2|knows_weapon_master_1|knows_ironflesh_1|knows_wound_treatment_1|knows_athletics_2|knows_first_aid_1|knows_leadership_1,
-   ###### 0x000000019d004001570b893712c8d28d00000000001dc8990000000000000000],
-  ###### ["npc3","Ymira","Ymira",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_peasant_dress,itm_woolen_hose,itm_knife],
-   ###### str_6|agi_9|int_11|cha_6|level(1),wp(20),knows_merchant_npc|
-   ###### knows_wound_treatment_1|knows_trade_1|knows_first_aid_3|knows_surgery_1|knows_athletics_1|knows_riding_1,
-   ###### 0x0000000083040001583b6db8dec5925b00000000001d80980000000000000000],
-  ###### ["npc4","Rolf","Rolf",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_leather_jerkin,itm_leather_boots, itm_sword_type_xii],
-   ###### str_10|agi_9|int_13|cha_10|level(60),wp(110),knows_warrior_npc|
-   ###### knows_weapon_master_2|knows_power_strike_2|knows_riding_2|knows_athletics_2|knows_power_throw_2|knows_first_aid_1|knows_surgery_1|knows_tactics_2|knows_leadership_2,
-   ###### 0x000000057f1074002c75c6a8a58ad72e00000000001e1a890000000000000000],
-  ###### ["npc5","Baheshtur","Baheshtur",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_vest,itm_leather_boots, itm_sword_khergit_1],
-   ###### str_9|agi_9|int_12|cha_7|level(5),wp(90),knows_warrior_npc|
-   ###### knows_riding_2|knows_horse_archery_3|knows_power_draw_3|knows_leadership_2|knows_weapon_master_1,
-   ###### 0x000000088910318b5c6f972328324a6200000000001cd3310000000000000000],
-  ###### ###### ["npc6","Firentis","Firentis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_leather_boots, itm_sword_type_xii],
-   ###### ###### str_10|agi_12|int_10|cha_5|level(6),wp(105),knows_warrior_npc|
-   ###### ###### knows_riding_2|knows_weapon_master_2|knows_power_strike_2|knows_athletics_3|knows_trainer_1|knows_leadership_1,
-  ###### ###### 0x00000002050052036a1895d0748f3ca30000000000000f0b0000000000000000],
-
-    ###### [
-        ###### "npc6",
-    ###### "Lionel",
-    ###### "Lionel",
-    ###### tf_unmoveable_in_party_window | tf_hero,
-    ###### 0, 0, fac_commoners,
-    ###### [
-    ###### itm_lionel_surcoat_over_mail,
-    ###### itm_raf_mail_chausses,
-    ###### itm_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sword_type_xiv,
-    ###### itm_shield_heater_lionel,
-    ###### itm_lance,
-    ###### itm_warhorse_lionel
-        ###### ],
-    ###### str_10 | agi_12 | int_10 | cha_5 | level(6),
-    ###### wp_one_handed(114) | wp_two_handed(110) | wp_polearm(119) | wp_archery(110) | wp_crossbow(109) | wp_throwing(105),
-    ###### knows_leadership_1 | knows_inventory_management_2 | knows_trainer_1 | knows_riding_4 | knows_athletics_3 | knows_shield_1 | knows_weapon_master_2 | knows_power_strike_2 | knows_ironflesh_1,
-    ###### 0xe050002100a0295f0748f3ca300000000001c0d180000000000000000
-    ###### ],
-
-  ###### ["npc7","Deshavi","Deshavi",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_ragged_outfit,itm_wrapping_boots, itm_hunting_bow, itm_arrows, itm_quarter_staff],
-   ###### str_8|agi_9|int_10|cha_6|level(2),wp(80),knows_tracker_npc|
-   ###### knows_tracking_2|knows_athletics_2|knows_spotting_1|knows_pathfinding_1|knows_power_draw_2,
-   ###### 0x00000001fc08400533a15297634d44f400000000001e02db0000000000000000],
-  ###### ["npc8","Matheld","Matheld",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_tribal_warrior_outfit,itm_leather_boots, itm_sword_viking_1],
-   ###### str_9|agi_10|int_9|cha_10|level(7),wp(90),knows_warrior_npc|
-   ###### knows_weapon_master_3|knows_power_strike_2|knows_athletics_2|knows_leadership_3|knows_tactics_1,
-   ###### 0x00000005800c000637db8314e331e76e00000000001c46db0000000000000000],
-  ###### ###### ["npc9","Alayen","Alayen",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_leather_boots, itm_sword_type_xiii],
-   ###### ###### str_11|agi_8|int_7|cha_8|level(2),wp(100),knows_warrior_npc|
-   ###### ###### knows_weapon_master_1|knows_riding_1|knows_athletics_1|knows_leadership_1|knows_tactics_1|knows_power_strike_1,
-   ###### ###### 0x000000030100300f499d5b391b6db8d300000000001dc2e10000000000000000],
-
-     ###### [
-        ###### "npc9",
-    ###### "Friedrich",
-    ###### "Friedrich",
-    ###### tf_unmoveable_in_party_window | tf_hero,
-    ###### 0, 0, fac_commoners,
-    ###### [
-    ###### itm_hunter,
-    ###### itm_lance,
-    ###### itm_shield_heater_anklin,
-    ###### itm_anklin_surcoat_over_mail,
-    ###### itm_sword_type_xiii,
-    ###### itm_mail_coif,
-    ###### itm_raf_mail_chausses,
-    ###### itm_leather_gloves
-        ###### ],
-    ###### str_11 | agi_8 | int_7 | cha_8 | level(2),
-    ###### wp_one_handed(111) | wp_two_handed(115) | wp_polearm(114) | wp_archery(110) | wp_crossbow(104) | wp_throwing(108),
-    ###### knows_leadership_1 | knows_inventory_management_2 | knows_tactics_1 | knows_riding_4 | knows_athletics_1 | knows_shield_1 | knows_weapon_master_3 | knows_power_strike_3 | knows_ironflesh_1,
-    ###### 0x1bf00000225cad6f39249477e00000000001db6db0000000000000000
-    ###### ],
-
-  ###### ["npc10","Bunduk","Bunduk",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_leather_boots, itm_crossbow, itm_bolts, itm_pickaxe],
-   ###### str_12|agi_8|int_9|cha_11|level(9),wp(105),knows_warrior_npc|
-   ###### knows_weapon_master_3|knows_tactics_1|knows_leadership_1|knows_ironflesh_3|knows_trainer_2|knows_first_aid_2,
-   ###### 0x0000000a3f081006572c91c71c8d46cb00000000001e468a0000000000000000],
-  ###### ["npc11","Katrin","Katrin",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_tunic_with_green_cape, itm_falchion, itm_wrapping_boots],
-   ###### str_8|agi_11|int_10|cha_10|level(8),wp(70),knows_merchant_npc|
-   ###### knows_weapon_master_1|knows_first_aid_1|knows_wound_treatment_2|knows_ironflesh_3|knows_inventory_management_5,
-   ###### 0x0000000d7f0400035915aa226b4d975200000000001ea49e0000000000000000],
-  ###### ["npc12","Jeremus","Jeremus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_pilgrim_disguise,itm_leather_boots, itm_staff],
-   ###### str_8|agi_7|int_13|cha_7|level(4),wp(30),   knows_merchant_npc|
-   ###### knows_ironflesh_1|knows_power_strike_1|knows_surgery_4|knows_wound_treatment_3|knows_first_aid_3,
-   ###### 0x000000078000500e4f8ba62a9cd5d36d00000000001e36250000000000000000],
-  ###### ["npc13","Nizar","Nizar",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_robe,itm_leather_boots, itm_scimitar, itm_courser],
-   ###### str_7|agi_7|int_12|cha_8|level(3),wp(80),knows_warrior_npc|
-   ###### knows_riding_2|knows_leadership_2|knows_athletics_2|knows_ironflesh_2|knows_power_strike_1|knows_weapon_master_1,
-   ###### 0x00000004bf0475c85f4e9592de4e574c00000000001e369c0000000000000000],
-  ###### ###### ["npc14","Lezalit","Lezalit",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_leather_boots, itm_sword_type_xiii],
-   ###### ###### str_9|agi_8|int_11|cha_8|level(5),wp(100),knows_warrior_npc|
-   ###### ###### knows_trainer_4|knows_weapon_master_3|knows_leadership_2|knows_power_strike_1,
-   ###### ###### 0x00000001a410259144d5d1d6eb55e96a00000000001db0db0000000000000000],
-    ###### [
-        ###### "npc14",
-    ###### "Bors",
-    ###### "Bors",
-    ###### tf_unmoveable_in_party_window | tf_hero,
-    ###### 0, 0, fac_commoners,
-    ###### [
-    ###### itm_hunter,
-    ###### itm_lance,
-    ###### itm_sword_type_xii,
-    ###### itm_shield_kite_bors,
-    ###### itm_bors_surcoat_over_mail,
-
-    ###### itm_raf_mail_chausses,
-    ###### itm_mail_mittens
-        ###### ],
-    ###### str_9 | agi_8 | int_11 | cha_8 | level(5),
-    ###### wp_one_handed(150) | wp_two_handed(116) | wp_polearm(137) | wp_archery(101) | wp_crossbow(104) | wp_throwing(105),
-    ###### knows_leadership_2 | knows_inventory_management_2 | knows_trainer_4 | knows_riding_5 | knows_athletics_1 | knows_shield_1 | knows_weapon_master_3 | knows_power_strike_3 | knows_ironflesh_1,
-    ###### 0x1a410259144d5d1d6eb55e96a00000000001db0db0000000000000000
-    ###### ],
-
-  ###### ["npc15","Artimenner","Artimenner",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_leather_boots, itm_sword_type_xiii],
-   ###### str_9|agi_9|int_12|cha_8|level(7),wp(80),knows_warrior_npc|
-   ###### knows_tactics_2|knows_engineer_4|knows_trade_3|knows_tracking_1|knows_spotting_1,
-   ###### 0x0000000f2e1021862b4b9123594eab5300000000001d55360000000000000000],
-  ###### ["npc16","Klethi","Klethi",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_peasant_dress,itm_leather_boots, itm_dagger, itm_throwing_knives],
-   ###### str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|
-   ###### knows_power_throw_3|knows_athletics_2|knows_power_strike_1,
-   ###### 0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
-#NPC system changes end
-#NPC system changes begin
-
-  ###### ["npc1","Kiskorov","Kiskorov",tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_fur_coat,itm_hide_boots,itm_knife],
-   ###### str_8|agi_7|int_12|cha_7|level(3),wp(60),knows_tracker_npc|
-   ###### knows_ironflesh_1|knows_power_strike_1|knows_pathfinding_3|knows_athletics_2|knows_tracking_1|knows_riding_2, #skills 2/3 player at that level
-   ###### 0x00000004bf086143259d061a9046e23500000000001db52c0000000000000000],
-  ###### ["npc2","Simon Brewer","Simon Brewer", tf_hero|tf_unmoveable_in_party_window, 0,reserved, fac_commoners,[itm_linen_tunic,itm_hunting_bow,itm_arrows,itm_hide_boots,itm_club],
-   ###### str_11|agi_7|int_7|cha_6|level(1),wp_archery(100)|wp(40),knows_merchant_npc|
-   ###### knows_trade_1|knows_weapon_master_1|knows_ironflesh_1|knows_wound_treatment_1|knows_athletics_1|knows_first_aid_1|knows_leadership_3,
-   ###### 0x000000019d004001570b893712c8d28d00000000001dc8990000000000000000],
-  ###### ["npc3","Elwira","Elwira",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_peasant_dress,itm_woolen_hose,itm_knife],
-   ###### str_6|agi_9|int_11|cha_6|level(1),wp(20),knows_merchant_npc|
-   ###### knows_wound_treatment_1|knows_trade_1|knows_first_aid_3|knows_surgery_3|knows_athletics_1|knows_riding_1,
-   ###### 0x0000000083040001583b6db8dec5925b00000000001d80980000000000000000],
-  ###### ["npc4","Roland","Roland",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_linen_tunic,itm_woolen_hose, itm_sword_type_xiiia],
-   ###### str_10|agi_9|int_13|cha_10|level(60),wp_two_handed(160)|wp(110),knows_warrior_npc|
-   ###### knows_weapon_master_2|knows_power_strike_4|knows_riding_2|knows_athletics_2 |knows_first_aid_1|knows_surgery_1|knows_tactics_2|knows_leadership_2,
-   ###### 0x000000075c001149385b9592844df4cb00000000001e57250000000000000000],
-  ###### ["npc5","Batsaikhan","Batsaikhan",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_vest,itm_wrapping_boots, itm_sword_khergit_1],
-   ###### str_9|agi_9|int_12|cha_7|level(5),wp(90),knows_warrior_npc|
-   ###### knows_riding_2|knows_horse_archery_3|knows_power_draw_1|knows_leadership_2|knows_weapon_master_1,
-   ###### 0x000000088910318b5c6f972328324a6200000000001cd3310000000000000000],
-  ###### ["npc6","Firentis","Firentis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_woolen_hose, itm_sword_type_xii],
-   ###### str_10|agi_12|int_10|cha_5|level(6),wp(105),knows_warrior_npc|
-   ###### knows_riding_2|knows_weapon_master_2|knows_power_strike_2|knows_athletics_3|knows_trainer_1|knows_leadership_1,
-  ###### 0x00000002050052036a1895d0748f3ca30000000000000f0b0000000000000000],
-  ###### ["npc7","Aesa","Aesa",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_ragged_outfit,itm_wrapping_boots, itm_hunting_bow, itm_arrows, itm_quarter_staff],
-   ###### str_8|agi_9|int_10|cha_6|level(2),wp(80),knows_tracker_npc|
-   ###### knows_tracking_2|knows_athletics_2|knows_spotting_1|knows_pathfinding_3|knows_power_draw_1,
-   ###### 0x00000001fc08400533a15297634d44f400000000001e02db0000000000000000],
-  ###### ["npc8","Brynhildr","Brynhildr",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_tribal_warrior_outfit,itm_wrapping_boots, itm_sword_type_xii,],
-   ###### str_9|agi_10|int_9|cha_10|level(7),wp(90),knows_warrior_npc|
-   ###### knows_weapon_master_3|knows_power_strike_2|knows_athletics_2|knows_leadership_3|knows_tactics_1,
-   ###### 0x00000005800c000637db8314e331e76e00000000001c46db0000000000000000],
-  ###### ["npc9","Alayen","Alayen",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_archer_a,itm_woolen_hose, itm_sword_type_xiii],
-   ###### str_11|agi_8|int_7|cha_8|level(2),wp(100),knows_warrior_npc|
-   ###### knows_weapon_master_1|knows_riding_1|knows_athletics_1|knows_leadership_1|knows_tactics_1|knows_power_strike_1,
-   ###### 0x000000030100300f499d5b391b6db8d300000000001dc2e10000000000000000],
-  ###### ["npc10","Bartolomeo","Bartolomeo",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_woolen_hose, itm_crossbow, itm_bolts, itm_pickaxe],
-   ###### str_12|agi_8|int_9|cha_11|level(9),wp(105),knows_warrior_npc|
-   ###### knows_weapon_master_3|knows_tactics_1|knows_leadership_1|knows_ironflesh_3|knows_trainer_2|knows_engineer_2,
-   ###### 0x0000000a3f081006572c91c71c8d46cb00000000001e468a0000000000000000],
-  ###### ["npc11","Liudvika","Liudvika",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_tunic_with_green_cape, itm_falchion, itm_wrapping_boots],
-   ###### str_8|agi_11|int_10|cha_10|level(8),wp(70),knows_merchant_npc|
-   ###### knows_weapon_master_1|knows_first_aid_1|knows_wound_treatment_2|knows_ironflesh_3|knows_inventory_management_5,
-   ###### 0x0000000d7f0400035915aa226b4d975200000000001ea49e0000000000000000],
-  ###### ["npc12","Gilleathain","Gilleathain",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_pilgrim_disguise,itm_woolen_hose, itm_staff],
-   ###### str_8|agi_7|int_13|cha_7|level(4),wp(30),   knows_merchant_npc|
-   ###### knows_ironflesh_1|knows_power_strike_1|knows_surgery_4|knows_wound_treatment_3|knows_first_aid_3,
-   ###### 0x000000078000500e4f8ba62a9cd5d36d00000000001e36250000000000000000],
-  ###### ["npc13","Nasir","Nasir",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_nomad_robe,itm_woolen_hose, itm_scimitar, itm_courser],
-   ###### str_7|agi_7|int_12|cha_8|level(3),wp(80),knows_warrior_npc|
-   ###### knows_riding_2|knows_leadership_2|knows_athletics_2|knows_ironflesh_2|knows_power_strike_1|knows_weapon_master_1,
-   ###### 0x00000004bf0475c85f4e9592de4e574c00000000001e369c0000000000000000],
-  ###### ["npc14","Lezalit","Lezalit",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_woolen_hose, itm_sword_type_xiii],
-   ###### str_9|agi_8|int_11|cha_8|level(5),wp(100),knows_warrior_npc|
-   ###### knows_trainer_4|knows_weapon_master_3|knows_leadership_2|knows_power_strike_1,
-   ###### 0x00000001a410259144d5d1d6eb55e96a00000000001db0db0000000000000000],
-  ###### ["npc15","Alessandro","Alessandro",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_merchant_outfit,itm_woolen_hose, itm_sword_type_xiii],
-   ###### str_9|agi_9|int_12|cha_8|level(7),wp(80),knows_warrior_npc|
-   ###### knows_tactics_2|knows_engineer_4|knows_trade_3|knows_tracking_1|knows_spotting_1,
-   ###### 0x0000000f2e1021862b4b9123594eab5300000000001d55360000000000000000],
-  ###### ["npc16","Charlotta","Charlotta",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_peasant_dress,itm_woolen_hose, itm_dagger, itm_throwing_knives],
-   ###### str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|
-   ###### knows_power_throw_3|knows_athletics_2|knows_power_strike_1,
-   ###### 0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
 
 ####### NEW v3.0-KOMKE START-
 #BALT
@@ -39242,167 +38519,6 @@ troops = [
     0x0000000393049001774d70aeb576c6f300000000001d5b160000000000000000
   ],
 ####### NEW v3.0-KOMKE END- 
-
-  ###### [
-    ###### "npc27",
-    ###### "Taraqai",
-    ###### "Taraqai",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_mongol_warrior_a,
-    ###### itm_khergit_leather_boots,
-
-    ###### itm_nomad_bow,
-    ###### itm_arrows,
-
-    ###### itm_nomad_cap,
-    ###### ],
-    ###### str_9|agi_9|int_6|cha_3|level(8),
-    ###### wp_one_handed(90) | wp_two_handed(35) | wp_polearm(90) | wp_archery(110) | wp_crossbow(35) | wp_throwing(35),
-    ###### knows_weapon_master_3|knows_pathfinding_3|knows_power_strike_2|knows_power_draw_3|knows_horse_archery_3|knows_riding_3|knows_looting_2,
-    ###### 0x00000001bf00538c3acd92d89ec9281600000000001d551c0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "npc28",
-    ###### "Gamal",
-    ###### "Gamal",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_sarranid_cloth_robe,
-    ###### itm_sarranid_boots_a_long,
-
-    ###### itm_turban_c,
-
-    ###### itm_short_bow,
-    ###### itm_arrows,
-    ###### ],
-    ###### str_9|agi_9|int_6|cha_5|level(8),
-    ###### wp_one_handed(65) | wp_two_handed(55) | wp_polearm(55) | wp_archery(110) | wp_crossbow(35) | wp_throwing(55),
-    ###### knows_weapon_master_2|knows_power_draw_2|knows_trade_1,
-    ###### 0x00000001990c60114adc7117249514dc00000000001c229c0000000000000000
-  ###### ],
-
-    ###### [
-    ###### "npc29",
-    ###### "Dragoslav",
-    ###### "Dragoslav",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_lapcie,
-    ###### itm_kau_rus_e,
-
-    ###### itm_spear_n,
-    ###### itm_tab_shield_kite_c,
-
-    ###### itm_mace_2,
-    ###### ],
-    ###### str_9|agi_9|int_6|cha_5|level(8),
-    ###### wp_one_handed(90) | wp_two_handed(35) | wp_polearm(90) | wp_archery(65) | wp_crossbow(35) | wp_throwing(35),
-    ###### knows_weapon_master_2|knows_power_strike_1|knows_surgery_1|knows_first_aid_1|knows_wound_treatment_1,
-    ###### 0x00000001971042cf2ae6492d328e270c00000000001d5b640000000000000000
-  ###### ],
-
-  ###### [
-    ###### "npc30",
-    ###### "Ivailo Bardokva",
-    ###### "Ivailo Bardokva",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_straw_hat,
-    ###### itm_peasant_f,
-      #
-
-    ###### itm_pitch_fork,
-    ###### ],
-    ###### str_9|agi_6|int_6|cha_12|level(8),
-    ###### wp_one_handed(45) | wp_two_handed(45) | wp_polearm(55) | wp_archery(45) | wp_crossbow(45) | wp_throwing(45),
-    ###### knows_power_strike_1|knows_persuasion_3|knows_leadership_3,
-    ###### 0x00000001ad0442043d1b55db4d8ac50b00000000001e368e0000000000000000
-  ###### ],
-
-  ###### [
-    ###### "npc31",
-    ###### "Ali",
-    ###### "Ali",
-    ###### tf_hero|tf_unmoveable_in_party_window, 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_sarranid_boots_a_long,
-    ###### itm_kau_arab_tunic_a,
-    ###### itm_turban_c,
-
-    ###### ],
-    ###### str_3|agi_3|int_9|cha_9|level(8),
-    ###### wp_one_handed(65) | wp_two_handed(65) | wp_polearm(65) | wp_archery(65) | wp_crossbow(65) | wp_throwing(65),
-    ###### knows_trade_3|knows_inventory_management_3|knows_pathfinding_2|knows_spotting_2,
-    ###### 0x000000018d0c614637b546c9115168cd00000000001f5ce40000000000000000
-  ###### ],
-
-  ###### [
-        ###### "players_local",
-    ###### "Miles",
-    ###### "Milites",
-    ###### tf_hero | tf_unmoveable_in_party_window | tf_inactive,
-    ###### 0, reserved, fac_commoners,
-    ###### [
-    ###### itm_cp391_sword,
-    ###### itm_sword_type_xiii,
-    ###### itm_sword_type_xiiib,
-    ###### itm_sword_type_xii,
-    ###### itm_sword_type_xiiia,
-    ###### itm_mace_2,
-    ###### itm_mace_3,
-    ###### itm_heraldic_lance,
-    ###### itm_heavy_lance,
-    ###### itm_mail_mittens,
-    ###### itm_rnd_helm_04,
-    ###### itm_rnd_helm_05,
-    ###### itm_great_helmet_b,
-    ###### itm_great_helmet_c,
-    ###### itm_great_helmet_d,
-    ###### itm_maciejowski_helm,
-    ###### itm_kolpak_mail,
-
-    ###### itm_mail_boots_long,
-
-    ###### itm_tab_shield_heater_c,
-    ###### itm_warhorse,
-
-    ###### itm_rnd_surcoat_10,
-    ###### itm_rnd_surcoat_11,
-    ###### itm_rnd_surcoat_12,
-    ###### itm_rnd_surcoat_13,
-    ###### itm_rnd_surcoat_14,
-    ###### itm_rnd_surcoat_15,
-    ###### itm_rnd_surcoat_16,
-    ###### ],
-    ###### horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-    ###### euro_face_1, euro_face_2
-    ###### ],
-
-  ###### [
-    ###### "npc17",
-    ###### "Ivailo Bardokva",
-    ###### "Ivailo Bardokva",
-    ###### tf_hero|tf_unmoveable_in_party_window,
-    ###### 0, reserved,
-    ###### fac_commoners,
-    ###### [
-    ###### itm_peasant_dress,
-    ###### itm_woolen_hose,
-    ###### itm_dagger,
-    ###### itm_throwing_knives
-    ###### ],
-    ###### str_7|agi_11|int_8|cha_7|level(2),
-    ###### wp(80),
-    ###### knows_tracker_npc|knows_power_throw_3|knows_athletics_2|knows_power_strike_1,
-    ###### 0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000
-  ###### ],
 #NPC system changes end
 
 
@@ -41660,133 +40776,7 @@ troops = [
     0x000000000308505127346dec9b91255900000000001f26e40000000000000000
   ],
 
-    ###### [
-        ###### "knight_2_16",
-    ###### "Kunigas_Sirputis",
-    ###### "Sirputis",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_2,
-    ###### [
-    ###### itm_balt_helmet_c,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_lithuania_a,
-    ###### itm_surcoat_lithuania_a,
-
-    ###### itm_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc06046151435b5122a37756a400000000001c46e50000000000000000, rhodok_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_2_17",
-    ###### "Kunigas_Svalkenis",
-    ###### "Svalkenis",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_2,
-    ###### [
-    ###### itm_slonim,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_lithuania_a,
-    ###### itm_surcoat_lithuania_b,
-
-    ###### itm_raf_two_handed_axe_c,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc081001d3465c89a6a452356300000000001cda550000000000000000, swadian_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_2_18",
-    ###### "Kunigas Roman Danylovich",
-    ###### "Roman Danylovich",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_2,
-    ###### [
-
-    ###### itm_balt_helmet_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_lithuania_a,
-    ###### itm_surcoat_lithuania_b,
-
-    ###### itm_heavy_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xa3d0c13c3452aa967276dc95c00000000001dad350000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_2_19",
-    ###### "Kunigas_Jaunutis",
-    ###### "Jaunutis",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_2,
-    ###### [
-
-    ###### itm_balt_helmet_b,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_lithuania_a,
-    ###### itm_surcoat_lithuania_b,
-
-    ###### itm_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc3f08038245545e3b236a68de00000000001e37230000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_2_20",
-    ###### "Kunigas_Vytautas",
-    ###### "Vytautas",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_2,
-    ###### [
-    ###### itm_balt_helmet_c,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_lithuania_a,
-    ###### itm_surcoat_lithuania_b,
-
-    ###### itm_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xd8a00514544be2d14d370c65c00000000001ed6df0000000000000000, swadian_face_older_2
-    ###### ],
-
+  
     ###### Mongols
   ["knight_3_1",
      "Möngke Khan",
@@ -42323,575 +41313,6 @@ troops = [
     0x000000075c0c000339ae0356c847376e00000000001346db0000000000000000, khergit_face_older_2
   ],
 
-    ###### [
-        ###### "knight_3_21",
-    ###### "Sheibak_Noyan",
-    ###### "Sheibak",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-    ###### itm_lamellar_vest,
-    ###### itm_lamellar_vest,
-    ###### itm_hide_boots,
-###### itm_mongol_helmet_a,
-
-    ###### itm_sword_khergit_4,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_courser,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x000000035710814b44cc75b6b244b6b200000000000199140000000000000000, khergit_face_older_2
-    ###### ],
-
-    ########## Mongols
-    ###### [
-        ###### "knight_3_21",
-    ###### "Berkecher-baghatur",
-    ###### "Berkecher",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-    ###### itm_lamellar_vest,
-    ###### itm_saddle_horse,
-    ###### itm_lamellar_vest,
-    ###### itm_hide_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_mongol_helmet_a,
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000d5e048110492d3a54f270a58300000000001e25990000000000000000, khergit_face_middle_2
-    ###### ],
-    ####Mongols
-    ###### [
-        ###### "knight_3_22",
-    ###### "Tangut Noyan",
-    ###### "Tangut",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-    ###### itm_mon_lamellar_a,
-    ###### itm_saddle_horse,
-    ###### itm_mon_lamellar_a,
-    ###### itm_hide_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-
-###### itm_khergit_war_helmet,
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x00000003e40c820c54a331accbb1c9ab00000000001ed31a0000000000000000, khergit_face_middle_2
-    ###### ],
-
-    ####Mongols
-    ###### [
-        ###### "knight_3_23",
-    ###### "Boghal Noyan",
-    ###### "Boghal",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-    ###### itm_mon_lamellar_b,
-    ###### itm_saddle_horse,
-    ###### itm_mon_lamellar_b,
-    ###### itm_hide_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_khergit_guard_helmet,
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000bde108241053691d6dbda1a7400000000001e2a9e0000000000000000, khergit_face_middle_2
-    ###### ],
-
-    ###### Mongols
-    ###### [
-        ###### "knight_3_24",
-    ###### "Mingqadur Noyan",
-    ###### "Mingqadur",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_lamellar_vest,
-    ###### itm_hide_boots,
-    ###### itm_kau_mail_boots_dark_long,
-    ###### itm_lamellar_vest,
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c,
-
-
-    ###### itm_khergit_war_helmet,
-    ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x000000053d108283146bc62a8eb6465b00000000001e5ad20000000000000000, khergit_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_3_25",
-    ###### "Quli Noyan",
-    ###### "Quli",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-###### itm_lamellar_vest,
-    ###### itm_hide_boots,
-    ###### itm_kau_mail_boots_dark_long,
-###### itm_lamellar_vest,
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c,
-
-
-###### itm_khergit_war_helmet,
-    ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x000000052604854b4b598db48368b9e400000000001356a40000000000000000, khergit_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_3_26",
-    ###### "Qongqiran Noyan",
-    ###### "Qongqiran",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_3_27",
-    ###### "Horqudaq Noyan",
-    ###### "Horqudaq",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_3_28",
-    ###### "Bartan Noyan",
-    ###### "Bartan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_3_29",
-    ###### "Barulatai Noyan",
-    ###### "Barulatai",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_3_30",
-    ###### "Buqa Noyan",
-    ###### "Buqa",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_3_31",
-    ###### "Toqta Noyan",
-    ###### "Toqta",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-
-  ###### [
-        ###### "knight_3_32",
-    ###### "Tobuqa Noyan",
-    ###### "Tobuqa",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-
-  ###### [
-        ###### "knight_3_33",
-    ###### "Qutula-baghatur",
-    ###### "Qutula",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_3_34",
-    ###### "Qasar-baghatur",
-    ###### "Qasar",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-
-  ###### [
-        ###### "knight_3_35",
-    ###### "Menggei-baghatur",
-    ###### "Menggei",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-
-  ###### [
-        ###### "knight_3_36",
-    ###### "Urus-baghatur",
-    ###### "Urus",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-
-  ###### [
-        ###### "knight_3_37",
-    ###### "Qarchu-baghatur",
-    ###### "Qarchu",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-  ###### [
-        ###### "knight_3_38",
-    ###### "Yesugei-baghatur",
-    ###### "Yesugei",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-  ###### [
-        ###### "knight_3_39",
-    ###### "Kiratai-baghatur",
-    ###### "Kiratai",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
-  ###### [
-        ###### "knight_3_40",
-    ###### "Jamuqa-baghatur",
-    ###### "Jamuqa",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_3,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x43000318b54b246b7094dc39c00000000001d31270000000000000000, khergit_face_middle_2
-    ###### ],
 
   ###### Denmark
   ["knight_4_1",
@@ -47621,129 +46042,6 @@ troops = [
     0x000000000005100948da8baf1bb317ff00000000001c87db0000000000000000
   ],
 
-    ###### [
-        ###### "knight_14_16",
-    ###### "Swe Placeholder 6",
-    ###### "Swe Placeholder 6",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_14,
-    ###### [
-    ###### itm_rnd_helm_01,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_sweden_a,
-    ###### itm_surcoat_sweden_a,
-
-    ###### itm_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc040804d2293c46a6a5669ce400000000001db7120000000000000000, rhodok_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_14_17",
-    ###### "Swe Placeholder 7",
-    ###### "Swe Placeholder 7",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_14,
-    ###### [
-    ###### itm_rnd_helm_03,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_sweden_a,
-    ###### itm_surcoat_sweden_a,
-
-
-    ###### itm_talak_warhammer,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc3a0455c443d46e4c8b91291a00000000001ca51b0000000000000000, swadian_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_14_18",
-    ###### "Swe Placeholder 8",
-    ###### "Swe Placeholder 8",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_14,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_sweden_a,
-    ###### itm_surcoat_sweden_a,
-
-    ###### itm_spear_i,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2c0844d42914d19b2369b4ea00000000001e331b0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_14_19",
-    ###### "Swe Placeholder 9",
-    ###### "Swe Placeholder 9",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_14,
-    ###### [
-    ###### itm_rnd_helm_01,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_sweden_a,
-    ###### itm_surcoat_sweden_a,
-
-    ###### itm_spear_g,
-    ###### itm_sword_viking_3,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc130461054af448eb19cd40e400000000001d488a0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_14_20",
-    ###### "Swe Placeholder 10",
-    ###### "Swe Placeholder 10",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_14,
-    ###### [
-    ###### itm_rnd_helm_03,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_sweden_a,
-    ###### itm_surcoat_sweden_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
 
     ###### Galicia
   ["knight_15_1",
@@ -47993,261 +46291,6 @@ troops = [
     knight_skills_2,
     0x000000077604159426d3b256d275b6ab00000000000ab6a30000000000000000
   ],
-
-    ###### [
-        ###### "knight_15_11",
-    ###### "Knyaz_Boris_Vasilkovich",
-    ###### "Boris_Vasilkovich",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_b,
-
-    ###### itm_spear_g,
-    ###### itm_scimitar,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x5590011c33d9b6d4a92ada53500000000001cc1180000000000000000, vaegir_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_15_12",
-    ###### "Voivode_Ivan_ Mihalkovich",
-    ###### "Ivan_ Mihalkovich",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_war_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_b,
-
-    ###### itm_talak_warhammer,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc2a0015d249b68b46a98e176400000000001d95a40000000000000000, vaegir_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_15_13",
-    ###### "Knyaz_Andriej_Yaroslavych",
-    ###### "Andriej_Yaroslavych",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_mask,
-
-    ###### itm_mon_lamellar_horse_b,
-    ###### itm_kau_rus_d,
-
-    ###### itm_morningstar,
-    ###### itm_talak_bastard_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc131031c546a38a2765b4c86000000000001e58d30000000000000000, vaegir_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_15_14",
-    ###### "Boyarin_Kirilo",
-    ###### "Kirilo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_scale_a,
-
-    ###### itm_light_lance,
-    ###### itm_sword_type_xiiia,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2f0832c748f272540d8ab65900000000001d34e60000000000000000, vaegir_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_15_15",
-    ###### "Boyarin_Ivan",
-    ###### "Ivan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-
-    ###### itm_vaegir_war_helmet,
-
-    ###### itm_mon_lamellar_horse_b,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xe310061435d76bb5f55bad9ad00000000001ed8ec0000000000000000, vaegir_face_older_2
-    ###### ],
-
-  ###### [
-        ###### "knight_15_16",
-    ###### "Boyarin_Yaroslav",
-    ###### "Yaroslav",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-
-    ###### itm_vaegir_war_helmet,
-
-    ###### itm_mon_lamellar_horse_b,
-    ###### itm_kau_rus_noble_b,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_5,
-    ###### knight_skills_5,
-    ###### 0xe310061435d76bb5f55bad9ad00000000001ed8ec0000000000000000, vaegir_face_older_2
-    ###### ],
-
-###### [
-        ###### "knight_15_17",
-    ###### "Boyarin_Miroslav",
-    ###### "Yaroslav",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-
-    ###### itm_vaegir_war_helmet,
-
-    ###### itm_mon_lamellar_horse_b,
-    ###### itm_kau_rus_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_5,
-    ###### knight_skills_5,
-    ###### 0xe310061435d76bb5f55bad9ad00000000001ed8ec0000000000000000, vaegir_face_older_2
-    ###### ],
-###### [
-        ###### "knight_15_18",
-    ###### "Boyarin_Mstislav",
-    ###### "Yaroslav",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-
-    ###### itm_vaegir_war_helmet,
-
-    ###### itm_mon_lamellar_horse_b,
-    ###### itm_kau_rus_b,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_5,
-    ###### knight_skills_5,
-    ###### 0xe310061435d76bb5f55bad9ad00000000001ed8ec0000000000000000, vaegir_face_older_2
-    ###### ],
-###### [
-        ###### "knight_15_19",
-    ###### "Boyarin_Igor",
-    ###### "Yaroslav",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-
-    ###### itm_vaegir_war_helmet,
-
-    ###### itm_mon_lamellar_horse_b,
-    ###### itm_kau_rus_c,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_5,
-    ###### knight_skills_5,
-    ###### 0xe310061435d76bb5f55bad9ad00000000001ed8ec0000000000000000, vaegir_face_older_2
-    ###### ],
-###### [
-        ###### "knight_15_20",
-    ###### "Boyarin_Gleb",
-    ###### "Yaroslav",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_15,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-
-    ###### itm_vaegir_war_helmet,
-
-    ###### itm_mon_lamellar_horse_b,
-    ###### itm_kau_rus_d,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_5,
-    ###### knight_skills_5,
-    ###### 0xe310061435d76bb5f55bad9ad00000000001ed8ec0000000000000000, vaegir_face_older_2
-    ###### ],
 
 
   ["knight_16_1",
@@ -49015,131 +47058,6 @@ troops = [
     0x00000009e60d2001538c0ced648d3a6200000000001dd1630000000000000000
   ],
 
-    ###### [
-        ###### "knight_17_16",
-    ###### "Don Jacme",
-    ###### "Jacme",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_17,
-    ###### [
-    ###### itm_norman_coif_b,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_aragon_b,
-
-    ###### itm_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc040804d2293c46a6a5669ce400000000001db7120000000000000000, rhodok_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_17_17",
-    ###### "done Ferrando",
-    ###### "Ferrando",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_17,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_aragon_c,
-
-    ###### itm_raf_two_handed_axe_c,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc3a0455c443d46e4c8b91291a00000000001ca51b0000000000000000, swadian_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_17_18",
-    ###### "Don Garcia",
-    ###### "Garcia",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_17,
-    ###### [
-    ###### itm_norman_coif_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_aragon_a,
-
-    ###### itm_spear_i,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2c0844d42914d19b2369b4ea00000000001e331b0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_17_19",
-    ###### "Don Miquel",
-    ###### "Miquel",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_17,
-    ###### [
-    ###### itm_rnd_helm_03,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_aragon_b,
-
-    ###### itm_spear_g,
-    ###### itm_sword_viking_3,
-    ###### itm_tab_shield_kite_cav_b
-
-    ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc130461054af448eb19cd40e400000000001d488a0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_17_20",
-    ###### "Don Ugo",
-    ###### "Ugo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_17,
-    ###### [
-    ###### itm_rnd_helm_03,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_aragon_c,
-
-    ###### itm_spear_g,
-    ###### itm_sword_viking_3,
-    ###### itm_tab_shield_kite_cav_b
-
-    ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc130461054af448eb19cd40e400000000001d488a0000000000000000, swadian_face_older_2
-    ###### ],
 
   ["knight_18_1",
      "Infante Felipe de Castilla y Suabia",
@@ -49517,132 +47435,6 @@ troops = [
     0x00000007ca0d20014d336d5b7b6c6f5d00000000001da7140000000000000000
   ],
 
-    ###### [
-        ###### "knight_18_16",
-    ###### "Don Narcis",
-    ###### "Narcis",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_18,
-    ###### [
-    ###### itm_norman_coif_b,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_kau_castile_b,
-
-    ###### itm_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc040804d2293c46a6a5669ce400000000001db7120000000000000000, rhodok_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_18_17",
-    ###### "Don Rafael",
-    ###### "Rafael",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_18,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_kau_castile_c,
-
-    ###### itm_raf_two_handed_axe_c,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc3a0455c443d46e4c8b91291a00000000001ca51b0000000000000000, swadian_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_18_18",
-    ###### "Don Seguinus",
-    ###### "Seguinus",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_18,
-    ###### [
-    ###### itm_norman_coif_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_kau_castile_a,
-
-    ###### itm_spear_i,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2c0844d42914d19b2369b4ea00000000001e331b0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_18_19",
-    ###### "Don Ximeno",
-    ###### "Ximeno",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_18,
-    ###### [
-    ###### itm_rnd_helm_03,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_kau_castile_b,
-
-    ###### itm_spear_g,
-    ###### itm_sword_viking_3,
-    ###### itm_tab_shield_kite_cav_b
-
-    ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc130461054af448eb19cd40e400000000001d488a0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_18_20",
-    ###### "Don Sancho",
-    ###### "Sancho",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_18,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_kau_castile_c,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
 
   ["knight_19_1",
      "Infante Don Teobaldo de Navarra",
@@ -49717,181 +47509,6 @@ troops = [
     0x000000076d00440745557a244ba8c52200000000000a330c0000000000000000
   ],
 
-    ###### [
-        ###### "knight_19_4",
-    ###### "Don Carles",
-    ###### "Carles",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_19,
-    ###### [
-
-###### itm_osp_great_helm_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_rnd_surcoat_03,
-
-    ###### itm_light_lance,
-    ###### itm_sword_type_xiiia,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_4,
-    ###### knight_skills_4,
-    ###### 0x000000077804244739188dab1c72350b00000000000a26cc0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_19_5",
-    ###### "Don Domingo",
-    ###### "Domingo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_19,
-    ###### [
-    ###### itm_rnd_helm_04,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_rnd_surcoat_05,
-
-    ###### itm_light_lance,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x000000076f0462c1659d5338e2694a9200000000001bdb340000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_19_6",
-    ###### "Don Ferrando",
-    ###### "Ferrando",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_19,
-    ###### [
-    ###### itm_norman_coif_b,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_rnd_surcoat_03,
-
-    ###### itm_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc040804d2293c46a6a5669ce400000000001db7120000000000000000, rhodok_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_19_7",
-    ###### "Don Felip",
-    ###### "Felip",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_19,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_rnd_surcoat_05,
-
-    ###### itm_raf_two_handed_axe_c,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0xc3a0455c443d46e4c8b91291a00000000001ca51b0000000000000000, swadian_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_19_8",
-    ###### "Don Galceran",
-    ###### "Galceran",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_19,
-    ###### [
-    ###### itm_norman_coif_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_rnd_surcoat_03,
-
-    ###### itm_spear_i,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc2c0844d42914d19b2369b4ea00000000001e331b0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_19_9",
-    ###### "Don Gausfred",
-    ###### "Gausfred",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_19,
-    ###### [
-    ###### itm_rnd_helm_03,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_rnd_surcoat_05,
-
-    ###### itm_spear_g,
-    ###### itm_sword_viking_3,
-    ###### itm_tab_shield_kite_cav_b
-
-    ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc130461054af448eb19cd40e400000000001d488a0000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_19_10",
-    ###### "Don Gilabert",
-    ###### "Gilabert",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_19,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_red,
-    ###### itm_rnd_surcoat_03,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
 
   ["knight_20_1",
      "Amir Mohammed Al-Faqih",
@@ -53737,134 +51354,6 @@ troops = [
   ],
 
 
-    ###### [
-        ###### "knight_27_16",
-    ###### "Qarchu Noyan",
-    ###### "Qarchu",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_27,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_nomad_robe,
-    ###### itm_lamellar_vest,
-    ###### itm_leather_boots,
-        #
-    ###### itm_khergit_cavalry_helmet,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_sword_khergit_3,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0xc2a0015d249b68b46a98e176400000000001d95a40000000000000000, vaegir_face_old_2
-    ###### ],
-    ###### [
-        ###### "knight_27_17",
-    ###### "Bodonchar Noyan",
-    ###### "Bodonchar",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_27,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_courser,
-    ###### itm_lamellar_vest,
-    ###### itm_hide_boots,
-    ###### itm_splinted_greaves_long,
-
-    ###### itm_shortened_military_scythe,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2a0015d249b68b46a98e176400000000001d95a40000000000000000, vaegir_face_old_2
-    ###### ],
-    ###### [
-        ###### "knight_27_18",
-    ###### "Kiratai Noyan",
-    ###### "Kiratai",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_27,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_ragged_outfit,
-    ###### itm_lamellar_vest,
-    ###### itm_hide_boots,
-    ###### itm_khergit_cavalry_helmet,
-    ###### itm_sword_khergit_4,
-    ###### itm_shortened_military_scythe,
-    ###### itm_tab_shield_small_round_c,
-    ###### itm_warhorse
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2a0015d249b68b46a98e176400000000001d95a40000000000000000, vaegir_face_old_2
-    ###### ],
-    ###### [
-        ###### "knight_27_19",
-    ###### "Qulan Noyan",
-    ###### "Qulan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_27,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2a0015d249b68b46a98e176400000000001d95a40000000000000000, vaegir_face_old_2
-    ###### ],
-    ###### [
-        ###### "knight_27_20",
-    ###### "Toghril Noyan",
-    ###### "Toghril",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_27,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_khergit_guard_boots,
-
-    ###### itm_saddle_horse,
-    ###### itm_leather_vest,
-    ###### itm_leather_boots,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_leather_gloves,
-    ###### itm_sword_khergit_3,
-    ###### itm_khergit_bow,
-    ###### itm_arrows,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc2a0015d249b68b46a98e176400000000001d95a40000000000000000, vaegir_face_old_2
-    ###### ],
-
   ["knight_28_1",
      "Malika al Muzaffar",
      "Malika",
@@ -54233,125 +51722,7 @@ troops = [
     0x00000007400cb340272c53de7b8628ab00000000001f471b0000000000000000
   ],
 
-    ###### [
-        ###### "knight_28_16",
-    ###### "Emir Jalal",
-    ###### "Jalal",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_28,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_28_17",
-    ###### "Emir Kadar",
-    ###### "Kadar",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_28,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_28_18",
-    ###### "Emir Nahid",
-    ###### "Nahid",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_28,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_28_19",
-    ###### "Emir Qasim",
-    ###### "Qasim",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_28,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_28_20",
-    ###### "Emir Saad",
-    ###### "Saad",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_28,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
+  
 
     ###### Serbia
   ["knight_29_1",
@@ -54602,130 +51973,6 @@ troops = [
     0x000000021708658949db73ff5c6e4b2d00000000001ca6ab0000000000000000
   ],
 
-    ###### [
-        ###### "knight_29_11",
-    ###### "Zhupan Predimir",
-    ###### "Predimir",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_29,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_29_12",
-    ###### "Zhupan Vukan",
-    ###### "Vukan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_29,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_29_13",
-    ###### "Zhupan Tihomir",
-    ###### "Tihomir",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_29,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_29_14",
-    ###### "Zhupan Premislav",
-    ###### "Premislav",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_29,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_29_15",
-    ###### "Zhupan Mihajlo",
-    ###### "Mihajlo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_29,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
 
     ###### Bulgaria
   ["knight_30_1",
@@ -54976,128 +52223,7 @@ troops = [
     0x000000076f0c4405312bcdb0accd78b300000000001e58dc0000000000000000
   ],
 
-    ###### [
-        ###### "knight_30_11",
-    ###### "Boyar Kaloyan",
-    ###### "Kaloyan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_30,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
 
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_30_12",
-    ###### "Boyar Konstantin",
-    ###### "Konstantin",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_30,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_30_13",
-    ###### "Boyar Krastio",
-    ###### "Krastio",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_30,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-    ###### [
-        ###### "knight_30_14",
-    ###### "Boyar Ivaylo",
-    ###### "Ivaylo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_30,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_30_15",
-    ###### "Boyar Bozhidar",
-    ###### "Bozhidar",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_30,
-    ###### [
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_vaegir_noble_helmet,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_noble_a,
-
-    ###### itm_light_lance,
-      ###### ##### itm_talak_mace,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc1d0821d236acd6991b74d69d00000000001e476c0000000000000000, vaegir_face_middle_2
-    ###### ],
 
   ["knight_31_1",
      "Abu Hafs Umar al-Murtada,Caliph of Marakkesh",
@@ -55467,7 +52593,7 @@ troops = [
     0x000000077e086486186e4ca774d1c9a300000000001cb1a30000000000000000
   ],
 
-    ["knight_32_1",
+  ["knight_32_1",
     "Lorenzo Tiepolo",
     "Lorenzo Tiepolo",
     tf_hero,
@@ -55720,137 +52846,7 @@ troops = [
     0x0000000741002107551a56b8ee8d28ec00000000001f18d10000000000000000
   ],
 
-    ###### [
-        ###### "knight_32_11",
-    ###### "Michele Falier",
-    ###### "Michele Falier",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_32,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_rnd_surcoat_10,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000741045188271b2c54ab2aa93200000000000499620000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_32_12",
-    ###### "Bibiano Ziani",
-    ###### "Bibiano Ziani",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_32,
-    ###### [
-    ###### itm_rnd_helm_06,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_rnd_surcoat_11,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x000000074c1010ce58e449ba5d6e36b200000000001cb9160000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_32_13",
-    ###### "Francesco Ziani",
-    ###### "Francesco Ziani",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_32,
-    ###### [
-
-###### itm_osp_great_helm_b,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_rnd_surcoat_12,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x000000077b08424e691391b69d75476400000000000932d20000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_32_14",
-    ###### "Flavio Dandolo",
-    ###### "Flavio Dandolo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_32,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_rnd_surcoat_13,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x00000007430c6489476cda32dc44a91e000000000010ab590000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_32_15",
-    ###### "Ambrogio Dandolo",
-    ###### "Ambrogio Dandolo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_32,
-    ###### [
-    ###### itm_osp_great_helm_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_rnd_surcoat_15,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x00000007590c62012b0cb24b5a56c41a000000000015faea0000000000000000
-    ###### ],
-
+ 
   ["knight_33_1",
      "Kunigas Visvaldas",
      "Visvaldas",
@@ -56180,129 +53176,6 @@ troops = [
     0x00000001a910259356e62e369d2db59b00000000001e270b0000000000000000
   ],
 
-    ###### [
-        ###### "knight_34_1",
-    ###### "Conte Idebrandino", #siena
-        ###### "Idebrandino",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_34,
-    ###### [
-    ###### itm_osp_faceplate,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_rnd_surcoat_12,
-
-    ###### itm_spear_l,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_heater_cav_b,
-    ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_4,
-    ###### knight_skills_4,
-    ###### 0x000000077b08224d5a2bcaba6a91fc9200000000001969230000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_34_2",
-    ###### "Conte Umberto", #siena
-        ###### "Umberto",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_34,
-    ###### [
-    ###### itm_rnd_helm_04,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_rnd_surcoat_13,
-
-    ###### itm_talak_warhammer,
-    ###### itm_tab_shield_heater_cav_b,
-    ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_5,
-    ###### knight_skills_5,
-    ###### 0x000000076c08434954cd65372c69d4a500000000001a5b210000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_34_3",
-    ###### "Conte Guido Novello", #florence
-        ###### "Guido",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_34,
-    ###### [
-    ###### itm_rnd_helm_06,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_rnd_surcoat_14,
-
-    ###### itm_morningstar,
-    ###### itm_talak_bastard_sword,
-    ###### itm_tab_shield_heater_cav_b,
-    ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x00000007650c124248cb96591c94c10c00000000001d58ec0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_34_4",
-    ###### "Conte Guido Guerra",
-    ###### "Guido Guerra",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_34,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_rnd_surcoat_15,
-
-    ###### itm_light_lance,
-    ###### itm_sword_type_xiiia,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000775084194569e92061369bad4000000000010c4a30000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_34_5",
-    ###### "Conte Salvatico",
-    ###### "Salvatico",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_34,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_rnd_surcoat_16,
-
-    ###### itm_light_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x000000076308638f50e65938a4aa334a0000000000163b1c0000000000000000
-    ###### ],
 
   ["knight_37_1",
      "Dafydd ap Gruffydd",
@@ -56377,80 +53250,7 @@ troops = [
     0x00000007650c124248cb96591c94c10c00000000001d58ec0000000000000000
   ],
 
-    ###### [
-        ###### "knight_35_4",
-    ###### "Teulu Bryn",
-    ###### "Teulu Bryn",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_37,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_papal,
-
-    ###### itm_light_lance,
-    ###### itm_sword_type_xiiia,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000775084194569e92061369bad4000000000010c4a30000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_35_5",
-    ###### "Teulu Cadwalader",
-    ###### "Teulu Cadwalader",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_37,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_papal,
-
-    ###### itm_light_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_heater_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x000000076308638f50e65938a4aa334a0000000000163b1c0000000000000000
-    ###### ],
-
-###### [
-        ###### "knight_crusade",
-    ###### "Crusader Lord",
-    ###### "crusader Lord",
-    ###### tf_hero | tf_inactive,
-    ###### 0, 0, fac_kingdom_37,
-    ###### [
-    ###### itm_osp_faceplate,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_rnd_surcoat_12,
-
-    ###### itm_spear_l,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_heater_cav_b,
-    ###### ],
-    ###### knight_attrib_5,
-    ###### knight_wp_4,
-    ###### knight_skills_4,
-    ###### 0x000000077b08224d5a2bcaba6a91fc9200000000001969230000000000000000
-    ###### ],
+ 
 
   ["knight_38_1",
      "Guglielmo III Salusio I",
