@@ -392,6 +392,43 @@ killcount_and_troop_ratio_bar =  (1, 0, ti_once,
 
 
 
+############################# NEW v1.9 - Kill count on top left
+troop_count =  (1, 0, ti_once, 
+    [
+      (neg|is_presentation_active, "prsnt_troop_count"),
+    ],
+    [
+      # (try_begin),
+        # (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
+        (start_presentation, "prsnt_troop_count"),
+      # (try_end),
+######################################################
+      (call_script, "script_party_count_fit_for_battle", "p_main_party"),
+      (assign, "$player_count_alive2", reg0),
+      (call_script, "script_party_count_fit_for_battle", "p_collective_friends"),
+      (store_sub, "$ally_count_alive2", reg0, "$player_count_alive2"),
+      (call_script, "script_party_count_fit_for_battle", "p_collective_enemy"),
+      (assign, "$enemy_count_alive2", reg0),
+    ])
+#######################################################################################
+
+
+############################# NEW v1.9 - Kill count on top left
+# troop_refresh =  (2, 0, 0, 
+    # [
+      # (neg|is_presentation_active, "prsnt_troop_count"),
+    # ],
+    # [
+      # (try_begin),
+        # (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1),
+        # (start_presentation, "prsnt_troop_count"),
+      # (try_end),
+    # ])
+#######################################################################################
+
+
+
+
 
 ############################# NEW v3.3
 killcount_and_troop_ratio_bar_refresh =  (3, 0, 0, 
@@ -1851,15 +1888,14 @@ siege_attacker_regroup = (
   ti_on_agent_spawn, 0, 0, [],
   [
     (store_trigger_param_1, ":agent"),
-    (agent_get_team, ":team", ":agent"),
+    # (agent_get_team, ":team", ":agent"),
     # (this_or_next|eq, ":team", 1), #attacker 1
     # (eq, ":team", 3), # attacker 2
-    (agent_get_troop_id, ":troop", ":agent"),
-    (try_begin),
-      (troop_is_guarantee_ranged, ":troop"),
+    # (agent_get_troop_id, ":troop", ":agent"),
+    (agent_set_division, ":agent", grc_infantry),
+    (try_for_range, ":r", "itm_hunting_bow", "itm_arrows"),
+      (agent_has_item_equipped, ":agent", ":r"),
       (agent_set_division, ":agent", grc_archers),
-    (else_try),
-      (agent_set_division, ":agent", grc_infantry),
     (try_end),
   ]) 
 

@@ -62054,6 +62054,15 @@ upgrade(troops,"euro_xbow_2_jerusalem", "euro_xbow_3_jerusalem")
 upgrade(troops,"euro_horse_1_jerusalem", "euro_horse_2_jerusalem")
 upgrade(troops,"euro_horse_2_jerusalem", "euro_horse_3_jerusalem")
 upgrade(troops,"euro_horse_3_jerusalem", "euro_horse_4_jerusalem")
+################# NEW v3.5
+upgrade(troops,"mamluke_light_horse_archer", "mamluke_medium_horse_archer")
+upgrade(troops,"mamluke_medium_horse_archer", "_mamluke_heavy_horse_archer")
+upgrade(troops,"mamluke_heavy_horse_archer", "mamluke_elite_horse_archer")
+
+upgrade(troops,"kipchak_range", "kipchak_light_horse")
+upgrade(troops,"kipchak_light_horse", "kipchak_medium_horse")
+
+upgrade(troops,"kwarezmian_light_horse", "kwarezmian_medium_horse")
 ######################################
 
 

@@ -21465,16 +21465,97 @@ presentations = [
       (try_end),
     ]),
   ]),
-##############################################################################
+########################### NEW v3.5
+  ("troop_count", prsntf_read_only, 0,
+  [
+    (ti_on_presentation_load,
+    [
+      (presentation_set_duration, 999999),
+      (set_fixed_point_multiplier, 1000),
+	  #####################################
+      (str_store_string, s1, "@Player: 0"),
+      (create_text_overlay, "$g_presentation_obj_1", s1),
+      (overlay_set_color, "$g_presentation_obj_1", 0xFFFFFF),
+      (position_set_x, pos1, 505),
+      (position_set_y, pos1, 710),
+      (overlay_set_position, "$g_presentation_obj_1", pos1),
+      (create_mesh_overlay, "$g_presentation_countbg1", "mesh_killcount"),
+      (position_set_x, pos2, 500),
+      (position_set_y, pos2, 768),
+      (overlay_set_position, "$g_presentation_countbg1", pos2),
+	  #####################################
+      (str_store_string, s2, "@Ally: 0"),
+      (create_text_overlay, "$g_presentation_obj_2", s2),
+      (overlay_set_color, "$g_presentation_obj_2", 0xFFFFFF),
+      (position_set_x, pos1, 705),
+      (position_set_y, pos1, 710),
+      (overlay_set_position, "$g_presentation_obj_2", pos1),
+      (create_mesh_overlay, "$g_presentation_countbg2", "mesh_killcount"),
+      (position_set_x, pos2, 700),
+      (position_set_y, pos2, 768),
+      (overlay_set_position, "$g_presentation_countbg2", pos2),
+	  #####################################
+      (str_store_string, s3, "@Enemy: 0"),
+      (create_text_overlay, "$g_presentation_obj_3", s3),
+      (overlay_set_color, "$g_presentation_obj_3", 0xFFFFFF),
+      (position_set_x, pos1, 905),
+      (position_set_y, pos1, 710),
+      (overlay_set_position, "$g_presentation_obj_3", pos1),
+      (create_mesh_overlay, "$g_presentation_countbg3", "mesh_killcount"),
+      (position_set_x, pos2, 900),
+      (position_set_y, pos2, 768),
+      (overlay_set_position, "$g_presentation_countbg3", pos2),
+	  #####################################
+    ]),
+    (ti_on_presentation_run,
+    [
+      (store_trigger_param_1, ":var0"),
+      (set_fixed_point_multiplier, 1000),
+      (assign, ":var1", 0),
+      (assign, ":var2", 0),
+      (assign, ":var3", 0),
+      (assign, ":var4", 0),
+      (try_begin),
+        (neq, "$g_option_ratio_bar_is_global", 1),
+        (try_for_agents, ":var5"),
+          (agent_is_human, ":var5"),
+          (agent_is_alive, ":var5"),
+          (agent_get_party_id, ":var6", ":var5"),
+          (try_begin),
+            (eq, ":var6", "p_main_party"),
+            (val_add, ":var1", 1),
+          (else_try),
+            (agent_is_ally, ":var5"),
+            (val_add, ":var2", 1),
+          (else_try),
+            (val_add, ":var3", 1),
+          (try_end),
+        (try_end),
+      (else_try),
+        (assign, ":var1", "$player_count_alive2"),
+        (assign, ":var2", "$ally_count_alive2"),
+        (assign, ":var3", "$enemy_count_alive2"),
+      (try_end),
+      (try_begin),
+        (assign, reg3, "$player_count_alive2"),
+        (assign, reg4, "$ally_count_alive2"),
+        (assign, reg5, "$enemy_count_alive2"),
+        (try_begin),
+          (str_store_string, s1, "@Player: {reg3}"),
+          (str_store_string, s2, "@Ally: {reg4}"),
+          (str_store_string, s3, "@Enemy: {reg5}"),
+        (try_end),
+        (overlay_set_text, "$g_presentation_obj_1", s1),
+        (overlay_set_text, "$g_presentation_obj_2", s2),
+        (overlay_set_text, "$g_presentation_obj_3", s3),
+      (try_end),
+    ]),
+  ]),
+#################################################################
 
-
-
-
-
-
-
-
-]         ######################### END BRACKET
+#########################
+]######################## END BRACKET
+#########################
 # modmerger_start version=201 type=2
 try:
     component_name = "presentations"

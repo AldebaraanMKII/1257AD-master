@@ -22709,7 +22709,7 @@ game_menus = [ #
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
-
+############################################
 
 
 
@@ -22803,7 +22803,7 @@ game_menus = [ #
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
-
+############################################
 
 
 
@@ -22811,6 +22811,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_turkopole),
@@ -23483,6 +23488,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_camp_georgian, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_georgian),
@@ -23687,6 +23697,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_teutonic, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic),
@@ -23778,6 +23793,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_templar, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar),
@@ -23869,6 +23889,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_hospitaller, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller),
@@ -23957,6 +23982,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_lazarus),
@@ -24038,6 +24068,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_santiago, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_santiago),
@@ -24117,6 +24152,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_calatrava, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_calatrava),
@@ -24195,6 +24235,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_saint_thomas, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_thomas),
@@ -24277,6 +24322,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_quarters_varangian, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_varangian),
@@ -24349,6 +24399,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_quarters_cataphract, 1),
+	   ###### NEW v3.5 - only recruitable with christian owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cataphract),
@@ -24431,6 +24486,11 @@ game_menus = [ #
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
        (party_slot_ge, "$current_town", slot_center_has_quarters_mamluk, 1),
+	   ###### NEW v3.5 - only recruitable with muslim owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_muslim),  
+	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
          (ge, ":free_capacity", 30),
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mamluk),
@@ -24511,6 +24571,12 @@ game_menus = [ #
      [
        (is_between,  "$current_town", towns_begin, towns_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_teutonic, 1),
+	   ###### NEW v3.5 - only recruitable with catholic owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       # (faction_slot_eq, ":faction", slot_faction_religion, religion_muslim),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
        (ge, ":free_capacity", 30),
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic_aux),
@@ -24592,6 +24658,12 @@ game_menus = [ #
      [
        (is_between,  "$current_town", towns_begin, towns_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_templar, 1),
+	   ###### NEW v3.5 - only recruitable with catholic owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       # (faction_slot_eq, ":faction", slot_faction_religion, religion_muslim),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
        (ge, ":free_capacity", 30),
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar_aux),
@@ -24672,6 +24744,12 @@ game_menus = [ #
      [
        (is_between,  "$current_town", towns_begin, towns_end),
        (party_slot_ge, "$current_town", slot_center_has_chapter_hospitaller, 1),
+	   ###### NEW v3.5 - only recruitable with catholic owners
+       (store_faction_of_party, ":faction", "$current_town"),  
+       # (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+       # (faction_slot_eq, ":faction", slot_faction_religion, religion_muslim),  
+       (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+	   ########################
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
        (ge, ":free_capacity", 30),
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller_aux),
