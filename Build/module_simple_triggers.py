@@ -3061,17 +3061,17 @@ simple_triggers = [
  (try_end),
  ########## Jrider -
  
- (try_begin),
-   (assign, ":number_of_foods_player_has", 0),
-   (try_for_range, ":cur_edible", food_begin, food_end),
-     (call_script, "script_cf_player_has_item_without_modifier", ":cur_edible", imod_rotten),
-     (val_add, ":number_of_foods_player_has", 1),
-   (try_end),
+ # (try_begin),
+   # (assign, ":number_of_foods_player_has", 0),
+   # (try_for_range, ":cur_edible", food_begin, food_end),
+     # (call_script, "script_cf_player_has_item_without_modifier", ":cur_edible", imod_rotten),
+     # (val_add, ":number_of_foods_player_has", 1),
+   # (try_end),
    ######### (try_begin),
      ######### (ge, ":number_of_foods_player_has", 6),
      ######### (unlock_achievement, ACHIEVEMENT_ABUNDANT_FEAST),
    ######### (try_end),
- (try_end),
+ # (try_end),
  
  (assign, ":consumption_amount", ":num_men"),
  (assign, ":no_food_displayed", 0),
@@ -3790,13 +3790,31 @@ simple_triggers = [
       (else_try),
         (neq, "$players_kingdom", ":cur_kingdom"),
         (faction_set_slot, ":cur_kingdom", slot_faction_state, sfs_defeated),
+		############### NEW v3.6 - delete kingdom parties when their faction is defeated
         (try_for_parties, ":cur_party"),
-          (store_faction_of_party, ":party_faction", ":cur_party"),
-          (eq, ":party_faction", ":cur_kingdom"),
-          (party_get_slot, ":home_center", ":cur_party", slot_party_home_center),
-          (store_faction_of_party, ":home_center_faction", ":home_center"),
-          (party_set_faction, ":cur_party", ":home_center_faction"),
+          # (try_begin),
+            # (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_village),
+            # (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_town),
+            # (party_slot_eq, ":cur_party", slot_party_type, spt_castle),
+              # (store_faction_of_party, ":party_faction", ":cur_party"),
+              # (eq, ":party_faction", ":cur_kingdom"),
+              # (party_get_slot, ":home_center", ":cur_party", slot_party_home_center),
+              # (store_faction_of_party, ":home_center_faction", ":home_center"),
+              # (party_set_faction, ":cur_party", ":home_center_faction"),
+          # (else_try),
+            (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_patrol),
+            (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_prisoner_train),
+            (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_kingdom_caravan),
+            (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_mercenary_company),
+            (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_war_party),
+            (this_or_next|party_slot_eq, ":cur_party", slot_party_type, spt_scout),
+            (party_slot_eq, ":cur_party", slot_party_type, spt_forager),
+              (store_faction_of_party, ":party_faction", ":cur_party"),
+              (eq, ":party_faction", ":cur_kingdom"),
+			  (remove_party, ":cur_party"),
+          # (try_end),
         (try_end),
+		#############################################
         (assign, ":kingdom_pretender", -1),
         (try_for_range, ":cur_pretender", pretenders_begin, pretenders_end),
           (troop_slot_eq, ":cur_pretender", slot_troop_original_faction, ":cur_kingdom"),
@@ -7457,6 +7475,10 @@ simple_triggers = [
    (try_for_range_backwards, ":cur_prisoner_stack", 0, ":prisoner_stack_num"),
      (party_prisoner_stack_get_troop_id, ":prisoner_troop_id", "$g_execute_lord_cur_center", ":cur_prisoner_stack"),
      (troop_is_hero, ":prisoner_troop_id"), ######### found a lord to execute
+	 ############## NEW v3.5
+     (troop_slot_eq, "$g_assassination_attempt_cur_npc", slot_troop_is_alive, 1),
+     (troop_slot_eq, "$g_assassination_attempt_cur_npc", slot_troop_occupation, slto_kingdom_hero),
+	 ##############
        (store_troop_faction, ":prisoner_faction", ":prisoner_troop_id"), ######## gets faction relations - the lower the greater the chance of execution
        (store_faction_of_party, ":center_faction", "$g_execute_lord_cur_center"), 
        (store_relation, ":faction_relation", ":center_faction", ":prisoner_faction"),
@@ -7465,9 +7487,11 @@ simple_triggers = [
        
        (troop_get_slot, ":reputation", ":prisoner_troop_id", slot_lord_reputation_type), 
        (try_begin),   ######### asshole lords have a greater chance of going to the block - martial is neutral
-         (this_or_next|eq, ":reputation", lrep_quarrelsome),
          (eq, ":reputation", lrep_debauched),  
-           (val_add, ":chance_of_execution", 20),  
+           (val_add, ":chance_of_execution", 30),  
+       (else_try),              
+         (eq, ":reputation", lrep_quarrelsome),  
+           (val_add, ":chance_of_execution", 22),  
        (else_try),              
          (eq, ":reputation", lrep_selfrighteous),  
            (val_add, ":chance_of_execution", 13),  
@@ -7485,27 +7509,55 @@ simple_triggers = [
        (try_begin),   ######### kings have different chance
          (val_add, ":chance_of_execution", "$g_lord_death_chance_execution_king_variation"),  
        (try_end),  
-       
+	   
        (try_begin),
          (call_script, "script_rand", 0, 100),
          (lt, reg0, ":chance_of_execution"),
+	     ############ NEW v3.5 - method of execution depends on lord's personality
+         (party_get_slot, ":town_lord", "$g_execute_lord_cur_center", slot_town_lord),
+         (troop_get_slot, ":reputation", ":town_lord", slot_lord_reputation_type), 
+         (assign, ":cruelty", 30),  ########## base for martial
+         (try_begin),   
+           (eq, ":reputation", lrep_debauched),  
+           (call_script, "script_rand", 30, 60), #### best days = burn/worst days = quarter
+           (val_add, ":cruelty", reg0),  
+         (else_try),              
+           (eq, ":reputation", lrep_quarrelsome), 
+           (call_script, "script_rand", 20, 40),  #### best days = hang/worst days = burn
+           (val_add, ":cruelty", reg0),  
+         (else_try),              
+           (eq, ":reputation", lrep_selfrighteous), 
+           (call_script, "script_rand", 0, 30), #### best days = behead/worst days = burn
+           (val_add, ":cruelty", reg0),  
+         (else_try),              
+           (eq, ":reputation", lrep_cunning),  
+           (call_script, "script_rand", 5, 20), #### best days = behead/worst days = hang
+           (val_add, ":cruelty", reg0),  
+         (else_try),              
+           (eq, ":reputation", lrep_upstanding), 
+           (call_script, "script_rand", 0, 15), #### best days = behead/worst days = hang
+           (val_add, ":cruelty", reg0),  
+         (else_try),              
+           (eq, ":reputation", lrep_goodnatured),  
+           (call_script, "script_rand", 0, 8), ### best days = behead/worst days = behead
+           (val_sub, ":cruelty", reg0),  
+         (try_end),  
+	     ########################
          (try_begin),   ######### Now determine method of execution
-           (lt, ":chance_of_execution", 30),  
+           (lt, ":cruelty", 40),  
              (assign, ":execution_method", 1),  ########### beheading
          (else_try),              
-           (ge, ":chance_of_execution", 30),  
-           (lt, ":chance_of_execution", 50),  
+           (ge, ":cruelty", 40),  
+           (lt, ":cruelty", 60),  
              (assign, ":execution_method", 2),  ########### hanging
          (else_try),              
-           (ge, ":chance_of_execution", 50),  
-           (lt, ":chance_of_execution", 80),  
+           (ge, ":cruelty", 60),  
+           (lt, ":cruelty", 80),  
              (assign, ":execution_method", 3),  ########### Burning
          (else_try),              
-           (ge, ":chance_of_execution", 80),  
+           (ge, ":cruelty", 80),  
              (assign, ":execution_method", 4),  ########### Hung, Strung and Quartered
          (try_end),  
- 
-         (party_get_slot, ":town_lord", "$g_execute_lord_cur_center", slot_town_lord),
          (call_script, "script_kill_lord_execution", ":town_lord", ":prisoner_troop_id", "$g_execute_lord_cur_center", ":execution_method"),            
       (try_end),  
  
@@ -8038,23 +8090,23 @@ simple_triggers = [
 [
  
       ####(display_message, "@Executing Simple Trigger 156"),
-(try_begin),
-   (lt, "$g_remove_from_notes_cur_npc", active_npcs_begin), 
-     (assign, "$g_remove_from_notes_cur_npc", active_npcs_begin),
- (try_end),
+# (try_begin),
+   # (lt, "$g_remove_from_notes_cur_npc", active_npcs_begin), 
+     # (assign, "$g_remove_from_notes_cur_npc", active_npcs_begin),
+ # (try_end),
  
- (try_begin),
-   (ge, "$g_remove_from_notes_cur_npc", active_npcs_end), 
-     (assign, "$g_remove_from_notes_cur_npc", active_npcs_begin),
- (try_end),
+ # (try_begin),
+   # (ge, "$g_remove_from_notes_cur_npc", active_npcs_end), 
+     # (assign, "$g_remove_from_notes_cur_npc", active_npcs_begin),
+ # (try_end),
  
- (try_begin),   
-   (troop_slot_eq, "$g_remove_from_notes_cur_npc", slot_troop_is_alive, 0),  ###### dead
-   (troop_slot_eq, "$g_remove_from_notes_cur_npc", slot_troop_occupation, slto_kingdom_hero),
-   (troop_set_note_available, "$g_remove_from_notes_cur_npc", 0),  
- (try_end),
+ # (try_begin),   
+   # (troop_slot_eq, "$g_remove_from_notes_cur_npc", slot_troop_is_alive, 0),  ###### dead
+   # (troop_slot_eq, "$g_remove_from_notes_cur_npc", slot_troop_occupation, slto_kingdom_hero),
+   # (troop_set_note_available, "$g_remove_from_notes_cur_npc", 0),  
+ # (try_end),
  ################# proceed to the next npc
- (val_add, "$g_remove_from_notes_cur_npc", 1),
+ # (val_add, "$g_remove_from_notes_cur_npc", 1),
 ]),  
 ##############################################################################
 
@@ -8205,6 +8257,35 @@ simple_triggers = [
 ####
 (24,   
 [
+####(display_message, "@Executing Simple Trigger 66"),
+# (eq, "$g_player_is_captive", 0),
+ # (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
+ # (assign, ":num_men", 0),
+ # (try_for_range, ":i_stack", 0, ":num_stacks"),
+   # (party_stack_get_size, ":stack_size", "p_main_party", ":i_stack"),
+   # (val_add, ":num_men", ":stack_size"),
+ # (try_end),
+ # (val_div, ":num_men", 5),
+ 
+ # (assign, ":consumption_amount", ":num_men"),
+ 
+ # (assign, ":available_drinks", 0),
+ # (try_for_range, ":cur_food", itm_wine, itm_smoked_fish),
+   # (item_set_slot, ":cur_food", slot_item_is_checked, 0),
+   # (call_script, "script_cf_player_has_item_without_modifier", ":cur_food", imod_rotten),
+   # (val_add, ":available_drinks", 1),
+ # (try_end),
+	   
+ # (try_begin),
+   # (gt, ":consumption_amount", 0),
+   # (gt, ":available_drinks", 0),
+     # (try_for_range, ":unused", 0, ":consumption_amount"),
+       # (store_random_in_range, ":selected_drink", 0, ":available_drinks"),
+       # (call_script, "script_consume_drinks", ":selected_drink"),
+     # (try_end),
+     # (display_message, "@Party consumes alcohol!", 5308240),
+     # (call_script, "script_change_player_party_morale", 8),
+ # (try_end),
 ]),  
 ####
 (24,   
