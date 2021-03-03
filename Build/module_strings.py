@@ -8943,11 +8943,6 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("enhanced_name_mongolian_32", "Borodai"),
 ("enhanced_name_mongolian_33", "Megetu"),
 ("enhanced_name_mongolian_34", "Subetei"),
-
-# ("enhanced_surname_mongolian_1", "d'Albret"),
-# ("enhanced_surname_mongolian_2", "d'Artois"),
-# ("enhanced_surname_mongolian_3", "d'Armagnac"),
-# ("enhanced_surname_mongolian_4", "de Beauvoir-Chastellux"),
 ########
 
 

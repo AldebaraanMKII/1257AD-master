@@ -272,8 +272,10 @@ dialogs    = [
      "Enlist as a: {s52}", "lord_request_reassignment_confirm", [(assign, "$temp", reg52)]],
     [anyone|plyr,"lord_request_reassignment_select", [(gt, reg53, 0),(str_store_troop_name, s53, reg53)], 
       "Enlist as a: {s53}", "lord_request_reassignment_confirm", [(assign, "$temp", reg53)]],
+	  
     [anyone|plyr,"lord_request_reassignment_select", [], "Mmm, a moment to think my lord", "lord_pretalk", []],
-    [anyone,"lord_request_reassignment_select", [(eq, reg51, 0)], "Sorry, {playername}, there isn't any position available for you right now.", "lord_pretalk", []],
+    
+	[anyone,"lord_request_reassignment_select", [(eq, reg51, 0)], "Sorry, {playername}, there isn't any position available for you right now.", "lord_pretalk", []],
 
     [anyone,"lord_request_reassignment_confirm", [(str_store_troop_name, s4, "$temp"),(str_store_troop_name, s5, "$player_cur_troop")], 
       "Alright, {playername}, you're sure I should have my Master-of-Arms begin your retraining as a {s4}?", "lord_request_reassignment_finish", []],
