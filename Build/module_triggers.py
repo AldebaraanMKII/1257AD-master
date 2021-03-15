@@ -2066,7 +2066,7 @@ triggers = [
         (try_end),  
     ]),        
     
-    #auto crusade
+##################auto crusade
 (24.0, 0.0, 0, [
         (eq, "$crusader_state", -1),
         (store_random_in_range, reg0, 0, 400),
@@ -2077,18 +2077,19 @@ triggers = [
     ],
     [
         #crusade from
-        (try_for_range, ":faction_no", 0, 40),
+        (try_for_range, ":faction_no", 0, 80),
           (troop_set_slot, "trp_temp_lord", ":faction_no", -1), #catholic factions
         (try_end),
         (assign, reg0, 0),
+		########## NEW v3.7
         (try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
-          # (neq, ":faction_no", "fac_player_supporters_faction"),
-          (neq, ":faction_no", "$players_kingdom"),  ########## NEW v3.3
           (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
           (faction_slot_eq, ":faction_no", slot_faction_religion, religion_catholic),
-          (troop_set_slot, "trp_temp_lord",reg0, ":faction_no"), #catholic factions
-          (val_add, reg0, 1),
+          (neg|faction_slot_eq, ":faction_no", slot_faction_leader, trp_player),
+            (troop_set_slot, "trp_temp_lord",reg0, ":faction_no"), #catholic factions
+            (val_add, reg0, 1),
         (try_end),
+		##############################
         (gt, reg0, 0),
         #(val_add, reg0, 1),
         (store_random_in_range, ":i", 0, reg0),
@@ -2097,7 +2098,7 @@ triggers = [
         (assign, "$crusader_faction", ":faction_no"),
         
         #crusade at
-        (try_for_range, ":faction_no", 0, 40),
+        (try_for_range, ":faction_no", 0, 80),  ######## NEW v3.7
           (troop_set_slot, "trp_temp_lord", ":faction_no", -1),#muslim factions
         (try_end),
         (assign, reg0, 0),
@@ -2113,7 +2114,9 @@ triggers = [
         (store_random_in_range, ":i", 0, reg0),
         (troop_get_slot, ":faction_no", "trp_temp_lord", ":i"), 
         (assign, "$crusade_target_faction", ":faction_no"),
-    ]),        
+    ]), 
+##########################################################################################
+	
     
     ###camp bonuses
     (3.0, 0.0, 12, 

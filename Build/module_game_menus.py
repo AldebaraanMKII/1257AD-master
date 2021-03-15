@@ -31800,6 +31800,54 @@ game_menus = [ #
          (try_end),
 	   ]),
 	   #######################################
+	   #######################################
+       ("debug_options_new_13",[], "Test crusades.",
+	   [
+        (assign, "$crusader_faction", "fac_papacy"),
+        
+        #crusade at
+        (try_for_range, ":faction_no", 0, 80),  ######## NEW v3.7
+          (troop_set_slot, "trp_temp_lord", ":faction_no", -1),#muslim factions
+        (try_end),
+        (assign, reg0, 0),
+        (try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
+          (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),
+          (neg|faction_slot_eq, ":faction_no", slot_faction_religion, religion_catholic), 
+          (neg|faction_slot_eq, ":faction_no", slot_faction_religion, religion_orthodox),
+          (troop_set_slot, "trp_temp_lord",reg0, ":faction_no"), #muslim factions
+          (val_add, reg0, 1),
+        (try_end),
+        (gt, reg0, 0),
+        #(val_add, reg0, 1),
+        (store_random_in_range, ":i", 0, reg0),
+        (troop_get_slot, ":faction_no", "trp_temp_lord", ":i"), 
+        (assign, "$crusade_target_faction", ":faction_no"),
+		
+        (str_store_faction_name_link, s1, "$crusader_faction"),
+        (str_store_faction_name_link, s2, "$crusade_target_faction"),
+		(display_message, "@Started crusade for {s2} by {s1}."),
+	   ]),
+	   #######################################
+	   #######################################
+       ("debug_options_new_14",[], "Test enlopment.",
+	   [
+       (assign, ":end", ladies_end),
+       (try_for_range, ":cur_lady", ladies_begin, ":end"),
+         (troop_slot_eq, ":cur_lady", slot_troop_is_alive, 1),
+           (call_script, "script_courtship_event_bride_marry_groom", ":cur_lady", "trp_player", 1), #1 is elopement
+           (assign, ":end", -1),
+       (try_end),
+	   ]),
+	   #######################################
+	   #######################################
+       ("debug_options_new_15",[], "Give 50 random prisoners to player.",
+	   [
+       (try_for_range, ":unused", 0, 50),
+         (store_random_in_range, ":troop", soldiers_begin, soldiers_end),
+           (party_add_prisoners, "p_main_party", ":troop", 1),
+       (try_end),
+	   ]),
+	   #######################################
 	   
        ("debug_options_new_99",[], "Go back.",
        [
@@ -32303,8 +32351,6 @@ game_menus = [ #
           (lt, ":town_lord", 0), #ie, unassigned
           (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
           (eq, "$players_kingdom", ":castle_faction"),
-          # (store_party_size_wo_prisoners, ":party_size", "$g_encountered_party"),
-          # (eq, ":party_size", 0),
           (str_store_string, s10, "str_retrieve_garrison_warning"),
           (assign, ":player_can_draw_from_garrison", 1),
         (else_try),

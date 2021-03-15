@@ -4042,7 +4042,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ####### NEW v3.5 - added language
   # ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^^It occupies {s8}.^^Its vassals are {s10}.^^Its culture is: {s22}.^Its religion is: {s11}^Its language is: {s12}^^{s21}."),
 ####### NEW v3.6 - moved dead vassals to another area
-  ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^^It occupies {s8}.^^Its vassals are {s10}.^^Its former vassals are {s15}.^^Its culture is: {s22}.^Its religion is: {s11}^Its language is: {s12}^^{s21}."),
+  ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^^It occupies {s8}.^^Its vassals are {s10}.^^Its former members are {s15}.^^Its culture is: {s22}.^Its religion is: {s11}^Its language is: {s12}^^{s21}."),
 ############################
   ####### NEW v3.0-KOMKE END- 
   ("assigned_lord_reputation_and_relations_cheat_mode_reg3", "{!}Assigned lord reputation and relations, cheat mode: {reg3}"),
