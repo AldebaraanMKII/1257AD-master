@@ -39686,35 +39686,6 @@ troops = [
     0x0000000a470d258974a345ca61a4bb5100000000001c33d20000000000000000
   ],
 
-    ###### [
-        ###### "kingdom_34_lord",
-    ###### "Duca Tommaso",
-    ###### "Duca Tommaso",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_warhorse,
-    ###### itm_rnd_surcoat_03,
-    ###### itm_talak_crown_ornate,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_tab_shield_heater_cav_b,
-    ###### itm_sword_type_xiii,
-    ###### itm_raf_two_handed_axe_c,
-    ###### ],
-    ###### lord_attrib,
-    ###### lord_wp,
-    ###### lord_skills,
-    ###### 0x0000000b770854103cd335b70d6538d300000000001f25190000000000000000
-    ###### ],
-
-
-
 ###### Teutonic
 
 ###### Teutonic
@@ -43005,132 +42976,6 @@ troops = [
     0x0000000bbd0ca34016e395eadb4d4d9300000000001d92b50000000000000000
   ],
 
-    ###### [
-        ###### "knight_7_16",
-    ###### "N"+a_kreska+"dasdy Imre",
-    ###### "N"+a_kreska+"dasdy Imre",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_7,
-    ###### [
-    ###### itm_osp_great_helm_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_hungary_a,
-    ###### itm_surcoat_hungary_a,
-
-    ###### itm_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0xc06046151435b5122a37756a400000000001c46e50000000000000000, rhodok_face_middle_2
-    ###### ],
-
-    ###### [
-        ###### "knight_7_17",
-    ###### "Tomaj nembeli D"+e_kreska+"nes II",
-    ###### "Tomaj D"+e_kreska+"nes II",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_7,
-    ###### [
-    ###### itm_norman_coif_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_hungary_a,
-    ###### itm_surcoat_hungary_a,
-
-    ###### itm_raf_two_handed_axe_c,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc081001d3465c89a6a452356300000000001cda550000000000000000, swadian_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_7_18",
-    ###### "K"+a_kreska+"n L"+a_kreska+"szl"+o_kreska+" Vajda",
-    ###### "K"+a_kreska+"n L"+a_kreska+"szl"+o_kreska+" Vajda",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_7,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_hungary_a,
-    ###### itm_surcoat_hungary_a,
-
-    ###### itm_spear_i,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xa3d0c13c3452aa967276dc95c00000000001dad350000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_7_19",
-    ###### "Zs"+a_kreska+"mboki Smaragd",
-    ###### "Zs"+a_kreska+"mboki Smaragd",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_7,
-    ###### [
-    ###### itm_osp_great_helm_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_hungary_a,
-    ###### itm_surcoat_hungary_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xc3f08038245545e3b236a68de00000000001e37230000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_7_20",
-    ###### "Benedek Esztergomi Ersek",
-    ###### "Benedek Esztergomi Ersek",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_7,
-    ###### [
-    ###### itm_rnd_helm_06,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_hungary_a,
-    ###### itm_surcoat_hungary_a,
-
-    ###### itm_lance,
-    ###### itm_sword_viking_3,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0xd8a00514544be2d14d370c65c00000000001ed6df0000000000000000, swadian_face_older_2
-    ###### ],
-
     ###### Novgorod
   ["knight_8_1",
      "Knyaz_Vsevolod_Yurievich",
@@ -44781,135 +44626,6 @@ troops = [
     knight_skills_3,
     0x0000000c15002583425d4938a449d71200000000001c95120000000000000000
   ],
-
-    ###### [
-        ###### "knight_11_16",
-    ###### "Magnús Konungr Ólafsson",
-    ###### "Magnús Ólafsson",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_11,
-    ###### [
- ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_norway_a,
-    ###### itm_surcoat_norway_a,
-
-    ###### itm_lance,
-    ###### itm_sword_type_xiii,
-    ###### itm_tab_shield_heater_cav_b,
-    ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x000000072f0c5003392a89229d4dbd9b00000000001cb9190000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_11_17",
-    ###### "Dubhghall Konungr mac Ruaidhri",
-    ###### "Dubhghall mac Ruaidhri",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_11,
-    ###### [
-    ###### itm_mail_coif,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_norway_a,
-    ###### itm_surcoat_norway_a,
-
-
-    ###### itm_talak_warhammer,
-    ###### itm_tab_shield_kite_cav_b
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x00000007180805142864d558ac09d8dd000000000011a9ab0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_11_18",
-    ###### "Erlingr Álfsson",
-    ###### "Erlingr Álfsson",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_11,
-    ###### [
-
- ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_norway_a,
-    ###### itm_surcoat_norway_a,
-
-    ###### itm_spear_l,
-    ###### itm_raf_one_handed_axe_c,
-    ###### itm_tab_shield_heater_cav_b,
-    ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x000000072e0c25c734928b4b1945c8640000000000165ade0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_11_19",
-    ###### "Loðinn Leppur",
-    ###### "Loðinn Leppur",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_11,
-    ###### [
-    ###### itm_maciejowski_kettle_hat_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_norway_a,
-    ###### itm_surcoat_norway_a,
-
-    ###### itm_lance,
-    ###### itm_sword_type_xii,
-    ###### itm_tab_shield_heater_cav_b,
-    ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x00000007350c20475aa552b91ea1b6f200000000001da2aa0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_11_20",
-    ###### "Páll Gæs",
-    ###### "Páll Gæs",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_11,
-    ###### [
-    ###### itm_rnd_helm_05,
- ###### itm_maciejowski_kettle_hat_a,
-    ###### itm_maciejowski_kettle_hat_b,
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_norway_a,
-    ###### itm_surcoat_norway_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x00000007220421071b2d4194d4935b59000000000015d91b0000000000000000
-    ###### ],
 
     ###### Scotland
   ["knight_12_1",
@@ -48208,132 +47924,6 @@ troops = [
     0x0000000a0909200a18ad50c79d6d435900000000001e03580000000000000000
   ],
 
-    ###### [
-        ###### "knight_22_16",
-    ###### "Theocharistus",
-    ###### "Theocharistus",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_22,
-    ###### [
-    ###### itm_osp_byzantion_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_c,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_22_17",
-    ###### "Cyril",
-    ###### "Cyril",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_22,
-    ###### [
-    ###### itm_elm9,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_d,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-    ###### [
-        ###### "knight_22_18",
-    ###### "Comitas",
-    ###### "Comitas",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_22,
-    ###### [
-    ###### itm_elm10,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_e,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-    ###### [
-        ###### "knight_22_19",
-    ###### "Christoboulus",
-    ###### "Christoboulus",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_22,
-    ###### [
-    ###### itm_osp_byzantion_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_scale_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-    ###### [
-        ###### "knight_22_20",
-    ###### "Chroniates",
-    ###### "Chroniates",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_22,
-    ###### [
-    ###### itm_elm9,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_mon_lamellar_horse_a,
-    ###### itm_kau_rus_lamellar_vest,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
 
   ["knight_23_1",
      "Guillaume de Chateauneuf, Grand Maitre de l'ordre des Hospitaliers",
@@ -48754,135 +48344,7 @@ troops = [
     0x000000003f0810094faa463d337954a900000000001e16d90000000000000000
   ],
 
-    ###### [
-        ###### "knight_23_16",
-    ###### "Conrad",
-    ###### "Conrad",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_23,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_jerusalem,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x000000001600459438e3ab4add6dcaee00000000000c89440000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_23_17",
-    ###### "Ernest",
-    ###### "Ernest",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_23,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_jerusalem,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x000000003e00440922d2725252d2555600000000001cab120000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_23_18",
-    ###### "Faramond",
-    ###### "Faramond",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_23,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_jerusalem,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x000000000d0801894673b9cadcbaa89000000000001e36da0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_23_19",
-    ###### "Gerald",
-    ###### "Gerald",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_23,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_jerusalem,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x000000000f04240948eb92399a722ed2000000000012b7220000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_23_20",
-    ###### "Giffard",
-    ###### "Giffard",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_23,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_jerusalem,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x00000000381025863b5990436554b59d00000000001e5b9e0000000000000000
-    ###### ],
+  
 
   ["knight_24_1",
     "Galvano Lancia, Conte di Salerno, Grand Marshall of Sicily",
@@ -49136,266 +48598,7 @@ troops = [
     0x000000000908c00918ad50c79d6d435900000000001e03580000000000000000
   ],
 
-    ###### [
-        ###### "knight_24_11",
-    ###### "Otto von Vohburg, Markgraf von Hohenburg",
-    ###### "Otto von Vohburg",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000741045188271b2c54ab2aa93200000000000499620000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_24_12",
-    ###### "Federigo Lancia,Conte di Squillace",
-    ###### "Federigo Lancia",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_06,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_b,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x000000074c1010ce58e449ba5d6e36b200000000001cb9160000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_24_13",
-    ###### "Bonifazio di Anglono",
-    ###### "Bonifazio di Anglono",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-
-###### itm_osp_great_helm_b,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x000000077b08424e691391b69d75476400000000000932d20000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_24_14",
-    ###### "Federigo Maletta, Conte di Apice",
-    ###### "Federigo Maletta",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_b,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x00000007430c6489476cda32dc44a91e000000000010ab590000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_24_15",
-        ###### "Tommaso di Saluzzo",
-    ###### "Tommaso di Saluzzo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_osp_great_helm_a,
-
-    ###### itm_mail_mittens,
-    ###### itm_splinted_leather_greaves,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x00000007590c62012b0cb24b5a56c41a000000000015faea0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_24_16",
-    ###### "Iacopino Rangoni, Cancelliere de Repubblica Toscana",
-    ###### "Iacopino Rangoni, Cancelliere de Repubblica Toscana",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_b,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_24_17",
-    ###### "Coluccio",
-    ###### "Coluccio",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_24_18",
-    ###### "Gonzo",
-    ###### "Gonzo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_b,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_24_19",
-    ###### "Romualdo",
-    ###### "Romualdo",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_24_20",
-    ###### "Zanobi",
-    ###### "Zanobi",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_24,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_yellow,
-    ###### itm_kau_sicily_b,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
+ 
 
   ["knight_25_1",
      "Amiir Al-Mansur Ali",
@@ -49884,488 +49087,6 @@ troops = [
     0x0000000dd104c34834e2422a5c92472300000000001d96ce0000000000000000
   ],
 
-    ###### [
-        ###### "knight_25_21",
-    ###### "Amiir Jaqmaq",
-    ###### "Jaqmaq",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_arab_shield_c_3,
-          ###### itm_light_lance,
-    ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x000000075c1045c526996dbc9998b4dd00000000000949250000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_25_22",
-    ###### "Amiir Jaavlii",
-    ###### "Jaavlii",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_arab_shield_d_3
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x00000007580c7387366c9156f498b711000000000012d49c0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_25_23",
-    ###### "Amiir Julbaan",
-    ###### "Julbaan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_arab_shield_f_3,
-          ###### itm_light_lance,
-    ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x000000077f1045912659aab835cdea5200000000001e1af50000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_25_24",
-    ###### "Amiir Jumaq",
-    ###### "Jumaq",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_arab_shield_g_3
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x000000074d04711418d8653853d4c7ab00000000001ec91b0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_25_25",
-    ###### "Amiir Juubaan",
-    ###### "Juubaan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_arab_shield_h_3
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x00000007730470d01ca37668e26deaf200000000001636db0000000000000000
-    ###### ],
-
-    ###### [
-        ###### "knight_25_26",
-    ###### "Amiir Kaykaldii",
-    ###### "Kaykaldii",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_27",
-    ###### "Amiir Kaytamur",
-    ###### "Kaytamur",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_28",
-    ###### "Amiir Kubak",
-    ###### "Kubak",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_29",
-    ###### "Amiir Kurjii",
-    ###### "Kurjii",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_30",
-    ###### "Amiir Kuujabaa",
-    ###### "Kuujabaa",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_31",
-    ###### "Amiir Makuurish",
-    ###### "Makuurish",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_32",
-    ###### "Amiir Mankuutamur",
-    ###### "Mankuutamur",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_33",
-    ###### "Amiir Qaraabughaa",
-    ###### "Qaraabughaa",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_34",
-    ###### "Amiir Qaraakuz",
-    ###### "Qaraakuz",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_35",
-    ###### "Amiir Qarsaq",
-    ###### "Qarsaq",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_36",
-    ###### "Amiir Qaanim",
-    ###### "Qaanim",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_37",
-    ###### "Amiir Saksan",
-    ###### "Saksan",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_38",
-    ###### "Amiir Tamur",
-    ###### "Tamur",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_39",
-    ###### "Amiir Uzbak",
-    ###### "Uzbak",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
-    ###### [
-        ###### "knight_25_40",
-    ###### "Amiir Yaghmuur",
-    ###### "Yaghmuur",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_25,
-    ###### [
-    ###### itm_merchant_outfit,
-    ###### itm_woolen_hose,
-
-    ###### itm_arabian_horse_b,
-    ###### itm_mamluke_mail,
-    ###### itm_sarranid_boots_c,
-    ###### itm_sarranid_mail_coif,
-    ###### itm_leather_gloves,
-    ###### itm_sarranid_cavalry_sword,
-    ###### itm_tab_shield_small_round_c
-        ###### ],
-    ###### knight_attrib_1,
-    ###### knight_wp_1,
-    ###### knight_skills_1,
-    ###### 0x0000000a4b103354189c71d6d386e8ac00000000001e24eb0000000000000000, rhodok_face_old_2
-    ###### ],
-
   ["knight_26_1",
      "Guglielmo VII del Monferrato,Rei di Tessalonica",
      "Guglielmo VII del Monferrato",
@@ -50618,136 +49339,7 @@ troops = [
     0x000000082a081005289d69c46c6e497200000000001d50b40000000000000000
   ],
 
-    ###### [
-        ###### "knight_26_11",
-    ###### "knight_26_11",
-    ###### "knight_26_11",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_26,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_latin_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_26_12",
-    ###### "knight_26_12",
-    ###### "knight_26_12",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_26,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_latin_b,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ###### knight_skills_2,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_26_13",
-    ###### "knight_26_13",
-    ###### "knight_26_13",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_26,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_latin_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_26_14",
-    ###### "knight_26_14",
-    ###### "knight_26_14",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_26,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_latin_b,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_2,
-    ###### knight_wp_2,
-    ######## knight_skills_2,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
-    ###### [
-        ###### "knight_26_15",
-    ###### "knight_26_15",
-    ###### "knight_26_15",
-    ###### tf_hero,
-    ###### 0, 0, fac_kingdom_26,
-    ###### [
-    ###### itm_rnd_helm_05,
-
-    ###### itm_mail_mittens,
-    ###### itm_kau_mail_boots_dark_long,
-
-    ###### itm_warhorse_white,
-    ###### itm_kau_latin_a,
-
-    ###### itm_heavy_lance,
-    ###### itm_morningstar,
-    ###### itm_tab_shield_heater_cav_b
-
-        ###### ],
-    ###### knight_attrib_3,
-    ###### knight_wp_3,
-    ###### knight_skills_3,
-    ###### 0x8e20011063d9b6d4a92ada53500000000001cc1180000000000000000, swadian_face_older_2
-    ###### ],
-
+ 
   ["knight_27_1",
      "Manuel I Megas Komnenos, Emperor of Trebizond",
      "Manuel I Megas Komnenos",
@@ -54450,11 +53042,6 @@ troops = [
   ["kingdom_11_lady_13","Lady Frika","Frika",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054b100003274d65d2d239eb1300000000001d49080000000000000000],
   ["kingdom_11_lady_14","Lady Froujke","Froujke",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000058610000664d3693664f0c54b00000000001d332d0000000000000000],
   ["kingdom_11_lady_15","Lady Gala","Gala",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11,  [    itm_peasant_dress,  itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000000000c000469a4d5cda4b1349c00000000001cd6600000000000000000],
-  ###### ["kingdom_11_lady_16","Lady Gjalp","Gjalp",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11,  [    itm_peasant_dress,  itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000000000000021564d196e2aa279400000000001dc4ed0000000000000000],
-  ###### ["kingdom_11_lady_17","Lady Hakan","Hakan",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054b100003274d65d2d239eb1300000000001d49080000000000000000],
-  ###### ["kingdom_11_lady_18","Lady Halla","Halla",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000058610000664d3693664f0c54b00000000001d332d0000000000000000],
-  ###### ["kingdom_11_lady_19","Lady Ingeborg","Ingeborg",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11,  [    itm_peasant_dress,  itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000000000c000469a4d5cda4b1349c00000000001cd6600000000000000000],
-  ###### ["kingdom_11_lady_20","Lady Afrid","Afrid",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_11,  [    itm_peasant_dress,  itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000000000000021564d196e2aa279400000000001dc4ed0000000000000000],
 
   ["kingdom_12_lady_1","Christiana de Brus","Christiana de Brus",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_12_lady_2","Lady Marjory","Marjory",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54466,16 +53053,6 @@ troops = [
   ["kingdom_12_lady_8","Jean of Bute","Jean of Bute",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_12_lady_9","Marjory de Abernethy","Marjory de Abernethy",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_12_lady_10","Johanna Comyn","Johanna Comyn",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_12_lady_11","Lady Dula","Dula",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_12_lady_12","Lady Ruwa","Ruwa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,  0x000000003f04100148d245d6526d456b00000000001e3b350000000000000000],
-  ###### ["kingdom_12_lady_13","Lady Luqa","Luqa",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_12_lady_14","Lady Zandina","Zandina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000003a0c3003358a56d51c8e399400000000000944dc0000000000000000],
-  ###### ["kingdom_12_lady_15","Lady Lulya","Lulya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_12_lady_16","Lady Zahara","Zahara",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000003b080003531e8932e432bb5a000000000008db6a0000000000000000],
-  ###### ["kingdom_12_lady_17","Lady Safiya","Safiya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000000000c000446e4b4c2cc5234d200000000001ea3120000000000000000],
-  ###### ["kingdom_12_lady_18","Lady Khalisa","Khalisa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000000083006465800000901161200000000001e38cc0000000000000000],
-  ###### ["kingdom_12_lady_19","Lady Janab","Janab",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1],
-  ###### ["kingdom_12_lady_20","Lady Sur","Sur",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_12, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_2],
 
   ["kingdom_13_lady_1","Lady Aideen","Aideen",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_13_lady_2","Lady Aine","Aine",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54487,16 +53064,6 @@ troops = [
   ["kingdom_13_lady_8","Lady Sheelagh","Sheelagh",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_13_lady_9","Lady Yseult","Yseult",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_13_lady_10","Lady Ryanne","Ryanne",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_13_lady_11","Lady Dula","Dula",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_13_lady_12","Lady Ruwa","Ruwa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,  0x000000003f04100148d245d6526d456b00000000001e3b350000000000000000],
-  ###### ["kingdom_13_lady_13","Lady Luqa","Luqa",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_13_lady_14","Lady Zandina","Zandina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000003a0c3003358a56d51c8e399400000000000944dc0000000000000000],
-  ###### ["kingdom_13_lady_15","Lady Lulya","Lulya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_13_lady_16","Lady Zahara","Zahara",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000003b080003531e8932e432bb5a000000000008db6a0000000000000000],
-  ###### ["kingdom_13_lady_17","Lady Safiya","Safiya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000000000c000446e4b4c2cc5234d200000000001ea3120000000000000000],
-  ###### ["kingdom_13_lady_18","Lady Khalisa","Khalisa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000000083006465800000901161200000000001e38cc0000000000000000],
-  ###### ["kingdom_13_lady_19","Lady Janab","Janab",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1],
-  ###### ["kingdom_13_lady_20","Lady Sur","Sur",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_13, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_2],
 
   ["kingdom_14_lady_1","Lady Rayma","Rayma",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_14_lady_2","Lady Thanaikha","Thanaikha",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54513,11 +53080,6 @@ troops = [
   ["kingdom_14_lady_13","Lady Luqa","Luqa",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_14_lady_14","Lady Zandina","Zandina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000003a0c3003358a56d51c8e399400000000000944dc0000000000000000],
   ["kingdom_14_lady_15","Lady Lulya","Lulya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_14_lady_16","Lady Zahara","Zahara",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000003b080003531e8932e432bb5a000000000008db6a0000000000000000],
-  ###### ["kingdom_14_lady_17","Lady Safiya","Safiya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000000000c000446e4b4c2cc5234d200000000001ea3120000000000000000],
-  ###### ["kingdom_14_lady_18","Lady Khalisa","Khalisa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000000083006465800000901161200000000001e38cc0000000000000000],
-  ###### ["kingdom_14_lady_19","Lady Janab","Janab",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1],
-  ###### ["kingdom_14_lady_20","Lady Sur","Sur",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_14, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_2],
 
   ["kingdom_15_lady_1","Lady Alyona","Alyona",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_15_lady_2","Lady Alya","Alya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54529,16 +53091,6 @@ troops = [
   ["kingdom_15_lady_8","Lady Svetlana","Svetlana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_15_lady_9","Lady Tatyana","Tatyana",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_15_lady_10","Lady Zoya","Zoya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_15_lady_11","Lady Larissa","Larissa",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_15_lady_12","Lady Ludmila","Ludmila",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_15_lady_13","Lady Natasha","Natasha",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_15_lady_14","Lady Svetlana","Svetlana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_15_lady_15","Lady Tatyana","Tatyana",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_15_lady_16","Lady Nadezhda","Nadezhda",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_15_lady_17","Lady Natasha","Natasha",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_15_lady_18","Lady Svetlana","Svetlana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_15_lady_19","Lady Tatyana","Tatyana",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_15_lady_20","Lady Nadezhda","Nadezhda",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_15, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
 
   ["kingdom_16_lady_1","Elvira","Elvira",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_16_lady_2","Orraca","Orraca",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54556,12 +53108,6 @@ troops = [
   ["kingdom_16_lady_14","Margarida","Margarida",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
   ["kingdom_16_lady_15","Manuela","Manuela",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
 
-  ###### ["kingdom_16_lady_16","lady_16_16","Mahayl",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_16_lady_17","lady_16_17","Isna",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_16_lady_18","lady_16_18","Siyafan",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_16_lady_19","lady_16_19","Ifar",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_16_lady_20","lady_16_20","Yasmin",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_16, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-
   ["kingdom_17_lady_1","Aldonza","Aldonza",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_17_lady_2","Beatriz","Beatriz",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
   ["kingdom_17_lady_3","Constanza","Constanza",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
@@ -54577,11 +53123,6 @@ troops = [
   ["kingdom_17_lady_13","Ildaria","Ildaria",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
   ["kingdom_17_lady_14","Ines","Ines",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
   ["kingdom_17_lady_15","Jimena","Jimena",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_17_lady_16","Lupaa","Lupaa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_17_lady_17","Mafalda","Mafalda",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_17_lady_18","Maria","Maria",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_17_lady_19","Mayor","Mayor",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_17_lady_20","Mencia","Mencia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_17, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_18_lady_1","Paterna","Paterna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_18_lady_2","Sancha","Sancha",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54598,22 +53139,6 @@ troops = [
   ["kingdom_18_lady_13","Ana","Ana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
   ["kingdom_18_lady_14","Teresa","Teresa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
   ["kingdom_18_lady_15","Mencia","Mencia",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_18_lady_16","Mari","Mari",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_18_lady_17","Margarida","Margarida",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_18_lady_18","Aldontsa","Aldontsa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_18_lady_19","Guiomar","Guiomar",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_18_lady_20","Gratsia","Gratsia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_18, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-
-  ###### ["kingdom_19_lady_1","Aldoncia","Aldoncia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_19_lady_2","Anderazo","Anderazo",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_19_lady_3","Belascuza","Belascuza",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_19_lady_4","Belasquita","Belasquita",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_19_lady_5","Sinara","Sinara",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_19_lady_6","Constanza","Constanza",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_19_lady_7","Domeca","Domeca",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_19_lady_8","Iuxta","Iuxta",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_19_lady_9","Oneca","Oneca",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_19_lady_10","Sancia","Sancia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_19, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_20_lady_1","Amira Fatima","Fatima",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_20, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_20_lady_2","Amira Mu'mina","Mu'mina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_20, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54636,11 +53161,6 @@ troops = [
   ["kingdom_20_lady_19","Amira Sitt","Sitt",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_20, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_20_lady_20","Amira Ishraq","Ishraq",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_20, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
-  ###### ["kingdom_21_lady_1","Gostanza","Gostanza",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_papacy, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_21_lady_2","Fotina","Fotina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_papacy, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_21_lady_3","Burlanda","Burlanda",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_papacy,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_21_lady_4","Luana","Luana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_papacy,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_21_lady_5","Nencia","Nencia",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_papacy, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
 
   ["kingdom_22_lady_1","Maria Laskarina","Maria Laskarina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_22_lady_2","Theodora Raoulina","Theodora Raoulina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54657,11 +53177,6 @@ troops = [
   ["kingdom_22_lady_13","Theodora","Theodora",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
   ["kingdom_22_lady_14","Helena","Helena",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
   ["kingdom_22_lady_15","Anna","Anna",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_22_lady_16","Eudocia","Eudocia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_22_lady_17","Zoe","Zoe",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_22_lady_18","Stephania","Stephania",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_22_lady_19","Aetheria","Aetheria",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_22_lady_20","Theodosia","Theodosia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_22, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_23_lady_1","Princesse Lucia","Princesse Lucia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_23_lady_2","Sibylle d'Arménie","Sibylle d'Arménie",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54678,11 +53193,6 @@ troops = [
   ["kingdom_23_lady_13","Lady Protasia","Protasia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
   ["kingdom_23_lady_14","Lady Sabina","Sabina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
   ["kingdom_23_lady_15","Lady Selina","Selina",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_23_lady_16","Lady Ursula","Ursula",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_23_lady_17","Lady Viviana","Viviana",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_23_lady_18","Lady Margareta","Margareta",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_23_lady_19","Lady Edith","Edith",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_23_lady_20","Lady Urith","Urith",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_23, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
 
   ["kingdom_24_lady_1","Signora Abriana","Abriana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
@@ -54695,16 +53205,6 @@ troops = [
   ["kingdom_24_lady_8","Signora Diletta","Diletta",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_24_lady_9","Signora Druda","Druda",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_24_lady_10","Signora Etheria","Etheria",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_24_lady_11","Signora Ghinga","Ghinga",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_24_lady_12","Signora Gilia","Gilia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_24_lady_13","Signora Gravina","Gravina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_24_lady_14","Signora Lizia","Lizia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_24_lady_15","Signora Mara","Mara",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_24_lady_16","Signora Meloria","Meloria",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_24_lady_17","Signora Prada","Prada",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_24_lady_18","Signora Zuanna","Zuanna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_24_lady_19","Signora Letta","Letta",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_24_lady_20","Signora Egeziaca","Egeziaca",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_24, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_25_lady_1","Asul","Asul",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_25_lady_2","Behiye","Behiye",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54726,26 +53226,6 @@ troops = [
   ["kingdom_25_lady_18","Melike","Melike",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_25_lady_19","Nar","Nar",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_25_lady_20","Nefise","Nefise",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_25_lady_21","Nergis","Nergis",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_25_lady_22","Neslihan","Neslihan",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_25_lady_23","Rabiye","Rabiye",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_25_lady_24","Safiye","Safiye",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_25_lady_25","Sara","Sara",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_25_lady_26","Saruca","Saruca",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_25_lady_27","Selçuk","Selçuk",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_25_lady_28","Selime","Selime",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_25_lady_29","Sitti","Sitti",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_25_lady_30","Surur","Surur",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_25_lady_31","Tohin","Tohin",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_25_lady_32","Zühal","Zühal",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_25_lady_33","Evranaki","Evranaki",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_25_lady_34","Hiristiniye","Hiristiniye",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_25_lady_35","Irini","Irini",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_25_lady_36","Manula","Manula",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_25_lady_37","Sultana","Sultana",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_25_lady_38","Taranuz","Taranuz",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_25_lady_39","Tenrebile","Tenrebile",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_25_lady_40","Islah","Islah",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_25, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_26_lady_1","Lady Gertrude","Gertrude",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_26_lady_2","Lady Godiva","Godiva",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54757,16 +53237,6 @@ troops = [
   ["kingdom_26_lady_8","Lady Rosalind","Rosalind",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_26_lady_9","Lady Veneranda","Veneranda",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_26_lady_10","Lady Ruothilde","Ruothilde",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_26_lady_11","Lady Albofleda","Albofleda",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_26_lady_12","Lady Bertrada","Bertrada",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_26_lady_13","Lady Engelberge ","Engelberge ",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_26_lady_14","Lady Hildegund","Hildegund",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_26_lady_15","Lady Kunegund ","Kunegund ",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_26_lady_16","lady_26_16","Mahayl",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_26_lady_17","lady_26_17","Isna",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_26_lady_18","lady_26_18","Siyafan",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_26_lady_19","lady_26_19","Ifar",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_26_lady_20","lady_26_20","Yasmin",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_26, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_27_lady_1","Aigiarn-khatum","Aigiarn",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_27_lady_2","Borte-khatum","Borte",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54783,11 +53253,6 @@ troops = [
   ["kingdom_27_lady_13","Chubei-khatum","Chubei",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
   ["kingdom_27_lady_14","Muqa-khatum","Muqa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
   ["kingdom_27_lady_15","Moge-khatum","Moge",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_27_lady_16","Aigiarn-khatum","Aigiarn",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_27_lady_17","Soqatai-khatum","Soqatai",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_27_lady_18","Qadagan-khatum","Qadagan",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_27_lady_19","Terken-khatum","Terken",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_27_lady_20","Checheken-khatum","Checheken",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_27, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_28_lady_1","Banah","Banah",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_28_lady_2","Bushra","Bushra",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54804,11 +53269,6 @@ troops = [
   ["kingdom_28_lady_13","Ghadir","Ghadir",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000003208400456d2953d6bae330e00000000001df7260000000000000000],
   ["kingdom_28_lady_14","Hawwa","Hawwa ",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001710400356e34d47626dc2eb0000000000100b210000000000000000],
   ["kingdom_28_lady_15","Bilqis","Bilqis",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000f10400748d5309b136a285400000000001da32b0000000000000000],
-  ###### ["kingdom_28_lady_16","Duqaq","Duqaq",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_28_lady_17","Hakima","Hakima",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_28_lady_18","Jaida","Jaida",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_28_lady_19","Rahmat","Rahmat",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_28_lady_20","Rusa","Rusa",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_28, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
 
   ["kingdom_29_lady_1","Hélène","Hélène",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_29_lady_2","Beloslava Asen","Beloslava",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54820,11 +53280,6 @@ troops = [
   ["kingdom_29_lady_8","Gospa Biljana","Biljana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_29_lady_9","Gospa Dijana","Dijana",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_29_lady_10","Gospa Mirjana","Mirjana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_29_lady_11","Lady Budislavka","Budislavka",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_29_lady_12","Lady Grada","Grada",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_29_lady_13","Lady Jovana","Jovana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_29_lady_14","Lady Vera","Vera",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_29_lady_15","Lady Vukosava","Vukosava",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_29, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
 
   ["kingdom_30_lady_1","Lady Irina","Irina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_30_lady_2","Lady Sofia","Sofia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54836,12 +53291,6 @@ troops = [
   ["kingdom_30_lady_8","Lady Lyubomira","Lyubomira",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_30_lady_9","Lady Zornitza","Zornitza",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_30_lady_10","Lady Zoya","Zoya",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_30_lady_11","Lady Petrana","Petrana",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_30_lady_12","Lady Rilka","Rilka",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000000d0820011693b142ca6a271a00000000001db6920000000000000000],
-  ###### ["kingdom_30_lady_13","Lady Stanka","Stanka",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-  ###### ["kingdom_30_lady_14","Lady Albena","Albena",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
-  ###### ["kingdom_30_lady_15","Lady Rositza","Rositza",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_30, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-
 
   ["kingdom_31_lady_1","Lubaba","Lubaba",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_31, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
   ["kingdom_31_lady_2","Khayra","Khayra",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_31, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
@@ -54869,382 +53318,14 @@ troops = [
   ["kingdom_32_lady_8","Signora Diletta","Diletta",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001900000542ac4e76d5d0d35300000000001e26a40000000000000000],
   ["kingdom_32_lady_9","Signora Druda","Druda",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
   ["kingdom_32_lady_10","Signora Etheria","Etheria",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x000000003a00200646a129464baaa6db00000000001de7a00000000000000000],
-  ###### ["kingdom_32_lady_11","Signora Ghinga","Ghinga",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000055910200107632d675a92b92d00000000001e45620000000000000000],
-  ###### ["kingdom_32_lady_12","Signora Gilia","Gilia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000054f08100232636aa90d6e194b00000000001e43130000000000000000],
-  ###### ["kingdom_32_lady_13","Signora Gravina","Gravina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000018f0410064854c742db74b52200000000001d448b0000000000000000],
-  ###### ["kingdom_32_lady_14","Signora Lizia","Lizia",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000204200629b131e90d6a8ae400000000001e28dd0000000000000000],
-  ###### ["kingdom_32_lady_15","Signora Mara","Mara",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_32, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, swadian_woman_face_1, swadian_woman_face_2],
-
-  ###### ["kingdom_33_lady_1","Lady Ugne","Ugne",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_33,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001421000062ae3d2591cae192500000000000a96f20000000000000000],
-  ###### ["kingdom_33_lady_2","Lady Aldona","Aldona",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_33, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001720400064a9b471a5369d2d400000000001e48d30000000000000000],
-  ###### ["kingdom_33_lady_3","Lady Daina","Daina",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_33, [  itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001400410043714b5575b904ce400000000001eb6da0000000000000000],
-  ###### ["kingdom_33_lady_4","Lady Viltaute","Viltaute",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_33,  [  itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000000a10100245826ed2aa72b4d300000000001db76c0000000000000000],
-  ###### ["kingdom_33_lady_5","Lady Vetra","Vetra",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_33,  [itm_green_dress,   itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x000000001904100467646956e36a5598000000000011f8cf0000000000000000],
-
-  ###### ["kingdom_34_lady_1","Signora Arianna","Arianna",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_34, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x00000001ad0c0002348a6e391b7abceb00000000001edb230000000000000000],
-  ###### ["kingdom_34_lady_2","Signora Enrica","Enrica",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_34, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e68001005395267946aaeb71200000000001c9fa30000000000000000],
-  ###### ["kingdom_34_lady_3","Signora Luciana","Luciana",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_34,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e7210000634d33cc78d87549d00000000000db6a50000000000000000],
-  ###### ["kingdom_34_lady_4","Signora Margherita","Margherita",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_34,  [    itm_leather_boots], def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e4910100248e583c6eab6274d00000000000632e50000000000000000],
-  ###### ["kingdom_34_lady_5","Signora Graziella","Graziella",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_34, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e4610000414e272429e31d6e400000000001ec7a90000000000000000],
-
-  ###### ["kingdom_37_lady_1","Lady Aelwyd","Aelwyd",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_37, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2,   0x0000000e49080002556275b6ac71a72c00000000001dac250000000000000000],
-  ###### ["kingdom_37_lady_2","Lady Ealdgyth","Ealdgyth",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_37, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e401020014b0c8a592b49572d00000000001d37650000000000000000],
-  ###### ["kingdom_37_lady_3","Lady Angharad","Angharad",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_37, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e530c00075f5b67469b22d6e200000000000e1ad20000000000000000],
-  ###### ["kingdom_37_lady_4","Lady Caron","Caron",tf_hero|tf_randomize_face|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_37, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e401020014b0c8a592b49572d00000000001d37650000000000000000],
-  ###### ["kingdom_37_lady_5","Lady Gwyneira","Gwyneira",tf_hero|tf_female|tf_unmoveable_in_party_window,0,reserved,fac_kingdom_37, [    itm_leather_boots],     def_attrib|level(2),wp(50),knows_common|knows_riding_2, 0x0000000e530c00075f5b67469b22d6e200000000000e1ad20000000000000000],
 
 
   ["heroes_end", "{!}heroes end", "{!}heroes end", tf_hero, 0,reserved,  fac_neutral,[itm_saddle_horse,itm_leather_jacket,itm_leather_boots],def_attrib|level(2),wp(20),knows_common, 0x000000000008318101f390c515555594],
 
 #Seneschals
   ["town_1_seneschal", "{!}Town 1 Seneschal", "{!}Town 1 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_2_seneschal", "{!}Town 2 Seneschal", "{!}Town 2 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000c03cc01cc34a9a467fdfd],
-  ###### ["town_3_seneschal", "{!}Town 3 Seneschal", "{!}Town 3 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c500e01dbb2115a55f3cd],
-  ###### ["town_4_seneschal", "{!}Town 4 Seneschal", "{!}Town 4 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_gambeson_a,    itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["town_5_seneschal", "{!}Town 5 Seneschal", "{!}Town 5 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000000249101e7898999ac54c6],
-  ###### ["town_6_seneschal", "{!}Town 6 Seneschal", "{!}Town 6 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_gambeson_b,    itm_wrapping_boots,],   def_attrib|level(2),wp(20),knows_common, 0x000000000010360b01cef8b57553d34e],
-  ###### ["town_7_seneschal", "{!}Town 7 Seneschal", "{!}Town 7 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000000018101f9487aa831dce4],
-  ###### ["town_8_seneschal", "{!}Town 8 Seneschal", "{!}Town 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_gambeson_b,    itm_wrapping_boots,],   def_attrib|level(2),wp(20),knows_common, 0x000000000004715201ea236c60a2bcae],
-  ###### ["town_9_seneschal", "{!}Town 9 Seneschal", "{!}Town 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["town_10_seneschal", "{!}Town 10 Seneschal", "{!}Town 10 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_linen_tunic,    itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000010230c01ef41badb50465e],
-  ###### ["town_11_seneschal", "{!}Town 11 Seneschal", "{!}Town 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_leather_jacket,    itm_wrapping_boots,],   def_attrib|level(2),wp(20),knows_common, 0x000000000008061301fb89acfb95332f],
-  ###### ["town_12_seneschal", "{!}Town 12 Seneschal", "{!}Town 12 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c13ce01dc4723ab936c82],
-  ###### ["town_13_seneschal", "{!}Town 13 Seneschal", "{!}Town 13 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000008548e01d952a9b25d6d5a],
-  ###### ["town_14_seneschal", "{!}Town 14 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_gambeson_a,    itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
-  ###### ["town_15_seneschal", "{!}Town 15 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_gambeson_a,    itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
-  ###### ["town_16_seneschal", "{!}Town 16 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_gambeson_a,    itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
-  ###### ["town_17_seneschal", "{!}Town 17 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_gambeson_a,    itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
-  ###### ["town_18_seneschal", "{!}Town 19 Seneschal", "{!}Town 19 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_19_seneschal", "{!}Town 19 Seneschal", "{!}Town 19 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_20_seneschal", "{!}Town 20 Seneschal", "{!}Town 20 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_21_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_22_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_23_seneschal", "{!}Town 18 Seneschal", "{!}Town 14 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[ itm_gambeson_a,    itm_blue_hose],     def_attrib|level(2),wp(20),knows_common, 0x000000000004728b01c293c694944b05],
-  ###### ["town_24_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_25_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_26_seneschal", "{!}Town 21 Seneschal", "{!}Town 21 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_27_seneschal", "{!}Town 22 Seneschal", "{!}Town 22 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_28_seneschal", "{!}Town 23 Seneschal", "{!}Town 23 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_29_seneschal", "{!}Town 24 Seneschal", "{!}Town 24 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_30_seneschal", "{!}Town 25 Seneschal", "{!}Town 25 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_31_seneschal", "{!}Town 26 Seneschal", "{!}Town 26 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_32_seneschal", "{!}Town 27 Seneschal", "{!}Town 27 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_33_seneschal", "{!}Town 28 Seneschal", "{!}Town 28 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_10_1_seneschal", "{!}Town 28 Seneschal", "{!}Town 28 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_10_2_seneschal", "{!}Town 28 Seneschal", "{!}Town 28 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_10_3_seneschal", "{!}Town 28 Seneschal", "{!}Town 28 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_10_4_seneschal", "{!}Town 29 Seneschal", "{!}Town 29 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_10_5_seneschal", "{!}Town 29 Seneschal", "{!}Town 29 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_10_6_seneschal", "{!}Town 29 Seneschal", "{!}Town 29 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_38_seneschal", "{!}Town 29 Seneschal", "{!}Town 30 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_39_seneschal", "{!}Town 29 Seneschal", "{!}Town 31 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_40_seneschal", "{!}Town 29 Seneschal", "{!}Town 32 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_41_seneschal", "{!}Town 29 Seneschal", "{!}Town 33 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_42_seneschal", "{!}Town 29 Seneschal", "{!}Town 33 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_43_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_44_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_45_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_46_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_47_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_48_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_49_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_50_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_51_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_52_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_53_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_54_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_55_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_56_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_57_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_58_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_59_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_60_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_61_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_63_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_64_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_65_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_66_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_67_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_68_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_69_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_70_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_71_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_72_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_73_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_74_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_75_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-
-  ###### ["town_76_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_77_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_78_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_79_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_80_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_81_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_82_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_83_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_84_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-
-  ###### ["town_85_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_86_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_87_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_88_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_89_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_90_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_91_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_92_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_93_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_94_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_31_3_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_25_4_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-###### ["town_32_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_32_2_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-   ###### ["town_34_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
- ###### ["town_37_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["town_38_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_39_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_40_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_40_2_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_41_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_41_2_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["town_wtf_1_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-    ###### ["town_wtf_2_seneschal", "{!}Town 29 Seneschal", "{!}Town 34 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[    itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
 
   ["castle_1_seneschal", "{!}Castle 1 Seneschal", "{!}Castle 1 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x000000000010360b01cef8b57553d34e],
-  ###### ["castle_2_seneschal", "{!}Castle 2 Seneschal", "{!}Castle 2 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_nomad_armor,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000008061301fb89acfb95332f],
-  ###### ["castle_3_seneschal", "{!}Castle 3 Seneschal", "{!}Castle 3 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008548e01d952a9b25d6d5a],
-  ###### ["castle_4_seneschal", "{!}Castle 4 Seneschal", "{!}Castle 4 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000004715201ea236c60a2bcae],
-  ###### ["castle_5_seneschal", "{!}Castle 5 Seneschal", "{!}Castle 5 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c500e01dbb2115a55f3cd],
-  ###### ["castle_6_seneschal", "{!}Castle 6 Seneschal", "{!}Castle 6 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c03cc01cc34a9a467fdfd],
-  ###### ["castle_7_seneschal", "{!}Castle 7 Seneschal", "{!}Castle 7 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_gambeson_a,    itm_blue_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000c13ce01dc4723ab936c82],
-  ###### ["castle_8_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_1_1_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_10_seneschal", "{!}Castle 10 Seneschal", "{!}Castle 10 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_11_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_12_seneschal", "{!}Castle 2 Seneschal", "{!}Castle 2 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_nomad_armor,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000008061301fb89acfb95332f],
-  ###### ["castle_13_seneschal", "{!}Castle 3 Seneschal", "{!}Castle 3 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008548e01d952a9b25d6d5a],
-  ###### ["castle_14_seneschal", "{!}Castle 4 Seneschal", "{!}Castle 4 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000004715201ea236c60a2bcae],
-  ###### ["castle_15_seneschal", "{!}Castle 5 Seneschal", "{!}Castle 5 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c500e01dbb2115a55f3cd],
-  ###### ["castle_16_seneschal", "{!}Castle 6 Seneschal", "{!}Castle 6 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c03cc01cc34a9a467fdfd],
-  ###### ["castle_17_seneschal", "{!}Castle 7 Seneschal", "{!}Castle 7 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_gambeson_a,    itm_blue_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000c13ce01dc4723ab936c82],
-  ###### ["castle_18_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_19_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_20_seneschal", "{!}Castle 20 Seneschal", "{!}Castle 20 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_21_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_22_seneschal", "{!}Castle 2 Seneschal", "{!}Castle 2 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_nomad_armor,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000008061301fb89acfb95332f],
-  ###### ["castle_23_seneschal", "{!}Castle 3 Seneschal", "{!}Castle 3 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008548e01d952a9b25d6d5a],
-  ###### ["castle_24_seneschal", "{!}Castle 4 Seneschal", "{!}Castle 4 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000004715201ea236c60a2bcae],
-  ###### ["castle_3_1_seneschal", "{!}Castle 5 Seneschal", "{!}Castle 5 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c500e01dbb2115a55f3cd],
-  ###### ["castle_26_seneschal", "{!}Castle 6 Seneschal", "{!}Castle 6 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c03cc01cc34a9a467fdfd],
-  ###### ["castle_27_seneschal", "{!}Castle 7 Seneschal", "{!}Castle 7 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_gambeson_a,    itm_blue_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000c13ce01dc4723ab936c82],
-  ###### ["castle_28_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_29_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_30_seneschal", "{!}Castle 20 Seneschal", "{!}Castle 20 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_31_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_32_seneschal", "{!}Castle 2 Seneschal", "{!}Castle 2 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_nomad_armor,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000008061301fb89acfb95332f],
-  ###### ["castle_33_seneschal", "{!}Castle 3 Seneschal", "{!}Castle 3 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008548e01d952a9b25d6d5a],
-  ###### ["castle_34_seneschal", "{!}Castle 4 Seneschal", "{!}Castle 4 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000004715201ea236c60a2bcae],
-  ###### ["castle_35_seneschal", "{!}Castle 5 Seneschal", "{!}Castle 5 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c500e01dbb2115a55f3cd],
-  ###### ["castle_36_seneschal", "{!}Castle 6 Seneschal", "{!}Castle 6 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c03cc01cc34a9a467fdfd],
-  ###### ["castle_37_seneschal", "{!}Castle 7 Seneschal", "{!}Castle 7 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_gambeson_a,    itm_blue_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000c13ce01dc4723ab936c82],
-  ###### ["castle_38_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_39_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_40_seneschal", "{!}Castle 20 Seneschal", "{!}Castle 20 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_6_1_seneschal", "{!}Castle 1 Seneschal", "{!}Castle 1 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x000000000010360b01cef8b57553d34e],
-  ###### ["castle_6_2_seneschal", "{!}Castle 2 Seneschal", "{!}Castle 2 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_nomad_armor,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000008061301fb89acfb95332f],
-  ###### ["castle_6_3_seneschal", "{!}Castle 3 Seneschal", "{!}Castle 3 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008548e01d952a9b25d6d5a],
-  ###### ["castle_6_4_seneschal", "{!}Castle 4 Seneschal", "{!}Castle 4 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x000000000004715201ea236c60a2bcae],
-  ###### ["castle_6_5_seneschal", "{!}Castle 5 Seneschal", "{!}Castle 5 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_linen_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c500e01dbb2115a55f3cd],
-  ###### ["castle_6_6_seneschal", "{!}Castle 6 Seneschal", "{!}Castle 6 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_coarse_tunic,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x00000000000c03cc01cc34a9a467fdfd],
-  ###### ["castle_6_7_seneschal", "{!}Castle 7 Seneschal", "{!}Castle 7 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_gambeson_a,    itm_blue_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000c13ce01dc4723ab936c82],
-  ###### ["castle_6_8_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_6_9_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_6_10_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_6_11_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-  ###### ["castle_6_12_seneschal", "{!}Castle 8 Seneschal", "{!}Castle 8 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common, 0x00000000000c218501ef4f5d2ccb0026],
-
-  ###### ["castle_4_1_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_4_2_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_4_3_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_4_4_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_4_5_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_4_6_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_4_7_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-  ###### ["castle_4_8_seneschal", "{!}Castle 9 Seneschal", "{!}Castle 9 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_leather_jacket,    itm_leather_boots], def_attrib|level(2),wp(20),knows_common, 0x000000000008035201e6eebaf3f3eb2b],
-
-  ###### ["castle_11_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_11_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_11_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_11_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_11_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_11_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_14_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_14_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_14_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_14_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_14_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_14_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_9_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_7_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_8_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_10_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_7_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_8_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_9_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_10_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_11_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_10_12_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_73_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_74_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_75_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_76_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_77_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_78_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_79_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_80_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_81_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_82_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_83_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_84_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_85_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_9_9_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_15_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_15_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_15_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_15_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_15_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_15_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_16_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_16_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_16_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_16_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_17_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_17_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_17_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_17_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_17_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_17_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_17_7_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_18_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_18_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_18_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_18_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_18_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_18_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_20_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_20_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_20_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_20_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_22_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_22_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_22_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_22_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_22_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_22_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_23_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_23_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_23_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_23_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_24_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_24_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_24_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_25_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_25_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_25_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_25_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_25_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_25_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_25_7_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_26_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_26_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_26_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_26_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_30_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_30_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_27_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_27_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_27_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_27_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_27_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_27_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_28_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_28_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_28_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_28_4_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_28_5_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_28_6_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_29_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_29_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_30_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_30_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_30_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_31_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_32_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_33_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_34_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_35_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_36_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_37_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-  ###### ["castle_38_1_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_39_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_40_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-  ###### ["castle_41_2_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
-
-    ###### ["castle_31_3_seneschal", "{!}Castle 11 Seneschal", "{!}Castle 11 Seneschal", tf_hero|tf_is_merchant, 0,reserved,  fac_neutral,[itm_merchant_outfit,    itm_woolen_hose],   def_attrib|level(2),wp(20),knows_common, 0x00000000000440c601e1cd45cfb38550],
 
 #Arena Masters
   ["town_1_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
@@ -55389,22 +53470,6 @@ troops = [
   ["town_42_4_arena_master", "Tournament Master","{!}Tournament Master",tf_hero|tf_randomize_face, 0,reserved,   fac_commoners,[itm_coarse_tunic,    itm_hide_boots],    def_attrib|level(2),wp(20),knows_common,man_face_middle_1, man_face_older_2],
 
  ###### Underground
-
-#######  ["town_1_crook","Town 1 Crook","Town 1 Crook",tf_hero,                0,0, fac_neutral,[itm_linen_tunic,    itm_leather_boots       ],def_attrib|level(2),wp(20),knows_inventory_management_10, 0x000000000004428401f46e44a27144e3],
-#######  ["town_2_crook","Town 2 Crook","Town 2 Crook",tf_hero|tf_female,      0,0, fac_neutral,[itm_lady_dress_ruby,    itm_turret_hat_ruby     ],def_attrib|level(2),wp(20),knows_inventory_management_10, 0x000000000004300101c36db6db6db6db],
-#######  ["town_3_crook","Town 3 Crook","Town 3 Crook",tf_hero,                0,0, fac_neutral,[itm_tunic_with_green_cape,    itm_hide_boots          ],def_attrib|level(2),wp(20),knows_inventory_management_10, 0x00000000000c530701f17944a25164e1],
-#######  ["town_4_crook","Town 4 Crook","Town 4 Crook",tf_hero,                0,0, fac_neutral,[itm_coarse_tunic,    itm_hide_boots          ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000c840501f36db6db7134db],
-#######  ["town_5_crook","Town 5 Crook","Town 5 Crook",tf_hero,                0,0, fac_neutral,[itm_gambeson_b,    itm_blue_hose           ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000c000601f36db6db7134db],
-#######  ["town_6_crook","Town 6 Crook","Town 6 Crook",tf_hero,                0,0, fac_neutral,[itm_coarse_tunic,    itm_hide_boots          ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000c10c801db6db6dd7598aa],
-#######  ["town_7_crook","Town 7 Crook","Town 7 Crook",tf_hero|tf_female,      0,0, fac_neutral,[    itm_common_hood         ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000010214101de2f64db6db58d],
-##
-#######  ["town_8_crook","Town 8 Crook","Town 8 Crook",tf_hero,                0,0, fac_neutral,[itm_leather_jacket,    itm_leather_boots       ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000010318401c96db4db6db58d],
-#######  ["town_9_crook","Town 9 Crook","Town 9 Crook",tf_hero,                0,0, fac_neutral,[itm_linen_tunic,    itm_hide_boots          ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000008520501f16db4db6db58d],
-#######  ["town_10_crook","Town 10 Crook","Town 10 Crook",tf_hero,             0,0, fac_neutral,[itm_coarse_tunic,    itm_leather_boots         ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000008600701f35144db6db8a2],
-#######  ["town_11_crook","Town 11 Crook","Town 11 Crook",tf_hero|tf_female,   0,0, fac_neutral,[itm_blue_dress,    itm_wimple_with_veil    ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x000000000008408101f386c4db4dd514],
-#######  ["town_12_crook","Town 12 Crook","Town 12 Crook",tf_hero,             0,0, fac_neutral,[itm_coarse_tunic,    itm_hide_boots          ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000870c501f386c4f34dbaa1],
-#######  ["town_13_crook","Town 13 Crook","Town 13 Crook",tf_hero,             0,0, fac_neutral,[itm_gambeson_a,    itm_leather_boots         ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000000c114901f245caf34dbaa1],
-#######  ["town_14_crook","Town 14 Crook","Town 14 Crook",tf_hero|tf_female,   0,0, fac_neutral,[    itm_turret_hat_ruby     ],def_attrib|level(5),wp(20),knows_inventory_management_10, 0x00000000001021c001f545a49b6eb2bc],
 
 ###### Armor Merchants
   #arena_masters_end = zendar_armorer
@@ -57228,49 +55293,6 @@ troops = [
   ["tutorial_master_horseman","Riding Trainer","Riding Trainer",tf_hero,0,0,fac_kingdom_2,
    [itm_leather_vest,itm_woolen_hose],
    def_attrib|str_12|level(19),wp_melee(70)|wp_archery(110),knows_ironflesh_1|knows_power_draw_2|knows_athletics_2|knows_power_throw_1,0x0000000ea0084140478a692894ba185500000000001d4af30000000000000000, vaegir_face_older_2],
-
-  ###### ["swadian_merchant", "Merchant of Praven", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_4, [itm_sword_two_handed_a, itm_merchant_outfit, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["vaegir_merchant", "Merchant of Reyvadin", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_5, [itm_sword_two_handed_a, itm_merchant_outfit, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["khergit_merchant", "Merchant of Tulga", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_sword_two_handed_a, itm_gambeson_b, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["nord_merchant", "Merchant of Sargoth", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_sword_two_handed_a, itm_gambeson_b, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["rhodok_merchant", "Merchant of Jelkala", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_3, [itm_sword_two_handed_a, itm_leather_jerkin, itm_blue_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["sarranid_merchant", "Merchant of Shariz", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_6, [itm_sword_two_handed_a,  itm_sarranid_boots_a_long_long], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-
-  ###### ["merchant_kingdom_1", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_merchant_outfit, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_2", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_merchant_outfit, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_3", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_3, [itm_merchant_outfit, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_4", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_5", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_merchant_outfit, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_6", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_merchant_outfit, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_7", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_1, [itm_merchant_outfit, itm_leather_boots], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_8", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_5, [itm_merchant_outfit, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_9", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_3, [itm_linen_tunic, itm_blue_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_10", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_3, [itm_linen_tunic, itm_blue_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_11", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_12", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_3, [itm_linen_tunic, itm_blue_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_13", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_3, [itm_linen_tunic, itm_blue_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_14", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_2, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_15", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_15, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_16", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_16, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_17", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_17, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_18", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_18, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_19", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_19, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_20", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_20, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_21", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_papacy, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_22", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_22, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_23", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_23, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_24", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_24, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_25", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_25, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_26", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_26, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_27", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_27, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_28", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_28, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_29", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_29, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_30", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_30, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_31", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_31, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_32", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_32, [itm_gambeson_b, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-  ###### ["merchant_kingdom_37", "Merchant", "{!}Prominent", tf_hero|tf_randomize_face, 0, reserved, fac_kingdom_32, [itm_gambeson_a, itm_woolen_hose], def_attrib|level(2),wp(20),knows_common, man_face_middle_1, mercenary_face_2],
-
-  ###### ["startup_merchants_end","startup_merchants_end","startup_merchants_end",tf_hero, 0,0, fac_commoners,[],def_attrib|level(2),wp(20),knows_inventory_management_10,0],
 
   ["sea_raider_leader","Sea Raider Captain","Sea Raiders",tf_hero|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_shield,0,0,fac_outlaws,
    [itm_arrows,itm_sword_type_xii,itm_kau_mail_a,itm_kau_mail_b,itm_sword_type_xiii,itm_raf_one_handed_axe_d,itm_raf_two_handed_axe_a,itm_tab_shield_kite_c,itm_tab_shield_heater_c,itm_nordic_shield,itm_wooden_shield,itm_long_bow,itm_javelin,
@@ -61141,20 +59163,90 @@ troops = [
 
 ########################################
 ############### Outposts begin
- ["fort_walker","Patrol","Guards",tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_player_faction,
-   [],
-   def_attrib|level(11),wp(75),knows_common,man_face_young_1, man_face_old_2],
+ ["fort_walker","Guard","Guards",tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_player_faction,
+   [
+    itm_tab_shield_heater_c,
+
+    # itm_hunter,
+    
+    itm_norman_coif_c,
+    itm_norman_coif_d,
+    itm_norman_coif_e,
+    itm_surcoat_a,
+    itm_surcoat_b,
+    itm_surcoat_c,
+    itm_surcoat_d,
+    itm_surcoat_e,
+    ###### itm_leather_gloves,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiv,
+    # itm_lance,
+    itm_mace_4,
+    itm_mace_3,
+    itm_mace_2,
+
+    # itm_courser,
+    
+    itm_light_crossbow,
+    itm_bolts,
+    
+    itm_raf_one_handed_axe_a
+   ],
+   def_attrib|level(11),wp(75),knows_common,man_face_young_1, man_face_old_2
+ ],
+   
  ["fort_rider","Patrol","Guards",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_player_faction,
-   [itm_saddle_horse],
-   def_attrib|level(11),wp(75),knows_common|knows_riding_2,man_face_young_1, man_face_old_2],
+   [
+   
+    itm_tab_shield_heater_c,
+
+    # itm_hunter,
+    
+    itm_norman_coif_c,
+    itm_norman_coif_d,
+    itm_norman_coif_e,
+    itm_surcoat_a,
+    itm_surcoat_b,
+    itm_surcoat_c,
+    itm_surcoat_d,
+    itm_surcoat_e,
+    ###### itm_leather_gloves,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiv,
+    # itm_lance,
+    itm_mace_4,
+    itm_mace_3,
+    itm_mace_2,
+
+    # itm_courser,
+    
+    itm_light_crossbow,
+    itm_bolts,
+    
+    itm_raf_one_handed_axe_a,
+   itm_saddle_horse
+   ],
+   def_attrib|level(11),wp(75),knows_common|knows_riding_2,man_face_young_1, man_face_old_2
+ ],
+   
  ["fort_slave","Slave","Slaves",0,0,0,fac_commoners,
    [itm_linen_tunic],
-   def_attrib|level(4),wp(20),knows_common,man_face_young_1, man_face_old_2],
+   def_attrib|level(4),wp(20),knows_common,man_face_young_1, man_face_old_2
+ ],
 
   ###### NEW v1.0 
   ["outpost_captain","Outpost Captain","Outpost Captains",tf_hero|tf_unmoveable_in_party_window|tf_female|tf_allways_fall_dead|tf_no_capture_alive, scn_fort|entry(11),reserved,  fac_commoners,[itm_kau_mail_shirt_b,itm_mail_chausses],knight_attrib_3|level(20),wp(180),knows_common,0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000, 0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000],
   
   ["fort_captain","Fort Captain","Fort Captains",tf_hero|tf_unmoveable_in_party_window|tf_female|tf_allways_fall_dead|tf_no_capture_alive, scn_fort|entry(11),reserved,  fac_commoners,[itm_veteran_surcoat_a,itm_mail_chausses,itm_mail_mittens],knight_attrib_5|level(25),wp(250),knows_common,0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000, 0x0000000a1a00200336db6db6db6db6db00000000001db6db0000000000000000],
+
+########### NEW v3.7
+  # ["fort_goods_merchant", "Goods Merchant","{!}Fort Merchant",tf_female|tf_hero|tf_randomize_face|tf_is_merchant, 0,0, fac_commoners,     [itm_peasant_dress,    itm_leather_boots,  itm_straw_hat   ],def_attrib|level(2),wp(20),knows_inventory_management_10, woman_face_1, woman_face_2],
+  # ["fort_horse_merchant","Horse Merchant","{!}Fort Horse Merchant",tf_female|tf_hero|tf_randomize_face|tf_is_merchant,    0, 0, fac_commoners,[itm_blue_dress,    itm_blue_hose,    itm_female_hood],   def_attrib|level(2),wp(20),knows_inventory_management_10, woman_face_1, woman_face_2],
+  # ["fort_armorer","Armorer",  "{!}Armorer",  tf_hero|tf_randomize_face|tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_leather_boots   ],def_attrib|level(2),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
+  # ["fort_weaponsmith", "Weaponsmith","{!}Weaponsmith",tf_hero|tf_randomize_face|tf_is_merchant, 0, 0, fac_commoners,[itm_linen_tunic,    itm_wrapping_boots,],def_attrib|level(5),wp(20),knows_inventory_management_10, mercenary_face_1, mercenary_face_2],
+######################
 ############ Outposts end
 
 ################# PCamp

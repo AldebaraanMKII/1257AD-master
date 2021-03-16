@@ -145,7 +145,7 @@ mission_templates = [
                     (try_for_agents, ":cur_agent"),
                       (agent_get_troop_id, ":cur_troop", ":cur_agent"),
                       (try_begin),
-                        (eq, ":cur_troop", "trp_fort_walker"),
+                        (eq, ":cur_troop", "trp_ee_watchman"),
                         (call_script, "script_cf_tick_fort_patrol", ":cur_agent", 1),
                       (else_try),
                         (agent_get_entry_no, ":entry_no", ":cur_agent"),

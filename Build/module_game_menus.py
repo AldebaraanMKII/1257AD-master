@@ -31831,23 +31831,19 @@ game_menus = [ #
 	   #######################################
        ("debug_options_new_14",[], "Test enlopment.",
 	   [
-       (assign, ":end", ladies_end),
-       (try_for_range, ":cur_lady", ladies_begin, ":end"),
+       (assign, ":end", kingdom_ladies_end),
+       (try_for_range, ":cur_lady", kingdom_ladies_begin, ":end"),
          (troop_slot_eq, ":cur_lady", slot_troop_is_alive, 1),
            (call_script, "script_courtship_event_bride_marry_groom", ":cur_lady", "trp_player", 1), #1 is elopement
            (assign, ":end", -1),
        (try_end),
 	   ]),
 	   #######################################
-	   #######################################
-       ("debug_options_new_15",[], "Give 50 random prisoners to player.",
-	   [
-       (try_for_range, ":unused", 0, 50),
-         (store_random_in_range, ":troop", soldiers_begin, soldiers_end),
-           (party_add_prisoners, "p_main_party", ":troop", 1),
-       (try_end),
-	   ]),
-	   #######################################
+       ("debug_options_15",[], "More options.",
+       [
+       (jump_to_menu, "mnu_debug_options_new_2"),
+       ]
+       ),
 	   
        ("debug_options_new_99",[], "Go back.",
        [
@@ -31856,7 +31852,134 @@ game_menus = [ #
        ),
 #######################################
     ]),
-######################################################
+	
+###################### NEW 3.7
+  ("debug_options_new_2",mnf_scale_picture,
+   "Debug 3",
+   "none",
+   [     
+    (assign, "$g_player_icon_state", pis_normal),
+     (set_background_mesh, "mesh_pic_camp"),
+   ],     
+   [      
+	   #######################################
+       ("debug_options_new2_1",[], "Give 50 random prisoners to player.",
+	   [
+       (try_for_range, ":unused", 0, 50),
+         (store_random_in_range, ":troop", soldiers_begin, soldiers_end),
+           (party_add_prisoners, "p_main_party", ":troop", 1),
+       (try_end),
+	   ]),
+	   #######################################
+	   #######################################
+       ("debug_options_new2_2",[], "Give all companions their culture equipment.",
+	   [
+       (try_for_range, ":cur_companion", companions_begin, companions_end),
+         (try_begin),
+           (this_or_next|is_between, ":cur_companion", "trp_npc1", "trp_npc4"),## Balt
+           (this_or_next|eq, ":cur_companion", "trp_npc16"),
+           (this_or_next|eq, ":cur_companion", "trp_npc19"),
+           (eq, ":cur_companion", "trp_npc26"),
+             (assign, ":culture", "fac_culture_baltic"),
+         (else_try),
+           (this_or_next|is_between, ":cur_companion", "trp_npc4", "trp_npc7"),## Western
+           (this_or_next|eq, ":cur_companion", "trp_npc21"),
+           (this_or_next|eq, ":cur_companion", "trp_npc23"),
+           (eq, ":cur_companion", "trp_npc25"),
+             (assign, ":culture", "fac_culture_western"),
+         (else_try),
+           (this_or_next|is_between, ":cur_companion", "trp_npc7", "trp_npc10"),## Rus
+           (this_or_next|eq, ":cur_companion", "trp_npc17"),
+           (this_or_next|eq, ":cur_companion", "trp_npc22"),
+           (eq, ":cur_companion", "trp_npc27"),
+             (assign, ":culture", "fac_culture_rus"),
+         (else_try),
+           (this_or_next|is_between, ":cur_companion", "trp_npc10", "trp_npc13"),## Mamluke
+           (this_or_next|eq, ":cur_companion", "trp_npc20"),
+           (this_or_next|eq, ":cur_companion", "trp_npc24"),
+           (eq, ":cur_companion", "trp_npc28"),
+             (assign, ":culture", "fac_culture_mamluke"),
+         (else_try),
+           (this_or_next|is_between, ":cur_companion", "trp_npc13", "trp_npc16"),## Mongol
+           (this_or_next|eq, ":cur_companion", "trp_npc18"),
+           (eq, ":cur_companion", "trp_npc29"),
+             (assign, ":culture", "fac_culture_mongol"),
+         (try_end),
+		 ############### NEW v3.7
+         (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_companion", 18), 
+         (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_companion", 15), 
+         (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_companion", 12), 
+         (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_companion", 15), 
+		 
+         (call_script, "script_ee_raise_actor_skill", skl_leadership, ":cur_companion", 5), 
+         (call_script, "script_ee_raise_actor_skill", skl_trade, ":cur_companion", 3), 
+         (call_script, "script_ee_raise_actor_skill", skl_prisoner_management, ":cur_companion", 3), 
+         (call_script, "script_ee_raise_actor_skill", skl_persuasion, ":cur_companion", 3), 
+         (call_script, "script_ee_raise_actor_skill", skl_inventory_management, ":cur_companion", 5), 
+         (call_script, "script_ee_raise_actor_skill", skl_spotting, ":cur_companion", 2), 
+         (call_script, "script_ee_raise_actor_skill", skl_pathfinding, ":cur_companion", 2), 
+         (call_script, "script_ee_raise_actor_skill", skl_tactics, ":cur_companion", 3), 
+         (call_script, "script_ee_raise_actor_skill", skl_riding, ":cur_companion", 5), 
+         (call_script, "script_ee_raise_actor_skill", skl_athletics, ":cur_companion", 2), 
+         (call_script, "script_ee_raise_actor_skill", skl_shield, ":cur_companion", 3), 
+         (call_script, "script_ee_raise_actor_skill", skl_weapon_master, ":cur_companion", 5), 
+         (call_script, "script_ee_raise_actor_skill", skl_power_strike, ":cur_companion", 4), 
+         (call_script, "script_ee_raise_actor_skill", skl_ironflesh, ":cur_companion", 5), 
+		 
+         (try_begin),
+           (store_skill_level, ":cur_value", ":cur_companion", skl_power_draw),
+           (gt, ":cur_value", 0),
+             (call_script, "script_ee_raise_actor_skill", skl_power_draw, ":cur_companion", 6), 
+         (try_end),
+         (try_begin),
+           (store_skill_level, ":cur_value", ":cur_companion", skl_power_throw),
+           (gt, ":cur_value", 0),
+             (call_script, "script_ee_raise_actor_skill", skl_power_throw, ":cur_companion", 6), 
+         (try_end),
+		 
+         (try_begin),
+           (store_proficiency_level, ":cur_value", ":cur_companion", wpt_one_handed_weapon),
+           (gt, ":cur_value", 60),
+             (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_companion", 280),  
+         (try_end),
+         (try_begin),
+           (store_proficiency_level, ":cur_value", ":cur_companion", wpt_two_handed_weapon),
+           (gt, ":cur_value", 60),
+             (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_companion", 280),  
+         (try_end),
+         (try_begin),
+           (store_proficiency_level, ":cur_value", ":cur_companion", wpt_polearm),
+           (gt, ":cur_value", 60),
+             (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_companion", 280),  
+         (try_end),
+         (try_begin),
+           (store_proficiency_level, ":cur_value", ":cur_companion", wpt_archery),
+           (gt, ":cur_value", 60),
+             (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_companion", 280),  
+         (try_end),
+         (try_begin),
+           (store_proficiency_level, ":cur_value", ":cur_companion", wpt_crossbow),
+           (gt, ":cur_value", 60),
+             (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_companion", 280),  
+         (try_end),
+         (try_begin),
+           (store_proficiency_level, ":cur_value", ":cur_companion", wpt_throwing),
+           (gt, ":cur_value", 60),
+             (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_companion", 280),  
+         (try_end),
+		 #############################################
+         (call_script, "script_get_random_equipment_type_from_troop_by_culture", ":cur_companion", ":culture"), 
+       (try_end),
+	   ]),
+	   #######################################
+       ("debug_options2_99",[], "Go back.",
+       [
+       (jump_to_menu, "mnu_debug_options_new_1"),
+       ]
+       ),
+##############################################################################
+    ]),
+##############################################################################
 
 ####### NEW v3.0-KOMKE START-This will notify the player when a fief improvement is finished
    ("notification_building_constructed",0,

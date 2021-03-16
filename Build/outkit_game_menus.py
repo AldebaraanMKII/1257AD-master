@@ -41,7 +41,7 @@ game_menus = [
          (val_mul, ":cost_modifier", ":engineer_reduction"), 
          (store_sub, reg10, ":base_cost", ":cost_modifier"), 
 		 ], 
-		    "Build an Outpost. ({reg10})",
+		    "Build an Outpost. ({reg10} coins)",
 		    [(store_troop_gold, ":gold_amount", "trp_player"),
 		     (try_begin),
 		        (ge, ":gold_amount", reg10),
@@ -74,6 +74,7 @@ game_menus = [
 				    ### NEW v1.0 - this prevents crashes when managing the garrison
 				    (party_add_leader, ":outpost_party", "trp_outpost_captain"), 
 			        (display_message, "@Outpost built!"),
+				    (assign, "$g_outpost_count", 1),  ########## NEW v3.7
 			        (call_script, "script_setup_outpost_scene"),
 				    (change_screen_return),
 				(else_try),
@@ -84,32 +85,6 @@ game_menus = [
 		        (display_message, "@You don't have enough money to build an outpost!"),
 			(try_end),
 			]),
-		# ("build_fort", [(neg|party_slot_ge, "p_fort", slot_outpost_level, 1),
-						# (eq, 1, 0) # This option is disabled
-						# ], 
-		    # "Build a Fort. (25000 denars)",
-		    # [(store_troop_gold, ":gold_amount", "trp_player"),
-		     # (try_begin),
-		        # (ge, ":gold_amount", 25000),
-			    # (troop_remove_gold, "trp_player", 25000),
-			    # (party_relocate_near_party, "p_fort", "p_main_party"),
-				# (store_faction_of_party, ":fac_player", "p_main_party"),
-				# (call_script, "script_give_center_to_faction_aux", "p_fort", ":fac_player"),
-				# (call_script, "script_give_center_to_lord", "p_fort", "trp_player", 0),
-				# (party_set_slot, "p_fort", slot_party_type, spt_fort),
-				# (party_set_slot, "p_fort", slot_outpost_level, 1),
-				# (rest_for_hours, 24, 5, 1), # Lumos: I don't like it much.
-				# (change_screen_return),
-			    # (enable_party, "p_fort"),
-			    # (display_message, "@Fort built!"),
-			 # (else_try),
-				# (party_slot_ge, "p_fort", slot_outpost_level, 1),
-				# (display_message, "@You have reached the fort limit!"),
-			 # (else_try),
-			    # (lt, ":gold_amount", 25000),
-		        # (display_message, "@You don't have enough money to build a fort!"),
-		     # (try_end),
-			# ]),
 			
 		 ("camp_end_outpost", [], "Return to your camp.",
 		    [(jump_to_menu, "mnu_camp")]
@@ -129,14 +104,14 @@ game_menus = [
 			
 			("outpost_upgrade", [
 			(party_slot_eq, "$g_encountered_party", slot_outpost_level, 1),
-            (assign, ":base_cost", 5000),
+            (assign, ":base_cost", 7000),
             (party_get_skill_level, ":engineer_skill", "p_main_party", skl_engineer),
             (store_mul, ":engineer_reduction", ":engineer_skill", 5), #### 5% less cost per level
             (store_div, ":cost_modifier", ":base_cost", 100), 
             (val_mul, ":cost_modifier", ":engineer_reduction"), 
             (store_sub, reg10, ":base_cost", ":cost_modifier"), 
 			], 
-				"Upgrade outpost (better patrols and defences)({reg10} denars)",
+				"Upgrade outpost (better patrols and defenses)({reg10} coins)",
 			[
 			 (store_troop_gold, ":gold_amount", "trp_player"),
 			 (try_begin),
@@ -144,8 +119,9 @@ game_menus = [
 				(troop_remove_gold, "trp_player", reg10),
 				(rest_for_hours, 8, 5, 1), # Lumos: I should try thinking of something better.
 				(party_set_slot, "$g_encountered_party", slot_outpost_level, 2),
+			    (assign, "$current_outpost", "$g_encountered_party"),  ######### NEW v3.7
 				(display_message, "@Outpost upgraded."),
-			    (call_script, "script_setup_outpost_upgraded_scene"),
+			    (call_script, "script_setup_outpost_scene"),
 				(change_screen_return),
 			 (else_try),
 				(lt, ":gold_amount", reg10),
@@ -156,7 +132,7 @@ game_menus = [
             ("outpost_to_fort", [
 			(party_slot_eq, "$g_encountered_party", slot_outpost_level, 2),
 			# (neg|party_slot_ge, "p_fort", slot_outpost_level, 1),
-            (assign, ":base_cost", 10000),
+            (assign, ":base_cost", 15000),
             (party_get_skill_level, ":engineer_skill", "p_main_party", skl_engineer),
             (store_mul, ":engineer_reduction", ":engineer_skill", 5), #### 5% less cost per level
             (store_div, ":cost_modifier", ":base_cost", 100), 
@@ -167,35 +143,38 @@ game_menus = [
 			[
 			 (store_troop_gold, ":gold_amount", "trp_player"),
 			 (try_begin),
+			 ###### NEW v3.7 - remove outpost captain and fixed some errors
 				(ge, ":gold_amount", reg10),
 				(troop_remove_gold, "trp_player", reg10),
 				(rest_for_hours, 18, 5, 1), # Lumos: I really don't like it. At all.
 				(party_set_slot, "$current_outpost", slot_outpost_level, 0),
-				(party_get_slot, ":patrol", "$current_outpost", slot_outpost_patrol),
 				(call_script, "script_party_copy", "p_temp_party", "$current_outpost"),
+				(party_set_slot, "$current_outpost", slot_outpost_patrol, 0),
+				(party_get_slot, ":patrol", "$current_outpost", slot_outpost_patrol),
 				(remove_party, "$current_outpost"),
 				(set_spawn_radius, 1),
 				(spawn_around_party, "p_main_party", "pt_fort"),
 				(assign, ":outpost_party", reg0),
-				# (disable_party, "$current_outpost"),
-				# (party_relocate_near_party, "p_fort", "p_main_party"),
+			    (try_begin),
+				  # (party_is_active, ":patrol"),
+				  (gt, ":patrol", 0),
+				    (party_set_ai_object, ":patrol", ":outpost_party"),
+				    (party_set_slot, ":outpost_party", slot_outpost_patrol, ":patrol"),
+			    (try_end),
 				(store_faction_of_party, ":fac_player", "p_main_party"), # Copy the outpost garrison into temp_party
 				(call_script, "script_give_center_to_faction_aux", ":outpost_party", ":fac_player"),
 				(call_script, "script_give_center_to_lord", ":outpost_party", "trp_player", 0),
 				(party_set_slot, ":outpost_party", slot_party_type, spt_fort),
 				(party_set_slot, ":outpost_party", slot_outpost_level, 3),
-			    # (enable_party, ":outpost_party"),
 				(call_script, "script_party_copy", ":outpost_party", "p_temp_party"), # Move the temp_party garriosn to the fort
 				(party_clear, "p_temp_party"),
 				# Lumos: Forts seem to disappear somehow, if there is no garrison.
 				(party_add_leader, ":outpost_party", "trp_fort_captain"), # That's why we add an immovable leader.
-				(party_set_slot, "$current_outpost", slot_outpost_patrol, 0),
-				(party_is_active, ":patrol"),
-				(party_set_ai_object, ":patrol", ":outpost_party"),
-				(party_set_slot, ":outpost_party", slot_outpost_patrol, ":patrol"),
+				(remove_member_from_party, "trp_outpost_captain", ":outpost_party"), 
 			    (assign, "$current_outpost", ":outpost_party"),
 				(display_message, "@Outpost upgraded!"),
 				(change_screen_return),
+			####################################
 			 (else_try),
 				(lt, ":gold_amount", reg10),
 				(display_message, "@You don't have enough money to upgrade the outpost"),
@@ -273,23 +252,27 @@ game_menus = [
 			("outpost_demolish", 
 			[
 		    (party_get_slot, ":level", "$g_encountered_party", slot_outpost_level),
-		    (store_mul, reg10, ":level", 1000),
+		    (store_mul, reg10, ":level", 2000),
 			],
 				"Demolish your outpost. ({reg10} denars)",
 	        [(store_troop_gold, ":gold_amount", "trp_player"),
 		     (try_begin),
 		        (ge, ":gold_amount", reg10),
 		        (party_slot_ge, "$g_encountered_party", slot_outpost_level, 1),
+				# (party_relocate_near_party, "p_main_party", "$g_encountered_party", 1),             
 				(rest_for_hours, 2, 5, 1), # Lumos: This is the last one.
 			    # (disable_party, "$g_encountered_party"),
 			    (display_message, "@Outpost demolished."),
 			    (party_set_slot, "$g_encountered_party", slot_outpost_level, 0),
-				(party_get_slot, ":patrol", "$g_encountered_party", slot_outpost_patrol),
 				(party_set_slot, "$g_encountered_party", slot_outpost_patrol, 0),
-				(party_is_active, ":patrol"),
-				(remove_party, ":patrol"),
 				(remove_party, "$g_encountered_party"),
 				(assign, "$current_outpost", -1),
+				########## NEW v3.7
+				(assign, "$g_outpost_count", 0),  
+				(party_get_slot, ":patrol", "$g_encountered_party", slot_outpost_patrol),
+				(party_is_active, ":patrol"),
+				(remove_party, ":patrol"),
+				##############################
 				(change_screen_return),
 		     (else_try),
 		        (lt, ":gold_amount", reg10),
@@ -414,19 +397,23 @@ game_menus = [
              
              # Setup merchants and guard captain
 			 # Lumos: I don't want to make new merchants, so I'll just use some old ones instead.
-             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_merchant),
+			 ########### NEW v3.7 - pull merchants from nearest town
+             (call_script, "script_ee_get_closest_town", "$current_town"),
+			 (assign, ":nearest_town", reg0),
+			 
+             (party_get_slot, ":spawned_troop", ":nearest_town", slot_town_merchant),
              (set_visitor, 8, ":spawned_troop"),
              #(add_troop_to_site,":spawned_troop","scn_fort",4),
-             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_armorer),
+             (party_get_slot, ":spawned_troop", ":nearest_town", slot_town_armorer),
              (set_visitor, 9, ":spawned_troop"),
-             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_weaponsmith),
+             (party_get_slot, ":spawned_troop", ":nearest_town", slot_town_weaponsmith),
              (set_visitor, 10, ":spawned_troop"),
              # (party_get_slot, ":spawned_troop", "p_fort", slot_town_elder),
              # (set_visitor, 11, ":spawned_troop"),
 			 (set_visitor, 11, "trp_fort_captain"),
-             (party_get_slot, ":spawned_troop", "p_town_1_1", slot_town_horse_merchant),
+             (party_get_slot, ":spawned_troop", ":nearest_town", slot_town_horse_merchant),
              (set_visitor, 12, ":spawned_troop"),
-             
+             #######################################################
              # Spawn some animated horses at the stables if we have a horse merchant
              (entry_point_get_position, pos1, 13),
              (set_spawn_position, pos1),
@@ -514,10 +501,10 @@ game_menus = [
 	             (set_visitor, 20, ":cavalry_id", ":cavalry_dna"),	    # guard that patrols the perimeter
 	             #(set_visitor, 20, "trp_fort_rider", ":cavalry_dna"),	    # TODO: Go back to using this type now that the patrol is working properly
 	           (try_end),
-	           (call_script, "script_set_walker_to_type", "trp_fort_walker", ":infantry_id"),
-	           (set_visitor, 30, "trp_fort_walker", ":archer_dna"),		# guard that patrols the middle walkway
-	           (set_visitor, 42, "trp_fort_walker", ":infantry_dna"),	# guards patrolling the front walls
-	           (set_visitor, 44, "trp_fort_walker", ":walker_dna"),
+	           (call_script, "script_set_walker_to_type", "trp_ee_watchman", ":infantry_id"),
+	           (set_visitor, 30, "trp_ee_watchman", ":archer_dna"),		# guard that patrols the middle walkway
+	           (set_visitor, 42, "trp_ee_watchman", ":infantry_dna"),	# guards patrolling the front walls
+	           (set_visitor, 44, "trp_ee_watchman", ":walker_dna"),
 	         (try_end),
 
              (call_script, "script_init_town_walkers"),
@@ -550,17 +537,17 @@ game_menus = [
            (try_begin),
              (call_script, "script_cf_enter_center_location_bandit_check"),
            (else_try),
-             (jump_to_menu,"mnu_town_trade"),
+             (jump_to_menu,"mnu_fort_trade"),  ########### NEW v3.7
            (try_end),
           ]),
 
-      ("fort_center_manage",[(neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
-                      (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),]
-       ,"Manage the fort.",
-       [
-           (assign, "$g_next_menu", "mnu_fort"),
-           (jump_to_menu, "mnu_center_manage"),
-        ]),
+      # ("fort_center_manage",[(neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
+                      # (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),]
+       # ,"Manage the fort.",
+       # [
+           # (assign, "$g_next_menu", "mnu_fort"),
+           # (jump_to_menu, "mnu_center_manage"),
+        # ]),
         
      ("fort_station_troops",
       [
@@ -712,9 +699,81 @@ game_menus = [
 		  
       ]
   ),
+  
+############# NEW v3.7 - fort trade
+   ("fort_trade",0,
+    "You head towards the merchants.",
+    "none",
+    [
+	],
+################
+    [
+      ("trade_with_arms_merchant",
+	  [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+		(party_slot_ge, ":nearest_town", slot_town_weaponsmith, 1)
+	  ],
+      "Trade with the arms merchant.",
+      [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+        (party_get_slot, ":merchant_troop", ":nearest_town", slot_town_weaponsmith),
+        (change_screen_trade, ":merchant_troop"),
+      ]),
+################
+      ("trade_with_armorer",
+	  [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+		(party_slot_ge, ":nearest_town", slot_town_armorer, 1)
+	  ],
+      "Trade with the armorer.",
+      [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+        (party_get_slot, ":merchant_troop", ":nearest_town", slot_town_armorer),
+        (change_screen_trade, ":merchant_troop"),
+      ]),
+################
+      ("trade_with_horse_merchant",
+	  [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+		(party_slot_ge, ":nearest_town", slot_town_horse_merchant, 1)
+	  ],
+      "Trade with the horse merchant.",
+      [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+        (party_get_slot, ":merchant_troop", ":nearest_town", slot_town_horse_merchant),
+        (change_screen_trade, ":merchant_troop"),
+      ]),
+################
+      ("trade_with_goods_merchant",
+	  [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+		(party_slot_ge, ":nearest_town", slot_town_merchant, 1)
+	  ],
+      "Trade with the goods merchant.",
+      [
+        (call_script, "script_ee_get_closest_town", "$current_town"),
+	    (assign, ":nearest_town", reg0),
+        (party_get_slot, ":merchant_troop", ":nearest_town", slot_town_merchant),
+        (change_screen_trade, ":merchant_troop"),
+      ]),
+################
+      ("back_to_fort_menu",[], "Head back.",
+       [
+           (jump_to_menu, "mnu_fort"),
+        ]),
+    ]
+  ),
+#########################
 #-## Outposts end
 ]
-
+#########################
 
 from util_wrappers import *
 from util_common import *
