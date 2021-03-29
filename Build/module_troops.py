@@ -59193,7 +59193,7 @@ troops = [
     
     itm_raf_one_handed_axe_a
    ],
-   def_attrib|level(11),wp(75),knows_common,man_face_young_1, man_face_old_2
+   def_attrib|level(11),wp(100),knows_common,man_face_young_1, man_face_old_2
  ],
    
  ["fort_rider","Patrol","Guards",tf_mounted|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_horse|tf_guarantee_gloves|tf_guarantee_shield,0,0,fac_player_faction,
@@ -59228,7 +59228,7 @@ troops = [
     itm_raf_one_handed_axe_a,
    itm_saddle_horse
    ],
-   def_attrib|level(11),wp(75),knows_common|knows_riding_2,man_face_young_1, man_face_old_2
+   def_attrib|level(14),wp(120),knows_common|knows_riding_2,man_face_young_1, man_face_old_2
  ],
    
  ["fort_slave","Slave","Slaves",0,0,0,fac_commoners,

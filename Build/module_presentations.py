@@ -13280,25 +13280,40 @@ presentations = [
           (try_end),
         (try_end),
 
+        # (assign, ":num_of_heros", 0),
+        # (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
+        # (try_for_range, ":i_stack", 1, ":num_stacks"),
+          # (party_stack_get_troop_id,":stack_troop","p_main_party",":i_stack"),
+          # (troop_is_hero,":stack_troop"),
+          ########### (call_script, "script_cf_troop_can_autoloot", ":stack_troop"), #SB : change this range, allow spoues
+          # (is_between, ":stack_troop", heroes_begin, heroes_end), #SB : change this range, allow spoues
+          # (this_or_next|troop_slot_eq, "trp_player", slot_troop_spouse, ":stack_troop"),
+          # (this_or_next|troop_slot_eq, ":stack_troop", slot_troop_spouse, "trp_player"),
+          # (troop_slot_eq, ":stack_troop", slot_troop_occupation, slto_player_companion),
+		  # (assign, ":trp_slot_prsnt_no", ":num_of_heros"),
+          # (val_add, ":num_of_heros", 1),
+          # (troop_slot_eq, "trp_temp_array_a", ":trp_slot_prsnt_no", ":object"),
+          # (troop_get_slot, ":cur_troop", "trp_temp_array_b", ":trp_slot_prsnt_no"),
+          # (assign, "$lord_selected", ":cur_troop"),
+          # (assign, "$temp", ":cur_troop"),
+          # (set_player_troop, ":cur_troop"), # SB : set troop here, restore on exit
+          # (start_presentation, "prsnt_dplmc_autoloot_upgrade_management"),
+        # (try_end),
+		
+		############# NEW v3.7 - copied from vanilla 1257
         (assign, ":num_of_heros", 0),
         (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
-        (try_for_range, ":i_stack", 1, ":num_stacks"),
+        (try_for_range, ":i_stack", 0, ":num_stacks"),
           (party_stack_get_troop_id,":stack_troop","p_main_party",":i_stack"),
-          (troop_is_hero,":stack_troop"),
-          # (call_script, "script_cf_troop_can_autoloot", ":stack_troop"), #SB : change this range, allow spoues
-          (is_between, ":stack_troop", heroes_begin, heroes_end), #SB : change this range, allow spoues
-          (this_or_next|troop_slot_eq, "trp_player", slot_troop_spouse, ":stack_troop"),
-          (this_or_next|troop_slot_eq, ":stack_troop", slot_troop_spouse, "trp_player"),
-          (troop_slot_eq, ":stack_troop", slot_troop_occupation, slto_player_companion),
-		  (assign, ":trp_slot_prsnt_no", ":num_of_heros"),
+          (is_between, ":stack_troop", companions_begin, companions_end),
+          (assign, ":trp_slot_prsnt_no", ":num_of_heros"),
           (val_add, ":num_of_heros", 1),
           (troop_slot_eq, "trp_temp_array_a", ":trp_slot_prsnt_no", ":object"),
           (troop_get_slot, ":cur_troop", "trp_temp_array_b", ":trp_slot_prsnt_no"),
-          (assign, "$lord_selected", ":cur_troop"),
           (assign, "$temp", ":cur_troop"),
-          (set_player_troop, ":cur_troop"), # SB : set troop here, restore on exit
           (start_presentation, "prsnt_dplmc_autoloot_upgrade_management"),
         (try_end),
+		##########################
     ]),
   ]),
 

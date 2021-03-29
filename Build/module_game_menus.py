@@ -8856,6 +8856,9 @@ game_menus = [ #
                   (display_log_message, "@{!}{s17}"),
                   (jump_to_menu, "mnu_enemy_died_from_wounds"),
                   (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),   
+                  ########### NEW v3.7 - fixes lords parties not disappearing from the map
+                  (call_script, "script_remove_dead_lord_from_game", ":stack_troop"), 
+                  ###########
                   (assign, ":break", 1),
               (else_try),
                 (neg|faction_slot_eq, ":defeated_faction", slot_faction_leader, ":stack_troop"), 
@@ -8866,6 +8869,9 @@ game_menus = [ #
                   (display_log_message, "@{!}{s17}"),
                   (jump_to_menu, "mnu_enemy_died_from_wounds"),
                   (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),  
+                  ########### NEW v3.7 - fixes lords parties not disappearing from the map
+                  (call_script, "script_remove_dead_lord_from_game", ":stack_troop"), 
+                  ###########
                   (assign, ":break", 1),
               (else_try),
                 (call_script, "script_remove_troop_from_prison", ":stack_troop"),

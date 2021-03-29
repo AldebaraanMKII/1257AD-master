@@ -6446,7 +6446,7 @@ dialogs = [
 []
 ],
 
-[anyone|plyr, "dplmc_patrol_garrison_confirm", [(str_store_party_name, s5, "$diplomacy_var"),], "Thank you.", "close_window",
+[anyone|plyr, "dplmc_patrol_garrison_confirm", [], "Thank you.", "close_window",
 [
 #SB : quickstring, fix name
 (party_set_name, "$g_encountered_party", "str_s5_transfer"),

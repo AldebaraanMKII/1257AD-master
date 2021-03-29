@@ -1293,8 +1293,8 @@ auxiliary_player_check = (5, 0, 0,
           (eq, ":player_team", ":agent_team"),
           (eq, ":player_division", ":agent_division"),
           (agent_get_troop_id, ":troop_id", ":agent"),
-          # (neg|is_between, ":troop_id", companions_begin, lords_end), #just in case
-          (neg|is_between, ":troop_id", lords_begin, lords_end), ### NEW v1.9 - Companions now included
+          (neg|is_between, ":troop_id", companions_begin, lords_end), #just in case ######## NEW v3.7 reverted this because of bugs
+          # (neg|is_between, ":troop_id", lords_begin, lords_end), ### NEW v1.9 - Companions now included
           
           (set_player_troop, ":troop_id"),
           (store_agent_hit_points, ":hp", ":agent",1),

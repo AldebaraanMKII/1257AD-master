@@ -140,6 +140,35 @@ slot_agent_speed = 30
 
 sp_agent_shield_bash_timer = 50
     
+#agent slots:
+slot_possessed = 100
+slot_real_troop = 101
+############skirmishers
+#agent slots:
+slot_agent_scripted_mode = 104
+slot_agent_rotation = 105
+slot_agent_direction = 106
+slot_agent_banner = 107
+#team slots:
+team_slot_direction = 200 #rotate to which direction sets
+#party slots:
+#feudal lance agent slot
+slot_index_value = 102 
+#################################################### VOLLEY FIRE
+slot_agent_volley_fire             = 33
+slot_team_d0_order_volley     = 10 #plus 8 more for the other divisions
+
+from header_triggers import *
+key_for_volley   = key_f12
+#####################################################
+
+slot_agent_horse_rider = 45
+slot_agent_new_division = 46
+
+######################## 
+MODDED2x_AIAgentResetTimer = 30
+MODDED2x_AIAgentResetNow = 29
+########################
 ########################################################
 ##  FACTION SLOTS          #############################
 ########################################################
@@ -2512,19 +2541,6 @@ status_moving = 0
 status_stationed = 1
 status_migrating = 2
 
-#agent slots:
-slot_possessed = 100
-slot_real_troop = 101
-############skirmishers
-#agent slots:
-slot_agent_scripted_mode = 104
-slot_agent_rotation = 105
-slot_agent_direction = 106
-slot_agent_banner = 107
-#team slots:
-team_slot_direction = 200 #rotate to which direction sets
-#party slots:
-
 
 ##recruitment types
 town_controled = 0
@@ -2627,8 +2643,7 @@ spt_mongol_party = 31
 manor_troop_taxes_money = 0
 manor_troop_taxes_goods = 1
 
-#feudal lance agent slot
-slot_index_value = 102 
+
 #feudal lance constants
 finn_culture_start = trp_finn_village_recruit
 finn_culture_end = trp_mazovian_town_recruit
@@ -2784,14 +2799,6 @@ key_for_shield    = key_f8
 
 
 
-#################################################### VOLLEY FIRE
-slot_agent_volley_fire             = 33
-slot_team_d0_order_volley     = 10 #plus 8 more for the other divisions
-
-from header_triggers import *
-key_for_volley   = key_f12
-#####################################################
-
 
 
 
@@ -2808,11 +2815,6 @@ key_for_volley   = key_f12
 
 
 
-
-
-
-slot_agent_horse_rider = 45
-slot_agent_new_division = 46
 
 
 
@@ -2907,12 +2909,6 @@ bounties_end   = "qst_kill_local_merchant"
 # mercenary_chapterhouse_troop_bonus              = 8
 # mercenary_chapterhouse_hiring_discount          = 40 # %
 
-
-
-######################## 
-MODDED2x_AIAgentResetTimer = 30
-MODDED2x_AIAgentResetNow = 29
-########################
 
 
 ######################## NEW IMPROVEMENT CONSTANTS

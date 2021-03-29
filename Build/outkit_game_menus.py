@@ -94,12 +94,21 @@ game_menus = [
 	("outpost", 0, "You pass across the barricades and enter the outpost. ^^ What do you want to do?", "none", [],
          [
 			("outpost_walk_around", [], 
-				"Walk around",
+				"Walk around.",
 		    [
-             (party_get_slot, ":scene", "$g_encountered_party", slot_outpost_scene),
-             (jump_to_scene, ":scene"),
-		     (set_jump_mission, "mt_ai_training"),
+             # (party_get_slot, ":scene", "$g_encountered_party", slot_outpost_scene),
+			 ######## NEW v3.7
+			 (call_script, "script_setup_outpost_scene"), 
+			 (assign, ":fort_scene", reg1),
+             (modify_visitors_at_site, ":fort_scene"),
+             (reset_visitors),
+             (assign, "$g_mt_mode", tcm_default),
+		     # (set_jump_mission, "mt_ai_training"),
+		     (set_jump_mission, "mt_fort_visit"),
+             (set_jump_entry, 1),
+             (jump_to_scene, reg1),
 			 (change_screen_mission),
+			 ################################
 		    ]),
 			
 			("outpost_upgrade", [
@@ -182,7 +191,7 @@ game_menus = [
 		    ]),
 				
 			("outpost_enlist_patrol", [(party_slot_eq, "$g_encountered_party", slot_outpost_patrol, 0)], 
-				"Enlist a patrol (700 denars)",
+				"Enlist a patrol (700 coins)",
 	        [(store_troop_gold, ":gold_amount", "trp_player"),
 		     (try_begin),
 		        (party_slot_ge, "$g_encountered_party", slot_outpost_level, 1),
@@ -231,7 +240,7 @@ game_menus = [
 			  (str_store_string_reg, s0, ":level"),
 			  (store_mul, reg0, ":level", reg10),
 			  ],
-				"Initiate {s0} training for the patrol ({reg0} denars).",
+				"Initiate {s0} training for the patrol ({reg0} coins).",
 	        [(store_troop_gold, ":gold_amount", "trp_player"),
 		     (try_begin),
 		        (party_slot_ge, "$g_encountered_party", slot_outpost_level, 1),
@@ -254,7 +263,7 @@ game_menus = [
 		    (party_get_slot, ":level", "$g_encountered_party", slot_outpost_level),
 		    (store_mul, reg10, ":level", 2000),
 			],
-				"Demolish your outpost. ({reg10} denars)",
+				"Demolish your outpost. ({reg10} coins)",
 	        [(store_troop_gold, ":gold_amount", "trp_player"),
 		     (try_begin),
 		        (ge, ":gold_amount", reg10),
@@ -579,7 +588,7 @@ game_menus = [
              (party_get_num_companions, ":num_men", "p_main_party"),
              (store_div, reg1, ":num_men", 4),
              (val_add, reg1, 1),
-             (str_store_string, s1, "@ ({reg1} denars per night)"),
+             (str_store_string, s1, "@ ({reg1} coins per night)"),
              (store_troop_gold, ":gold", "trp_player"),
              (lt, ":gold", reg1),
              (assign, ":can_rest", 0),

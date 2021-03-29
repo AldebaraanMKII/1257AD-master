@@ -81,84 +81,7 @@ scripts = [
         (store_troop_faction, ":commander_faction", "$enlisted_lord"),
 		
         (assign, "$players_kingdom", ":commander_faction"),  #### NEW v2.1 - player is part of faction so now he gets to see those message colors related to the faction
-       
-	    ########### NEW v3.5 - commented this because when player joined the faction it became hostile with all other kingdoms. Also, there`s no need to change the relations since the player inherits them from the faction
-        # (try_begin),
-            # (store_relation, ":player_relation", ":commander_faction", "$players_kingdom"),
-            # (lt, ":player_relation", 10),
-            # (call_script, "script_set_player_relation_with_faction", ":commander_faction", 10),
-        # (try_end),
-		
-	    # (try_for_range, ":cur_faction", npc_kingdoms_begin, kingdoms_end),####### NEW v3.0-KOMKE npc_kingdoms_begin instead of kingdoms_begin
-           # (neq, ":commander_faction", ":cur_faction"),
-           ####### (neq, "$players_kingdom", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
-           # (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
-           # (store_relation, ":player_relation", ":cur_faction", "$players_kingdom"),
-           # (ge, ":player_relation", 0),
-           # (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
-        # (try_end),        
-        #################################
-        #adds standard issued equipment
-        # (try_begin),
-            # (neg|faction_slot_eq, ":commander_faction", slot_faction_freelancer_troop, 0),
-            # (faction_get_slot, "$player_cur_troop", ":commander_faction", slot_faction_freelancer_troop),
-        # (else_try),
-            # (faction_get_slot, "$player_cur_troop", ":commander_faction", slot_faction_tier_1_troop),
-        # (try_end),        
-
-####### NEW v3.0-KOMKE START-
-
-# ############ NEW v2.8 - player renown affects which troop he starts as
-#         (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
-#         (troop_get_slot, ":lord_culture", "$g_talk_troop", slot_troop_cur_culture), ############ NEW v2.8 - troop culture is used instead
-#         (try_begin),
-#           (is_between, ":lord_culture", cultures_begin, cultures_end), ############ NEW v2.8 - is troop culture is not one of those, skip to next else try
-#           (try_begin),
-#             (ge, ":player_renown", 300),
-#               (faction_get_slot, "$player_cur_troop", ":lord_culture", slot_faction_tier_5_troop),
-#           (else_try),
-#             (ge, ":player_renown", 200),
-#               (faction_get_slot, "$player_cur_troop", ":lord_culture", slot_faction_tier_4_troop),
-#           (else_try),
-#             (ge, ":player_renown", 100),
-#               (faction_get_slot, "$player_cur_troop", ":lord_culture", slot_faction_tier_3_troop),
-#           (else_try),
-#             (ge, ":player_renown", 50),
-#               (faction_get_slot, "$player_cur_troop", ":lord_culture", slot_faction_tier_2_troop),
-# 		  ####################################	
-#           (else_try),
-#             (neg|faction_slot_eq, ":lord_culture", slot_faction_freelancer_troop, 0),
-#             (faction_get_slot, "$player_cur_troop", ":lord_culture", slot_faction_freelancer_troop),
-#           (else_try),
-#             (faction_get_slot, "$player_cur_troop", ":lord_culture", slot_faction_tier_1_troop),
-#           (try_end),
-# ############ NEW v2.8 - gets faction culture instead
-#         (else_try),
-#           (neg|is_between, ":lord_culture", cultures_begin, cultures_end),
-#           (faction_get_slot, ":faction_culture", "$g_talk_troop_faction", slot_faction_culture), 
-#           (try_begin),
-#             (ge, ":player_renown", 300),
-#               (faction_get_slot, "$player_cur_troop", ":faction_culture", slot_faction_tier_5_troop),
-#           (else_try),
-#             (ge, ":player_renown", 200),
-#               (faction_get_slot, "$player_cur_troop", ":faction_culture", slot_faction_tier_4_troop),
-#           (else_try),
-#             (ge, ":player_renown", 100),
-#               (faction_get_slot, "$player_cur_troop", ":faction_culture", slot_faction_tier_3_troop),
-#           (else_try),
-#             (ge, ":player_renown", 50),
-#               (faction_get_slot, "$player_cur_troop", ":faction_culture", slot_faction_tier_2_troop),
-# ################################################	
-#           (else_try),
-#             (neg|faction_slot_eq, ":faction_culture", slot_faction_freelancer_troop, 0),
-#             (faction_get_slot, "$player_cur_troop", ":faction_culture", slot_faction_freelancer_troop),
-#           (else_try),
-#             (faction_get_slot, "$player_cur_troop", ":faction_culture", slot_faction_tier_1_troop),
-#           (try_end),
-#         (try_end),
-# ################################################
-
-
+        (troop_set_faction, "trp_player", ":commander_faction"),   ########## NEW v3.7 - change player to commander's faction thus eliminating the need to adjust the player's faction relations
 
 ####### NEW v3.0-KOMKE END-
 
@@ -228,7 +151,8 @@ scripts = [
             # (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
         # (try_end),
 		
-        (assign, "$players_kingdom", fac_player_supporters_faction),  #### NEW v2.1 - player no longer part of faction
+        (assign, "$players_kingdom", "fac_player_faction"),  #### NEW v2.1 - player no longer part of faction
+		(troop_set_faction, "trp_player", "fac_player_faction"),   ########## NEW v3.7 - change player to commander's faction thus eliminating the need to adjust the player's faction relations
         # (call_script, "script_freelancer_unequip_troop", "$player_cur_troop"),        
         # (troop_equip_items, "trp_player"),
         
@@ -283,14 +207,20 @@ scripts = [
    [
         #removes faction relation given at enlist
         (store_troop_faction, ":commander_faction", "$enlisted_lord"),
-        (try_for_range, ":cur_faction", npc_kingdoms_begin, kingdoms_end),####### NEW v3.0-KOMKE npc_kingdoms_begin instead of kingdoms_begin
-            (neq, ":commander_faction", ":cur_faction"),
-            # (neq, "$players_kingdom", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
-            (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
-            (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
-        (try_end),
-
-        (assign, "$players_kingdom", 0),  #### NEW v2.1 - player no longer part of faction
+		########### NEW v3.7 - commented this because when player joined the faction it became hostile with all other kingdoms. Also, there`s no need to change the relations since the player inherits them from the faction
+        # (try_for_range, ":cur_faction", npc_kingdoms_begin, kingdoms_end),####### NEW v3.0-KOMKE npc_kingdoms_begin instead of kingdoms_begin
+            # (neq, ":commander_faction", ":cur_faction"),
+            ###### (neq, "$players_kingdom", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
+            # (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
+            # (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
+        # (try_end),
+        ######################
+        # (assign, "$players_kingdom", 0),  #### NEW v2.1 - player no longer part of faction
+        # (assign, "$players_kingdom", fac_player_supporters_faction), 
+		#### NEW v3.7 - player no longer part of faction
+		(assign, "$players_kingdom", "fac_player_faction"),  
+		(troop_set_faction, "trp_player", "fac_player_faction"),   
+        ####################
         (assign, "$freelancer_state", 2),
         (call_script, "script_freelancer_detach_party"),
         (call_script, "script_party_restore"),
@@ -335,19 +265,23 @@ scripts = [
         
         #set faction relations to allow player to join battles
         (store_troop_faction, ":commander_faction", "$enlisted_lord"),
-        (try_for_range, ":cur_faction", npc_kingdoms_begin, kingdoms_end),####### NEW v3.0-KOMKE npc_kingdoms_begin instead of kingdoms_begin
-           (neq, ":commander_faction", ":cur_faction"),
-           # (neq, "$players_kingdom", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
-           (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
-           (call_script, "script_set_player_relation_with_faction", ":cur_faction", -5),
-        (try_end),    
-        (try_begin),
-            (store_relation, ":player_relation", ":commander_faction", "$players_kingdom"),
-            (lt, ":player_relation", 5),
-            (call_script, "script_set_player_relation_with_faction", ":commander_faction", 5),
-        (try_end),
+        # (try_for_range, ":cur_faction", npc_kingdoms_begin, kingdoms_end),####### NEW v3.0-KOMKE npc_kingdoms_begin instead of kingdoms_begin
+           # (neq, ":commander_faction", ":cur_faction"),
+           ######## (neq, "$players_kingdom", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
+           # (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
+           # (call_script, "script_set_player_relation_with_faction", ":cur_faction", -5),
+        # (try_end),    
+        # (try_begin),
+            # (store_relation, ":player_relation", ":commander_faction", "$players_kingdom"),
+            # (lt, ":player_relation", 5),
+            # (call_script, "script_set_player_relation_with_faction", ":commander_faction", 5),
+        # (try_end),
 
-        (assign, "$players_kingdom", ":commander_faction"),  #### NEW v2.1 - player returns to faction
+        # (assign, "$players_kingdom", ":commander_faction"),  #### NEW v2.1 - player returns to faction
+		#### NEW v3.7 
+		(assign, "$players_kingdom", ":commander_faction"),  
+		(troop_set_faction, "trp_player", ":commander_faction"),   
+        ####################
 		
         (call_script, "script_freelancer_attach_party"),
         (display_message, "@You have rejoined your commander!"),         
@@ -380,7 +314,15 @@ scripts = [
     (call_script, "script_get_desert_troops"),
     
     #decreases player relation to his commander and faction
-    (call_script, "script_change_player_relation_with_troop", "$enlisted_lord", -10),
+    (call_script, "script_change_player_relation_with_troop", "$enlisted_lord", -20),
+    
+    # (assign, "$players_kingdom", 0),  #### NEW v2.1 - player leaves faction
+    (assign, "$freelancer_state", 0),
+	
+	#### NEW v3.7 
+	(assign, "$players_kingdom", "fac_player_faction"),  
+	(troop_set_faction, "trp_player", "fac_player_faction"),   
+    ####################
     
     (store_troop_faction, ":commander_faction", "$enlisted_lord"),
     (try_begin),
@@ -392,9 +334,6 @@ scripts = [
         (val_add, ":mod_relation", 5),
         (call_script, "script_change_player_relation_with_faction_ex", ":commander_faction", ":mod_relation"),
     (try_end),
-    
-    (assign, "$players_kingdom", 0),  #### NEW v2.1 - player leaves faction
-    (assign, "$freelancer_state", 0),
     
     (str_store_troop_name_link, s13, "$enlisted_lord"),
     (str_store_faction_name_link, s14, ":commander_faction"),
@@ -413,11 +352,17 @@ scripts = [
         (call_script, "script_freelancer_detach_party"),
     (try_end),
     
+	#### NEW v3.7 
+	(assign, "$players_kingdom", "fac_player_faction"),  
+	(troop_set_faction, "trp_player", "fac_player_faction"),   
+    ####################
+	
     (store_troop_faction, ":commander_faction", "$enlisted_lord"),
     (call_script, "script_change_player_relation_with_faction_ex", ":commander_faction", -10), 
-    (call_script, "script_change_player_relation_with_troop", "$enlisted_lord", -10),
+    (call_script, "script_change_player_relation_with_troop", "$enlisted_lord", -15),
     (call_script, "script_change_player_honor", -20),
-    (assign, "$players_kingdom", 0),  #### NEW v2.1 - player leaves faction
+    # (assign, "$players_kingdom", 0),  #### NEW v2.1 - player leaves faction
+	
     
     (faction_set_slot, ":commander_faction", slot_faction_freelancer_troop, 0),
     (try_begin),
@@ -463,15 +408,19 @@ scripts = [
         (try_end),
 
         #removes faction relation given at enlist
+	    #### NEW v3.7 
+	    (assign, "$players_kingdom", "fac_player_faction"),  
+	    (troop_set_faction, "trp_player", "fac_player_faction"),   
+        ####################
         (store_troop_faction, ":commander_faction", "$enlisted_lord"),
-        (try_for_range, ":cur_faction", npc_kingdoms_begin, kingdoms_end),####### NEW v3.0-KOMKE npc_kingdoms_begin instead of kingdoms_begin
-            (neq, ":commander_faction", ":cur_faction"),
-            # (neq, "$players_kingdom", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
-            (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
-            (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
-        (try_end),
+        # (try_for_range, ":cur_faction", npc_kingdoms_begin, kingdoms_end),####### NEW v3.0-KOMKE npc_kingdoms_begin instead of kingdoms_begin
+            # (neq, ":commander_faction", ":cur_faction"),
+            #########(neq, "$players_kingdom", ":cur_faction"),####### NEW v2.9-KOMKE don't change relation with player's kingdom
+            # (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),
+            # (call_script, "script_set_player_relation_with_faction", ":cur_faction", 0),
+        # (try_end),
 
-        (assign, "$players_kingdom", 0),  #### NEW v2.1 - player no longer part of faction
+        # (assign, "$players_kingdom", 0),  #### NEW v2.1 - player no longer part of faction
 			
         (call_script, "script_freelancer_detach_party"),
         (call_script, "script_party_restore"),
