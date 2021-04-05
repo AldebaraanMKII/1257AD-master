@@ -142,7 +142,7 @@ parties = [
     ("town_10_6", "Aix-en-Provence", icon_french_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-60.97), scale_f(-34.57)), []),
     ("town_10_7", "Reims", icon_french_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-70.38), scale_f(13.31)), [], 10),
 
-    ("town_11_1", "Niðarós", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-18.54), scale_f(137.69)), []),
+    ("town_11_1", "Niðarós", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-25.54), scale_f(130.69)), []),
     ("town_11_2", "Biǫrgyn", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-58.81), scale_f(101.97)), []),
     ("town_11_3", "Ásló", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-22.79), scale_f(99.85)), []),
 
@@ -695,7 +695,7 @@ parties = [
     ("village_11_9", "Konungahella", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.49), scale_f(87.44)), [], 10),
     ("village_11_10", "Suðreyjar", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-141.33), scale_f(85.08)), [], 10),
     ("village_11_11", "Orkneyjar", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-115.70), scale_f(93.06)), [], 10),
-    ("village_11_12", "Steinker", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-25.54), scale_f(130.69)), [], 10),
+    ("village_11_12", "Steinker", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-18.54), scale_f(137.69)), [], 10),
  
     ("village_12_1", "Inverness", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-183.72, 119.72), [], 10),
     ("village_12_2", "Oban", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-198.09, 107.45), [], 10),

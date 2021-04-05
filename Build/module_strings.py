@@ -9697,7 +9697,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("faction_language_bulgarian", "Bulgarian"),
 ("faction_language_rus", "Rus"),
 ("faction_language_danish", "Danish"),
-("faction_language_norwegian", "Nowergian"),
+("faction_language_norwegian", "Norwegian"),
 ("faction_language_swedish", "Swedish"),
 ("faction_language_baltic", "Baltic"),
 ("faction_language_arab", "Arabic"),
