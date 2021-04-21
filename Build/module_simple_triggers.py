@@ -1265,7 +1265,8 @@ simple_triggers = [
      ######(assign, "$g_give_advantage_to_original_faction", 1),
  
      (store_faction_of_troop, ":orig_faction", ":troop_no"),
-     (call_script, "script_lord_find_alternative_faction", ":troop_no"),
+     # (call_script, "script_lord_find_alternative_faction", ":troop_no"),
+     (call_script, "script_ee_lord_find_faction_to_defect", ":troop_no"),  ####### NEW v3.7
      (assign, ":new_faction", reg0),            
      (assign, "$g_give_advantage_to_original_faction", 0),
      (try_begin),

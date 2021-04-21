@@ -31977,6 +31977,20 @@ game_menus = [ #
          (call_script, "script_get_random_equipment_type_from_troop_by_culture", ":cur_companion", ":culture"), 
        (try_end),
 	   ]),
+	   #############################################
+       ("debug_options2_3",[], "Update and test belligerent drunks.",
+       [
+          (call_script, "script_update_other_taverngoers"), 
+          (try_for_range, ":belligerent_drunk_tavern", towns_begin, towns_end),
+            (party_slot_ge, ":belligerent_drunk_tavern", slot_center_tavern_troop, 1),
+              (party_get_slot, ":troop", ":belligerent_drunk_tavern", slot_center_tavern_troop),
+              (str_store_party_name_link, s40, ":belligerent_drunk_tavern"),
+              (str_store_troop_name, s41, ":troop"),
+              (display_message, "@{s40} has {s41} as belligerent drunk."),
+          (try_end),
+       ]
+       ),
+	   #############################################
 	   #######################################
        ("debug_options2_99",[], "Go back.",
        [
