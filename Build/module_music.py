@@ -155,10 +155,10 @@ tracks = [
   ("NewBattle10", "17-warrior-march.mp3", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
   ("NewBattle11", "30-soldiers-chant.mp3", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
   ("NewBattle12", "31-mobilize.mp3", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
-  ("NewBattle13", "new_battle_3.mp3", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
-  ("NewBattle14", "new_battle_4.mp3", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
-  ("NewBattle15", "new_battle_5.mp3", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all|mtf_sit_siege, 0),
-  ("NewBattle16", "new_battle_6.mp3", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
+  ("NewBattle13", "new_battle_3.ogg", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
+  ("NewBattle14", "new_battle_4.ogg", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
+  ("NewBattle15", "new_battle_5.ogg", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all|mtf_sit_siege, 0),
+  ("NewBattle16", "new_battle_6.ogg", mtf_module_track|mtf_sit_fight|mtf_sit_ambushed|mtf_culture_all, 0),
   
   ("NewBattle17", "siege_4.mp3", mtf_module_track|mtf_sit_siege, 0),
   

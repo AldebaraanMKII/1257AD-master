@@ -7649,11 +7649,11 @@ simple_triggers = [
  (val_add, "$g_misc_diplomacy_rate_hours_passed", 0.3*100), ######### trigger rate x 100 for rounding values
  (try_begin),
    (store_mul, ":diplomacy_rate", "$g_misc_faction_diplomacy_rate", 100),  ######### simulates a float number 
-   (val_div, ":diplomacy_rate", 73),  ######### 43 factions
+   (val_div, ":diplomacy_rate", 73),  ######### 43 + 30 factions
    (ge, "$g_misc_diplomacy_rate_hours_passed", ":diplomacy_rate"),
      (assign, "$g_misc_diplomacy_rate_hours_passed", 0),
       ####(display_message, "@Executing Simple Trigger 145"),
-     (call_script, "script_randomly_start_war_peace_new", 1),
+     # (call_script, "script_randomly_start_war_peace_new", 1), 
      (store_sub, ":kingdoms_end", kingdoms_end, 1),
      (try_begin),
        (ge, "$g_diplo_kingdom", ":kingdoms_end"),
@@ -7668,6 +7668,7 @@ simple_triggers = [
      (else_try),
        (val_add, "$g_diplo_kingdom", 1),
      (try_end),      
+     (call_script, "script_randomly_start_war_peace_new", 1),  ######### NEW v3.7
  (try_end),
 ]),
 ##############################################################
