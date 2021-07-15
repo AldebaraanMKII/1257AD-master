@@ -31625,7 +31625,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (str_store_string, s4, s50),
    (setup_quest_text, "$random_quest_no"),
    (str_store_string, s2, "@{s9} from {s10} asked you to hunt down a fugitive named {s4}. He is currently believed to be at {s3}."),
-   (store_random_in_range, "$g_random_fugitive_1", 1, 10),
+   # (store_random_in_range, "$g_random_fugitive_1", 1, 10),
+   (store_random_in_range, "$g_random_fugitive_1", 1, 11), ##### NEW v3.8
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_1", 1),
@@ -31691,7 +31692,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (str_store_string, s4, s50),
    (setup_quest_text, "$random_quest_no"),
    (str_store_string, s2, "@{s9} from {s10} asked you to hunt down a fugitive named {s4}. He is currently believed to be at {s3}."),
-   (store_random_in_range, "$g_random_fugitive_2", 1, 10),
+   # (store_random_in_range, "$g_random_fugitive_1", 1, 10),
+   (store_random_in_range, "$g_random_fugitive_1", 1, 11), ##### NEW v3.8
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_2", 1),
@@ -31756,7 +31758,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (str_store_string, s4, s50),
    (setup_quest_text, "$random_quest_no"),
    (str_store_string, s2, "@{s9} from {s10} asked you to hunt down a fugitive named {s4}. He is currently believed to be at {s3}."),
-   (store_random_in_range, "$g_random_fugitive_3", 1, 10),
+   # (store_random_in_range, "$g_random_fugitive_1", 1, 10),
+   (store_random_in_range, "$g_random_fugitive_1", 1, 11), ##### NEW v3.8
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_3", 1),
@@ -31821,7 +31824,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (str_store_string, s4, s50),
    (setup_quest_text, "$random_quest_no"),
    (str_store_string, s2, "@{s9} from {s10} asked you to hunt down a fugitive named {s4}. He is currently believed to be at {s3}."),
-   (store_random_in_range, "$g_random_fugitive_4", 1, 10),
+   # (store_random_in_range, "$g_random_fugitive_1", 1, 10),
+   (store_random_in_range, "$g_random_fugitive_1", 1, 11), ##### NEW v3.8
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_4", 1),
@@ -31886,7 +31890,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (str_store_string, s4, s50),
    (setup_quest_text, "$random_quest_no"),
    (str_store_string, s2, "@{s9} from {s10} asked you to hunt down a fugitive named {s4}. He is currently believed to be at {s3}."),
-   (store_random_in_range, "$g_random_fugitive_5", 1, 10),
+   # (store_random_in_range, "$g_random_fugitive_1", 1, 10),
+   (store_random_in_range, "$g_random_fugitive_1", 1, 11), ##### NEW v3.8
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_5", 1),
@@ -31951,7 +31956,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (str_store_string, s4, s50),
    (setup_quest_text, "$random_quest_no"),
    (str_store_string, s2, "@{s9} from {s10} asked you to hunt down a fugitive named {s4}. He is currently believed to be at {s3}."),
-   (store_random_in_range, "$g_random_fugitive_6", 1, 10),
+   # (store_random_in_range, "$g_random_fugitive_1", 1, 10),
+   (store_random_in_range, "$g_random_fugitive_1", 1, 11), ##### NEW v3.8
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_6", 1),
