@@ -278,9 +278,14 @@ game_menus = [
 				(assign, "$current_outpost", -1),
 				########## NEW v3.7
 				(assign, "$g_outpost_count", 0),  
-				(party_get_slot, ":patrol", "$g_encountered_party", slot_outpost_patrol),
-				(party_is_active, ":patrol"),
-				(remove_party, ":patrol"),
+				############ NEW v3.8 - not player
+		        (try_begin),
+				  (party_slot_ge, "$g_encountered_party", slot_outpost_patrol, 1),  
+				  (party_get_slot, ":patrol", "$g_encountered_party", slot_outpost_patrol),
+				  (party_is_active, ":patrol"),
+				  (remove_party, ":patrol"),
+		        (try_end),
+				############
 				##############################
 				(change_screen_return),
 		     (else_try),

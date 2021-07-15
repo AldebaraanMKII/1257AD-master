@@ -652,22 +652,23 @@ scripts = [
         (store_character_level, ":player_level", "trp_player"),
         (try_begin),
             (gt, ":upgrade_troop", 1), #if there is an upgrade up the troop tree
-            # (call_script, "script_game_get_upgrade_xp", ":troop_no"),######### NEW v3.0-KOMKE replaced this call with code below
-            (store_character_level, ":troop_level", ":upgrade_troop"),
-            (val_sub, ":troop_level", 1),
-            (troop_get_slot, ":troop_experience", "trp_temp_array_c", ":troop_level"),
-            (try_begin),
-                (gt, ":troop_level", ":player_level"),## if troop to upgrade level > player level
-                (troop_get_xp, ":player_experience", "trp_player"),
-                (store_sub, ":needed_upgrade_xp", ":troop_experience", ":player_experience"),## experience is the difference
-                (assign, reg0, ":needed_upgrade_xp"),
-            (else_try),
-                (store_character_level, ":enlist_level", ":troop_no"),
-                (val_sub, ":enlist_level", 1),
-                (troop_get_slot, ":enlist_experience", "trp_temp_array_c", ":enlist_level"),
-                (store_sub, ":needed_upgrade_xp", ":troop_experience", ":enlist_experience"),## else substract upgrade troop exp - enlisted troop exp
-                (assign, reg0, ":needed_upgrade_xp"),
-            (try_end),
+            (call_script, "script_game_get_upgrade_xp", ":troop_no"),######### NEW v3.0-KOMKE replaced this call with code below
+            # (val_div, reg0, 5),
+            # (store_character_level, ":troop_level", ":upgrade_troop"),
+            # (val_sub, ":troop_level", 1),
+            # (troop_get_slot, ":troop_experience", "trp_temp_array_c", ":troop_level"),
+            # (try_begin),
+                # (gt, ":troop_level", ":player_level"),## if troop to upgrade level > player level
+                # (troop_get_xp, ":player_experience", "trp_player"),
+                # (store_sub, ":needed_upgrade_xp", ":troop_experience", ":player_experience"),## experience is the difference
+                # (assign, reg0, ":needed_upgrade_xp"),
+            # (else_try),
+                # (store_character_level, ":enlist_level", ":troop_no"),
+                # (val_sub, ":enlist_level", 1),
+                # (troop_get_slot, ":enlist_experience", "trp_temp_array_c", ":enlist_level"),
+                # (store_sub, ":needed_upgrade_xp", ":troop_experience", ":enlist_experience"),## else substract upgrade troop exp - enlisted troop exp
+                # (assign, reg0, ":needed_upgrade_xp"),
+            # (try_end),
         (try_end),
     (try_end),  
 ####### NEW v3.0-KOMKE END- 

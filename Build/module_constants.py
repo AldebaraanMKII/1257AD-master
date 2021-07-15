@@ -700,8 +700,6 @@ slot_town_trade_routes_begin = slot_town_trade_route_1
 slot_town_trade_routes_end = slot_town_trade_route_15 + 1
 
 
-num_trade_goods = itm_siege_supply - itm_spice
-slot_town_trade_good_productions_begin       = 500 #a harmless number, until it can be deprecated
 
 #These affect production but in some cases also demand, so it is perhaps easier to itemize them than to have separate 
 
@@ -857,6 +855,8 @@ slot_center_last_reconnoitered_by_faction_time                 = 380
 #slot_center_last_reconnoitered_by_faction_cached_strength     = 360
 #slot_center_last_reconnoitered_by_faction_friend_strength     = 370
 
+num_trade_goods = itm_siege_supply - itm_spice
+slot_town_trade_good_productions_begin       = 470 #a harmless number, until it can be deprecated
 
 
 
@@ -1229,6 +1229,21 @@ npc_mission_non_aggression              = 7
 npc_mission_rejoin_when_possible        = 8
 npc_mission_pope_crown                    = 9
 
+dplmc_npc_mission_war_request                 = 10
+dplmc_npc_mission_alliance_request            = 11
+dplmc_npc_mission_spy_request                 = 12
+dplmc_npc_mission_gift_fief_request           = 13
+dplmc_npc_mission_gift_horses_request         = 14
+dplmc_npc_mission_threaten_request            = 15
+dplmc_npc_mission_prisoner_exchange           = 16
+dplmc_npc_mission_defensive_request           = 17
+dplmc_npc_mission_trade_request               = 18
+dplmc_npc_mission_nonaggression_request       = 19
+
+dplmc_spt_spouse                              = 24
+dplmc_spt_gift_caravan                        = 23
+dplmc_spt_messenger                           = 25 #no prefix since its outcommented in native
+spt_patrol                                    = 7 #no prefix since its outcommented in native
 #Number of routed agents after battle ends.
 slot_troop_player_routed_agents                 = 146
 slot_troop_ally_routed_agents                   = 147
@@ -2223,20 +2238,6 @@ ACHIEVEMENT_IRON_BEAR = 72,
 ACHIEVEMENT_LEGENDARY_RASTAM = 73,
 ACHIEVEMENT_SVAROG_THE_MIGHTY = 74,
 
-dplmc_npc_mission_war_request                 = 9
-dplmc_npc_mission_alliance_request            = 10
-dplmc_npc_mission_spy_request                 = 11
-dplmc_npc_mission_gift_fief_request           = 12
-dplmc_npc_mission_gift_horses_request         = 13
-dplmc_npc_mission_threaten_request            = 14
-dplmc_npc_mission_prisoner_exchange           = 15
-dplmc_npc_mission_defensive_request           = 16
-dplmc_npc_mission_trade_request               = 17
-dplmc_npc_mission_nonaggression_request       = 18
-dplmc_spt_spouse                              = 24
-dplmc_spt_gift_caravan                        = 23
-dplmc_spt_messenger                           = 25 #no prefix since its outcommented in native
-spt_patrol                                    = 7 #no prefix since its outcommented in native
 ##diplomacy end 
 
 # rafi constants

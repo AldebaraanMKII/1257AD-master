@@ -818,6 +818,7 @@ factions = [
       ("forest_bandits", -0.2),
       ("player_faction",-0.2),
       ("peasant_rebels", -0.1),
+      ("escaped_prisoners_faction", 1.0),
     ], 
     [], 0x00FFFF),
 ##############################

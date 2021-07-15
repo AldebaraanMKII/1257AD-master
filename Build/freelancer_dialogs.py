@@ -94,7 +94,8 @@ lord_talk_addon = [
         # (eq, "$players_kingdom", 0),
 ####### NEW v2.9-KOMKE START-        
         # (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
-        (eq, "$players_kingdom", 0),##KOMKE replaced above line with this one (when not in enlisted party players kingdom is 0)
+        # (eq, "$players_kingdom", 0),##KOMKE replaced above line with this one (when not in enlisted party players kingdom is 0)
+        (eq, "$players_kingdom", fac_player_faction), ####### NEW v3.8
 ####### NEW v2.9-KOMKE END-         
 		############
         (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0), 

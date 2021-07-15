@@ -5919,9 +5919,9 @@ game_menus = [ #
                     (str_store_string, s5, "str_expected_back_in_approximately_reg3_days"),
                 (try_end),
             (else_try),    #This covers most diplomatic missions
-
                 (troop_slot_ge, ":companion", slot_troop_current_mission, npc_mission_peace_request),
-                (neg|troop_slot_ge, ":companion", slot_troop_current_mission, 8),
+                # (neg|troop_slot_ge, ":companion", slot_troop_current_mission, 8), 
+                (neg|troop_slot_ge, ":companion", slot_troop_current_mission, 19),  #### NEW v3.8
 
                 (troop_get_slot, ":faction", ":companion", slot_troop_mission_object),
                 (str_store_faction_name, s9, ":faction"),
@@ -15946,9 +15946,11 @@ game_menus = [ #
         (store_faction_of_party, ":fac", "$current_town"),
         (faction_get_slot, ":culture", ":fac",slot_faction_culture),
         (try_begin), 
-          (eq, "$tournament_type", 0),
-            (set_jump_mission, "mt_arena_tournament_fight_1vs1"),
-        (else_try),#foot fighting
+		############ NEW v3.8 - removed this 
+          # (eq, "$tournament_type", 0),
+            # (set_jump_mission, "mt_arena_tournament_fight_1vs1"),
+        # (else_try),#foot fighting
+		########################
           (this_or_next|eq, ":culture", "fac_culture_finnish"),
           (this_or_next|eq, ":culture", "fac_culture_rus"),
           (this_or_next|eq, ":culture", "fac_culture_baltic"),
@@ -31990,6 +31992,72 @@ game_menus = [ #
           (try_end),
        ]
        ),
+	   #############################################  NEW v3.8
+       ("debug_options2_4",[], "Make peace with all factions.",
+       [
+          (store_faction_of_troop, ":faction", "trp_player"),
+          (is_between, ":faction", kingdoms_begin, kingdoms_end),
+          (try_for_range, ":faction2", kingdoms_begin, kingdoms_end),
+            (party_slot_eq, ":faction2", slot_faction_state, sfs_active),
+            (store_relation, ":cur_relation", ":faction2", ":faction2"),
+            (lt, ":cur_relation", 0), #AT WAR
+              (call_script, "script_diplomacy_start_peace_between_kingdoms", ":faction", ":faction2", 1), 
+          (try_end),
+       ]
+       ),
+	   ############################################# 
+       ("debug_options2_5",[], "Start war with faction.",
+       [
+	   (jump_to_menu, "mnu_choose_faction_to_war_1"),
+       ]
+       ),
+	   #############################################
+       ("debug_options2_6",[], "Complete all bounty hunter quests.",
+       [
+          (try_begin),
+            (check_quest_active, "qst_bounty_1"),
+            (neg|check_quest_succeeded, "qst_bounty_1"),
+            (neg|check_quest_failed, "qst_bounty_1"),
+            (quest_slot_ge, "qst_bounty_1", slot_quest_current_state, 0),
+            (call_script, "script_succeed_quest_bounty", "qst_bounty_1"),
+          (try_end),
+          (try_begin),
+            (check_quest_active, "qst_bounty_2"),
+            (neg|check_quest_succeeded, "qst_bounty_2"),
+            (neg|check_quest_failed, "qst_bounty_2"),
+            (quest_slot_ge, "qst_bounty_2", slot_quest_current_state, 0),
+            (call_script, "script_succeed_quest_bounty", "qst_bounty_2"),
+          (try_end),
+          (try_begin),
+            (check_quest_active, "qst_bounty_3"),
+            (neg|check_quest_succeeded, "qst_bounty_3"),
+            (neg|check_quest_failed, "qst_bounty_3"),
+            (quest_slot_ge, "qst_bounty_3", slot_quest_current_state, 0),
+            (call_script, "script_succeed_quest_bounty", "qst_bounty_3"),
+          (try_end),
+          (try_begin),
+            (check_quest_active, "qst_bounty_4"),
+            (neg|check_quest_succeeded, "qst_bounty_4"),
+            (neg|check_quest_failed, "qst_bounty_4"),
+            (quest_slot_ge, "qst_bounty_4", slot_quest_current_state, 0),
+            (call_script, "script_succeed_quest_bounty", "qst_bounty_4"),
+          (try_end),
+          (try_begin),
+            (check_quest_active, "qst_bounty_5"),
+            (neg|check_quest_succeeded, "qst_bounty_5"),
+            (neg|check_quest_failed, "qst_bounty_5"),
+            (quest_slot_ge, "qst_bounty_5", slot_quest_current_state, 0),
+            (call_script, "script_succeed_quest_bounty", "qst_bounty_5"),
+          (try_end),
+          (try_begin),
+            (check_quest_active, "qst_bounty_6"),
+            (neg|check_quest_succeeded, "qst_bounty_6"),
+            (neg|check_quest_failed, "qst_bounty_6"),
+            (quest_slot_ge, "qst_bounty_6", slot_quest_current_state, 0),
+            (call_script, "script_succeed_quest_bounty", "qst_bounty_6"),
+          (try_end),
+       ]
+       ),
 	   #############################################
 	   #######################################
        ("debug_options2_99",[], "Go back.",
@@ -32000,6 +32068,148 @@ game_menus = [ #
 ##############################################################################
     ]),
 ##############################################################################
+
+
+
+
+########################### NEW v3.7 - start war with faction
+  ("choose_faction_to_war_1", mnf_enable_hot_keys,
+   "Choose a faction to start a war with.",
+   "none",
+    [],
+    [
+      ("debug_choose_faction_to_war_back",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+########################
+    ]+[("choose_faction_1"+str(x+1),
+        [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+        ], "{s0}",
+        [
+        (store_add, ":faction", kingdoms_begin, x),
+		(call_script, "script_diplomacy_start_war_between_kingdoms", ":faction", "$players_kingdom", 1),
+        ]) for x in range(0, 8)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_war_2")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_war_2", mnf_enable_hot_keys,
+    "Choose a faction to start a war with.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_1")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+		(call_script, "script_diplomacy_start_war_between_kingdoms", ":faction", "$players_kingdom", 1),
+        ]) for x in range(8, 16)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_war_3")]),
+    ]
+  ),
+
+################################################
+  ("choose_faction_to_war_3", mnf_enable_hot_keys,
+    "Choose a faction to start a war with.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_2")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+		(call_script, "script_diplomacy_start_war_between_kingdoms", ":faction", "$players_kingdom", 1),
+        ]) for x in range(16, 24)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_war_4")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_war_4", mnf_enable_hot_keys,
+    "Choose a faction to start a war with.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_3")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),                 
+		(call_script, "script_diplomacy_start_war_between_kingdoms", ":faction", "$players_kingdom", 1),
+        ]) for x in range(24, 32)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_war_5")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_war_5", mnf_enable_hot_keys,
+    "Choose a faction to start a war with.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_4")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+		(call_script, "script_diplomacy_start_war_between_kingdoms", ":faction", "$players_kingdom", 1),
+        ]) for x in range(32, 40)]+[
+      ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_war_6")]),
+    ]
+  ),
+################################################
+
+################################################
+  ("choose_faction_to_war_6", mnf_enable_hot_keys,
+    "Choose a faction to start a war with.",
+    "none",
+     [],
+    [
+      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_5")]),
+########################
+    ]+[("export_import_npc"+str(x+1),
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+        (str_store_faction_name, s0, ":faction"),
+      ], "{s0}",
+      [
+        (store_add, ":faction", kingdoms_begin, x),
+		(call_script, "script_diplomacy_start_war_between_kingdoms", ":faction", "$players_kingdom", 1),
+        ]) for x in range(40, 42)]
+      # ("export_import_next",[], "Next page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_6")]),
+  ),
+################################################
+
+
+
+
 
 ####### NEW v3.0-KOMKE START-This will notify the player when a fief improvement is finished
    ("notification_building_constructed",0,

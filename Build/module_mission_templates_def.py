@@ -5693,11 +5693,13 @@ common_battle_init_banner, #tom
          (try_end),
          (eq, ":player_won", 1),
          #(call_script, "script_end_tournament_fight", 1),
+         (stop_all_sounds, 0),  ####### NEW v3.8
          (call_script, "script_end_tournament_fight_new", 1),
          (call_script, "script_play_victorious_sound"),
          (finish_mission),
        (else_try), #player lost
          #(call_script, "script_end_tournament_fight", 0),
+         (stop_all_sounds, 0),  ####### NEW v3.8
          (call_script, "script_end_tournament_fight_new", 0),
          (finish_mission),
        (try_end),
