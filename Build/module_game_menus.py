@@ -9062,11 +9062,10 @@ game_menus = [ #
               (call_script, "script_add_log_entry", logent_castle_captured_by_player, "trp_player", "$g_encountered_party", -1, "$g_encountered_party_faction"),
               (store_current_hours, ":hours"),
 			  (faction_set_slot, "$players_kingdom", slot_faction_ai_last_decisive_event, ":hours"),
-              (try_begin), #player took a walled center while he is a vassal of npc kingdom.
-                (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-                # (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end), 
+			  ######################## NEW v3.8
                 # rafi - rename Nicae to Roman Empire
-                (try_begin),
+                (try_begin),                
+				  (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end), ######### NEW v3.8
                   (eq, "$g_encountered_party", "p_town_26_1"),
                     ########## FIX 
                     (faction_get_slot, ":player_culture", "$players_kingdom", slot_faction_culture),
@@ -9083,7 +9082,10 @@ game_menus = [ #
                       (party_set_slot, "p_town_26_1", slot_center_has_quarters_varangian, 1),
                 (try_end),
                 # rafi
-                (jump_to_menu, "$g_next_menu"),
+				################################################
+              (try_begin), #player took a walled center while he is a vassal of npc kingdom.
+                (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+                  (jump_to_menu, "$g_next_menu"),
               (else_try), #player took a walled center while he is a vassal of rebels.
                 (eq, "$players_kingdom", "fac_player_supporters_faction"),
                 (assign, "$g_center_taken_by_player_faction", "$g_encountered_party"),
@@ -13696,31 +13698,27 @@ game_menus = [ #
           (change_screen_return),
            ]),
 		   
-      ("village_loot_kill",[
-       (call_script, "script_party_count_members_with_full_health", "$current_town"),
-       (assign, ":villagers_party_size", reg0),
-       (gt, ":villagers_party_size", 0),
-	  ], "Plunder the village, kill the remaining villagers, then raze it.",
-       [
-          (call_script, "script_village_set_state", "$current_town", svs_being_raided),
-          (party_set_slot, "$current_town", slot_village_raided_by, "p_main_party"),
-          (assign, "$g_player_raiding_village", "$current_town"),
+      # ("village_loot_kill",[
+       # (call_script, "script_party_count_members_with_full_health", "$current_town"),
+       # (assign, ":villagers_party_size", reg0),
+       # (gt, ":villagers_party_size", 0),
+	  # ], "Plunder the village, kill the remaining villagers, then raze it.",
+       # [
+          # (call_script, "script_village_set_state", "$current_town", svs_being_raided),
+          # (party_set_slot, "$current_town", slot_village_raided_by, "p_main_party"),
+          # (assign, "$g_player_raiding_village", "$current_town"),
 
-          (try_begin),
-            (store_faction_of_party, ":village_faction", "$current_town"),
-            (store_relation, ":relation", "$players_kingdom", ":village_faction"),
-            (ge, ":relation", 0),
-            (call_script, "script_diplomacy_party_attacks_neutral", "p_main_party", "$current_town"),
-          (try_end),
+          # (try_begin),
+            # (store_faction_of_party, ":village_faction", "$current_town"),
+            # (store_relation, ":relation", "$players_kingdom", ":village_faction"),
+            # (ge, ":relation", 0),
+            # (call_script, "script_diplomacy_party_attacks_neutral", "p_main_party", "$current_town"),
+          # (try_end),
 		  
-          (jump_to_menu, "mnu_village_start_attack_2"),
-
-          #(rest_for_hours, 3, 5, 1), #rest while attackable (3 hours will be extended by the trigger)
-          # rafi
-          (rest_for_hours_interactive, 3, 3, 1),
-          # end
-          (change_screen_return),
-           ]),
+          # (jump_to_menu, "mnu_village_start_attack_2"),
+          # (rest_for_hours_interactive, 3, 3, 1),
+          # (change_screen_return),
+           # ]),
       ("village_raid_leave",[], "Leave this village alone.",[(change_screen_return)]),
     ],
   ),
@@ -32059,6 +32057,22 @@ game_menus = [ #
        ]
        ),
 	   #############################################
+	   #######################################
+       ("debug_options2_7",[], "Spawn Varangians in Constantinople.",
+       [
+        (faction_get_slot, ":player_culture", "$players_kingdom", slot_faction_culture),
+        (eq, ":player_culture", "fac_culture_byzantium"),  ######### NEW v2.4
+		##########
+          # (faction_set_name, "$players_kingdom", "@Roman Empire"),
+          # (display_message, "@The Roman Empire has been restored!", 0xff0000),
+          (party_set_slot, "p_town_26_1", slot_spec_mercs2, merc_varangians),
+          (party_set_slot, "p_town_26_1", slot_spec_mercs2_party_template, "pt_company_varangian_1"),
+          (party_set_slot, "p_town_26_1", slot_spec_mercs2_number, 1),
+          ####### NEW
+          (party_set_slot, "p_town_26_1", slot_center_has_quarters_varangian, 1),
+       ]
+       ),
+	   #######################################
 	   #######################################
        ("debug_options2_99",[], "Go back.",
        [
