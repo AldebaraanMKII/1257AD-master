@@ -9915,7 +9915,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "dplmc_constable_send_reinf_to_fief1",
     [],
-    "Yes {reg63?sir:madam}. Keep in mind that you will have to provide 5 coins per troop to account for the supplies, plus 50 coins to organize all of this. Where would you like to send them?",
+    "Yes {reg65?madam:sir}. Keep in mind that you will have to provide 5 coins per troop to account for the supplies, plus 50 coins to organize all of this. Where would you like to send them?",
     "dplmc_constable_send_reinf_to_fief2",
     []],
 
@@ -9942,7 +9942,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "dplmc_constable_send_reinf_to_fief3",
     [],
-    "Who would you like to send {reg63?sir:madam}?",
+    "Who would you like to send {reg65?madam:sir}?",
     "dplmc_constable_send_reinf_to_fief4",
     [
       (spawn_around_party, "p_main_party", "pt_send_reinf_to_fief_party"),
@@ -9962,7 +9962,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "dplmc_constable_send_reinf_to_fief4",
     [],
-    "Will be done, {reg63?sir:madam}.",
+    "Will be done, {reg65?madam:sir}.",
     "dplmc_constable_pretalk",
     [
     ########## removes player gold based on troop count + 50
@@ -36241,7 +36241,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "send_reinf_to_fief1",
     [],
-    "Aye {reg63?sir:madam}. Keep in mind {reg63?sir:madam} that you will have to provide us with 5 coins per troop to account for the supplies, plus 50 coins for our efforts. Where would you like to send them?",
+    "Aye {reg65?madam:sir}. Keep in mind {reg65?madam:sir} that you will have to provide us with 5 coins per troop to account for the supplies, plus 50 coins for our efforts. Where would you like to send them?",
     "send_reinf_to_fief2",
     []],
 
@@ -36268,7 +36268,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "send_reinf_to_fief3",
     [],
-    "Who would you like to send {reg63?sir:madam}?",
+    "Who would you like to send {reg65?madam:sir}?",
     "send_reinf_to_fief4",
     [
       (spawn_around_party, "p_main_party", "pt_send_reinf_to_fief_party"),
@@ -36288,7 +36288,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "send_reinf_to_fief4",
     [],
-    "Will be done, {reg63?sir:madam}.",
+    "Will be done, {reg65?madam:sir}.",
     "village_elder_pretalk",
     [
     ########## removes player gold based on troop count + 50
@@ -36382,7 +36382,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     
 [anyone, "village_give_money_3",
 [],
-  "Oh my... I mean, thank you my {reg63?lord:lady}. This is very generous of you.",
+  "Oh my... I mean, thank you my {reg65?lady:lord}. This is very generous of you.",
   "village_elder_pretalk",
 [
     (party_slot_ge, "$current_town", slot_town_lord, "trp_multiplayer_profile_troop_male"),
