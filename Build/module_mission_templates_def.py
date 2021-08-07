@@ -3845,13 +3845,14 @@ lance_usage = [
    # Force mounted NPCs to switch to their lance.  This is called once at the
    # start of the battle. If you want lancers to ALWAYS use lances on horseback,
    # replace ti_once with 1. Otherwise they may switch to sword if bogged down
-   (0, 0, 5, [],
+   (ti_on_agent_spawn, 0, 0, [],
    [
       # Run through all active NPCs on the battle field.
       #(display_message, "@DEBUG -- lance usage"),
 #(eq, 0,1),
+      (store_trigger_param_1, ":agent"), ################# NEW v3.8
       (get_player_agent_no, ":p_agent"),
-      (try_for_agents, ":agent"),
+      # (try_for_agents, ":agent"),
         # Isn't a horse.
         (agent_is_human, ":agent"),
         # Isn't a player.
@@ -3953,7 +3954,6 @@ lance_usage = [
             (assign, ":top", -1),
           (try_end),
         (try_end),
-      (try_end),
    ]),
 ]
 # LANCE USAGE END

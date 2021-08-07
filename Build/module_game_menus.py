@@ -31997,7 +31997,7 @@ game_menus = [ #
           (is_between, ":faction", kingdoms_begin, kingdoms_end),
           (try_for_range, ":faction2", kingdoms_begin, kingdoms_end),
             (party_slot_eq, ":faction2", slot_faction_state, sfs_active),
-            (store_relation, ":cur_relation", ":faction2", ":faction2"),
+            (store_relation, ":cur_relation", ":faction", ":faction2"),
             (lt, ":cur_relation", 0), #AT WAR
               (call_script, "script_diplomacy_start_peace_between_kingdoms", ":faction", ":faction2", 1), 
           (try_end),

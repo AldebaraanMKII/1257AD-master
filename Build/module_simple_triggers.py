@@ -2092,23 +2092,6 @@ simple_triggers = [
      (val_mul, ":cur_rents", ":multiplier"), 
      (val_div, ":cur_rents", 135),#Prosperity of 100 gives the default values
  
-     ######### (try_begin),
-       ######### (party_slot_eq, "$g_accumulate_taxes_cur_center", slot_town_lord, "trp_player"),
-       
-       ######### (game_get_reduce_campaign_ai, ":reduce_campaign_ai"),
-       ######### (try_begin),
-         ######### (eq, ":reduce_campaign_ai", 0), ######hard (less money from rents)
-         ######### (val_mul, ":cur_rents", 3),
-         ######### (val_div, ":cur_rents", 4),
-       ######### (else_try),
-         ######### (eq, ":reduce_campaign_ai", 1), ######medium (normal money from rents)
-       ######### (else_try),
-         ######### (eq, ":reduce_campaign_ai", 2), ######easy (more money from rents)
-         ######### (val_mul, ":cur_rents", 4),
-         ######### (val_div, ":cur_rents", 3),
-       ######### (try_end),                
-     ######### (try_end),  
-     
      #######PROSPERITY SYSTEM TAXES
      (party_get_slot, ":tax", "$g_accumulate_taxes_cur_center", dplmc_slot_center_taxation),
      (store_mul, ":tax_rents", ":cur_rents", ":tax"),
@@ -5271,7 +5254,7 @@ simple_triggers = [
 #Recruiter kit begin
 ##### This trigger keeps the recruiters moving by assigning them targets.
  ###### (24*30, ######0.5, tom make them slow 4 now. VERY Slow -recruiters not working anyway
- (3, 
+ (2.5, 
    [
  
       ####(display_message, "@Executing Simple Trigger 112"),
@@ -5311,7 +5294,7 @@ simple_triggers = [
         (neq, ":origin_faction", "$players_kingdom"),
         (str_store_party_name_link, s13, ":party_origin"),
         (assign, reg10, ":needed"),
-        (display_log_message, "@{s13} has been taken by the enemy and your recruiter who was commissioned to recruit {reg10} recruits vanished  without a trace!", 0xFF0000),
+        (display_log_message, "@{s13} has been taken by the enemy and your recruiter who was commissioned to recruit {reg10} recruits vanished without a trace!", 0xFF0000),
         (remove_party, ":party_no"),
         (assign, ":quit", 1),
         (val_sub, "$g_recruiter_count", 1),  ################ NEW v2.0
@@ -5355,14 +5338,18 @@ simple_triggers = [
                (party_get_slot, ":volunteers_in_village", ":village", slot_center_volunteer_troop_amount),
                (gt, ":volunteers_in_village", 0),
             ######daedalus begin
+			############ NEW v3.8 - recruit based on culture
                (party_get_slot, ":village_faction", ":village", slot_center_original_faction),
+               (party_get_slot, ":village_culture", ":village", slot_center_culture),
+			
                (assign, ":stop",1),
                (try_begin),
                   (eq, ":recruit_faction",-1),
                   (assign, ":stop",0),
                (else_try),
-                  (eq, ":village_faction", ":recruit_faction"),
+                  (eq, ":village_culture", ":recruit_faction"),
                   (assign, ":stop",0),
+			########################
                (try_end),
                (neq, ":stop",1),
             ######daedalus end
@@ -5400,13 +5387,13 @@ simple_triggers = [
             (assign, ":target_region", reg0),
             ######### end rafi
             (assign, ":stop",1),
-            (try_begin),
+        (try_begin),
             (eq, ":recruit_faction",-1),
             (assign, ":stop",0),
         (else_try),
             (eq, ":target_region", ":recruit_faction"),
             (assign, ":stop",0),
-            (try_end),
+        (try_end),
             (neq, ":stop",1),
       ######daedalus end
          (neg|party_slot_eq, ":target", slot_village_state, svs_looted),
@@ -6667,19 +6654,7 @@ simple_triggers = [
      (call_script, "script_change_center_prosperity", "$g_change_prosperity_cur_center", 20), ######was 10
    (try_end),
    (call_script, "script_change_center_prosperity", "$g_change_prosperity_cur_center", 5), ######improves prosperity at war as well
-   ######### (assign, ":random", 0),
-   ######### (try_begin),
-     ######### (lt, ":tax_rate", 0),
-     ######### (store_random_in_range, ":random", ":tax_rate", 1), ######range -2 0
-     ######### (val_mul, ":random", -1), ######positive value to increase
-   ######### (else_try),
-     ######### (gt, ":tax_rate", 0),
-     ######### (val_add, ":tax_rate", 1),
-     ######### (store_random_in_range, ":random", 0, ":tax_rate"), ######range 0 2
-     ######### (val_mul, ":random", -1), ######negetive value to increase
-   ######### (try_end),
-   ######### (call_script, "script_change_center_prosperity", "$g_change_prosperity_cur_center", ":random"),
-   
+
    (store_mul, ":tax_prosperity", ":tax_rate", -1),
    (call_script, "script_change_center_prosperity", "$g_change_prosperity_cur_center", ":tax_prosperity"),
    (val_add, ":prosperity", ":tax_prosperity"),    
@@ -6699,30 +6674,10 @@ simple_triggers = [
    (else_try),
      (store_random_in_range, ":random", 0, 10),
      (eq, ":random", 0),
-     ######### (try_begin),
-       ######### (is_between, ":prosperity", 0, 25),
-       ######### (party_set_slot, "$g_change_prosperity_cur_center", dplmc_slot_center_taxation, rate_very_low), 
-     ######### (else_try),
-       ######### (is_between, ":prosperity", 25, 50),
-       ######### (party_set_slot, "$g_change_prosperity_cur_center", dplmc_slot_center_taxation, rate_average), 
-     ######### (else_try),
-       ######### (is_between, ":prosperity", 50, 75),
-       ######### (party_set_slot, "$g_change_prosperity_cur_center", dplmc_slot_center_taxation, rate_high), 
-     ######### (else_try),
-       ######### (is_between, ":prosperity", 75, 101),
-         ######### (party_set_slot, "$g_change_prosperity_cur_center", dplmc_slot_center_taxation, rate_very_high), 
-     ######### (try_end),
      (store_random_in_range, ":random", rate_very_low, rate_very_high + 1),
      (party_set_slot, "$g_change_prosperity_cur_center", dplmc_slot_center_taxation, ":random"), 
    (try_end),
-   #######debug
-   ######### (party_get_slot, ":prosperity", ":center", slot_town_prosperity),
-   ######### (assign, reg2, ":prosperity"),
-   ######### (str_store_party_name, s0, ":center"),
-   ######### (store_sub, reg3, reg2, reg1),
-   ######### (party_get_slot, reg4, ":center", dplmc_slot_center_taxation),
-   ######### (display_message, "@{s0} prosperity before: {reg1}, after: {reg2}, change: {reg3}, tax rate: {reg4}"),
- (try_end),
+(try_end),
  
  ################ proceeds to the next center when it's triggered again
  (val_add, "$g_change_prosperity_cur_center", 1),
@@ -7575,18 +7530,27 @@ simple_triggers = [
 ############################# New v2.1 - LORD EXECUTION BY PLAYER
 (72,   
 [
- 
-      ####(display_message, "@Executing Simple Trigger 144"),
-(try_begin),
+  ####(display_message, "@Executing Simple Trigger 144"),
+  (try_begin),
    (eq, "$g_execution_scheduled", 1),  
+     ########### NEW v3.8
+     (gt, "$lord_to_execute", 0), 
+     (gt, "$g_method_of_execution", 0), 
+	 ###########
      (troop_get_slot, ":cur_prison", "$lord_to_execute", slot_troop_prisoner_of_party),
      (eq, ":cur_prison", "$g_execution_center"), ######## must check that he's still there
        (call_script, "script_kill_lord_execution", "trp_player", "$lord_to_execute", "$g_execution_center", "$g_method_of_execution"),
+       (assign, "$g_execution_scheduled", 0),  ######### NEW v3.8
  (else_try),
    (eq, "$g_execution_scheduled", 1),  
+     ########### NEW v3.8
+     (gt, "$lord_to_execute", 0), 
+     (gt, "$g_method_of_execution", 0), 
+	 ###########
      (troop_get_slot, ":cur_prison", "$lord_to_execute", slot_troop_prisoner_of_party),
      (neq, ":cur_prison", "$g_execution_center"), ######## not there, display notification
-      (call_script, "script_add_notification_menu", "mnu_lord_executed_by_player_escaped", "$lord_to_execute", "$g_execution_center", "$g_method_of_execution"),
+       (call_script, "script_add_notification_menu", "mnu_lord_executed_by_player_escaped", "$lord_to_execute", "$g_execution_center", "$g_method_of_execution"),
+       (assign, "$g_execution_scheduled", 0),  ######### NEW v3.8
  (try_end),
 ]),
 ##############################################################################
