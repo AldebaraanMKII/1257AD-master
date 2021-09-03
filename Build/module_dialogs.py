@@ -9048,7 +9048,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ],
 "I have some prisoners. Can you sell them for me?", "dplmc_constable_prisoner",[]],
 
-[anyone, "dplmc_constable_prisoner", [], "Of course, Sire", "dplmc_constable_pretalk",
+[anyone, "dplmc_constable_prisoner", [], "Of course.", "dplmc_constable_pretalk",
 [[change_screen_trade_prisoners]]],
 #############################################
 
@@ -9194,6 +9194,23 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 #####
 [anyone, "dplmc_constable_prisoner_emissary", [], "Who shall negotiate the exchange?", "constable_emissary_select", []],
    
+####### NEW v3.8 - missing things
+[anyone|plyr|repeat_for_troops, "constable_emissary_select",[
+  (store_repeat_object, ":emissary"),
+  (main_party_has_troop, ":emissary"),
+  (is_between, ":emissary", companions_begin, companions_end),
+  (troop_slot_eq, ":emissary", slot_troop_prisoner_of_party, -1),
+  (is_between, ":emissary", active_npcs_begin, active_npcs_end),
+  (troop_slot_eq, ":emissary", slot_troop_is_alive, 1),  ## he's alive/active
+  (str_store_troop_name, s11, ":emissary"),
+  ], "{s11}", "constable_emissary_dispatch",[
+  (store_repeat_object, "$g_emissary_selected"),
+  ]],
+   
+[anyone|plyr, "constable_emissary_select",[
+  ], "Actually, I can't think of anyone.", "dplmc_constable_pretalk",[]],
+#########################
+   
 ##exchange prisoner
 [anyone, "constable_emissary_dispatch",
    [
@@ -9205,6 +9222,24 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (str_store_string, s14, "str_dplmc_exchange_prisoner"),
    ], "Very well -- I shall send {s11} to the {s12} to {s14}.", "constable_diplomatic_dispatch_confirm",[]],
    
+   
+####### NEW v3.8 - missing things
+[anyone|plyr, "constable_diplomatic_dispatch_confirm",[], "Yes, do that", "dplmc_constable_pretalk",[
+    (troop_set_slot, "$g_emissary_selected", slot_troop_days_on_mission, 3),
+      (troop_set_slot, "$g_emissary_selected", slot_troop_current_mission, "$g_initiative_selected"),
+      (troop_set_slot, "$g_emissary_selected", slot_troop_mission_object, "$g_faction_selected"),
+      ##diplomacy begin
+      (troop_set_slot, "$g_emissary_selected", dplmc_slot_troop_mission_diplomacy, "$diplomacy_var"),
+      (troop_set_slot, "$g_emissary_selected", dplmc_slot_troop_mission_diplomacy2, "$diplomacy_var2"),
+      ##diplomacy end
+
+    (remove_member_from_party, "$g_emissary_selected", "p_main_party"),
+  ]],
+   
+[anyone|plyr, "constable_diplomatic_dispatch_confirm",[], "Actually, hold off on that", "dplmc_constable_pretalk",[]],
+#########################
+
+
  ##companion returning after exchange request
 [anyone, "event_triggered", [
       (store_conversation_troop, "$map_talk_troop"),
@@ -35856,7 +35891,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [trp_kidnapped_girl|plyr, "kidnapped_girl_liberated_map", [], "Yes. Come with me. We are going home.", "kidnapped_girl_liberated_map_2a",[]],
 [trp_kidnapped_girl, "kidnapped_girl_liberated_map_2a", [(neg|party_can_join)], "Unfortunately. You do not have room in your party for me.", "close_window",[(assign, "$g_leave_encounter",1)]],
 [trp_kidnapped_girl, "kidnapped_girl_liberated_map_2a", [], "Oh really? Thank you so much!",
-"close_window", [(party_join),
+"close_window", [
+# (party_join),
                     (quest_set_slot, "qst_kidnapped_girl", slot_quest_current_state, 3),
                     (assign, "$g_leave_encounter",1)]],
 [trp_kidnapped_girl|plyr, "kidnapped_girl_liberated_map", [], "Wait here a while longer. I'll come back for you.", "kidnapped_girl_liberated_map_2b",[]],

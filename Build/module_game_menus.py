@@ -8847,6 +8847,12 @@ game_menus = [ #
 			  ############### NEW v3.3 - lords can be killed in battle with player
 			  (call_script, "script_rand", 0, 100),
               (assign, ":chance", reg0), 
+		      ######## NEW v3.8 - fixes dead lords causing script errors
+			  (assign, ":current_slot", 20), 
+              (try_for_range, ":cur_slot", 20, 80),
+		        (troop_set_slot, "trp_temp_troop", ":cur_slot", -1), 
+              (try_end),
+              ###########
               (try_begin), ### King
                 (faction_slot_eq, ":defeated_faction", slot_faction_leader, ":stack_troop"), 
                 (lt, ":chance", "$g_lord_death_chance_battle_king"), 
@@ -8857,7 +8863,10 @@ game_menus = [ #
                   (jump_to_menu, "mnu_enemy_died_from_wounds"),
                   (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),   
                   ########### NEW v3.7 - fixes lords parties not disappearing from the map
-                  (call_script, "script_remove_dead_lord_from_game", ":stack_troop"), 
+                  # (call_script, "script_remove_dead_lord_from_game", ":stack_troop"),   
+				  ######## NEW v3.8
+			      (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
+			      (val_add, ":current_slot", 1), 
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -8870,7 +8879,10 @@ game_menus = [ #
                   (jump_to_menu, "mnu_enemy_died_from_wounds"),
                   (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),  
                   ########### NEW v3.7 - fixes lords parties not disappearing from the map
-                  (call_script, "script_remove_dead_lord_from_game", ":stack_troop"), 
+                  # (call_script, "script_remove_dead_lord_from_game", ":stack_troop"),   
+				  ######## NEW v3.8
+			      (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
+			      (val_add, ":current_slot", 1), 
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -9154,6 +9166,16 @@ game_menus = [ #
             (try_end),
           (try_end),
         (try_end),
+		
+		######## NEW v3.8 - fixes dead lords causing script errors
+        (val_add, ":current_slot", 1),
+        (try_for_range, ":cur_slot", 20, ":current_slot"),
+		  (troop_get_slot, ":dead_lord", "trp_temp_troop", ":cur_slot"), 
+		  (gt, ":dead_lord", -1), 
+            (call_script, "script_remove_dead_lord_from_game", ":dead_lord"),
+		    (troop_set_slot, "trp_temp_troop", ":cur_slot", -1), 
+        (try_end),
+        ###########
       ],
 
     [
@@ -31993,13 +32015,13 @@ game_menus = [ #
 	   #############################################  NEW v3.8
        ("debug_options2_4",[], "Make peace with all factions.",
        [
-          (store_faction_of_troop, ":faction", "trp_player"),
-          (is_between, ":faction", kingdoms_begin, kingdoms_end),
+          # (store_faction_of_troop, ":faction", "trp_player"),
+          (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
           (try_for_range, ":faction2", kingdoms_begin, kingdoms_end),
             (party_slot_eq, ":faction2", slot_faction_state, sfs_active),
-            (store_relation, ":cur_relation", ":faction", ":faction2"),
+            (store_relation, ":cur_relation", "$players_kingdom", ":faction2"),
             (lt, ":cur_relation", 0), #AT WAR
-              (call_script, "script_diplomacy_start_peace_between_kingdoms", ":faction", ":faction2", 1), 
+              (call_script, "script_diplomacy_start_peace_between_kingdoms", "$players_kingdom", ":faction2", 1), 
           (try_end),
        ]
        ),
@@ -32097,6 +32119,7 @@ game_menus = [ #
     ]+[("choose_faction_1"+str(x+1),
         [
         (store_add, ":faction", kingdoms_begin, x),
+        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
         ], "{s0}",
         [
@@ -32120,6 +32143,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
+        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32142,6 +32166,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
+        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32165,6 +32190,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
+        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32188,6 +32214,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
+        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32211,6 +32238,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
+        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [

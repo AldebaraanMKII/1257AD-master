@@ -1,15 +1,280 @@
 [MOD] - 1257AD Enhanced Edition 
 
 Taleworlds: https://forums.taleworlds.com/index.php?topic=379851
+Nexus: https://www.nexusmods.com/mbwarband/mods/6251
+Moddb: https://www.moddb.com/mods/1257ad-enhanced-edition/downloads
+Discord: https://discord.gg/GvB2REENr2
 
-Current version: v3.1
+
+Current version: v3.8
 
 NOTE: Things with the "New game:" prefix requires a new game to take effect.
 
 
 
+v3.8
+1). Fixed some music tracks not being played because of wrong extensions on module_music.py
+2). Improved the basic startup script for village assignments, castles now have priority over towns.
+3). Nidaros and Steinker have now switched places to improve the Norwegian geography and village/town layout.
+4). Fixed typo in the string for the Norwegian (faction) language.
+5). Fixed player starting with villages in non-noble starts.
+6). Fixed tournament ambiance sounds playing even after the tournament finished.
+7). (Freelancer) Fixed player being unable to return to a lord's service after a leave or being captured in battle.
+8). (Freelancer) Fixed player needing very high amounts of xp to receive a promotion.
+9). Fixed player faction lords spawning without a name if the player faction culture was western european + mixed euro language.
+10). (New game) Fixed escaped prisoners only attacking the player and bandits.
+11). Fixed player being forced to fight with 1H sword in one on one tournament fights.
+12). Fixed companion missions added by diplomacy not completing if the player accessed the companion report menu.
+13). Fixed player relations with a faction resetting to max 12 when joining said faction.
+14). Fixed mercenary captains not being randomly chosen in tavern bounties.
+15). (New game) Moved Venice more to the west to fix a bug where lords couldn't enter it (Thanks to @Khanor).
+16). Recruiters now get troops based upon culture instead of faction.
+17). Fixed crossbowmen bugging out and not doing anything after some time.
+18). Fixed player receiving a notification and errors about someone being executed even if he hasn't ordered any execution.
+19). Fixed player king not getting a notification when a border incident involving his faction happened.
+20). Fixed Mayors/Village Elders misgendering the player (Thanks to @Khanor).
+21). Fixed debug menu bugs for declare peace/war.
+22). Added new failsafe to block income from reaching very high values due to calculation errors.
+23). Fixed constable lacking dialogue for exchanging prisoners.
+24). Fixed dead lords causing script errors after battle.
+25). Fixed random lords appearing with no name nor culture if the player faction culture was crusader (e.g. jerusalem, antioch, etc).
+26). Faction banners are now available to be used by the player at the game start.
+27).
+28).
+29).
+30).
+31).
+32).
+33).
+34).
+35).
 
-v3.1 
+
+
+
+v3.7 
+1). Added missing fort scenes that caused a bug.
+2). Fixed a faction not launching crusades when the player was part of it. Now they will not happen in the player faction only if he`s the faction leader.
+3). A message will appear if a lord from the same faction as the player marries.
+4). Fixed dialogue being stuck when the player decided to kill a prisoner lord when he had 10 or more relations with the player. Now the option to kill the lord will not appear if the relations are 20 or more.
+5). If Berke Khan dies the Golden Horde religion is changed to Mongol Paganism.
+6). Fixed Ilkhanate having muslim religion instead of Mongol Paganism. (Requires a new game)
+7). Fixed companions not receiving certain equipment when promoted to lords by the player because their attributes/skills where too low.
+8). Fixed outpost captains not being removed when the outpost was upgraded to a fort.
+9). Fixed player being able to build a infinite amount of outposts. Now it's only 1 at a time.
+10). Fixed fort marketplace options. Merchants now are from the nearest town.
+11). Removed the manage fort option because the messenger post didn't do anything.
+12). Fixed fort guards being naked.
+13). Fixed player being replaced by companions in the main map when the player got body switched to them during a battle.
+14). Fixed several bugs that occurred in freelancer related to relations.
+15). Fixed issues that resulted from the player not being assigned to the faction when starting as king, prince or vassal.
+16). Fixed player being replaced by a companion if he made a change to a single companion in the auto loot presentation.
+17). Fixed agent_troop_get_banner_mesh errors.
+18). Fixed a old issue where most of the time lords would defect to only a few factions. Now they will defect to the nearest faction with the same religion as their previous faction. The old behavior will still happen if their original faction is completely destroyed due to the way that the game handles faction distances.
+19). Fixed Cuman lords getting roman numerals in their names.
+20). Fixed lords sometimes getting their names filled with titles when they defected.
+21). Envoy's charisma now counts as a positive modifier when calculating the chance that a kingdom will accept a diplomatic proposal.
+22). Fixed prison doors leading to the arena thus making it impossible to complete the prison break quest.
+23). Fixed Grandmaster armors texture bug (Finally!).
+
+
+
+
+v3.6 
+1). Fixed a very critical bug that caused the game to freeze completely.
+2). Color of neutral messages is now white instead of orange.
+3). Chance that a lord created will have a numeral in its name decresed to 15% from 25%.
+4). Lords (except Kings) get renown whey they are awarded a fief (100 for towns, 60 for castles and 30 for villages).
+5). Fixed some mounted mercs and units have the ranged flag and thus being assigned to the archer division during sieges. 
+6). Fixed new recruitment submenu sending player back to towm menu instead of back to it after recruiting lances/mercs.
+7). Removed a debug message.
+8). Added upgrade paths to mamlukes (Junior Mamluk of the Amirs/Senior Mamluk of the Amir/etc), kipchaks and kwarezmians cavalry.
+9). Certain units (e.q. crusader orders, mamluks, etc) are now only recruitable if the faction that owns the fief they are in has the same religion associated with them. 
+10). When a lord is chosen for execution the method used will depend on the executing lord's personality (good natured lords are much more likely to just behead them, while debauched lords burn on their best days).
+11). Fixed kingdom parties remaining on the map even after their faction was defeated.
+12). Fixed dead lords becoming marshalls or receiving fiefs.
+13). Dead lords are now displayed in a separate section in the faction notes. Also dead lords only get removed from there when they are recycled when creating a random lord.
+14). Fixed script errors that occurred when a king died and a new king was selected.
+15). Fixed player being able to take or give troops to any garrison in a new game (requires a new game).
+
+
+
+
+v3.5 (Requires a new game)
+1). Fixed wagon train not resetting its variable when defeated in battle, thus making it impossible to create another one.
+2). Fixed parties in battle at night having over 50% of their strenght when it was supposed to be 30%.
+3). Fixed bug that occured when the player enlisted in a lord`s army that caused that lord`s faction to become hostile with every other kingdom in the game.
+4). Fixed faction leaders saying that the player is with a pretender or that he is disputinng their claim to the throne even if the player is not doing any of that.
+5). Added extra info to the character notes if the character in question is a marshall (Credits: SB)
+6). Fixed player character notes giving errors when displayed.
+7). Fixed player character notes reporting the player as being leader or a vassal of the player faction in a fresh new game.
+8). Fixed player being unable to add troops to the garrison of a castle/town that he just besieged.
+9). Added a new option to give troops to a lord's town/castle that if the following conditions are met (credit: diplomacy):
+  - You are the faction leader or marshall
+  - You are the spouse of the faction leader, and the faction
+  - leader is not on bad terms with you
+  - The owner is an affiliated family member
+  - The owner is your spouse, and is either pliable or not on bad terms
+  - The owner is a former companion with whom you are on good terms (20+)
+  - The owner is in good terms with you (20+)
+
+10). Moved the recruitment/garrison options to a new submenu.
+11). Fixed a script error that occurred when a siege ended.
+12). Fixed trade skills requiring Intelligence (INT) while trainer required Charisma (CHA).
+13). Player now receives 15 renown if he is discharged from being marshall just like the NPCs.
+14). Fixed prince start not receiving controversy and right to rule.
+15). Added language info to faction notes.
+16). Fixed player description in character report.
+17). Fixed player culture lords spawning without a name.
+18). Fixed mercenary captain starting naked and without troops.
+19). Crusaders will attack a settlement after 12 hours of reaching their destination (it was 24h).
+20). Fixed player receiving 15 faction relation when letting a king go free after a battle. Now it's 5.
+21). Added ability to execute lords in cold blood when they're prisoners in your party.
+22). Fixed autoloot causing player inventory food items to change their positions.
+23). Fixed a hood having armor modifiers like cracked/battered/etc.
+24). Fixed scripts errors when using "Upgrade management of the NPC's equipments" after a battle.
+25). Added new option in the enhanced menu to turn off projectile hit distance info.
+26). Fixed fiefs being reported as no longer being sieged by "No Faction" if the last besieger was a crusader party.
+27). Fixed a script error related to agent party ids.
+28). If a lords defects from or to the faction the player is in, a notification will be displayed.
+29). Lords with -50 or less relation with their leader will be indicted for treason (it was -60).
+30). Fixed lords needing 2 weeks to decide which lord they support  (marshal/who's going to take a fief/etc). This caused a slowdown in terms of diplomacy. Now it's 3 days.
+31). Fixed player not getting the presentation to choose a flag immediately if he started as a noble/vassal/prince/king.
+32). Fixed lack of marshall elections.
+
+
+
+
+v3.4 (Requires a new game)
+1). Fixed player castle guards being copies of himself.
+2). Fixed player being unable to start a new faction from scratch.
+3). Fixed player not gaining a minister when he made a new faction.
+4). Fixed player starting naked (mercenary captain start).
+5). Fixed player kingdom starting with player culture instead of the culture of the template faction (monarch start).
+6). Disabled fortifying manor improvement until i figure out what is causing the errors.
+7). Fixed player being unable to capture any lord after a battle.
+8). Fixed several issues with freelancer.
+9). Player will NOT be able to enlist in any army unless he's a adventurer (not tied with any faction as mercenary captain or vassal).
+10). Fixed player being unable to create a new faction after renouncing his oath.
+11). Fixed golden horde fiefs having anatolian culture and thus the player was unable to get mongol equipment anywhere but from loot.
+12). Fixed castle and town guards sometimes having the same dialogue as belligerent drunks.
+
+
+
+
+v3.3 (Requires a new game)
+1). Fixed arena fighters spawning without weapons and the player spawning with his equipment.
+2). Fixed player being able to change target, move or disband any patrol in the map through the Constable. Now he can only do so if the patrol is from his faction and he's the town lord of the center that the patrol is assigned to, or he's the king himself.
+3). Fixed Constable not reporting the amount of troops in patrols when asking for a army report.
+4). Fixed guards of a fief not changing to be of their appropriate faction when the player conquered a fief.
+5). Fixed several items having incorrect faction tags and not appearing where they're supposed to.
+6). Fixed drunks being sometimes of the same troop ID as tavern mercs and thus sharing their dialogue.
+7). Due to complaints that the Mamluk Sultanate and Emirate of Granada wasn't lasting for long due to the fact that they were at war with multiple factions at the start of the game, i increased the maximum amount of patrols that they can have to 6 and war parties to 3, in a similar manner that the Papal States is protected.
+8). Castle guards are taken from the current fief owner's culture instead of the center's culture.
+9). Fixed patrol dialogue.
+10). Removed 150 troop IDs that were used for random lord generation due to a new face randomization system. This will improve performance in the world map significantly due to the fact that the mod scripts will not need to scan through so many troops and make randomizations until a troop with a certain parameter is found.
+11). Fixed special parties like curonians, guelphs, etc becoming deserters if the player started as the king of one of their factions.
+12). Fixed patrols not appearing in the budget report.
+13). Added target center name to all patrols.  
+14). Added new dialogue for crusader and jihadists parties (if you're in the same faction).
+15). Fixed crusader factions like Jerusalem and Antioch receiving Western european recruits instead of their variants.
+16). Added two new cultures: Crusader (same as western european but allows for creation of lords from crusader cultures + crusader items in shops) and Cuman.
+17). Made several adjustments to the modifiers that defined which culture a random lord will be assigned to in his creation (e.g. crusader states got a 7% chance to get a templar lord, 7% hospitaller and 7% teutonic. Now all those three have been raised to 10%).
+18). Crusader order cultures now have their top tier infantry as castle guards instead of dismounted knights.
+19). Lords defeated in battle with the player participation can now die from wounds.
+20). Implemented new heir system. Player Prince will become king if the latter dies independently of renown. The exception of that is the Kingdom of England which has Prince Edward Longshanks as heir BEFORE the player (player will become king if he dies as well).
+21). Fixed scouts, war parties and mercenary companies not joining any nearby battle with their own faction.
+22). Due to complaints i reduced the maximum distance that allied parties will join a battle with the player.
+23). Fixed player not getting a minister and other staff after becoming king by succession and not having a culture as well.
+24). Fixed player being able to request a new execution or assassination even if there was already one in progress. Now the constable will inform if there is one scheduled.
+25). Fixed Andalus culture faction new lords not having any culture, name nor equipment when they spawned.
+26). Fixed Italian factions not getting any names for their western european culture lords.
+27). Fixed Kingdom of Navarra only getting naked lords due to the fact that they have western european culture instead of iberian.
+28). Fixed random lords not having any culture and name if the Player started as King of a western european or iberian faction.
+29). If the player changes the faction culture to western european or iberian through the minister he will be prompted to select a language associated with those cultures (e.g. german, english, french for western europe and spanish and portuguese for iberian).
+30). Added option to send a companion for a non agression pact with another kingdom through companion dialogue.
+31). Increased default random lord creation rate to 5 days from 3.
+32). Fixed Byzantine swordsmen and spearmen having inverted stats. Also removed the spears from the swordsmen.
+33). Fixed player receiving mercenary renewing message if he was the king of a existing faction.
+34). Fixed player not receiving a notification that his court was lost if he became the king of existing faction by sucession.
+35). Fixed player faction declaring war/peace without the player input if the latter became king by succession.
+36). Fixed no vassals appearing in the list of vassals that can be awarded a fief after the player conquered it and if he had became king by succession.
+37). Fixed no fiefs appearing in the list of fiefs that could be offered to a companion in exchange of him becoming a lord (King by succession).
+38). Fixed vassals not appearing in list when asking about the mood regarding a fief (King by succession).
+39). Fixed constable reporting that the player faction was not at war with any faction regardless if it was true or not (King by succession).
+40). Fixed option to ask constable about a report of the kingdom's army not appearing (King by succession).
+41). Fixed no fiefs appearing in "Please give me a status report about the garrison of a fief" dialog (King by succession).
+42). Fixed no player kingdom lords appearing in constable prisoner exchange and ransom dialogs (King by succession).
+43). Fixed player kingdom lords appearing in the list of friendly non-player faction lords that the player could ransom (King by succession).
+44). Fixed companion diplomacy missions not working (King by succession).
+45). Fixed player being unable to ask to make peace with a kingdom by talking with one of that kingdom's lords (King by succession).
+46). Fixed player being unable to ask to make peace directly with a king (King by succession).
+47). Fixed player being unable to give troops to a lord from his kingdom (Member of a existing faction).
+48). Fixed player being unable to start a feast through his wife (King by succession).
+49). Fixed bugs that occurred in the character and faction report (King by succession).
+50). Fixed the conversation that happens after a siege not happening if the player became king by succession.
+51). Fixed faction relations appearing incorrectly when joining a battle in the map (Member of a existing faction).
+52). Fixed player not being recognized as king when entering his castle(s) (King by succession).
+53). Fixed player needing to pay to wait in a fief from his kingdom (Member of a existing faction).
+54). Fixed several issues that occurred when the player court's was lost (King by succession).
+55). Fixed diplomatic notifications like alliances and peace proposals not working correctly (King by succession).
+56). Fixed bugs related to mongol camp menu and recruitment (King by succession).
+57). Fixed player inability to move his court through the town menu (King by succession).
+58). Fixed lords wanting to join the player faction not appearing in the player's court (King by succession).
+59). Fixed player being able to incriminate a lord from his own faction (Incriminate commander quest) (Member of a existing faction).
+60). Fixed player not receiving a notification when a center from his faction was lost (Member of a existing faction).
+61). Fixed player not receiving a notification when enemy armies came close to a center from his faction which had a messenger post (Member of a existing faction).
+62). Fixed player not receiving a notification when a village from his faction was raided (King by succession).
+63). Fixed player not receiving a notification when a fief from his faction was under siege (Member of a existing faction).
+64). Fixed player not receiving a notification when a village from his faction started being raided and the player party was within 30km of it (Member of a existing faction).
+65). Fixed marshall from player kingdom being automatically removed when his controversy was too high or if he was captured (player king) (King by succession).
+66). Fixed several issues related to faction relation changes when player king was involved like war declarations and peace (King by succession).
+67). Fixed player not receiving king party bonus from leadership (King by succession).
+68). Fixed player not receiving notification about peace, alliance, defensive pacts and trade offers (King by succession).
+69). Fixed balkan mercenary guisarmers having a one handed axe instead of a two handed.
+70). Fixed minister change of culture not working (King by succession).
+71). Fixed player being unable to customize his custom troops through the constable (King by succession).
+72). Fixed custom troop menu not appearing in towns and castles owned by the player (King by succession).
+73). Fixed player not having any culture in the prince and vassal starts and thus having copies of himself as guards of his fief's castles.
+74). Fixed lords and player receiving vassal quality equipment when they became kings.
+
+
+
+
+
+
+v3.2 (Requires a new game)
+1). Fixed a debug message showing up when besiegers initiated their assault on a fief.
+2). Removed the option to change a lord's culture and equipment. It will now only appear if cheat mode is on.
+3). Reverted changes made by Komke to the castle menu. Player can now enter the castle normally.
+4). Removed some debug messages at game start.
+5). Fixed player receiving items from the troop he bodyslided into after winning a battle.
+6). Fixed script error that occurred when the player changed any of the lord creation thresholds (villages, castles and towns) to 0.
+7). Reverted arena fighters back to vanilla (they no longer spawn with knight gear).
+8). Fixed roving knight spawn rate and max amount options being reverted.
+9). Added two new options to control mongol camp spawns.
+10). Fixed player minister changing faces everytime the player entered the court.
+11). Fixed parties like teutonic crusaders (baltic) changing to deserters faction if the player started as king of their faction.
+12). Fixed player king start incorrect titles.
+13). Fixed player starting with acres on some fiefs.
+14). Fixed patrols entering the garrison of the fief they got assigned to instead of patrolling it. Also increased the amount of troops they spawn with by 200% and limited their patrol radius to 10km.
+15). Fixed marinid ranged cavalry shitty equipment.
+16). Fixed Seljuk armors appearing in mamluk shops.
+17). Fixed player culture lords spawning without any equipment. But you MUST give C5 troops from the CTT tree equipment because the lords will be assigned equipment that those troops are using.
+18). Removed all pretenders from the mod since their rebellions didn't work anyway.
+19). Fixed some weapons not appearing in merchants (warhammers, mauls, sledgehammers, etc).
+20). Fixed several instances of random lords not having names when created.
+21). Reduced the amount of troops that new lords get when they're created.
+22). Fixed two handed axes being the most widespread weapon in the shops. Other two handed weapons will appear as well (some polearms that hardly appeared too).
+23). Fixed issues related to random lords when the player started as king of a Italian culture faction.
+24). Fixed player being "framed" for a king's assassination everytime that happened.
+
+
+
+
+
+
+v3.1 (Requires a new game)
 1). Decapitation now works on town centers/castle courtyards too.
 2). Fixed marshall being appointed even if the player was king. This only happened if the player took control of a existing faction.
 3). Fixed player inability to give a fief to one of his vassals if he became king of a existing faction.
@@ -26,13 +291,30 @@ v3.1
 14). Added Azgad town fights to castles.
 15). Fixed town fights happening when the player was the owner of the fief.
 16). Fixed guards that had the same troop ID as the prison guard of that faction having the prison dialogue.
-17). 
-18). 
-19). 
-20). 
-21). 
-22). 
-23). 
+17). New game: Kingdoms will start campaigning earlier at a new game.
+18). Added kingdom culture to faction notes.
+19). Player will be taken prisoner if he's knocked out during a town fight.
+20). Changed orange text messages to yellow for better visibility.
+21). Fixed player losing relations with village lord if he killed a fugitive.
+22). Fixed execute prisoner dialogue string error.
+23). Player can enter the prison from the town menu if he's the town lord.
+24). Added one on one fights to tournaments again, but this time both participants are restricted to fight on foot and with a two handed sword.
+25). Changed MINIMUM lord creation and threshold options for all fiefs to 0 from 1 like the readme says it does.
+26). Fixed mongolian camps spawning without a set limit and causing performance issues (now the maximum at one time is 20).
+27). Apparently the freelancer equipment bug was fixed. I don't know if this is present in the v3.0 as well.
+28). Reduced the manor spawn radius to 5 from 7. This will decrease the chances of a manor spawning in inaccessible terrain.
+29). Reduced the minimum amount of skills required to enlist in a division in freelancer
+Mounted: 2 or more in riding
+Archery: 2 or more in power draw or throwing or 100 proficiency with crossbows
+Infantry: 2 or more in power strike
+You still need to be of the same level as the troop you want to enlist (so senior knight = level 28).
+
+30). Fixed tavern bounties not working properly. Also fixed village fights activating when the quest was active in that village.
+31). New game: Minor edit to mounted troop levels.
+32). New game: Fixed vassal and prince starts having incorrect titles.
+33). New game: Fixed all noble starts receiving king start item modifiers (e.g. player vassal getting champion horses). Now they receive items on their level.
+34). New game: Fixed Floris bank slots being overriden by new slots and causing the player to already have acres in fiefs in a new game.
+35). Fixed Byzantine tier 3 infantry having tier 5 armor while the tier 4 infantry had tier 4 armor.
 
 
 

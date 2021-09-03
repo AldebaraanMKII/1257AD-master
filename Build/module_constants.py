@@ -2011,6 +2011,7 @@ shields_end = "itm_sumpter_horse"
 
 banner_meshes_begin = "mesh_banner_a01"
 banner_meshes_end_minus_one = "mesh_banner_x21"
+#banner_meshes_end_minus_one = "mesh_arms_a01"  ########## NEW v3.8
 
 arms_meshes_begin = "mesh_arms_a01"
 arms_meshes_end_minus_one = "mesh_arms_x21"
@@ -2038,6 +2039,7 @@ banner_map_icons_end_minus_one = "icon_banner_462"
 
 banner_scene_props_begin = "spr_banner_a"
 banner_scene_props_end_minus_one = "spr_banner_x21"
+#banner_scene_props_end_minus_one = "spr_tavern_chair_a"    ###### NEW v3.8 
 
 khergit_banners_begin_offset = 63
 khergit_banners_end_offset = 84

@@ -1080,7 +1080,6 @@ simple_triggers = [
 [
  
       ####(display_message, "@Executing Simple Trigger 32"),
-(val_add, "$g_lord_long_term_count", 1),
  (try_begin),
    (neg|is_between, "$g_lord_long_term_count", "trp_kingdom_heroes_including_player_begin", active_npcs_end),
    (assign, "$g_lord_long_term_count", "trp_kingdom_heroes_including_player_begin"),
@@ -1112,6 +1111,7 @@ simple_triggers = [
  
    (try_begin),
      (eq, ":fief_found", -1),
+     (is_between, ":troop_no", active_npcs_begin, active_npcs_end), ######## NEW v3.8
      (store_faction_of_troop, ":original_faction", ":troop_no"),
      (faction_get_slot, ":faction_leader", ":original_faction", slot_faction_leader),
      (troop_get_slot, ":troop_reputation", ":troop_no", slot_lord_reputation_type),
@@ -1121,7 +1121,7 @@ simple_triggers = [
        (try_begin),
          (eq, "$g_landless_vassals_compensation", 1),
          (eq, ":faction_leader", "trp_player"),
-            (assign, ":cost_orig", 2000),
+         (assign, ":cost_orig", 2000),
          (assign, ":cost", ":cost_orig"),
          (try_begin),
            (store_skill_level, ":player_persuasion_skill", "skl_persuasion", "trp_player"),
@@ -1330,6 +1330,7 @@ simple_triggers = [
    (call_script, "script_troop_change_relation_with_troop", ":troop_no", ":active_npc", 1),
    (val_add, "$total_relation_changes_through_convergence", 1),
  (try_end),        
+(val_add, "$g_lord_long_term_count", 1),  ######## NEW v3.8 - moved this down here
 ]),
 ########################################################################
 
@@ -2100,6 +2101,7 @@ simple_triggers = [
      #######PROSPERITY SYSTEM TAXES
      
      (val_add, ":accumulated_rents", ":cur_rents"), ######cur rents changes between 23..1000
+     (val_clamp, ":accumulated_rents", 0, 30000), ###### NEW v3.8
      (party_set_slot, "$g_accumulate_taxes_cur_center", slot_center_accumulated_rents, ":accumulated_rents"),
    (try_end),
    
@@ -6631,7 +6633,7 @@ simple_triggers = [
 (0.23,  ########################## once a week for each of the 733 centers
 [
  
-      ####(display_message, "@Executing Simple Trigger 125"),
+####(display_message, "@Executing Simple Trigger 125"),
 (try_begin),
    (lt, "$g_change_prosperity_cur_center", centers_begin), 
    (assign, "$g_change_prosperity_cur_center", centers_begin),

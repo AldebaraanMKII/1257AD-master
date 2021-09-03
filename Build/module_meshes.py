@@ -911,7 +911,7 @@ meshes = [
   ("banner_kingdom_29", 0, "banner_x15", 0, 0, 0, -90, 0, 0, 1, 1, 1),
   ("banner_kingdom_30", 0, "banner_x16", 0, 0, 0, -90, 0, 0, 1, 1, 1),
   ("banner_kingdom_31", 0, "banner_x17", 0, 0, 0, -90, 0, 0, 1, 1, 1),
-    ("banner_kingdom_32", 0, "banner_x06", 0, 0, 0, -90, 0, 0, 1, 1, 1),
+  ("banner_kingdom_32", 0, "banner_x06", 0, 0, 0, -90, 0, 0, 1, 1, 1),
   ("banner_kingdom_21", 0, "banner_x06", 0, 0, 0, -90, 0, 0, 1, 1, 1),
 
   ("arms_a01", 0, "banner_a01", 0, 0, 0, -90, 0, 0, 1, 1, 1),
