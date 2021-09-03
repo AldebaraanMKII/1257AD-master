@@ -220,7 +220,7 @@ parties = [
     ("town_31_2", "Marakesh", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-141.68), scale_f(-129.54)), []),
     ("town_31_3", "Oran", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-97.51), scale_f(-104.26)), []),
   
-    ("town_32_1", "Venezia", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.62), scale_f(-24.59)), []),  
+    ("town_32_1", "Venezia", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.82), scale_f(-24.59)), []),  
     ("town_32_2", "Candia", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (110.84, -156.98), []),  
     ("town_32_3", "Ragusa", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (35.51, -64.53), []),  
    
