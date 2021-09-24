@@ -6166,20 +6166,20 @@ dialogs = [
 
    
 ####### NEW v3.1-KOMKE START-disabled
-#    [anyone|plyr, "minister_talk",
-#    [
-#    (neg|is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
-#    ],
-# "I wish for you to retire as minister.", "minister_replace", []],
+   [anyone|plyr, "minister_talk",
+   [
+   (neg|is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
+   ],
+"I wish for you to retire as minister.", "minister_replace", []],
 
-#    [anyone|plyr, "minister_talk",
-#    [
-#    (is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
-#     (neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),
-# 
-#    ],
-# "I wish you to rejoin my party.", "minister_replace", []],
-####### NEW v3.1-KOMKE END- 
+   [anyone|plyr, "minister_talk",
+   [
+   (is_between, "$g_player_minister", active_npcs_begin, active_npcs_end),
+    (neg|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_hero),
+
+   ],
+"I wish you to rejoin my party.", "minister_replace", []],
+# ####### NEW v3.1-KOMKE END- 
    
    
    [anyone|plyr, "minister_talk",
@@ -13745,7 +13745,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     # (call_script, "script_appoint_faction_marshall", "fac_player_supporters_faction", "trp_player"),
     (call_script, "script_appoint_faction_marshall", "$players_kingdom", "trp_player"),
     (store_current_hours, ":hours"),
-    (assign, "$g_recalculate_ais", 1),
+    # (assign, "$g_recalculate_ais", 1),
+    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     (assign, "$g_player_faction_last_marshal_appointment", ":hours"),
     
     (try_begin),
@@ -13787,7 +13788,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
         (try_end),    
     (try_end),    
     
-    (assign, "$g_recalculate_ais", 1),
+    # (assign, "$g_recalculate_ais", 1),
+    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     
     ]],
     
@@ -13825,7 +13827,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
             (troop_set_slot, ":active_npc", slot_troop_stance_on_faction_issue, -1),
         (try_end),    
     (try_end),
-    (assign, "$g_recalculate_ais", 1),
+    # (assign, "$g_recalculate_ais", 1),
+    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     ]],
     
     
@@ -13884,7 +13887,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr, "minister_diplomatic_initiative_type_select",
    [(eq, "$g_faction_selected", "fac_papacy"),
     # (eq, "$players_kingdom", "fac_player_supporters_faction"),
-    (eq, "$players_kingdom", "$players_kingdom"), ############ NEW v3.3
+    #######(eq, "$players_kingdom", "$players_kingdom"), ############ NEW v3.3
+    (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ######### NEW v3.8
     (faction_slot_eq, "$players_kingdom", slot_faction_religion, religion_catholic),
     # (store_relation, ":relation", "fac_player_supporters_faction", "$g_faction_selected"),
     (store_relation, ":relation", "$players_kingdom", "$g_faction_selected"),
@@ -14009,70 +14013,70 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr, "minister_diplomatic_dispatch_confirm",[], "Actually, hold off on that", "minister_pretalk",[]],
 
 ####### NEW v3.1-KOMKE START-disabled
-# [anyone, "minister_replace", [], "Very good. Whom will you appoint in my stead?", "minister_replace_select", []],
-# 
-# [anyone|plyr|repeat_for_troops, "minister_replace_select",
-#    [
-#    (store_repeat_object, ":troop_no"),
-#    (is_between, ":troop_no", companions_begin, companions_end),
-#    (main_party_has_troop, ":troop_no"),
-#    (troop_slot_eq, ":troop_no", slot_troop_prisoner_of_party, -1),
-#    (str_store_troop_name, s4, ":troop_no"),
-#    ], "{s4}", "minister_replace_confirm",
-#    [
-#    (store_repeat_object, "$g_player_minister"),
-#    ]],
-# 
-#    [anyone|plyr, "minister_replace_select",
-#    [
-#    (troop_get_slot, ":spouse", "trp_player", slot_troop_spouse),
-#    (gt, ":spouse", 0),
-#    (troop_get_type, ":is_female", ":spouse"),
-#    (neg|troop_slot_eq, ":spouse", slot_troop_occupation, slto_kingdom_hero),
-#    (eq, ":is_female", 1),
-#    (str_store_troop_name, s4, ":spouse"),
-#    (neq, ":spouse", "$g_talk_troop"),
-# 
-#    ], "My wife, {s4}.", "minister_replace_confirm", #husband disabled, as he's an active lord
-#    [
-#    (troop_get_slot, "$g_player_minister", "trp_player", slot_troop_spouse),
-#    ]],
-# 
-# [anyone|plyr, "minister_replace_select", [], "Actually, hold off on that.", "minister_pretalk", []],
-# 
-# 
-# 
-# 
-# [anyone, "minister_replace_confirm",
-#    [
-#    (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_player_companion),
-#    ], "Very good. {s9} is your new minister. I shall make ready to rejoin you.", "close_window",
-#    [
-#    (str_store_troop_name, s9, "$g_player_minister"),
-#    (party_add_members, "p_main_party", "$g_talk_troop", 1), 
-#    (assign, "$g_leave_encounter", 1),
-#    (try_begin),
-#       (main_party_has_troop, "$g_player_minister"),
-#       (party_remove_members, "p_main_party", "$g_player_minister", 1), 
-#    (try_end),
-# 
-#    (try_for_range, ":minister_quest", all_quests_begin, all_quests_end),
-#     (quest_slot_eq, ":minister_quest", slot_quest_giver_troop, "$g_talk_troop"),
-#     (call_script, "script_abort_quest", ":minister_quest", 0),
-#    (try_end),
-#    ]],
-# 
-# [anyone, "minister_replace_confirm",
-#    [
-#    ], "Very good. {s9} is your new minister. It has been an honor to serve you.", "close_window",
-#    [
-#    (str_store_troop_name, s9, "$g_player_minister"),
-#    (try_begin),
-#     (main_party_has_troop, "$g_player_minister"),
-#     (party_remove_members, "p_main_party", "$g_player_minister", 1), 
-#    (try_end),
-# 
-#    ]],
+[anyone, "minister_replace", [], "Very good. Whom will you appoint in my stead?", "minister_replace_select", []],
+
+[anyone|plyr|repeat_for_troops, "minister_replace_select",
+   [
+   (store_repeat_object, ":troop_no"),
+   (is_between, ":troop_no", companions_begin, companions_end),
+   (main_party_has_troop, ":troop_no"),
+   (troop_slot_eq, ":troop_no", slot_troop_prisoner_of_party, -1),
+   (str_store_troop_name, s4, ":troop_no"),
+   ], "{s4}", "minister_replace_confirm",
+   [
+   (store_repeat_object, "$g_player_minister"),
+   ]],
+
+   [anyone|plyr, "minister_replace_select",
+   [
+   (troop_get_slot, ":spouse", "trp_player", slot_troop_spouse),
+   (gt, ":spouse", 0),
+   (troop_get_type, ":is_female", ":spouse"),
+   (neg|troop_slot_eq, ":spouse", slot_troop_occupation, slto_kingdom_hero),
+   (eq, ":is_female", 1),
+   (str_store_troop_name, s4, ":spouse"),
+   (neq, ":spouse", "$g_talk_troop"),
+
+   ], "My wife, {s4}.", "minister_replace_confirm", #husband disabled, as he's an active lord
+   [
+   (troop_get_slot, "$g_player_minister", "trp_player", slot_troop_spouse),
+   ]],
+
+[anyone|plyr, "minister_replace_select", [], "Actually, hold off on that.", "minister_pretalk", []],
+
+
+
+
+[anyone, "minister_replace_confirm",
+   [
+   (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_player_companion),
+   ], "Very good. {s9} is your new minister. I shall make ready to rejoin you.", "close_window",
+   [
+   (str_store_troop_name, s9, "$g_player_minister"),
+   (party_add_members, "p_main_party", "$g_talk_troop", 1), 
+   (assign, "$g_leave_encounter", 1),
+   (try_begin),
+      (main_party_has_troop, "$g_player_minister"),
+      (party_remove_members, "p_main_party", "$g_player_minister", 1), 
+   (try_end),
+
+   (try_for_range, ":minister_quest", all_quests_begin, all_quests_end),
+    (quest_slot_eq, ":minister_quest", slot_quest_giver_troop, "$g_talk_troop"),
+    (call_script, "script_abort_quest", ":minister_quest", 0),
+   (try_end),
+   ]],
+
+[anyone, "minister_replace_confirm",
+   [
+   ], "Very good. {s9} is your new minister. It has been an honor to serve you.", "close_window",
+   [
+   (str_store_troop_name, s9, "$g_player_minister"),
+   (try_begin),
+    (main_party_has_troop, "$g_player_minister"),
+    (party_remove_members, "p_main_party", "$g_player_minister", 1), 
+   (try_end),
+
+   ]],
 ####### NEW v3.1-KOMKE END- 
 
 
@@ -21494,7 +21498,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 #only as suggestion
        [anyone|plyr, "lord_give_order", [
-    (neg|faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"), #not an order,  only a suggestion
+	   ##### NEW v3.8
+    #######(neg|faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"), #not an order,  only a suggestion 
 ],
 "There is a fortress which can easily be taken. Go to..", "lord_give_order_details_ask",
    [
@@ -21763,7 +21768,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, "$player_marshal_ai_state", sfai_gathering_army),
    (assign, "$player_marshal_ai_object", "p_main_party"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
-   (assign, "$g_recalculate_ais", 1),
+   # (assign, "$g_recalculate_ais", 1),
+   (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
 [anyone|plyr, "lord_talk",
@@ -21789,7 +21795,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, "$player_marshal_ai_state", sfai_default),
    (assign, "$player_marshal_ai_object", -1),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
-   (assign, "$g_recalculate_ais", 1),
+   # (assign, "$g_recalculate_ais", 1),
+   (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
 [anyone|plyr, "lord_talk", [
@@ -24513,7 +24520,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (val_min, ":relation", -40),
       (call_script, "script_set_player_relation_with_faction", "$players_oath_renounced_against_kingdom", ":relation"),
       (call_script, "script_update_all_notes"),
-      (assign, "$g_recalculate_ais", 1),
+      # (assign, "$g_recalculate_ais", 1),
+      (call_script, "script_recalculate_ais_for_faction", "fac_player_supporters_faction"), ###### NEW v3.8
+      (call_script, "script_recalculate_ais_for_faction", "$players_oath_renounced_against_kingdom"), ###### NEW v3.8
     (try_end),
         
     (try_begin),
@@ -25378,7 +25387,8 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
 
    (faction_set_slot, "$g_talk_troop_faction", slot_faction_marshall, "trp_player"),
    (faction_set_slot, "$g_talk_troop_faction", slot_faction_ai_state, sfai_default),
-   (assign, "$g_recalculate_ais", 1),
+   # (assign, "$g_recalculate_ais", 1),
+   (call_script, "script_recalculate_ais_for_faction", "$g_talk_troop_faction"), ###### NEW v3.8
    ]],
 
 [anyone|plyr, "lord_suggest_action", [(neq, "$talk_context", tc_siege_commander)],
@@ -27024,12 +27034,12 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  ]],
 
 ####### NEW v3.1-KOMKE START-disabled
-# [anyone|plyr, "spouse_talk",
-#    [
-#    (eq, "$g_player_minister", "$g_talk_troop"),
-#    ],
-# "As you are my chief minister, I wish to speak to about affairs of state", "minister_issues",[
-#  ]],
+[anyone|plyr, "spouse_talk",
+   [
+   (eq, "$g_player_minister", "$g_talk_troop"),
+   ],
+"As you are my chief minister, I wish to speak to about affairs of state", "minister_issues",[
+ ]],
  ####### NEW v3.1-KOMKE END- 
 
 [anyone|plyr, "spouse_talk", [
@@ -27322,7 +27332,6 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [(neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),],
 "I shall send word, then, that we will host a feast as soon as conditions in the realm permit. You perhaps should continue to stock our larder, so that we may do justice to our reputation for hospitality.",   "spouse_pretalk",[
 
-   
     (assign, ":feast_venue", -1),
     (try_begin),
         (is_between, "$g_encountered_party", walled_centers_begin, walled_centers_end),
@@ -27370,7 +27379,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (assign, "$player_marshal_ai_state", sfai_feast),
    (assign, "$player_marshal_ai_object", "$g_player_court"),
    
-   (assign, "$g_recalculate_ais", 1),
+   # (assign, "$g_recalculate_ais", 1),
+   (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),  ####### NEW v3.8
    (assign, reg4, 1),
    (try_begin),
     (neq, "$g_encountered_party", "$g_player_court"),
@@ -39235,13 +39245,24 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 ################################# NEW v2.1 
 ##Floris - Bugfix for DPLMC patrols 
-       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
+       # (party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
+	   ########## NEW v3.8 - fix faction not becoming hostile after being attacking some types of parties
+       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_patrol),
+       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_merc_party),
+       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_war_party),
+       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_scout),
+       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_mercenary_company),
+       (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_forager),
+       (party_slot_eq, "$g_encountered_party", slot_party_type, spt_prisoner_train),
+	   ##################
        (store_relation, ":rel", "$g_encountered_party_faction", "$players_kingdom"), ##### NEW v3.3
         (try_begin),
           (gt, ":rel", 0),
-          (val_sub, ":rel", 10),
+           (val_sub, ":rel", 10),  
+          # (val_sub, ":rel", 3),  ######## NEW v3.8 
         (try_end),
         (val_sub, ":rel", 5),
+        # (val_sub, ":rel", 3),  ######## NEW v3.8 
         (call_script, "script_set_player_relation_with_faction", "$g_encountered_party_faction", ":rel"),
     ### Troop commentaries changes begin
         (call_script, "script_diplomacy_party_attacks_neutral", "p_main_party", "$g_encountered_party"),
@@ -39598,7 +39619,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    (assign, "$player_marshal_ai_state", sfai_feast),
    (assign, "$player_marshal_ai_object", ":venue"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
-   (assign, "$g_recalculate_ais", 1),
+   # (assign, "$g_recalculate_ais", 1),
+   (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    (str_store_party_name, s4, ":venue"),
 
      ]],
@@ -39620,7 +39642,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    (assign, "$player_marshal_ai_state", sfai_gathering_army),
    (assign, "$player_marshal_ai_object", "p_main_party"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
-   (assign, "$g_recalculate_ais", 1),
+   # (assign, "$g_recalculate_ais", 1),
+   (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
 
@@ -39636,7 +39659,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    (assign, "$player_marshal_ai_state", sfai_default),
    (assign, "$player_marshal_ai_object", -1),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
-   (assign, "$g_recalculate_ais", 1),
+   # (assign, "$g_recalculate_ais", 1),
+   (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
 
      ]],
 

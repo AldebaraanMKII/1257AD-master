@@ -7724,8 +7724,10 @@ presentations = [
         (set_container_overlay, reg1),
 
         (assign, ":try_end", banner_meshes_end_minus_one),
-        (store_sub, ":num_npc_kingdoms", npc_kingdoms_end, npc_kingdoms_begin), ## CC
-        (val_sub, ":try_end", ":num_npc_kingdoms"), #do not allow kingdom banners to be selected
+		######### NEW v3.8 - faction banners can be selected
+        ##(store_sub, ":num_npc_kingdoms", npc_kingdoms_end, npc_kingdoms_begin), ## CC
+        ##(val_sub, ":try_end", ":num_npc_kingdoms"), #do not allow kingdom banners to be selected
+		###########################
         # (store_mul, ":begin_mesh", 16, "$g_presentation_page_no"),
         # (val_add, ":begin_mesh", banner_meshes_begin),
         # (store_add, ":try_end_2", ":begin_mesh", 16),
@@ -8932,7 +8934,8 @@ presentations = [
               (eq, "$g_presentation_marshall_selection_max_renown_1_troop", "trp_player"),
               (call_script, "script_change_player_relation_with_troop", "$g_presentation_marshall_selection_max_renown_2_troop", -3),
             (try_end),
-            (assign, "$g_recalculate_ais", 1),
+            # (assign, "$g_recalculate_ais", 1),
+            (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
             (assign, "$g_presentation_marshall_selection_ended", 1),
             (presentation_set_duration, 0),
           (try_end),
@@ -11637,7 +11640,7 @@ presentations = [
       (overlay_set_area_size, "$g_presentation_obj_bugdet_report_container", pos1),
       (set_container_overlay, "$g_presentation_obj_bugdet_report_container"),
 
-      (game_get_reduce_campaign_ai, ":reduce_campaign_ai"),
+      # (game_get_reduce_campaign_ai, ":reduce_campaign_ai"),
       (try_begin),
         #(eq, ":reduce_campaign_ai", 0), #hard
         (eq, "$tom_difficulty_fief", 0), #hard
@@ -12112,7 +12115,7 @@ presentations = [
         (overlay_set_position, reg1, pos1),
         (val_sub, ":cur_y", 27),
       (try_end),
-
+######################### GARRISON
       (try_for_parties, ":party_no"),
         (party_is_active, ":party_no"),  ########## NEW v2.6 - bugfix
         (assign, ":garrison_troop", 0),
@@ -12149,6 +12152,13 @@ presentations = [
           (val_mul, ":cur_wage", ":stack_size"),
           (val_add, ":total_wage", ":cur_wage"),
         (try_end),
+		############# NEW v3.8
+        (try_begin),
+		  (party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
+            (val_div, ":total_wage", 100),
+            (val_mul, ":total_wage", 65),  ######## 35% less
+        (try_end),
+		##########################
         (try_begin),
         ##tom
           (eq, ":garrison_troop", 1),
@@ -21529,7 +21539,7 @@ presentations = [
       (assign, ":var1", 0),
       (assign, ":var2", 0),
       (assign, ":var3", 0),
-      (assign, ":var4", 0),
+      # (assign, ":var4", 0),
       (try_begin),
         (neq, "$g_option_ratio_bar_is_global", 1),
         (try_for_agents, ":var5"),

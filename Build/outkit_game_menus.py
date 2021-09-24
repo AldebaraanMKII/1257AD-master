@@ -282,6 +282,7 @@ game_menus = [
 		        (try_begin),
 				  (party_slot_ge, "$g_encountered_party", slot_outpost_patrol, 1),  
 				  (party_get_slot, ":patrol", "$g_encountered_party", slot_outpost_patrol),
+				  (gt, ":patrol", 0),
 				  (party_is_active, ":patrol"),
 				  (remove_party, ":patrol"),
 		        (try_end),
@@ -705,7 +706,45 @@ game_menus = [
           ], "Go inside."),
       
       # Add any custom menu items you want AFTER this point otherwise the passages will get messed up
-		  
+		################# NEW v3.8
+			("fort_demolish", 
+			[
+		    (party_get_slot, ":level", "$g_encountered_party", slot_outpost_level),
+		    (store_mul, reg10, ":level", 3000),
+			],
+				"Demolish your fort. ({reg10} coins)",
+	        [(store_troop_gold, ":gold_amount", "trp_player"),
+		     (try_begin),
+		        (ge, ":gold_amount", reg10),
+		        (party_slot_ge, "$g_encountered_party", slot_outpost_level, 1),
+				# (party_relocate_near_party, "p_main_party", "$g_encountered_party", 1),             
+				(rest_for_hours, 2, 5, 1), # Lumos: This is the last one.
+			    # (disable_party, "$g_encountered_party"),
+			    (display_message, "@Fort demolished."),
+			    (party_set_slot, "$g_encountered_party", slot_outpost_level, 0),
+				(party_set_slot, "$g_encountered_party", slot_outpost_patrol, 0),
+				(remove_party, "$g_encountered_party"),
+				(assign, "$current_outpost", -1),
+				########## NEW v3.7
+				(assign, "$g_outpost_count", 0),  
+				############ NEW v3.8 - not player
+		        (try_begin),
+				  (party_slot_ge, "$g_encountered_party", slot_outpost_patrol, 1),  
+				  (party_get_slot, ":patrol", "$g_encountered_party", slot_outpost_patrol),
+				  (gt, ":patrol", 0),
+				  (party_is_active, ":patrol"),
+				  (remove_party, ":patrol"),
+		        (try_end),
+				############
+				##############################
+				(change_screen_return),
+		     (else_try),
+		        (lt, ":gold_amount", reg10),
+		        (display_message, "@You don't have enough money to demolish the fort!"),
+		     (try_end),
+		    ]),
+			
+		##############################
       ("fort_leave",[],"Leave...",[
             (assign, "$g_permitted_to_center",0),
             (change_screen_return,0),

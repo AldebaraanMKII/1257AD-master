@@ -5624,6 +5624,16 @@ game_menus = [ #
    [
      (call_script, "script_get_player_party_morale_values"),
 
+    ######### NEW v3.8
+    (str_clear, s1),
+    (str_clear, s2),
+    (str_clear, s3),
+    (str_clear, s4),
+    (str_clear, s5),
+    (str_clear, s6),
+    (str_clear, s7),
+    (str_clear, s8),
+	###########################
     (assign, ":target_morale", reg0),
     (assign, reg1, "$g_player_party_morale_modifier_party_size"),
     (try_begin),
@@ -5640,7 +5650,12 @@ game_menus = [ #
     (else_try),
       (str_store_string, s3, "str_space"),
     (try_end),
-
+  
+    ########### food_variety_s4 reg3 s5 s6
+    ########### ^Food variety: {s4}{reg3}{s5}{s6}{s8}^
+	############### https://media.discordapp.net/attachments/811305336690049056/884450393755623424/2021-09-06_08_49_38-Weird_words_2.png_-_Photos.png
+	############ reg3 = +12
+	############# s8 = bug
     (try_begin),
       (gt, "$g_player_party_morale_modifier_no_food", 0),
       (assign, reg7, "$g_player_party_morale_modifier_no_food"),
@@ -5673,7 +5688,7 @@ game_menus = [ #
       (str_store_string, s7, "str_space"),
     (try_end),
 
-       (assign, reg6, 50),
+    (assign, reg6, 50),
 
     (str_store_string, s1, "str_current_party_morale_is_reg5_current_party_morale_modifiers_are__base_morale__50_party_size_s2reg1_leadership_s3reg2_food_variety_s4reg3s5s6_recent_events_s7reg4_total__reg5___"),
 
@@ -6556,6 +6571,16 @@ game_menus = [ #
    [(call_script, "script_game_get_party_companion_limit"),
     (assign, ":party_size_limit", reg0),
 
+	######### NEW v3.8
+	(str_clear, s1),
+	(str_clear, s2),
+	(str_clear, s3),
+	(str_clear, s4),
+	(str_clear, s5),
+	(str_clear, s6),
+	(str_clear, s7),
+	(str_clear, s8),
+	##################
 	
 	############# NEW v2.0
     (assign, ":base_size", "$g_party_base_size"), 
@@ -13227,14 +13252,13 @@ game_menus = [ #
      (assign, ":max_skill_owner", reg1),
      (assign, reg2, ":max_skill"),
      
-     (assign, ":improvement_cost_original", ":improvement_cost"),
-     (assign, ":improvement_cost_original2", ":improvement_cost"),
-     (assign, ":improvement_cost_original3", ":improvement_cost"),
+     #######(assign, ":improvement_cost_original", ":improvement_cost"),
+     #######(assign, ":improvement_cost_original2", ":improvement_cost"),
+     #######(assign, ":improvement_cost_original3", ":improvement_cost"),
 
-     
-     (assign, ":improvement_time_original", ":improvement_time"),
-     (assign, ":improvement_time_original2", ":improvement_time"),
-     (assign, ":improvement_time_original3", ":improvement_time"),
+     #######(assign, ":improvement_time_original", ":improvement_time"),
+     #######(assign, ":improvement_time_original2", ":improvement_time"),
+     #######(assign, ":improvement_time_original3", ":improvement_time"),
 
      (store_sub, ":multiplier", 20, ":max_skill"),
      (val_mul, ":improvement_cost", ":multiplier"),
@@ -19293,10 +19317,11 @@ game_menus = [ #
              (neq, ":cur_kingdom", "$g_notification_menu_var1"),
              (store_relation, ":reln", ":cur_kingdom", "fac_player_supporters_faction"),
              (set_relation, ":cur_kingdom", "$g_notification_menu_var1", ":reln"),
+             (call_script, "script_recalculate_ais_for_faction", ":cur_kingdom"), ###### NEW v3.8
            (try_end),
            (assign, "$supported_pretender", 0),
            (assign, "$supported_pretender_old_faction", 0),
-           (assign, "$g_recalculate_ais", 1),
+           # (assign, "$g_recalculate_ais", 1),
            (call_script, "script_update_all_notes"),
          (try_end),
          (change_screen_return),
@@ -21715,7 +21740,30 @@ game_menus = [ #
         (jump_to_menu, "mnu_manor_improve_menu"), 
         #(change_screen_return),
       ]),
+############# NEW v3.8
+      ("manor_wait",
+       [
+	    (party_slot_ge, "$g_encountered_party", manor_slot_houses, 1),
+        (party_slot_eq, "$g_encountered_party", slot_town_lord, "trp_player"),
+        ],
+         "Wait here for some time.",
+         [
+           (assign, "$auto_enter_town", "$g_encountered_party"),
+           (assign, "$g_last_rest_center", "$g_encountered_party"),
 
+           (try_begin),
+             (party_is_active, "p_main_party"),
+             (party_get_current_terrain, ":cur_terrain", "p_main_party"),
+             (try_begin),
+               (eq, ":cur_terrain", rt_desert),
+               (unlock_achievement, ACHIEVEMENT_SARRANIDIAN_NIGHTS),
+             (try_end),
+           (try_end),
+
+           (rest_for_hours_interactive, 24 * 7, 5, 1), #rest while attackable
+           (change_screen_return),
+          ]),
+####################
       ("manor_leave",
       [],
       "Leave.",
@@ -32018,7 +32066,8 @@ game_menus = [ #
           # (store_faction_of_troop, ":faction", "trp_player"),
           (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
           (try_for_range, ":faction2", kingdoms_begin, kingdoms_end),
-            (party_slot_eq, ":faction2", slot_faction_state, sfs_active),
+            (neq, ":faction2", "$players_kingdom"),
+            ########(party_slot_eq, ":faction2", slot_faction_state, sfs_active),
             (store_relation, ":cur_relation", "$players_kingdom", ":faction2"),
             (lt, ":cur_relation", 0), #AT WAR
               (call_script, "script_diplomacy_start_peace_between_kingdoms", "$players_kingdom", ":faction2", 1), 
@@ -32119,7 +32168,7 @@ game_menus = [ #
     ]+[("choose_faction_1"+str(x+1),
         [
         (store_add, ":faction", kingdoms_begin, x),
-        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
+        ########(party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
         ], "{s0}",
         [
@@ -32143,7 +32192,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
-        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
+        ########((party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32166,7 +32215,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
-        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
+        ########((party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32190,7 +32239,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
-        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
+        ########((party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32214,7 +32263,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
-        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
+        ########((party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [
@@ -32238,7 +32287,7 @@ game_menus = [ #
     ]+[("export_import_npc"+str(x+1),
       [
         (store_add, ":faction", kingdoms_begin, x),
-        (party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
+        ########((party_slot_eq, ":faction", slot_faction_state, sfs_active),  ####### NEW v3.8
         (str_store_faction_name, s0, ":faction"),
       ], "{s0}",
       [

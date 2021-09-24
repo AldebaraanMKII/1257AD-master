@@ -249,13 +249,14 @@ simple_triggers = [
       ####(display_message, "@Executing Simple Trigger 7"),
 ######this was an unused trigger for some strange religion thing - tom
     (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
-    (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
+    # (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
+    (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######### NEW v3.8
     (faction_slot_eq, "$players_kingdom", slot_faction_ai_state, sfai_feast),
 
     (store_current_hours, ":cur_hours"),
     (faction_get_slot, ":fest_hours", "$players_kingdom", slot_faction_ai_current_state_started),
     (val_sub, ":cur_hours", ":fest_hours"),
-    (gt, ":cur_hours", 24*7), ######ongoing for a week?
+    (gt, ":cur_hours", 168), ######ongoing for a week?
     (call_script, "script_faction_conclude_feast", "$players_kingdom", sfai_feast),
     (display_message, "@Your kingdoms feast have concluded."),
     ######tom
@@ -3036,7 +3037,7 @@ simple_triggers = [
  (call_script, "script_forage_for_food"),
  
  ######### backup original number for message display
- (assign, ":orig_men", ":num_men"),
+ # (assign, ":orig_men", ":num_men"),
  (try_begin),
    ######### set min consumption to 1 unit of food in inventory
    (ge, reg4, ":num_men"),
@@ -5244,7 +5245,7 @@ simple_triggers = [
           (troop_add_items, "trp_household_possessions", "itm_bread", ":amount"),
         (else_try),
           (remove_party, ":spouse_party"),
-          (troop_set_slot, ":player_spouse", slot_troop_cur_center, "$g_player_court"),
+          ##### (troop_set_slot, ":player_spouse", slot_troop_cur_center, "$g_player_court"),
         (try_end),
       (try_end),
     (try_end),
@@ -5909,7 +5910,7 @@ simple_triggers = [
       (eq, ":party_template", "pt_sea_raiders"),
       
       (party_is_active, ":party"),
-      (store_party_size_wo_prisoners, ":party_size", ":party"),
+      # (store_party_size_wo_prisoners, ":party_size", ":party"),
       (party_get_battle_opponent, ":opponent", ":party"),
 
       (try_begin),
@@ -6017,6 +6018,48 @@ simple_triggers = [
  ######### (1, ######TOM was 1
  (2, ######TOM was 1
  [
+################## NEW v3.8 - fixed patrols assigned to reinforce not reinforcing anything - this is here because of savegame compatibility
+    (try_for_parties, ":party_no"),
+      (party_slot_eq,":party_no", slot_party_type, spt_patrol),
+      (party_is_active, ":party_no"),
+	  
+      (try_begin),
+        (get_party_ai_behavior, ":ai_behavior", ":party_no"),
+        (eq, ":ai_behavior", ai_bhvr_travel_to_party),
+        (party_get_slot, ":target_party", ":party_no", slot_party_ai_object),
+
+        (try_begin),
+          (gt, ":target_party", 0),
+          (store_distance_to_party_from_party, ":distance_to_target", ":party_no", ":target_party"),
+          (le, ":distance_to_target", 5),
+          # (try_begin), #SB : drop off prisoners
+            # (le, ":distance_to_target", 3),
+            # (is_between, ":target_party", walled_centers_begin, walled_centers_end),
+            # (call_script, "script_party_prisoners_add_party_prisoners", ":target_party", ":party_no"), #DA 3.10.2019: fix to put prisoners in the dungeon and not in the garrison
+            # (call_script, "script_party_add_party_prisoners", ":target_party", ":party_no"),
+            # (call_script, "script_party_remove_all_prisoners", ":party_no"),
+          # (try_end),
+          (try_begin),
+            (party_get_slot, ":ai_state", ":party_no", slot_party_ai_state),
+            (eq, ":ai_state", spai_retreating_to_center),
+            (try_begin),
+              (le, ":distance_to_target", 1),
+              (call_script, "script_party_add_party", ":target_party", ":party_no"),
+              (remove_party, ":party_no"),
+            (try_end),
+          (else_try),
+            (party_get_position, pos1, ":target_party"),
+            (party_set_ai_behavior,":party_no", ai_bhvr_patrol_location),
+            (party_set_ai_patrol_radius, ":party_no", 1),
+            (party_set_ai_target_position, ":party_no", pos1),
+          (try_end),
+          
+        # (else_try),
+          # #remove party?
+        (try_end),
+      (try_end),
+    (try_end),
+##################################################
 
       ####(display_message, "@Executing Simple Trigger 117"),
 ############# NEW v1.8
@@ -6457,6 +6500,17 @@ simple_triggers = [
       (party_set_slot, ":manor_id", manor_slot_population, ":population"),
       (party_set_slot, ":manor_id", manor_slot_last_tax, ":gold"),
       (party_set_slot, ":manor_id", manor_slot_gold, ":manor_gold"),
+	  ######## NEW v3.8
+      (try_begin),
+        (eq, ":village_lord", "trp_player"),
+        (gt, ":manor_gold", 0),
+          (assign, reg0, ":gold"),
+          (str_store_party_name_link, s6, ":village"), 
+          (call_script, "script_dplmc_pay_into_treasury_no_comment", ":manor_gold"),
+          (display_message, "@{reg0} coins collected from {s6}'s manor added to treasury."),
+          (party_set_slot, ":manor_id", manor_slot_gold, 0),
+      (try_end),
+	  ################
       ######(troop_add_gold, "trp_manor_seneschal", ":gold"),
     (try_end),
     
@@ -6464,9 +6518,8 @@ simple_triggers = [
   
   (168,#developing buildings
   [
- 
       ####(display_message, "@Executing Simple Trigger 122"),
-   (troop_get_slot, ":amount", "trp_manor_array", 0),
+    (troop_get_slot, ":amount", "trp_manor_array", 0),
     (try_for_range, ":slot", 1, ":amount"),
       (troop_get_slot, ":manor_id", "trp_manor_array", ":slot"),
       (party_get_slot, ":village", ":manor_id", slot_village_bound_center), 
@@ -6532,6 +6585,37 @@ simple_triggers = [
       (party_set_slot, ":manor_id", manor_slot_gold, ":taxes"),
       #######TODO - population increase?
     (try_end),
+	
+	
+#################### NEW v3.8 - this goes here because of savegame compatibility
+    # (try_for_parties, ":party_no"),
+      # (party_slot_eq,":party_no", slot_party_type, spt_patrol),
+
+      # (party_get_slot, ":ai_state", ":party_no", slot_party_ai_state),
+      # (eq, ":ai_state", spai_patrolling_around_center),
+
+      # (try_begin),
+		# (party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
+        # (assign, ":total_wage", 0),
+        # (party_get_num_companion_stacks, ":num_stacks", ":party_no"),
+        # (try_for_range, ":i_stack", 0, ":num_stacks"),
+          # (party_stack_get_troop_id, ":stack_troop", ":party_no", ":i_stack"),
+          # (party_stack_get_size, ":stack_size", ":party_no", ":i_stack"),
+          # (call_script, "script_game_get_troop_wage", ":stack_troop", 0),
+          # (val_mul, reg0, ":stack_size"),
+          # (val_add, ":total_wage", reg0),
+        # (try_end),
+        # (store_troop_gold, ":gold", "trp_household_possessions"),
+        # (try_begin),
+          # (lt, ":gold", ":total_wage"),
+          # (party_get_slot, ":target_party", ":party_no", slot_party_ai_object),
+          # (str_store_party_name, s6, ":target_party"),
+          # (display_log_message, "@Your soldiers patrolling {s6} disbanded because you can't pay the wages!", message_defeated), #SB : message code
+          # (remove_party, ":party_no"),
+        # (try_end),
+      # (try_end),
+    # (try_end),
+##############################
   ]),
   
 
@@ -7619,13 +7703,14 @@ simple_triggers = [
    (ge, "$g_misc_diplomacy_rate_hours_passed", ":diplomacy_rate"),
      (assign, "$g_misc_diplomacy_rate_hours_passed", 0),
       ####(display_message, "@Executing Simple Trigger 145"),
-     # (call_script, "script_randomly_start_war_peace_new", 1), 
+     (call_script, "script_randomly_start_war_peace_new", 1), 
      (store_sub, ":kingdoms_end", kingdoms_end, 1),
      (try_begin),
        (ge, "$g_diplo_kingdom", ":kingdoms_end"),
        (try_begin),
          (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
-         (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
+         (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"), ##### NEW v3.8
+         #######(eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
          (assign, "$g_diplo_kingdom", "fac_player_supporters_faction"),
        (else_try),
          ######(assign, "$g_diplo_kingdom", "fac_kingdom_1"),
@@ -7634,7 +7719,7 @@ simple_triggers = [
      (else_try),
        (val_add, "$g_diplo_kingdom", 1),
      (try_end),      
-     (call_script, "script_randomly_start_war_peace_new", 1),  ######### NEW v3.7
+     ######## (call_script, "script_randomly_start_war_peace_new", 1),  ######### NEW v3.7
  (try_end),
 ]),
 ##############################################################

@@ -1122,7 +1122,7 @@ troops = [
   ["merc_rus_guisarmer",
      "Volnyi Sekirschik",
      "Volnyt Sekirschiki",
-    tf_guarantee_armor | tf_guarantee_boots,
+    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_8,
     [
     itm_balt_rus_cap,
@@ -1130,8 +1130,8 @@ troops = [
     itm_rus_hat_with_padding,
     itm_rus_militia_helmet,
     itm_rus_helmet_a,
-    itm_lit_pavise_e_3,
-    itm_lit_pavise_f_3,
+    ######itm_lit_pavise_e_3,
+    ######itm_lit_pavise_f_3,
 
     itm_kau_rus_mail_shirt_b,
     itm_kau_rus_d,
@@ -1142,11 +1142,15 @@ troops = [
     itm_light_throwing_axes,
       ##### itm_militia_tunic_b,
       ##### itm_balt_fur_coat_a,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    ####itm_raf_one_handed_axe_d,
+    ####itm_raf_one_handed_axe_e,
+    ####itm_raf_one_handed_axe_f,
+    ####itm_raf_one_handed_axe_g,
 
+    itm_raf_two_handed_axe_a,
+    itm_raf_two_handed_axe_b,
+    itm_bardiche,
+	
     itm_polski_helm,
     itm_balt_shirt_c,
     itm_balt_shirt_a,
@@ -3026,18 +3030,22 @@ troops = [
   ["merc_veteran_rus_guisarmer",
      "Volnyi Sekirschik",
      "Volnyt Sekirschiki",
-    tf_guarantee_armor | tf_guarantee_boots,
+    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_8,
     [
-    itm_lit_pavise_e_3,
-    itm_lit_pavise_f_3,
+    #### itm_lit_pavise_e_3,
+    #### itm_lit_pavise_f_3,
 
     itm_light_throwing_axes,
 
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    ###itm_raf_one_handed_axe_d,
+    ###itm_raf_one_handed_axe_e,
+    ###itm_raf_one_handed_axe_f,
+    ###itm_raf_one_handed_axe_g,
+	
+    itm_raf_two_handed_axe_a,
+    itm_raf_two_handed_axe_b,
+    itm_bardiche,
 
 ##KOMKE START
 
@@ -4845,18 +4853,22 @@ troops = [
   ["merc_elite_rus_guisarmer",
      "Volnyi Sekirschik",
      "Volnyt Sekirschiki",
-    tf_guarantee_armor | tf_guarantee_boots,
+    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_8,
     [
-    itm_lit_pavise_e_3,
-    itm_lit_pavise_f_3,
+    #### itm_lit_pavise_e_3,
+    #### itm_lit_pavise_f_3,
 
     itm_light_throwing_axes,
 
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+   #### itm_raf_one_handed_axe_d,
+   #### itm_raf_one_handed_axe_e,
+   #### itm_raf_one_handed_axe_f,
+   #### itm_raf_one_handed_axe_g,
+	
+    itm_raf_two_handed_axe_a,
+    itm_raf_two_handed_axe_b,
+    itm_bardiche,
 
 ##KOMKE START
 

@@ -200,6 +200,7 @@ simple_triggers=[
     
 	############ Deposit interests
     (try_for_range, ":center_no", towns_begin, towns_end),  
+      # (eq, "$g_misc_floris_bank_receive_directly", 1),  #### Enabled
       (party_slot_ge, ":center_no", slot_town_bank_deposit_assets, 1),
         (party_get_slot, ":assets", ":center_no", slot_town_bank_deposit_assets),
         (party_get_slot, ":prosperity", ":center_no", slot_town_prosperity),
