@@ -8873,10 +8873,10 @@ game_menus = [ #
 			  (call_script, "script_rand", 0, 100),
               (assign, ":chance", reg0), 
 		      ######## NEW v3.8 - fixes dead lords causing script errors
-			  (assign, ":current_slot", 20), 
-              (try_for_range, ":cur_slot", 20, 80),
-		        (troop_set_slot, "trp_temp_troop", ":cur_slot", -1), 
-              (try_end),
+			  # (assign, ":current_slot", 20), 
+              # (try_for_range, ":cur_slot", 20, 80),
+		        # (troop_set_slot, "trp_temp_troop", ":cur_slot", -1), 
+              # (try_end),
               ###########
               (try_begin), ### King
                 (faction_slot_eq, ":defeated_faction", slot_faction_leader, ":stack_troop"), 
@@ -8890,8 +8890,11 @@ game_menus = [ #
                   ########### NEW v3.7 - fixes lords parties not disappearing from the map
                   # (call_script, "script_remove_dead_lord_from_game", ":stack_troop"),   
 				  ######## NEW v3.8
-			      (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
-			      (val_add, ":current_slot", 1), 
+			      # (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
+			      # (val_add, ":current_slot", 1), 
+                  (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
+		          (gt, ":party", 0), 
+                    (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -8906,8 +8909,11 @@ game_menus = [ #
                   ########### NEW v3.7 - fixes lords parties not disappearing from the map
                   # (call_script, "script_remove_dead_lord_from_game", ":stack_troop"),   
 				  ######## NEW v3.8
-			      (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
-			      (val_add, ":current_slot", 1), 
+			      # (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
+			      # (val_add, ":current_slot", 1),  
+                  (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
+		          (gt, ":party", 0), 
+                    (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -9122,6 +9128,7 @@ game_menus = [ #
 				################################################
               (try_begin), #player took a walled center while he is a vassal of npc kingdom.
                 (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
+                (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ####### NEW v3.8
                   (jump_to_menu, "$g_next_menu"),
               (else_try), #player took a walled center while he is a vassal of rebels.
                 (eq, "$players_kingdom", "fac_player_supporters_faction"),
@@ -9193,13 +9200,15 @@ game_menus = [ #
         (try_end),
 		
 		######## NEW v3.8 - fixes dead lords causing script errors
-        (val_add, ":current_slot", 1),
-        (try_for_range, ":cur_slot", 20, ":current_slot"),
-		  (troop_get_slot, ":dead_lord", "trp_temp_troop", ":cur_slot"), 
-		  (gt, ":dead_lord", -1), 
-            (call_script, "script_remove_dead_lord_from_game", ":dead_lord"),
-		    (troop_set_slot, "trp_temp_troop", ":cur_slot", -1), 
-        (try_end),
+        # (val_add, ":current_slot", 1),
+        # (try_for_range, ":cur_slot", 20, ":current_slot"),
+		  # (troop_get_slot, ":dead_lord", "trp_temp_troop", ":cur_slot"), 
+		  # (gt, ":dead_lord", 0), 
+		    # (troop_set_slot, "trp_temp_troop", ":cur_slot", -1), 
+            # (troop_get_slot, ":party", ":dead_lord", slot_troop_leaded_party),
+		    # (gt, ":party", 0), 
+              # (remove_party, ":party"),
+        # (try_end),
         ###########
       ],
 
@@ -13114,8 +13123,9 @@ game_menus = [ #
 
      (try_for_range, ":improvement_no", ":begin", ":end"),
        (party_slot_ge, "$g_encountered_party", ":improvement_no", 1),
+       (party_get_slot, ":improvement_level", "$g_encountered_party", ":improvement_no"), ######## NEW v3.8
        (val_add,  ":num_improvements", 1),
-       (call_script, "script_get_improvement_details", ":improvement_no"),
+       (call_script, "script_get_improvement_details", ":improvement_no", ":improvement_level"), ######## NEW v3.8
        (try_begin),
          (eq,  ":num_improvements", 1),
          (str_store_string, s18, "@{!}{s0}"),
@@ -13134,8 +13144,9 @@ game_menus = [ #
      (assign, reg6, 0),
      (try_begin),
        (party_get_slot, ":cur_improvement", "$g_encountered_party", slot_center_current_improvement),
+       (party_get_slot, ":cur_improvement_level", "$g_encountered_party", slot_center_current_improvement_level),
        (gt, ":cur_improvement", 0),
-       (call_script, "script_get_improvement_details", ":cur_improvement"),
+       (call_script, "script_get_improvement_details", ":cur_improvement", ":cur_improvement_level"),
        (str_store_string, s7, s0),
        (assign, reg6, 1),
        (store_current_hours, ":cur_hours"),
@@ -13145,6 +13156,7 @@ game_menus = [ #
        (val_max, reg8, 1),
        (store_sub, reg9, reg8, 1),
      (try_end),
+	 (assign, "$g_improvement_type_level", 1),  ########## NEW v3.8
     ],
     [
       ("center_build_manor",[(eq, reg6, 0),
@@ -13207,6 +13219,22 @@ game_menus = [ #
                                        ],
        "Improve the fortifications.",[(assign, "$g_improvement_type", slot_center_has_fortifications_2),
                                   (jump_to_menu, "mnu_center_improve"),]),
+                                  
+	################## NEW v3.8
+      ("center_build_stables",[
+	  (eq, reg6, 0),
+      (this_or_next|party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
+      (party_slot_eq, "$g_encountered_party", slot_party_type, spt_castle),
+      (party_get_slot, ":level", "$g_encountered_party", slot_center_has_stables),
+	  (ge, ":level", 0),
+	  (lt, ":level", 4),
+	  (val_add, ":level", 1),
+      ],
+       "Improve the stables.",[
+	   (assign, "$g_improvement_type", slot_center_has_stables),
+	   (assign, "$g_improvement_type_level", ":level"),
+       (jump_to_menu, "mnu_center_improve"),]),
+	################## 
       # rafi
       
 #################################################### NEW IMPROVEMENTS
@@ -13242,7 +13270,7 @@ game_menus = [ #
     "none",
     [      
      # (store_encountered_party, "$g_encountered_party"),
-     (call_script, "script_get_improvement_details", "$g_improvement_type"),
+     (call_script, "script_get_improvement_details", "$g_improvement_type", "$g_improvement_type_level"),
      (assign, ":improvement_cost", reg0),
      (assign, ":improvement_time", reg1),
      (str_store_string, s4, s0),
@@ -19317,6 +19345,7 @@ game_menus = [ #
              (neq, ":cur_kingdom", "$g_notification_menu_var1"),
              (store_relation, ":reln", ":cur_kingdom", "fac_player_supporters_faction"),
              (set_relation, ":cur_kingdom", "$g_notification_menu_var1", ":reln"),
+                             (display_message, "@line 19320"),
              (call_script, "script_recalculate_ais_for_faction", ":cur_kingdom"), ###### NEW v3.8
            (try_end),
            (assign, "$supported_pretender", 0),
@@ -32308,7 +32337,8 @@ game_menus = [ #
     "none",
     [
       (assign, ":cur_improvement", "$g_notification_menu_var1"),## improvement in parameter 1
-      (call_script, "script_get_improvement_details", ":cur_improvement"),## improvement string stored in s0
+      (assign, ":cur_improvement_level", "$g_notification_menu_var3"),## NEW v3.8
+      (call_script, "script_get_improvement_details", ":cur_improvement", ":cur_improvement_level"),## improvement string stored in s0
       (str_store_party_name_link, s1, "$g_notification_menu_var2"),## fief in parameter 2
       ],
     [
@@ -32849,7 +32879,33 @@ game_menus = [ #
   ),
 ######################################################
 
-  
+############### NEW v3.9
+   ("ee_horse_ready_merchant",0,
+    "Your {s1} is ready. Go pick it up at {s2}'s horse merchant.",
+    "none",
+    [
+    ],
+    [
+      ("Ok",[], "Ok.",
+       [
+		(change_screen_return)
+        ]),
+     ]
+  ),
+#########################
+   ("ee_horse_ready_constable",0,
+    "Your {s1} is ready. It is in your stable in {s2}.",
+    "none",
+    [
+    ],
+    [
+      ("Ok",[], "Ok.",
+       [
+		(change_screen_return)
+        ]),
+     ]
+  ),
+######################################################
   
   
   

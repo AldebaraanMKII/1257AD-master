@@ -59055,6 +59055,10 @@ troops = [
 	["player_camp_chest_end","{!}CampZ","{!}CampZ",tf_hero|tf_inactive,0,reserved,fac_neutral,[],def_attrib|level(18),wp(60),knows_common,0],
 ########################################
 
+########## NEW v3.8
+["stable_troop","{!}stable","{!}stable",tf_hero|tf_inactive|tf_is_merchant, 0,reserved,  fac_neutral,[],def_attrib|level(18),wp(60),knows_inventory_management_3, 0],
+
+
 
 ####################
 ]######################## END OF TROOP BRACKET

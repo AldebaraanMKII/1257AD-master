@@ -842,7 +842,8 @@ dplmc_slot_party_recruiter_recruitment_type = 292
 
 dplmc_spt_recruiter     = 22
 # recruiter kit end
-
+slot_center_has_stables = 293  ########### NEW v3.8
+slot_center_current_improvement_level = 294  ########### NEW v3.8
 
 
 
@@ -1358,7 +1359,24 @@ offset_of_two_sets_slot = slot_upgrade_wpn_0_set_2 - slot_upgrade_wpn_0
 # End Autoloot
 ###################################################################################
 ## CC
+############# NEW v3.8 - this slots aren't used in those troops
+slot_troop_horse_train_cur_horse = 10
+slot_troop_horse_train_cur_horse_imod = 11
+slot_troop_horse_train_days_left = 12
 
+######## stable slots
+slot_troop_horse_train_cur_horse_1 = 13
+slot_troop_horse_train_cur_horse_imod_1 = 14
+slot_troop_horse_train_days_left_1 = 15
+
+slot_troop_horse_train_cur_horse_2 = 16
+slot_troop_horse_train_cur_horse_imod_2 = 17
+slot_troop_horse_train_days_left_2 = 18
+
+slot_troop_horse_train_cur_horse_3 = 19
+slot_troop_horse_train_cur_horse_imod_3 = 20
+slot_troop_horse_train_days_left_3 = 21
+##########################
 
 #### Moved this here
 troop_slots_reserved_for_relations_start        = 200 #this is based on id_troops, and might change

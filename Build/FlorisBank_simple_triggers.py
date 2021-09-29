@@ -196,21 +196,53 @@ simple_triggers=[
           (str_store_party_name_link, s1, ":center_no"),
           (display_message, "@You got {reg15} denars from the lands you own in {s1}."),
       (try_end),
+	############ NEW v3.8
+    (else_try),
+      (eq, "$g_misc_floris_bank_receive_directly", 0),  #### Disabled
+      (try_for_range, ":center_no", centers_begin, centers_end),  
+        (neg|party_slot_eq, ":center_no", slot_party_type, spt_castle), 
+        (party_slot_ge, ":center_no", slot_town_bank_assets, 1),
+          (party_get_slot, reg15, ":center_no", slot_town_bank_assets),
+          # (troop_add_gold, "trp_player", reg15),
+          (party_set_slot, ":center_no", slot_town_bank_assets, reg15),
+          # (str_store_party_name_link, s1, ":center_no"),
+          # (display_message, "@You got {reg15} denars from the lands you own in {s1}."),
+      (try_end),
+	########################
     (try_end),
-    
+
+	############ NEW v3.8
 	############ Deposit interests
-    (try_for_range, ":center_no", towns_begin, towns_end),  
-      # (eq, "$g_misc_floris_bank_receive_directly", 1),  #### Enabled
-      (party_slot_ge, ":center_no", slot_town_bank_deposit_assets, 1),
-        (party_get_slot, ":assets", ":center_no", slot_town_bank_deposit_assets),
-        (party_get_slot, ":prosperity", ":center_no", slot_town_prosperity),
-        (store_div, ":interest_rate", ":prosperity", 20), #### 1% more interest for every 20 prosperity
-        (val_div, ":assets", 100),                                                        
-        (store_mul, reg16, ":assets", ":interest_rate"),                                                        
-        (troop_add_gold, "trp_player", reg16),
-        (str_store_party_name_link, s2, ":center_no"),
-        (display_message, "@You got {reg16} denars from the interest in your deposits in {s2}."),
+    (try_begin), 
+      (eq, "$g_misc_floris_bank_receive_directly", 1),  #### Enabled
+      (try_for_range, ":center_no", towns_begin, towns_end),  
+        (party_slot_ge, ":center_no", slot_town_bank_deposit_assets, 1),
+          (party_get_slot, ":assets", ":center_no", slot_town_bank_deposit_assets),
+          (party_get_slot, ":prosperity", ":center_no", slot_town_prosperity),
+          (store_div, ":interest_rate", ":prosperity", 20), #### 1% more interest for every 20 prosperity
+          (val_div, ":assets", 100),                                                        
+          (store_mul, reg16, ":assets", ":interest_rate"),                                                        
+          (troop_add_gold, "trp_player", reg16),
+          (str_store_party_name_link, s2, ":center_no"),
+          (display_message, "@You got {reg16} denars from the interest in your deposits in {s2}."),
+      (try_end),
+	########################
+    (else_try),
+      (eq, "$g_misc_floris_bank_receive_directly", 0),  #### Enabled
+      (try_for_range, ":center_no", towns_begin, towns_end),  
+        (party_slot_ge, ":center_no", slot_town_bank_deposit_assets, 1),
+          (party_get_slot, ":assets", ":center_no", slot_town_bank_deposit_assets),
+          (party_get_slot, ":prosperity", ":center_no", slot_town_prosperity),
+          (store_div, ":interest_rate", ":prosperity", 20), #### 1% more interest for every 20 prosperity
+          (val_div, ":assets", 100),                                                        
+          (store_mul, reg16, ":assets", ":interest_rate"),                                                        
+          (party_set_slot, ":center_no", slot_town_bank_deposit_assets, reg16),
+          # (troop_add_gold, "trp_player", reg16),
+          # (str_store_party_name_link, s2, ":center_no"),
+          # (display_message, "@You got {reg16} denars from the interest in your deposits in {s2}."),
+      (try_end),
     (try_end),
+	########################
     (start_presentation, "prsnt_bank_quickview"),
     ]),
 #LAZERAS MODIFIED  {BANK OF CALRADIA}

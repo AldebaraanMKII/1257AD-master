@@ -10908,19 +10908,19 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [anyone, "dplmc_talk_appoint_constable",
    [
    ],
-"That's a wise idea. May I suggest a very capable nobleman and friend of my family? His name is Miles de Gloucester. He demands 15 denars each week, though. The appointment will cost us 20 denars.", "dplmc_talk_appoint_constable_confirm", []],
+"That's a wise idea. May I suggest a very capable nobleman and friend of my family? His name is Miles de Gloucester. He demands 80 denars each week, though. The appointment will cost us 100 denars.", "dplmc_talk_appoint_constable_confirm", []],
    
    [anyone|plyr, "dplmc_talk_appoint_constable_confirm",
    [
    (store_troop_gold, ":gold", "trp_player"),
-   (ge, ":gold", 20),
+   (ge, ":gold", 100),
    ],
 "So be it.", "dplmc_talk_appoint_confirm_yes",
    [
         (assign, "$g_player_constable", "trp_dplmc_constable"),
         (assign, "$g_constable_training_center", -1),
         (troop_equip_items, "$g_player_constable"),
-        (troop_remove_gold, "trp_player", 20),
+        (troop_remove_gold, "trp_player", 100),
    ]],
    
    [anyone|plyr, "dplmc_talk_appoint_constable_confirm",
@@ -10970,18 +10970,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [anyone, "dplmc_talk_appoint_chamberlain",
    [
    ],
-"That's a wise idea. May I suggest a very capable nobleman and friend of my family? His name is Aubrey de Vere. He demands 15 denars each week, though. The appointment will cost us 20 denars.", "dplmc_talk_appoint_chamberlain_confirm", []],
+"That's a wise idea. May I suggest a very capable nobleman and friend of my family? His name is Aubrey de Vere. He demands 60 denars each week, though. The appointment will cost us 80 denars.", "dplmc_talk_appoint_chamberlain_confirm", []],
    
    [anyone|plyr, "dplmc_talk_appoint_chamberlain_confirm",
    [
    (store_troop_gold, ":gold", "trp_player"),
-   (ge, ":gold", 20),
+   (ge, ":gold", 80),
    ],
 "So be it.", "dplmc_talk_appoint_confirm_yes",
    [
         (assign, "$g_player_chamberlain", "trp_dplmc_chamberlain"),
         (troop_equip_items, "$g_player_chamberlain"),
-        (troop_remove_gold, "trp_player", 20),
+        (troop_remove_gold, "trp_player", 80),
    ]],
    
    [anyone|plyr, "dplmc_talk_appoint_chamberlain_confirm",
@@ -11016,18 +11016,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [anyone, "dplmc_talk_appoint_chancellor",
    [
    ],
-"That's a wise idea. May I suggest a very capable nobleman and friend of my family? His name is Herfast. He demands 20 denars each week, though. The appointment will cost us 20 denars.", "dplmc_talk_appoint_chancellor_confirm", []],
+"That's a wise idea. May I suggest a very capable nobleman and friend of my family? His name is Herfast. He demands 60 denars each week, though. The appointment will cost us 80 denars.", "dplmc_talk_appoint_chancellor_confirm", []],
    
    [anyone|plyr, "dplmc_talk_appoint_chancellor_confirm",
    [
    (store_troop_gold, ":gold", "trp_player"),
-   (ge, ":gold", 20),
+   (ge, ":gold", 80),
    ],
 "So be it.", "dplmc_talk_appoint_confirm_yes",
    [
         (assign, "$g_player_chancellor", "trp_dplmc_chancellor"),
         (troop_equip_items, "$g_player_chancellor"),
-        (troop_remove_gold, "trp_player", 20),
+        (troop_remove_gold, "trp_player", 80),
    ]],
    
    [anyone|plyr, "dplmc_talk_appoint_chancellor_confirm",
@@ -11394,7 +11394,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
     (eq, "$players_kingdom", "$g_talk_troop_faction"),
     (eq, "$player_has_homage", 1),
-    (eq, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role
+    # (eq, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role   - NEW v3.8
     (faction_slot_eq, "$g_talk_troop_faction", slot_faction_religion, religion_catholic),
     (neq, "$g_talk_troop_faction", "fac_kingdom_23"),
     #tom
@@ -13746,6 +13746,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_appoint_faction_marshall", "$players_kingdom", "trp_player"),
     (store_current_hours, ":hours"),
     # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 13749"),
     (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     (assign, "$g_player_faction_last_marshal_appointment", ":hours"),
     
@@ -13789,6 +13790,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),    
     
     # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 13793"),
     (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     
     ]],
@@ -13828,6 +13830,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
         (try_end),    
     (try_end),
     # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 13833"),
     (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     ]],
     
@@ -21769,6 +21772,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, "$player_marshal_ai_object", "p_main_party"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 21775"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
@@ -21796,6 +21800,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, "$player_marshal_ai_object", -1),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 21803"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
@@ -24521,6 +24526,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (call_script, "script_set_player_relation_with_faction", "$players_oath_renounced_against_kingdom", ":relation"),
       (call_script, "script_update_all_notes"),
       # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 24529"),
       (call_script, "script_recalculate_ais_for_faction", "fac_player_supporters_faction"), ###### NEW v3.8
       (call_script, "script_recalculate_ais_for_faction", "$players_oath_renounced_against_kingdom"), ###### NEW v3.8
     (try_end),
@@ -25388,6 +25394,7 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
    (faction_set_slot, "$g_talk_troop_faction", slot_faction_marshall, "trp_player"),
    (faction_set_slot, "$g_talk_troop_faction", slot_faction_ai_state, sfai_default),
    # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 25397"),
    (call_script, "script_recalculate_ais_for_faction", "$g_talk_troop_faction"), ###### NEW v3.8
    ]],
 
@@ -27380,6 +27387,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (assign, "$player_marshal_ai_object", "$g_player_court"),
    
    # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 27390"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),  ####### NEW v3.8
    (assign, reg4, 1),
    (try_begin),
@@ -31047,7 +31055,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [
     (set_party_battle_mode),
     (quest_set_slot, "qst_hunt_down_fugitive", slot_quest_current_state, 1),
-    (call_script, "script_activate_tavern_attackers"),
+    # (call_script, "script_activate_tavern_attackers"),
+    (call_script, "script_activate_tavern_attackers", "trp_fugitive"),       ###### NEW v3.8
    ]],
 
 
@@ -33995,6 +34004,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
                      (eq, "$talk_context", tc_tavern_talk),
                      (neg|troop_is_hero, "$g_talk_troop"),
                      # (neg|is_between, "$g_talk_troop", "trp_merchant_kingdom_1", "trp_startup_merchants_end"),
+                     (is_between, "$g_talk_troop", mercenary_troops_begin, mercenary_troops_end), ####### NEW v3.8
                      (party_get_slot, ":mercenary_troop", "$g_encountered_party", slot_center_mercenary_troop_type),
                      (party_get_slot, ":mercenary_amount", "$g_encountered_party", slot_center_mercenary_troop_amount),
                      (gt, ":mercenary_amount", 0),
@@ -38429,6 +38439,294 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "town_merchant_talk", [(is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end)],
 "I am thinking of buying a horse.", "trade_requested_horse",[]],
 
+
+############# NEW v3.8
+[anyone|plyr, "town_merchant_talk", [
+(is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
+(troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
+(troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_days_left, 0),
+(troop_set_inventory_slot, "trp_player", ek_horse, -1),
+],
+"I came to get my horse.", "merchant_horse_return",[]],
+
+[anyone, "merchant_horse_return", [], "Ah, yes. Here it is.", "merchant_trade",
+[
+(troop_get_slot, ":current_horse", "$g_talk_troop", slot_troop_horse_train_cur_horse),
+(troop_get_slot, ":current_horse_imod", "$g_talk_troop", slot_troop_horse_train_cur_horse_imod),
+
+(troop_add_item, "trp_player", ":current_horse", ":current_horse_imod")
+
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod, 0),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_days_left, 0),
+
+(display_message, "@Your horse has been added to your inventory.")
+]],
+
+######################################
+[anyone|plyr, "town_merchant_talk", [
+(is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
+(troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse_condition", reg0),
+(neq, ":horse_condition", 0),     ########## no horse
+(neq, ":horse_condition", imod_lame),     ########## at full health
+(neq, ":horse_condition", imod_swaybacked), ##########
+(neq, ":horse_condition", imod_heavy), ########## horse merchants can't train this or higher
+(neq, ":horse_condition", imod_spirited), ########## 
+(neq, ":horse_condition", imod_champion), ########## 
+],
+"I want you to train my horse.", "trade_requested_horse_train",[]],
+
+
+[anyone, "trade_requested_horse_train", [], "Ah, yes {sir/madam}. I remind you that this will take time and money, and you will not be able to use the horse while it's being trained.", "train_options",
+[
+]],
+
+
+### imod_lame = 30
+### imod_swaybacked = 31
+### imod_stubborn = 32
+### imod_plain = 
+### imod_heavy = 18
+### imod_spirited = 35
+### imod_champion = 36
+
+[anyone|plyr, "train_options", 
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(neq, ":horse_condition", imod_plain),
+(neq, ":horse_condition", imod_heavy),
+(neq, ":horse_condition", imod_spirited),
+(neq, ":horse_condition", imod_champion),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+    (assign, ":price", reg1),
+	(store_div, ":days_to_train", ":value", 700) ######## 1 extra day every 500 coins cost
+    (store_add, reg2, ":days_to_train", 2),
+    (assign, ":days_to_train", reg2),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Normal ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
+[
+(assign, "$g_current_horse", ":horse"),
+(assign, "$g_current_horse_imod", ":horse_condition"),
+(assign, "$g_current_horse_price", ":price"),
+(assign, "$g_current_horse_days", ":days_to_train"),
+]],
+
+[anyone|plyr, "train_options", 
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(neq, ":horse_condition", imod_plain),
+# (neq, ":horse_condition", imod_heavy),
+(neq, ":horse_condition", imod_spirited),
+(neq, ":horse_condition", imod_champion),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+    (assign, ":price", reg1),
+	(store_div, ":days_to_train", ":value", 500) ######## 1 extra day every 500 coins cost
+    (store_add, reg2, ":days_to_train", 4),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+    (assign, ":price", reg1),
+	(store_div, ":days_to_train", ":value", 600) 
+    (store_add, reg2, ":days_to_train", 2),
+    (assign, ":days_to_train", reg2),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Heavy ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
+[
+(assign, "$g_current_horse", ":horse"),
+(assign, "$g_current_horse_imod", ":horse_condition"),
+(assign, "$g_current_horse_price", ":price"),
+(assign, "$g_current_horse_days", ":days_to_train"),
+]],
+###################
+###################
+###################
+###################
+########################
+[anyone, "trade_requested_horse_train_confirm", 
+[
+],
+"Are you sure? You will not be able to use the horse in the meantime.", "trade_requested_horse_train_confirm_2",
+[]],
+
+[anyone|plyr, "trade_requested_horse_train_confirm_2", 
+[
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", "$g_current_horse_price"),
+(assign, reg1, "$g_current_horse_price"),
+(assign, reg2, "$g_current_horse_days"),
+],
+"Yes. Do it. ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm_3",
+[]],
+
+[anyone|plyr, "trade_requested_horse_train_confirm_2", 
+[
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", "$g_current_horse_price"),
+(assign, reg1, "$g_current_horse_price"),
+(assign, reg2, "$g_current_horse_days"),
+],
+"Nevermind.", "merchant_trade",
+[]],
+
+[anyone|plyr, "trade_requested_horse_train_confirm_2", 
+[
+(store_troop_gold, ":gold", "trp_player"),
+(lt, ":gold", "$g_current_horse_price"),
+(assign, reg1, "$g_current_horse_price"),
+],
+"Sorry, i don't have the money right now ({reg1} coins).", "merchant_trade",
+[]],
+########################
+[anyone, "trade_requested_horse_train_confirm_3", [], "Very well. You will be notified when it's done.", "merchant_trade",
+[
+(troop_remove_gold, "trp_player", "$g_current_horse_price"),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse, "$g_current_horse"),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod, "$g_current_horse_imod"),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_days_left, "$g_current_horse_days"),
+(troop_set_inventory_slot, "trp_player", ek_horse, -1),
+(display_message, "@Your horse has been removed from your inventory.")
+]],
+################################################
+################################################
+
+################
+[anyone|plyr, "town_merchant_talk", 
+[
+(is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
+(troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(gt, ":horse", 0),     ########## no horse
+(this_or_next|eq, ":horse_condition", imod_lame),
+(eq, ":horse_condition", imod_swaybacked),
+],
+"I want you to nurse my horse back to health.", "trade_requested_horse_nurse",[]],
+
+[anyone, "trade_requested_horse_nurse", [], "Yes {sir/madam}. I remind you that this will take time and money, and you will not be able to use the horse while it's being healed.", "trade_nurse_options",
+[]],
+#####################
+[anyone|plyr, "trade_nurse_options", 
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_lame),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+    (assign, ":price", reg1),
+	(store_div, ":days_to_heal", ":value", 500) ######## 1 extra day every 500 coins cost
+    (store_add, reg2, ":days_to_heal", 5),
+    (assign, ":days_to_heal", reg2),
+(else_try),
+  (eq, ":horse_condition", imod_swaybacked),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+    (assign, ":price", reg1),
+	(store_div, ":days_to_heal", ":value", 700) ######## 1 extra day every 700 coins cost
+    (store_add, reg2, ":days_to_heal", 3),
+    (assign, ":days_to_heal", reg2),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Yes. Bring it back to health ({reg1} coins, {reg2} days).", "trade_requested_horse_nurse_confirm",
+[
+(assign, "$g_current_horse", ":horse"),
+(assign, "$g_current_horse_imod", ":horse_condition"),
+(assign, "$g_current_horse_price", ":price"),
+(assign, "$g_current_horse_days", ":days_to_heal"),
+]],
+
+[anyone|plyr, "trade_nurse_options", 
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_lame),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+	(store_div, ":days_to_heal", ":value", 500) ######## 1 extra day every 500 coins cost
+    (store_add, reg2, ":days_to_heal", 5),
+(else_try),
+  (eq, ":horse_condition", imod_swaybacked),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+	(store_div, ":days_to_heal", ":value", 700) ######## 1 extra day every 600 coins cost
+    (store_add, reg2, ":days_to_heal", 3),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(lt, ":gold", reg1),
+],
+"Sorry, i don't have the money right now ({reg1} coins).", "merchant_trade",
+[]],
+
+[anyone|plyr, "trade_nurse_options", 
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_lame),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+	# (store_div, ":days_to_heal", ":value", 500) ######## 1 extra day every 500 coins cost
+    # (store_add, reg2, ":days_to_heal", 5),
+(else_try),
+  (eq, ":horse_condition", imod_swaybacked),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+	# (store_div, ":days_to_heal", ":value", 700) ######## 1 extra day every 600 coins cost
+    # (store_add, reg2, ":days_to_heal", 3),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Nevermind.", "merchant_trade",
+[]],
+#####################
+[anyone, "trade_requested_horse_nurse", [], "Very well. You will be notified when it's done.", "merchant_trade",
+[
+(troop_remove_gold, "trp_player", "$g_current_horse_price"),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse, "$g_current_horse"),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod, "$g_current_horse_imod"),
+(troop_set_slot, "$g_talk_troop", slot_troop_horse_train_days_left, "$g_current_horse_days"),
+(troop_set_inventory_slot, "trp_player", ek_horse, -1),
+(display_message, "@Your horse has been removed from your inventory.")
+]],
+########### player lents horse to horse merchant for x days for y cost
+###### merchant trains player horse after x days
+####### player go collect the horse or pay a additional fee to have it delivered to his household belongings
+######### player can build a stable to his court to train horses to higher levels
+########## or let horses in the stable inventory to heal them every x days
+
+##########################
+
+
 [anyone, "trade_requested_weapons", [], "Ah, yes {sir/madam}. These arms are the best you'll find anywhere.", "merchant_trade",[[change_screen_trade]]],
 # repair weapons
 [anyone, "trade_requested_repair_weapons",
@@ -39620,6 +39918,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    (assign, "$player_marshal_ai_object", ":venue"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 39631"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    (str_store_party_name, s4, ":venue"),
 
@@ -39643,6 +39942,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    (assign, "$player_marshal_ai_object", "p_main_party"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
+                             (display_message, "@line 39655"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
