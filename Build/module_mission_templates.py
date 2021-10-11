@@ -1232,7 +1232,8 @@ mission_templates = [
       common_battle_inventory,
       common_battle_order_panel,
       common_battle_order_panel_tick,
-    ] + hold_trigger + charge_trigger + lance_usage + enhanced_common_battle_triggers + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers + auxiliary_player,
+    # ] + hold_trigger + charge_trigger + lance_usage + enhanced_common_battle_triggers + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers + auxiliary_player,
+    ] + hold_trigger + charge_trigger + enhanced_common_battle_triggers + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers + auxiliary_player, ###### NEW v3.8
   ),  
   
   
@@ -1922,7 +1923,8 @@ mission_templates = [
    
 
 
-    ] + must_1257_triggers + sp_shield_bash_triggers + charge_trigger +  lance_usage + formations_triggers + AI_triggers + enhanced_common_battle_triggers + ad1257_common_triggers + ad1257_common_terrain_triggers + auxiliary_player,
+    # ] + must_1257_triggers + sp_shield_bash_triggers + charge_trigger + formations_triggers + AI_triggers + enhanced_common_battle_triggers + ad1257_common_triggers + ad1257_common_terrain_triggers + auxiliary_player,
+    ] + must_1257_triggers + sp_shield_bash_triggers + charge_trigger + lance_usage + formations_triggers + AI_triggers + enhanced_common_battle_triggers + ad1257_common_triggers + ad1257_common_terrain_triggers + auxiliary_player, ###### NEW v3.8
   ),
 
   
@@ -2090,7 +2092,8 @@ mission_templates = [
       common_battle_inventory,
       common_battle_order_panel,
       common_battle_order_panel_tick,
-    ] + must_1257_triggers + sp_shield_bash_triggers + hold_trigger + charge_trigger + lance_usage + enhanced_common_battle_triggers + ad1257_common_triggers + auxiliary_player,
+    # ] + must_1257_triggers + sp_shield_bash_triggers + hold_trigger + charge_trigger + lance_usage + enhanced_common_battle_triggers + ad1257_common_triggers + auxiliary_player,
+    ] + must_1257_triggers + sp_shield_bash_triggers + hold_trigger + charge_trigger + enhanced_common_battle_triggers + ad1257_common_triggers + auxiliary_player, ###### NEW v3.8
   ),
 
 
@@ -2258,7 +2261,8 @@ mission_templates = [
 ##          (store_mission_timer_a,reg(1)),(ge,reg(1),4),
 ##          (call_script, "script_battle_tactic_apply"),
 ##          ], []),
-    ] + must_1257_triggers + sp_shield_bash_triggers + hold_trigger + charge_trigger + lance_usage + enhanced_common_battle_triggers + ad1257_common_triggers + auxiliary_player,
+    # ] + must_1257_triggers + sp_shield_bash_triggers + hold_trigger + charge_trigger + lance_usage + enhanced_common_battle_triggers + ad1257_common_triggers + auxiliary_player,
+    ] + must_1257_triggers + sp_shield_bash_triggers + hold_trigger + charge_trigger + enhanced_common_battle_triggers + ad1257_common_triggers + auxiliary_player,  ###### NEW v3.8
   ),
 
 
@@ -14849,7 +14853,8 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
 
-      ] + lance_usage + auxiliary_player + must_1257_triggers + sp_shield_bash_triggers,
+      # ] + lance_usage + auxiliary_player + must_1257_triggers + sp_shield_bash_triggers,
+      ] + auxiliary_player + must_1257_triggers + sp_shield_bash_triggers + enhanced_common_battle_triggers, ###### NEW v3.8
   ),
 
   ("pagan_stronghold_attack",mtf_battle_mode,-1,
@@ -14931,7 +14936,8 @@ mission_templates = [
         (try_end),
        ]),
 
-    ] +lance_usage + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers, # charge_trigger
+    # ] +lance_usage + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers, # charge_trigger
+    ] + ad1257_common_triggers + must_1257_triggers + sp_shield_bash_triggers, # charge_trigger ###### NEW v3.8
   ),
 
   ("castle_attack_walls_defenders_sally_player",mtf_battle_mode,-1,
@@ -15052,7 +15058,8 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
       common_battle_inventory,
-    ] + hold_trigger + charge_trigger + lance_usage + must_1257_triggers + sp_shield_bash_triggers,
+    # ] + hold_trigger + charge_trigger + lance_usage + must_1257_triggers + sp_shield_bash_triggers,
+    ] + hold_trigger + charge_trigger + must_1257_triggers + sp_shield_bash_triggers + enhanced_common_battle_triggers,  ###### NEW v3.8
   ),
 
 

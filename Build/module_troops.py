@@ -59056,7 +59056,7 @@ troops = [
 ########################################
 
 ########## NEW v3.8
-["stable_troop","{!}stable","{!}stable",tf_hero|tf_inactive|tf_is_merchant, 0,reserved,  fac_neutral,[],def_attrib|level(18),wp(60),knows_inventory_management_3, 0],
+["stable_troop","{!}stable","{!}stable",tf_hero|tf_inactive|tf_is_merchant, 0,reserved,  fac_neutral,[],def_attrib|level(18),wp(60),knows_common_no_inventory, 0],
 
 
 

@@ -9156,21 +9156,18 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("enhanced_surname_custom_29", "Custom"),
 ("enhanced_surname_custom_30", "Custom"),
 ########
-
-
-
 ("enhanced_names_end", "Names End"),
-
-
 
 ("enhanced_troop_is_dead", "{s54} is dead.^{reg3?She:He} was a member of the {s56}."),
 ("enhanced_troop_was_killed_battle", "{s54} was killed in battle by {s1}.^{reg3?She:He} was a member of the {s56}."),
-
 ("enhanced_troop_was_executed", "{s54} was {s1} by orders of {s2}.^{reg3?She:He} was a member of the {s56}."),
-
 ("enhanced_troop_was_assassinated", "{s54} was {s1}.^{reg3?She:He} was a member of the {s56}."),
 ("enhanced_troop_was_assassinated_found_perpetrators", "{s54} was {s1} by assassins hired by {s2}.^{reg3?She:He} was a member of the {s56}."),
 
+############## NEW v3.8 - 
+("enhanced_troop_committed_suicide", "{s54} has committed suicide due to the loss of his kingdom.^{reg3?She:He} was a member of the {s56}."),
+("enhanced_troop_exile", "{s54} exiled himself to far away lands due to the loss of his kingdom.^{reg3?She:He} was a member of the {s56}."),
+############################
 
 #######################
 

@@ -5621,272 +5621,6 @@ common_inventory_not_available = (
     # ], [])
 
 
-tournament_triggers = [
-common_battle_init_banner, #tom
-  (ti_before_mission_start, 0, 0, [], [(call_script, "script_change_banners_and_chest"),
-                                       (assign, "$g_arena_training_num_agents_spawned", 0)]),
-  (ti_inventory_key_pressed, 0, 0, [(display_message, "str_cant_use_inventory_arena")], []),
-  (ti_tab_pressed, 0, 0, [],
-   [(try_begin),
-      (eq, "$g_mt_mode", abm_visit),
-      (set_trigger_result, 1),
-    (else_try),
-      (question_box, "str_give_up_fight"),
-    (try_end),
-    ]),
-  (ti_question_answered, 0, 0, [],
-   [(store_trigger_param_1, ":answer"),
-    (eq, ":answer",0),
-    (try_begin),
-      (eq, "$g_mt_mode", abm_tournament),
-      #(call_script, "script_end_tournament_fight", 0),
-      (call_script, "script_end_tournament_fight_new", 0),
-    (else_try),
-      (eq, "$g_mt_mode", abm_training),
-      (get_player_agent_no, ":player_agent"),
-      (agent_get_kill_count, "$g_arena_training_kills", ":player_agent", 1),#use this for conversation
-    (try_end),
-    (finish_mission,0),
-    ]),
-
-  (1, 0, ti_once, [], [
-      (eq, "$g_mt_mode", abm_visit),
-      (call_script, "script_music_set_situation_with_culture", mtf_sit_travel),
-      (store_current_scene, reg(1)),
-      (scene_set_slot, reg(1), slot_scene_visited, 1),
-      (mission_enable_talk),
-      (get_player_agent_no, ":player_agent"),
-      (assign, ":team_set", 0),
-      (try_for_agents, ":agent_no"),
-        (neq, ":agent_no", ":player_agent"),
-        (agent_get_troop_id, ":troop_id", ":agent_no"),
-        (is_between, ":troop_id", regular_troops_begin, regular_troops_end),
-        (eq, ":team_set", 0),
-        (agent_set_team, ":agent_no", 1),
-        (assign, ":team_set", 1),
-      (try_end),
-    ]),
-
-  (0, 0, ti_once, [],
-   [
-     (eq, "$g_mt_mode", abm_tournament),
-     (play_sound, "snd_arena_ambiance", sf_looping),
-     (call_script, "script_music_set_situation_with_culture", mtf_sit_arena),
-     ]),
-
-     ###tom modified
-  (1, 4, ti_once, [(eq, "$g_mt_mode", abm_tournament),
-                   #(this_or_next|main_hero_fallen),
-                   (num_active_teams_le, 1)],
-   [
-       (try_begin), #player won
-         #(neg|main_hero_fallen),
-         (get_player_agent_no, ":p_agent"),
-         (agent_get_team, ":p_team", ":p_agent"),
-         (assign, ":player_won", 0),
-         (try_for_agents, ":agent"),
-           (agent_is_alive, ":agent"),
-           (agent_is_human, ":agent"),
-           (agent_get_team, ":team", ":agent"),
-           (eq, ":team", ":p_team"),
-           (assign, ":player_won", 1),
-         (try_end),
-         (eq, ":player_won", 1),
-         #(call_script, "script_end_tournament_fight", 1),
-         (stop_all_sounds, 0),  ####### NEW v3.8
-         (call_script, "script_end_tournament_fight_new", 1),
-         (call_script, "script_play_victorious_sound"),
-         (finish_mission),
-       (else_try), #player lost
-         #(call_script, "script_end_tournament_fight", 0),
-         (stop_all_sounds, 0),  ####### NEW v3.8
-         (call_script, "script_end_tournament_fight_new", 0),
-         (finish_mission),
-       (try_end),
-    ]), 
-    ###tom
-    
-    ###backup
-    # (1, 4, ti_once, [(eq, "$g_mt_mode", abm_tournament),
-                   # (this_or_next|main_hero_fallen),
-                   # (num_active_teams_le, 1)],
-   # [
-       # (try_begin),
-         # (neg|main_hero_fallen),
-         # (call_script, "script_end_tournament_fight", 1),
-         # (call_script, "script_play_victorious_sound"),
-         # (finish_mission),
-       # (else_try),
-         # (call_script, "script_end_tournament_fight", 0),
-         # (finish_mission),
-       # (try_end),
-    # ]),
-
-  (ti_battle_window_opened, 0, 0, [], [(eq, "$g_mt_mode", abm_training),(start_presentation, "prsnt_arena_training")]),
-
-  (0, 0, ti_once, [], [(eq, "$g_mt_mode", abm_training),
-                       (assign, "$g_arena_training_max_opponents", 50), ############ NEW v1.8 - NOW THE FUN BEGINS! 
-                       (assign, "$g_arena_training_num_agents_spawned", 0),
-                       (assign, "$g_arena_training_kills", 0),
-                       (assign, "$g_arena_training_won", 0),
-                       (call_script, "script_music_set_situation_with_culture", mtf_sit_arena),
-                       ]),
-
-  (1, 4, ti_once, [(eq, "$g_mt_mode", abm_training),
-                   (store_mission_timer_a, ":cur_time"),
-                   (gt, ":cur_time", 3),
-                   (assign, ":win_cond", 0),
-                   (try_begin),
-                     (ge, "$g_arena_training_num_agents_spawned", "$g_arena_training_max_opponents"),#spawn at most 40 agents
-                     (num_active_teams_le, 1),
-                     (assign, ":win_cond", 1),
-                   (try_end),
-                   (this_or_next|eq, ":win_cond", 1),
-                   (main_hero_fallen)],
-   [
-       (get_player_agent_no, ":player_agent"),
-       (agent_get_kill_count, "$g_arena_training_kills", ":player_agent", 1),#use this for conversation
-       (assign, "$g_arena_training_won", 0),
-       (try_begin),
-         (neg|main_hero_fallen),
-         (assign, "$g_arena_training_won", 1),#use this for conversation
-       (try_end),
-       (assign, "$g_mt_mode", abm_visit),
-       (set_jump_mission, "mt_arena_melee_fight"),
-       (party_get_slot, ":arena_scene", "$current_town", slot_town_arena),
-       (modify_visitors_at_site, ":arena_scene"),
-       (reset_visitors),
-       # (set_visitor, 35, "trp_veteran_fighter"),
-       # (set_visitor, 36, "trp_euro_horse_4"),
-       # rafi
-       (party_get_slot, ":arena_master", "$current_town", slot_town_arena_master),
-       (set_visitor, 52, ":arena_master"),
-       #rafi
-       (set_jump_entry, 50),
-       (jump_to_scene, ":arena_scene"),
-       ]),
-
-
-  (1, 0, 0,
-   [
-       (eq, "$g_mt_mode", abm_training),
-       (assign, ":num_active_fighters", 0),
-       (try_for_agents, ":agent_no"),
-         (agent_is_human, ":agent_no"),
-         (agent_is_alive, ":agent_no"),
-         (agent_get_team, ":team_no", ":agent_no"),
-         (is_between, ":team_no", 0 ,7),
-         (val_add, ":num_active_fighters", 1),
-       (try_end),
-       (lt, ":num_active_fighters", 20), ############## YES!
-       (neg|main_hero_fallen),
-       (store_mission_timer_a, ":cur_time"),
-       (this_or_next|ge, ":cur_time", "$g_arena_training_next_spawn_time"),
-       (this_or_next|lt, "$g_arena_training_num_agents_spawned", 50),
-       (num_active_teams_le, 1),
-       (lt, "$g_arena_training_num_agents_spawned", "$g_arena_training_max_opponents"),
-      ],
-    [
-       (assign, ":added_troop", "$g_arena_training_num_agents_spawned"),
-       (store_div,  ":added_troop", "$g_arena_training_num_agents_spawned", 6),
-       (assign, ":added_troop_sequence", "$g_arena_training_num_agents_spawned"),
-       (val_mod, ":added_troop_sequence", 1),
-       (val_add, ":added_troop", ":added_troop_sequence"),
-	   #############  NEW v3.2 - reverted back to vanilla 1257 settings
-       (val_min, ":added_troop", 9),
-       (val_add, ":added_troop", "trp_arena_training_fighter_1"),   ############## YES!
-	   ##########################
-	   # (store_random_in_range, ":added_troop", regular_troops_begin, regular_troops_end), ############# YES!
-       (assign, ":end_cond", 10000),
-       (get_player_agent_no, ":player_agent"),
-       (agent_get_position, pos5, ":player_agent"),
-       (try_for_range, ":unused", 0, ":end_cond"),
-         (store_random_in_range, ":random_entry_point", 0, 39),
-         (neq, ":random_entry_point", "$g_player_entry_point"), # make sure we don't overwrite player
-         (entry_point_get_position, pos1, ":random_entry_point"),
-         (get_distance_between_positions, ":dist", pos5, pos1),
-         (gt, ":dist", 1200), #must be at least 12 meters away from the player
-         (assign, ":end_cond", 0),
-       (try_end),
-       (add_visitors_to_current_scene, ":random_entry_point", ":added_troop", 1),
-       (store_add, ":new_spawned_count", "$g_arena_training_num_agents_spawned", 1),
-       (store_mission_timer_a, ":cur_time"),
-       (store_add, "$g_arena_training_next_spawn_time", ":cur_time", 2), ############## YES!
-       (store_div, ":time_reduction", ":new_spawned_count", 4),
-       (val_sub, "$g_arena_training_next_spawn_time", ":time_reduction"),
-       ]),
-
-  (0, 0, 0,
-   [
-       (eq, "$g_mt_mode", abm_training),
-       ],
-    [
-       (assign, ":max_teams", 6),
-       (val_max, ":max_teams", 1),
-       (get_player_agent_no, ":player_agent"),
-       (try_for_agents, ":agent_no"),
-         (agent_is_human, ":agent_no"),
-         (agent_is_alive, ":agent_no"),
-         (agent_slot_eq, ":agent_no", slot_agent_arena_team_set, 0),
-         (agent_get_team, ":team_no", ":agent_no"),
-         (is_between, ":team_no", 0 ,7),
-         (try_begin),
-           (eq, ":agent_no", ":player_agent"),
-           (agent_set_team, ":agent_no", 6), #player is always team 6.
-         (else_try),
-           # (store_random_in_range, ":selected_team", 0, ":max_teams"),
-          # find strongest team
-           (try_for_range, ":t", 0, 6),
-             (troop_set_slot, "trp_temp_array_a", ":t", 0),
-           (try_end),
-           (try_for_agents, ":other_agent_no"),
-             (agent_is_human, ":other_agent_no"),
-             (agent_is_alive, ":other_agent_no"),
-             (neq, ":agent_no", ":player_agent"),
-             (agent_slot_eq, ":other_agent_no", slot_agent_arena_team_set, 1),
-             (agent_get_team, ":other_agent_team", ":other_agent_no"),
-             (troop_get_slot, ":count", "trp_temp_array_a", ":other_agent_team"),
-             (val_add, ":count", 1),
-             (troop_set_slot, "trp_temp_array_a", ":other_agent_team", ":count"),
-           (try_end),
-           # (assign, ":strongest_team", 0),
-           (troop_get_slot, ":strongest_team_count", "trp_temp_array_a", 0),
-           (try_for_range, ":t", 1, 6),
-             (troop_slot_ge, "trp_temp_array_a", ":t", ":strongest_team_count"),
-             (troop_get_slot, ":strongest_team_count", "trp_temp_array_a", ":t"),
-             # (assign, ":strongest_team", ":t"),
-           (try_end),
-           # (store_random_in_range, ":rand", 5, 100),
-           # (try_begin),
-             # (lt, ":rand", "$g_arena_training_num_agents_spawned"),
-             # (assign, ":selected_team", ":strongest_team"),
-           # (try_end),
-           # (agent_set_team, ":agent_no", ":selected_team"),
-         (try_end),
-         (agent_set_slot, ":agent_no", slot_agent_arena_team_set, 1),
-         (try_begin),
-           (neq, ":agent_no", ":player_agent"),
-           (val_add, "$g_arena_training_num_agents_spawned", 1),
-         (try_end),
-       (try_end),
-       ]),
-
-       common_weapon_break
-  ] + lance_usage + must_1257_triggers + sp_shield_bash_triggers
-  
-  
-  
-
-siege_1257 = [
-    siege_tick,
-    siege_init,
-    siege_attacker_regroup,
-    siege_battle_size_before_battle,
-	archers_move_to_positions,   ########## NEW v1.9
-	common_siege_attacker_do_not_stall,   ########## NEW v2.5
- ]
-
-
 ########################## NEW v2.5
 enhanced_siege_lance_spear_fix = (
     0, 0, 5, 
@@ -6402,30 +6136,341 @@ enhanced_town_resident_behavior_hit = (
   
   
 
+
+############## NEW v3.8
+common_lance_use_spawn = (
+   # Just after spawn, mark lancers using a slot.
+   # Force lancers to equip lances.
+  1, 0, ti_once, [], [(call_script, "script_lance_use_classify_agent")])
+   
+   
+common_lance_use = (
+   # Check to make sure there are no lance users on foot, if so force them to
+   # switch to their sword. This should also affect troops that were NEVER mounted,
+   # but are still equipped with lances, such as Taiga Bandits.
+   # For mounted lancers affect their Decision on weapon use, based on if the
+   # closest 3 enemies are within 5 meters and if currently attacking/defending.
+   2, 0, 0, [],
+   [# Run through all active NPCs on the battle field.
+   (try_for_agents, ":agent"),
+     # Hasn't been defeated.
+        (agent_is_alive, ":agent"),
+        (agent_get_slot, ":lance", ":agent", slot_agent_lance),
+        (gt, ":lance", 0),  # Lancer?
+     # Get wielded item.
+        (agent_get_wielded_item, ":wielded", ":agent", 0),
+      # They riding a horse?
+        (agent_get_horse, ":horse", ":agent"),
+        (try_begin),
+            (le, ":horse", 0), # Isn't riding a horse.
+            (agent_set_slot, ":agent", slot_agent_lance, 0), # No longer a lancer
+            (eq, ":wielded", ":lance"), # Still using lance?
+            (call_script, "script_lance_use_backup_weapon", ":agent"), # Then equip a close weapon
+        (else_try),
+     # Still mounted
+            (agent_get_position, pos1, ":agent"),    
+            (agent_get_team, ":team_no", ":agent"),  # Find distance of nearest 3 enemies
+            (call_script, "script_get_closest3_distance_of_enemies_at_pos1", ":team_no", pos1),
+            (assign, ":avg_dist", reg0),
+            (try_begin),
+                (lt, ":avg_dist", 500), # Are the enemies within 5 meters?
+                (agent_get_combat_state, ":combat", ":agent"),
+                (gt, ":combat", 3), # Agent currently in combat? ...avoids switching before contact
+                (eq, ":wielded", ":lance"), # Still using lance?
+                (call_script, "script_lance_use_backup_weapon", ":agent"), # Then equip a close weapon
+            (else_try),
+                (neq, ":wielded", ":lance"), # Enemies farther than 5 meters and/or not fighting, and not using lance?
+                (agent_set_wielded_item, ":agent", ":lance"), # Then equip it!
+            (try_end),
+        (try_end),
+   (try_end),
+])
+
+lance_use_triggers = [
+    common_lance_use_spawn,
+    common_lance_use,
+    ]
+############################
+
+
+tournament_triggers = [
+common_battle_init_banner, #tom
+  (ti_before_mission_start, 0, 0, [], [(call_script, "script_change_banners_and_chest"),
+                                       (assign, "$g_arena_training_num_agents_spawned", 0)]),
+  (ti_inventory_key_pressed, 0, 0, [(display_message, "str_cant_use_inventory_arena")], []),
+  (ti_tab_pressed, 0, 0, [],
+   [(try_begin),
+      (eq, "$g_mt_mode", abm_visit),
+      (set_trigger_result, 1),
+    (else_try),
+      (question_box, "str_give_up_fight"),
+    (try_end),
+    ]),
+  (ti_question_answered, 0, 0, [],
+   [(store_trigger_param_1, ":answer"),
+    (eq, ":answer",0),
+    (try_begin),
+      (eq, "$g_mt_mode", abm_tournament),
+      #(call_script, "script_end_tournament_fight", 0),
+      (call_script, "script_end_tournament_fight_new", 0),
+    (else_try),
+      (eq, "$g_mt_mode", abm_training),
+      (get_player_agent_no, ":player_agent"),
+      (agent_get_kill_count, "$g_arena_training_kills", ":player_agent", 1),#use this for conversation
+    (try_end),
+    (finish_mission,0),
+    ]),
+
+  (1, 0, ti_once, [], [
+      (eq, "$g_mt_mode", abm_visit),
+      (call_script, "script_music_set_situation_with_culture", mtf_sit_travel),
+      (store_current_scene, reg(1)),
+      (scene_set_slot, reg(1), slot_scene_visited, 1),
+      (mission_enable_talk),
+      (get_player_agent_no, ":player_agent"),
+      (assign, ":team_set", 0),
+      (try_for_agents, ":agent_no"),
+        (neq, ":agent_no", ":player_agent"),
+        (agent_get_troop_id, ":troop_id", ":agent_no"),
+        (is_between, ":troop_id", regular_troops_begin, regular_troops_end),
+        (eq, ":team_set", 0),
+        (agent_set_team, ":agent_no", 1),
+        (assign, ":team_set", 1),
+      (try_end),
+    ]),
+
+  (0, 0, ti_once, [],
+   [
+     (eq, "$g_mt_mode", abm_tournament),
+     (play_sound, "snd_arena_ambiance", sf_looping),
+     (call_script, "script_music_set_situation_with_culture", mtf_sit_arena),
+     ]),
+
+     ###tom modified
+  (1, 4, ti_once, [(eq, "$g_mt_mode", abm_tournament),
+                   #(this_or_next|main_hero_fallen),
+                   (num_active_teams_le, 1)],
+   [
+       (try_begin), #player won
+         #(neg|main_hero_fallen),
+         (get_player_agent_no, ":p_agent"),
+         (agent_get_team, ":p_team", ":p_agent"),
+         (assign, ":player_won", 0),
+         (try_for_agents, ":agent"),
+           (agent_is_alive, ":agent"),
+           (agent_is_human, ":agent"),
+           (agent_get_team, ":team", ":agent"),
+           (eq, ":team", ":p_team"),
+           (assign, ":player_won", 1),
+         (try_end),
+         (eq, ":player_won", 1),
+         #(call_script, "script_end_tournament_fight", 1),
+         (stop_all_sounds, 0),  ####### NEW v3.8
+         (call_script, "script_end_tournament_fight_new", 1),
+         (call_script, "script_play_victorious_sound"),
+         (finish_mission),
+       (else_try), #player lost
+         #(call_script, "script_end_tournament_fight", 0),
+         (stop_all_sounds, 0),  ####### NEW v3.8
+         (call_script, "script_end_tournament_fight_new", 0),
+         (finish_mission),
+       (try_end),
+    ]), 
+    ###tom
+    
+    ###backup
+    # (1, 4, ti_once, [(eq, "$g_mt_mode", abm_tournament),
+                   # (this_or_next|main_hero_fallen),
+                   # (num_active_teams_le, 1)],
+   # [
+       # (try_begin),
+         # (neg|main_hero_fallen),
+         # (call_script, "script_end_tournament_fight", 1),
+         # (call_script, "script_play_victorious_sound"),
+         # (finish_mission),
+       # (else_try),
+         # (call_script, "script_end_tournament_fight", 0),
+         # (finish_mission),
+       # (try_end),
+    # ]),
+
+  (ti_battle_window_opened, 0, 0, [], [(eq, "$g_mt_mode", abm_training),(start_presentation, "prsnt_arena_training")]),
+
+  (0, 0, ti_once, [], [(eq, "$g_mt_mode", abm_training),
+                       (assign, "$g_arena_training_max_opponents", 50), ############ NEW v1.8 - NOW THE FUN BEGINS! 
+                       (assign, "$g_arena_training_num_agents_spawned", 0),
+                       (assign, "$g_arena_training_kills", 0),
+                       (assign, "$g_arena_training_won", 0),
+                       (call_script, "script_music_set_situation_with_culture", mtf_sit_arena),
+                       ]),
+
+  (1, 4, ti_once, [(eq, "$g_mt_mode", abm_training),
+                   (store_mission_timer_a, ":cur_time"),
+                   (gt, ":cur_time", 3),
+                   (assign, ":win_cond", 0),
+                   (try_begin),
+                     (ge, "$g_arena_training_num_agents_spawned", "$g_arena_training_max_opponents"),#spawn at most 40 agents
+                     (num_active_teams_le, 1),
+                     (assign, ":win_cond", 1),
+                   (try_end),
+                   (this_or_next|eq, ":win_cond", 1),
+                   (main_hero_fallen)],
+   [
+       (get_player_agent_no, ":player_agent"),
+       (agent_get_kill_count, "$g_arena_training_kills", ":player_agent", 1),#use this for conversation
+       (assign, "$g_arena_training_won", 0),
+       (try_begin),
+         (neg|main_hero_fallen),
+         (assign, "$g_arena_training_won", 1),#use this for conversation
+       (try_end),
+       (assign, "$g_mt_mode", abm_visit),
+       (set_jump_mission, "mt_arena_melee_fight"),
+       (party_get_slot, ":arena_scene", "$current_town", slot_town_arena),
+       (modify_visitors_at_site, ":arena_scene"),
+       (reset_visitors),
+       # (set_visitor, 35, "trp_veteran_fighter"),
+       # (set_visitor, 36, "trp_euro_horse_4"),
+       # rafi
+       (party_get_slot, ":arena_master", "$current_town", slot_town_arena_master),
+       (set_visitor, 52, ":arena_master"),
+       #rafi
+       (set_jump_entry, 50),
+       (jump_to_scene, ":arena_scene"),
+       ]),
+
+
+  (1, 0, 0,
+   [
+       (eq, "$g_mt_mode", abm_training),
+       (assign, ":num_active_fighters", 0),
+       (try_for_agents, ":agent_no"),
+         (agent_is_human, ":agent_no"),
+         (agent_is_alive, ":agent_no"),
+         (agent_get_team, ":team_no", ":agent_no"),
+         (is_between, ":team_no", 0 ,7),
+         (val_add, ":num_active_fighters", 1),
+       (try_end),
+       (lt, ":num_active_fighters", 20), ############## YES!
+       (neg|main_hero_fallen),
+       (store_mission_timer_a, ":cur_time"),
+       (this_or_next|ge, ":cur_time", "$g_arena_training_next_spawn_time"),
+       (this_or_next|lt, "$g_arena_training_num_agents_spawned", 50),
+       (num_active_teams_le, 1),
+       (lt, "$g_arena_training_num_agents_spawned", "$g_arena_training_max_opponents"),
+      ],
+    [
+       (assign, ":added_troop", "$g_arena_training_num_agents_spawned"),
+       (store_div,  ":added_troop", "$g_arena_training_num_agents_spawned", 6),
+       (assign, ":added_troop_sequence", "$g_arena_training_num_agents_spawned"),
+       (val_mod, ":added_troop_sequence", 1),
+       (val_add, ":added_troop", ":added_troop_sequence"),
+	   #############  NEW v3.2 - reverted back to vanilla 1257 settings
+       (val_min, ":added_troop", 9),
+       (val_add, ":added_troop", "trp_arena_training_fighter_1"),   ############## YES!
+	   ##########################
+	   # (store_random_in_range, ":added_troop", regular_troops_begin, regular_troops_end), ############# YES!
+       (assign, ":end_cond", 10000),
+       (get_player_agent_no, ":player_agent"),
+       (agent_get_position, pos5, ":player_agent"),
+       (try_for_range, ":unused", 0, ":end_cond"),
+         (store_random_in_range, ":random_entry_point", 0, 39),
+         (neq, ":random_entry_point", "$g_player_entry_point"), # make sure we don't overwrite player
+         (entry_point_get_position, pos1, ":random_entry_point"),
+         (get_distance_between_positions, ":dist", pos5, pos1),
+         (gt, ":dist", 1200), #must be at least 12 meters away from the player
+         (assign, ":end_cond", 0),
+       (try_end),
+       (add_visitors_to_current_scene, ":random_entry_point", ":added_troop", 1),
+       (store_add, ":new_spawned_count", "$g_arena_training_num_agents_spawned", 1),
+       (store_mission_timer_a, ":cur_time"),
+       (store_add, "$g_arena_training_next_spawn_time", ":cur_time", 2), ############## YES!
+       (store_div, ":time_reduction", ":new_spawned_count", 4),
+       (val_sub, "$g_arena_training_next_spawn_time", ":time_reduction"),
+       ]),
+
+  (0, 0, 0,
+   [
+       (eq, "$g_mt_mode", abm_training),
+       ],
+    [
+       (assign, ":max_teams", 6),
+       (val_max, ":max_teams", 1),
+       (get_player_agent_no, ":player_agent"),
+       (try_for_agents, ":agent_no"),
+         (agent_is_human, ":agent_no"),
+         (agent_is_alive, ":agent_no"),
+         (agent_slot_eq, ":agent_no", slot_agent_arena_team_set, 0),
+         (agent_get_team, ":team_no", ":agent_no"),
+         (is_between, ":team_no", 0 ,7),
+         (try_begin),
+           (eq, ":agent_no", ":player_agent"),
+           (agent_set_team, ":agent_no", 6), #player is always team 6.
+         (else_try),
+           # (store_random_in_range, ":selected_team", 0, ":max_teams"),
+          # find strongest team
+           (try_for_range, ":t", 0, 6),
+             (troop_set_slot, "trp_temp_array_a", ":t", 0),
+           (try_end),
+           (try_for_agents, ":other_agent_no"),
+             (agent_is_human, ":other_agent_no"),
+             (agent_is_alive, ":other_agent_no"),
+             (neq, ":agent_no", ":player_agent"),
+             (agent_slot_eq, ":other_agent_no", slot_agent_arena_team_set, 1),
+             (agent_get_team, ":other_agent_team", ":other_agent_no"),
+             (troop_get_slot, ":count", "trp_temp_array_a", ":other_agent_team"),
+             (val_add, ":count", 1),
+             (troop_set_slot, "trp_temp_array_a", ":other_agent_team", ":count"),
+           (try_end),
+           # (assign, ":strongest_team", 0),
+           (troop_get_slot, ":strongest_team_count", "trp_temp_array_a", 0),
+           (try_for_range, ":t", 1, 6),
+             (troop_slot_ge, "trp_temp_array_a", ":t", ":strongest_team_count"),
+             (troop_get_slot, ":strongest_team_count", "trp_temp_array_a", ":t"),
+             # (assign, ":strongest_team", ":t"),
+           (try_end),
+           # (store_random_in_range, ":rand", 5, 100),
+           # (try_begin),
+             # (lt, ":rand", "$g_arena_training_num_agents_spawned"),
+             # (assign, ":selected_team", ":strongest_team"),
+           # (try_end),
+           # (agent_set_team, ":agent_no", ":selected_team"),
+         (try_end),
+         (agent_set_slot, ":agent_no", slot_agent_arena_team_set, 1),
+         (try_begin),
+           (neq, ":agent_no", ":player_agent"),
+           (val_add, "$g_arena_training_num_agents_spawned", 1),
+         (try_end),
+       (try_end),
+       ]),
+
+       common_weapon_break
+  # ] + lance_usage + must_1257_triggers + sp_shield_bash_triggers
+  ] + lance_use_triggers + must_1257_triggers + sp_shield_bash_triggers  ####### NEW v3.8
+  
+
+
 ########################## NEW v2.0/2.1
 enhanced_common_battle_triggers = [
 	improved_horse_archer_ai,
 	killcount_and_troop_ratio_bar,
+	killcount_and_troop_ratio_bar_refresh,  ########## NEW v3.8
 	# reassign_archers_to_division,
 	# reassign_horseless_cavalry_to_division,
     # order_weapon_type_triggers,    ########## NEW v2.1 - moved those from mission_templates to here and then commented them because they were causing problems with advanced formations
     # order_volley_triggers,    ########## 
-] + reassign_archers_to_division + reassign_horseless_cavalry_to_division
+] + reassign_archers_to_division + reassign_horseless_cavalry_to_division + lance_use_triggers ####### NEW v3.8
 
 #######################################################################################
-
-
-
 
 ########################## NEW v2.5
 enhanced_common_siege_triggers = [
 	killcount_and_troop_ratio_bar,
 	killcount_and_troop_ratio_bar_refresh,  ########## NEW v3.3
 	# enhanced_siege_lance_spear_fix,
-] + lance_usage
+# ] + lance_usage
+] + lance_use_triggers ####### NEW v3.8
 
 #######################################################################################
-
 
 ############ NEW v3.0
 fief_civilian_triggers = [
@@ -6435,12 +6480,17 @@ fief_civilian_triggers = [
     enhanced_town_resident_behavior_hit,
     enhanced_town_spawn_guards,
   ]  
+  
 ############
-
-
-
-
-
+siege_1257 = [
+    siege_tick,
+    siege_init,
+    siege_attacker_regroup,
+    siege_battle_size_before_battle,
+	archers_move_to_positions,   ########## NEW v1.9
+	common_siege_attacker_do_not_stall,   ########## NEW v2.5
+ ]
+########################
 
 
 

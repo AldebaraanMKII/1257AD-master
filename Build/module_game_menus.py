@@ -6052,6 +6052,7 @@ game_menus = [ #
 
 
         #(*1) these two lines moved to here from (*2)
+        #####(display_debug_message, "@Line 6055"),
         (call_script, "script_npc_decision_checklist_faction_ai_alt", ":faction_ai_decider"),
         (assign, ":new_strategy", reg0),
         (str_store_string, s26, s14),
@@ -8850,7 +8851,8 @@ game_menus = [ #
             #steve post 0912 changes begin - removed, this is duplicated elsewhere in game menus
             #(call_script, "script_add_log_entry", logent_lord_defeated_by_player, "trp_player",  -1, ":stack_troop", ":defeated_faction"),
             (try_begin),
-   			  (store_relation, ":relation", ":defeated_faction", "fac_player_faction"),
+   			  # (store_relation, ":relation", ":defeated_faction", "fac_player_faction"),
+   			  (store_relation, ":relation", ":defeated_faction", "$players_kingdom"),  ########## NEW v3.8
 			  (ge, ":relation", 0),
 			  (str_store_troop_name, s4, ":stack_troop"),
 
@@ -9102,6 +9104,9 @@ game_menus = [ #
             (try_begin), #my kingdom
               #(change_screen_return),
               (eq, "$g_next_menu", "mnu_castle_taken"),
+			  ####### NEW v3.8 - player learns a culture after capturing a fief
+              (call_script, "script_ee_player_learn_new_culture", "$g_encountered_party"),
+              ##############
               (call_script, "script_add_log_entry", logent_castle_captured_by_player, "trp_player", "$g_encountered_party", -1, "$g_encountered_party_faction"),
               (store_current_hours, ":hours"),
 			  (faction_set_slot, "$players_kingdom", slot_faction_ai_last_decisive_event, ":hours"),
@@ -13115,6 +13120,7 @@ game_menus = [ #
      (else_try),
        (assign, ":begin", walled_center_improvements_begin),
        (assign, ":end", walled_center_improvements_end),
+       (val_add, ":end", 1), ######### NEW v3.8
        (party_slot_eq, "$g_encountered_party", slot_party_type, spt_town),
        (str_store_string, s17, "@town"),
      (else_try),
@@ -13122,6 +13128,10 @@ game_menus = [ #
      (try_end),
 
      (try_for_range, ":improvement_no", ":begin", ":end"),
+       (try_begin),
+         (eq, ":improvement_no", ":end"), ######### NEW v3.8
+           (assign, ":improvement_no", slot_center_has_stables),
+       (try_end),
        (party_slot_ge, "$g_encountered_party", ":improvement_no", 1),
        (party_get_slot, ":improvement_level", "$g_encountered_party", ":improvement_no"), ######## NEW v3.8
        (val_add,  ":num_improvements", 1),
@@ -13228,10 +13238,11 @@ game_menus = [ #
       (party_get_slot, ":level", "$g_encountered_party", slot_center_has_stables),
 	  (ge, ":level", 0),
 	  (lt, ":level", 4),
-	  (val_add, ":level", 1),
       ],
        "Improve the stables.",[
 	   (assign, "$g_improvement_type", slot_center_has_stables),
+       (party_get_slot, ":level", "$g_encountered_party", slot_center_has_stables),
+	   (val_add, ":level", 1),
 	   (assign, "$g_improvement_type_level", ":level"),
        (jump_to_menu, "mnu_center_improve"),]),
 	################## 
@@ -13269,8 +13280,15 @@ game_menus = [ #
     "{s19} As the party member with the highest engineer skill ({reg2}), {reg3?you reckon:{s3} reckons} that building the {s4} will cost you {reg5} denars and will take {reg6} days.",
     "none",
     [      
+	 ######## NEW v3.8
+     (try_begin),
+       (eq, "$g_improvement_type_level", 0), 
+         (assign, "$g_improvement_type_level", 1), 
+     (try_end),
+	 ########################
      # (store_encountered_party, "$g_encountered_party"),
      (call_script, "script_get_improvement_details", "$g_improvement_type", "$g_improvement_type_level"),
+     (assign, "$g_improvement_type_level", 0), ######## NEW v3.8
      (assign, ":improvement_cost", reg0),
      (assign, ":improvement_time", reg1),
      (str_store_string, s4, s0),
@@ -13447,6 +13465,7 @@ game_menus = [ #
         [
           (call_script, "script_dplmc_withdraw_from_treasury", reg5),
           (party_set_slot, "$g_encountered_party", slot_center_current_improvement, "$g_improvement_type"),
+          (party_set_slot, "$g_encountered_party", slot_center_current_improvement_level, "$g_improvement_type_level"),  ###### NEW v3.8
           (store_current_hours, ":cur_hours"),
           (store_mul, ":hours_takes", reg6, 24),
           (val_add, ":hours_takes", ":cur_hours"),
@@ -13459,6 +13478,7 @@ game_menus = [ #
                        (ge, ":cur_gold", reg5)],
        "Go on.", [(troop_remove_gold, "trp_player", reg5),
                   (party_set_slot, "$g_encountered_party", slot_center_current_improvement, "$g_improvement_type"),
+                  (party_set_slot, "$g_encountered_party", slot_center_current_improvement_level, "$g_improvement_type_level"),  ###### NEW v3.8
                   (store_current_hours, ":cur_hours"),
                   (store_mul, ":hours_takes", reg6, 24),
                   (val_add, ":hours_takes", ":cur_hours"),
@@ -19345,7 +19365,7 @@ game_menus = [ #
              (neq, ":cur_kingdom", "$g_notification_menu_var1"),
              (store_relation, ":reln", ":cur_kingdom", "fac_player_supporters_faction"),
              (set_relation, ":cur_kingdom", "$g_notification_menu_var1", ":reln"),
-                             (display_message, "@line 19320"),
+                             #####(display_debug_message, "@Line 19320"),
              (call_script, "script_recalculate_ais_for_faction", ":cur_kingdom"), ###### NEW v3.8
            (try_end),
            (assign, "$supported_pretender", 0),
@@ -32173,6 +32193,18 @@ game_menus = [ #
        ]
        ),
 	   #######################################
+	   ############# NEW v3.8 - clear improvements
+       ("debug_options2_8",[], "Reset improvements being built in all fiefs.",
+       [
+	   (try_for_range, ":cur_fief", centers_begin, centers_end),
+         (party_get_slot, ":cur_improvement", ":cur_fief", slot_center_current_improvement),
+         (gt, ":cur_improvement", 0), 
+           (party_set_slot, ":cur_fief", slot_center_current_improvement, 0),
+           (party_set_slot, ":cur_fief", slot_center_current_improvement_level, 0),
+       (try_end),
+       ]
+       ),
+	   #######################################
 	   #######################################
        ("debug_options2_99",[], "Go back.",
        [
@@ -32900,6 +32932,32 @@ game_menus = [ #
     ],
     [
       ("Ok",[], "Ok.",
+       [
+		(change_screen_return)
+        ]),
+     ]
+  ),
+#########################
+   ("ee_stable_move_constable",0,
+    "Your horses and staff have arrived in {s1}.",
+    "none",
+    [
+    ],
+    [
+      ("Ok",[], "Ok.",
+       [
+		(change_screen_return)
+        ]),
+     ]
+  ),
+#########################
+   ("ee_stable_move_constable_fail",0,
+    "Your horses and staff have arrived in {s1}, only to find out that the center was no longer yours. They are returning to {s2}.",
+    "none",
+    [
+    ],
+    [
+      ("Ok",[], "Ok!",
        [
 		(change_screen_return)
         ]),

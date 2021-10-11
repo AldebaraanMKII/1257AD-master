@@ -8935,7 +8935,7 @@ presentations = [
               (call_script, "script_change_player_relation_with_troop", "$g_presentation_marshall_selection_max_renown_2_troop", -3),
             (try_end),
             # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 8938"),
+                             #####(display_debug_message, "@Line 8938"),
             (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
             (assign, "$g_presentation_marshall_selection_ended", 1),
             (presentation_set_duration, 0),

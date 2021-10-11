@@ -69,6 +69,7 @@ tf_guarantee_all = tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots
   
 #Skills
 knows_common = knows_riding_1|knows_trade_2|knows_inventory_management_10|knows_prisoner_management_1|knows_leadership_1
+knows_common_no_inventory = knows_riding_1|knows_trade_2|knows_prisoner_management_1|knows_leadership_1
 def_attrib = str_7|agi_5|int_4|cha_4
 def_attrib_multiplayer = str_14|agi_14|int_4|cha_4
 
@@ -268,8 +269,8 @@ nbl_skirmisher2_wp        = wp_one_handed(200)|wp_two_handed(200)|wp_polearm(200
 
 nbl_lcv_skills            = knows_ironflesh_1|knows_power_strike_4|knows_athletics_2|knows_weapon_master_3|knows_riding_4|knows_pathfinding_1|knows_shield_3|knows_inventory_management_10
 nbl_mcv_skills            = knows_ironflesh_2|knows_power_strike_5|knows_athletics_2|knows_weapon_master_5|knows_riding_5|knows_pathfinding_2|knows_shield_4|knows_inventory_management_10
-nbl_hlan_skills           = knows_ironflesh_3|knows_power_strike_6|knows_athletics_2|knows_weapon_master_6|knows_riding_6|knows_pathfinding_2|knows_shield_5|knows_leadership_1
-nbl_knight_skills         = knows_ironflesh_4|knows_power_strike_7|knows_athletics_2|knows_weapon_master_8|knows_riding_7|knows_pathfinding_3|knows_tactics_4|knows_prisoner_management_1|knows_leadership_3|knows_shield_6|knows_inventory_management_10
+nbl_hlan_skills           = knows_ironflesh_3|knows_power_strike_6|knows_athletics_2|knows_weapon_master_6|knows_riding_6|knows_pathfinding_2|knows_shield_5|knows_leadership_1|knows_tactics_2|knows_inventory_management_10|knows_prisoner_management_1
+nbl_knight_skills         = knows_ironflesh_4|knows_power_strike_7|knows_athletics_2|knows_weapon_master_8|knows_riding_7|knows_pathfinding_3|knows_tactics_4|knows_prisoner_management_2|knows_leadership_3|knows_shield_6|knows_inventory_management_10
 
 nbl_lcv_wp                = wp_one_handed(140)|wp_two_handed(140)|wp_polearm(140)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)
 nbl_mcv_wp                = wp_one_handed(220)|wp_two_handed(220)|wp_polearm(220)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)

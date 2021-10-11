@@ -141,14 +141,31 @@ slot_agent_speed = 30
 sp_agent_shield_bash_timer = 50
     
 #agent slots:
-slot_possessed = 100
-slot_real_troop = 101
+# slot_possessed = 100
+# slot_real_troop = 101
 ############skirmishers
 #agent slots:
-slot_agent_scripted_mode = 104
-slot_agent_rotation = 105
-slot_agent_direction = 106
-slot_agent_banner = 107
+# slot_agent_scripted_mode = 104
+# slot_agent_rotation = 105
+# slot_agent_direction = 106
+# slot_agent_banner = 107
+ 
+############## NEW v3.8
+#agent slots:
+slot_possessed = 35
+slot_real_troop = 36
+############skirmishers
+#agent slots:
+slot_agent_scripted_mode = 37
+slot_agent_rotation = 38
+slot_agent_direction = 39
+slot_agent_banner = 40
+
+slot_agent_horse_rider = 41
+slot_agent_new_division = 42
+
+slot_agent_lance  =  43  ####### NEW v3.8
+############################  
 #team slots:
 team_slot_direction = 200 #rotate to which direction sets
 #party slots:
@@ -161,9 +178,6 @@ slot_team_d0_order_volley     = 10 #plus 8 more for the other divisions
 from header_triggers import *
 key_for_volley   = key_f12
 #####################################################
-
-slot_agent_horse_rider = 45
-slot_agent_new_division = 46
 
 ######################## 
 MODDED2x_AIAgentResetTimer = 30
@@ -1316,7 +1330,8 @@ slot_troop_original_title3 = 171
 slot_troop_original_title4 = 172
 slot_troop_original_title5 = 173
 
-slot_troop_death_cause = 174  ######## 1 = battle, 2 = executed, 3 = assassinated
+# slot_troop_death_cause = 174  ######## 1 = battle, 2 = executed, 3 = assassinated
+slot_troop_death_cause = 174  ######## 1 = battle, 2 = executed, 3 = assassinated, 4 = suicide, 5 = exile ####### NEW v3.8
 
 slot_troop_death_battle_killer = 175
 
@@ -1367,15 +1382,21 @@ slot_troop_horse_train_days_left = 12
 ######## stable slots
 slot_troop_horse_train_cur_horse_1 = 13
 slot_troop_horse_train_cur_horse_imod_1 = 14
-slot_troop_horse_train_days_left_1 = 15
+slot_troop_horse_train_hours_left_1 = 15
 
 slot_troop_horse_train_cur_horse_2 = 16
 slot_troop_horse_train_cur_horse_imod_2 = 17
-slot_troop_horse_train_days_left_2 = 18
+slot_troop_horse_train_hours_left_2 = 18
 
 slot_troop_horse_train_cur_horse_3 = 19
 slot_troop_horse_train_cur_horse_imod_3 = 20
-slot_troop_horse_train_days_left_3 = 21
+slot_troop_horse_train_hours_left_3 = 21
+
+slot_troop_constable_stable_location = 22
+slot_troop_constable_stable_location_old = 23
+slot_troop_constable_stable_location_new = 24
+slot_troop_constable_stable_move_days = 25
+slot_troop_constable_stable_move_days_static = 26
 ##########################
 
 #### Moved this here
@@ -1783,6 +1804,11 @@ pretenders_end = kingdom_ladies_begin
 
 lords_begin = "trp_knight_1_1"
 lords_end = "trp_enhanced_rnd_lord_end"  ######### NEW v2.9 - this shall fix some issues
+
+############## NEW v3.8 - 
+kings_and_lords_begin = "trp_kingdom_1_lord"
+kings_and_lords_end = "trp_enhanced_rnd_lord_end"  
+############################
 
 kings_begin = "trp_kingdom_1_lord"
 kings_end = lords_begin

@@ -266,28 +266,31 @@ simple_triggers = [
 
 
 ############### NEW v1.8 - 06/10/2018 - https://forums.taleworlds.com/index.php?topic=6575.msg9041351#msg9041351
-(0.057, ######Locate kingdom ladies - once every 24 hours for each of the 420 ladies
+# (0.057, ######Locate kingdom ladies - once every 24 hours for each of the 420 ladies
+(0.171, #################### NEW v3.8 - once every 72 hours
 [
- 
-      ####(display_message, "@Executing Simple Trigger 8"),
-(try_begin),
-   (lt, "$g_locate_ladies_cur_lady", kingdom_ladies_begin), 
-   (assign, "$g_locate_ladies_cur_lady", kingdom_ladies_begin),
- (try_end),
- 
- (try_begin),
-   (ge, "$g_locate_ladies_cur_lady", kingdom_ladies_end), 
-   (assign, "$g_locate_ladies_cur_lady", kingdom_ladies_begin),
- (try_end),
- 
- ######change location for ONE lady
- (neg|troop_slot_ge, "$g_locate_ladies_cur_lady", slot_troop_prisoner_of_party, 0),
-   (call_script, "script_get_kingdom_lady_social_determinants", "$g_locate_ladies_cur_lady"),
-   (assign, ":location", reg1),
-   (troop_set_slot, "$g_locate_ladies_cur_lady", slot_troop_cur_center, ":location"),
- 
-   ############# proceeds to the next lady when it's triggered again
-   (val_add, "$g_locate_ladies_cur_lady", 1),
+####(display_message, "@Executing Simple Trigger 8"),
+  (try_begin),
+    (lt, "$g_locate_ladies_cur_lady", kingdom_ladies_begin), 
+      (assign, "$g_locate_ladies_cur_lady", kingdom_ladies_begin),
+  (try_end),
+  
+  (try_begin),
+    (ge, "$g_locate_ladies_cur_lady", kingdom_ladies_end), 
+      (assign, "$g_locate_ladies_cur_lady", kingdom_ladies_begin),
+  (try_end),
+  
+  ######change location for ONE lady
+  (try_begin),
+    (neg|troop_slot_ge, "$g_locate_ladies_cur_lady", slot_troop_prisoner_of_party, 0),
+    (neg|troop_slot_eq, "$g_locate_ladies_cur_lady", slot_troop_spouse, "trp_player"),  ######### NEW v3.8
+      (call_script, "script_get_kingdom_lady_social_determinants", "$g_locate_ladies_cur_lady"),
+      (assign, ":location", reg1),
+      (troop_set_slot, "$g_locate_ladies_cur_lady", slot_troop_cur_center, ":location"),
+  (try_end),
+  
+    ############# proceeds to the next lady when it's triggered again
+  (val_add, "$g_locate_ladies_cur_lady", 1),
 ]),
 ####################################################
 
@@ -2102,7 +2105,7 @@ simple_triggers = [
      #######PROSPERITY SYSTEM TAXES
      
      (val_add, ":accumulated_rents", ":cur_rents"), ######cur rents changes between 23..1000
-     (val_clamp, ":accumulated_rents", 0, 30000), ###### NEW v3.8
+     (val_clamp, ":accumulated_rents", 0, 50000), ###### NEW v3.8
      (party_set_slot, "$g_accumulate_taxes_cur_center", slot_center_accumulated_rents, ":accumulated_rents"),
    (try_end),
    
@@ -4744,7 +4747,8 @@ simple_triggers = [
 ]),
 #NPC changes end
 
-(1,
+# (1,
+(3,  ####### NEW v3.8 - too fast
    [
  
       ####(display_message, "@Executing Simple Trigger 105"),
@@ -4798,10 +4802,15 @@ simple_triggers = [
             (str_store_troop_name, s4, ":troop_no"),
             (display_message, "@{!}DEBUG - {s4} faction changed from slot_troop_change_to_faction"), 
         (try_end),      
-        
-      (call_script, "script_change_troop_faction", ":troop_no", ":new_faction_no"),
+      # (call_script, "script_change_troop_faction", ":troop_no", ":new_faction_no"),
       (troop_set_slot, ":troop_no", slot_troop_change_to_faction, 0),
+      # (try_begin),
+      ############## NEW v3.8 - 
       (try_begin),
+        (faction_slot_eq, ":faction_no",slot_faction_leader, ":troop_no"),
+        (troop_set_slot, ":troop_no", slot_troop_is_alive, 0), 
+      (else_try),
+        (call_script, "script_change_troop_faction", ":troop_no", ":new_faction_no"),
         (is_between, ":new_faction_no", kingdoms_begin, kingdoms_end),
         (str_store_troop_name_link, s1, ":troop_no"),
         (str_store_faction_name_link, s2, ":faction_no"),
@@ -4815,6 +4824,8 @@ simple_triggers = [
           (call_script, "script_add_notification_menu", "mnu_notification_troop_joined_players_faction", ":troop_no", ":faction_no"),
         (try_end),
       (try_end),
+      ############################
+      # (try_end),
     (try_end),
     
     ]
@@ -7513,6 +7524,7 @@ simple_triggers = [
  (try_begin),  
    (neq, "$g_lord_death_chance_execution_base", 0), ############### must be greater than this
    (neg|party_slot_eq, "$g_execute_lord_cur_center", slot_town_lord, -1),
+   (neg|party_slot_eq, "$g_execute_lord_cur_center", slot_town_lord, "trp_player"), ####### NEW v3.8 - fix for lords being executed without player consent
    (party_get_num_prisoner_stacks, ":prisoner_stack_num", "$g_execute_lord_cur_center"),
    (try_for_range_backwards, ":cur_prisoner_stack", 0, ":prisoner_stack_num"),
      (party_prisoner_stack_get_troop_id, ":prisoner_troop_id", "$g_execute_lord_cur_center", ":cur_prisoner_stack"),
@@ -7710,7 +7722,7 @@ simple_triggers = [
        (try_begin),
          (faction_slot_eq, "fac_player_supporters_faction", slot_faction_state, sfs_active),
          (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"), ##### NEW v3.8
-         #######(eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
+         (eq, "$g_player_cur_role", role_king),  ####### NEW v3.0 - player role
          (assign, "$g_diplo_kingdom", "fac_player_supporters_faction"),
        (else_try),
          ######(assign, "$g_diplo_kingdom", "fac_kingdom_1"),
@@ -8166,42 +8178,57 @@ simple_triggers = [
 
 
 ####################### NEW v2.2 - Lords get out of defeated factions ASAP
+########## NEW v3.8 - already done above on 3 hour trigger
 (0.2372,   ###### once a week for every of the 708 lords
 [
+  ####(display_message, "@Executing Simple Trigger 157"),
+  (try_begin),
+    (lt, "$g_leave_defeated_faction_cur_lord", kings_and_lords_begin), 
+      (assign, "$g_leave_defeated_faction_cur_lord", kings_and_lords_begin),
+  (try_end),
  
-      ####(display_message, "@Executing Simple Trigger 157"),
-(try_begin),
-   (lt, "$g_leave_defeated_faction_cur_lord", lords_begin), 
-     (assign, "$g_leave_defeated_faction_cur_lord", lords_begin),
- (try_end),
+  (try_begin),
+    (ge, "$g_leave_defeated_faction_cur_lord", kings_and_lords_end), 
+      (assign, "$g_leave_defeated_faction_cur_lord", kings_and_lords_begin),
+  (try_end),
  
- (try_begin),
-   (ge, "$g_leave_defeated_faction_cur_lord", lords_end), 
-     (assign, "$g_leave_defeated_faction_cur_lord", lords_begin),
- (try_end),
- 
- (try_begin),   
-   (troop_slot_eq, "$g_leave_defeated_faction_cur_lord", slot_troop_is_alive, 1),  ###### he's alive
-   (store_faction_of_troop, ":cur_faction", "$g_leave_defeated_faction_cur_lord"),
-   (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_defeated),
-     (call_script, "script_lord_find_alternative_faction", "$g_leave_defeated_faction_cur_lord"),
-     (assign, ":new_faction", reg0),
-     (is_between, ":new_faction", kingdoms_begin, kingdoms_end),
-     (neq, ":new_faction", ":cur_faction"),
-       (str_store_troop_name_link, s1, "$g_leave_defeated_faction_cur_lord"),
-       (str_store_faction_name_link, s2, ":new_faction"),
-       (str_store_faction_name_link, s3, ":cur_faction"),
-       (call_script, "script_change_troop_faction", "$g_leave_defeated_faction_cur_lord", ":new_faction"),
-       (call_script, "script_dplmc_store_troop_is_female", "$g_leave_defeated_faction_cur_lord"),
-       (assign, reg4, reg0),
-       (str_store_string, s4, "str_ee_lord_defects_ordinary"),
-       (display_log_message, "@{!}{s4}"),
-       # (try_begin),  
-         # (call_script, "script_party_calculate_regular_strength"),
-       # (try_end),
- (try_end),
+  (try_begin),   
+    (troop_slot_eq, "$g_leave_defeated_faction_cur_lord", slot_troop_is_alive, 1),  ###### he's alive
+    (store_faction_of_troop, ":cur_faction", "$g_leave_defeated_faction_cur_lord"),
+    (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_defeated),
+      (neg|troop_slot_ge, "$g_leave_defeated_faction_cur_lord", slot_troop_prisoner_of_party, 0),  ###### NEW v3.8
+      (call_script, "script_lord_find_alternative_faction", "$g_leave_defeated_faction_cur_lord"),
+      (assign, ":new_faction", reg0),
+      (is_between, ":new_faction", kingdoms_begin, kingdoms_end),
+      (neq, ":new_faction", ":cur_faction"),
+      ############## NEW v3.8 - king commits suicide or goes in exile
+      (str_store_troop_name_link, s1, "$g_leave_defeated_faction_cur_lord"),
+      (str_store_faction_name_link, s2, ":new_faction"),
+      (str_store_faction_name_link, s3, ":cur_faction"),
+      (try_begin),
+        (faction_slot_eq, ":cur_faction", slot_faction_leader, "$g_leave_defeated_faction_cur_lord"),
+	      (store_random_in_range, ":random_number", 0, 101),
+          (try_begin),  ###### suicide
+		    (lt, ":random_number", 30),
+			  (display_message, "@{s1}, unable to cope with the loss of his kingdom, has committed suicide!"),
+              (troop_set_slot, "$g_leave_defeated_faction_cur_lord", slot_troop_death_cause, 4), 
+          (else_try),   ###### exile
+		    (ge, ":random_number", 30),
+			  (display_message, "@{s1} went into exile due to the loss of his kingdom."),
+              (troop_set_slot, "$g_leave_defeated_faction_cur_lord", slot_troop_death_cause, 5), 
+          (try_end),
+          (troop_set_slot, "$g_leave_defeated_faction_cur_lord", slot_troop_is_alive, 0), 
+      (else_try),
+        (call_script, "script_change_troop_faction", "$g_leave_defeated_faction_cur_lord", ":new_faction"),
+        (call_script, "script_dplmc_store_troop_is_female", "$g_leave_defeated_faction_cur_lord"),
+        (assign, reg4, reg0),
+        (str_store_string, s4, "str_ee_lord_defects_ordinary"),
+        (display_log_message, "@{!}{s4}"),
+      (try_end),
+      ############################
+  (try_end),
  ################# proceed to the next npc
- (val_add, "$g_leave_defeated_faction_cur_lord", 1),
+  (val_add, "$g_leave_defeated_faction_cur_lord", 1),
 ]),  
 ##############################################
 
@@ -8359,7 +8386,7 @@ simple_triggers = [
     (ge, "$g_cur_horse_merchant", horse_merchants_end), 
       (assign, "$g_cur_horse_merchant", "trp_dplmc_constable"),
   (try_end),
-  
+############ - horse merchants
   (try_begin),
     (troop_slot_ge, "$g_cur_horse_merchant", slot_troop_horse_train_cur_horse, 1),
       (troop_get_slot, ":days", "$g_cur_horse_merchant", slot_troop_horse_train_days_left),
@@ -8378,66 +8405,37 @@ simple_triggers = [
 #####################
   (try_begin),
     (eq, "$g_cur_horse_merchant", "trp_dplmc_constable"),
-#####################
+##################### - stable move location
     (try_begin),
-      (troop_slot_ge, "$g_cur_horse_merchant", slot_troop_horse_train_days_left_1, 1),
-        (troop_get_slot, ":days", "$g_cur_horse_merchant", slot_troop_horse_train_days_left_1),
+      (troop_slot_ge, "$g_cur_horse_merchant", slot_troop_constable_stable_move_days, 1),
+        (troop_get_slot, ":days", "$g_cur_horse_merchant", slot_troop_constable_stable_move_days),
         (val_sub, ":days", 1),
-        (troop_set_slot, "$g_cur_horse_merchant", slot_troop_horse_train_days_left_1, ":days"),
+        (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_move_days, ":days"),
         (try_begin),
           (eq, ":days", 0),
-            (troop_get_slot, ":horse", "$g_cur_horse_merchant", slot_troop_horse_train_cur_horse_1),
-            (str_store_item_name, s1, ":horse"),
-            (assign, ":upper_bound", walled_centers_end),
-            (try_for_range, ":cur_fief", walled_centers_begin, ":upper_bound"),
-              (party_slot_eq, ":cur_fief", slot_town_lord, "trp_player"),
-              (party_slot_ge, ":cur_fief", slot_center_has_stables, 1),
-              (assign, ":upper_bound", -1),
-              (str_store_party_name, s2, ":cur_fief"),
-              (call_script, "script_add_notification_menu", "mnu_ee_horse_ready_constable"),
+            (troop_get_slot, ":new_location", "$g_cur_horse_merchant", slot_troop_constable_stable_location_new),
+            (try_begin),
+              (party_slot_eq, ":new_location", slot_town_lord, "trp_player"),
+                (str_store_party_name, s1, ":new_location"),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_location, ":new_location"),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_location_new, 0),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_location_old, 0),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_move_days, 0),
+                (call_script, "script_add_notification_menu", "mnu_ee_stable_move_constable"),
+            (else_try), ######## center is no longer of player
+              (neg|party_slot_eq, ":new_location", slot_town_lord, "trp_player"),
+                (troop_get_slot, ":old_location", "$g_cur_horse_merchant", slot_troop_constable_stable_location_old),
+                (str_store_party_name, s1, ":new_location"),
+                (str_store_party_name, s2, ":old_location"),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_location, 0),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_location_new, ":old_location"),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_location_old, ":new_location"),
+                (troop_get_slot, ":move_days", "$g_cur_horse_merchant", slot_troop_constable_stable_move_days_static),
+                (troop_set_slot, "$g_cur_horse_merchant", slot_troop_constable_stable_move_days, ":move_days"),
+                (call_script, "script_add_notification_menu", "mnu_ee_stable_move_constable_fail"),
+            (try_end),
          (try_end),
       (try_end),
-    (try_end),
-#####################
-    (try_begin),
-      (troop_slot_ge, "$g_cur_horse_merchant", slot_troop_horse_train_days_left_2, 1),
-        (troop_get_slot, ":days", "$g_cur_horse_merchant", slot_troop_horse_train_days_left_2),
-        (val_sub, ":days", 1),
-        (troop_set_slot, "$g_cur_horse_merchant", slot_troop_horse_train_days_left_2, ":days"),
-        (try_begin),
-          (eq, ":days", 0),
-            (troop_get_slot, ":horse", "$g_cur_horse_merchant", slot_troop_horse_train_cur_horse_2),
-            (str_store_item_name, s1, ":horse"),
-            (assign, ":upper_bound", walled_centers_end),
-            (try_for_range, ":cur_fief", walled_centers_begin, ":upper_bound"),
-              (party_slot_eq, ":cur_fief", slot_town_lord, "trp_player"),
-              (party_slot_ge, ":cur_fief", slot_center_has_stables, 1),
-              (assign, ":upper_bound", -1),
-              (str_store_party_name, s2, ":cur_fief"),
-              (call_script, "script_add_notification_menu", "mnu_ee_horse_ready_constable"),
-         (try_end),
-      (try_end),
-    (try_end),
-#####################
-    (try_begin),
-      (troop_slot_ge, "$g_cur_horse_merchant", slot_troop_horse_train_days_left_3, 1),
-        (troop_get_slot, ":days", "$g_cur_horse_merchant", slot_troop_horse_train_days_left_3),
-        (val_sub, ":days", 1),
-        (troop_set_slot, "$g_cur_horse_merchant", slot_troop_horse_train_days_left_3, ":days"),
-        (try_begin),
-          (eq, ":days", 0),
-            (troop_get_slot, ":horse", "$g_cur_horse_merchant", slot_troop_horse_train_cur_horse_3),
-            (str_store_item_name, s1, ":horse"),
-            (assign, ":upper_bound", walled_centers_end),
-            (try_for_range, ":cur_fief", walled_centers_begin, ":upper_bound"),
-              (party_slot_eq, ":cur_fief", slot_town_lord, "trp_player"),
-              (party_slot_ge, ":cur_fief", slot_center_has_stables, 1),
-              (assign, ":upper_bound", -1),
-              (str_store_party_name, s2, ":cur_fief"),
-              (call_script, "script_add_notification_menu", "mnu_ee_horse_ready_constable"),
-         (try_end),
-      (try_end),
-    (try_end),
 #####################
   (try_end),
 ################# proceed to the next npc
@@ -8445,14 +8443,156 @@ simple_triggers = [
 ##############################
 ]),  
 ####
-(24,   
+(2,  ######## Constable train horses
 [
+#####################
+    (try_begin),
+      (troop_slot_ge, "trp_dplmc_constable", slot_troop_horse_train_hours_left_1, 1),
+        (troop_get_slot, ":hours", "trp_dplmc_constable", slot_troop_horse_train_hours_left_1),
+        (val_sub, ":hours", 2),
+        (troop_set_slot, "trp_dplmc_constable", slot_troop_horse_train_hours_left_1, ":hours"),
+        (try_begin),
+          (le, ":hours", 0),
+            (troop_get_slot, ":horse", "trp_dplmc_constable", slot_troop_horse_train_cur_horse_1),
+            (str_store_item_name, s1, ":horse"),
+            (troop_get_slot, ":location", "trp_dplmc_constable", slot_troop_constable_stable_location),
+            (str_store_party_name, s2, ":location"),
+            (call_script, "script_add_notification_menu", "mnu_ee_horse_ready_constable"),
+         (try_end),
+      (try_end),
+#####################
+    (try_begin),
+      (troop_slot_ge, "trp_dplmc_constable", slot_troop_horse_train_hours_left_2, 1),
+        (troop_get_slot, ":hours", "trp_dplmc_constable", slot_troop_horse_train_hours_left_2),
+        (val_sub, ":hours", 2),
+        (troop_set_slot, "trp_dplmc_constable", slot_troop_horse_train_hours_left_2, ":hours"),
+        (try_begin),
+          (le, ":hours", 0),
+            (troop_get_slot, ":horse", "trp_dplmc_constable", slot_troop_horse_train_cur_horse_2),
+            (str_store_item_name, s1, ":horse"),
+            (troop_get_slot, ":location", "trp_dplmc_constable", slot_troop_constable_stable_location),
+            (str_store_party_name, s2, ":location"),
+            (call_script, "script_add_notification_menu", "mnu_ee_horse_ready_constable"),
+         (try_end),
+      (try_end),
+#####################
+    (try_begin),
+      (troop_slot_ge, "trp_dplmc_constable", slot_troop_horse_train_hours_left_3, 1),
+        (troop_get_slot, ":hours", "trp_dplmc_constable", slot_troop_horse_train_hours_left_3),
+        (val_sub, ":hours", 2),
+        (troop_set_slot, "trp_dplmc_constable", slot_troop_horse_train_hours_left_3, ":hours"),
+        (try_begin),
+          (le, ":hours", 0),
+            (troop_get_slot, ":horse", "trp_dplmc_constable", slot_troop_horse_train_cur_horse_3),
+            (str_store_item_name, s1, ":horse"),
+            (troop_get_slot, ":location", "trp_dplmc_constable", slot_troop_constable_stable_location),
+            (str_store_party_name, s2, ":location"),
+            (call_script, "script_add_notification_menu", "mnu_ee_horse_ready_constable"),
+         (try_end),
+      (try_end),
 ]),  
-####
-(24,   
+#######################################
+(168,   ########## auto train/heal horses at stable
 [
+ (assign, ":search_end", walled_centers_end),
+ (try_for_range, ":cur_fief", walled_centers_begin, ":search_end"),
+   (party_slot_eq, ":cur_fief", slot_town_lord, "trp_player"),
+   (troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, ":cur_fief"),
+   (party_slot_ge, ":cur_fief", slot_center_has_stables, 1),
+	 (troop_get_inventory_capacity, ":inv_capacity", "trp_stable_troop"),
+     # (val_sub, ":inv_capacity", num_equipment_kinds), ####### equipment slots
+	 (store_random_in_range, ":random_number", 0, 101),
+#######################################
+     (try_begin),
+       (party_slot_eq, ":cur_fief", slot_center_has_stables, 1),
+       (try_for_range, ":i_slot", 10, ":inv_capacity"),
+         (troop_get_inventory_slot, ":cur_item", "trp_stable_troop", ":i_slot"),
+         (gt, ":cur_item", 0),
+           (item_get_type, ":type", ":cur_item"),
+           (eq, ":type", itp_type_horse),
+           (troop_get_inventory_slot_modifier, ":cur_item_imod", "trp_stable_troop", ":i_slot"),
+           (lt, ":random_number", 30), ### 30% chance to heal
+           (try_begin),
+             (eq, ":cur_item_imod", imod_lame),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_swaybacked),
+           (else_try),
+             (eq, ":cur_item_imod", imod_swaybacked),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_plain),
+			   (str_store_party_name, s1, ":cur_fief"),
+			   (display_message, "@One of your horses was fully healed in {s1}.", 5308240),
+           (try_end),
+       (try_end),
+#######################################
+     (else_try),
+       (party_slot_eq, ":cur_fief", slot_center_has_stables, 2),
+       (try_for_range, ":i_slot", 10, ":inv_capacity"),
+         (troop_get_inventory_slot, ":cur_item", "trp_stable_troop", ":i_slot"),
+         (gt, ":cur_item", 0),
+           (item_get_type, ":type", ":cur_item"),
+           (eq, ":type", itp_type_horse),
+           (troop_get_inventory_slot_modifier, ":cur_item_imod", "trp_stable_troop", ":i_slot"),
+           (lt, ":random_number", 45), ### 45% chance to heal
+           (try_begin),
+             (eq, ":cur_item_imod", imod_lame),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_swaybacked),
+           (else_try),
+             (eq, ":cur_item_imod", imod_swaybacked),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_plain),
+			   (str_store_party_name, s1, ":cur_fief"),
+			   (display_message, "@One of your horses was fully healed in {s1}.", 5308240),
+           (try_end),
+       (try_end),
+#######################################
+     (else_try),
+       (party_slot_eq, ":cur_fief", slot_center_has_stables, 3),
+       (try_for_range, ":i_slot", 10, ":inv_capacity"),
+         (troop_get_inventory_slot, ":cur_item", "trp_stable_troop", ":i_slot"),
+         (gt, ":cur_item", 0),
+           (item_get_type, ":type", ":cur_item"),
+           (eq, ":type", itp_type_horse),
+           (troop_get_inventory_slot_modifier, ":cur_item_imod", "trp_stable_troop", ":i_slot"),
+           (lt, ":random_number", 60), ### 60% chance to heal
+           (try_begin),
+             (eq, ":cur_item_imod", imod_lame),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_swaybacked),
+           (else_try),
+             (eq, ":cur_item_imod", imod_swaybacked),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_plain),
+			   (str_store_party_name, s1, ":cur_fief"),
+			   (display_message, "@One of your horses was fully healed in {s1}.", 5308240),
+           (try_end),
+       (try_end),
+#######################################
+     (else_try),
+       (party_slot_eq, ":cur_fief", slot_center_has_stables, 4),
+       (try_for_range, ":i_slot", 10, ":inv_capacity"),
+         (troop_get_inventory_slot, ":cur_item", "trp_stable_troop", ":i_slot"),
+         (gt, ":cur_item", 0),
+           (item_get_type, ":type", ":cur_item"),
+           (eq, ":type", itp_type_horse),
+           (troop_get_inventory_slot_modifier, ":cur_item_imod", "trp_stable_troop", ":i_slot"),
+           (lt, ":random_number", 75), ### 75% chance to heal
+           (try_begin),
+             (eq, ":cur_item_imod", imod_lame),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_swaybacked),
+           (else_try),
+             (eq, ":cur_item_imod", imod_swaybacked),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_plain),
+			   (str_store_party_name, s1, ":cur_fief"),
+			   (display_message, "@One of your horses was fully healed in {s1}.", 5308240),
+           (else_try),
+             (eq, ":cur_item_imod", imod_plain),
+               (troop_set_inventory_slot_modifier, "trp_stable_troop", ":i_slot", imod_heavy), #### auto train
+			   (str_store_party_name, s1, ":cur_fief"),
+			   (display_message, "@One of your horses was auto trained to heavy in {s1}.", 5308240),
+           (try_end),
+       (try_end),
+     (try_end),
+     (assign, ":search_end", -1),  ##### break loop
+#######################################
+ (try_end),
 ]),  
-####
+#######################################
 (24,   
 [
 ]),  

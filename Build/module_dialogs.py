@@ -10014,6 +10014,837 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 
 
+############### NEW v3.8 - Stables
+[anyone|plyr, "dplmc_constable_talk",[],
+"I want to talk about the stables.", "dplmc_constable_stables_talk",
+[
+(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, 0),
+(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_new, 0),
+(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_old, 0),
+(troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
+(str_store_party_name, s1, "$g_encountered_party"),
+(display_message, "@Your main stable is now located at {s1}."),
+]],
+
+
+# # [anyone, "dplmc_constable_stables_talk",
+# [
+# (troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, 0),
+# (party_slot_ge, "$g_encountered_party", slot_center_has_stables, 1),
+# ],
+# "It seems that you didn't decide a location for your main stable yet. Do you want to move it here?", "dplmc_constable_stables_move_now", []],
+
+# [anyone|plyr, "dplmc_constable_stables_move_now",[],
+# "Yes. Do it.", "dplmc_constable_talk",
+# [
+# (troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
+# ]],
+
+# [anyone|plyr, "dplmc_constable_stables_move_now",[],
+# "No. Leave it for later.", "dplmc_constable_talk",[]],
+
+#########################
+[anyone, "dplmc_constable_stables_talk",
+[
+(troop_slot_ge, "trp_dplmc_constable", slot_troop_constable_stable_location_new, 1),
+(troop_slot_ge, "trp_dplmc_constable", slot_troop_constable_stable_location_old, 1),
+(troop_get_slot, ":new_location", "trp_dplmc_constable", slot_troop_constable_stable_location_new),
+(troop_get_slot, ":old_location", "trp_dplmc_constable", slot_troop_constable_stable_location_old),
+(str_store_party_name, s1, ":old_location"),
+(str_store_party_name, s2, ":new_location"),
+],
+"It seems that the staff and horses you ordered to move from {s1} didn't arrive at {s2} yet. Please be patient.", "dplmc_constable_talk", []],
+
+
+[anyone, "dplmc_constable_stables_talk",
+[
+(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_new, 0),
+(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_old, 0),
+],
+"Yes?", "dplmc_constable_stables_talk_2", []],
+#######################
+[anyone|plyr, "dplmc_constable_stables_talk_2",
+[
+(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
+],
+"I want to take a look at it.", "dplmc_constable_stables_check_storage",[]],
+
+[anyone, "dplmc_constable_stables_check_storage",
+[
+],
+"Of course.", "dplmc_constable_talk", 
+[
+(change_screen_loot, "trp_stable_troop"),
+]],
+#######################
+[anyone|plyr, "dplmc_constable_stables_talk_2",
+[
+],
+"I want to change its location.", "dplmc_constable_stables_change_location.",[]],
+
+[anyone|plyr, "dplmc_constable_stables_talk_2",
+[
+],
+"Nevermind.", "dplmc_constable_talk.",[]],
+#######################
+[anyone, "dplmc_constable_stables_change_location",
+[
+],
+"Where to?", "dplmc_constable_stables_change_location_2", 
+[
+]],
+
+[repeat_for_parties|plyr|anyone, "dplmc_constable_stables_change_location_2",
+[
+(store_repeat_object, ":fief"),
+(is_between, ":fief", walled_centers_begin, walled_centers_end),
+  (party_get_slot, ":fief_lord", ":fief", slot_town_lord),
+  (eq, ":fief_lord", "trp_player"),
+    (str_clear, s12),
+    (str_store_party_name, s12, ":fief"),
+],
+"{s12}.",
+"dplmc_constable_stables_change_location_3",
+[
+(store_repeat_object, "$reserved_89"),
+]],
+
+[anyone|plyr, "dplmc_constable_stables_change_location_2",
+[
+],
+"Nevermind.", "dplmc_constable_talk.",[]],
+#######################
+[anyone, "dplmc_constable_stables_change_location_3",
+[
+(troop_get_slot, ":stable_location", "trp_dplmc_constable", slot_troop_constable_stable_location),
+(eq, ":stable_location", "$reserved_89"),
+(str_store_party_name, s1, ":stable_location"),
+],
+"The stables are already in {s1}, {sire/madam}.", "dplmc_constable_talk", 
+[
+]],
+
+[anyone, "dplmc_constable_stables_change_location_3",
+[
+(troop_get_slot, ":stable_location", "trp_dplmc_constable", slot_troop_constable_stable_location),
+(store_distance_to_party_from_party, ":distance", ":stable_location", "$reserved_89"),
+(try_begin),
+  (store_div, reg0, ":distance", 3),  ####### 1 day for every 3 
+  (assign, "$reserved_87", reg0),
+  (store_mul, reg1, ":distance", 100), ###### 100 coins for every 1
+  (assign, "$reserved_88", reg1),
+(try_end),
+],
+"Are you sure? It will take {reg0} days and will cost {reg1} coins to move the staff and horses to this location.", "dplmc_constable_stables_change_location_4", 
+[
+]],
+
+
+[anyone|plyr, "dplmc_constable_stables_change_location_4",
+[
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", "$reserved_88"),
+],
+"Yes change it.", "dplmc_constable_stables_change_location_5.",[]],
+
+[anyone|plyr, "dplmc_constable_stables_change_location_4",
+[
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", "$reserved_88"),
+],
+"No. Leave it alone.", "dplmc_constable_talk.",[]],
+
+
+[anyone|plyr, "dplmc_constable_stables_change_location_4",
+[
+(store_troop_gold, ":gold", "trp_player"),
+(lt, ":gold", "$reserved_88"),
+],
+"I don't have enough for that now.", "dplmc_constable_talk.",[]],
+
+
+[anyone, "dplmc_constable_stables_change_location_5",
+[
+],
+"Very well. You will be notified when it happens.", "dplmc_constable_talk", 
+[
+(troop_remove_gold, "trp_player", "$reserved_88"),
+(troop_get_slot, ":stable_location", "trp_dplmc_constable", slot_troop_constable_stable_location),
+(troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_location_old, ":stable_location"),
+(troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_location, 0), ###### zeroed
+(troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_location_new, "$reserved_89"),
+(troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_move_days, "$reserved_87"),
+(troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_move_days_static, "$reserved_87"), ####### this is for the case of the player not owning the center anymore and they needing to return back
+]],
+#############################################
+[anyone|plyr, "dplmc_constable_stables_talk_2", [
+(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 1),
+(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 1),
+(troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 1),
+],
+"I came to get my horse(s).", "constable_horse_return",[]],
+
+[anyone, "constable_horse_return", [], "Ah, yes. Here it is.", "dplmc_constable_talk",
+[
+(try_begin),
+  (troop_get_slot, ":current_horse", "$g_talk_troop", slot_troop_horse_train_cur_horse_1),
+  (gt, ":current_horse", 0),
+    (troop_get_slot, ":current_horse_imod", "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_1),
+    (troop_add_item, "trp_player", ":current_horse", ":current_horse_imod"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_1, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_hours_left_1, 0),
+(try_end),
+
+(try_begin),
+  (troop_get_slot, ":current_horse", "$g_talk_troop", slot_troop_horse_train_cur_horse_2),
+  (gt, ":current_horse", 0),
+    (troop_get_slot, ":current_horse_imod", "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_2),
+    (troop_add_item, "trp_player", ":current_horse", ":current_horse_imod"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_2, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_hours_left_2, 0),
+(try_end),
+
+(try_begin),
+  (troop_get_slot, ":current_horse", "$g_talk_troop", slot_troop_horse_train_cur_horse_3),
+  (gt, ":current_horse", 0),
+    (troop_get_slot, ":current_horse_imod", "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_3),
+    (troop_add_item, "trp_player", ":current_horse", ":current_horse_imod"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_3, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_hours_left_3, 0),
+(try_end),
+(display_message, "@Your horse(s) have been added to your inventory.")
+]],
+######################################
+[anyone|plyr, "dplmc_constable_stables_talk_2",
+[
+(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
+(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 0),
+(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 0),
+(troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 0),
+(party_slot_ge, "$g_encountered_party", slot_center_has_stables, 2),  ######### need stables level 2
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse_condition", reg0),
+(neq, ":horse_condition", 0),     ########## no horse
+(neq, ":horse_condition", imod_lame),     ########## at full health
+(neq, ":horse_condition", imod_swaybacked), ##########
+(neq, ":horse_condition", imod_champion), ########## can't train max level
+],
+"I want to train my horse.", "dplmc_constable_stables_train_horse.",[]],
+######################################
+[anyone, "dplmc_constable_stables_train_horse", 
+[
+(assign, ":max_train", 0),
+(try_begin),
+  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 2),
+  (assign, ":max_train", 1),
+(else_try),
+  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+  (assign, ":max_train", 2),
+(else_try),
+  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+  (assign, ":max_train", 3),
+(try_end),
+
+(assign, ":cur_train", 0),
+(try_begin),
+  (troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 1),
+  (val_add, ":cur_train", 1),
+(else_try),
+  (troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 1),
+  (val_add, ":cur_train", 1),
+(else_try),
+  (troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 1),
+  (val_add, ":cur_train", 1),
+(try_end),
+  
+(ge, ":cur_train", ":max_train"),
+], "We are already operating at full capacity. Try again later.", "dplmc_constable_talk",
+[
+]],
+##########################
+[anyone, "dplmc_constable_stables_train_horse", 
+[
+(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 0),
+(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 0),
+(troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 0),
+], "I remind you that this will take time and money, and you will not be able to use the horse while it's being trained.", "constable_train_options",
+[
+]],
+
+######### stubborn to plain
+[anyone|plyr, "constable_train_options", 
+[
+(party_slot_ge, "$g_encountered_party", slot_center_has_stables, 2),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(neq, ":horse_condition", imod_plain),
+(neq, ":horse_condition", imod_heavy),
+(neq, ":horse_condition", imod_spirited),
+(neq, ":horse_condition", imod_champion),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 240),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Normal ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 240),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(assign, "$g_current_horse", ":horse"),
+(assign, "$g_current_horse_imod", imod_plain),
+(assign, "$g_current_horse_price", reg1),
+(assign, "$g_current_horse_days", reg2),
+]],
+##################
+##################
+##################
+######### stubborn/plain to heavy
+[anyone|plyr, "constable_train_options", 
+[
+(party_slot_ge, "$g_encountered_party", slot_center_has_stables, 2),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+# (neq, ":horse_condition", imod_plain),
+(neq, ":horse_condition", imod_heavy),
+(neq, ":horse_condition", imod_spirited),
+(neq, ":horse_condition", imod_champion),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 320),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 30), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 240),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Heavy ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 320),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 30), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 240),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(assign, "$g_current_horse", ":horse"),
+(assign, "$g_current_horse_imod", imod_heavy),
+(assign, "$g_current_horse_price", reg1),
+(assign, "$g_current_horse_hours", reg2),
+]],
+##################
+##################
+##################
+################## stubborn/plain/heavy to spirited
+[anyone|plyr, "constable_train_options", 
+[
+(party_slot_ge, "$g_encountered_party", slot_center_has_stables, 3),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+# (neq, ":horse_condition", imod_plain),
+# (neq, ":horse_condition", imod_heavy),
+(neq, ":horse_condition", imod_spirited),
+(neq, ":horse_condition", imod_champion),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 80), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 480),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 60), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 340),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_heavy),
+    (store_mul, reg1, ":cur_value", 40), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 260),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Spirited ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 80), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 480),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 60), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 340),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_heavy),
+    (store_mul, reg1, ":cur_value", 40), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 260),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(assign, "$g_current_horse", ":horse"),
+(assign, "$g_current_horse_imod", imod_spirited),
+(assign, "$g_current_horse_price", reg1),
+(assign, "$g_current_horse_hours", reg2),
+]],
+######### stubborn/plain/heavy/spirited to champion
+[anyone|plyr, "constable_train_options", 
+[
+(party_slot_ge, "$g_encountered_party", slot_center_has_stables, 4),
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+# (neq, ":horse_condition", imod_plain),
+# (neq, ":horse_condition", imod_heavy),
+# (neq, ":horse_condition", imod_spirited),
+(neq, ":horse_condition", imod_champion),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 120), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 600),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 100), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 500),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_heavy),
+    (store_mul, reg1, ":cur_value", 80), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 400),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_spirited),
+    (store_mul, reg1, ":cur_value", 60), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 300),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", reg1),
+],
+"Champion ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+[
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 120), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 600),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 100), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 500),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_heavy),
+    (store_mul, reg1, ":cur_value", 80), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 400),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(else_try),
+  (eq, ":horse_condition", imod_spirited),
+    (store_mul, reg1, ":cur_value", 60), ### %50% of the cost
+	(store_div, ":hours_to_train", ":value", 70), ######## 1 extra hour every 70 coins cost
+    (store_add, reg2, ":hours_to_train", 300),
+    (try_begin),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 3),
+        (store_mul, ":cost_reduction", ":cur_value", 15), ### -15%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 4), ### -25% time
+        (val_sub, reg2, ":cost_reduction"), 
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", slot_center_has_stables, 4),
+        (store_mul, ":cost_reduction", ":cur_value", 25), ### -25%
+        (val_sub, reg1, ":cost_reduction"), 
+        (store_div, ":hours_reduction", reg2, 10), ### -40% time
+        (store_mul, ":hours_reduction_final", ":hours_reduction", 4), ### -40% time
+        (val_sub, reg2, ":hours_reduction_final"), 
+    (try_end),
+(try_end),
+(assign, "$g_current_horse", ":horse"),
+(assign, "$g_current_horse_imod", imod_champion),
+(assign, "$g_current_horse_price", reg1),
+(assign, "$g_current_horse_hours", reg2),
+]],
+###################
+###################
+###################
+###################
+########################
+[anyone, "constable_horse_train_confirm", 
+[
+],
+"Are you sure? You will not be able to use the horse in the meantime.", "constable_horse_train_confirm_2",
+[]],
+
+[anyone|plyr, "constable_horse_train_confirm_2", 
+[
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", "$g_current_horse_price"),
+(assign, reg1, "$g_current_horse_price"),
+(assign, reg2, "$g_current_horse_hours"),
+],
+"Yes. Do it. ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm_3",
+[]],
+
+[anyone|plyr, "constable_horse_train_confirm_2", 
+[
+(store_troop_gold, ":gold", "trp_player"),
+(ge, ":gold", "$g_current_horse_price"),
+],
+"Nevermind.", "dplmc_constable_talk",
+[]],
+
+[anyone|plyr, "constable_horse_train_confirm_2", 
+[
+(store_troop_gold, ":gold", "trp_player"),
+(lt, ":gold", "$g_current_horse_price"),
+(assign, reg1, "$g_current_horse_price"),
+],
+"I don't have the money right now ({reg1} coins).", "dplmc_constable_talk",
+[]],
+########################
+[anyone, "constable_horse_train_confirm_3", [], "Very well. You will be notified when it's done.", "dplmc_constable_talk",
+[
+(troop_remove_gold, "trp_player", "$g_current_horse_price"),
+# (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(try_begin),
+  (troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, "$g_current_horse"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_1, "$g_current_horse_imod"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_hours_left_1, "$g_current_horse_days"),
+(else_try),
+  (troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, "$g_current_horse"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_2, "$g_current_horse_imod"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_hours_left_2, "$g_current_horse_days"),
+(else_try),
+  (troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 0),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, "$g_current_horse"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod_3, "$g_current_horse_imod"),
+    (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_hours_left_3, "$g_current_horse_days"),
+(try_end),
+(troop_set_inventory_slot, "trp_player", ek_horse, -1),
+(display_message, "@Your horse has been removed from your inventory.")
+]],
+
+
+#############################################
+
 
 
 
@@ -11252,8 +12083,12 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    ],
 "Which staff member do you like to hire?", "dplmc_talk_staff", []],
  #tom
- [trp_pope|plyr, "lord_talk", 
- [
+ # [trp_pope|plyr, "lord_talk", 
+ [anyone|plyr, "lord_talk", 
+ [  ############## NEW v3.8
+	(eq, "$g_talk_troop_faction", "fac_papacy"),
+	(faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
+    ############################
     (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0),
     (ge, "$g_talk_troop_faction_relation", 0),
     (faction_slot_eq, "$players_kingdom", slot_faction_religion, religion_catholic),
@@ -11268,19 +12103,22 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
  ], "Holy Father, I wish to fund a crusade to fight against the infidels.", "pope_talk_crusade",[]],
  
-   [trp_pope, "pope_talk_crusade", 
+   # [trp_pope, "pope_talk_crusade", 
+   [anyone, "pope_talk_crusade", 
  [
     (call_script, "script_troop_get_player_relation", "trp_pope"),
     (lt, reg0, 0),
  ], "Are you making fun of me? Get out!", "close_window",[]], 
  
-   [trp_pope, "pope_talk_crusade", 
+   # [trp_pope, "pope_talk_crusade", 
+   [anyone, "pope_talk_crusade", 
  [
     (call_script, "script_troop_get_player_relation", "trp_pope"),
     (ge, reg0, 0),
  ], "Off course my son, which infidel faction are we talking about?", "pope_crusade_against",[]], 
  
-[trp_pope|plyr|repeat_for_factions, "pope_crusade_against", [
+# [trp_pope|plyr|repeat_for_factions, "pope_crusade_against", [
+[anyone|plyr|repeat_for_factions, "pope_crusade_against", [
   
 #(try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
 (store_repeat_object, ":faction_no"),
@@ -11295,15 +12133,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                                                             ],
 "Against {s1}", "pope_crusade_against_fief_ask",[(store_repeat_object, "$suggested_to_attack_center")]],
   
-    [trp_pope|plyr, "pope_crusade_against", [],
+    # [trp_pope|plyr, "pope_crusade_against", [],
+    [anyone|plyr, "pope_crusade_against", [],
 "Nevermind...", "pope_crusade_not_start",[]],
 
 ##################### NEW v2.6 - player can choose which center to attack
-   [trp_pope, "pope_crusade_against_fief_ask", [], 
+   # [trp_pope, "pope_crusade_against_fief_ask", [], 
+   [anyone, "pope_crusade_against_fief_ask", [], 
    "Which of their centers you want to siege?", "pope_crusade_against_fief",[]], 
 
 
-  [trp_pope|plyr|repeat_for_parties, "pope_crusade_against_fief", [
+  # [trp_pope|plyr|repeat_for_parties, "pope_crusade_against_fief", [
+  [anyone|plyr|repeat_for_parties, "pope_crusade_against_fief", [
   
 #(try_for_range, ":faction_no", kingdoms_begin, kingdoms_end),
 (store_repeat_object, ":center_no"),
@@ -11317,7 +12158,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "{s1}", "pope_crusade_against_cost",[(store_repeat_object, "$suggested_to_attack_fief")]],
 
 ############ NEW v2.9
-[trp_pope|plyr, "pope_crusade_against_fief", 
+# [trp_pope|plyr, "pope_crusade_against_fief", 
+[anyone|plyr, "pope_crusade_against_fief", 
  [
  ], "....I changed my mind.", "pope_crusade_not_start",[]],   
 ############
@@ -11326,7 +12168,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 
 #########################
-[trp_pope, "pope_crusade_against_cost", 
+# [trp_pope, "pope_crusade_against_cost", 
+[anyone, "pope_crusade_against_cost", 
  [
     (assign, ":cost", crusade_cost),
     (call_script, "script_troop_get_player_relation", "trp_pope"),
@@ -11337,7 +12180,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     #(str_store_string, s2, "@{:cost}"), 
  ], "For a donation of {reg0} gold coins, I am willing to start a crusade against {s1}", "pope_crusade_accept",[]],   
  
- [trp_pope|plyr, "pope_crusade_accept", 
+ # [trp_pope|plyr, "pope_crusade_accept", 
+ [anyone|plyr, "pope_crusade_accept", 
  [
     (store_troop_gold, ":gold", "trp_player"),
     (assign, ":cost", crusade_cost),
@@ -11347,11 +12191,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (ge, ":gold", ":cost"),
  ], "Off course, Father!", "pope_crusade_start",[]],   
  
-[trp_pope|plyr, "pope_crusade_accept", 
+# [trp_pope|plyr, "pope_crusade_accept", 
+[anyone|plyr, "pope_crusade_accept", 
  [
  ], "....I changed my mind.", "pope_crusade_not_start",[]],   
 #########################
- [trp_pope, "pope_crusade_start", 
+ # [trp_pope, "pope_crusade_start", 
+ [anyone, "pope_crusade_start", 
  [
     (assign, ":cost", crusade_cost),
     (call_script, "script_troop_get_player_relation", "trp_pope"),
@@ -11379,7 +12225,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (str_store_faction_name, s1, "$crusade_target_faction"),
  ], "So be it, I'll declare the crusade against {s1}. Deus Vult!", "lord_talk",[]],   
  
- [trp_pope, "pope_crusade_not_start", 
+ # [trp_pope, "pope_crusade_not_start", 
+ [anyone, "pope_crusade_not_start", 
  [
  ], "Hm..", "lord_talk",[]],   
  
@@ -11474,7 +12321,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (assign, "$g_leave_encounter",1),
     (assign, "$g_player_crusading", 0),    
     (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", 8),
-    (call_script, "script_change_player_relation_with_troop", "trp_pope", 8),
+    # (call_script, "script_change_player_relation_with_troop", "trp_pope", 8),
+	############## NEW v3.8 - 
+	(faction_get_slot, ":faction_leader", "$g_talk_troop_faction", slot_faction_leader),
+    (call_script, "script_change_player_relation_with_troop", ":faction_leader", 8),
+    ############################
     #tom
     (try_for_range, ":center", centers_begin, centers_end), #give new fief back
       (party_slot_eq, ":center", slot_town_lord, "trp_player"),
@@ -12078,8 +12929,23 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ##response to threaten request        
 [anyone, "dplmc_companion_threaten_request_response", [
   ],                    
-   "They are not willing to fold facing your threats.", "companion_rejoin_response", [
-                    ]],
+   "They are not willing to fold facing your threats. You can now declare war or wait until they do it themselves.", "companion_rejoin_response", 
+   [
+   ####### NEW v3.8 - counts as a provocation
+   (store_add, ":slot_provocation_days", "$players_kingdom", slot_faction_provocation_days_with_factions_begin),
+   (val_sub, ":slot_provocation_days", kingdoms_begin),
+   (troop_get_slot, ":mission_object", "$g_talk_troop", slot_troop_mission_object),
+   (faction_slot_eq, ":mission_object", ":slot_provocation_days", 0),
+   (faction_set_slot, ":mission_object", ":slot_provocation_days", 30),
+   
+   (store_add, ":slot_provocation_days", ":mission_object", slot_faction_provocation_days_with_factions_begin),
+   (val_sub, ":slot_provocation_days", kingdoms_begin),
+   (faction_slot_eq, "$players_kingdom", ":slot_provocation_days", 0),
+   (faction_set_slot, "$players_kingdom", ":slot_provocation_days", 30),
+   # (str_store_faction_name, s1, ":mission_object")
+   # (display_message, "@"),
+   ##############
+   ]],
 
 ##send a gift to another kingdom
 [anyone|plyr, "minister_diplomatic_initiative_type_select", [],
@@ -12128,6 +12994,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, "$g_initiative_selected", dplmc_npc_mission_gift_horses_request),
    (assign, "$diplomacy_var", 3000), # 6000 denars
    ]],
+   
+
    
     ##send many horses
    [anyone|plyr, "dplmc_minister_gift_type_select",
@@ -13746,7 +14614,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_appoint_faction_marshall", "$players_kingdom", "trp_player"),
     (store_current_hours, ":hours"),
     # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 13749"),
+                             #####(display_debug_message, "@Line 13749"),
     (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     (assign, "$g_player_faction_last_marshal_appointment", ":hours"),
     
@@ -13790,7 +14658,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),    
     
     # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 13793"),
+                             #####(display_debug_message, "@Line 13793"),
     (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     
     ]],
@@ -13830,7 +14698,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
         (try_end),    
     (try_end),
     # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 13833"),
+                             #####(display_debug_message, "@Line 13833"),
     (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
     ]],
     
@@ -21772,7 +22640,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, "$player_marshal_ai_object", "p_main_party"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 21775"),
+                             #####(display_debug_message, "@Line 21775"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
@@ -21800,7 +22668,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, "$player_marshal_ai_object", -1),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 21803"),
+                             #####(display_debug_message, "@Line 21803"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
@@ -22654,6 +23522,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (faction_get_slot, ":ai_decider", "$g_encountered_party_faction", slot_faction_leader),
   (try_end),
 
+    #####(display_debug_message, "@Line 23495"),
   (call_script, "script_npc_decision_checklist_faction_ai_alt", ":ai_decider"),
   (assign, ":planned_state", reg0),
   (assign, ":planned_object", reg1),
@@ -22734,6 +23603,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "lord_strategy_follow_evaluation", [
   (faction_slot_eq, "$g_talk_troop_faction", slot_faction_ai_state, sfai_gathering_army),
+    #####(display_debug_message, "@Line 23576"),
   (call_script, "script_npc_decision_checklist_faction_ai_alt", "$g_talk_troop"),
   (assign, ":talk_troop_preferred_strategy", reg0),
   (neq, ":talk_troop_preferred_strategy", sfai_gathering_army),
@@ -22802,6 +23672,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 #To Steve - I took that dialog upper from below one. Lord should compare his faction ai choice with marshal's one before comparing preffered ai objects.
 [anyone, "lord_strategy_follow_evaluation",
 [
+    #####(display_debug_message, "@Line 23645"),
     (call_script, "script_npc_decision_checklist_faction_ai_alt", "$g_talk_troop"),
     (assign, ":talk_troop_preferred_strategy", reg0),
 
@@ -24526,7 +25397,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (call_script, "script_set_player_relation_with_faction", "$players_oath_renounced_against_kingdom", ":relation"),
       (call_script, "script_update_all_notes"),
       # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 24529"),
+                             #####(display_debug_message, "@Line 24529"),
       (call_script, "script_recalculate_ais_for_faction", "fac_player_supporters_faction"), ###### NEW v3.8
       (call_script, "script_recalculate_ais_for_faction", "$players_oath_renounced_against_kingdom"), ###### NEW v3.8
     (try_end),
@@ -25394,7 +26265,7 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
    (faction_set_slot, "$g_talk_troop_faction", slot_faction_marshall, "trp_player"),
    (faction_set_slot, "$g_talk_troop_faction", slot_faction_ai_state, sfai_default),
    # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 25397"),
+                             #####(display_debug_message, "@Line 25397"),
    (call_script, "script_recalculate_ais_for_faction", "$g_talk_troop_faction"), ###### NEW v3.8
    ]],
 
@@ -27387,7 +28258,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (assign, "$player_marshal_ai_object", "$g_player_court"),
    
    # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 27390"),
+                             #####(display_debug_message, "@Line 27390"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"),  ####### NEW v3.8
    (assign, reg4, 1),
    (try_begin),
@@ -38445,7 +39316,6 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
 (troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
 (troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_days_left, 0),
-(troop_set_inventory_slot, "trp_player", ek_horse, -1),
 ],
 "I came to get my horse.", "merchant_horse_return",[]],
 
@@ -38454,7 +39324,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (troop_get_slot, ":current_horse", "$g_talk_troop", slot_troop_horse_train_cur_horse),
 (troop_get_slot, ":current_horse_imod", "$g_talk_troop", slot_troop_horse_train_cur_horse_imod),
 
-(troop_add_item, "trp_player", ":current_horse", ":current_horse_imod")
+(troop_add_item, "trp_player", ":current_horse", ":current_horse_imod"),
 
 (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
 (troop_set_slot, "$g_talk_troop", slot_troop_horse_train_cur_horse_imod, 0),
@@ -38468,8 +39338,10 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
 (troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
 (assign, ":horse_condition", reg0),
-(neq, ":horse_condition", 0),     ########## no horse
+(gt, ":horse", -1),     ########## no horse
+(neq, ":horse_condition", -1),     ##########
 (neq, ":horse_condition", imod_lame),     ########## at full health
 (neq, ":horse_condition", imod_swaybacked), ##########
 (neq, ":horse_condition", imod_heavy), ########## horse merchants can't train this or higher
@@ -38479,9 +39351,9 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 "I want you to train my horse.", "trade_requested_horse_train",[]],
 
 
-[anyone, "trade_requested_horse_train", [], "Ah, yes {sir/madam}. I remind you that this will take time and money, and you will not be able to use the horse while it's being trained.", "train_options",
-[
-]],
+[anyone, "trade_requested_horse_train", [], 
+"Ah, yes {sir/madam}. I remind you that this will take time and money, and you will not be able to use the horse while it's being trained.", "train_options",
+[]],
 
 
 ### imod_lame = 30
@@ -38507,19 +39379,32 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   (eq, ":horse_condition", imod_stubborn),
     (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
     (assign, ":price", reg1),
-	(store_div, ":days_to_train", ":value", 700) ######## 1 extra day every 500 coins cost
+	(store_div, ":days_to_train", ":value", 700), ######## 1 extra day every 500 coins cost
     (store_add, reg2, ":days_to_train", 2),
     (assign, ":days_to_train", reg2),
 (try_end),
-(store_troop_gold, ":gold", "trp_player"),
-(ge, ":gold", reg1),
+# (store_troop_gold, ":gold", "trp_player"),
+# (ge, ":gold", reg1),
 ],
 "Normal ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
 [
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+    (assign, ":price", reg1),
+	(store_div, ":days_to_train", ":value", 700), ######## 1 extra day every 500 coins cost
+    (store_add, reg2, ":days_to_train", 2),
+    (assign, ":days_to_train", reg2),
+(try_end),
 (assign, "$g_current_horse", ":horse"),
-(assign, "$g_current_horse_imod", ":horse_condition"),
-(assign, "$g_current_horse_price", ":price"),
-(assign, "$g_current_horse_days", ":days_to_train"),
+(assign, "$g_current_horse_imod", imod_plain),
+(assign, "$g_current_horse_price", reg1),
+(assign, "$g_current_horse_days", reg2),
 ]],
 
 [anyone|plyr, "train_options", 
@@ -38537,25 +39422,48 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   (eq, ":horse_condition", imod_stubborn),
     (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
     (assign, ":price", reg1),
-	(store_div, ":days_to_train", ":value", 500) ######## 1 extra day every 500 coins cost
+	(store_div, ":days_to_train", ":value", 500), ######## 1 extra day every 500 coins cost
     (store_add, reg2, ":days_to_train", 4),
 (else_try),
   (eq, ":horse_condition", imod_plain),
     (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
     (assign, ":price", reg1),
-	(store_div, ":days_to_train", ":value", 600) 
+	(store_div, ":days_to_train", ":value", 600),
     (store_add, reg2, ":days_to_train", 2),
     (assign, ":days_to_train", reg2),
 (try_end),
-(store_troop_gold, ":gold", "trp_player"),
-(ge, ":gold", reg1),
+# (store_troop_gold, ":gold", "trp_player"),
+# (ge, ":gold", reg1),
 ],
 "Heavy ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
 [
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_stubborn),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+	(store_div, ":days_to_train", ":value", 500), ######## 1 extra day every 500 coins cost
+    (store_add, reg2, ":days_to_train", 4),
+(else_try),
+  (eq, ":horse_condition", imod_plain),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+	(store_div, ":days_to_train", ":value", 600),
+    (store_add, reg2, ":days_to_train", 2),
+    (assign, ":days_to_train", reg2),
+(try_end),
 (assign, "$g_current_horse", ":horse"),
-(assign, "$g_current_horse_imod", ":horse_condition"),
-(assign, "$g_current_horse_price", ":price"),
-(assign, "$g_current_horse_days", ":days_to_train"),
+(assign, "$g_current_horse_imod", imod_heavy),
+(assign, "$g_current_horse_price", reg1),
+(assign, "$g_current_horse_days", reg2),
+]],
+
+[anyone|plyr, "train_options", 
+[],
+"Nevermind.", "merchant_trade",
+[
 ]],
 ###################
 ###################
@@ -38582,8 +39490,6 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", "$g_current_horse_price"),
-(assign, reg1, "$g_current_horse_price"),
-(assign, reg2, "$g_current_horse_days"),
 ],
 "Nevermind.", "merchant_trade",
 []],
@@ -38624,7 +39530,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ],
 "I want you to nurse my horse back to health.", "trade_requested_horse_nurse",[]],
 
-[anyone, "trade_requested_horse_nurse", [], "Yes {sir/madam}. I remind you that this will take time and money, and you will not be able to use the horse while it's being healed.", "trade_nurse_options",
+[anyone, "trade_requested_horse_nurse", [], "Yes. I remind you that this will take time and money, and you will not be able to use the horse while it's being healed.", "trade_nurse_options",
 []],
 #####################
 [anyone|plyr, "trade_nurse_options", 
@@ -38637,15 +39543,13 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (try_begin),
   (eq, ":horse_condition", imod_lame),
     (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
-    (assign, ":price", reg1),
-	(store_div, ":days_to_heal", ":value", 500) ######## 1 extra day every 500 coins cost
+	(store_div, ":days_to_heal", ":value", 500), ######## 1 extra day every 500 coins cost
     (store_add, reg2, ":days_to_heal", 5),
     (assign, ":days_to_heal", reg2),
 (else_try),
   (eq, ":horse_condition", imod_swaybacked),
     (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
-    (assign, ":price", reg1),
-	(store_div, ":days_to_heal", ":value", 700) ######## 1 extra day every 700 coins cost
+	(store_div, ":days_to_heal", ":value", 700), ######## 1 extra day every 700 coins cost
     (store_add, reg2, ":days_to_heal", 3),
     (assign, ":days_to_heal", reg2),
 (try_end),
@@ -38654,10 +39558,28 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ],
 "Yes. Bring it back to health ({reg1} coins, {reg2} days).", "trade_requested_horse_nurse_confirm",
 [
+(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+(assign, ":horse", reg0),
+(assign, ":horse_condition", reg1),
+(store_item_value, ":value", ":horse"),
+(store_div, ":cur_value", ":value", 100),
+(try_begin),
+  (eq, ":horse_condition", imod_lame),
+    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+	(store_div, ":days_to_heal", ":value", 500), ######## 1 extra day every 500 coins cost
+    (store_add, reg2, ":days_to_heal", 5),
+    (assign, ":days_to_heal", reg2),
+(else_try),
+  (eq, ":horse_condition", imod_swaybacked),
+    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+	(store_div, ":days_to_heal", ":value", 700), ######## 1 extra day every 700 coins cost
+    (store_add, reg2, ":days_to_heal", 3),
+    (assign, ":days_to_heal", reg2),
+(try_end),
 (assign, "$g_current_horse", ":horse"),
-(assign, "$g_current_horse_imod", ":horse_condition"),
-(assign, "$g_current_horse_price", ":price"),
-(assign, "$g_current_horse_days", ":days_to_heal"),
+(assign, "$g_current_horse_imod", imod_plain),
+(assign, "$g_current_horse_price", reg1),
+(assign, "$g_current_horse_days", reg2),
 ]],
 
 [anyone|plyr, "trade_nurse_options", 
@@ -38670,12 +39592,12 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (try_begin),
   (eq, ":horse_condition", imod_lame),
     (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
-	(store_div, ":days_to_heal", ":value", 500) ######## 1 extra day every 500 coins cost
+	(store_div, ":days_to_heal", ":value", 500), ######## 1 extra day every 500 coins cost
     (store_add, reg2, ":days_to_heal", 5),
 (else_try),
   (eq, ":horse_condition", imod_swaybacked),
     (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
-	(store_div, ":days_to_heal", ":value", 700) ######## 1 extra day every 600 coins cost
+	(store_div, ":days_to_heal", ":value", 700), ######## 1 extra day every 600 coins cost
     (store_add, reg2, ":days_to_heal", 3),
 (try_end),
 (store_troop_gold, ":gold", "trp_player"),
@@ -38686,24 +39608,20 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone|plyr, "trade_nurse_options", 
 [
-(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
-(assign, ":horse", reg0),
-(assign, ":horse_condition", reg1),
-(store_item_value, ":value", ":horse"),
-(store_div, ":cur_value", ":value", 100),
-(try_begin),
-  (eq, ":horse_condition", imod_lame),
-    (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
-	# (store_div, ":days_to_heal", ":value", 500) ######## 1 extra day every 500 coins cost
-    # (store_add, reg2, ":days_to_heal", 5),
-(else_try),
-  (eq, ":horse_condition", imod_swaybacked),
-    (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
-	# (store_div, ":days_to_heal", ":value", 700) ######## 1 extra day every 600 coins cost
-    # (store_add, reg2, ":days_to_heal", 3),
-(try_end),
-(store_troop_gold, ":gold", "trp_player"),
-(ge, ":gold", reg1),
+# (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+# (assign, ":horse", reg0),
+# (assign, ":horse_condition", reg1),
+# (store_item_value, ":value", ":horse"),
+# (store_div, ":cur_value", ":value", 100),
+# (try_begin),
+  # (eq, ":horse_condition", imod_lame),
+    # (store_mul, reg1, ":cur_value", 50), ### %50% of the cost
+# (else_try),
+  # (eq, ":horse_condition", imod_swaybacked),
+    # (store_mul, reg1, ":cur_value", 30), ### %30% of the cost
+# (try_end),
+# (store_troop_gold, ":gold", "trp_player"),
+# (ge, ":gold", reg1),
 ],
 "Nevermind.", "merchant_trade",
 []],
@@ -39918,7 +40836,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    (assign, "$player_marshal_ai_object", ":venue"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 39631"),
+                             #####(display_debug_message, "@Line 39631"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    (str_store_party_name, s4, ":venue"),
 
@@ -39942,7 +40860,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    (assign, "$player_marshal_ai_object", "p_main_party"),
    (call_script, "script_decide_faction_ai", "$players_kingdom"),
    # (assign, "$g_recalculate_ais", 1),
-                             (display_message, "@line 39655"),
+                             #####(display_debug_message, "@Line 39655"),
    (call_script, "script_recalculate_ais_for_faction", "$players_kingdom"), ###### NEW v3.8
    ]],
 
