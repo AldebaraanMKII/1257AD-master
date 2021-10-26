@@ -1864,6 +1864,7 @@ triggers = [
 (1.0, 0, 0, [
         (eq, "$crusader_state", 0),
         (neq, "$crusader_party_id", -1),
+		(party_is_active, "$crusader_party_id"), ######### NEW v3.8
     ],
     [
         

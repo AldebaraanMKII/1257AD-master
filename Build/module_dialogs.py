@@ -4733,6 +4733,7 @@ dialogs = [
     
     # conditions: the player rules its own kingdom, and the npc he is talking with is a proper companion (not a spouse, for example)
     [
+        (faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),  ########## NEW v3.8
         (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
         (is_between, "$g_talk_troop", companions_begin, companions_end),
     ],
@@ -9954,7 +9955,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     "dplmc_constable_send_reinf_to_fief2",
     []],
 
-[repeat_for_parties|plyr|anyone, "dplmc_constable_send_reinf_to_fief2",
+# [repeat_for_parties|plyr|anyone, "dplmc_constable_send_reinf_to_fief2",
+[anyone|plyr|repeat_for_parties, "dplmc_constable_send_reinf_to_fief2", ########## NEW v3.8
     [
     (store_repeat_object, ":fief"),
     (is_between, ":fief", walled_centers_begin, walled_centers_end),
@@ -9969,7 +9971,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (store_repeat_object, "$reserved_90"),
     ]],
 
-[plyr|anyone, "dplmc_constable_send_reinf_to_fief2",
+# [plyr|anyone, "dplmc_constable_send_reinf_to_fief2",
+[anyone|plyr, "dplmc_constable_send_reinf_to_fief2", ########## NEW v3.8
     [],
     "Never mind.",
     "dplmc_constable_pretalk",
@@ -10094,7 +10097,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
 ]],
 
-[repeat_for_parties|plyr|anyone, "dplmc_constable_stables_change_location_2",
+[anyone|plyr|repeat_for_parties, "dplmc_constable_stables_change_location_2",
 [
 (store_repeat_object, ":fief"),
 (is_between, ":fief", walled_centers_begin, walled_centers_end),
@@ -22438,44 +22441,40 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (assign, ":continue", 0),
    (try_begin),
      (this_or_next|eq, "$temp", spai_retreating_to_center),
-   (eq, "$temp", spai_holding_center),
-     (try_begin),
-   (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_castle),
-            (party_slot_eq, ":party_no", slot_party_type, spt_town),
-   (eq, ":party_faction", "$players_kingdom"),
-   (assign, ":continue", 1),
-     (try_end),
-   (else_try),
-     (eq, "$temp", spai_raiding_around_center),
-     (try_begin),
-   (party_slot_eq, ":party_no", slot_party_type, spt_village),
-   (lt, ":relation", 0),
-   (assign, ":continue", 1),
-     (try_end),
-   (else_try),
-     (eq, "$temp", spai_besieging_center),
-     (try_begin),
-   (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_castle),
-            (party_slot_eq, ":party_no", slot_party_type, spt_town),
-   (party_slot_eq, ":party_no", slot_center_is_besieged_by, -1),
-   (lt, ":relation", 0),
-   (assign, ":continue", 1),
-     (try_end),
-
-
+     (eq, "$temp", spai_holding_center),
+       (try_begin),
+         (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_castle),
+         (party_slot_eq, ":party_no", slot_party_type, spt_town),
+         (eq, ":party_faction", "$players_kingdom"),
+           (assign, ":continue", 1),
+       (try_end),
+       (else_try),
+         (eq, "$temp", spai_raiding_around_center),
+         (try_begin),
+           (party_slot_eq, ":party_no", slot_party_type, spt_village),
+           (lt, ":relation", 0),
+             (assign, ":continue", 1),
+         (try_end),
+       (else_try),
+         (eq, "$temp", spai_besieging_center),
+         (try_begin),
+           (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_castle),
+           (party_slot_eq, ":party_no", slot_party_type, spt_town),
+           (party_slot_eq, ":party_no", slot_center_is_besieged_by, -1),
+           (lt, ":relation", 0),
+             (assign, ":continue", 1),
+         (try_end),
    (else_try),
      (eq, "$temp", spai_patrolling_around_center),
      (try_begin),
-   (eq, ":party_faction", "$players_kingdom"),
-   (is_between, ":party_no", centers_begin, centers_end),
-   (assign, ":continue", 1),
+       (eq, ":party_faction", "$players_kingdom"),
+       (is_between, ":party_no", centers_begin, centers_end),
+         (assign, ":continue", 1),
      (else_try),
-     (is_between, ":party_no", centers_begin, centers_end),
-
-   (store_distance_to_party_from_party, ":distance", ":party_no", "p_main_party"),
-   (le, ":distance", 25),
-   (assign, ":continue", 1),
-
+       (is_between, ":party_no", centers_begin, centers_end),
+         (store_distance_to_party_from_party, ":distance", ":party_no", "p_main_party"),
+         (le, ":distance", 25),
+           (assign, ":continue", 1),
      (try_end),
    (try_end),
    (eq, ":continue", 1),
@@ -24456,7 +24455,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 
 ##################### NEW v2.1 - player can give money to poor friendly lords
-[plyr|anyone, "lord_talk",
+# [plyr|anyone, "lord_talk",
+[anyone|plyr, "lord_talk", ####### NEW v3.8
 [
    (call_script, "script_troop_get_relation_with_troop", "$g_talk_troop", "trp_player"),
    (ge, reg0, 20),
@@ -24473,7 +24473,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   "Really?. How much are you willing to give me?",
   "lord_give_money_2",[]],
   
-[plyr|anyone, "lord_give_money_2",
+# [plyr|anyone, "lord_give_money_2",
+[anyone|plyr, "lord_give_money_2", ####### NEW v3.8
 [
   (store_troop_gold, ":cur_player_gold", "trp_player"),
   (ge, ":cur_player_gold", 1000),
@@ -24488,7 +24489,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 2),
   ]],
   
-[plyr|anyone, "lord_give_money_2",
+# [plyr|anyone, "lord_give_money_2",
+[anyone|plyr, "lord_give_money_2", ####### NEW v3.8
 [
   (store_troop_gold, ":cur_player_gold", "trp_player"),
   (ge, ":cur_player_gold", 2000),
@@ -24503,7 +24505,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 4),
   ]],
   
-[plyr|anyone, "lord_give_money_2",
+# [plyr|anyone, "lord_give_money_2",
+[anyone|plyr, "lord_give_money_2", ####### NEW v3.8
 [
   (store_troop_gold, ":cur_player_gold", "trp_player"),
   (ge, ":cur_player_gold", 5000),
@@ -24518,7 +24521,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 8),
   ]],
   
-[plyr|anyone, "lord_give_money_2",
+# [plyr|anyone, "lord_give_money_2",
+[anyone|plyr, "lord_give_money_2", ####### NEW v3.8
 [
   (store_troop_gold, ":cur_player_gold", "trp_player"),
   (ge, ":cur_player_gold", 10000),
@@ -32500,8 +32504,13 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (assign, "$g_bounty_activo", 0),
        ]],
 
-[anyone, "tavernkeeper_hunt_down_fugitive_reward_reject", [],
-"You are a {s25} for whom justice is its own reward, eh? As you wish it, {playername}, as you wish it.\
+[anyone, "tavernkeeper_hunt_down_fugitive_reward_reject", 
+[
+# (str_clear, s25, ":cur_fief")
+],
+# "You are a {s25} for whom justice is its own reward, eh? As you wish it, {playername}, as you wish it.\
+########## NEW v3.8
+"You are a {man/woman} for whom justice is its own reward, eh? As you wish it, {playername}, as you wish it.\
  An honourable sentiment, to be true.", "tavernkeeper_pretalk",[
      (call_script, "script_change_player_honor", 3),
      (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", 2),
@@ -37158,7 +37167,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 
 ########################## Sending troops from your party to any walled fief you own by Leonion https://forums.taleworlds.com/index.php?topic=348796.0]
-[plyr|anyone, "village_elder_talk",
+# [plyr|anyone, "village_elder_talk",
+[anyone|plyr, "village_elder_talk", ####### NEW v3.8
     [
       (eq, "$send_troops_tweak", 0),
     ],
@@ -37171,8 +37181,9 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     "Aye {reg65?madam:sir}. Keep in mind {reg65?madam:sir} that you will have to provide us with 5 coins per troop to account for the supplies, plus 50 coins for our efforts. Where would you like to send them?",
     "send_reinf_to_fief2",
     []],
-
-[repeat_for_parties|plyr|anyone, "send_reinf_to_fief2",
+	
+# [repeat_for_parties|plyr|anyone, "send_reinf_to_fief2",
+[anyone|plyr|repeat_for_parties, "send_reinf_to_fief2", ####### NEW v3.8
     [
       (store_repeat_object, ":fief"),
       (is_between, ":fief", walled_centers_begin, walled_centers_end),
@@ -37187,7 +37198,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
       (store_repeat_object, "$reserved_90"),
     ]],
 
-[plyr|anyone, "send_reinf_to_fief2",
+# [plyr|anyone, "send_reinf_to_fief2",
+[anyone|plyr, "send_reinf_to_fief2", ########## NEW v3.8
     [],
     "Never mind.",
     "village_elder_pretalk",
@@ -37233,7 +37245,9 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 
 ########################## NEW v2.1 - donate money to village to increase it's prosperity
-[plyr|anyone, "village_elder_talk",
+
+# [plyr|anyone, "village_elder_talk",
+[anyone|plyr, "village_elder_talk", ########## NEW v3.8
 [
  (neg|party_slot_ge, "$current_town", slot_town_prosperity, 380),
    (store_troop_gold, ":cur_player_gold", "trp_player"),
@@ -37247,7 +37261,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   "Really?. How much are you willing to give us?",
   "village_give_money_2",[]],
   
-[plyr|anyone, "village_give_money_2",
+# [plyr|anyone, "village_give_money_2",
+[anyone|plyr, "village_give_money_2", ########## NEW v3.8
 [
   (store_troop_gold, ":cur_player_gold", "trp_player"),
   (ge, ":cur_player_gold", 1000),
@@ -37262,7 +37277,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     (call_script, "script_change_player_relation_with_center", "$current_town", 4),
   ]],
   
-[plyr|anyone, "village_give_money_2",
+# [plyr|anyone, "village_give_money_2",
+[anyone|plyr, "village_give_money_2", ########## NEW v3.8
 [
   (store_troop_gold, ":cur_player_gold", "trp_player"),
   (ge, ":cur_player_gold", 2000),
@@ -37277,7 +37293,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     (call_script, "script_change_player_relation_with_center", "$current_town", 8),
   ]],
   
-[plyr|anyone, "village_give_money_2",
+# [plyr|anyone, "village_give_money_2",
+[anyone|plyr, "village_give_money_2", ########## NEW v3.8
 [
   (store_troop_gold, ":cur_player_gold", "trp_player"),
   (ge, ":cur_player_gold", 5000),

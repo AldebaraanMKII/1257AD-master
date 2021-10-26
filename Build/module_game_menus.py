@@ -8896,7 +8896,7 @@ game_menus = [ #
 			      # (val_add, ":current_slot", 1), 
                   (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
 		          (gt, ":party", 0), 
-                    (remove_party, ":party"),
+                    # (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -8915,7 +8915,7 @@ game_menus = [ #
 			      # (val_add, ":current_slot", 1),  
                   (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
 		          (gt, ":party", 0), 
-                    (remove_party, ":party"),
+                    # (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -9133,7 +9133,7 @@ game_menus = [ #
 				################################################
               (try_begin), #player took a walled center while he is a vassal of npc kingdom.
                 (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-                (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ####### NEW v3.8
+                # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ####### NEW v3.8
                   (jump_to_menu, "$g_next_menu"),
               (else_try), #player took a walled center while he is a vassal of rebels.
                 (eq, "$players_kingdom", "fac_player_supporters_faction"),
@@ -13166,7 +13166,7 @@ game_menus = [ #
        (val_max, reg8, 1),
        (store_sub, reg9, reg8, 1),
      (try_end),
-	 (assign, "$g_improvement_type_level", 1),  ########## NEW v3.8
+	 (assign, "$g_improvement_type_level", 0),  ########## NEW v3.8
     ],
     [
       ("center_build_manor",[(eq, reg6, 0),
@@ -13288,7 +13288,7 @@ game_menus = [ #
 	 ########################
      # (store_encountered_party, "$g_encountered_party"),
      (call_script, "script_get_improvement_details", "$g_improvement_type", "$g_improvement_type_level"),
-     (assign, "$g_improvement_type_level", 0), ######## NEW v3.8
+     # (assign, "$g_improvement_type_level", 0), ######## NEW v3.8
      (assign, ":improvement_cost", reg0),
      (assign, ":improvement_time", reg1),
      (str_store_string, s4, s0),
@@ -22681,7 +22681,7 @@ game_menus = [ #
        (is_between,  "$current_town", towns_begin, towns_end),
        (party_slot_ge, "$current_town", slot_regional_mercs_number, 1),
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-       (ge, ":free_capacity", 30),
+       (ge, ":free_capacity", 20), ####### NEW v3.8
        # (party_get_slot, ":manpower", "$current_town", slot_regional_mercs_number),
        # (gt, ":manpower", 0), #more then one
        #(store_faction_of_party, ":faction", "$current_town"),
@@ -22749,7 +22749,7 @@ game_menus = [ #
        (is_between,  "$current_town", towns_begin, towns_end),
        (party_slot_ge, "$current_town", slot_center_has_quarters_genoese, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_genoese),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -22843,7 +22843,7 @@ game_menus = [ #
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_outpost_finnish, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_finnish),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -22942,7 +22942,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_turkopole),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23036,7 +23036,7 @@ game_menus = [ #
        (is_between,  "$current_town", towns_begin, towns_end),
        (party_slot_ge, "$current_town", slot_center_has_quarters_brabantine, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_brabantine),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23135,7 +23135,7 @@ game_menus = [ #
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_outpost_welsh_kern, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_welsh_kern),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23231,7 +23231,7 @@ game_menus = [ #
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_outpost_gaelic, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_gaelic),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23328,7 +23328,7 @@ game_menus = [ #
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_camp_cuman, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cuman),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23423,7 +23423,7 @@ game_menus = [ #
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_camp_kipchak, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kipchak),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23518,7 +23518,7 @@ game_menus = [ #
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_camp_mongol, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mongol),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23619,7 +23619,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_georgian),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23716,7 +23716,7 @@ game_menus = [ #
        (is_between,  "$current_town", centers_begin, centers_end),
        (party_slot_ge, "$current_town", slot_center_has_camp_kwarezmian, 1),
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kwarezmian),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23828,7 +23828,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -23924,7 +23924,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24020,7 +24020,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24113,7 +24113,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_lazarus),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24199,7 +24199,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_santiago),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24283,7 +24283,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_calatrava),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24366,7 +24366,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_thomas),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24453,7 +24453,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_varangian),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24530,7 +24530,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cataphract),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24617,7 +24617,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_muslim),  
 	   ########################
          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 30),
+         (ge, ":free_capacity", 20), ####### NEW v3.8
            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mamluk),
            (gt, ":manpower", 0), #more then one
              #(store_faction_of_party, ":faction", "$current_town"),
@@ -24703,7 +24703,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-       (ge, ":free_capacity", 30),
+       (ge, ":free_capacity", 20), ####### NEW v3.8
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic_aux),
        (gt, ":manpower", 0), #more then one
        (store_faction_of_party, ":faction", "$current_town"),
@@ -24790,7 +24790,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-       (ge, ":free_capacity", 30),
+       (ge, ":free_capacity", 20), ####### NEW v3.8
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar_aux),
        (gt, ":manpower", 0), #more then one
        (store_faction_of_party, ":faction", "$current_town"),
@@ -24876,7 +24876,7 @@ game_menus = [ #
        (faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
 	   ########################
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-       (ge, ":free_capacity", 30),
+       (ge, ":free_capacity", 20), ####### NEW v3.8
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller_aux),
        (gt, ":manpower", 0), #more then one
        (store_faction_of_party, ":faction", "$current_town"),
@@ -24969,7 +24969,7 @@ game_menus = [ #
        (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
        
        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-       (ge, ":free_capacity", 30),
+       (ge, ":free_capacity", 20), ####### NEW v3.8
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_tournament_knights),
        (gt, ":manpower", 0), #more then one
        (store_faction_of_party, ":faction", "$current_town"),

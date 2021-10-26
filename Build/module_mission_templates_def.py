@@ -3974,7 +3974,7 @@ common_weapon_break =  (ti_on_agent_hit, 0.3, 0, [],
     (assign, ":item_id", reg0),
 
     (agent_is_human, ":hit_agent"),
-    
+############################################
     (get_player_agent_no, ":player_agent"),
     # durability
     (try_begin), #body armor
@@ -4001,6 +4001,7 @@ common_weapon_break =  (ti_on_agent_hit, 0.3, 0, [],
       (try_end),
     (try_end),
     # durability
+############################################
     (try_begin), #weapons
       (eq, "$tom_weapon_break", 1), #TOM
       (eq, ":attacker_agent", ":player_agent"),
@@ -4038,14 +4039,18 @@ common_weapon_break =  (ti_on_agent_hit, 0.3, 0, [],
         (display_message, "@Your {s20} cracks!", 0xff0000),
       (try_end),
     (try_end),
-
+############################################
     #(assign, ":has_choice", -1),
     (agent_get_horse, ":mounted", ":attacker_agent"),
     ##(agent_get_troop_id,  ":attacker_troop", ":attacker_agent"),
     (try_begin), #lance
       (eq, "$tom_lance_breaking", 1),
       (gt, ":mounted", 0),
-      (is_between, ":item_id", "itm_light_lance", "itm_spear_a"), # lance
+      # (is_between, ":item_id", "itm_light_lance", "itm_spear_a"), # lance
+	  ########## NEW v3.8
+      (this_or_next|is_between, ":item_id", "itm_light_lance", "itm_bamboo_spear"), 
+      (is_between, ":item_id", "itm_crusader_knight_spear_a", "itm_crusader_spear_a"), 
+	  ####################
       (ge, ":damage", 50),
       (store_random_in_range, ":chance",0, 100),
       (gt, ":chance", 20),
@@ -4057,11 +4062,15 @@ common_weapon_break =  (ti_on_agent_hit, 0.3, 0, [],
       (agent_unequip_item, ":attacker_agent", ":item_id"),
      # (assign, ":has_choice",0),
     (try_end),
-	 
+############################################
 ####################### NEW v1.9 - fixes spears breaking even if weapon break option was turned off
     (try_begin),  #spear
       (eq, "$tom_weapon_break", 1),
-      (is_between, ":item_id", "itm_bamboo_spear", "itm_staff"), # spear!
+      # (is_between, ":item_id", "itm_bamboo_spear", "itm_staff"), # spear!
+	  ########## NEW v3.8
+      (this_or_next|is_between, ":item_id", "itm_bamboo_spear", "itm_staff"), 
+      (is_between, ":item_id", "itm_crusader_spear_a", "itm_mace_6"), 
+	  ####################
       (le, ":mounted", 0), #not mounted
       (ge, ":damage", 8),
       (store_random_in_range, ":chance",0, 100),
