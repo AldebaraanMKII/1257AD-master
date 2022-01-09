@@ -288,8 +288,19 @@ simple_triggers = [
       (assign, ":location", reg1),
       (troop_set_slot, "$g_locate_ladies_cur_lady", slot_troop_cur_center, ":location"),
   (try_end),
+  ############## NEW v3.8 - fixed above causing player wife to vanish if player left a faction
+  (try_begin),
+    (neg|troop_slot_ge, "$g_locate_ladies_cur_lady", slot_troop_prisoner_of_party, 0),
+    (troop_slot_eq, "$g_locate_ladies_cur_lady", slot_troop_spouse, "trp_player"),  
+	  (this_or_next|eq, "$g_player_cur_role", role_adventurer),
+	  (eq, "$g_player_cur_role", role_mercenary_captain),
+      (troop_get_slot, ":spouse_location", "$g_locate_ladies_cur_lady", slot_party_orders_object),
+      (neq, ":spouse_location", "$g_player_court"),
+        (troop_set_slot, "$g_locate_ladies_cur_lady", slot_troop_cur_center, "$g_player_court"),
+  (try_end),
+  ############################
   
-    ############# proceeds to the next lady when it's triggered again
+  ############# proceeds to the next lady when it's triggered again
   (val_add, "$g_locate_ladies_cur_lady", 1),
 ]),
 ####################################################
@@ -486,6 +497,16 @@ simple_triggers = [
  
       ####(display_message, "@Executing Simple Trigger 15"),
     (assign, "$lady_flirtation_location", 0),
+	############## NEW v3.9 - unassigs centers that owners are dead
+    (try_for_range, ":center", centers_begin, centers_end),
+	  (party_get_slot, ":owner", ":center", slot_town_lord),
+	  (gt, ":owner", -1), ########## NEW v3.9 - maybe fixes the script errors "at Simple trigger trigger no: 15'
+	  (neg|troop_slot_eq, ":owner", slot_troop_is_alive, 1),
+	    (party_set_slot, ":center", slot_town_lord, -1), ######## unassigned
+    (try_end),
+    ############################
+	
+	
     
     ]
   ),

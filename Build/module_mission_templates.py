@@ -1744,16 +1744,6 @@ mission_templates = [
       common_battle_tab_press,
       common_weapon_break,
 
-      spearwall_trigger_1,
-      spearwall_trigger_2,
-      spearwall_trigger_3,
-      spearwall_trigger_4,
-      spearwall_trigger_5,
-      spearwall_trigger_6,
-      spearwall_trigger_7,
-      spearwall_trigger_8,
-      spearwall_trigger_9,
-
       (ti_question_answered, 0, 0, [],
        [(store_trigger_param_1, ":answer"),
         (eq, ":answer",0),

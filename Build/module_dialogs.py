@@ -32564,46 +32564,48 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_1", 1),
-   (store_random_in_range, "$g_random_gold_1", 1500, 1700),
+       (store_random_in_range, "$g_random_gold_1", 1500, 1700),
     ###### BANDIT
     (else_try),
      (eq, "$g_random_fugitive_1", 2),
-   (store_random_in_range, "$g_random_gold_1", 250, 300),
+       (store_random_in_range, "$g_random_gold_1", 250, 300),
     ###### BANDIT LEADER
     (else_try),
      (eq, "$g_random_fugitive_1", 3),
-   (store_random_in_range, "$g_random_gold_1", 450, 530),
+       (store_random_in_range, "$g_random_gold_1", 450, 530),
     ###### DESERTER
     (else_try),
      (eq, "$g_random_fugitive_1", 4),
-   (store_random_in_range, "$g_random_gold_1", 600, 700),
+	   (store_random_in_range, "$g_random_gold_1", 600, 700),
     ###### FUGITIVE
     (else_try),
      (eq, "$g_random_fugitive_1", 5),
-   (store_random_in_range, "$g_random_gold_1", 200, 300),
+       (store_random_in_range, "$g_random_gold_1", 200, 300),
     ###### ARENA FIGHTER
     (else_try),
      (eq, "$g_random_fugitive_1", 6),
-   (store_random_in_range, "$g_random_gold_1", 870, 1000),
+       (store_random_in_range, "$g_random_gold_1", 870, 1000),
     ###### PIRATE
     (else_try),
      (eq, "$g_random_fugitive_1", 7),
-   (store_random_in_range, "$g_random_gold_1", 630, 700),
+       (store_random_in_range, "$g_random_gold_1", 630, 700),
     ###### PIRATE CAPTAIN
     (else_try),
      (eq, "$g_random_fugitive_1", 8),
-   (store_random_in_range, "$g_random_gold_1", 900, 1100),
+       (store_random_in_range, "$g_random_gold_1", 900, 1100),
     ###### MERCENARY 
     (else_try),
      (eq, "$g_random_fugitive_1", 9),
-   (store_random_in_range, "$g_random_gold_1", 700, 850),
+       (store_random_in_range, "$g_random_gold_1", 700, 850),
     ###### MERCENARY CAPTAIN 
     (else_try),
      (eq, "$g_random_fugitive_1", 10),
-   (store_random_in_range, "$g_random_gold_1", 1150, 1300),
-   (try_end),
+       (store_random_in_range, "$g_random_gold_1", 1150, 1300),
+     (try_end),
    (assign, reg10, "$g_random_gold_1"),
    (str_store_string, s5, "@{reg10}"),     
+	(assign, reg21, "$g_random_fugitive_1"),
+	(assign, reg22, "$g_random_gold_1"),
      
    ]],
 [anyone, "tavernkeeper_tell_mission", [(eq, "$random_quest_no", "qst_bounty_2")],
@@ -32631,46 +32633,48 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_2", 1),
-   (store_random_in_range, "$g_random_gold_2", 1500, 1700),
+       (store_random_in_range, "$g_random_gold_2", 1500, 1700),
     ###### BANDIT
     (else_try),
      (eq, "$g_random_fugitive_2", 2),
-   (store_random_in_range, "$g_random_gold_2", 250, 300),
+       (store_random_in_range, "$g_random_gold_2", 250, 300),
     ###### BANDIT LEADER
     (else_try),
      (eq, "$g_random_fugitive_2", 3),
-   (store_random_in_range, "$g_random_gold_2", 450, 530),
+       (store_random_in_range, "$g_random_gold_2", 450, 530),
     ###### DESERTER
     (else_try),
      (eq, "$g_random_fugitive_2", 4),
-   (store_random_in_range, "$g_random_gold_2", 600, 700),
+       (store_random_in_range, "$g_random_gold_2", 600, 700),
     ###### FUGITIVE
     (else_try),
      (eq, "$g_random_fugitive_2", 5),
-   (store_random_in_range, "$g_random_gold_2", 200, 300),
+       (store_random_in_range, "$g_random_gold_2", 200, 300),
     ###### ARENA FIGHTER
     (else_try),
      (eq, "$g_random_fugitive_2", 6),
-   (store_random_in_range, "$g_random_gold_2", 870, 1000),
+       (store_random_in_range, "$g_random_gold_2", 870, 1000),
     ###### PIRATE
     (else_try),
      (eq, "$g_random_fugitive_2", 7),
-   (store_random_in_range, "$g_random_gold_2", 630, 700),
+       (store_random_in_range, "$g_random_gold_2", 630, 700),
     ###### PIRATE CAPTAIN
     (else_try),
      (eq, "$g_random_fugitive_2", 8),
-   (store_random_in_range, "$g_random_gold_2", 900, 1100),
+       (store_random_in_range, "$g_random_gold_2", 900, 1100),
     ###### MERCENARY 
     (else_try),
      (eq, "$g_random_fugitive_2", 9),
-   (store_random_in_range, "$g_random_gold_2", 700, 850),
+       (store_random_in_range, "$g_random_gold_2", 700, 850),
     ###### MERCENARY CAPTAIN 
     (else_try),
      (eq, "$g_random_fugitive_2", 10),
-   (store_random_in_range, "$g_random_gold_2", 1150, 1300),
-   (try_end),
+       (store_random_in_range, "$g_random_gold_2", 1150, 1300),
+    (try_end),
    (assign, reg10, "$g_random_gold_2"),
    (str_store_string, s5, "@{reg10}"),     
+	(assign, reg21, "$g_random_fugitive_2"),
+	(assign, reg22, "$g_random_gold_2"),
    ]],
 [anyone, "tavernkeeper_tell_mission", [(eq, "$random_quest_no", "qst_bounty_3")],
 "I have something you could help with, an issue with the lawless villain known as {s4}. \
@@ -32697,46 +32701,48 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_3", 1),
-   (store_random_in_range, "$g_random_gold_3", 1500, 1700),
+       (store_random_in_range, "$g_random_gold_3", 1500, 1700),
     ###### BANDIT
     (else_try),
      (eq, "$g_random_fugitive_3", 2),
-   (store_random_in_range, "$g_random_gold_3", 250, 300),
+       (store_random_in_range, "$g_random_gold_3", 250, 300),
     ###### BANDIT LEADER
     (else_try),
      (eq, "$g_random_fugitive_3", 3),
-   (store_random_in_range, "$g_random_gold_3", 450, 530),
+       (store_random_in_range, "$g_random_gold_3", 450, 530),
     ###### DESERTER
     (else_try),
      (eq, "$g_random_fugitive_3", 4),
-   (store_random_in_range, "$g_random_gold_3", 600, 700),
+       (store_random_in_range, "$g_random_gold_3", 600, 700),
     ###### FUGITIVE
     (else_try),
      (eq, "$g_random_fugitive_3", 5),
-   (store_random_in_range, "$g_random_gold_3", 200, 300),
+       (store_random_in_range, "$g_random_gold_3", 200, 300),
     ###### ARENA FIGHTER
     (else_try),
      (eq, "$g_random_fugitive_3", 6),
-   (store_random_in_range, "$g_random_gold_3", 870, 1000),
+       (store_random_in_range, "$g_random_gold_3", 870, 1000),
     ###### PIRATE
     (else_try),
      (eq, "$g_random_fugitive_3", 7),
-   (store_random_in_range, "$g_random_gold_3", 630, 700),
+       (store_random_in_range, "$g_random_gold_3", 630, 700),
     ###### PIRATE CAPTAIN
     (else_try),
      (eq, "$g_random_fugitive_3", 8),
-   (store_random_in_range, "$g_random_gold_3", 900, 1100),
+       (store_random_in_range, "$g_random_gold_3", 900, 1100),
     ###### MERCENARY 
     (else_try),
      (eq, "$g_random_fugitive_3", 9),
-   (store_random_in_range, "$g_random_gold_3", 700, 850),
+       (store_random_in_range, "$g_random_gold_3", 700, 850),
     ###### MERCENARY CAPTAIN 
     (else_try),
      (eq, "$g_random_fugitive_3", 10),
-   (store_random_in_range, "$g_random_gold_3", 1150, 1300),
+       (store_random_in_range, "$g_random_gold_3", 1150, 1300),
    (try_end),
    (assign, reg10, "$g_random_gold_3"),
    (str_store_string, s5, "@{reg10}"),     
+	(assign, reg21, "$g_random_fugitive_3"),
+	(assign, reg22, "$g_random_gold_3"),
    ]],
 [anyone, "tavernkeeper_tell_mission", [(eq, "$random_quest_no", "qst_bounty_4")],
 "I have something you could help with, an issue with the lawless villain known as {s4}. \
@@ -32763,46 +32769,48 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_4", 1),
-   (store_random_in_range, "$g_random_gold_4", 1500, 1700),
+       (store_random_in_range, "$g_random_gold_4", 1500, 1700),
     ###### BANDIT
     (else_try),
      (eq, "$g_random_fugitive_4", 2),
-   (store_random_in_range, "$g_random_gold_4", 250, 300),
+       (store_random_in_range, "$g_random_gold_4", 250, 300),
     ###### BANDIT LEADER
     (else_try),
      (eq, "$g_random_fugitive_4", 3),
-   (store_random_in_range, "$g_random_gold_4", 450, 530),
+       (store_random_in_range, "$g_random_gold_4", 450, 530),
     ###### DESERTER
     (else_try),
      (eq, "$g_random_fugitive_4", 4),
-   (store_random_in_range, "$g_random_gold_4", 600, 700),
+       (store_random_in_range, "$g_random_gold_4", 600, 700),
     ###### FUGITIVE
     (else_try),
      (eq, "$g_random_fugitive_4", 5),
-   (store_random_in_range, "$g_random_gold_4", 200, 300),
+       (store_random_in_range, "$g_random_gold_4", 200, 300),
     ###### ARENA FIGHTER
     (else_try),
      (eq, "$g_random_fugitive_4", 6),
-   (store_random_in_range, "$g_random_gold_4", 870, 1000),
+       (store_random_in_range, "$g_random_gold_4", 870, 1000),
     ###### PIRATE
     (else_try),
      (eq, "$g_random_fugitive_4", 7),
-   (store_random_in_range, "$g_random_gold_4", 630, 700),
+       (store_random_in_range, "$g_random_gold_4", 630, 700),
     ###### PIRATE CAPTAIN
     (else_try),
      (eq, "$g_random_fugitive_4", 8),
-   (store_random_in_range, "$g_random_gold_4", 900, 1100),
+       (store_random_in_range, "$g_random_gold_4", 900, 1100),
     ###### MERCENARY 
     (else_try),
      (eq, "$g_random_fugitive_4", 9),
-   (store_random_in_range, "$g_random_gold_4", 700, 850),
+       (store_random_in_range, "$g_random_gold_4", 700, 850),
     ###### MERCENARY CAPTAIN 
     (else_try),
      (eq, "$g_random_fugitive_4", 10),
-   (store_random_in_range, "$g_random_gold_4", 1150, 1300),
+       (store_random_in_range, "$g_random_gold_4", 1150, 1300),
    (try_end),
    (assign, reg10, "$g_random_gold_4"),
    (str_store_string, s5, "@{reg10}"),     
+	(assign, reg21, "$g_random_fugitive_4"),
+	(assign, reg22, "$g_random_gold_4"),
    ]],
 [anyone, "tavernkeeper_tell_mission", [(eq, "$random_quest_no", "qst_bounty_5")],
 "I have something you could help with, an issue with the lawless villain known as {s4}. \
@@ -32829,46 +32837,48 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_5", 1),
-   (store_random_in_range, "$g_random_gold_5", 1500, 1700),
+       (store_random_in_range, "$g_random_gold_5", 1500, 1700),
     ###### BANDIT
     (else_try),
      (eq, "$g_random_fugitive_5", 2),
-   (store_random_in_range, "$g_random_gold_5", 250, 300),
+       (store_random_in_range, "$g_random_gold_5", 250, 300),
     ###### BANDIT LEADER
     (else_try),
      (eq, "$g_random_fugitive_5", 3),
-   (store_random_in_range, "$g_random_gold_5", 450, 530),
+       (store_random_in_range, "$g_random_gold_5", 450, 530),
     ###### DESERTER
     (else_try),
      (eq, "$g_random_fugitive_5", 4),
-   (store_random_in_range, "$g_random_gold_5", 600, 700),
+       (store_random_in_range, "$g_random_gold_5", 600, 700),
     ###### FUGITIVE
     (else_try),
      (eq, "$g_random_fugitive_5", 5),
-   (store_random_in_range, "$g_random_gold_5", 200, 300),
+       (store_random_in_range, "$g_random_gold_5", 200, 300),
     ###### ARENA FIGHTER
     (else_try),
      (eq, "$g_random_fugitive_5", 6),
-   (store_random_in_range, "$g_random_gold_5", 870, 1000),
+       (store_random_in_range, "$g_random_gold_5", 870, 1000),
     ###### PIRATE
     (else_try),
      (eq, "$g_random_fugitive_5", 7),
-   (store_random_in_range, "$g_random_gold_5", 630, 700),
+       (store_random_in_range, "$g_random_gold_5", 630, 700),
     ###### PIRATE CAPTAIN
     (else_try),
      (eq, "$g_random_fugitive_5", 8),
-   (store_random_in_range, "$g_random_gold_5", 900, 1100),
+       (store_random_in_range, "$g_random_gold_5", 900, 1100),
     ###### MERCENARY 
     (else_try),
      (eq, "$g_random_fugitive_5", 9),
-   (store_random_in_range, "$g_random_gold_5", 700, 850),
+       (store_random_in_range, "$g_random_gold_5", 700, 850),
     ###### MERCENARY CAPTAIN 
     (else_try),
      (eq, "$g_random_fugitive_5", 10),
-   (store_random_in_range, "$g_random_gold_5", 1150, 1300),
+       (store_random_in_range, "$g_random_gold_5", 1150, 1300),
    (try_end),
    (assign, reg10, "$g_random_gold_5"),
    (str_store_string, s5, "@{reg10}"),     
+	(assign, reg21, "$g_random_fugitive_5"),
+	(assign, reg22, "$g_random_gold_5"),
    ]],
 [anyone, "tavernkeeper_tell_mission", [(eq, "$random_quest_no", "qst_bounty_6")],
 "I have something you could help with, an issue with the lawless villain known as {s4}. \
@@ -32895,46 +32905,48 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (try_begin),
      ###### KNIGHT
      (eq, "$g_random_fugitive_6", 1),
-   (store_random_in_range, "$g_random_gold_6", 1500, 1700),
+       (store_random_in_range, "$g_random_gold_6", 1500, 1700),
     ###### BANDIT
     (else_try),
      (eq, "$g_random_fugitive_6", 2),
-   (store_random_in_range, "$g_random_gold_6", 250, 300),
+       (store_random_in_range, "$g_random_gold_6", 250, 300),
     ###### BANDIT LEADER
     (else_try),
      (eq, "$g_random_fugitive_6", 3),
-   (store_random_in_range, "$g_random_gold_6", 450, 530),
+       (store_random_in_range, "$g_random_gold_6", 450, 530),
     ###### DESERTER
     (else_try),
      (eq, "$g_random_fugitive_6", 4),
-   (store_random_in_range, "$g_random_gold_6", 600, 700),
+       (store_random_in_range, "$g_random_gold_6", 600, 700),
     ###### FUGITIVE
     (else_try),
      (eq, "$g_random_fugitive_6", 5),
-   (store_random_in_range, "$g_random_gold_6", 200, 300),
+       (store_random_in_range, "$g_random_gold_6", 200, 300),
     ###### ARENA FIGHTER
     (else_try),
      (eq, "$g_random_fugitive_6", 6),
-   (store_random_in_range, "$g_random_gold_6", 870, 1000),
+       (store_random_in_range, "$g_random_gold_6", 870, 1000),
     ###### PIRATE
     (else_try),
      (eq, "$g_random_fugitive_6", 7),
-   (store_random_in_range, "$g_random_gold_6", 630, 700),
+       (store_random_in_range, "$g_random_gold_6", 630, 700),
     ###### PIRATE CAPTAIN
     (else_try),
      (eq, "$g_random_fugitive_6", 8),
-   (store_random_in_range, "$g_random_gold_6", 900, 1100),
+       (store_random_in_range, "$g_random_gold_6", 900, 1100),
     ###### MERCENARY 
     (else_try),
      (eq, "$g_random_fugitive_6", 9),
-   (store_random_in_range, "$g_random_gold_6", 700, 850),
+       (store_random_in_range, "$g_random_gold_6", 700, 850),
     ###### MERCENARY CAPTAIN 
     (else_try),
      (eq, "$g_random_fugitive_6", 10),
-   (store_random_in_range, "$g_random_gold_6", 1150, 1300),
+       (store_random_in_range, "$g_random_gold_6", 1150, 1300),
    (try_end),
    (assign, reg10, "$g_random_gold_6"),
    (str_store_string, s5, "@{reg10}"),     
+	(assign, reg21, "$g_random_fugitive_6"),
+	(assign, reg22, "$g_random_gold_6"),
    ]],
 
 [anyone, "tavernkeeper_tell_mission", [],
@@ -32950,6 +32962,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  Well, good hunting to you.", "close_window",
    [(call_script, "script_start_quest", "$random_quest_no", "$g_talk_troop"),
     (call_script, "script_change_player_relation_with_troop", "$g_talk_troop",2),
+	(assign, reg20, "$random_quest_no"),
+	(display_message, "@Script chose quest {reg20}, fugitive {reg21} with {reg22} money."),
     (assign, "$g_leave_encounter",1),
    ]],
 
@@ -36363,8 +36377,9 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     (call_script, "script_start_quest", "qst_retaliate_for_border_incident", "$g_talk_troop"),
   ]],
 
-[anyone|plyr, "merchant_quest_retaliate_confirm", [], "I would prefer not to get mixed up in such things", "merchant_pretalk", [
-    (quest_set_slot, "qst_retaliate_for_border_incident", slot_quest_dont_give_again_remaining_days, 5),
+# [anyone|plyr, "merchant_quest_retaliate_confirm", [], "I would prefer not to get mixed up in such things", "merchant_pretalk", [
+[anyone|plyr, "merchant_quest_retaliate_confirm", [], "I would prefer not to get mixed up in such things", "merchant_quest_stall", [   ####### NEW v3.8
+    # (quest_set_slot, "qst_retaliate_for_border_incident", slot_quest_dont_give_again_remaining_days, 5),
   ]],
 
 
@@ -37309,6 +37324,16 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     (call_script, "script_change_player_relation_with_center", "$current_town", 18),
   ]],
   
+  
+############## NEW v3.8 - 
+[anyone|plyr, "village_give_money_2", 
+[
+],
+  "Nevermind.",
+  "village_elder_pretalk",
+[
+]],
+############################
 # [plyr|anyone, "village_give_money_2",
 # [
 # (store_troop_gold, ":cur_player_gold", "trp_player"),

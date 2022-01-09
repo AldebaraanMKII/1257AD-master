@@ -1453,6 +1453,7 @@ spr_to_church_tower_a = 1451
 spr_castle_courtyard_house_extension_a = 1452
 spr_castle_courtyard_house_extension_b = 1453
 spr_andalus_castle_battlement = 1454
+spr_spr_andalus_castle_battlement_d = 1455
 spr_andalus_castle_gatehouse = 1456
 spr_andalus_castle_tower1 = 1457
 spr_andalus_castle_tower2 = 1458

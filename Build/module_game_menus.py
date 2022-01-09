@@ -8896,7 +8896,7 @@ game_menus = [ #
 			      # (val_add, ":current_slot", 1), 
                   (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
 		          (gt, ":party", 0), 
-                    # (remove_party, ":party"),
+                     (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -8915,7 +8915,7 @@ game_menus = [ #
 			      # (val_add, ":current_slot", 1),  
                   (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
 		          (gt, ":party", 0), 
-                    # (remove_party, ":party"),
+                    (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -8942,7 +8942,7 @@ game_menus = [ #
           (eq, ":break", 1),
         (else_try),
           # Talk to freed heroes
-		  # (neq, "$freelancer_state", 1), #+freelancer chief #prevents player in party from talking to freed heroes after battle
+		  (neq, "$freelancer_state", 1), #+freelancer chief #prevents player in party from talking to freed heroes after battle
           (assign, ":break", 0),
           (party_get_num_prisoner_stacks, ":num_prisoner_stacks", "p_collective_enemy"),
           (try_for_range, ":stack_no", "$last_freed_hero", ":num_prisoner_stacks"),
@@ -9100,7 +9100,7 @@ game_menus = [ #
             (leave_encounter),
             (change_screen_return),
           (else_try),
-            # (neq, "$freelancer_state", 1),   #+freelancer prevents player's actions from having political consequences when in party
+            (neq, "$freelancer_state", 1),   #+freelancer prevents player's actions from having political consequences when in party
             (try_begin), #my kingdom
               #(change_screen_return),
               (eq, "$g_next_menu", "mnu_castle_taken"),
@@ -9111,14 +9111,13 @@ game_menus = [ #
               (store_current_hours, ":hours"),
 			  (faction_set_slot, "$players_kingdom", slot_faction_ai_last_decisive_event, ":hours"),
 			  ######################## NEW v3.8
+              (try_begin), #player took a walled center while he is a vassal of npc kingdom.
+                (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
                 # rafi - rename Nicae to Roman Empire
                 (try_begin),                
-				  (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end), ######### NEW v3.8
                   (eq, "$g_encountered_party", "p_town_26_1"),
                     ########## FIX 
                     (faction_get_slot, ":player_culture", "$players_kingdom", slot_faction_culture),
-                    # (this_or_next|eq, "$players_kingdom", "fac_kingdom_22"),
-                    # (this_or_next|eq, "$kaos_kings_kingdom", 22),
                     (eq, ":player_culture", "fac_culture_byzantium"),  ######### NEW v2.4
 					##########
                       (faction_set_name, "$players_kingdom", "@Roman Empire"),
@@ -9129,12 +9128,9 @@ game_menus = [ #
                       ####### NEW
                       (party_set_slot, "p_town_26_1", slot_center_has_quarters_varangian, 1),
                 (try_end),
-                # rafi
+                # rafi																 
+                (jump_to_menu, "$g_next_menu"), ###### NEW v3.8
 				################################################
-              (try_begin), #player took a walled center while he is a vassal of npc kingdom.
-                (is_between, "$players_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
-                # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ####### NEW v3.8
-                  (jump_to_menu, "$g_next_menu"),
               (else_try), #player took a walled center while he is a vassal of rebels.
                 (eq, "$players_kingdom", "fac_player_supporters_faction"),
                 (assign, "$g_center_taken_by_player_faction", "$g_encountered_party"),
@@ -11196,7 +11192,11 @@ game_menus = [ #
 
         (try_begin),
           (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
-          (neq, "$players_kingdom", "fac_player_supporters_faction"),####### NEW v3.0-KOMKE uncommented to make it as in native Warband
+          # (neq, "$players_kingdom", "fac_player_supporters_faction"),####### NEW v3.0-KOMKE uncommented to make it as in native Warband
+          # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ########## NEW v3.8
+		  # (eq, "$player_has_homage", 1),
+          (this_or_next|eq, "$g_player_cur_role", role_vassal),  
+          (eq, "$g_player_cur_role", role_prince),  
           # (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  ###### NEW v2.9 - fixes option appearing for player to send word to himself####### NEW v3.0-KOMKE commented out
           (call_script, "script_give_center_to_faction", "$g_encountered_party", "$players_kingdom"),
           (call_script, "script_order_best_besieger_party_to_guard_center", "$g_encountered_party", "$players_kingdom"),
@@ -11219,9 +11219,19 @@ game_menus = [ #
           (str_store_party_name, s3, "$g_encountered_party"),
           (assign, reg1, 0),
           (try_begin),
-            (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
+            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ######## NEW v3.8
             (assign, reg1, 1),
           (try_end),          
+		  ####### NEW v3.8 - moved this here
+		  ####### NEW v3.0 - player role
+          (try_begin),
+            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  
+            (neq, "$g_player_cur_role", role_king),  
+              (assign, "$g_player_cur_role", role_king),  
+          (try_end),
+		  ############## 
+		  ############################
 		  #(party_set_slot, "$g_encountered_party", slot_town_lord, stl_unassigned),		  
 ####### NEW v3.0-KOMKE END-           
         (try_end),
@@ -11230,13 +11240,6 @@ game_menus = [ #
           (is_between, "$g_encountered_party", towns_begin, towns_end),
           (assign, reg2, 1),
         (try_end),
-		####### NEW v3.0 - player role
-        (try_begin),
-          (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  
-          (neq, "$g_player_cur_role", role_king),  
-            (assign, "$g_player_cur_role", role_king),  
-        (try_end),
-		############## 
     ],
     [
       ("continue",[], "Continue...",
@@ -26410,6 +26413,14 @@ game_menus = [ #
           (start_presentation, "prsnt_enhanced_mod_options_misc"),
         ]
        ),
+
+        ############## NEW v3.8 - 
+        ("enhanced_mod_options_7",[], "Misc Options #2",
+        [
+           (start_presentation, "prsnt_enhanced_mod_options_misc_2"),
+         ]
+        ),
+		############################
        
       # ("enhanced_mod_options_7",[], "Fix CTT troops.",
        # [
@@ -32827,6 +32838,7 @@ game_menus = [ #
       ("castle_station_troops",
       [
         (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
+        (store_faction_of_party, ":faction", "$g_encountered_party"),   ###### NEW v3.8
         (str_clear, s10),
         
         (assign, ":player_can_draw_from_garrison", 0),
@@ -32834,37 +32846,33 @@ game_menus = [ #
           (eq, ":town_lord", "trp_player"),
           (assign, ":player_can_draw_from_garrison", 1),
         (else_try), #option 2 - town is unassigned and part of the player faction
-          (store_faction_of_party, ":faction", "$g_encountered_party"),
           # (eq, ":faction", "fac_player_supporters_faction"),
           (eq, ":faction", "$players_kingdom"), ######## NEW v3.3
           (neg|party_slot_ge, "$g_encountered_party", slot_town_lord, active_npcs_begin), #ie, zero or -1
           (assign, ":player_can_draw_from_garrison", 1),
         (else_try), #option 3 - town was captured by player
           (lt, ":town_lord", 0), #ie, unassigned
-          (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
-          (eq, "$players_kingdom", ":castle_faction"),
+          (eq, "$players_kingdom", ":faction"),
           (eq, "$g_encountered_party", "$g_castle_requested_by_player"),
           (str_store_string, s10, "str_retrieve_garrison_warning"),
           (assign, ":player_can_draw_from_garrison", 1),
 		############## NEW v3.5
-        (else_try),          
-		  (party_get_slot, ":last_besieger", "$g_encountered_party", slot_center_last_besieger), 
-          (eq, ":last_besieger", "$players_kingdom"),
-            (str_store_string, s10, "str_retrieve_garrison_warning"),
-            (assign, ":player_can_draw_from_garrison", 1),
+         # (else_try),          
+		   # (party_get_slot, ":last_besieger", "$g_encountered_party", slot_center_last_besieger), 
+           # (eq, ":last_besieger", "$players_kingdom"),
+             # (str_store_string, s10, "str_retrieve_garrison_warning"),
+             # (assign, ":player_can_draw_from_garrison", 1),
 	    ############################
         (else_try),
           (lt, ":town_lord", 0), #ie, unassigned
-          (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
-          (eq, "$players_kingdom", ":castle_faction"),
-          (str_store_string, s10, "str_retrieve_garrison_warning"),
-          (assign, ":player_can_draw_from_garrison", 1),
+          (eq, "$players_kingdom", ":faction"),
+            (str_store_string, s10, "str_retrieve_garrison_warning"),
+            (assign, ":player_can_draw_from_garrison", 1),
         (else_try),
           (party_slot_ge, "$g_encountered_party", slot_town_lord, active_npcs_begin),
-          (store_faction_of_party, ":castle_faction", "$g_encountered_party"),
-          (eq, "$players_kingdom", ":castle_faction"),
+          (eq, "$players_kingdom", ":faction"),
           (troop_slot_eq, "trp_player", slot_troop_spouse, ":town_lord"),
-          (assign, ":player_can_draw_from_garrison", 1),
+            (assign, ":player_can_draw_from_garrison", 1),
         (try_end),
         (eq, ":player_can_draw_from_garrison", 1),
       ],

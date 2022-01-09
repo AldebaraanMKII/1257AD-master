@@ -3483,7 +3483,8 @@ scene_props = [
   ("castle_courtyard_house_extension_b",0, "castle_courtyard_house_extension_b", "bo_castle_courtyard_house_extension_b", []),
 
   ("andalus_castle_battlement", 0, "andalus_battlement", "bo_andalus_battlement", []),
-  ("andalus_castle_battlement", 0, "andalus_battlement_destroyed", "bo_andalus_battlement_destroyed", []),
+  # ("andalus_castle_battlement", 0, "andalus_battlement_destroyed", "bo_andalus_battlement_destroyed", []),
+  ("spr_andalus_castle_battlement_d", 0, "andalus_battlement_destroyed", "bo_andalus_battlement_destroyed", []), ###### NEW v3.8
   ("andalus_castle_gatehouse", 0, "andalus_gatehouse", "bo_andalus_gatehouse", []),
   ("andalus_castle_tower1", 0, "andalus_tower1", "bo_andalus_tower1", []),
   ("andalus_castle_tower2", 0, "andalus_tower2", "bo_andalus_tower2", []),

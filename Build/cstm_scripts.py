@@ -177,7 +177,8 @@ new_scripts = [
         (store_script_param, ":troop", 1),
         
         (store_character_level, ":points_available", ":troop"),
-        (val_add, ":points_available", 20),
+        # (val_add, ":points_available", 20),
+        (val_add, ":points_available", "$g_cstm_attribute_points_start"),  ###### NEW v3.8
         # (val_mul, ":points_available", 130),  ########## NEW v2.6 - reverted back to previous values
         # (val_div, ":points_available", 100),  ########## 
         
@@ -500,7 +501,8 @@ new_scripts = [
         
         (store_attribute_level, ":intelligence", ":troop", ca_intelligence),
         (val_add, ":points_available", ":intelligence"),
-        (val_add, ":points_available", 1),
+        # (val_add, ":points_available", 1),
+        (val_add, ":points_available", "$g_cstm_skill_points_start"),   ###### NEW v3.8
         # (val_mul, ":points_available", 110),   ########10% more
         # (val_div, ":points_available", 100),
         
@@ -809,18 +811,21 @@ new_scripts = [
         (store_script_param, ":troop", 1),
         
         (store_skill_level, ":weapon_master", skl_weapon_master, ":troop"),
-        (store_mul, ":starting_proficiency", ":weapon_master", CSTM_WP_LEVELS_PER_WM),
-        (val_add, ":starting_proficiency", CSTM_WP_LEVELS_START),
+        # (store_mul, ":starting_proficiency", ":weapon_master", CSTM_WP_LEVELS_PER_WM), 
+        (store_mul, ":starting_proficiency", ":weapon_master", "$g_cstm_proficiency_per_wm"), ###### NEW v3.8
+        (val_add, ":starting_proficiency", CSTM_WP_LEVELS_START), 
         
         (troop_get_slot, ":points_available", "trp_cstm_proficiency_requirements", ":starting_proficiency"),
         (val_mul, ":points_available", proficiencies_end),
         
         (store_character_level, ":level", ":troop"),
-        (store_mul, ":level_bonus", ":level", CSTM_WP_POINTS_PER_LEVEL),
+        # (store_mul, ":level_bonus", ":level", CSTM_WP_POINTS_PER_LEVEL),
+        (store_mul, ":level_bonus", ":level", "$g_cstm_proficiency_points_per_level"), ###### NEW v3.8
         (val_add, ":points_available", ":level_bonus"),
         
         (store_attribute_level, ":agility", ":troop", ca_agility),
-        (store_mul, ":agility_bonus", ":agility", CSTM_WP_POINTS_PER_AGI),
+        # (store_mul, ":agility_bonus", ":agility", CSTM_WP_POINTS_PER_AGI),
+        (store_mul, ":agility_bonus", ":agility", "$g_cstm_proficiency_per_agility"),  ###### NEW v3.8
         (val_add, ":points_available", ":agility_bonus"),
         
         (assign, reg0, ":points_available"),

@@ -171,6 +171,10 @@ mamluk_ghulam_wp                = wp_one_handed(180)|wp_two_handed(60)|wp_polear
 footman_skills            = knows_ironflesh_2|knows_power_strike_2|knows_weapon_master_2|knows_shield_2|knows_power_throw_2|knows_inventory_management_10
 footman_wp                = wp_one_handed(140)|wp_two_handed(100)|wp_polearm(140)|wp_archery(60)|wp_crossbow(60)|wp_throwing(80)
 
+########## NEW v3.8 - sea raiders
+sea_raider_wp                = wp_one_handed(140)|wp_two_handed(60)|wp_polearm(140)|wp_archery(120)|wp_crossbow(120)|wp_throwing(100)
+sea_raider_veteran_wp        = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(160)|wp_archery(160)|wp_crossbow(160)|wp_throwing(140)
+####################
 
 swords_regulars_skills    = knows_ironflesh_4|knows_power_strike_5|knows_athletics_2|knows_weapon_master_5|knows_shield_4|knows_power_throw_2|knows_inventory_management_10
 swords_veteran_skills     = knows_ironflesh_6|knows_power_strike_6|knows_athletics_3|knows_weapon_master_7|knows_shield_5|knows_power_throw_2|knows_inventory_management_10

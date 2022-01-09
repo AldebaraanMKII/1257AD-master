@@ -18478,6 +18478,235 @@ presentations = [
 
 
 
+####################################### NEW v3.8 - MISC OPTIONS #2
+  ("enhanced_mod_options_misc_2", 0, mesh_load_window, [
+    (ti_on_presentation_load,
+      [
+        (presentation_set_duration, 999999),
+        (set_fixed_point_multiplier, 1000),
+
+        (str_clear, s0),
+        (create_text_overlay, "$g_presentation_obj_6", s0, tf_scrollable),
+        (position_set_x, pos1, 50),
+        (position_set_y, pos1, 50),
+        (overlay_set_position, "$g_presentation_obj_6", pos1),
+        (position_set_x, pos1, 550),
+        (position_set_y, pos1, 630),
+		
+########################################## ROW 1 COLUMN 1
+        (position_set_x, pos1, 50),
+        (assign, ":value_difference", 35),
+
+        (create_text_overlay, reg0, "@Custom troop proficiency per level:", tf_vertical_align_center),
+        (store_sub, reg1, 700, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+
+        (create_text_overlay, reg0, "@CT proficiency per weapon master level:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+
+        (create_text_overlay, reg0, "@CT proficiency per agility:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+
+        (create_text_overlay, reg0, "@CT skill points base:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+
+        (create_text_overlay, reg0, "@CT budget per level:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+
+        (create_text_overlay, reg0, "@Attribute points base:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+
+
+        ######## checkbox
+        # (create_text_overlay, reg0, "@Don't disband town garrison when taking control of it:", tf_vertical_align_center),
+        # (val_sub, reg1, ":value_difference"),
+        # (position_set_y, pos1, reg1),
+        # (overlay_set_position, reg0, pos1),
+        ########
+
+        ###################
+
+
+########################################## ROW 1 COLUMN 2
+       ######  number boxes
+        (position_set_x, pos1, 420),
+        (assign, ":value_difference", 35),
+
+        (create_number_box_overlay, "$g_presentation_obj_1", 1, 101),
+        (store_sub, reg1, 686, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_1", pos1),
+        (overlay_set_val, "$g_presentation_obj_1", "$g_cstm_proficiency_points_per_level"),
+
+        (create_number_box_overlay, "$g_presentation_obj_2", 1, 101),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_2", pos1),
+        (overlay_set_val, "$g_presentation_obj_2", "$g_cstm_proficiency_per_wm"),
+
+
+        (create_number_box_overlay, "$g_presentation_obj_3", 1, 101),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_3", pos1),
+        (overlay_set_val, "$g_presentation_obj_3", "$g_cstm_proficiency_per_agility"),
+
+
+        (create_number_box_overlay, "$g_presentation_obj_4", 1, 101),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_4", pos1),
+        (overlay_set_val, "$g_presentation_obj_4", "$g_cstm_skill_points_start"),
+
+
+        (create_number_box_overlay, "$g_presentation_obj_5", 1, 10000),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_5", pos1),
+        (overlay_set_val, "$g_presentation_obj_5", "$g_cstm_budget_per_level"),
+
+
+        (create_number_box_overlay, "$g_presentation_obj_6", 1, 101),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_6", pos1),
+        (overlay_set_val, "$g_presentation_obj_6", "$g_cstm_attribute_points_start"),
+
+        # (position_set_y, pos1, 166),
+        # (create_check_box_overlay, "$g_presentation_obj_16", "mesh_checkbox_off", "mesh_checkbox_on"),
+        # (overlay_set_position, "$g_presentation_obj_16", pos1),
+        # (overlay_set_val, "$g_presentation_obj_16", "$g_party_npc_trainer"),
+
+
+########################################## ROW 2 COLUMN 1
+        # (position_set_x, pos1, 520),
+        # (position_set_x, pos1, 510),
+        # (assign, ":value_difference", 35),
+
+        # (create_text_overlay, reg0, "@Troop ratio bar and kill count options:", tf_vertical_align_center),
+        # (store_sub, reg1, 700, ":value_difference"),
+        # (position_set_y, pos1, reg1),
+        # (overlay_set_position, reg0, pos1),
+
+        # (create_text_overlay, reg0, "@Max tax innefficiency:", tf_vertical_align_center),
+        # (val_sub, reg1, ":value_difference"),
+        # (position_set_y, pos1, reg1),
+        # (overlay_set_position, reg0, pos1),
+
+
+########################################## ROW 2 COLUMN 2
+        # (position_set_x, pos1, 900),
+        # (assign, ":value_difference", 35),
+
+        # (create_number_box_overlay, "$g_presentation_obj_18", 0, 1000),
+        # (position_set_y, pos1, 690),   #####TAKE 14 OUT OF attached y
+        # (overlay_set_position, "$g_presentation_obj_18", pos1),
+        # (overlay_set_val, "$g_presentation_obj_18", "$g_party_morale_per_leadership"),
+
+        # (create_button_overlay, "$g_presentation_obj_18", "@Show:"),
+        # (try_begin),
+          # (eq, "$g_misc_troop_ratio_bar_and_kill_count", 0), #disabled
+          # (overlay_set_text, "$g_presentation_obj_18", "@None"),
+        # (else_try),
+          # (eq, "$g_misc_troop_ratio_bar_and_kill_count", 1), #kill count
+          # (overlay_set_text, "$g_presentation_obj_18", "@Kill count"),
+        # (else_try),
+          # (eq, "$g_misc_troop_ratio_bar_and_kill_count", 2),  #troop ratio bar
+          # (overlay_set_text, "$g_presentation_obj_18", "@Troop ratio bar"),
+        # (else_try),
+          # (eq, "$g_misc_troop_ratio_bar_and_kill_count", 3),  #kill count and troop ratio bar
+          # (overlay_set_text, "$g_presentation_obj_18", "@Both"),
+        # (else_try),
+          # (overlay_set_text, "$g_presentation_obj_24", "@Oy! we have a problem!"),
+        # (try_end),
+        # (store_sub, reg1, 690, ":value_difference"),
+        # (position_set_y, pos1, reg1),
+        # (overlay_set_position, "$g_presentation_obj_18", pos1),
+        # (overlay_set_val, "$g_presentation_obj_18", "$g_misc_troop_ratio_bar_and_kill_count"),
+
+		########### NEW v3.5 - report shot
+        # (create_check_box_overlay, "$g_presentation_obj_30", "mesh_checkbox_off", "mesh_checkbox_on"),
+        # (val_sub, reg1, ":value_difference"),
+        # (position_set_y, pos1, reg1),
+        # (overlay_set_position, "$g_presentation_obj_30", pos1),
+        # (overlay_set_val, "$g_presentation_obj_30", "$g_report_shot"),
+        ######################
+
+
+########################### RESET
+        (create_game_button_overlay, "$g_presentation_obj_32", "@Reset"),
+        (position_set_x, pos1, 500),
+        (position_set_y, pos1, 25),
+        (overlay_set_position, "$g_presentation_obj_32", pos1),
+
+
+
+######################################### DONE
+        (create_game_button_overlay, "$g_presentation_obj_33", "@Done"),
+        (position_set_x, pos1, 900),
+        (position_set_y, pos1, 25),
+        (overlay_set_position, "$g_presentation_obj_33", pos1),
+
+      ]),
+
+    (ti_on_presentation_event_state_change,
+      [
+        (store_trigger_param_1, ":object"),
+        (store_trigger_param_2, ":value"),
+
+        (try_begin),
+          (eq, ":object", "$g_presentation_obj_1"),
+          (assign, "$g_cstm_proficiency_points_per_level", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_2"),
+          (assign, "$g_cstm_proficiency_per_wm", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_3"),
+          (assign, "$g_cstm_proficiency_per_agility", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_4"),
+          (assign, "$g_cstm_skill_points_start", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_5"),
+          (assign, "$g_cstm_budget_per_level", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_6"),
+          (assign, "$g_cstm_attribute_points_start", ":value"),
+
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_32"),
+          ############# resets everything to default values
+          (assign, "$g_cstm_proficiency_points_per_level", 20),
+          (assign, "$g_cstm_proficiency_per_wm", 15),
+          (assign, "$g_cstm_proficiency_per_agility", 10), 
+          (assign, "$g_cstm_skill_points_start", 1),   
+          (assign, "$g_cstm_budget_per_level", 900),
+          (assign, "$g_cstm_attribute_points_start", 20),
+          (presentation_set_duration, 0),
+
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_33"),
+          (presentation_set_duration, 0),
+        (try_end),
+      ]),
+    ]),
+##############################################################################
+
+
+
+
+
 
 
 

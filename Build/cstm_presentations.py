@@ -247,7 +247,10 @@ new_presentations = [
             (troop_get_slot, ":dummy", "$cstm_troop_being_customised", cstm_slot_troop_dummy),
             
             (store_character_level, ":troop_level", "$cstm_troop_being_customised"),
-            (troop_get_slot, "$cstm_total_funds", "trp_cstm_inventory_values", ":troop_level"),
+            # (troop_get_slot, "$cstm_total_funds", "trp_cstm_inventory_values", ":troop_level"),
+			############## NEW v3.8 - 
+            (store_mul, "$cstm_total_funds", ":troop_level", "$g_cstm_budget_per_level"),
+            ############################
             
             ## TROOP IMAGE
             (call_script, "script_cstm_troop_copy_inventory", "$cstm_presentation_troop", ":dummy"),

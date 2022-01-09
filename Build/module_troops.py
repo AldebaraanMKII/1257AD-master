@@ -36158,7 +36158,8 @@ troops = [
 
     itm_linen_tunic,
     ],
-      foot_attrib_3,footman_wp,footman_skills,nord_face_young_1, nord_face_old_2
+      # foot_attrib_3,footman_wp,footman_skills,nord_face_young_1, nord_face_old_2
+      foot_attrib_3,sea_raider_wp,footman_skills,nord_face_young_1, nord_face_old_2 ######### NEW v3.8
   ],
 
 
@@ -36217,7 +36218,8 @@ troops = [
     itm_wrapping_boots,
 
     ],
-    foot_attrib_4, swords_regulars_wp, swords_regulars_skills, nord_face_young_1, nord_face_old_2
+    # foot_attrib_4, swords_regulars_wp, swords_regulars_skills, nord_face_young_1, nord_face_old_2
+    foot_attrib_4, sea_raider_veteran_wp, swords_regulars_skills, nord_face_young_1, nord_face_old_2  ##### NEW v3.8
   ],
 
 
