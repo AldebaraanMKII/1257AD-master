@@ -4887,6 +4887,8 @@ dialogs = [
         (store_repeat_object, ":faction_no"),
         (is_between, ":faction_no", npc_kingdoms_begin, npc_kingdoms_end),
         
+        (str_clear, s10),
+        (str_clear, s11),
         ##diplomacy start+ Required if the player can be ruler or co-ruler of another faction
         (neg|faction_slot_eq, ":faction_no", slot_faction_leader, "trp_player"),
         (neq, ":faction_no", "$players_kingdom"),

@@ -23695,7 +23695,7 @@ troops = [
   ["gaelic_village_footman",
      "Ceithernach Pedes",
      "Ceithernach Pedite",
-    tf_guarantee_armor | tf_guarantee_shield,
+    tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_war_darts,
@@ -23744,7 +23744,7 @@ troops = [
   ["gaelic_infantry_1",
      "Ceithern Tigh Pedes",
      "Ceithern Tigh Pedites",
-    tf_guarantee_shield | tf_guarantee_armor ,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_raf_one_handed_axe_a,
@@ -23883,7 +23883,7 @@ troops = [
   ["gaelic_spearman_1",
      "Ceithern Tigh Hastatus",
      "Ceithern Tigh Hastati",
-    tf_guarantee_armor | tf_guarantee_shield,
+    tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_javelin,
@@ -23931,7 +23931,7 @@ troops = [
   ["gaelic_spearman_2",
      "Cliathairse Hastatus",
      "Cliathairse Hastati",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_gloves,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_gloves | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_throwing_spears,
@@ -23981,7 +23981,7 @@ troops = [
   ["gaelic_archer_1",
      "Ceithernach Boghadair",
      "Ceithernach Boghadair",
-    tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_ranged,
+    tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_ranged | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_arrows,
@@ -24009,7 +24009,7 @@ troops = [
   ["gaelic_archer_2",
      "Ceithern Tigh Boghadair",
      "Ceithern Tigh Boghadair",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_barbed_arrows,
@@ -24054,7 +24054,7 @@ troops = [
   ["gaelic_light_cavalry",
      "Sgiathadair Ritire",
      "Sgiathadairi Ritire",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_javelin,

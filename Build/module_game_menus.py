@@ -30184,7 +30184,7 @@ game_menus = [ #
     (str_store_string, s12, ":offset"),
 
     ],
-
+######################################
     [
       ("change_culture_finnish",
       [
@@ -30266,7 +30266,7 @@ game_menus = [ #
       [
         (call_script, "script_update_fief_culture", "$current_town", "fac_culture_balkan"),
         (troop_remove_gold, "trp_player", reg15),
-        (display_message, "@Fief culture changed to Balkanese.", 0x0000ff),
+        (display_message, "@Fief culture changed to Balkan.", 0x0000ff),
       ]),
 
       
@@ -30282,8 +30282,91 @@ game_menus = [ #
         (troop_remove_gold, "trp_player", reg15),
         (display_message, "@Fief culture changed to Rus.", 0x0000ff),
       ]),
-
+##################################
+################ NEW v3.9
+     ("change_culture_go_back_dot",[], "Next page.",
+     [
+       (jump_to_menu, "mnu_ee_change_culture_2"), 
+     ]),
+##################################
       
+     ("change_culture_go_back_dot",[], "Go back.",
+     [
+       (assign, reg15, 0),
+       (try_begin),
+         (this_or_next|party_slot_eq, "$current_town", slot_party_type, spt_town),
+         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+           # (jump_to_menu, "mnu_town"),
+           (jump_to_menu, "mnu_ee_center_manage"),  #### NEW v2.4
+       (else_try),
+         (party_slot_eq, "$current_town", slot_party_type, spt_village),
+           (jump_to_menu, "mnu_village"),
+       (try_end),
+     ]),
+
+    ],
+  ),
+####################################################
+
+
+
+
+
+################################ NEW v3.9
+   ("ee_change_culture_2",0,
+    "Here you can change this fief's culture to one that you have familiarity of. ^ It costs {reg15} coins to apply the effect. ^ Your faction culture: {s11} ^ Current fief culture: {s12}",
+    "none",
+    [
+    (try_begin),
+      (party_slot_eq, "$current_town",slot_party_type, spt_castle),
+        (assign, ":cost_orig", 7000),
+    (else_try),
+      (party_slot_eq, "$current_town",slot_party_type, spt_town),
+          (assign, ":cost_orig", 10000),
+    (else_try),
+      (party_slot_eq, "$current_town",slot_party_type, spt_village),
+          (assign, ":cost_orig", 4000),
+    (try_end),
+    
+    (assign, ":cost", ":cost_orig"),
+
+    (try_begin),
+      (call_script, "script_get_max_skill_of_player_party", "skl_trade"),
+      (assign, ":max_skill", reg0),
+      # (assign, ":max_skill_owner", reg1),
+      (store_mul, ":cost_reduction_percent", ":max_skill", 3),
+      (assign, ":cost_temp", ":cost_orig"),
+      (val_div, ":cost_temp", 100),
+      (val_mul, ":cost_temp", ":cost_reduction_percent"),
+      (val_sub, ":cost", ":cost_temp"),
+    (try_end),
+    
+    (try_begin),
+      (call_script, "script_get_max_skill_of_player_party", "skl_trainer"),
+      (assign, ":max_skill", reg0),
+      # (assign, ":max_skill_owner", reg1),
+      (store_mul, ":cost_reduction_percent", ":max_skill", 3),
+      (assign, ":cost_temp", ":cost_orig"),
+      (val_div, ":cost_temp", 100),
+      (val_mul, ":cost_temp", ":cost_reduction_percent"),
+      (val_sub, ":cost", ":cost_temp"),
+    (try_end),
+    (assign, reg15, ":cost"),
+
+    
+    (store_sub, ":offset", "$g_player_culture", cultures_begin),
+    (val_add, ":offset", "str_culture_1_adjective"),
+    (str_store_string, s11, ":offset"),
+          
+    (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+    (store_sub, ":offset", ":cur_center_culture", cultures_begin),
+    (val_add, ":offset", "str_culture_1_adjective"),
+    (str_store_string, s12, ":offset"),
+
+    ],
+
+    [
+##################################
       ("change_culture_nordic",
       [
         (eq, "$g_player_know_culture_nordic", 1),
@@ -30380,8 +30463,104 @@ game_menus = [ #
         (troop_remove_gold, "trp_player", reg15),
         (display_message, "@Fief culture changed to Italian.", 0x0000ff),
       ]),
-
+	  
+      ("change_culture_player",
+      [
+        (eq, "$g_player_know_culture_player", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_player"),
+      ],
+      "Change it to Player Culture.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_player"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to Player Culture.", 0x0000ff),
+      ]),
+##################################
+     ("change_culture_next_dot",[], "Next page.",
+     [
+       (jump_to_menu, "mnu_ee_change_culture_3"), 
+     ]),
+	 
+     ("change_culture_previous_dot",[], "Previous page.",
+     [
+       (jump_to_menu, "mnu_change_culture"), 
+     ]),
+##################################
       
+     ("change_culture_go_back_dot",[], "Go back.",
+     [
+       (assign, reg15, 0),
+       (try_begin),
+         (this_or_next|party_slot_eq, "$current_town", slot_party_type, spt_town),
+         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+           # (jump_to_menu, "mnu_town"),
+           (jump_to_menu, "mnu_ee_center_manage"),  #### NEW v2.4
+       (else_try),
+         (party_slot_eq, "$current_town", slot_party_type, spt_village),
+           (jump_to_menu, "mnu_village"),
+       (try_end),
+     ]),
+
+    ],
+  ),
+###################################################
+
+################################ 
+   ("ee_change_culture_3",0,
+    "Here you can change this fief's culture to one that you have familiarity of. ^ It costs {reg15} coins to apply the effect. ^ Your faction culture: {s11} ^ Current fief culture: {s12}",
+    "none",
+    [
+    (try_begin),
+      (party_slot_eq, "$current_town",slot_party_type, spt_castle),
+        (assign, ":cost_orig", 7000),
+    (else_try),
+      (party_slot_eq, "$current_town",slot_party_type, spt_town),
+          (assign, ":cost_orig", 10000),
+    (else_try),
+      (party_slot_eq, "$current_town",slot_party_type, spt_village),
+          (assign, ":cost_orig", 4000),
+    (try_end),
+    
+    (assign, ":cost", ":cost_orig"),
+
+    (try_begin),
+      (call_script, "script_get_max_skill_of_player_party", "skl_trade"),
+      (assign, ":max_skill", reg0),
+      # (assign, ":max_skill_owner", reg1),
+      (store_mul, ":cost_reduction_percent", ":max_skill", 3),
+      (assign, ":cost_temp", ":cost_orig"),
+      (val_div, ":cost_temp", 100),
+      (val_mul, ":cost_temp", ":cost_reduction_percent"),
+      (val_sub, ":cost", ":cost_temp"),
+    (try_end),
+    
+    (try_begin),
+      (call_script, "script_get_max_skill_of_player_party", "skl_trainer"),
+      (assign, ":max_skill", reg0),
+      # (assign, ":max_skill_owner", reg1),
+      (store_mul, ":cost_reduction_percent", ":max_skill", 3),
+      (assign, ":cost_temp", ":cost_orig"),
+      (val_div, ":cost_temp", 100),
+      (val_mul, ":cost_temp", ":cost_reduction_percent"),
+      (val_sub, ":cost", ":cost_temp"),
+    (try_end),
+    (assign, reg15, ":cost"),
+
+    
+    (store_sub, ":offset", "$g_player_culture", cultures_begin),
+    (val_add, ":offset", "str_culture_1_adjective"),
+    (str_store_string, s11, ":offset"),
+          
+    (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+    (store_sub, ":offset", ":cur_center_culture", cultures_begin),
+    (val_add, ":offset", "str_culture_1_adjective"),
+    (str_store_string, s12, ":offset"),
+
+    ],
+
+    [
+##################################
       ("change_culture_andalus",
       [
         (eq, "$g_player_know_culture_andalus", 1),
@@ -30478,8 +30657,106 @@ game_menus = [ #
         (troop_remove_gold, "trp_player", reg15),
         (display_message, "@Fief culture changed to Templar.", 0x0000ff),
       ]),
-
       
+      ("change_culture_cuman",
+      [
+        (eq, "$g_player_know_culture_cuman", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_cuman"),
+      ],
+      "Change it to Cuman.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_cuman"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to Cuman.", 0x0000ff),
+      ]),
+##################################
+     ("change_culture_next_dot",[], "Next page.",
+     [
+       (jump_to_menu, "mnu_ee_change_culture_4"), 
+     ]),
+	 
+     ("change_culture_previous_dot",[], "Previous page.",
+     [
+       (jump_to_menu, "mnu_ee_change_culture_2"), 
+     ]),
+##################################
+     ("change_culture_go_back_dot",[], "Go back.",
+     [
+       (assign, reg15, 0),
+       (try_begin),
+         (this_or_next|party_slot_eq, "$current_town", slot_party_type, spt_town),
+         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+           # (jump_to_menu, "mnu_town"),
+           (jump_to_menu, "mnu_ee_center_manage"),  #### NEW v2.4
+       (else_try),
+         (party_slot_eq, "$current_town", slot_party_type, spt_village),
+           (jump_to_menu, "mnu_village"),
+       (try_end),
+     ]),
+    ],
+  ),
+####################################################
+####################################################
+####################################################
+####################################################
+####################################################
+
+################################ 
+   ("ee_change_culture_4",0,
+    "Here you can change this fief's culture to one that you have familiarity of. ^ It costs {reg15} coins to apply the effect. ^ Your faction culture: {s11} ^ Current fief culture: {s12}",
+    "none",
+    [
+    (try_begin),
+      (party_slot_eq, "$current_town",slot_party_type, spt_castle),
+        (assign, ":cost_orig", 7000),
+    (else_try),
+      (party_slot_eq, "$current_town",slot_party_type, spt_town),
+          (assign, ":cost_orig", 10000),
+    (else_try),
+      (party_slot_eq, "$current_town",slot_party_type, spt_village),
+          (assign, ":cost_orig", 4000),
+    (try_end),
+    
+    (assign, ":cost", ":cost_orig"),
+
+    (try_begin),
+      (call_script, "script_get_max_skill_of_player_party", "skl_trade"),
+      (assign, ":max_skill", reg0),
+      # (assign, ":max_skill_owner", reg1),
+      (store_mul, ":cost_reduction_percent", ":max_skill", 3),
+      (assign, ":cost_temp", ":cost_orig"),
+      (val_div, ":cost_temp", 100),
+      (val_mul, ":cost_temp", ":cost_reduction_percent"),
+      (val_sub, ":cost", ":cost_temp"),
+    (try_end),
+    
+    (try_begin),
+      (call_script, "script_get_max_skill_of_player_party", "skl_trainer"),
+      (assign, ":max_skill", reg0),
+      # (assign, ":max_skill_owner", reg1),
+      (store_mul, ":cost_reduction_percent", ":max_skill", 3),
+      (assign, ":cost_temp", ":cost_orig"),
+      (val_div, ":cost_temp", 100),
+      (val_mul, ":cost_temp", ":cost_reduction_percent"),
+      (val_sub, ":cost", ":cost_temp"),
+    (try_end),
+    (assign, reg15, ":cost"),
+
+    
+    (store_sub, ":offset", "$g_player_culture", cultures_begin),
+    (val_add, ":offset", "str_culture_1_adjective"),
+    (str_store_string, s11, ":offset"),
+          
+    (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+    (store_sub, ":offset", ":cur_center_culture", cultures_begin),
+    (val_add, ":offset", "str_culture_1_adjective"),
+    (str_store_string, s12, ":offset"),
+
+    ],
+
+    [
+##################################
       ("change_culture_hospitaller",
       [
         (eq, "$g_player_know_culture_hospitaller", 1),
@@ -30548,8 +30825,7 @@ game_menus = [ #
         (troop_remove_gold, "trp_player", reg15),
         (display_message, "@Fief culture changed to Jerusalem.", 0x0000ff),
       ]),
-
-################# NEW v3.3
+	  
       ("change_culture_crusader",
       [
         (eq, "$g_player_know_culture_crusader", 1),
@@ -30562,36 +30838,17 @@ game_menus = [ #
         (troop_remove_gold, "trp_player", reg15),
         (display_message, "@Fief culture changed to Crusader.", 0x0000ff),
       ]),
-
-      
-      ("change_culture_cuman",
-      [
-        (eq, "$g_player_know_culture_cuman", 1),
-        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
-        (neq, ":cur_center_culture", "fac_culture_cuman"),
-      ],
-      "Change it to Cuman.",
-      [
-        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_cuman"),
-        (troop_remove_gold, "trp_player", reg15),
-        (display_message, "@Fief culture changed to Cuman.", 0x0000ff),
-      ]),
 ##################################
-      
-      ("change_culture_player",
-      [
-        (eq, "$g_player_know_culture_player", 1),
-        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
-        (neq, ":cur_center_culture", "fac_culture_player"),
-      ],
-      "Change it to Player Culture.",
-      [
-        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_player"),
-        (troop_remove_gold, "trp_player", reg15),
-        (display_message, "@Fief culture changed to Player Culture.", 0x0000ff),
-      ]),
-
-      
+     # ("change_culture_next_dot",[], "Next page.",
+     # [
+       # (jump_to_menu, "mnu_ee_change_culture_5"), 
+     # ]),
+	 
+     ("change_culture_previous_dot",[], "Previous page.",
+     [
+       (jump_to_menu, "mnu_ee_change_culture_3"), 
+     ]),
+##################################
      ("change_culture_go_back_dot",[], "Go back.",
      [
        (assign, reg15, 0),
@@ -30605,9 +30862,11 @@ game_menus = [ #
            (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
-
     ],
   ),
+####################################################
+####################################################
+####################################################
 ####################################################
 
 
