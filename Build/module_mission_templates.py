@@ -15204,6 +15204,17 @@ mission_templates = [
         (try_end),
        ]),
 
+	############## NEW v3.9 - 
+    spearwall_trigger_1,
+    spearwall_trigger_2,
+    spearwall_trigger_3,
+    spearwall_trigger_4,
+    spearwall_trigger_5,
+    spearwall_trigger_6,
+    spearwall_trigger_7,
+    spearwall_trigger_8,
+    spearwall_trigger_9,
+    ############################
 ##      (0, 0, ti_once,
 ##       [
 ##         (key_clicked, key_numpad_7),
@@ -15211,7 +15222,8 @@ mission_templates = [
 ##        (get_player_agent_no, ":player_agent"),
 ##        (mission_cam_set_target_agent, ":player_agent", 1),
 ##        (mission_cam_set_animation, "anim_test_cam"),], []),
-    ],
+    # ],
+    ] + sp_shield_bash_triggers,  ###### NEW v3.9
   ),
 #######################################################################################
 

@@ -11610,12 +11610,11 @@ presentations = [
         (try_end),
         ]),
      ]),
-
-  ("budget_report", 0, mesh_load_window,
+ ("budget_report", 0, mesh_load_window,
    [(ti_on_presentation_load,
-     [(presentation_set_duration, 999999),
+     [
+	  (presentation_set_duration, 999999),
       (set_fixed_point_multiplier, 1000),
-
       (create_mesh_overlay, reg1, "mesh_pic_payment"),
       (position_set_x, pos1, 800),
       (position_set_y, pos1, 800),
@@ -11623,7 +11622,6 @@ presentations = [
       (position_set_x, pos1, 170),
       (position_set_y, pos1, 0),
       (overlay_set_position, reg1, pos1),
-
       (create_text_overlay, reg1, "str_weekly_budget", tf_center_justify),
       (position_set_x, pos1, 1500),
       (position_set_y, pos1, 1500),
@@ -11640,25 +11638,19 @@ presentations = [
       (position_set_y, pos1, 500),
       (overlay_set_area_size, "$g_presentation_obj_bugdet_report_container", pos1),
       (set_container_overlay, "$g_presentation_obj_bugdet_report_container"),
-
-      # (game_get_reduce_campaign_ai, ":reduce_campaign_ai"),
       (try_begin),
-        #(eq, ":reduce_campaign_ai", 0), #hard
         (eq, "$tom_difficulty_fief", 0), #hard
         (assign, ":num_centers_needed_for_efficiency_loss", 2),
         (assign, ":tax_efficiency_loss_ratio_per_center", 5),
       (else_try),
-        #(eq, ":reduce_campaign_ai", 1), #medium
         (eq, "$tom_difficulty_fief", 1), #medium
         (assign, ":num_centers_needed_for_efficiency_loss", 4),
         (assign, ":tax_efficiency_loss_ratio_per_center", 4),
       (else_try),
-        # (eq, ":reduce_campaign_ai", 2), #easy
         (eq, "$tom_difficulty_fief", 2), #easy
         (assign, ":num_centers_needed_for_efficiency_loss", 6),
         (assign, ":tax_efficiency_loss_ratio_per_center", 3),
       (try_end),
-
       (assign, ":num_lines", 0),
       (assign, ":num_owned_center_values_for_tax_efficiency", 0),
       (assign, ":all_centers_accumulated_total", 0),
@@ -11668,7 +11660,6 @@ presentations = [
           (party_slot_ge, ":center_no", slot_center_player_enterprise, 1),
           (val_add, ":num_lines", 1),
         (try_end),
-
         (party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
         (val_add, ":num_lines", 1),
         (val_add, ":num_owned_center_values_for_tax_efficiency", 1),
@@ -11680,15 +11671,12 @@ presentations = [
       (try_end),
       (try_begin),
         (gt, "$players_kingdom", 0),
-        # (neq, "$players_kingdom", "fac_player_supporters_faction"),
-        # (neq, "$players_kingdom", "fac_player_faction"),
         (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
         (eq, "$player_has_homage", 0),
         (val_add, ":num_lines", 1),
       (try_end),
       (try_begin),
         (gt, ":num_owned_center_values_for_tax_efficiency", ":num_centers_needed_for_efficiency_loss"),
-      #gt accumulated total is ignored
         (val_add, ":num_lines", 1),
       (try_end),
       (try_for_parties, ":party_no"),
@@ -11703,15 +11691,11 @@ presentations = [
           (party_slot_eq, ":party_no", slot_party_type, spt_castle),
           (neg|party_slot_ge, ":party_no", slot_town_lord, 1), #unassigned
           (store_faction_of_party, ":center_faction", ":party_no"),
-          # (eq, ":center_faction", "fac_player_supporters_faction"),
           (eq, ":center_faction", "$players_kingdom"), ########### NEW v3.3
-          # (faction_slot_eq, "fac_player_supporters_faction", slot_faction_leader, "trp_player"),
           (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
           (assign, ":garrison_troop", 1),
         (try_end),
-
         (this_or_next|eq, ":party_no", "p_main_party"),
-        ##diplomacy begin
         (assign, ":patrol_troop", 0), ############ NEW v3.4
         (try_begin),
           (party_slot_eq, ":party_no",slot_party_type, spt_patrol),
@@ -11721,7 +11705,6 @@ presentations = [
           (assign, ":patrol_troop", 1),
         (try_end),
         (this_or_next|eq, ":patrol_troop", 1),
-        ##diplomacy end
         (eq, ":garrison_troop", 1),
         (val_add, ":num_lines", 1), #include empty towns/castles
       (try_end),
@@ -11729,12 +11712,7 @@ presentations = [
         (gt, "$g_player_debt_to_party_members", 0),
         (val_add, ":num_lines", 2), #include new debt line
       (try_end),
-
-      # rafi
       (val_add, ":num_lines", 1),
-      # end rafi
-
-      ##diplomacy begin
       (try_begin),
         (this_or_next|gt, "$g_player_minister", 0),
         (this_or_next|troop_slot_ge, "trp_player", slot_troop_spouse, 0),
@@ -11742,50 +11720,31 @@ presentations = [
         (gt, "$g_player_constable", 0),
         (val_add, ":num_lines", 1), # staff salary
       (try_end),
-
       (try_begin),
         (gt, "$g_player_chamberlain", 0),
         (val_add, ":num_lines", 2), #earlier cash, new cash
       (try_end),
-      ##diplomacy end
       (val_add, ":num_lines", 3),
       (store_mul, ":cur_y", 27, ":num_lines"),
       (assign, ":net_change", 0), #this is the amount added
-
-
-      # end rafi
+##################### ENTERPRISE
       (try_for_range, ":center_no", centers_begin, centers_end),
-
-
-######################## Enterprise
         (try_begin),
         (party_get_slot, ":enterprise_output", ":center_no", slot_center_player_enterprise),
         (gt, ":enterprise_output", 1),
         (neg|party_slot_ge, ":center_no", slot_center_player_enterprise_days_until_complete, 1),
-
         (str_store_party_name, s0, ":center_no"),
-
-        #(call_script, "script_process_player_enterprise", ":enterprise_output", ":center_no"),
         (call_script, "script_tom_process_player_enterprise", ":enterprise_output", ":center_no", 0),
-
-
           (assign, ":net_profit", reg0),
           (assign, ":price_of_single_output", reg4),
           (assign, ":price_of_single_input", reg5),
           (assign, ":price_of_secondary_input", reg10),
-
           (store_sub, ":town_order", ":center_no", towns_begin),
           (store_add, ":craftsman_troop", ":town_order", "trp_town_1_master_craftsman"),
-
           (item_get_slot, ":outputs_added_to_market", ":enterprise_output", slot_item_output_per_run),
           (assign, ":outputs_added_to_warehouse", 0),
-
-          #Enterprise impact of outputs
           (try_begin),
-            #output placed in inventory: deduct selling price and add one good
             (party_slot_eq, ":center_no", slot_center_player_enterprise_production_order, 1),
-
-            #Count empty slots
             (assign, ":empty_slots", 0),
             (troop_get_inventory_capacity, ":total_capacity", ":craftsman_troop"),
             (try_for_range, ":capacity_iterator", 0, ":total_capacity"),
@@ -11793,36 +11752,27 @@ presentations = [
                 (lt, ":slot", 1),
                 (val_add, ":empty_slots", 1),
             (try_end),
-
             (assign, ":outputs_added_to_warehouse", ":outputs_added_to_market"),
             (val_min, ":outputs_added_to_warehouse",  ":empty_slots"),
             (gt, ":outputs_added_to_warehouse", 0),
-
             (store_mul, ":cancelled_sales", ":price_of_single_output", ":outputs_added_to_warehouse"),
             (val_sub, ":net_profit", ":cancelled_sales"),
             (val_sub, ":outputs_added_to_market", ":outputs_added_to_warehouse"),
           (try_end),
-
-          #If the transaction is for real, and not just a budget check
           (try_begin),
             (eq, "$g_apply_budget_report_to_gold", 1),
             (troop_add_items, ":craftsman_troop", ":enterprise_output", ":outputs_added_to_warehouse"),
-
-            #Affect prices by outputs added to market
             (store_sub, ":item_slot_no", ":enterprise_output", trade_goods_begin),
             (val_add, ":item_slot_no", slot_town_trade_good_prices_begin),
             (party_get_slot, ":current_index", ":center_no", ":item_slot_no"),
             (store_mul, ":impact_on_price", ":outputs_added_to_market", 15),
             (val_sub, ":current_index", ":impact_on_price"),
             (party_set_slot, ":center_no", ":item_slot_no", ":current_index"),
-
             (gt, "$cheat_mode", 0),
             (str_store_troop_name, s3, ":craftsman_troop"),
             (assign, reg3, ":outputs_added_to_warehouse"),
             (display_message, "@{!}DEBUG -- Adding {reg3} items to {s3}"),
           (try_end),
-
-          #Enterprise impact of outputs
           (item_get_slot, ":inputs_taken_from_market", ":enterprise_output", slot_item_input_number),
           (try_begin),
             (item_slot_ge, ":enterprise_output", slot_item_secondary_raw_material, 1),
@@ -11830,33 +11780,20 @@ presentations = [
           (else_try),
             (assign, ":2ary_inputs_taken_from_market", 0),
           (try_end),
-
           (assign, ":inputs_taken_from_warehouse", 0),
           (assign, ":2ary_inputs_taken_from_warehouse", 0),
-
           (try_begin),
-            #input present in inventory: reimburse for input cost and remove one good
             (troop_get_inventory_capacity, ":total_capacity", ":craftsman_troop"),
             (try_for_range, ":capacity_iterator", 0, ":total_capacity"),
                 (troop_get_inventory_slot, ":item_in_slot", ":craftsman_troop", ":capacity_iterator"),
-
                 (lt, ":inputs_taken_from_warehouse", ":inputs_taken_from_market"),
                 (item_slot_eq, ":enterprise_output", slot_item_primary_raw_material, ":item_in_slot"),
-                #(troop_inventory_slot_get_item_amount, ":item_ammo", ":craftsman_troop", ":capacity_iterator"),
-                #(troop_inventory_slot_get_item_max_amount, ":item_max_ammo", ":craftsman_troop", ":capacity_iterator"),
-                #(eq, ":item_ammo", ":item_max_ammo"),
-
                 (val_add, ":inputs_taken_from_warehouse", 1),
             (else_try),
                 (lt, ":2ary_inputs_taken_from_warehouse", ":2ary_inputs_taken_from_market"),
                 (item_slot_eq, ":enterprise_output", slot_item_secondary_raw_material, ":item_in_slot"),
-                #(troop_inventory_slot_get_item_amount, ":item_ammo", ":craftsman_troop", ":capacity_iterator"),
-                #(troop_inventory_slot_get_item_max_amount, ":item_max_ammo", ":craftsman_troop", ":capacity_iterator"),
-                #(eq, ":item_ammo", ":item_max_ammo"),
-
                 (val_add, ":2ary_inputs_taken_from_warehouse", 1),
             (try_end),
-
             (try_begin),
                 (gt, ":inputs_taken_from_warehouse", 0),
                 (val_sub, ":inputs_taken_from_market", ":inputs_taken_from_warehouse"),
@@ -11870,23 +11807,18 @@ presentations = [
                 (val_add, ":net_profit", ":savings_from_warehoused_inputs"),
             (try_end),
           (try_end),
-
-          #If the transaction is for real, and not just a budget check
           (try_begin),
             (eq, "$g_apply_budget_report_to_gold", 1),
             (item_get_slot, ":raw_material", ":enterprise_output", slot_item_primary_raw_material),
             (troop_remove_items, ":craftsman_troop", ":raw_material", ":inputs_taken_from_warehouse"),
             (item_get_slot, ":secondary_raw_material", ":enterprise_output", slot_item_secondary_raw_material),
             (troop_remove_items, ":craftsman_troop", ":secondary_raw_material", ":2ary_inputs_taken_from_warehouse"),
-
-            #Affect prices by intputs added to market
             (store_sub, ":item_slot_no", ":raw_material", trade_goods_begin),
             (val_add, ":item_slot_no", slot_town_trade_good_prices_begin),
             (party_get_slot, ":current_index", ":center_no", ":item_slot_no"),
             (store_mul, ":impact_on_price", ":outputs_added_to_market", 15),
             (val_add, ":current_index", ":impact_on_price"),
             (party_set_slot, ":center_no", ":item_slot_no", ":current_index"),
-
             (try_begin),
                 (gt, ":2ary_inputs_taken_from_market", 0),
                 (store_sub, ":item_slot_no", ":secondary_raw_material", trade_goods_begin),
@@ -11896,10 +11828,8 @@ presentations = [
                 (party_set_slot, ":center_no", ":item_slot_no", ":current_index"),
             (try_end),
           (try_end),
-
           (call_script, "script_get_enterprise_name", ":enterprise_output"),
           (str_store_string, s5, reg0),
-
           (create_text_overlay, reg1, "str_enterprise_s5_at_s0", 0),
           (position_set_x, pos1, 900),
           (position_set_y, pos1, 900),
@@ -11907,19 +11837,16 @@ presentations = [
           (position_set_x, pos1, 25),
           (position_set_y, pos1, ":cur_y"),
           (overlay_set_position, reg1, pos1),
-
           (assign, reg0, ":net_profit"),
-
-          #Enterprise revenue strings
           (try_begin),
-             (store_faction_of_party, ":faction_no", ":center_no"),
+            (store_faction_of_party, ":faction_no", ":center_no"),
             (store_relation, ":relation", ":faction_no", "$players_kingdom"),
-            (lt, ":relation", 0),
-            (assign, reg0, 0),
-            (assign, ":net_profit", 0),
-
-            (create_text_overlay, reg1, "str_under_sequestration", tf_right_align|tf_single_line),
-            (overlay_set_color, reg1, 0xFF0000),
+            # (lt, ":relation", 0),
+            (lt, ":relation", -5), ############# NEW v3.9
+              (assign, reg0, 0),
+              (assign, ":net_profit", 0),
+              (create_text_overlay, reg1, "str_under_sequestration", tf_right_align|tf_single_line),
+              (overlay_set_color, reg1, 0xFF0000),
           (else_try),
             (ge, reg0, 0),
             (create_text_overlay, reg1, "@{!}{reg0}", tf_right_align|tf_single_line),
@@ -11928,10 +11855,9 @@ presentations = [
             (create_text_overlay, reg1, "@{!}{reg0}", tf_right_align|tf_single_line),
             (overlay_set_color, reg1, 0xFF0000),
           (try_end),
-
+############################## RENTS AND TARIFFS
           (val_add, ":all_centers_accumulated_total", ":net_profit"),
           (val_add, ":net_change", ":net_profit"),
-
           (position_set_x, pos1, 900),
           (position_set_y, pos1, 900),
           (overlay_set_size, reg1, pos1),
@@ -11940,18 +11866,14 @@ presentations = [
           (overlay_set_position, reg1, pos1),
           (val_sub, ":cur_y", 27),
         (try_end),
-
-######################### Enterprise ends, taxes begin
         (party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
         (party_get_slot, ":accumulated_rents", ":center_no", slot_center_accumulated_rents),
         (party_get_slot, ":accumulated_tariffs", ":center_no", slot_center_accumulated_tariffs),
-
         (store_add, ":accumulated_total", ":accumulated_rents", ":accumulated_tariffs"),
         (val_add, ":all_centers_accumulated_total", ":accumulated_total"),
         (val_add, ":all_centers_accumulated_taxes_and_rents", ":accumulated_total"),
         (val_add, ":net_change", ":accumulated_total"),
         (str_store_party_name, s0, ":center_no"),
-        ##diplomacy begin
         (try_begin),
           (neg|is_between, ":center_no", castles_begin, castles_end),
           (party_get_slot, ":tax_rate", ":center_no", dplmc_slot_center_taxation),
@@ -11959,11 +11881,8 @@ presentations = [
           (call_script, "script_dplmc_describe_tax_rate_to_s50", ":tax_rate"),
           (str_store_string, s0, "@{s0} ({s50})"),
         (try_end),
-        ##diplomacy end
         (create_text_overlay, reg1, "str_rents_from_s0", 0),
-        ##diplomacy begin
         (str_store_party_name, s0, ":center_no"),
-        ##diplomacy end
         (position_set_x, pos1, 900),
         (position_set_y, pos1, 900),
         (overlay_set_size, reg1, pos1),
@@ -11985,7 +11904,6 @@ presentations = [
         (position_set_y, pos1, ":cur_y"),
         (overlay_set_position, reg1, pos1),
         (val_sub, ":cur_y", 27),
-
         (try_begin),
           (is_between, ":center_no", towns_begin, towns_end),
           (create_text_overlay, reg1, "str_tariffs_from_s0", 0),
@@ -12012,25 +11930,18 @@ presentations = [
           (val_sub, ":cur_y", 27),
         (try_end),
       (try_end),
-
-######################## MERCENARY CONTRACT
+########################### MERCENARY CONTRACT
       (try_begin),
         (gt, "$players_kingdom", 0),
-        # (neq, "$players_kingdom", "fac_player_supporters_faction"),
-        # (neq, "$players_kingdom", "fac_player_faction"),
         (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"), ####### NEW v3.3
         (eq, "$player_has_homage", 0),
         (eq, "$freelancer_state", 0),  ############# NEW v2.9-KOMKE - fix mercenary payment when player is in freelancer
         (eq, "$g_player_cur_role", role_mercenary_captain),  ############# NEW v3.3
         (str_store_faction_name, s0, "$players_kingdom"),
-
-        # rafi
         (store_current_day, ":cur_day"),
         (store_sub, reg25, "$mercenary_service_next_renew_day", ":cur_day"),
         (str_store_string, s25, "str_mercenary_payment_from_s0"),
         (str_store_string, s26, "@{s25} ({reg25} day(s) left):"),
-        # end rafi
-
         (create_text_overlay, reg1, s26, 0),
         (position_set_x, pos1, 900),
         (position_set_y, pos1, 900),
@@ -12038,16 +11949,9 @@ presentations = [
         (position_set_x, pos1, 25),
         (position_set_y, pos1, ":cur_y"),
         (overlay_set_position, reg1, pos1),
-        #(call_script, "script_party_calculate_strength", "p_main_party", 0),
         (call_script, "script_game_get_total_wage"),
         (assign, ":offer_value", reg0),
-        #tom
-       # (val_mul, ":offer_value", 4),
-       # (val_div, ":offer_value", 5),
-       #tom
-       #merc payment - covers the troop payment, and a bonus to the  player
         (val_add, ":offer_value", 750),
-        #(val_mul, ":offer_value", 10), # rafi increase merc payment
         (val_min, ":offer_value", 3000), #tom
         (call_script, "script_round_value", ":offer_value"),
         (val_add, ":net_change", reg0),
@@ -12061,19 +11965,15 @@ presentations = [
         (overlay_set_position, reg1, pos1),
         (val_sub, ":cur_y", 27),
       (try_end),
-########################
-
+########################### TAX INNEFICIENCY
       (try_begin),
         (gt, ":num_owned_center_values_for_tax_efficiency", ":num_centers_needed_for_efficiency_loss"),
         (gt, ":all_centers_accumulated_total", 0),
         (store_sub, ":ratio_lost", ":num_owned_center_values_for_tax_efficiency", ":num_centers_needed_for_efficiency_loss"),
          (val_mul, ":ratio_lost", ":tax_efficiency_loss_ratio_per_center"),
          (val_min, ":ratio_lost", "$g_misc_max_tax_inneficiency"),
-
-        #(store_mul, ":tax_lost", ":all_centers_accumulated_total", ":ratio_lost"),
         (store_mul, ":tax_lost", ":all_centers_accumulated_taxes_and_rents", ":ratio_lost"),
          (val_div, ":tax_lost", 100),
-        ##diplomacy begin
         (assign, ":percent", 0),
         (try_begin),
           (gt, "$g_player_chamberlain", 0),
@@ -12084,9 +11984,7 @@ presentations = [
         (store_mul, ":percent", ":save", 100),
         (val_div, ":percent", ":tax_lost"),
         (val_sub, ":tax_lost", ":save"),
-         ##diplomacy end
         (val_sub, ":net_change", ":tax_lost"),
-        ##diplomacy begin
         (try_begin),
           (gt, "$g_player_chamberlain", 0),
           (str_store_string, s55, "str_loss_due_to_tax_inefficiency"),
@@ -12094,11 +11992,8 @@ presentations = [
             (str_store_string, s55, "@{s55} (-{reg0}%)"),
           (create_text_overlay, reg1, "@{s55}", 0),
         (else_try),
-        ##diplomacy end
           (create_text_overlay, reg1, "str_loss_due_to_tax_inefficiency", 0),
-        ##diplomacy begin
         (try_end),
-        ##diplomacy end
         (position_set_x, pos1, 25),
         (position_set_y, pos1, ":cur_y"),
         (overlay_set_position, reg1, pos1),
@@ -12138,7 +12033,6 @@ presentations = [
           (party_slot_eq, ":party_no", slot_garrison_control, lord_controled), #tom
           (assign, ":garrison_troop", 1),
         (try_end),
-
         (this_or_next|eq, ":party_no", "p_main_party"),
         (this_or_next|eq, ":party_no", "p_wagon_train"), #### NEW v1.0 - wagon trains
         (this_or_next|party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),  ########## NEW v3.3 - fixed patrols not appearing in budget report
@@ -12254,7 +12148,7 @@ presentations = [
         (overlay_set_position, reg1, pos1),
         (val_sub, ":cur_y", 27),
       (try_end),
-
+########################### STAFF SALARY
       (try_begin),
         (gt, "$g_player_debt_to_party_members", 0),
         (val_sub, ":net_change", "$g_player_debt_to_party_members"),
@@ -12280,25 +12174,29 @@ presentations = [
       (assign, ":staff_salary", 0),
       (try_begin),
         (gt, "$g_player_minister", 0),
-        (val_add, ":staff_salary", 15),
+        # (val_add, ":staff_salary", 15),
+        (val_add, ":staff_salary", 60), ########### NEW v3.9
       (try_end),
       (try_begin),
         (troop_slot_ge, "trp_player", slot_troop_spouse, 0),
-        (val_add, ":staff_salary", 10),
+        # (val_add, ":staff_salary", 10),
+        (val_add, ":staff_salary", 40), ########### NEW v3.9
       (try_end),
       (try_begin),
         (gt, "$g_player_chamberlain", 0),
-        (val_add, ":staff_salary", 15),
+        # (val_add, ":staff_salary", 15),
+        (val_add, ":staff_salary", 60), ########### NEW v3.9
       (try_end),
       (try_begin),
         (gt, "$g_player_constable", 0),
-        (val_add, ":staff_salary", 15),
+        # (val_add, ":staff_salary", 15),
+        (val_add, ":staff_salary", 60), ########### NEW v3.9
       (try_end),
       (try_begin),
         (gt, "$g_player_chancellor", 0),
-        (val_add, ":staff_salary", 20),
+        # (val_add, ":staff_salary", 20),
+        (val_add, ":staff_salary", 80), ########### NEW v3.9
       (try_end),
-
       (try_begin),
         (gt, ":staff_salary", 0),
         (val_sub, ":net_change", ":staff_salary"),
@@ -12320,6 +12218,7 @@ presentations = [
         (overlay_set_position, reg1, pos1),
         (val_sub, ":cur_y", 27),
       (try_end),
+######################################################
       ##diplomacy end
       (create_mesh_overlay, reg1, "mesh_white_plane"),
       (overlay_set_color, reg1, 0x000000),
@@ -12394,7 +12293,6 @@ presentations = [
         (try_begin),
           (gt, "$g_player_chamberlain", 0),
           (store_troop_gold, ":player_inv_wealth", "trp_player"),
-
           (try_begin), #drawing debts from personal money
             (ge, ":player_inv_wealth", ":player_new_debt_to_party_members"),
             (assign, ":cash_to_pay", ":player_new_debt_to_party_members"),
@@ -12403,7 +12301,6 @@ presentations = [
             (assign, ":cash_to_pay", ":player_inv_wealth"),
             (val_sub, ":player_new_debt_to_party_members", ":player_inv_wealth"),
           (try_end),
-
           (try_begin),
             (eq, "$g_apply_budget_report_to_gold", 1),
             (troop_remove_gold, "trp_player", ":cash_to_pay"),
@@ -12429,16 +12326,13 @@ presentations = [
       (position_set_y, pos1, ":cur_y"),
       (overlay_set_position, reg1, pos1),
       (val_sub, ":cur_y", 27),
-
       # rafi
       (store_current_hours, ":time_now"),
       (store_add, ":new_payday", "$g_last_payday", 168),
       (store_sub, ":hours_left", ":new_payday", ":time_now"),
-
       (store_div, reg25, ":hours_left", 24),
       (store_mul, ":change", reg25, 24),
       (store_sub, reg24, ":hours_left", ":change"),
-
       (create_text_overlay, reg1, "@Next Payday", 0),
       (position_set_x, pos1, 900),
       (position_set_y, pos1, 900),
@@ -12446,7 +12340,6 @@ presentations = [
       (position_set_x, pos1, 25),
       (position_set_y, pos1, ":cur_y"),
       (overlay_set_position, reg1, pos1),
-
       (create_text_overlay, reg1, "@{!}{reg25} days(s) {reg24} hour(s)", tf_right_align|tf_single_line),
       (position_set_x, pos1, 900),
       (position_set_y, pos1, 900),
@@ -12456,7 +12349,6 @@ presentations = [
       (overlay_set_position, reg1, pos1),
       (val_sub, ":cur_y", 27),
       # end rafi
-
       ##diplomacy begin
       (try_begin),
         (gt, "$g_player_chamberlain", 0),
@@ -12477,7 +12369,6 @@ presentations = [
         (position_set_y, pos1, ":cur_y"),
         (overlay_set_position, reg1, pos1),
         (val_sub, ":cur_y", 27),
-
         (create_text_overlay, reg1, "@New cash:", 0),
         (position_set_x, pos1, 900),
         (position_set_y, pos1, 900),
@@ -12496,7 +12387,6 @@ presentations = [
         (val_sub, ":cur_y", 27),
       (try_end),
       ##diplomacy end
-
       (try_begin),
         (gt, ":player_new_debt_to_party_members", 0),
         (create_text_overlay, reg1, "str_new_debts", 0),
@@ -12518,14 +12408,11 @@ presentations = [
         (neq, "$g_apply_budget_report_to_gold", 0),
         (call_script, "script_objectionable_action", tmt_egalitarian, "str_men_unpaid"),
       (try_end),
-
       (set_container_overlay, -1),
-
       (create_button_overlay, "$g_presentation_obj_budget_report_1", "@Continue..."),
       (position_set_x, pos1, 225),
       (position_set_y, pos1, 60),
       (overlay_set_position, "$g_presentation_obj_budget_report_1", pos1),
-
       (try_begin),
         (eq, "$g_apply_budget_report_to_gold", 1),
         (assign, "$g_player_debt_to_party_members", ":player_new_debt_to_party_members"),
@@ -12540,19 +12427,14 @@ presentations = [
           (troop_remove_gold, "trp_player", ":player_wealth_dif"),
           ##diplomacy begin
           (try_end),
-          ##diplomacy end
         (else_try),
           (val_mul, ":player_wealth_dif", -1),
-          ##diplomacy begin
           (try_begin),
             (gt, "$g_player_chamberlain", 0),
             (call_script, "script_dplmc_pay_into_treasury", ":player_wealth_dif"),
           (else_try),
-          ##diplomacy end
           (troop_add_gold, "trp_player", ":player_wealth_dif"),
-          ##diplomacy begin
           (try_end),
-          ##diplomacy end
         (try_end),
         (try_for_range, ":center_no", centers_begin, centers_end),
           (party_slot_eq, ":center_no", slot_town_lord, "trp_player"),

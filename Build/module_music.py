@@ -130,17 +130,17 @@ tracks = [
   ("wedding", "wedding.ogg", mtf_persist_until_finished, 0),
   ("coronation", "coronation.ogg", mtf_persist_until_finished, 0),
   
-  ("ambient_1", "ambient_1.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_2", "ambient_2.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_3", "ambient_3.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_4", "ambient_4.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_5", "ambient_5.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_6", "ambient_6.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_7", "ambient_7.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_8", "ambient_8.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_9", "ambient_9.ogg", mtf_persist_until_finished|mtf_module_track|mtf_culture_all, 0),
-  ("ambient_10", "ambient_10.ogg", mtf_persist_until_finished|mtf_module_track, 0),
-  ("ambient_end", "silence.ogg", mtf_persist_until_finished|mtf_module_track, 0),
+  ("ambient_1", "ambient_1.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_2", "ambient_2.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_3", "ambient_3.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_4", "ambient_4.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_5", "ambient_5.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_6", "ambient_6.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_7", "ambient_7.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_8", "ambient_8.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_9", "ambient_9.ogg", mtf_module_track|mtf_culture_all, 0),
+  ("ambient_10", "ambient_10.ogg", mtf_module_track, 0),
+  ("ambient_end", "silence.ogg", mtf_module_track, 0),
   
   
 ######################### NEW v2.1 MUSIC
@@ -166,7 +166,6 @@ tracks = [
  
   ("NewMap1", "Medieval II total war - Time And Again.mp3", mtf_module_track|mtf_sit_travel|mtf_culture_all, 0),
   ("NewMap2", "(Euro_Mobilize_4)_New_Arc_Ascending.mp3", mtf_module_track|mtf_sit_travel|mtf_culture_all, 0),
-
 ###########################################################################
   
   

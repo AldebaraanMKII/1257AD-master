@@ -31130,6 +31130,43 @@ game_menus = [ #
      ]
   ),
 ####################################################
+######################## NEW v3.9
+   ("lord_executed_by_player_field",0,
+    "By your orders, {s1} was {s2}.",
+    "none",
+    [
+      (str_clear, s1),
+      (str_clear, s2),
+      
+      (str_store_troop_name, s1, "$lord_to_execute"),
+      
+      (try_begin),
+       (eq, "$g_method_of_execution", 1),
+         (str_store_string, s2, "@Beheaded"),
+      (else_try),
+       (eq, "$g_method_of_execution", 2),
+         (str_store_string, s2, "@Hanged"),
+      (else_try),
+       (eq, "$g_method_of_execution", 3),
+         (str_store_string, s2, "@Burned alive"),
+      (else_try),
+       (eq, "$g_method_of_execution", 4),
+         (str_store_string, s2, "@Hanged, strangled and quartered"),
+      (try_end),
+      
+      ######## clear globals 
+      # (assign, "$g_execution_scheduled", 0),
+      # (assign, "$lord_to_execute", -1),
+      # (assign, "$g_execution_center", -1),
+      # (assign, "$g_method_of_execution", -1),
+      ],
+    [
+      ("lord_executed_by_player_continue",[], "Continue...",
+       [(change_screen_return),
+        ]),
+     ]
+  ),
+####################################################
 
 
 ######################## NEW v2.1 - execution by player notification - if he escaped before

@@ -199,14 +199,14 @@ simple_triggers = [
   ),
 
   ######Music,
-  (3,
+   # (3,
+   (2, ######### NEW v3.9
    [
- 
-      ####(display_message, "@Executing Simple Trigger 5"),
-   (map_free),         
-      (try_begin),        
-        (call_script, "script_music_set_situation_with_culture", mtf_sit_travel), 
-      (try_end),
+   ####(display_message, "@Executing Simple Trigger 5"),
+     (map_free),         
+     (try_begin),        
+       (call_script, "script_music_set_situation_with_culture", mtf_sit_travel), 
+     (try_end),
    ]),
 
 
@@ -1070,7 +1070,7 @@ simple_triggers = [
  
       ####(display_message, "@Executing Simple Trigger 30"),
 (store_random_in_range, ":controversy_deduction", 1, 3),
- (val_min, ":controversy_deduction", 2),
+ # (val_min, ":controversy_deduction", 3),
  (troop_get_slot, ":controversy", "trp_player", slot_troop_controversy),
  (val_sub, ":controversy", ":controversy_deduction"),
  (val_max, ":controversy", 0),
@@ -3763,7 +3763,8 @@ simple_triggers = [
 	
 	
   ######### Check if a faction is defeated every day
-  (24,
+  # (24,
+  (48, ######### NEW v3.9
    [
  
       ####(display_message, "@Executing Simple Trigger 86"),
@@ -3774,11 +3775,12 @@ simple_triggers = [
     (try_for_parties, ":cur_party"),
       (store_faction_of_party, ":party_faction", ":cur_party"),
       (is_between, ":party_faction", kingdoms_begin, kingdoms_end),
-      (this_or_next|is_between, ":cur_party", centers_begin, centers_end),
-        (party_slot_eq, ":cur_party", slot_party_type, spt_kingdom_hero_party),
-      (faction_get_slot, ":kingdom_num_parties", ":party_faction", slot_faction_number_of_parties),
-      (val_add, ":kingdom_num_parties", 1),
-      (faction_set_slot, ":party_faction", slot_faction_number_of_parties, ":kingdom_num_parties"),
+      # (this_or_next|is_between, ":cur_party", centers_begin, centers_end),
+      # (party_slot_eq, ":cur_party", slot_party_type, spt_kingdom_hero_party),
+      (is_between, ":cur_party", centers_begin, centers_end), ######### NEW v3.9
+        (faction_get_slot, ":kingdom_num_parties", ":party_faction", slot_faction_number_of_parties),
+        (val_add, ":kingdom_num_parties", 1),
+        (faction_set_slot, ":party_faction", slot_faction_number_of_parties, ":kingdom_num_parties"),
     (try_end),
     (try_for_range, ":cur_kingdom", kingdoms_begin, kingdoms_end),
 #####      (try_begin),
@@ -7943,10 +7945,10 @@ simple_triggers = [
 
 
 ############################## NEW v2.1 - Civil War
-(720,   
+(168,   
 [
  
-(gt, "$g_misc_civil_war_chance", 9999999), ######### if disabled don't do anything
+(gt, "$g_misc_civil_war_chance", 0), ######### if disabled don't do anything
  (val_add, "$g_misc_civil_war_hours_passed", 0.3*100), ######### trigger rate x 100 for rounding values
  (try_begin),
    (store_mul, ":rate", "$g_misc_civil_war_rate", 100),  ######### simulates a float number 
@@ -8029,16 +8031,14 @@ simple_triggers = [
 [  
       ####(display_message, "@Executing Simple Trigger 152"),
  (try_for_range, ":cur_faction", kingdoms_begin, kingdoms_end),
-   (try_begin),
-     (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),  ######## is still active
-     (faction_slot_ge, ":cur_faction", slot_faction_rebel_original_faction, 1),  ######## is a rebel faction that hasn't defeated its original
-       (faction_get_slot, ":original_faction", ":cur_faction", slot_faction_rebel_original_faction),
-       (neg|faction_slot_eq, ":original_faction", slot_faction_state, sfs_active),
-         (str_clear, s1),
-         (str_store_faction_name, s1, ":original_faction"),
-         (faction_set_name, ":cur_faction", s1),
-         (faction_set_slot, ":cur_faction", slot_faction_rebel_original_faction, 0),
-   (try_end),
+   (faction_slot_eq, ":cur_faction", slot_faction_state, sfs_active),  ######## is still active
+   (faction_slot_ge, ":cur_faction", slot_faction_rebel_original_faction, 1),  ######## is a rebel faction that hasn't defeated its original
+     (faction_get_slot, ":original_faction", ":cur_faction", slot_faction_rebel_original_faction),
+     (neg|faction_slot_eq, ":original_faction", slot_faction_state, sfs_active),
+       (str_clear, s1),
+       (str_store_faction_name, s1, ":original_faction"),
+       (faction_set_name, ":cur_faction", s1),
+       (faction_set_slot, ":cur_faction", slot_faction_rebel_original_faction, 0),
  (try_end),
 ]),
 #######################################################################################
@@ -8257,11 +8257,11 @@ simple_triggers = [
 
 
 ################# 
-(2,   
+(200,   
 [
       ####(display_message, "@Executing Simple Trigger 158"),
-(map_free),
-(call_script, "script_music_set_situation_with_culture", mtf_sit_travel),
+# (map_free),
+# (call_script, "script_music_set_situation_with_culture", mtf_sit_travel),
 ]),  
 #################
 

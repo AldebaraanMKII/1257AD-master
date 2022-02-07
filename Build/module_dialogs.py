@@ -3415,7 +3415,8 @@ dialogs = [
                 (party_count_members_of_type, reg1, ":party", "trp_saint_thomas_knight"),
                 (val_add, ":knights", reg1),
               (try_end),
-              (ge, ":knights", 3),
+              # (ge, ":knights", 3),
+              (ge, ":knights", 30), ########## NEW v3.9
               (str_store_string, s0, "@There are already brothers at your command. They are surely more then enough!"),
             (else_try),
               (try_begin),
@@ -3896,7 +3897,7 @@ dialogs = [
         
         [anyone|plyr, "merc_begin",
           [],
-        "I'd like you to patrol one of my fiefs", "merc_order_patrol",
+        "I'd like you to patrol one of my fiefs.", "merc_order_patrol",
           [],
         ],
         
