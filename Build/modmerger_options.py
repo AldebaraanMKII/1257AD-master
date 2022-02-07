@@ -34,7 +34,7 @@ mods_active = [
     "pcamp",  ######## NEW v2.1
     "outkit",  ######## NEW v2.1
     "decapitation",  ######## NEW v3.0
-    # "ee",  ######## NEW v3.9
+    "ee",  ######## NEW v3.9
     # "gpu",  ######## NEW v2.3
     # "ccp",  ######## NEW v2.3
     # "trees"
