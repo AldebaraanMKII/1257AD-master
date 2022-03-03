@@ -11949,11 +11949,19 @@ presentations = [
         (position_set_x, pos1, 25),
         (position_set_y, pos1, ":cur_y"),
         (overlay_set_position, reg1, pos1),
-        (call_script, "script_game_get_total_wage"),
+        # (call_script, "script_game_get_total_wage"),
+        # (assign, ":offer_value", reg0),
+        # (val_add, ":offer_value", 750),
+        # (val_min, ":offer_value", 3000), #tom
+        # (call_script, "script_round_value", ":offer_value"),
+		############## NEW v3.9 - 
+        (call_script, "script_party_calculate_strength", "p_main_party", 0),
         (assign, ":offer_value", reg0),
-        (val_add, ":offer_value", 750),
+        (val_div, ":offer_value", 2),
+        (val_add, ":offer_value", 500),
         (val_min, ":offer_value", 3000), #tom
         (call_script, "script_round_value", ":offer_value"),
+        ############################
         (val_add, ":net_change", reg0),
         (create_text_overlay, reg1, "@{!}{reg0}", tf_right_align|tf_single_line),
         (position_set_x, pos1, 900),
@@ -12087,7 +12095,11 @@ presentations = [
           (val_div, ":total_wage", 14),
 ################ NEW v1.0 - Wagon Trains
         (else_try),
-          (eq, ":party_no", "p_wagon_train"),
+		  ###### NEW v3.9 - 
+		  (party_get_template_id, ":party_no_template", ":party_no"),
+          (this_or_next|eq, ":party_no", "p_wagon_train"),
+          (eq, ":party_no_template", "pt_wagon_train_template"),
+		  ##################
           (party_get_num_companions, ":num_troops", ":party_no"), ## headcount for food cost
           (val_mul, ":num_troops", 12), ##approx weekly food consumption
           (store_sub, ":total_payment_ratio", 14, "$g_cur_week_half_daily_wage_payments"), #between 0 and 7

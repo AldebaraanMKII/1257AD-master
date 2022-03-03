@@ -1123,7 +1123,7 @@ simple_triggers = [
    (display_message, "@{!}DEBUG -- Doing political calculations for {s9}"),
  (try_end),
  
- ######Penalty for no fief
+######Penalty for no fief
  (try_begin),   
    (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),  ####### NEW v2.7 - fixes bug where random lords that didn't spawn yet got angry at the player for not having a fief. This happens because the no faction (id: 0) doesn't have a leader so it the slot is assigned to 0 in the game start. And 0 is the player.
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
@@ -1281,14 +1281,12 @@ simple_triggers = [
      (this_or_next|eq, ":num_centers", 0), ######Thanks Caba`drin & Osviux
      (neq, ":who_moves_first", 0),
      (neq, ":troop_no", "trp_player"),
-         
      ######do a defection
      (try_begin), 
        (neq, ":num_centers", 0), 
        (assign, "$g_give_advantage_to_original_faction", 1), 
      (try_end),
      ######(assign, "$g_give_advantage_to_original_faction", 1),
- 
      (store_faction_of_troop, ":orig_faction", ":troop_no"),
      # (call_script, "script_lord_find_alternative_faction", ":troop_no"),
      (call_script, "script_ee_lord_find_faction_to_defect", ":troop_no"),  ####### NEW v3.7
@@ -1296,7 +1294,6 @@ simple_triggers = [
      (assign, "$g_give_advantage_to_original_faction", 0),
      (try_begin),
        (neq, ":new_faction", ":orig_faction"),              
-     
        (is_between, ":new_faction", kingdoms_begin, kingdoms_end),
        (str_store_troop_name_link, s1, ":troop_no"),
        (str_store_faction_name_link, s2, ":new_faction"),    
@@ -1326,8 +1323,20 @@ simple_triggers = [
      (neq, ":faction_leader", "trp_player"),
      (call_script, "script_troop_get_relation_with_troop", ":troop_no", ":faction_leader"),
      # (le, reg0, -60), ######was -75
-     (le, reg0, -50), ###### NEW v3.5
-     (call_script, "script_indict_lord_for_treason", ":troop_no", ":faction"),
+     # (le, reg0, -50), ###### NEW v3.5
+     (le, reg0, -40), ###### NEW v3.5
+	 ############## NEW v3.9 - 
+	 (assign, ":variable2", reg0),
+	 (store_random_in_range, ":random_number", -101, 0),
+     (try_begin),
+	   (gt, ":random_number", ":variable2"),
+         (call_script, "script_ee_get_execution_method", ":faction_leader"),            
+	     (assign, ":execution_method", reg0),
+         (call_script, "script_kill_lord_execution", ":faction_leader", ":troop_no", -1, ":execution_method", 3),            
+     (else_try),
+       (call_script, "script_indict_lord_for_treason", ":troop_no", ":faction"),
+     (try_end),
+     ############################
    (try_end),          
  ########## NEW v3.5 - moved this below - it needed to be more frequent
  # (else_try),  ######Take a stand on an issue 
@@ -4243,7 +4252,8 @@ simple_triggers = [
      (quest_set_slot, "qst_report_to_army", slot_quest_giver_troop, ":faction_marshall"),
      (quest_set_slot, "qst_report_to_army", slot_quest_target_troop, ":faction_marshall"),
      (quest_set_slot, "qst_report_to_army", slot_quest_target_amount, ":cur_target_amount"),
-     (quest_set_slot, "qst_report_to_army", slot_quest_expiration_days, 4),
+     # (quest_set_slot, "qst_report_to_army", slot_quest_expiration_days, 4),
+     (quest_set_slot, "qst_report_to_army", slot_quest_expiration_days, 6),
      ######(quest_set_slot, "qst_report_to_army", slot_quest_dont_give_again_period, 22),
      (quest_set_slot, "qst_report_to_army", slot_quest_dont_give_again_period, 15), ######### reduce to 2 weeks
      (jump_to_menu, "mnu_kingdom_army_quest_report_to_army"),
@@ -7545,99 +7555,30 @@ simple_triggers = [
  (try_end),
  
  (try_begin),  
-   (neq, "$g_lord_death_chance_execution_base", 0), ############### must be greater than this
-   (neg|party_slot_eq, "$g_execute_lord_cur_center", slot_town_lord, -1),
-   (neg|party_slot_eq, "$g_execute_lord_cur_center", slot_town_lord, "trp_player"), ####### NEW v3.8 - fix for lords being executed without player consent
+   (gt, "$g_lord_death_chance_execution_base", 0), ############### must be greater than this
+   (party_slot_ge, "$g_execute_lord_cur_center", slot_town_lord, active_npcs_begin), ###### NEW v3.9 - 
+   # (neg|party_slot_eq, "$g_execute_lord_cur_center", slot_town_lord, "trp_player"), ####### NEW v3.8 - fix for lords being executed without player consent
    (party_get_num_prisoner_stacks, ":prisoner_stack_num", "$g_execute_lord_cur_center"),
    (try_for_range_backwards, ":cur_prisoner_stack", 0, ":prisoner_stack_num"),
      (party_prisoner_stack_get_troop_id, ":prisoner_troop_id", "$g_execute_lord_cur_center", ":cur_prisoner_stack"),
      (troop_is_hero, ":prisoner_troop_id"), ######### found a lord to execute
 	 ############## NEW v3.5
-     (troop_slot_eq, "$g_assassination_attempt_cur_npc", slot_troop_is_alive, 1),
-     (troop_slot_eq, "$g_assassination_attempt_cur_npc", slot_troop_occupation, slto_kingdom_hero),
+     (troop_slot_eq, ":prisoner_troop_id", slot_troop_is_alive, 1),
+     (troop_slot_eq, ":prisoner_troop_id", slot_troop_occupation, slto_kingdom_hero),
 	 ##############
-       (store_troop_faction, ":prisoner_faction", ":prisoner_troop_id"), ######## gets faction relations - the lower the greater the chance of execution
-       (store_faction_of_party, ":center_faction", "$g_execute_lord_cur_center"), 
-       (store_relation, ":faction_relation", ":center_faction", ":prisoner_faction"),
-       (store_mul, ":chance_of_execution", ":faction_relation", "$g_lord_death_chance_execution_relation_divider"), ######### every 3 minus points increase chance by 1%
-       (val_add, ":chance_of_execution", "$g_lord_death_chance_execution_base"), ######### 10% base chance
-       
-       (troop_get_slot, ":reputation", ":prisoner_troop_id", slot_lord_reputation_type), 
-       (try_begin),   ######### asshole lords have a greater chance of going to the block - martial is neutral
-         (eq, ":reputation", lrep_debauched),  
-           (val_add, ":chance_of_execution", 30),  
-       (else_try),              
-         (eq, ":reputation", lrep_quarrelsome),  
-           (val_add, ":chance_of_execution", 22),  
-       (else_try),              
-         (eq, ":reputation", lrep_selfrighteous),  
-           (val_add, ":chance_of_execution", 13),  
-       (else_try),              
-         (eq, ":reputation", lrep_cunning),  
-           (val_add, ":chance_of_execution", 8),  
-       (else_try),              
-         (eq, ":reputation", lrep_upstanding),  
-           (val_sub, ":chance_of_execution", 5),  
-       (else_try),              
-         (eq, ":reputation", lrep_goodnatured),  
-           (val_sub, ":chance_of_execution", 10),  
-       (try_end),  
-       
-       (try_begin),   ######### kings have different chance
-         (val_add, ":chance_of_execution", "$g_lord_death_chance_execution_king_variation"),  
-       (try_end),  
-	   
+	   ############## NEW v3.9 - 
+       (party_get_slot, ":town_lord", "$g_execute_lord_cur_center", slot_town_lord),
+	   (call_script, "script_ee_get_chance_of_execution", ":prisoner_troop_id", ":town_lord"),
+	   (assign, ":chance_of_execution", reg0),
+       ############################
        (try_begin),
          (call_script, "script_rand", 0, 100),
          (lt, reg0, ":chance_of_execution"),
-	     ############ NEW v3.5 - method of execution depends on lord's personality
-         (party_get_slot, ":town_lord", "$g_execute_lord_cur_center", slot_town_lord),
-         (troop_get_slot, ":reputation", ":town_lord", slot_lord_reputation_type), 
-         (assign, ":cruelty", 30),  ########## base for martial
-         (try_begin),   
-           (eq, ":reputation", lrep_debauched),  
-           (call_script, "script_rand", 30, 60), #### best days = burn/worst days = quarter
-           (val_add, ":cruelty", reg0),  
-         (else_try),              
-           (eq, ":reputation", lrep_quarrelsome), 
-           (call_script, "script_rand", 20, 40),  #### best days = hang/worst days = burn
-           (val_add, ":cruelty", reg0),  
-         (else_try),              
-           (eq, ":reputation", lrep_selfrighteous), 
-           (call_script, "script_rand", 0, 30), #### best days = behead/worst days = burn
-           (val_add, ":cruelty", reg0),  
-         (else_try),              
-           (eq, ":reputation", lrep_cunning),  
-           (call_script, "script_rand", 5, 20), #### best days = behead/worst days = hang
-           (val_add, ":cruelty", reg0),  
-         (else_try),              
-           (eq, ":reputation", lrep_upstanding), 
-           (call_script, "script_rand", 0, 15), #### best days = behead/worst days = hang
-           (val_add, ":cruelty", reg0),  
-         (else_try),              
-           (eq, ":reputation", lrep_goodnatured),  
-           (call_script, "script_rand", 0, 8), ### best days = behead/worst days = behead
-           (val_sub, ":cruelty", reg0),  
-         (try_end),  
-	     ########################
-         (try_begin),   ######### Now determine method of execution
-           (lt, ":cruelty", 40),  
-             (assign, ":execution_method", 1),  ########### beheading
-         (else_try),              
-           (ge, ":cruelty", 40),  
-           (lt, ":cruelty", 60),  
-             (assign, ":execution_method", 2),  ########### hanging
-         (else_try),              
-           (ge, ":cruelty", 60),  
-           (lt, ":cruelty", 80),  
-             (assign, ":execution_method", 3),  ########### Burning
-         (else_try),              
-           (ge, ":cruelty", 80),  
-             (assign, ":execution_method", 4),  ########### Hung, Strung and Quartered
-         (try_end),  
-         (call_script, "script_kill_lord_execution", ":town_lord", ":prisoner_troop_id", "$g_execute_lord_cur_center", ":execution_method"),            
+           (call_script, "script_ee_get_execution_method", ":town_lord"),            
+		   (assign, ":execution_method", reg0),
+           # (call_script, "script_kill_lord_execution", ":town_lord", ":prisoner_troop_id", -1, ":execution_method", 1),            
+           (call_script, "script_kill_lord_execution", ":town_lord", ":prisoner_troop_id", "$g_execute_lord_cur_center", ":execution_method", 1),     ####### NEW v3.9       
       (try_end),  
- 
    (try_end),
  (try_end),
  

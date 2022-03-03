@@ -7303,26 +7303,45 @@ game_menus = [ #
 	   
 
 ################# NEW v2.1 - Wagon Trains
-    ("camp_wagon",[],"Form a wagon train (300 coins)",
+    ("camp_wagon",
+	[
+	(eq, "$wagon_active", 0),
+	],"Form a wagon train (300 coins)",
     [
 	 (store_troop_gold, ":gold_amount", "trp_player"),
      (try_begin),
        (ge, ":gold_amount", 300),
        (try_begin),
-	     (le, "$wagon_active", 0),
+	     # (le, "$wagon_active", 0),
            (troop_remove_gold, "trp_player", 300),
 	       (set_spawn_radius, 1),
-           (party_relocate_near_party, "p_wagon_train", "p_main_party", 1), 
-		   (enable_party, "p_wagon_train"),
-           (assign, "$wagon_active", 1),
+           # (party_relocate_near_party, "p_wagon_train", "p_main_party", 1), 
+           (spawn_around_party, "p_main_party", "pt_wagon_train_template"),  ###### NEW v3.9 - 
+		   # (enable_party, "p_wagon_train"),
+           (assign, "$wagon_active", reg0),
+		   (party_add_members, "$wagon_active", "trp_wagon_master", 1),  ######## fixes crash
            (display_message, "@Wagon train formed nearby."),
 	   (else_try),
          (display_message, "@You already have a wagon train!"),
        (try_end),
      (else_try),
        (lt, ":gold_amount", 300),
-	    (display_message, "@You don't have enough money to form a wagon train!"),
+	     (display_message, "@You don't have enough money to form a wagon train!"),
      (try_end),
+    ]),
+#################
+
+################# NEW v3.9 - Disband Wagon Trains
+    ("camp_wagon_disband",
+	[
+	(gt, "$wagon_active", 0),
+	],"Disband the wagon train.",
+    [
+    (try_begin),
+      (remove_party, "$wagon_active"), 
+      (assign, "$wagon_active", 0),
+      (display_message, "@Wagon train disbanded."),
+    (try_end),
     ]),
 #################
 	   
@@ -9894,10 +9913,10 @@ game_menus = [ #
       ("talk_to_siege_commander",[], " Request a meeting with the commander.",[
                                 (call_script, "script_get_meeting_scene"), (assign, ":meeting_scene", reg0),
                                 (modify_visitors_at_site, ":meeting_scene"),(reset_visitors),
-                                (set_visitor,0, "trp_player"),
+                                (set_visitor, 0, "trp_player"),
                                 (party_stack_get_troop_id, ":siege_leader_id", "$g_encountered_party_2",0),
                                 (party_stack_get_troop_dna, ":siege_leader_dna", "$g_encountered_party_2",0),
-                                (set_visitor,17, ":siege_leader_id", ":siege_leader_dna"),
+                                (set_visitor, 17, ":siege_leader_id", ":siege_leader_dna"),
                                 (set_jump_mission, "mt_conversation_encounter"),
                                 (jump_to_scene, ":meeting_scene"),
                                 (assign, "$talk_context", tc_siege_commander),
@@ -10124,8 +10143,8 @@ game_menus = [ #
           (call_script, "script_get_meeting_scene"), (assign, ":meeting_scene", reg0),
           (modify_visitors_at_site, ":meeting_scene"),
           (reset_visitors),
-          (set_visitor,0, "trp_player"),
-          (set_visitor,17, ":quest_object_troop"),
+          (set_visitor, 0, "trp_player"),
+          (set_visitor, 17, ":quest_object_troop"),
           (set_jump_mission, "mt_conversation_encounter"),
           (jump_to_scene, ":meeting_scene"),
           (assign, "$talk_context", tc_entering_center_quest_talk),
@@ -10137,8 +10156,8 @@ game_menus = [ #
           (call_script, "script_get_meeting_scene"), (assign, ":meeting_scene", reg0),
           (modify_visitors_at_site, ":meeting_scene"),
           (reset_visitors),
-          (set_visitor,0, "trp_player"),
-          (set_visitor,17, "trp_kidnapped_girl"),
+          (set_visitor, 0, "trp_player"),
+          (set_visitor, 17, "trp_kidnapped_girl"),
           (set_jump_mission, "mt_conversation_encounter"),
           (jump_to_scene, ":meeting_scene"),
           (assign, "$talk_context", tc_entering_center_quest_talk),
@@ -10151,8 +10170,8 @@ game_menus = [ #
 ##          (reset_visitors),
 ##          (assign, ":cur_lord", "$lord_requested_to_talk_to"),
 ##          (assign, "$lord_requested_to_talk_to", 0),
-##          (set_visitor,0, "trp_player"),
-##          (set_visitor,17, ":cur_lord"),
+##          (set_visitor, 0, "trp_player"),
+##          (set_visitor, 17, ":cur_lord"),
 ##          (set_jump_mission, "mt_conversation_encounter"),
 ##          (jump_to_scene, "scn_conversation_scene"),
 ##          (assign, "$talk_context", tc_castle_gate_lord),
@@ -10209,10 +10228,10 @@ game_menus = [ #
 #            ],
 #         "Request a meeting with the lord of the castle.",[
 #             (modify_visitors_at_site, "scn_conversation_scene"),(reset_visitors),
-#             (set_visitor,0, "trp_player"),
+#             (set_visitor, 0, "trp_player"),
 #             (party_stack_get_troop_id, reg(6), "$g_encountered_party",0),
 #             (party_stack_get_troop_dna,reg(7), "$g_encountered_party",0),
-#             (set_visitor,17,reg(6),reg(7)),
+#             (set_visitor, 17,reg(6),reg(7)),
 #             (set_jump_mission, "mt_conversation_encounter"),
 #             (jump_to_scene, "scn_conversation_scene"),
 #             (assign, "$talk_context", tc_castle_commander),
@@ -10502,8 +10521,8 @@ game_menus = [ #
        "Continue...",
        [(jump_to_menu, "mnu_castle_outside"),
         (modify_visitors_at_site, "scn_conversation_scene"),(reset_visitors),
-        (set_visitor,0, "trp_player"),
-        (set_visitor,17, "$castle_meeting_selected_troop"),
+        (set_visitor, 0, "trp_player"),
+        (set_visitor, 17, "$castle_meeting_selected_troop"),
         (set_jump_mission, "mt_conversation_encounter"),
         (jump_to_scene, "scn_conversation_scene"),
         (assign, "$talk_context", tc_castle_gate),
@@ -15059,6 +15078,7 @@ game_menus = [ #
              (val_sub, ":stack_size", ":num_wounded"),
              (gt, ":stack_size", 0),
              (party_stack_get_troop_dna, ":troop_dna", "$g_encountered_party", ":troop_iterator"),
+			 (gt, ":cur_troop_id", 0),  ###### NEW v3.9 - 
              (set_visitor, ":guard_no", ":cur_troop_id", ":troop_dna"),
              (val_add, ":guard_no", 1),
            (try_end),
@@ -15106,6 +15126,7 @@ game_menus = [ #
              (val_sub, ":stack_size", ":num_wounded"),
              (gt, ":stack_size", 0),
              (party_stack_get_troop_dna, ":troop_dna", "$g_encountered_party", ":troop_iterator"),
+			 (gt, ":cur_troop_id", 0),  ###### NEW v3.9 - 
              (set_visitor, ":guard_no", ":cur_troop_id", ":troop_dna"),
 
              (val_add, ":guard_no", 1),

@@ -405,10 +405,10 @@ faction_languages_begin = faction_language_finnish
 faction_languages_end = faction_language_end
 
 culture_titles_king_male_begin = "str_ee_culture_title_king_finnish"
-# culture_titles_female_begin = "str_faction_title_king_female_player"
+culture_titles_queen_female_begin = "str_ee_culture_title_female_finnish"
 
 language_titles_king_male_begin = "str_ee_language_title_king_finnish"
-# language_titles_female_begin = "str_faction_title_king_female_player"
+language_titles_queen_female_begin = "str_ee_language_title_female_finnish"
 ####################################
 
 ########### NEW v3.3
@@ -1751,7 +1751,7 @@ walkert_default            = 0
 walkert_needs_money        = 1
 walkert_needs_money_helped = 2
 walkert_spy                = 3
-num_town_walkers = 8 # was 8
+num_town_walkers = 4 # was 8
 town_walker_entries_start = 32
 
 # reinforcement_cost_easy = 600

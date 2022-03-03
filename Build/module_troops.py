@@ -26176,7 +26176,7 @@ troops = [
 
     itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
 
-    itm_surcoat_gaelic,
+    # itm_surcoat_gaelic,
     itm_gaelic_shirt_blue,
     itm_gaelic_shirt_green,
     itm_elm2,

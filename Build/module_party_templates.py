@@ -556,6 +556,10 @@ party_templates = [
   ("fort","Fort",icon_fort_a|pf_is_static|pf_always_visible|pf_label_medium,0, fac_commoners,ai_bhvr_hold,[]),
 ########################################################
 
+###### NEW v3.9 - 
+("wagon_train_template", "Wagon Train", icon_mule|carries_goods(20), fac_player_faction,0,escorted_merchant_personality,[(trp_wagon_master,1,0)]),
+########################
+
 
 ############################
 ]###### END BRACKET

@@ -203,7 +203,7 @@ dialogs = [
 
                      (eq, 1, 0)],
 "{!}Warning: This line is never displayed. It is just for storing conversation variables.", "close_window", []],
-
+#####################################################################################################################
 [anyone , "member_chat", [
                     (store_conversation_troop, "$g_talk_troop"),
                     (try_begin),
@@ -217,17 +217,16 @@ dialogs = [
                     (try_end),
 
                     (troop_get_type, reg65, "$g_talk_troop"),
-
-                    (troop_get_type, reg65, "$g_talk_troop"),
+                    # (troop_get_type, reg65, "$g_talk_troop"),
                     (try_begin),
-                        (faction_slot_eq, "$g_talk_troop_faction",slot_faction_leader, "$g_talk_troop"),
-                        (str_store_string,s64, "@{reg65?my Lady:my Lord}"), #bug fix
-                        (str_store_string,s65, "@{reg65?my Lady:my Lord}"),
-                        (str_store_string,s66, "@{reg65?My Lady:My Lord}"),
+                      (faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
+                      (str_store_string, s64, "@{reg65?my Lady:my Lord}"), #bug fix
+                      (str_store_string, s65, "@{reg65?my Lady:my Lord}"),
+                      (str_store_string, s66, "@{reg65?My Lady:My Lord}"),
                     (else_try),
-                        (str_store_string,s64, "@{reg65?madame:sir}"), #bug fix
-                        (str_store_string,s65, "@{reg65?madame:sir}"),
-                        (str_store_string,s66, "@{reg65?Madame:Sir}"),
+                      (str_store_string, s64, "@{reg65?madame:sir}"), #bug fix
+                      (str_store_string, s65, "@{reg65?madame:sir}"),
+                      (str_store_string, s66, "@{reg65?Madame:Sir}"),
                     (try_end),
 
                     (store_current_hours, "$g_current_hours"),
@@ -235,7 +234,7 @@ dialogs = [
 
                     (eq, 1, 0)],
 "{!}Warning: This line is never displayed. It is just for storing conversation variables.", "close_window", []],
-
+#####################################################################################################################
 [anyone , "event_triggered", [(store_conversation_troop, "$g_talk_troop"),
                            (try_begin),
                                (is_between, "$g_talk_troop", companions_begin, companions_end),
@@ -3416,7 +3415,15 @@ dialogs = [
                 (val_add, ":knights", reg1),
               (try_end),
               # (ge, ":knights", 3),
-              (ge, ":knights", 30), ########## NEW v3.9
+			  ########## NEW v3.9
+			  (assign, ":max_knights", 3),
+              (try_begin),
+			    (troop_get_slot, ":renown", "trp_player", slot_troop_renown),
+			    (gt, ":renown", 0),
+				  (store_div, ":max_knights", ":renown", 20),
+              (try_end),
+              (ge, ":knights", ":max_knights"),
+			  ############################## 
               (str_store_string, s0, "@There are already brothers at your command. They are surely more then enough!"),
             (else_try),
               (try_begin),
@@ -3441,7 +3448,7 @@ dialogs = [
                 (eq, ":crusaders", manor_Monastery_thomas),
                 (party_add_template, "p_main_party", "pt_crusaders_saint_thomas"),
               (try_end),
-            (str_store_string, s0, "@I'll tell the brothers that you require there assistance and they should join you soon. Is there anything else?"),
+              (str_store_string, s0, "@I'll tell the brothers that you require there assistance and they should join you soon. Is there anything else?"),
             (try_end),
           ],
         ],
@@ -4599,11 +4606,11 @@ dialogs = [
   
   
 [anyone, "member_chat", 
-[
-    (store_conversation_troop, "$g_talk_troop"),
-                          (troop_is_hero, "$g_talk_troop"),
-                          (troop_get_slot, ":honorific", "$g_talk_troop", slot_troop_honorific),
-                          (str_store_string, s5, ":honorific"),
+[   ####### NEW v3.9 - commented this
+    # (store_conversation_troop, "$g_talk_troop"),
+    # (troop_is_hero, "$g_talk_troop"),
+    # (troop_get_slot, ":honorific", "$g_talk_troop", slot_troop_honorific),
+    # (str_store_string, s5, ":honorific"),
   ], "Yes?", "member_talk",
 [
     (try_begin),
@@ -15134,15 +15141,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    # (call_script, "script_indict_lord_for_treason", "$lord_selected", "fac_player_supporters_faction"),
    (call_script, "script_indict_lord_for_treason", "$lord_selected", "$players_kingdom"),
    ]],
-
-
-     
-     
-     
-     
-     
-     
-     
+   
 
    [anyone|plyr|repeat_for_troops, "center_captured_lord_advice",
    [
@@ -30523,9 +30522,21 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 [anyone,"wagon_train_disband3", [], "All right. It was a pleasure doing business with you.", "close_window",
 [
-(party_clear,"p_wagon_train"),
-(party_add_members,"p_wagon_train","trp_wagon_master",1),
-(disable_party, "p_wagon_train"),
+# (party_clear, "$wagon_active"),   ###### NEW v3.9 - 
+# (party_clear,"p_wagon_train"),
+# (party_add_members,"$wagon_active","trp_wagon_master",1),
+# (disable_party, "$wagon_active"),
+(try_begin),
+  (party_is_active, "p_wagon_train"),
+    (party_clear,"p_wagon_train"),
+    (party_add_members,"p_wagon_train","trp_wagon_master",1),
+    (disable_party, "p_wagon_train"),
+(try_end),
+(try_begin),
+  (party_is_active, "$wagon_active"),
+    (remove_party, "$wagon_active"),
+(try_end),
+###############################
 (assign, "$wagon_active", 0), # To allow for creation of another one
 (troop_clear_inventory, "trp_wagon_possessions"), 
 (assign, "$g_leave_encounter", 1), ####### NEW v2.2 - fixes message after dismissing wagon
@@ -32536,12 +32547,77 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     (assign, "$g_bounty_activo", 0),
     ]],
  
-[anyone, "tavernkeeper_request_mission_ask", [], "So you reckon yourself a bountyhunter, eh?", "tavernkeeper_tell_mission",
+[anyone, "tavernkeeper_request_mission_ask", 
+[
+############## NEW v3.9 - 
+(assign, ":proceed", 0),
+(try_begin),
+  (neg|check_quest_active, "qst_bounty_1"),
+  (neg|quest_slot_ge, "qst_bounty_1", slot_quest_dont_give_again_remaining_days, 1),
+    (assign, ":proceed", 1),
+(else_try),
+  (neg|check_quest_active, "qst_bounty_2"),
+  (neg|quest_slot_ge, "qst_bounty_2", slot_quest_dont_give_again_remaining_days, 1),
+    (assign, ":proceed", 1),
+(else_try),
+  (neg|check_quest_active, "qst_bounty_3"),
+  (neg|quest_slot_ge, "qst_bounty_3", slot_quest_dont_give_again_remaining_days, 1),
+    (assign, ":proceed", 1),
+(else_try),
+  (neg|check_quest_active, "qst_bounty_4"),
+  (neg|quest_slot_ge, "qst_bounty_4", slot_quest_dont_give_again_remaining_days, 1),
+    (assign, ":proceed", 1),
+(else_try),
+  (neg|check_quest_active, "qst_bounty_5"),
+  (neg|quest_slot_ge, "qst_bounty_5", slot_quest_dont_give_again_remaining_days, 1),
+    (assign, ":proceed", 1),
+(else_try),
+  (neg|check_quest_active, "qst_bounty_6"),
+  (neg|quest_slot_ge, "qst_bounty_6", slot_quest_dont_give_again_remaining_days, 1),
+    (assign, ":proceed", 1),
+(try_end),
+(eq, ":proceed", 1),
+############################
+], "So you reckon yourself a bountyhunter, eh?", "tavernkeeper_tell_mission",
    [
      (call_script, "script_random_bounty", "$g_talk_troop"),
      (assign, "$random_quest_no", reg0),
    ]],
-
+############## NEW v3.9 - 
+[anyone, "tavernkeeper_request_mission_ask", 
+[
+(assign, ":proceed", 0),
+(try_begin),
+  (this_or_next|check_quest_active, "qst_bounty_1"),
+  (quest_slot_ge, "qst_bounty_1", slot_quest_dont_give_again_remaining_days, 1),
+    (val_add, ":proceed", 1),
+(else_try),
+  (this_or_next|check_quest_active, "qst_bounty_2"),
+  (quest_slot_ge, "qst_bounty_2", slot_quest_dont_give_again_remaining_days, 1),
+    (val_add, ":proceed", 1),
+(else_try),
+  (this_or_next|check_quest_active, "qst_bounty_3"),
+  (quest_slot_ge, "qst_bounty_3", slot_quest_dont_give_again_remaining_days, 1),
+    (val_add, ":proceed", 1),
+(else_try),
+  (this_or_next|check_quest_active, "qst_bounty_4"),
+  (quest_slot_ge, "qst_bounty_4", slot_quest_dont_give_again_remaining_days, 1),
+    (val_add, ":proceed", 1),
+(else_try),
+  (this_or_next|check_quest_active, "qst_bounty_5"),
+  (quest_slot_ge, "qst_bounty_5", slot_quest_dont_give_again_remaining_days, 1),
+    (val_add, ":proceed", 1),
+(else_try),
+  (this_or_next|check_quest_active, "qst_bounty_6"),
+  (quest_slot_ge, "qst_bounty_6", slot_quest_dont_give_again_remaining_days, 1),
+    (val_add, ":proceed", 1),
+(try_end),
+(ge, ":proceed", 6),
+], "We don't have any at the moment.", "tavernkeeper_pretalk",
+[]],
+############################
+	
+	
 [anyone, "tavernkeeper_tell_mission", [(eq, "$random_quest_no", "qst_bounty_1")],
 "I have something you could help with, an issue with the lawless villain known as {s4}. \
  He supposedly murdered someone, or stole something, or....whatever,\
@@ -39358,8 +39434,11 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 ############# NEW v3.8
 [anyone|plyr, "town_merchant_talk", [
-(is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
-(troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
+(is_between, "$g_talk_troop", horse_merchants_begin,horse_merchants_end),
+# (troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
+####### NEW v3.9
+(troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse, 1), 
+#####################
 (troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_days_left, 0),
 ],
 "I came to get my horse.", "merchant_horse_return",[]],

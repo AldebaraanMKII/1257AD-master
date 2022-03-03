@@ -6892,7 +6892,32 @@ common_battle_init_banner, #tom
   # ] + lance_usage + must_1257_triggers + sp_shield_bash_triggers
   ] + lance_use_triggers + must_1257_triggers + sp_shield_bash_triggers  ####### NEW v3.8
   
+  
+############## NEW v3.9 - 
+init_player_global_variables = ( #in pbod_common_triggers and custom_camera_triggers
+  0, 0, ti_once, [(get_player_agent_no, "$fplayer_agent_no"),(ge, "$fplayer_agent_no", 0)], [
+  #(ti_after_mission_start, 0, 0, [], [ 
+	#(get_player_agent_no, "$fplayer_agent_no"),
+	(agent_get_team, "$fplayer_team_no", "$fplayer_agent_no"),		
+	(agent_get_horse, ":horse", "$fplayer_agent_no"),
+	(agent_set_slot, "$fplayer_agent_no", slot_agent_horse_rider, ":horse"),
+  ])
 
+call_horse_trigger = (
+      0, 0, 3, [(key_clicked, key_h)], [   #call_horse_trigger
+      (agent_get_slot, ":horse", "$fplayer_agent_no", slot_agent_horse_rider),
+      (gt, ":horse", 0),
+      (agent_is_active, ":horse"), 
+	  (agent_get_horse, reg0, "$fplayer_agent_no"),
+	  (eq, reg0, -1), ##be sure player isn't currently mounted
+      #(agent_play_sound, "$fplayer_agent_no", "snd_whistle"), #Floris
+	  (agent_play_sound, "$fplayer_agent_no", "snd_man_breath_hard"),  #Native
+      (display_message,"@You whistle for your horse."),
+      (agent_is_alive,":horse"),
+      (agent_get_position, pos1, "$fplayer_agent_no"),
+      (agent_set_scripted_destination, ":horse", pos1, 0),
+     ])
+############################
 
 ########################## NEW v2.0/2.1
 enhanced_common_battle_triggers = [
@@ -6909,6 +6934,8 @@ enhanced_common_battle_triggers = [
     spearwall_trigger_7,
     spearwall_trigger_8,
     spearwall_trigger_9,
+	init_player_global_variables,
+	call_horse_trigger,
     ############################
 	# reassign_archers_to_division,
 	# reassign_horseless_cavalry_to_division,
