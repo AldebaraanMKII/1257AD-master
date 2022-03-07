@@ -3968,6 +3968,7 @@ presentations = [
         (try_for_range_backwards, ":page_no", 0, ":num_factions"),
           (store_add, ":faction_no", ":page_no", ":faction_lower_range"),
           (faction_slot_eq, ":faction_no", slot_faction_state, sfs_active),  ### is still active
+          # (neq, ":faction_no", "fac_player"),  ### NEW v3.9
             (str_store_faction_name, s0, ":faction_no"),
             (overlay_add_item, "$g_presentation_obj_1", s0),
         (try_end),

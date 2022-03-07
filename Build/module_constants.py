@@ -319,7 +319,8 @@ dplmc_slot_faction_patrol_time                = 115
 
 
 ############### NEW v2.1 - Faction statistics
-kingdoms_begin_1 = fac_player_faction
+# kingdoms_begin_1 = fac_player_faction
+kingdoms_begin_1 = fac_player_supporters_faction  ######## NEW v3.9
 kingdoms_end_1 = fac_papacy
 
 kingdoms_begin_2 = fac_papacy
