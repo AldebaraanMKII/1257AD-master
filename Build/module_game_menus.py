@@ -8913,9 +8913,9 @@ game_menus = [ #
 				  ######## NEW v3.8
 			      # (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
 			      # (val_add, ":current_slot", 1), 
-                  (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
-		          (gt, ":party", 0), 
-                     (remove_party, ":party"),
+                  # (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
+		          # (gt, ":party", 0), 
+                     # (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
@@ -8932,9 +8932,9 @@ game_menus = [ #
 				  ######## NEW v3.8
 			      # (troop_set_slot, "trp_temp_troop", ":current_slot", ":stack_troop"), 
 			      # (val_add, ":current_slot", 1),  
-                  (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
-		          (gt, ":party", 0), 
-                    (remove_party, ":party"),
+                  # (troop_get_slot, ":party", ":stack_troop", slot_troop_leaded_party),
+		          # (gt, ":party", 0), 
+                    # (remove_party, ":party"),
                   ###########
                   (assign, ":break", 1),
               (else_try),
