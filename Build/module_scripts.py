@@ -38184,6 +38184,7 @@ scripts = [
                   (call_script, "script_select_mercenary_troop", ":belligerent_drunk_tavern"),
                   (assign, ":troop", reg1),
                   (neq, ":troop", ":current_tavern_merc"),  
+                  (is_between, ":troop", "trp_merc_euro_spearman", "trp_mercenaries_end"),  ###### NEW v3.9.1
                   (party_set_slot, ":belligerent_drunk_tavern", slot_center_tavern_troop, ":troop"),
                   (assign, ":end_loop2", -1),
                 (try_end),   
@@ -38194,25 +38195,30 @@ scripts = [
                 (try_begin), #### 30%
                   (lt, ":random", 30), 
                   (faction_get_slot, ":troop", ":cur_center_culture", slot_faction_tier_1_troop),
+                  (is_between, ":troop", "trp_finn_village_recruit", "trp_looter"),  ###### NEW v3.9.1
                   (party_set_slot, ":belligerent_drunk_tavern", slot_center_tavern_troop, ":troop"),
                 (else_try), #### 25%
                   (ge, ":random", 30),
                   (lt, ":random", 55),
                   (faction_get_slot, ":troop", ":cur_center_culture", slot_faction_tier_2_troop),
+                  (is_between, ":troop", "trp_finn_village_recruit", "trp_looter"),  ###### NEW v3.9.1
                   (party_set_slot, ":belligerent_drunk_tavern", slot_center_tavern_troop, ":troop"),
                 (else_try), #### 20%  
                   (ge, ":random", 55),
                   (lt, ":random", 75),
                   (faction_get_slot, ":troop", ":cur_center_culture", slot_faction_tier_3_troop),
+                  (is_between, ":troop", "trp_finn_village_recruit", "trp_looter"),  ###### NEW v3.9.1
                   (party_set_slot, ":belligerent_drunk_tavern", slot_center_tavern_troop, ":troop"),
                 (else_try), #### 15%
                   (ge, ":random", 75),
                   (lt, ":random", 90),
                   (faction_get_slot, ":troop", ":cur_center_culture", slot_faction_tier_4_troop),
+                  (is_between, ":troop", "trp_finn_village_recruit", "trp_looter"),  ###### NEW v3.9.1
                   (party_set_slot, ":belligerent_drunk_tavern", slot_center_tavern_troop, ":troop"),
                 (else_try), #### 10%  
                   (ge, ":random", 90),
                   (faction_get_slot, ":troop", ":cur_center_culture", slot_faction_tier_5_troop),
+                  (is_between, ":troop", "trp_finn_village_recruit", "trp_looter"),  ###### NEW v3.9.1
                   (party_set_slot, ":belligerent_drunk_tavern", slot_center_tavern_troop, ":troop"),
                 (try_end),
               (try_end),

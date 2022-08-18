@@ -8264,7 +8264,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "{s11}.", "dplmc_constable_recruit_amount",
 [
 (store_repeat_object, ":faction_no"),
-(assign, "$temp", ":faction_no"),
+(assign, "$temp1", ":faction_no"),
 ]],
 
 [anyone, "dplmc_constable_recruit_amount",
@@ -8314,7 +8314,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
 (assign, reg2, "$diplomacy_var"),
 (str_store_string, s6, "@{!}{reg2}"),
-(store_sub, ":offset", "$temp", "fac_kingdom_1"),
+(store_sub, ":offset", "$temp1", "fac_kingdom_1"),
 (val_add, ":offset", "str_kingdom_1_adjective"),
 (str_store_string, s11, ":offset"),
 ],
@@ -8324,7 +8324,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr, "dplmc_constable_recruit_confirm",
 [],
 "Yes.", "dplmc_constable_pretalk",[
-(call_script, "script_dplmc_send_recruiter", "$diplomacy_var", "$temp"),
+(call_script, "script_dplmc_send_recruiter", "$diplomacy_var", "$temp1"),
 (val_add, "$g_recruiter_count", 1),  ################ NEW v2.0
 ]],
 

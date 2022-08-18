@@ -11400,6 +11400,10 @@ scripts = [
      (faction_get_slot, ":heir", ":faction_no", slot_faction_heir_1),
      (gt, ":heir", -1),
      (troop_slot_eq, ":heir", slot_troop_is_alive, 1), 
+	 ########## NEW v3.9.1 - fixed dead heirs that got recycled receiving fiefs when their father died
+	 (store_troop_faction, ":heir_faction", ":heir"),  
+	 (eq, ":heir_faction", ":faction_no"),
+	 ##########
      (assign, ":best_troop", ":heir"),
      (faction_set_slot, ":faction_no", slot_faction_heir_1, -1),
      (str_store_troop_name_link, s46, ":heir"),
@@ -11408,6 +11412,10 @@ scripts = [
      (faction_get_slot, ":heir", ":faction_no", slot_faction_heir_2),
      (gt, ":heir", -1),
      (troop_slot_eq, ":heir", slot_troop_is_alive, 1),  
+	 ########## NEW v3.9.1 - fixed dead heirs that got recycled receiving fiefs when their father died
+	 (store_troop_faction, ":heir_faction", ":heir"),  
+	 (eq, ":heir_faction", ":faction_no"),
+	 ##########
      (assign, ":best_troop", ":heir"),
      (faction_set_slot, ":faction_no", slot_faction_heir_2, -1),
      (str_store_troop_name_link, s46, ":heir"),
@@ -11416,6 +11424,10 @@ scripts = [
      (faction_get_slot, ":heir", ":faction_no", slot_faction_heir_3),
      (gt, ":heir", -1),
      (troop_slot_eq, ":heir", slot_troop_is_alive, 1),  
+	 ########## NEW v3.9.1 - fixed dead heirs that got recycled receiving fiefs when their father died
+	 (store_troop_faction, ":heir_faction", ":heir"),  
+	 (eq, ":heir_faction", ":faction_no"),
+	 ##########
      (assign, ":best_troop", ":heir"),
      (faction_set_slot, ":faction_no", slot_faction_heir_3, -1),
      (str_store_troop_name_link, s46, ":heir"),

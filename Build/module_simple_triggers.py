@@ -1330,6 +1330,7 @@ simple_triggers = [
 	 (store_random_in_range, ":random_number", -101, 0),
      (try_begin),
 	   (gt, ":random_number", ":variable2"),
+       (gt, "$g_lord_death_chance_execution_base", 0), ###### NEW v3.9.1 - fixed executions happening even if they were disabled
          (call_script, "script_ee_get_execution_method", ":faction_leader"),            
 	     (assign, ":execution_method", reg0),
          (call_script, "script_kill_lord_execution", ":faction_leader", ":troop_no", -1, ":execution_method", 3),            

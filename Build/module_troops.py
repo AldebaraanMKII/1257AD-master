@@ -11261,7 +11261,7 @@ troops = [
     itm_wrapping_boots,
     itm_ankle_boots,
     ],
-    ranged_attrib_3, archer_veteran_wp, archer_veteran_skills,
+    ranged_attrib_3, welsh_archer_wp, welsh_archer_skills,
     euro_face_1, euro_face_2
   ],
 
@@ -11295,7 +11295,7 @@ troops = [
     itm_galloglass_padded,
     itm_gaelic_mail_shirt_b,
     ],
-    ranged_attrib_5, welsh_archer_wp, welsh_archer_skills,
+    ranged_attrib_5, welsh_veteran_archer_wp, welsh_veteran_archer_skills,
     nord_face_young_1, swadian_face_old_2
   ],
 
