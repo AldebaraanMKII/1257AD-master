@@ -25205,6 +25205,7 @@ scripts = [
           (str_store_party_name_link, s8, ":spawn_center"),
           
           (assign, ":result", reg0),
+          # (party_set_flags, ":result", pf_always_visible, 0), ###### NEW v3.9.1 - 
           (party_set_faction, ":result", ":faction_no"),
           (try_begin),
             #################### rafi - add these  ########## NEW v3.5 - fixed parties not converting to their new faction

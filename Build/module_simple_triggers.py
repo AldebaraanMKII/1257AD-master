@@ -3490,11 +3490,11 @@ simple_triggers = [
      (call_script, "script_update_volunteer_troops_in_village", "$g_update_villages_cur_village"),
      (call_script, "script_update_npc_volunteer_troops_in_village", "$g_update_villages_cur_village"),
  (try_end),
- (try_begin),
-   (eq, "$use_feudal_lance", 0), #######tom - if using old recruitment system
-     (call_script, "script_update_volunteer_troops_in_village", "$g_update_villages_cur_village"),
-     (call_script, "script_update_npc_volunteer_troops_in_village", "$g_update_villages_cur_village"),
- (try_end),
+ # (try_begin),
+   # (eq, "$use_feudal_lance", 0), #######tom - if using old recruitment system
+     # (call_script, "script_update_volunteer_troops_in_village", "$g_update_villages_cur_village"),
+     # (call_script, "script_update_npc_volunteer_troops_in_village", "$g_update_villages_cur_village"),
+ # (try_end),
  
  ################ proceeds to the next village when it's triggered again
  (val_add, "$g_update_villages_cur_village", 1),
@@ -3552,7 +3552,8 @@ simple_triggers = [
     
 ################## NEW v1.8 - https://forums.taleworlds.com/index.php?topic=6575.msg9041351#msg9041351
 #### Setting random walker types
-(0.049,  ########################## once every 36 hours for each of the 733 centers
+# (0.049,  ########################## once every 36 hours for each of the 733 centers
+(0.098,  ########################## ###### NEW v3.9.1 - once every 72 hours for each of the 733 centers
 [
  
       ####(display_message, "@Executing Simple Trigger 80"),

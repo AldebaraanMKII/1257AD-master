@@ -515,9 +515,8 @@ party_templates = [
   ("mercenary_company", "Mercenary Company",icon_gray_knight|carries_goods(3)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
 
   ("fugitive_serfs", "Fugitive Serfs",icon_peasant|carries_goods(8)|pf_default_behavior,0,fac_peasant_rebels,merchant_personality,[(trp_farmer,6,30), (trp_peasant_woman,4,25)]),
-  ("rogue_mercenaries", "Rogue Mercenary Company", icon_gray_knight,0,fac_outlaws,bandit_personality,[]),
+  ("rogue_mercenaries", "Rogue Mercenary Company", icon_gray_knight|carries_goods(3),0,fac_outlaws,bandit_personality,[]),
   ("rebels", "Rebels", icon_gray_knight,0,fac_peasant_rebels,soldier_personality,[]),
-
 ###########################################################################  
   
 
@@ -547,7 +546,8 @@ party_templates = [
   ############# NEW v2.1 - escaped prisoner template
   ("escaped_prisoners_party", "Escaped Prisoners", icon_gray_knight|carries_goods(4), 0, fac_escaped_prisoners_faction, bandit_personality, []),
   
-  ("mercenary_warband", "Mercenary Warband", icon_gray_knight,0,fac_outlaws,bandit_personality,[]),
+  # ("mercenary_warband", "Mercenary Warband", icon_gray_knight,0,fac_outlaws,bandit_personality,[]),
+  ("mercenary_warband", "Mercenary Warband", icon_gray_knight|carries_goods(3),0,fac_outlaws,bandit_personality,[]), ###### NEW v3.9.1 - 
 
   
 ############################ NEW v3.5 - moved those here because IDs are a pain to deal with

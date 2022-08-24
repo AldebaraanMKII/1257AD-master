@@ -8267,6 +8267,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (assign, "$temp1", ":faction_no"),
 ]],
 
+############## NEW v3.9.1 - 
+[anyone|plyr, "dplmc_constable_recruit_select",
+[],
+"None.", "dplmc_constable_pretalk",[
+]],
+############################
+
 [anyone, "dplmc_constable_recruit_amount",
 [
 ],
@@ -8312,6 +8319,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_constable_recruit_confirm_ask",
 [
+############## NEW v3.9.1 - 
+(str_clear, s6),
+(str_clear, s11),
+############################
 (assign, reg2, "$diplomacy_var"),
 (str_store_string, s6, "@{!}{reg2}"),
 (store_sub, ":offset", "$temp1", "fac_kingdom_1"),
@@ -36844,7 +36855,8 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
                                  (spawn_around_party, ":quest_target_center", "pt_bandits_awaiting_ransom"),
                                  (assign, ":quest_target_party", reg0),
                                  (quest_set_slot, "qst_kidnapped_girl", slot_quest_target_party, ":quest_target_party"),
-                                 (party_set_ai_behavior, ":quest_target_party", ai_bhvr_hold),
+                                 # (party_set_ai_behavior, ":quest_target_party", ai_bhvr_hold),
+                                 (party_set_ai_behavior, ":quest_target_party", ai_bhvr_escort_party), ###### NEW v3.9.1 - 
                                  (party_set_ai_object, ":quest_target_party", "p_main_party"),
                                  (party_set_flags, ":quest_target_party", pf_default_behavior, 0),
                                  (call_script, "script_troop_add_gold", "trp_player", ":quest_target_amount"),
@@ -36899,9 +36911,11 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [trp_kidnapped_girl|plyr, "kidnapped_girl_liberated_battle", [], "Yes. Come with me. We are going home.", "kidnapped_girl_liberated_battle_2a",[]],
 [trp_kidnapped_girl, "kidnapped_girl_liberated_battle_2a", [(neg|hero_can_join, "p_main_party")], "Unfortunately. You do not have room in your party for me.", "kidnapped_girl_liberated_battle_2b",[]],
 [trp_kidnapped_girl, "kidnapped_girl_liberated_battle_2a", [], "Oh really? Thank you so much!",
-"close_window",[(party_add_members, "p_main_party", "trp_kidnapped_girl",1),
-                   (quest_set_slot, "qst_kidnapped_girl", slot_quest_current_state, 3),
-                   ]],
+"close_window",
+[
+(party_add_members, "p_main_party", "trp_kidnapped_girl",1),
+(quest_set_slot, "qst_kidnapped_girl", slot_quest_current_state, 3),
+]],
 [trp_kidnapped_girl|plyr, "kidnapped_girl_liberated_battle", [], "Wait here a while longer. I'll come back for you.", "kidnapped_girl_liberated_battle_2b",[]],
 [trp_kidnapped_girl, "kidnapped_girl_liberated_battle_2b", [], "Oh, please {sir/madam}, do not leave me here all alone!",
 "close_window", [(add_companion_party, "trp_kidnapped_girl"),

@@ -4032,7 +4032,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("_however_the_truce_is_no_longer_binding_on_the_s14", " However, the truce is no longer binding on the {s14}"),
   ("s21__the_s5_is_bound_by_truce_not_to_attack_the_s14s18_the_truce_will_expire_in_reg1_days", "{s21}^* The {s5} is bound by truce not to attack the {s14}.{s18} The truce will expire in {reg1} days."),
   ("s21__the_s5_has_recently_suffered_provocation_by_subjects_of_the_s14_and_there_is_a_risk_of_war", "{s21}^* The {s5} has recently suffered provocation by subjects of the {s14}, and there is a risk of war."),
-  ("s21__the_s5_has_no_outstanding_issues_with_the_s14", "{s21}^* The {s5} has no outstanding issues with the {s14}."),
+  # ("s21__the_s5_has_no_outstanding_issues_with_the_s14", "{s21}^* The {s5} has no outstanding issues with the {s14}."),
+  ("s21__the_s5_has_no_outstanding_issues_with_the_s14", "{s21}^* The {s5} has no outstanding issues with the {s14}"), ###### NEW v3.9.1
   ("s21_the_s14_was_recently_provoked_by_subjects_of_the_s5_and_there_is_a_risk_of_war_", "{s21} The {s14} was recently provoked by subjects of the {s5}, and there is a risk of war.^"),
   ("s21_cheat_mode_assessment_s14_", "{!}{s21}^CHEAT MODE ASSESSMENT: {s14}^"),
   ####### NEW v3.0-KOMKE START- s13 faction marshall displayed in faction notes
@@ -4042,7 +4043,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ####### NEW v3.5 - added language
   # ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^^It occupies {s8}.^^Its vassals are {s10}.^^Its culture is: {s22}.^Its religion is: {s11}^Its language is: {s12}^^{s21}."),
 ####### NEW v3.6 - moved dead vassals to another area
-  ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^^It occupies {s8}.^^Its vassals are {s10}.^^Its former members are {s15}.^^Its culture is: {s22}.^Its religion is: {s11}^Its language is: {s12}^^{s21}."),
+  ("the_s5_is_ruled_by_s6_it_occupies_s8_its_vassals_are_s10_its_religion_is_s11__s21", "The {s5} is ruled by {s6}.^Marshalship is currently held by {s13}.^^It occupies {s8}.^^Its vassals are {s10}.^^Its former members are {s15}.^^Its culture is: {s22}.^Its religion is: {s11}.^Its language is: {s12}.^^{s21}."),
 ############################
   ####### NEW v3.0-KOMKE END- 
   ("assigned_lord_reputation_and_relations_cheat_mode_reg3", "{!}Assigned lord reputation and relations, cheat mode: {reg3}"),

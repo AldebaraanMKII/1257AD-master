@@ -10011,16 +10011,19 @@ game_menus = [
        ]
        ),
 	   #############################################  NEW v3.8
-       ("debug_options2_4",[], "Make peace with all factions.",
+       ("debug_options2_4",[], "Make all factions peaceful.",
        [
           # (store_faction_of_troop, ":faction", "trp_player"),
-          (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
-          (try_for_range, ":faction2", kingdoms_begin, kingdoms_end),
-            (neq, ":faction2", "$players_kingdom"),
-            ########(party_slot_eq, ":faction2", slot_faction_state, sfs_active),
-            (store_relation, ":cur_relation", "$players_kingdom", ":faction2"),
-            (lt, ":cur_relation", 0), #AT WAR
-              (call_script, "script_diplomacy_start_peace_between_kingdoms", "$players_kingdom", ":faction2", 1), 
+          # (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
+          (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
+            # (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
+            (try_for_range, ":faction2", kingdoms_begin, kingdoms_end),
+              (neq, ":faction", ":faction2"),
+              # (faction_slot_eq, ":faction2", slot_faction_state, sfs_active),
+              (store_relation, ":cur_relation", ":faction", ":faction2"),
+              (lt, ":cur_relation", 0), #AT WAR
+                (call_script, "script_diplomacy_start_peace_between_kingdoms", ":faction", ":faction2", 1), 
+            (try_end),
           (try_end),
        ]
        ),
