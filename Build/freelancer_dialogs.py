@@ -51,6 +51,11 @@ lord_talk_addon = [
         (ge, "$g_talk_troop_faction_relation", 0),
         (neq, "$players_kingdom", "$g_talk_troop_faction"),
         (eq, "$g_player_cur_role", role_adventurer), ######## NEW v3.4
+		############### NEW v3.9.1 - fixes player vassal and mercenary being able to enlist on someone's army
+        (eq, "$player_has_homage", 0),
+        (neg|is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
+        # (eq, "$g_player_cur_role", role_adventurer), ######## NEW v3.4
+		####################################
 		############ NEW v2.8 - fixes player inability to enlist in v2.7
         # (eq, "$players_kingdom", 0),
         # (neg|faction_slot_eq, "$players_kingdom", slot_faction_state, sfs_active),
@@ -176,10 +181,10 @@ dialogs    = [
         ], "Alright. What do you have in mind?.", "lord_request_enlistment_division",[]],
     [anyone,"lord_request_enlistment", [(lt, "$g_talk_troop_relation", 0)], "I do not trust you enough to allow you to serve for me.", "lord_pretalk",[]],
     
-    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with mounted troops", "lord_request_enlistment_cavalry", []],
-    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with missile troops", "lord_request_enlistment_archers", []],
-    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with infantry troops", "lord_request_enlistment_infantry", []],
-    [anyone|plyr,"lord_request_enlistment_division", [], "Mmm, a moment to think my lord", "lord_pretalk", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with mounted troops.", "lord_request_enlistment_cavalry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with missile troops.", "lord_request_enlistment_archers", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Enlist with infantry troops.", "lord_request_enlistment_infantry", []],
+    [anyone|plyr,"lord_request_enlistment_division", [], "Mmm, a moment to think my lord.", "lord_pretalk", []],
 
     [anyone,"lord_request_enlistment_cavalry", [
         (store_skill_level, ":cur_riding", "skl_riding", "trp_player"),

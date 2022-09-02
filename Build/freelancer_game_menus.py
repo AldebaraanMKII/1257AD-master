@@ -86,10 +86,10 @@ game_menus = [
         (gt, reg0, 0),    
         (disable_menu_option)],"You cannot revolt now. Bide your time.", []),
         
-        ("desert",[],"Desert the army.(keep equipment but lose relations)",
+        ("desert",[],"Desert the army (keep equipment but lose relations).",
         [(jump_to_menu, "mnu_ask_desert"),]),
         
-        ("report",[],"Commander's Report",
+        ("report",[],"Commander's Report.",
         [(start_presentation, "prsnt_taragoth_lords_report"),]),
         
         ("return_to_duty",[

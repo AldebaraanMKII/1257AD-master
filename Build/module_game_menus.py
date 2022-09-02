@@ -6773,7 +6773,8 @@ game_menus = [ #
     ],
     [
 ####### NEW v2.9-KOMKE START-    
-     ("camp_modding",[(eq, 1, 1), is_edit_mode_enabled],"Go to the modding menu.",## menu only available in edit mode when releasing new version set this to false so it is disabled
+     # ("camp_modding",[(eq, 1, 1), is_edit_mode_enabled],"Go to the modding menu.",## menu only available in edit mode when releasing new version set this to false so it is disabled
+     ("camp_modding",[(ge, "$cheat_mode", 1)],"Go to the modding menu.",## menu only available in edit mode when releasing new version set this to false so it is disabled
        [
        # (assign, "$g_lord_creation_rate", 0), #### lord creation OFF
        # (assign, "$g_lord_death_chance_battle", 0),#### lord death OFF
@@ -6841,7 +6842,7 @@ game_menus = [ #
 #### export/import NPCs end ####
 
 #### mod options ####
-      ("action_mod_options",[], "1257AD Options",
+      ("action_mod_options",[], "1257AD Options.",
         [          
           (start_presentation, "prsnt_mod_options"),
         ]
@@ -6855,7 +6856,7 @@ game_menus = [ #
 
 
 ### NEW mod options ####
-      ("action_mod_options_2",[], "Enhanced Options",
+      ("action_mod_options_2",[], "Enhanced Options.",
         [          
          (jump_to_menu, "mnu_enhanced_mod_options"),
         ]
@@ -6869,7 +6870,7 @@ game_menus = [ #
       ("action_mod_options_3",[
       (ge, "$cheat_mode", 1)
       ],
-      "Debug Options",
+      "Debug Options.",
         [          
          (jump_to_menu, "mnu_debug_options"),
         ]
@@ -6885,7 +6886,7 @@ game_menus = [ #
 
 
 #### faction colours ####
-      ("action_faction_colours",[], "Change faction colours",
+      ("action_faction_colours",[], "Change faction colours.",
         [          
           (start_presentation, "prsnt_change_all_factions_color"),
         ]
