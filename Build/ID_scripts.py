@@ -1049,3 +1049,5 @@ script_lance_use_classify_agent = 1047
 script_update_mercenaries_in_fief = 1048
 script_ee_get_chance_of_execution = 1049
 script_ee_get_execution_method = 1050
+script_ee_get_quest = 1051
+script_ee_get_dynamic_quest = 1052

@@ -308,7 +308,13 @@ scripts = [
       (try_for_range, ":npc", mayors_begin, mayors_end),
         (troop_set_slot, ":npc", slot_troop_is_alive, 1),    ########### NEW v2.1 - those are active
       (try_end),
-      
+	  
+      ########### NEW v3.9.1 - those are active
+      (try_for_range, ":npc", village_elders_begin, village_elders_end),
+        (troop_set_slot, ":npc", slot_troop_is_alive, 1),    
+      (try_end),
+      ###########
+	  
       (try_for_range, ":npc", "trp_enhanced_rnd_lord_1", "trp_enhanced_rnd_lord_end"),
         (troop_set_slot, ":npc", slot_troop_is_alive, 0),    ########### NEW v2.1 - those are not active
       (try_end),
@@ -1179,7 +1185,19 @@ scripts = [
         (party_set_slot, "p_town_9_5", slot_center_siege_with_belfry, 1),
         ##########################
       (try_end),
-      
+      ############## NEW v3.9.1 - fixed constantinople having latin interiors
+        (try_begin),
+          (party_set_slot, "p_town_26_1", slot_town_center, "scn_byzantine_center"),
+          (party_set_slot, "p_town_26_1", slot_town_castle, "scn_town_interior_byz"),
+          (party_set_slot, "p_town_26_1", slot_town_prison, "scn_town_eastern_prison"),
+          (party_set_slot, "p_town_26_1", slot_town_walls, "scn_byzantine_walls_belfry"),
+          (party_set_slot, "p_town_26_1", slot_town_alley, "scn_town_eastern_alley"),
+          (party_set_slot, "p_town_26_1", slot_town_tavern, "scn_town_eastern_tavern"),
+          (party_set_slot, "p_town_26_1", slot_town_store, "scn_town_eastern_store"),
+          (party_set_slot, "p_town_26_1", slot_town_arena, "scn_town_eastern_arena"),
+          (party_set_slot, "p_town_26_1", slot_center_siege_with_belfry,   1),
+        (try_end),
+############################
       # Castle scenes rafi
       (try_for_range, ":castle_no", castles_begin, castles_end),
         (store_faction_of_party, ":fac_no", ":castle_no"),

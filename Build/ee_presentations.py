@@ -5701,7 +5701,6 @@ presentations = [
       (position_set_x, pos1, 400),
       (position_set_y, pos1, 540),
       (overlay_set_position, reg1, pos1),
-	  
       (create_text_overlay, reg1, "@Culture:", tf_left_align),
       (position_set_x, pos1, 400),
       (position_set_y, pos1, 520),

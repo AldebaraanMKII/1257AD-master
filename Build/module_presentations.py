@@ -12055,7 +12055,7 @@ presentations = [
           (val_mul, ":cur_wage", ":stack_size"),
           (val_add, ":total_wage", ":cur_wage"),
         (try_end),
-		############# NEW v3.8
+		############# NEW v3.8 - patrols cost 35% less
         (try_begin),
 		  (party_slot_eq, ":party_no", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
             (val_div, ":total_wage", 100),
@@ -12082,11 +12082,12 @@ presentations = [
             (val_div, ":total_wage", 100),
             (val_mul, ":total_wage", 30),
         (else_try),
-################################## NEW v2.1
-		## FLORIS 2.52- ##
-        # (try_begin),
           (eq, ":garrison_troop", 1),
-          # (val_div, ":total_wage", 3), #Half payment for garrisons
+          (party_slot_eq, ":party_no", slot_garrison_control, lord_controled),
+            (val_div, ":total_wage", 2), #Half payment for garrisons
+        (else_try),
+################################## NEW v2.1
+          (eq, ":garrison_troop", 1),
           (val_div, ":total_wage", 2), #Half payment for garrisons
         (else_try),
           (eq, ":party_no", "p_main_party"),

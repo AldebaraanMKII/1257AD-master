@@ -2858,7 +2858,8 @@ game_menus = [
      ("garrison_control_player",
      [
        (party_slot_eq, "$current_town", slot_garrison_control, town_controled),
-     ], "Take control of the garrison (Warning: this will disband current garrison).",
+     # ], "Take control of the garrison (Warning: this will disband current garrison).",
+     ], "Take control of the garrison (Warning: this will disband current garrison if option in EE menu is checked).",
      [
        (party_set_slot, "$current_town", slot_garrison_control, lord_controled),      
        (try_begin), 
@@ -4047,7 +4048,7 @@ game_menus = [
      #(set_background_mesh, "mesh_pic_test_menu"),
    ],     
     [      
-       ("debug_options_1",[], "Reset Tavern troops",
+       ("debug_options_1",[], "Reset Tavern troops.",
        [
         (try_for_range, ":town_no", towns_begin, towns_end),
           (store_sub, ":offset", ":town_no", towns_begin),
@@ -4684,7 +4685,7 @@ game_menus = [
                                       (this_or_next|eq, "$g_encountered_party", "p_town_27_1"),
 
                                       
-                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_docks, 0)
+                                      (party_slot_eq, "$g_encountered_party", slot_center_tier_docks, 0),
                                        ],
        "Build a Merchant's Warf.",[(assign, "$g_improvement_type", slot_center_tier_docks),
                                   (jump_to_menu, "mnu_center_improve"),]),
@@ -10109,6 +10110,90 @@ game_menus = [
        ]
        ),
 	   #######################################
+	   ############# NEW v3.9.1
+       ("debug_options2_9",[], "Display all tavern dwellers and infested village locations.",
+	   [
+      # (call_script, "script_update_ransom_brokers"),
+      # (call_script, "script_update_tavern_travellers"),
+      # (call_script, "script_update_tavern_minstrels"),
+      # (call_script, "script_update_booksellers"),
+	  
+          (try_for_range, ":tavern", towns_begin, towns_end),
+		    ######## Drunks
+            (try_begin),
+			  (party_slot_ge, ":tavern", slot_center_tavern_troop, 1),
+			    (party_get_slot, ":troop", ":tavern", slot_center_tavern_troop),
+			    (str_store_party_name_link, s40, ":tavern"),
+			    (str_store_troop_name, s41, ":troop"),
+			    (display_message, "@{s40} has {s41} as belligerent drunk."),
+            (try_end),
+			
+		    ######## Ransom Brokers
+            (try_begin),
+			  (party_slot_ge, ":tavern", slot_center_ransom_broker, 1),
+			    (str_store_party_name_link, s40, ":tavern"),
+			    (display_message, "@{s40} has a ransom broker."),
+            (try_end),
+			
+		    ######## Traveller
+            (try_begin),
+			  (party_slot_ge, ":tavern", slot_center_tavern_traveler, 1),
+			    (str_store_party_name_link, s40, ":tavern"),
+			    (display_message, "@{s40} has a tavern traveler."),
+            (try_end),
+			
+		    ######## Minstrel
+            (try_begin),
+			  (party_slot_ge, ":tavern", slot_center_tavern_minstrel, 1),
+			    (str_store_party_name_link, s40, ":tavern"),
+			    (display_message, "@{s40} has a tavern minstrel."),
+            (try_end),
+			
+		    ######## Bookseller
+            (try_begin),
+			  (party_slot_ge, ":tavern", slot_center_tavern_bookseller, 1),
+			    (str_store_party_name_link, s40, ":tavern"),
+			    (display_message, "@{s40} has a bookseller."),
+            (try_end),
+          (try_end),
+	  
+		  ### promoter
+          (try_begin),
+            (troop_get_slot, ":tavern", "trp_fight_promoter", slot_troop_cur_center),
+		    (str_store_party_name_link, s40, ":tavern"),
+		    (str_store_troop_name, s41, "trp_fight_promoter"),
+		    (display_message, "@{s41} is in {s40}."),
+          (try_end),
+			
+          (try_for_range, ":village", villages_begin, villages_end),
+			(party_slot_ge, ":village", slot_village_infested_by_bandits, 1),
+			  (str_store_party_name_link, s40, ":village"),
+			  (display_message, "@{s40} is infested by bandits."),
+          (try_end),
+	   ]),
+	   #######################################
+       ("debug_options2_10",[], "Start a quest.",
+       [
+       (jump_to_menu, "mnu_debug_options_quest_select_1"),
+       ]
+       ),
+	   #######################################
+       ("debug_options2_11",[], "Make Constantinople have byzantine scenes.",
+       [
+        (try_begin),
+          (party_set_slot, "p_town_26_1", slot_town_center, "scn_byzantine_center"),
+          (party_set_slot, "p_town_26_1", slot_town_castle, "scn_town_interior_byz"),
+          (party_set_slot, "p_town_26_1", slot_town_prison, "scn_town_eastern_prison"),
+          (party_set_slot, "p_town_26_1", slot_town_walls, "scn_byzantine_walls_belfry"),
+          (party_set_slot, "p_town_26_1", slot_town_alley, "scn_town_eastern_alley"),
+          (party_set_slot, "p_town_26_1", slot_town_tavern, "scn_town_eastern_tavern"),
+          (party_set_slot, "p_town_26_1", slot_town_store, "scn_town_eastern_store"),
+          (party_set_slot, "p_town_26_1", slot_town_arena, "scn_town_eastern_arena"),
+          (party_set_slot, "p_town_26_1", slot_center_siege_with_belfry,   1),
+        (try_end),
+       ]
+       ),
+	   #######################################
 	   #######################################
        ("debug_options2_99",[], "Go back.",
        [
@@ -10121,6 +10206,77 @@ game_menus = [
 
 
 
+
+########################### NEW v3.9.1 - start a quest
+  ("debug_options_quest_select_1", mnf_enable_hot_keys,
+   "Choose a quest (Note: this will select a random alive lord/mayor/village elder/lady as the quest giver so it's better to try this in a new adventurer start with neutral relations.).",
+   "none",
+    [],
+    [
+	   ########## Lord quests
+       ("debug_options_quest_select_1_1",[], "Deliver Message.",
+       [
+	   (assign, ":loop_end", 50),
+	   (try_for_range, ":variable1", 0, ":loop_end"),
+         (store_random_in_range, ":random_npc", lords_begin, lords_end),
+		 (troop_slot_eq, ":random_npc", slot_troop_is_alive, 1),
+         (neg|troop_slot_ge, ":random_npc", slot_troop_prisoner_of_party, 0), 
+	       (call_script, "script_ee_get_quest", "qst_deliver_message", ":random_npc"),
+	       (assign, ":loop_end", -1), ##### end loop
+       (try_end),
+       ]
+       ),
+	   
+	   ########## Lady quests
+       ("debug_options_quest_select_1_2",[], "Visit lady.",
+       [
+	   (assign, ":loop_end", 50),
+	   (try_for_range, ":variable1", 0, ":loop_end"),
+         (store_random_in_range, ":random_npc", kingdom_ladies_begin, kingdom_ladies_end),
+		 (troop_slot_eq, ":random_npc", slot_troop_is_alive, 1),
+         (neg|troop_slot_ge, ":random_npc", slot_troop_prisoner_of_party, 0), 
+	       (call_script, "script_ee_get_quest", "qst_visit_lady", ":random_npc"),
+	       (assign, ":loop_end", -1), ##### end loop
+       (try_end),
+       ]
+       ),
+	   
+	   ########## 
+       ("debug_options_quest_select_1_3",[], "Incriminate loyal commander.",
+       [
+	   (assign, ":loop_end", 50),
+	   (try_for_range, ":variable1", 0, ":loop_end"),
+         (store_random_in_range, ":random_npc", lords_begin, lords_end),
+		 (troop_slot_eq, ":random_npc", slot_troop_is_alive, 1),
+         (neg|troop_slot_ge, ":random_npc", slot_troop_prisoner_of_party, 0), 
+	       (call_script, "script_ee_get_quest", "qst_incriminate_loyal_commander", ":random_npc"),
+	       (assign, ":loop_end", -1), ##### end loop
+       (try_end),
+       ]
+       ),
+	   
+	   ########## 
+       ("debug_options_quest_select_1_4",[], "Rescue lord.",
+       [
+	   (assign, ":loop_end", 50),
+	   (try_for_range, ":variable1", 0, ":loop_end"),
+         (store_random_in_range, ":random_npc", kingdom_ladies_begin, kingdom_ladies_end),
+		 (troop_slot_eq, ":random_npc", slot_troop_is_alive, 1),
+         (neg|troop_slot_ge, ":random_npc", slot_troop_prisoner_of_party, 0), 
+	       (call_script, "script_ee_get_quest", "qst_rescue_lord_by_replace", ":random_npc"),
+	       (assign, ":loop_end", -1), ##### end loop
+       (try_end),
+       ]
+       ),
+###########################
+       ("debug_options_quest_select_1_20",[], "Go back.",
+       [
+       (jump_to_menu, "mnu_debug_options_new_2"),
+       ]
+       ),
+###########################
+	]),
+###########################
 
 ########################### NEW v3.7 - start war with faction
   ("choose_faction_to_war_1", mnf_enable_hot_keys,

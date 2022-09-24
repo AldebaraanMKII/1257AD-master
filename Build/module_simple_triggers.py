@@ -7891,7 +7891,7 @@ simple_triggers = [
 (168,   
 [
  
-(gt, "$g_misc_civil_war_chance", 0), ######### if disabled don't do anything
+(gt, "$g_misc_civil_war_chance", 9999999), ######### if disabled don't do anything
  (val_add, "$g_misc_civil_war_hours_passed", 0.3*100), ######### trigger rate x 100 for rounding values
  (try_begin),
    (store_mul, ":rate", "$g_misc_civil_war_rate", 100),  ######### simulates a float number 

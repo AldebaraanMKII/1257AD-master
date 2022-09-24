@@ -22346,12 +22346,9 @@ game_menus = [ #
     [
      (try_begin),
        (eq, "$g_battle_result", 1),
-       (str_store_string, s9, "@You slaughter the bastards, like they were nothing!\
-       The peasents cheer you're name and are planing on holding a feast in the near\
-       future to honor you!\
-       "),
+       (str_store_string, s9, "@You slaughter the bandits like they were nothing! The peasants cheer your name and are planning on holding a feast in the near future to honor you!"),
      (else_try),
-       (str_store_string, s9, "@Try as you might, you could not defeat the bastards. They had there fun with the settlement peasents and went off, to celebrate elsewhere."),
+       (str_store_string, s9, "@Trying as you might, you could not defeat the bandits. They had their fun with the settlement peasants and went off, to celebrate elsewhere."),
        (set_background_mesh, "mesh_pic_looted_village"),
      (try_end),
     ],
@@ -22363,7 +22360,8 @@ game_menus = [ #
       [
         (display_message, "@Relationship with the regional center improves!", 0x00FF00),
         (party_get_slot, ":bound_center", "$g_encountered_party",slot_village_bound_center),
-        (call_script, "script_change_player_relation_with_center", ":bound_center", 1),
+        # (call_script, "script_change_player_relation_with_center", ":bound_center", 1),
+        (call_script, "script_change_player_relation_with_center", ":bound_center", 3),  ###### NEW v3.9.1 - 
         
         #(assign, "$g_next_menu", "mnu_manor_center"),
 

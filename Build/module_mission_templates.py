@@ -1971,8 +1971,11 @@ mission_templates = [
          (store_random_in_range, ":randomized_addition_courage", 0, 3000), #average : 1500
          (val_add, ":initial_courage_score", ":randomized_addition_courage"), 
                    
-         (agent_get_party_id, ":agent_party", ":agent_no"),         
-         (party_get_morale, ":cur_morale", ":agent_party"),
+		 ############## NEW v3.9.1 - fixed errors at battle start
+         # (agent_get_party_id, ":agent_party", ":agent_no"),         
+         # (party_get_morale, ":cur_morale", ":agent_party"), 
+         (assign, ":cur_morale", 100),
+############################
          
          (store_sub, ":morale_effect_on_courage", ":cur_morale", 70),
          (val_mul, ":morale_effect_on_courage", 30), #this can effect morale with -2100..900

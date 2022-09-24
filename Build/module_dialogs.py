@@ -4622,18 +4622,59 @@ dialogs = [
 [anyone|plyr, "member_talk", [
     (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
     (faction_slot_eq,  "$players_kingdom", slot_faction_marshall, "trp_player"),
+    (is_between, "$g_talk_troop", companions_begin, companions_end),   ###### NEW v3.9.1 - fixed normal troops getting this dialogue
   ], "As marshal, I wish you to send a message to the vassals of the realm.", "member_direct_campaign",[]],
 
 
-[anyone|plyr, "member_talk", [],
+# [anyone|plyr, "member_talk", [],
+# "Let me see your equipment.", "member_trade",[]],
+# [anyone, "member_trade", [], "Very well, it's all here...", "do_member_trade",[
+# ######      (change_screen_trade)
+      # (change_screen_equip_other),
+      # ]],
+	  
+############## NEW v3.9.1 - fixed player being able to get any troop equipment repeatedly 
+[anyone|plyr, "member_talk", 
+[
+(neg|is_between, "$g_talk_troop", companions_begin, companions_end),   
+],
+"Let me see your equipment.", "member_trade",[]],
 
-   "Let me see your equipment.", "member_trade",[]],
 [anyone, "member_trade", [], "Very well, it's all here...", "do_member_trade",[
-#      (change_screen_trade)
-      (change_screen_equip_other),
-      ]],
+######      (change_screen_trade)
+(call_script, "script_dplmc_copy_inventory", "trp_player", "trp_temp_array_a"),
+(call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
 
-[anyone, "do_member_trade", [], "Anything else?", "member_talk",[]],
+(try_for_range, ":i_slot", 0, 10),
+  (troop_get_inventory_slot, ":item", "trp_temp_array_b", ":i_slot"),
+  (gt, ":item", -1),
+  (troop_get_inventory_slot_modifier, ":imod", "trp_temp_array_b", ":i_slot"),
+  (troop_add_item, "trp_temp_array_b", ":item", ":imod"),
+  (troop_set_inventory_slot, "trp_temp_array_b", ":i_slot", -1),
+(try_end),
+
+(change_screen_loot, "trp_temp_array_b"),
+]],
+
+[anyone, "do_member_trade", [], "Anything else?", "member_talk",
+[
+(call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),
+]
+],
+##########################################################
+[anyone|plyr, "member_talk", 
+[
+(is_between, "$g_talk_troop", companions_begin, companions_end),   
+],
+"Let me see your equipment.", "member_trade2",[]],
+
+[anyone, "member_trade2", [], "Very well, it's all here...", "do_member_trade_companion",[
+      (change_screen_equip_other)
+      ]],
+	  
+[anyone, "do_member_trade_companion", [], "Anything else?", "member_talk",[]],
+############################
+
 
 [anyone|plyr, "member_talk", [], "What can you tell me about your skills?", "view_member_char_requested",[]],
 [anyone, "view_member_char_requested", [], "All right, let me tell you...", "do_member_view_char",[(change_screen_view_character)]],
@@ -4641,6 +4682,7 @@ dialogs = [
 [anyone|plyr, "member_talk", [], "We need to separate for a while.", "member_separate",[
             (call_script, "script_npc_morale", "$g_talk_troop"),
             (assign, "$npc_quit_morale", reg0),
+            (is_between, "$g_talk_troop", companions_begin, companions_end),   ###### NEW v3.9.1 - fixed normal troops getting this dialogue
       ]],
 
 [anyone, "member_separate", [
@@ -4667,7 +4709,10 @@ dialogs = [
        ]],
 
 
-[anyone|plyr, "member_talk", [], "I'd like to ask you something.", "member_question",[]],
+[anyone|plyr, "member_talk", 
+[
+(is_between, "$g_talk_troop", companions_begin, companions_end),   ###### NEW v3.9.1 - fixed normal troops getting this dialogue
+], "I'd like to ask you something.", "member_question",[]],
 
 [anyone|plyr, "member_talk", [], "Never mind.", "close_window",[]],
 
@@ -39314,10 +39359,15 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone|plyr, "prisoner_chat_noble_execute_4_kill", [(str_store_troop_name, s1, "$g_talk_troop")], "({s1} struggles against his shackles, desperate to free himself and escape you, but to no avail. You strike him with a knife to the gut and watch, satisfied, as his corpse sags to the floor.)", "close_window",
 [
-(assign, "$g_method_of_execution", 5),
-(call_script, "script_kill_lord_execution", "trp_player", "$g_talk_troop", "p_main_party", "$g_method_of_execution"),
+# (assign, "$g_method_of_execution", 5),
+# (call_script, "script_kill_lord_execution", "trp_player", "$g_talk_troop", "p_main_party", "$g_method_of_execution"),
+(call_script, "script_kill_lord_execution", "trp_player", "$g_talk_troop", "p_main_party", 5, 2), ###### NEW v3.9.1 - 
+   # (store_script_param, ":killer", 1),
+   # (store_script_param, ":dead_troop", 2),
+   # (store_script_param, ":party_no", 3),
+   # (store_script_param, ":execution_method", 4),
+   # (store_script_param, ":execution_reason", 5),
 ]],
-
 ######## This one made the game crash
 # [anyone, "prisoner_chat_noble_execute_4", [], "D-Damn youuuu......", "close_window",
 # [
