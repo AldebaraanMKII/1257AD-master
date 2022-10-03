@@ -13303,16 +13303,35 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (str_store_string, s11, ":offset"),
 (str_store_string, s11, "@Your kingdom culture is: {s11}"),
 (try_end),
+###### NEW v3.9.1 - reduction with trade skill
+(call_script, "script_get_max_skill_of_player_party", "skl_trade"),
+(assign, ":trade_skill", reg0),
+(val_mul, ":trade_skill", 5),  ####### 5% per skill level
+(assign, ":cost", 15000),
+(store_div, ":reduction", ":cost", 100),
+(store_mul, ":reduction", ":trade_skill"),
+(val_sub, ":cost", ":reduction"),
+(assign, reg20, ":cost"),
+##################
 ],
-"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold).", "dplmc_chancellor_kingdom_culture_select",
+"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20})).", "dplmc_chancellor_kingdom_culture_select",
 []],
 
 
 
 [anyone|plyr|repeat_for_factions, "dplmc_chancellor_kingdom_culture_select",
 [
+###### NEW v3.9.1 - reduction with trade skill
+(call_script, "script_get_max_skill_of_player_party", "skl_trade"),
+(assign, ":trade_skill", reg0),
+(val_mul, ":trade_skill", 5),  ####### 5% per skill level
+(assign, ":cost", 15000),
+(store_div, ":reduction", ":cost", 100),
+(store_mul, ":reduction", ":trade_skill"),
+(val_sub, ":cost", ":reduction"),
 (store_troop_gold, ":player_gold", "trp_player"),
-(ge, ":player_gold", 15000),
+(ge, ":player_gold", ":cost"),
+##################
 (store_repeat_object, ":faction_no"),
 (is_between, ":faction_no", cultures_begin, cultures_end),
 ##nested diplomacy end+
@@ -13824,8 +13843,17 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ##diplomacy start+
 [anyone|plyr, "dplmc_chancellor_kingdom_culture_select",
 [
+###### NEW v3.9.1 - reduction with trade skill
+(call_script, "script_get_max_skill_of_player_party", "skl_trade"),
+(assign, ":trade_skill", reg0),
+(val_mul, ":trade_skill", 5),  ####### 5% per skill level
+(assign, ":cost", 15000),
+(store_div, ":reduction", ":cost", 100),
+(store_mul, ":reduction", ":trade_skill"),
+(val_sub, ":cost", ":reduction"),
 (store_troop_gold, ":player_gold", "trp_player"),
-(ge, ":player_gold", 15000),
+(ge, ":player_gold", ":cost"),
+##################
 ],
 "Make no change.", "minister_pretalk",
 []],
@@ -13833,8 +13861,17 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ###### NEW v2.4 - fixes bug
 [anyone|plyr, "dplmc_chancellor_kingdom_culture_select",
 [
+###### NEW v3.9.1 - reduction with trade skill
+(call_script, "script_get_max_skill_of_player_party", "skl_trade"),
+(assign, ":trade_skill", reg0),
+(val_mul, ":trade_skill", 5),  ####### 5% per skill level
+(assign, ":cost", 15000),
+(store_div, ":reduction", ":cost", 100),
+(store_mul, ":reduction", ":trade_skill"),
+(val_sub, ":cost", ":reduction"),
 (store_troop_gold, ":player_gold", "trp_player"),
-(lt, ":player_gold", 15000),
+(lt, ":player_gold", ":cost"),
+########################
 ],
 "Forget about it (not enough money).", "minister_pretalk",
 []],

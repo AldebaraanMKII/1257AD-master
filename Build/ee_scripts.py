@@ -9633,6 +9633,21 @@ scripts = [
        (store_random_in_range, ":random_surname", "str_enhanced_surname_portuguese_1", "str_enhanced_name_italian_1"),
        (str_store_string, s1, ":random_name"),  
        (str_store_string, s2, ":random_surname"),  
+################# NEW v3.9.1 - fixed crusader iberian lords spawning without names
+   (else_try),
+     (eq, ":cur_lord_culture", "fac_culture_iberian"),
+       (call_script, "script_rand", 0, 100),  
+       (try_begin), ### 30% portuguese, 70% spanish
+         (lt, reg0, 30),
+           (store_random_in_range, ":random_name", "str_enhanced_name_portuguese_1", "str_enhanced_surname_portuguese_1"),
+           (store_random_in_range, ":random_surname", "str_enhanced_surname_portuguese_1", "str_enhanced_name_italian_1"),
+       (else_try),
+         (ge, reg0, 30),
+           (store_random_in_range, ":random_name", "str_enhanced_name_spanish_1", "str_enhanced_surname_spanish_1"),
+           (store_random_in_range, ":random_surname", "str_enhanced_surname_spanish_1", "str_enhanced_name_portuguese_1"),
+       (try_end),        
+       (str_store_string, s1, ":random_name"),  
+       (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
      (eq, ":cur_lord_culture", "fac_culture_italian"),
@@ -10726,24 +10741,24 @@ scripts = [
    (store_troop_faction, ":faction_killer_npc", ":killer"), 
    (store_troop_faction, ":dead_troop_faction", ":dead_troop"), 
    
-   (try_begin),
-     (neq, ":execution_reason", 2), ########## NEW v3.9
-     (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
-       (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
-       (neq, ":faction", ":faction_killer_npc"), 
-       (neq, ":faction", ":dead_troop_faction"),  
-         (store_relation, ":relation", ":faction", ":dead_troop_faction"),
-         (try_begin),
-           (ge, ":relation", 20), 
-             (store_add, ":relation_change", ":relation", ":half"),
-             (set_relation, ":faction", ":faction_killer_npc", ":relation_change"),
-         (try_end),
-     (try_end),
+   # (try_begin),
+     # (neq, ":execution_reason", 2), ########## NEW v3.9
+     # (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
+       # (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
+       # (neq, ":faction", ":faction_killer_npc"), 
+       # (neq, ":faction", ":dead_troop_faction"),  
+         # (store_relation, ":relation", ":faction", ":dead_troop_faction"),
+         # (try_begin),
+           # (ge, ":relation", 20), 
+             # (store_add, ":relation_change", ":relation", ":half"),
+             # (set_relation, ":faction", ":faction_killer_npc", ":relation_change"),
+         # (try_end),
+     # (try_end),
 
-     (store_relation, ":relation", ":dead_troop_faction", ":faction_killer_npc"),
-     (store_add, ":relation_change", ":relation", ":impact"),
-     (set_relation, ":dead_troop_faction", ":faction_killer_npc", ":relation_change"),
-   (try_end),
+     # (store_relation, ":relation", ":dead_troop_faction", ":faction_killer_npc"),
+     # (store_add, ":relation_change", ":relation", ":impact"),
+     # (set_relation, ":dead_troop_faction", ":faction_killer_npc", ":relation_change"),
+   # (try_end),
 
    (try_begin),
      # apply the honor hit (if player)
@@ -10906,21 +10921,21 @@ scripts = [
    (val_add, ":cur_slot_value", 1),
    (faction_set_slot, ":dead_troop_faction", slot_faction_lords_lost_battle, ":cur_slot_value"),
    ################
-   (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
-     (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
-     (neq, ":faction", ":faction_killer_npc"), 
-     (neq, ":faction", ":dead_troop_faction"),  
-       (store_relation, ":relation", ":faction", ":dead_troop_faction"),
-       (try_begin),
-         (ge, ":relation", 20), 
-           (store_add, ":relation_change", ":relation", ":half"),
-           (set_relation, ":faction", ":faction_killer_npc", ":relation_change"),
-       (try_end),
-   (try_end),
+   # (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
+     # (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
+     # (neq, ":faction", ":faction_killer_npc"), 
+     # (neq, ":faction", ":dead_troop_faction"),  
+       # (store_relation, ":relation", ":faction", ":dead_troop_faction"),
+       # (try_begin),
+         # (ge, ":relation", 20), 
+           # (store_add, ":relation_change", ":relation", ":half"),
+           # (set_relation, ":faction", ":faction_killer_npc", ":relation_change"),
+       # (try_end),
+   # (try_end),
 
-   (store_relation, ":relation", ":dead_troop_faction", ":faction_killer_npc"),
-   (store_add, ":relation_change", ":relation", ":impact"),
-   (set_relation, ":dead_troop_faction", ":faction_killer_npc", ":relation_change"),
+   # (store_relation, ":relation", ":dead_troop_faction", ":faction_killer_npc"),
+   # (store_add, ":relation_change", ":relation", ":impact"),
+   # (set_relation, ":dead_troop_faction", ":faction_killer_npc", ":relation_change"),
 
    (try_begin),
    #### gives morale to the party
@@ -11142,9 +11157,9 @@ scripts = [
              # (store_relation, ":relation", "fac_player_supporters_faction", ":killer_faction"),
              # (call_script, "script_set_player_relation_with_faction", ":killer_faction", ":relation"),
            # (else_try),
-             (store_relation, ":relation", ":dead_troop_faction", ":killer_faction"),
-             (store_add, ":relation", ":relation", ":impact"),
-             (set_relation, ":dead_troop_faction", ":killer_faction", ":relation"),
+             # (store_relation, ":relation", ":dead_troop_faction", ":killer_faction"),
+             # (store_add, ":relation", ":relation", ":impact"),
+             # (set_relation, ":dead_troop_faction", ":killer_faction", ":relation"),
            (try_end), 
 			 
            ######### process friends/enemies reactions
@@ -16411,6 +16426,8 @@ scripts = [
    ########### lend companion 
    (try_begin),
      (check_quest_active, "qst_lend_companion"),
+     (this_or_next|quest_slot_eq, "qst_lend_companion", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_lend_companion", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_lend_companion", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_lend_companion"),
    (try_end),
@@ -16418,6 +16435,8 @@ scripts = [
    ########### lend surgeon 
    (try_begin),
      (check_quest_active, "qst_lend_surgeon"),
+     (this_or_next|quest_slot_eq, "qst_lend_surgeon", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_lend_surgeon", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_lend_surgeon", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_lend_surgeon"),
    (try_end),
@@ -16425,22 +16444,26 @@ scripts = [
    ########### deliver message
    (try_begin),
      (check_quest_active, "qst_deliver_message"),
-     (this_or_next|quest_slot_eq, "qst_deliver_message", slot_quest_giver_troop, ":dead_troop"),
-     (quest_slot_eq, "qst_deliver_message", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_deliver_message", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_deliver_message", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_deliver_message", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_deliver_message"),
    (try_end),
 
    ########### deliver message to enemy lord
    (try_begin),
      (check_quest_active, "qst_deliver_message_to_enemy_lord"),
-     (this_or_next|quest_slot_eq, "qst_deliver_message_to_enemy_lord", slot_quest_giver_troop, ":dead_troop"),
-     (quest_slot_eq, "qst_deliver_message_to_enemy_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_deliver_message_to_enemy_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_deliver_message_to_enemy_lord", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_deliver_message_to_enemy_lord", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_deliver_message_to_enemy_lord"),
    (try_end),
 
    ########### raise troops
    (try_begin),
      (check_quest_active, "qst_raise_troops"),
+     (this_or_next|quest_slot_eq, "qst_raise_troops", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_raise_troops", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_raise_troops", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_raise_troops"),
    (try_end),
@@ -16448,6 +16471,8 @@ scripts = [
    ########### collect taxes
    (try_begin),
      (check_quest_active, "qst_collect_taxes"),
+     (this_or_next|quest_slot_eq, "qst_collect_taxes", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_collect_taxes", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_collect_taxes", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_collect_taxes"),
    (try_end),
@@ -16455,6 +16480,8 @@ scripts = [
    ########### hunt down fugitive
    (try_begin),
      (check_quest_active, "qst_hunt_down_fugitive"),
+     (this_or_next|quest_slot_eq, "qst_hunt_down_fugitive", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_hunt_down_fugitive", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_hunt_down_fugitive", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_hunt_down_fugitive"),
    (try_end),
@@ -16462,6 +16489,8 @@ scripts = [
    ########### kill local merchant
    (try_begin),
      (check_quest_active, "qst_kill_local_merchant"),
+     (this_or_next|quest_slot_eq, "qst_kill_local_merchant", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_kill_local_merchant", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_kill_local_merchant", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_kill_local_merchant"),
    (try_end),
@@ -16469,6 +16498,8 @@ scripts = [
    ########### bring back runaway serfs
    (try_begin),
      (check_quest_active, "qst_bring_back_runaway_serfs"),
+     (this_or_next|quest_slot_eq, "qst_bring_back_runaway_serfs", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_bring_back_runaway_serfs", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_bring_back_runaway_serfs", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_bring_back_runaway_serfs"),
    (try_end),
@@ -16476,6 +16507,8 @@ scripts = [
    ########### follow spy
    (try_begin),
      (check_quest_active, "qst_follow_spy"),
+     (this_or_next|quest_slot_eq, "qst_follow_spy", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_follow_spy", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_follow_spy", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_follow_spy"),
    (try_end),
@@ -16483,6 +16516,8 @@ scripts = [
    ########### capture enemy hero
    (try_begin),
      (check_quest_active, "qst_capture_enemy_hero"),
+     (this_or_next|quest_slot_eq, "qst_capture_enemy_hero", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_capture_enemy_hero", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_capture_enemy_hero", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_capture_enemy_hero"),
    (try_end),
@@ -16490,14 +16525,17 @@ scripts = [
    ########### collect debt
    (try_begin),
      (check_quest_active, "qst_collect_debt"),
-     (this_or_next|quest_slot_eq, "qst_collect_debt", slot_quest_giver_troop, ":dead_troop"),
-     (quest_slot_eq, "qst_collect_debt", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_collect_debt", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_collect_debt", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_collect_debt", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_collect_debt"),
    (try_end),
 
    ########### capture prisoners
    (try_begin),
      (check_quest_active, "qst_capture_prisoners"),
+     (this_or_next|quest_slot_eq, "qst_capture_prisoners", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_capture_prisoners", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_capture_prisoners", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_capture_prisoners"),
    (try_end),
@@ -16505,6 +16543,8 @@ scripts = [
    ########### follow army
    (try_begin),
      (check_quest_active, "qst_follow_army"),
+     (this_or_next|quest_slot_eq, "qst_follow_army", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_follow_army", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_follow_army", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_follow_army"),
    (try_end),
@@ -16512,13 +16552,8 @@ scripts = [
    ########### report to army
    (try_begin),
      (check_quest_active, "qst_report_to_army"),
-     (quest_slot_eq, "qst_report_to_army", slot_quest_giver_troop, ":dead_troop"),
-       (call_script, "script_cancel_quest", "qst_report_to_army"),
-   (try_end),
-
-   ########### report to army
-   (try_begin),
-     (check_quest_active, "qst_report_to_army"),
+     (this_or_next|quest_slot_eq, "qst_report_to_army", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_report_to_army", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_report_to_army", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_report_to_army"),
    (try_end),
@@ -16526,6 +16561,8 @@ scripts = [
    ########### deliver cattle to army
    (try_begin),
      (check_quest_active, "qst_deliver_cattle_to_army"),
+     (this_or_next|quest_slot_eq, "qst_deliver_cattle_to_army", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_deliver_cattle_to_army", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_deliver_cattle_to_army", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_deliver_cattle_to_army"),
    (try_end),
@@ -16533,6 +16570,8 @@ scripts = [
    ########### join siege with army
    (try_begin),
      (check_quest_active, "qst_join_siege_with_army"),
+     (this_or_next|quest_slot_eq, "qst_join_siege_with_army", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_join_siege_with_army", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_join_siege_with_army", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_join_siege_with_army"),
    (try_end),
@@ -16540,6 +16579,8 @@ scripts = [
    ########### screen army
    (try_begin),
      (check_quest_active, "qst_screen_army"),
+     (this_or_next|quest_slot_eq, "qst_screen_army", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_screen_army", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_screen_army", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_screen_army"),
    (try_end),
@@ -16547,6 +16588,8 @@ scripts = [
    ########### scout
    (try_begin),
      (check_quest_active, "qst_scout_waypoints"),
+     (this_or_next|quest_slot_eq, "qst_scout_waypoints", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_scout_waypoints", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_scout_waypoints", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_scout_waypoints"),
    (try_end),
@@ -16555,35 +16598,45 @@ scripts = [
    ########### rescue lord
    (try_begin),
      (check_quest_active, "qst_rescue_lord_by_replace"),
-     (quest_slot_eq, "qst_rescue_lord_by_replace", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_rescue_lord_by_replace", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_rescue_lord_by_replace", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_rescue_lord_by_replace", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_rescue_lord_by_replace"),
    (try_end),
    
    ########### deliver message
    (try_begin),
      (check_quest_active, "qst_deliver_message_to_prisoner_lord"),
-     (quest_slot_eq, "qst_deliver_message_to_prisoner_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_deliver_message_to_prisoner_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_deliver_message_to_prisoner_lord", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_deliver_message_to_prisoner_lord", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_deliver_message_to_prisoner_lord"),
    (try_end),
    
    ########### duel
    (try_begin),
      (check_quest_active, "qst_duel_for_lady"),
-     (quest_slot_eq, "qst_duel_for_lady", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_duel_for_lady", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_duel_for_lady", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_duel_for_lady", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_duel_for_lady"),
    (try_end),
    
    ########### duel (rival)
    (try_begin),
      (check_quest_active, "qst_duel_courtship_rival"),
-     (quest_slot_eq, "qst_duel_courtship_rival", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_duel_courtship_rival", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_duel_courtship_rival", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_duel_courtship_rival", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_duel_courtship_rival"),
    (try_end),
    
    ########### duel (insult)
    (try_begin),
      (check_quest_active, "qst_duel_avenge_insult"),
-     (quest_slot_eq, "qst_duel_avenge_insult", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_duel_avenge_insult", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_duel_avenge_insult", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_duel_avenge_insult", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_duel_avenge_insult"),
    (try_end),
    
@@ -16592,28 +16645,55 @@ scripts = [
    (try_begin),
      (check_quest_active, "qst_persuade_lords_to_make_peace"),
      (this_or_next|quest_slot_eq, "qst_persuade_lords_to_make_peace", slot_quest_target_troop, ":dead_troop"),
-     (quest_slot_eq, "qst_persuade_lords_to_make_peace", slot_quest_object_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_persuade_lords_to_make_peace", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_persuade_lords_to_make_peace", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_persuade_lords_to_make_peace"),
    (try_end),
    
    ########### marriage proposal
    (try_begin),
      (check_quest_active, "qst_formal_marriage_proposal"),
-     (quest_slot_eq, "qst_formal_marriage_proposal", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_formal_marriage_proposal", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_formal_marriage_proposal", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_formal_marriage_proposal", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_formal_marriage_proposal"),
    (try_end),
    
-   ########### marriage proposal
+   ####### NEW v3.9.1
+   ########### qst_obtain_liege_blessing  
    (try_begin),
-     (check_quest_active, "qst_formal_marriage_proposal"),
-     (quest_slot_eq, "qst_formal_marriage_proposal", slot_quest_target_troop, ":dead_troop"),
-       (call_script, "script_cancel_quest", "qst_formal_marriage_proposal"),
+     (check_quest_active, "qst_obtain_liege_blessing"),
+     (this_or_next|quest_slot_eq, "qst_obtain_liege_blessing", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_obtain_liege_blessing", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_obtain_liege_blessing", slot_quest_giver_troop, ":dead_troop"),
+       (call_script, "script_cancel_quest", "qst_obtain_liege_blessing"),
    (try_end),
+   
+   ########### qst_wed_betrothed  
+   (try_begin),
+     (check_quest_active, "qst_wed_betrothed"),
+     (this_or_next|quest_slot_eq, "qst_wed_betrothed", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_wed_betrothed", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_wed_betrothed", slot_quest_giver_troop, ":dead_troop"),
+       (call_script, "script_cancel_quest", "qst_wed_betrothed"),
+   (try_end),
+   ############################
+   ########### qst_wed_betrothed_female  
+   (try_begin),
+     (check_quest_active, "qst_wed_betrothed_female"),
+     (this_or_next|quest_slot_eq, "qst_wed_betrothed_female", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_wed_betrothed_female", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_wed_betrothed_female", slot_quest_giver_troop, ":dead_troop"),
+       (call_script, "script_cancel_quest", "qst_wed_betrothed_female"),
+   (try_end),
+   ############################
    
    ########### join faction
    (try_begin),
      (check_quest_active, "qst_join_faction"),
-     (quest_slot_eq, "qst_join_faction", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_join_faction", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_join_faction", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_join_faction", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_join_faction"),
    (try_end),
    
@@ -16621,15 +16701,8 @@ scripts = [
    (try_begin),
      (check_quest_active, "qst_resolve_dispute"),
      (this_or_next|quest_slot_eq, "qst_resolve_dispute", slot_quest_target_troop, ":dead_troop"),
-     (quest_slot_eq, "qst_resolve_dispute", slot_quest_object_troop, ":dead_troop"),
-       (call_script, "script_cancel_quest", "qst_resolve_dispute"),
-   (try_end),
-   
-   ########### resolve dispute
-   (try_begin),
-     (check_quest_active, "qst_resolve_dispute"),
-     (this_or_next|quest_slot_eq, "qst_resolve_dispute", slot_quest_target_troop, ":dead_troop"),
-     (quest_slot_eq, "qst_resolve_dispute", slot_quest_object_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_resolve_dispute", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_resolve_dispute", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_resolve_dispute"),
    (try_end),
    
@@ -16637,6 +16710,7 @@ scripts = [
    (try_begin),
      (check_quest_active, "qst_offer_gift"),
      (this_or_next|quest_slot_eq, "qst_offer_gift", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_offer_gift", slot_quest_object_troop, ":dead_troop"),
      (quest_slot_eq, "qst_offer_gift", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_offer_gift"),
    (try_end),
@@ -16644,21 +16718,27 @@ scripts = [
    ########### denounce lord
    (try_begin),
      (check_quest_active, "qst_denounce_lord"),
-     (quest_slot_eq, "qst_denounce_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_denounce_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_denounce_lord", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_denounce_lord", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_denounce_lord"),
    (try_end),
    
    ########### intrigue against lord
    (try_begin),
      (check_quest_active, "qst_intrigue_against_lord"),
-     (quest_slot_eq, "qst_intrigue_against_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_intrigue_against_lord", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_intrigue_against_lord", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_intrigue_against_lord", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_intrigue_against_lord"),
    (try_end),
    
    ########### retaliate for border incident
    (try_begin),
      (check_quest_active, "qst_retaliate_for_border_incident"),
-     (quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_target_troop, ":dead_troop"),
+     (this_or_next|quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_object_troop, ":dead_troop"),
+     (quest_slot_eq, "qst_retaliate_for_border_incident", slot_quest_giver_troop, ":dead_troop"),
        (call_script, "script_cancel_quest", "qst_retaliate_for_border_incident"),
    (try_end),
 ###########

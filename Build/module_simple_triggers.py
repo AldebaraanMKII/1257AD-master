@@ -289,11 +289,22 @@ simple_triggers = [
       (troop_set_slot, "$g_locate_ladies_cur_lady", slot_troop_cur_center, ":location"),
   (try_end),
   ############## NEW v3.8 - fixed above causing player wife to vanish if player left a faction
+  # (try_begin),
+    # (troop_slot_eq, "$g_locate_ladies_cur_lady", slot_troop_spouse, "trp_player"),  
+    # (neg|troop_slot_ge, "$g_locate_ladies_cur_lady", slot_troop_prisoner_of_party, 0),
+	  # (this_or_next|eq, "$g_player_cur_role", role_adventurer),
+	  # (eq, "$g_player_cur_role", role_mercenary_captain),
+      # (troop_get_slot, ":spouse_location", "$g_locate_ladies_cur_lady", slot_party_orders_object),
+      # (neq, ":spouse_location", "$g_player_court"),
+        # (troop_set_slot, "$g_locate_ladies_cur_lady", slot_troop_cur_center, "$g_player_court"),
+  # (try_end),
+  ############################
+  ############## NEW v3.9.1 - fixed above + player wife not changing location to player court
   (try_begin),
-    (neg|troop_slot_ge, "$g_locate_ladies_cur_lady", slot_troop_prisoner_of_party, 0),
     (troop_slot_eq, "$g_locate_ladies_cur_lady", slot_troop_spouse, "trp_player"),  
-	  (this_or_next|eq, "$g_player_cur_role", role_adventurer),
-	  (eq, "$g_player_cur_role", role_mercenary_captain),
+    (neg|troop_slot_ge, "$g_locate_ladies_cur_lady", slot_troop_prisoner_of_party, 0),
+	  # (this_or_next|eq, "$g_player_cur_role", role_adventurer),
+	  # (eq, "$g_player_cur_role", role_mercenary_captain),
       (troop_get_slot, ":spouse_location", "$g_locate_ladies_cur_lady", slot_party_orders_object),
       (neq, ":spouse_location", "$g_player_court"),
         (troop_set_slot, "$g_locate_ladies_cur_lady", slot_troop_cur_center, "$g_player_court"),
@@ -8258,12 +8269,12 @@ simple_triggers = [
      (assign, ":loop_end", lords_end),
      (try_for_range, ":cur_lord", lords_begin, ":loop_end"),
        (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),  ####### he's alive/active
+  	     (store_faction_of_troop, ":faction_lord", ":cur_lord"),
+         (eq, ":faction_lord", ":faction_lady"),  ####### same faction
          (call_script, "script_troop_get_relation_with_troop", "$g_place_lady_under_protection_cur_lady", ":cur_lord"),
-         (ge, reg0, 20),  ####### 20 or more
-  	       (store_faction_of_troop, ":faction_lord", ":cur_lord"),
-           (eq, ":faction_lord", ":faction_lady"),  ####### same faction
-             (troop_set_slot, "$g_place_lady_under_protection_cur_lady", slot_troop_guardian, ":cur_lord"),  
-             (assign, ":loop_end", -1), ##### breaks loop
+         (ge, reg0, 10),  ####### 10 or more
+           (troop_set_slot, "$g_place_lady_under_protection_cur_lady", slot_troop_guardian, ":cur_lord"),  
+           (assign, ":loop_end", -1), ##### breaks loop
      (try_end),
    (try_end),
  (try_end),

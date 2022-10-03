@@ -3315,7 +3315,8 @@ presentations = [
           (try_end),
           (create_text_overlay, reg1, s1, tf_right_align),
           # (position_set_x, pos1, 980),
-          (position_set_x, pos1, 970),
+          # (position_set_x, pos1, 970),
+          (position_set_x, pos1, 950), ###### NEW v3.9.1 - 
           (position_set_y, pos1, 570),
           (overlay_set_position, reg1, pos1),
           (overlay_set_size, reg1, pos2),
@@ -3350,7 +3351,8 @@ presentations = [
             (try_end),
           (try_end),
           (create_text_overlay, reg1, s1, tf_right_align),
-          (position_set_x, pos1, 970),
+          # (position_set_x, pos1, 970),
+          (position_set_x, pos1, 950), ###### NEW v3.9.1 - 
           (position_set_y, pos1, 415),
           (overlay_set_position, reg1, pos1),
           (overlay_set_size, reg1, pos2),
@@ -3379,7 +3381,8 @@ presentations = [
             (try_end),
           (try_end),
           (create_text_overlay, reg1, s1, tf_right_align),
-          (position_set_x, pos1, 970),
+          # (position_set_x, pos1, 970),
+          (position_set_x, pos1, 950), ###### NEW v3.9.1 - 
           (position_set_y, pos1, 285),
           (overlay_set_position, reg1, pos1),
           (overlay_set_size, reg1, pos2),
@@ -3544,8 +3547,9 @@ presentations = [
         (overlay_add_item, "$g_presentation_obj_1", "@Mercenary"),
         (try_for_range_backwards, ":page_no", 0, ":num_factions"),
           (store_add, ":faction_no", ":page_no", npc_cultures_begin_2),
-          (str_store_faction_name, s0, ":faction_no"),
-          (overlay_add_item, "$g_presentation_obj_1", s0),
+		  (neq, ":faction_no", "fac_culture_crusader"), ###### NEW v3.9.1 - 
+            (str_store_faction_name, s0, ":faction_no"),
+            (overlay_add_item, "$g_presentation_obj_1", s0),
         (try_end),
         (store_sub, ":presentation_obj_val", ":num_pages", "$g_selected_page"),
         (val_sub, ":presentation_obj_val", 1),
@@ -3716,7 +3720,8 @@ presentations = [
           (try_end),
           (create_text_overlay, reg1, s1, tf_right_align),
           # (position_set_x, pos1, 980),
-          (position_set_x, pos1, 970),
+          # (position_set_x, pos1, 970),
+          (position_set_x, pos1, 950), ###### NEW v3.9.1 - 
           (position_set_y, pos1, 570),
           (overlay_set_position, reg1, pos1),
           (overlay_set_size, reg1, pos2),
@@ -3751,7 +3756,8 @@ presentations = [
             (try_end),
           (try_end),
           (create_text_overlay, reg1, s1, tf_right_align),
-          (position_set_x, pos1, 970),
+          # (position_set_x, pos1, 970),
+          (position_set_x, pos1, 950), ###### NEW v3.9.1 - 
           (position_set_y, pos1, 415),
           (overlay_set_position, reg1, pos1),
           (overlay_set_size, reg1, pos2),
@@ -3780,7 +3786,8 @@ presentations = [
             (try_end),
           (try_end),
           (create_text_overlay, reg1, s1, tf_right_align),
-          (position_set_x, pos1, 970),
+          # (position_set_x, pos1, 970),
+          (position_set_x, pos1, 950), ###### NEW v3.9.1 - 
           (position_set_y, pos1, 285),
           (overlay_set_position, reg1, pos1),
           (overlay_set_size, reg1, pos2),

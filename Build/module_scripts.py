@@ -45443,6 +45443,7 @@ scripts = [
          (gt, "$players_kingdom", 0),
          (assign, ":comment", "str_comment_intro_liege_affiliated"),
          (try_begin),
+           (eq, "$g_player_cur_role", role_king),  ########## NEW v3.9.1
            (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
            (assign, ":comment", "str_comment_intro_liege_affiliated_to_player"),
          (try_end),

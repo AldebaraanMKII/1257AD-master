@@ -943,9 +943,9 @@ items = [
 ["byz_hcavalry_c", "Byzantine Heavy Cavalry Armour", [("byz_hcavalry_c",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
 ["byz_footman_a", "Byzantine Mail", [("byz_footman_a",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
 ["byz_footman_c", "Byzantine Mail", [("byz_footman_c",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
-["byz_swordsman_2", "Byzantine Scoutati Armour", [("rathos_lamellar_armor_1",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
-["byz_swordsman_3", "Byzantine Scoutati Armour", [("leatherovermail_a",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
-["byz_swordsman_4", "Byzantine Scoutati Armour", [("leatherovermail_b",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
+["byz_swordsman_2", "Byzantine Skoutatoi Armour", [("rathos_lamellar_armor_1",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
+["byz_swordsman_3", "Byzantine Skoutatoi Armour", [("leatherovermail_a",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
+["byz_swordsman_4", "Byzantine Skoutatoi Armour", [("leatherovermail_b",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], byzantine_factions],
 
 
 
@@ -2396,7 +2396,9 @@ items = [
 ["sa_shields_archer_ibelin_1","Ibelin Light Shield", [("shields_archer_ibelin_c", 0),("shields_archer_ibelin_d", imodbits_shield)], itp_type_shield|itp_merchandise|itp_wooden_parry, itcf_carry_round_shield,70, weight(2)|abundance(80)|body_armor(35)|hit_points(30)|spd_rtng(100)|shield_width(35), imodbits_shield, [], [fac_kingdom_23, fac_culture_ibelin ]],
 ["sa_shields_archer_ibelin_2","Ibelin Light Shield", [("shields_archer_ibelin_a", 0),("shields_archer_ibelin_b", imodbits_shield)], itp_type_shield|itp_merchandise|itp_wooden_parry, itcf_carry_round_shield,70, weight(2)|abundance(80)|body_armor(35)|hit_points(30)|spd_rtng(100)|shield_width(35), imodbits_shield, [], [fac_kingdom_23, fac_culture_ibelin ]],
 
-["sa_ibelin_shield","Ibelin Shield", [("Jerusalem_shield_a", 0)], itp_type_shield|itp_merchandise|itp_wooden_parry, itcf_carry_kite_shield,205, weight(3)|abundance(100)|body_armor(shield_t3_res)|hit_points(45)|spd_rtng(90)|shield_height(70)|shield_width(30), imodbits_shield, [], [fac_kingdom_23, fac_culture_ibelin ]],
+# ["sa_ibelin_shield","Ibelin Shield", [("Jerusalem_shield_a", 0)], itp_type_shield|itp_merchandise|itp_wooden_parry, itcf_carry_kite_shield,205, weight(3)|abundance(100)|body_armor(shield_t3_res)|hit_points(45)|spd_rtng(90)|shield_height(70)|shield_width(30), imodbits_shield, [], [fac_kingdom_23, fac_culture_ibelin ]],
+
+["sa_ibelin_shield","Ibelin Shield", [("shield_veteran_ibelin_c", 0)], itp_type_shield|itp_merchandise|itp_wooden_parry, itcf_carry_kite_shield,205, weight(3)|abundance(100)|body_armor(shield_t3_res)|hit_points(45)|spd_rtng(90)|shield_height(70)|shield_width(30), imodbits_shield, [], [fac_kingdom_23, fac_culture_ibelin ]],
 
 ["sa_shield_veteran_ibelin_1","Ibelin Heavy Shield", [("shield_veteran_ibelin_a", 0),("shield_veteran_ibelin_b", imodbits_shield),("shield_veteran_ibelin_c", imodbit_lordly)], itp_type_shield|itp_merchandise|itp_wooden_parry, itcf_carry_kite_shield,700, weight(4.5)|abundance(70)|body_armor(shield_t4_res)|hit_points(70)|spd_rtng(70)|shield_height(100)|shield_width(35), imodbits_shield, [], [fac_kingdom_23, fac_culture_ibelin ]],
 ["sa_shield_veteran_ibelin_2","Ibelin Heavy Shield", [("shield_veteran_ibelin_e", 0),("shield_veteran_ibelin_d", imodbits_shield)], itp_type_shield|itp_merchandise|itp_wooden_parry, itcf_carry_kite_shield,700, weight(4.5)|abundance(70)|body_armor(shield_t4_res)|hit_points(70)|spd_rtng(70)|shield_height(100)|shield_width(35), imodbits_shield, [], [fac_kingdom_23, fac_culture_ibelin ]],
