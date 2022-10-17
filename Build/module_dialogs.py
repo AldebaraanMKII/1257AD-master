@@ -166,18 +166,18 @@ dialogs = [
                        (assign, "$g_comment_found", reg0),
                      (try_end),
 
-                     (troop_get_type, reg65, "$g_talk_troop"),
+                     (troop_get_type, reg63, "$g_talk_troop"),
                      (try_begin),
                        (faction_slot_eq, "$g_talk_troop_faction",slot_faction_leader, "$g_talk_troop"),
-                       (str_store_string,s64, "@{reg65?my Lady:my Lord}"), #bug fix
+                       (str_store_string,s64, "@{reg64?my Lady:my Lord}"), #bug fix
                        (str_store_string,s65, "@{reg65?my Lady:my Lord}"),
-                       (str_store_string,s66, "@{reg65?My Lady:My Lord}"),
-                       (str_store_string,s67, "@{reg65?My Lady:My Lord}"), #bug fix
+                       (str_store_string,s66, "@{reg66?My Lady:My Lord}"),
+                       (str_store_string,s67, "@{reg67?My Lady:My Lord}"), #bug fix
                      (else_try),
-                       (str_store_string,s64, "@{reg65?madame:sir}"), #bug fix
+                       (str_store_string,s64, "@{reg64?madame:sir}"), #bug fix
                        (str_store_string,s65, "@{reg65?madame:sir}"),
-                       (str_store_string,s66, "@{reg65?Madame:Sir}"),
-                       (str_store_string,s67, "@{reg65?Madame:Sir}"), #bug fix
+                       (str_store_string,s66, "@{reg66?Madame:Sir}"),
+                       (str_store_string,s67, "@{reg67?Madame:Sir}"), #bug fix
                      (try_end),
 
                      (try_begin),
@@ -216,17 +216,17 @@ dialogs = [
                         (call_script, "script_setup_talk_info"),
                     (try_end),
 
-                    (troop_get_type, reg65, "$g_talk_troop"),
-                    # (troop_get_type, reg65, "$g_talk_troop"),
+                    (troop_get_type, reg63, "$g_talk_troop"),
+                    # (troop_get_type, reg63, "$g_talk_troop"),
                     (try_begin),
                       (faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
-                      (str_store_string, s64, "@{reg65?my Lady:my Lord}"), #bug fix
+                      (str_store_string, s64, "@{reg64?my Lady:my Lord}"), #bug fix
                       (str_store_string, s65, "@{reg65?my Lady:my Lord}"),
-                      (str_store_string, s66, "@{reg65?My Lady:My Lord}"),
+                      (str_store_string, s66, "@{reg66?My Lady:My Lord}"),
                     (else_try),
-                      (str_store_string, s64, "@{reg65?madame:sir}"), #bug fix
+                      (str_store_string, s64, "@{reg64?madame:sir}"), #bug fix
                       (str_store_string, s65, "@{reg65?madame:sir}"),
-                      (str_store_string, s66, "@{reg65?Madame:Sir}"),
+                      (str_store_string, s66, "@{reg66?Madame:Sir}"),
                     (try_end),
 
                     (store_current_hours, "$g_current_hours"),
@@ -242,16 +242,16 @@ dialogs = [
                                (call_script, "script_setup_talk_info_companions"),
                            (try_end),
 
-                     (troop_get_type, reg65, "$g_talk_troop"),
+                     (troop_get_type, reg63, "$g_talk_troop"),
                      (try_begin),
                        (faction_slot_eq, "$g_talk_troop_faction",slot_faction_leader, "$g_talk_troop"),
-                       (str_store_string,s64, "@{reg65?my Lady:my Lord}"), #bug fix
+                       (str_store_string,s64, "@{reg64?my Lady:my Lord}"), #bug fix
                        (str_store_string,s65, "@{reg65?my Lady:my Lord}"),
-                       (str_store_string,s66, "@{reg65?My Lady:My Lord}"),
+                       (str_store_string,s66, "@{reg66?My Lady:My Lord}"),
                      (else_try),
-                       (str_store_string,s64, "@{reg65?madame:sir}"), #bug fix
+                       (str_store_string,s64, "@{reg64?madame:sir}"), #bug fix
                        (str_store_string,s65, "@{reg65?madame:sir}"),
-                       (str_store_string,s66, "@{reg65?Madame:Sir}"),
+                       (str_store_string,s66, "@{reg66?Madame:Sir}"),
                      (try_end),
 
 
@@ -444,20 +444,20 @@ dialogs = [
      (call_script, "script_setup_talk_info"),
    (try_end),
      
-   (troop_get_type, reg65, "$g_talk_troop"),
+   (troop_get_type, reg63, "$g_talk_troop"),
      
-   (troop_get_type, reg65, "$g_talk_troop"),
+   (troop_get_type, reg63, "$g_talk_troop"),
    (try_begin),
    (faction_slot_eq, "$g_talk_troop_faction",slot_faction_leader, "$g_talk_troop"),
-   (str_store_string,s64, "@{reg65?my Lady:my Lord}"), #bug fix
+   (str_store_string,s64, "@{reg64?my Lady:my Lord}"), #bug fix
    (str_store_string,s65, "@{reg65?my Lady:my Lord}"),
-   (str_store_string,s66, "@{reg65?My Lady:My Lord}"),
-   (str_store_string,s67, "@{reg65?My Lady:My Lord}"), #bug fix
+   (str_store_string,s66, "@{reg66?My Lady:My Lord}"),
+   (str_store_string,s67, "@{reg67?My Lady:My Lord}"), #bug fix
    (else_try),
-     (str_store_string,s64, "@{reg65?madame:sir}"), #bug fix
+     (str_store_string,s64, "@{reg64?madame:sir}"), #bug fix
    (str_store_string,s65, "@{reg65?madame:sir}"),
-   (str_store_string,s66, "@{reg65?Madame:Sir}"),
-   (str_store_string,s67, "@{reg65?Madame:Sir}"), #bug fix
+   (str_store_string,s66, "@{reg66?Madame:Sir}"),
+   (str_store_string,s67, "@{reg67?Madame:Sir}"), #bug fix
    (try_end),
      
    (store_current_hours, "$g_current_hours"),
@@ -475,7 +475,7 @@ dialogs = [
 (eq, "$g_encountered_party", "pt_send_reinf_to_fief_party"),
 (str_store_party_name, s75, "$reserved_90"),
 ],
-"We are heading to {s75} as you commanded {reg65?madame:sir}.", "send_troops_chat_2",[]],
+"We are heading to {s75} as you commanded {reg63?madame:sir}.", "send_troops_chat_2",[]],
    
 [anyone|plyr, "send_troops_chat_2", [], "That's good. Carry on.", "close_window",[(assign, "$g_leave_encounter",1)]],
    
@@ -4542,7 +4542,7 @@ dialogs = [
 
 
 [anyone|plyr, "supported_pretender_talk", [],
-"{reg65?My lady:My lord}, would you allow me to check out your equipment?", "supported_pretender_equip",[]],
+"{reg63?My lady:My lord}, would you allow me to check out your equipment?", "supported_pretender_equip",[]],
 [anyone, "supported_pretender_equip", [], "Very well, it's all here...", "supported_pretender_pretalk",[
       (change_screen_equip_other),
       ]],
@@ -4595,7 +4595,7 @@ dialogs = [
   
 
 [anyone|plyr, "supported_pretender_talk", [],
-"Let us keep going, {reg65?my lady:sir}.", "close_window",[]],
+"Let us keep going, {reg63?my lady:sir}.", "close_window",[]],
 
 
 [anyone, "do_member_trade", [], "Anything else?", "member_talk",[]],
@@ -6335,7 +6335,7 @@ dialogs = [
 
 ##diplomacy begin
 ##Recruiter kit begin
-   [trp_dplmc_recruiter, "start", [], "Hello {reg65?madame:sir}. If it's ok to you, I would like to get on with my assignment.", "dplmc_recruiter_talk",[]],
+   [trp_dplmc_recruiter, "start", [], "Hello {reg63?madame:sir}. If it's ok to you, I would like to get on with my assignment.", "dplmc_recruiter_talk",[]],
    [trp_dplmc_recruiter|plyr, "dplmc_recruiter_talk", [], "Ok, keep going.", "close_window",[(assign, "$g_leave_encounter",1)]],
    [trp_dplmc_recruiter|plyr, "dplmc_recruiter_talk", [], "I want you to recruit different troops.", "dplmc_recruiter_talk_2",[]],
    
@@ -6367,7 +6367,7 @@ dialogs = [
      
    [trp_dplmc_recruiter|plyr, "dplmc_recruiter_talk_3", [], "Recruit any troops.", "dplmc_recruiter_talk_4",[(assign, "$temp",-1)]],
  
-   [trp_dplmc_recruiter, "dplmc_recruiter_talk_4", [(party_set_slot, "$g_encountered_party", dplmc_slot_party_recruiter_needed_recruits_faction, "$temp")], "Sure {reg65?madame:sir}. I will. Anything else you want?", "dplmc_recruiter_talk",[]],
+   [trp_dplmc_recruiter, "dplmc_recruiter_talk_4", [(party_set_slot, "$g_encountered_party", dplmc_slot_party_recruiter_needed_recruits_faction, "$temp")], "Sure {reg63?madame:sir}. I will. Anything else you want?", "dplmc_recruiter_talk",[]],
 ##Recruiter kit end
 
 ##Messenger
@@ -10017,7 +10017,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "dplmc_constable_send_reinf_to_fief1",
     [],
-    "Yes {reg65?madam:sir}. Keep in mind that you will have to provide 5 coins per troop to account for the supplies, plus 50 coins to organize all of this. Where would you like to send them?",
+    "Yes {reg63?madam:sir}. Keep in mind that you will have to provide 5 coins per troop to account for the supplies, plus 50 coins to organize all of this. Where would you like to send them?",
     "dplmc_constable_send_reinf_to_fief2",
     []],
 
@@ -10046,7 +10046,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "dplmc_constable_send_reinf_to_fief3",
     [],
-    "Who would you like to send {reg65?madam:sir}?",
+    "Who would you like to send {reg63?madam:sir}?",
     "dplmc_constable_send_reinf_to_fief4",
     [
       (spawn_around_party, "p_main_party", "pt_send_reinf_to_fief_party"),
@@ -10066,7 +10066,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "dplmc_constable_send_reinf_to_fief4",
     [],
-    "Will be done, {reg65?madam:sir}.",
+    "Will be done, {reg63?madam:sir}.",
     "dplmc_constable_pretalk",
     [
     ########## removes player gold based on troop count + 50
@@ -15805,8 +15805,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (call_script, "script_end_quest", "qst_rebel_against_kingdom"),
        ]],
 
-[anyone|plyr, "rebel_thanks_answer", [], "It was an honour to fight for your cause, {reg65?madame:my lord}.", "rebel_thanks_answer_2", []],
-[anyone|plyr, "rebel_thanks_answer", [], "You will always have my loyal support, {reg65?my lady:sir}.", "rebel_thanks_answer_2", []],
+[anyone|plyr, "rebel_thanks_answer", [], "It was an honour to fight for your cause, {reg63?madame:my lord}.", "rebel_thanks_answer_2", []],
+[anyone|plyr, "rebel_thanks_answer", [], "You will always have my loyal support, {reg63?my lady:sir}.", "rebel_thanks_answer_2", []],
 
 [anyone, "rebel_thanks_answer_2", [], "I will miss living this life of adventure with you, but my duties await me. So... farewell for now, {playername}.\
  I hope I'll see you again soon.", "close_window", []],
@@ -17023,7 +17023,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (troop_slot_eq, "$g_talk_troop", slot_troop_discussed_rebellion, 1),
    (eq, "$pretender_told_story", 0)
      ],
-"What was your story again, {reg65?my lady:sir}?", "pretender_rebellion_cause_prelim", [
+"What was your story again, {reg63?my lady:sir}?", "pretender_rebellion_cause_prelim", [
      ]],
 
 [anyone, "pretender_rebellion_cause_prelim", [],
@@ -17155,7 +17155,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                                              (str_store_troop_name, s11, ":original_ruler")],
 "You are a capable warrior, {playername}, and I am sure with your renown as a commander, and my righteous cause, the nobles and the good people of {s12} will flock to our support.\
  The time is ripe for us to act! I will come with you, and together, we will topple the usurper {s11} and take the throne from his bloodied hands.\
- But first, you must give me your oath of homage and accept me as your liege {reg65?lady:lord}.", "pretender_rebellion_ready", []],
+ But first, you must give me your oath of homage and accept me as your liege {reg63?lady:lord}.", "pretender_rebellion_ready", []],
 
 
 [anyone|plyr , "pretender_rebellion_ready", [
@@ -25319,22 +25319,22 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       ]],
 
 [anyone|plyr, "lord_give_oath_3", [],  "I pledge homage to you as lawful ruler of the {s41}.", "lord_give_oath_4", []],
-[anyone|plyr, "lord_give_oath_3", [],  "Excuse me, {reg65?my lady:sir}. But I feel I need to think about this.", "lord_give_oath_give_up", []],
+[anyone|plyr, "lord_give_oath_3", [],  "Excuse me, {reg63?my lady:sir}. But I feel I need to think about this.", "lord_give_oath_give_up", []],
 
 [anyone, "lord_give_oath_4", [],  "I will remain as your loyal and devoted {man/follower} as long as my breath remains....", "lord_give_oath_5", []],
 
 [anyone|plyr, "lord_give_oath_5", [],  "I will remain as your loyal and devoted {man/follower} as long as my breath remains...", "lord_give_oath_6", []],
-[anyone|plyr, "lord_give_oath_5", [],  "{reg65?My lady:Sir}, may I ask for some time to think about this?", "lord_give_oath_give_up", []],
+[anyone|plyr, "lord_give_oath_5", [],  "{reg63?My lady:Sir}, may I ask for some time to think about this?", "lord_give_oath_give_up", []],
 
 [anyone, "lord_give_oath_6", [],  "...and I will be at your side to fight your enemies should you need my sword.", "lord_give_oath_7", []],
 
 [anyone|plyr, "lord_give_oath_7", [],  "...and I will be at your side to fight your enemies should you need my sword.", "lord_give_oath_8", []],
-[anyone|plyr, "lord_give_oath_7", [],  "{reg65?My lady:My lord}, please give me more time to think about this.", "lord_give_oath_give_up", []],
+[anyone|plyr, "lord_give_oath_7", [],  "{reg63?My lady:My lord}, please give me more time to think about this.", "lord_give_oath_give_up", []],
 
 [anyone, "lord_give_oath_8", [],  "Finally, I will uphold your lawful claims and those of your legitimate heirs.", "lord_give_oath_9", []],
 
 [anyone|plyr, "lord_give_oath_9", [],  "Finally, I will uphold your lawful claims and those of your legitimate heirs.", "lord_give_oath_10", []],
-[anyone|plyr, "lord_give_oath_9", [],  "{reg65?My lady:Sir}, I must have more time to consider this.", "lord_give_oath_give_up", []],
+[anyone|plyr, "lord_give_oath_9", [],  "{reg63?My lady:Sir}, I must have more time to consider this.", "lord_give_oath_give_up", []],
 
 [anyone, "lord_give_oath_10", [],  "Very well. You have given me your solemn oath, {playername}. May you uphold it always, with proper courage and devotion.", "lord_give_oath_go_on_2", []],
 
@@ -28095,7 +28095,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
   (this_or_next|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_lady),
       (is_between, "$g_talk_troop", kingdom_ladies_begin, kingdom_ladies_end),
   ],
- "My {reg65?wife:husband}, I would like to dedicate my successes in this recent tournament to you", "dplmc_spouse_tournament_dedication_reaction", ## Floris - bugfix was wife/husband but needed : not /
+ "My {reg63?wife:husband}, I would like to dedicate my successes in this recent tournament to you", "dplmc_spouse_tournament_dedication_reaction", ## Floris - bugfix was wife/husband but needed : not /
   [
 
   (try_begin),
@@ -37368,7 +37368,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "send_reinf_to_fief1",
     [],
-    "Aye {reg65?madam:sir}. Keep in mind {reg65?madam:sir} that you will have to provide us with 5 coins per troop to account for the supplies, plus 50 coins for our efforts. Where would you like to send them?",
+    "Aye {reg63?madam:sir}. Keep in mind {reg63?madam:sir} that you will have to provide us with 5 coins per troop to account for the supplies, plus 50 coins for our efforts. Where would you like to send them?",
     "send_reinf_to_fief2",
     []],
 	
@@ -37397,7 +37397,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "send_reinf_to_fief3",
     [],
-    "Who would you like to send {reg65?madam:sir}?",
+    "Who would you like to send {reg63?madam:sir}?",
     "send_reinf_to_fief4",
     [
       (spawn_around_party, "p_main_party", "pt_send_reinf_to_fief_party"),
@@ -37417,7 +37417,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "send_reinf_to_fief4",
     [],
-    "Will be done, {reg65?madam:sir}.",
+    "Will be done, {reg63?madam:sir}.",
     "village_elder_pretalk",
     [
     ########## removes player gold based on troop count + 50
@@ -37526,7 +37526,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
     
 [anyone, "village_give_money_3",
 [],
-  "Oh my... I mean, thank you my {reg65?lady:lord}. This is very generous of you.",
+  "Oh my... I mean, thank you my {reg63?lady:lord}. This is very generous of you.",
   "village_elder_pretalk",
 [
     (party_slot_ge, "$current_town", slot_town_lord, "trp_multiplayer_profile_troop_male"),
