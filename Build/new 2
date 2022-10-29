@@ -1,0 +1,71 @@
+
+[anyone|plyr, "regular_member_talk", [],
+"Let me see your equipment.", "dplmc_view_regular_inventory", []
+  ],
+##########################
+[anyone, "dplmc_view_regular_inventory",
+[], "Very well, here is what I am using...", "dplmc_do_view_regular_inventory",#Use {s0} instead of {sir/madam}
+[
+  (call_script, "script_dplmc_copy_inventory", "trp_player", "trp_temp_array_a"),
+  (call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
+
+  (try_for_range, ":i_slot", 0, 10),
+    (troop_get_inventory_slot, ":item", "trp_temp_array_b", ":i_slot"),
+    (gt, ":item", -1),
+    (troop_get_inventory_slot_modifier, ":imod", "trp_temp_array_b", ":i_slot"),
+    (troop_add_item, "trp_temp_array_b", ":item", ":imod"),
+    (troop_set_inventory_slot, "trp_temp_array_b", ":i_slot", -1),
+  (try_end),
+
+  (change_screen_loot, "trp_temp_array_b"),
+]],
+##########################
+[anyone, "dplmc_do_view_regular_inventory", [],
+"Is that satisfactory?", "dplmc_do_view_regular_inventory_2", []#Use {s0} instead of {sir/madam}
+],
+##########################
+[anyone|plyr, "dplmc_do_view_regular_inventory_2",
+[],
+"Indeed.", "do_regular_member_view_char", 
+[
+(call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),
+]
+],
+
+
+
+
+[anyone|plyr, "prisoner_options", [],
+"Let me see what you have!", "view_prisoner_inventory", []
+  ],
+  
+[anyone, "view_prisoner_inventory",
+[], "This is what i have, please don't hurt me!", "view_prisoner_inventory_2", #####Use {s0} instead of {sir/madam}
+[
+  (call_script, "script_dplmc_copy_inventory", "trp_player", "trp_temp_array_a"),
+  (call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
+
+  (try_for_range, ":i_slot", 0, 10),
+    (troop_get_inventory_slot, ":item", "trp_temp_array_b", ":i_slot"),
+    (gt, ":item", -1),
+    (troop_get_inventory_slot_modifier, ":imod", "trp_temp_array_b", ":i_slot"),
+    (troop_add_item, "trp_temp_array_b", ":item", ":imod"),
+    (troop_set_inventory_slot, "trp_temp_array_b", ":i_slot", -1),
+  (try_end),
+
+  (change_screen_loot, "trp_temp_array_b"),
+]],
+    
+[anyone, "view_prisoner_inventory_2", [],
+"Please don't take my clothes!", "view_prisoner_inventory_3", []#Use {s0} instead of {sir/madam}
+],
+[anyone|plyr, "view_prisoner_inventory_3", [],
+"I don't want your rags!", "prisoner_options", [
+(call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
+],
+
+
+
+
+
+

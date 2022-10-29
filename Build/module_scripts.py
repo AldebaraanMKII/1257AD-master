@@ -5545,7 +5545,13 @@ scripts = [
                              (call_script, "script_get_message_color_siege_win", 8, ":winner_faction", ":defeated_faction"),
                              # (display_log_message, "str_center_captured", reg20),
                              (display_log_message, "@{s2} have taken {s1} from {s3}", reg20),
-            
+			                 ############## NEW v3.9.1 - 
+                             (try_begin),
+                               (eq, "$g_auto_change_captured_fief_culture", 1),
+                                 (faction_get_slot, ":winner_culture", ":winner_faction", slot_faction_culture),
+                                 (party_set_slot, ":root_defeated_party", slot_center_culture, ":winner_culture"),
+                             (try_end),
+                             ############################
                              (store_current_hours, ":hours"),
                              (faction_set_slot, ":winner_faction", slot_faction_ai_last_decisive_event, ":hours"),
             

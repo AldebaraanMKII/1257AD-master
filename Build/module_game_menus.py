@@ -9130,6 +9130,13 @@ game_menus = [ #
               (call_script, "script_add_log_entry", logent_castle_captured_by_player, "trp_player", "$g_encountered_party", -1, "$g_encountered_party_faction"),
               (store_current_hours, ":hours"),
 			  (faction_set_slot, "$players_kingdom", slot_faction_ai_last_decisive_event, ":hours"),
+			  ############## NEW v3.9.1 - 
+              (try_begin),
+                (eq, "$g_auto_change_captured_fief_culture", 1),
+                  (faction_get_slot, ":player_culture", "$players_kingdom", slot_faction_culture),
+                  (party_set_slot, "$g_encountered_party", slot_center_culture, ":player_culture"),
+              (try_end),
+############################
 			  ######################## NEW v3.8
               (try_begin), #player took a walled center while he is a vassal of npc kingdom.
                 (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
@@ -11409,7 +11416,15 @@ game_menus = [ #
      (str_store_party_name, s2, "$g_center_to_give_to_player"),
      (party_get_slot, ":new_owner", "$g_center_to_give_to_player", slot_town_lord),
      (str_store_troop_name, s5, ":new_owner"),
-     (assign, reg6, 900),
+     # (assign, reg6, 900),
+	 ############## NEW v3.9.1 - 
+     (assign, reg6, 900),  ### default
+     (try_begin),
+	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
+	   (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+	   (val_mul, reg6, ":player_renown", 8)
+     (try_end),
+############################
 
      (assign, "$g_castle_requested_by_player", -1),
      (assign, "$g_castle_requested_for_troop", -1),
@@ -11440,7 +11455,15 @@ game_menus = [ #
      (str_store_party_name, s2, "$g_center_to_give_to_player"),
      (party_get_slot, ":new_owner", "$g_center_to_give_to_player", slot_town_lord),
      (str_store_troop_name, s5, ":new_owner"),
-     (assign, reg6, 900),
+     # (assign, reg6, 900),
+	 ############## NEW v3.9.1 - 
+     (assign, reg6, 900),  ### default
+     (try_begin),
+	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
+	   (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+	   (val_mul, reg6, ":player_renown", 8)
+     (try_end),
+############################
 
      (assign, "$g_castle_requested_by_player", -1),
      (assign, "$g_castle_requested_for_troop", -1),
@@ -17855,7 +17878,8 @@ game_menus = [ #
 
          (set_camera_follow_party, "$capturer_party"),
          (assign, "$g_player_is_captive", 1),
-         (store_random_in_range, ":random_hours", 18, 30),
+         # (store_random_in_range, ":random_hours", 18, 30),
+         (store_random_in_range, ":random_hours", 12, 72),   ###### NEW v3.9.1 - 
          (call_script, "script_event_player_captured_as_prisoner"),
          (call_script, "script_stay_captive_for_hours", ":random_hours"),
          (assign, "$auto_menu", "mnu_captivity_wilderness_check"),

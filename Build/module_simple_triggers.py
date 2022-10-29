@@ -3462,8 +3462,7 @@ simple_triggers = [
 ##################### splitted in 3, others are below this
   (72,
    [
- 
-      ####(display_message, "@Executing Simple Trigger 76"),
+  ####(display_message, "@Executing Simple Trigger 76"),
   ######### (call_script, "script_update_mercenary_units_of_towns"),
 #NPC changes begin
 #### removes   (call_script, "script_update_companion_candidates_in_taverns"),
