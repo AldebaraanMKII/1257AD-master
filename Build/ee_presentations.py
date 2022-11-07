@@ -2224,6 +2224,18 @@ presentations = [
         (overlay_set_position, reg0, pos1),
         ##########
 
+        ########## NEW v3.9.1
+        (create_text_overlay, reg0, "@Player receives money directly instead of in the treasury:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+		
+        (create_text_overlay, reg0, "@Captured fiefs auto switch to the new faction culture:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+        ##########
+
         # (create_text_overlay, reg0, "@Remove deserter recruit penalty:", tf_vertical_align_center),
         # (position_set_y, pos1, 525),
         # (overlay_set_position, reg0, pos1),
@@ -2344,7 +2356,7 @@ presentations = [
         (overlay_set_val, "$g_presentation_obj_29", "$cheat_mode"),
         ######################
 
-		########### NEW v3.5 - cheat menu
+		########### NEW v3.5 - report shot distance
         (create_check_box_overlay, "$g_presentation_obj_30", "mesh_checkbox_off", "mesh_checkbox_on"),
         (val_sub, reg1, ":value_difference"),
         (position_set_y, pos1, reg1),
@@ -2352,20 +2364,45 @@ presentations = [
         (overlay_set_val, "$g_presentation_obj_30", "$g_report_shot"),
         ######################
 
+		########### NEW v3.9.1 - receive money directly
+        (create_check_box_overlay, "$g_presentation_obj_31", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_31", pos1),
+        (overlay_set_val, "$g_presentation_obj_31", "$g_receive_money_directly"),
+		
+		
+        (create_check_box_overlay, "$g_presentation_obj_32", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_32", pos1),
+        (overlay_set_val, "$g_presentation_obj_32", "$g_auto_change_captured_fief_culture"),
+        ######################
+
 
 ########################### RESET
-        (create_game_button_overlay, "$g_presentation_obj_32", "@Reset"),
+        # (create_game_button_overlay, "$g_presentation_obj_32", "@Reset"),
+        # (position_set_x, pos1, 500),
+        # (position_set_y, pos1, 25),
+        # (overlay_set_position, "$g_presentation_obj_32", pos1),
+		
+        (create_game_button_overlay, "$g_presentation_obj_38", "@Reset"),
         (position_set_x, pos1, 500),
         (position_set_y, pos1, 25),
-        (overlay_set_position, "$g_presentation_obj_32", pos1),
+        (overlay_set_position, "$g_presentation_obj_38", pos1),
 
 
 
 ######################################### DONE
-        (create_game_button_overlay, "$g_presentation_obj_33", "@Done"),
+        # (create_game_button_overlay, "$g_presentation_obj_33", "@Done"),
+        # (position_set_x, pos1, 900),
+        # (position_set_y, pos1, 25),
+        # (overlay_set_position, "$g_presentation_obj_33", pos1),
+		
+        (create_game_button_overlay, "$g_presentation_obj_39", "@Done"),
         (position_set_x, pos1, 900),
         (position_set_y, pos1, 25),
-        (overlay_set_position, "$g_presentation_obj_33", pos1),
+        (overlay_set_position, "$g_presentation_obj_39", pos1),
 
       ]),
 
@@ -2492,10 +2529,18 @@ presentations = [
           (eq, ":object", "$g_presentation_obj_30"),
           (assign, "$g_report_shot", ":value"),
         ###############
+		############### NEW v3.9.1
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_31"),
+          (assign, "$g_receive_money_directly", ":value"),
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_32"),
+          (assign, "$g_auto_change_captured_fief_culture", ":value"),
+        ###############
 
 
         (else_try),
-          (eq, ":object", "$g_presentation_obj_32"),
+          (eq, ":object", "$g_presentation_obj_38"),
           ############# resets everything to default values
           (assign, "$g_lord_death_chance_battle", 30),
           (assign, "$g_lord_death_chance_battle_king", 15),
@@ -2529,10 +2574,12 @@ presentations = [
           (assign, "$ee_freelancer_upgrade_unequip", 0),  ### disabled by default
           (assign, "$cheat_mode", 0),
           (assign, "$g_report_shot", 1),  ######### NEW v3.5
+          (assign, "$g_receive_money_directly", 1),  ######### NEW v3.9.1
+          (assign, "$g_auto_change_captured_fief_culture", 0),  ######### NEW v3.9.1
           (presentation_set_duration, 0),
 
         (else_try),
-          (eq, ":object", "$g_presentation_obj_33"),
+          (eq, ":object", "$g_presentation_obj_39"),
           (presentation_set_duration, 0),
         (try_end),
       ]),

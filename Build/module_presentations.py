@@ -12275,6 +12275,7 @@ presentations = [
       ##diplomacy begin
       (try_begin),
         (gt, "$g_player_chamberlain", 0),
+		(eq, "$g_receive_money_directly", 0),  ###### NEW v3.9.1 - 
         (store_troop_gold, ":player_wealth", "trp_household_possessions"),
       (else_try),
       ##diplomacy end
@@ -12305,6 +12306,7 @@ presentations = [
         ##diplomacy begin
         (try_begin),
           (gt, "$g_player_chamberlain", 0),
+		  # (eq, "$g_receive_money_directly", 0),  ###### NEW v3.9.1 - 
           (store_troop_gold, ":player_inv_wealth", "trp_player"),
           (try_begin), #drawing debts from personal money
             (ge, ":player_inv_wealth", ":player_new_debt_to_party_members"),
@@ -12365,6 +12367,7 @@ presentations = [
       ##diplomacy begin
       (try_begin),
         (gt, "$g_player_chamberlain", 0),
+		(eq, "$g_receive_money_directly", 0),  ###### NEW v3.9.1 - 
         (gt, ":cash_to_pay", 0),
         (create_text_overlay, reg1, "@Earlier cash:", 0),
         (position_set_x, pos1, 900),
@@ -12434,6 +12437,7 @@ presentations = [
           ##diplomacy begin
           (try_begin),
             (gt, "$g_player_chamberlain", 0),
+		    (eq, "$g_receive_money_directly", 0),  ###### NEW v3.9.1 - 
             (call_script, "script_dplmc_withdraw_from_treasury", ":player_wealth_dif"),
           (else_try),
           ##diplomacy end
@@ -12444,6 +12448,7 @@ presentations = [
           (val_mul, ":player_wealth_dif", -1),
           (try_begin),
             (gt, "$g_player_chamberlain", 0),
+		    (eq, "$g_receive_money_directly", 0),  ###### NEW v3.9.1 - 
             (call_script, "script_dplmc_pay_into_treasury", ":player_wealth_dif"),
           (else_try),
           (troop_add_gold, "trp_player", ":player_wealth_dif"),

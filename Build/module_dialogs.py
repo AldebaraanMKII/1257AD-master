@@ -11285,6 +11285,46 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (troop_add_gold, "trp_player", 10000),
    ]], 
    
+############## NEW v3.9.1 - 
+   [anyone|plyr, "dplmc_chamberlain_treasury_action_withdraw_select",
+   [
+    (store_troop_gold, ":gold", "trp_household_possessions"),
+    (ge, ":gold", 25000),
+   ],
+"25000.", "dplmc_chamberlain_treasury_action_withdraw",
+   [
+    (call_script, "script_dplmc_withdraw_from_treasury", 25000),
+    (troop_add_gold, "trp_player", 25000),
+   ]], 
+
+
+
+   [anyone|plyr, "dplmc_chamberlain_treasury_action_withdraw_select",
+   [
+    (store_troop_gold, ":gold", "trp_household_possessions"),
+    (ge, ":gold", 50000),
+   ],
+"50000.", "dplmc_chamberlain_treasury_action_withdraw",
+   [
+    (call_script, "script_dplmc_withdraw_from_treasury", 50000),
+    (troop_add_gold, "trp_player", 50000),
+   ]], 
+
+
+
+   [anyone|plyr, "dplmc_chamberlain_treasury_action_withdraw_select",
+   [
+    (store_troop_gold, ":gold", "trp_household_possessions"),
+    (ge, ":gold", 100000),
+   ],
+"100000.", "dplmc_chamberlain_treasury_action_withdraw",
+   [
+    (call_script, "script_dplmc_withdraw_from_treasury", 100000),
+    (troop_add_gold, "trp_player", 100000),
+   ]], 
+############################   
+   
+   
    [anyone|plyr, "dplmc_chamberlain_treasury_action_withdraw_select", [],
 "Never mind.", "dplmc_chamberlain_pretalk", []],
  
@@ -11765,6 +11805,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_dplmc_withdraw_from_treasury",  ":treasury"),
     (troop_add_gold, "trp_player", ":treasury"),
    ]],
+   
    
 [anyone|plyr, "dplmc_chamberlain_talk", [],
 "Oh nothing, I just wanted to check the documents.", "close_window",[
@@ -13342,7 +13383,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "{s11}.", "dplmc_chancellor_kingdom_language_select_1",
 [
 (store_repeat_object, ":faction_no"),
-(troop_remove_gold, "trp_player", 15000),
+# (troop_remove_gold, "trp_player", 15000),
+(troop_remove_gold, "trp_player", reg20), ###### NEW v3.9.1 - 
 (assign, "$g_player_culture", ":faction_no"),
 # (faction_set_slot, "fac_player_supporters_faction", slot_faction_culture, ":faction_no"),
 (faction_set_slot, "$players_kingdom", slot_faction_culture, ":faction_no"), ########## NEW v3.3
@@ -13461,6 +13503,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (assign, "$g_ask_for_language", 1),     
   (try_end),
 (try_end),
+(troop_set_slot, "trp_player", slot_troop_cur_culture, ":cur_faction_culture"),  ###### NEW v3.9.1 - 
 ]],
 
 
@@ -13811,7 +13854,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [
 (eq, "$g_ask_for_language", 0),     
 ], 
-"Very well", "minister_pretalk", []
+"Very well", "minister_pretalk", 
+[
+]
 ],
 
 ################## select kingdom culture
@@ -15085,11 +15130,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (neq, ":center_no", "$g_player_court"),
     (party_get_slot, ":town_lord", ":center_no", slot_town_lord),
     (try_begin),
-        (ge, ":town_lord", active_npcs_begin),
-        (troop_slot_eq, ":town_lord", slot_troop_is_alive, 1),  ## he's alive/active
-        (store_faction_of_troop, ":town_lord_faction", ":town_lord"),
-        (neq, ":town_lord_faction", "$players_kingdom"),
-        (assign, ":town_lord", -1),
+      (ge, ":town_lord", active_npcs_begin),
+      (troop_slot_eq, ":town_lord", slot_troop_is_alive, 1),  ## he's alive/active
+      (store_faction_of_troop, ":town_lord_faction", ":town_lord"),
+      (neq, ":town_lord_faction", "$players_kingdom"),
+      (assign, ":town_lord", -1),
     (try_end),
     (le, ":town_lord", 0),
    
@@ -15150,11 +15195,11 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    (store_repeat_object, ":troop_no"),
    ######### NEW v3.0
+   (is_between, ":troop_no", active_npcs_begin, active_npcs_end),
    (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
-   (neq, ":troop_no", "trp_player"),
+   # (neq, ":troop_no", "trp_player"),
    #########
    (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
-   (is_between, ":troop_no", active_npcs_begin, active_npcs_end),
    (store_faction_of_troop, ":troop_faction", ":troop_no"),
    (eq, ":troop_faction", "$players_kingdom"),  ######### NEW v3.0
    (str_store_troop_name, s1, ":troop_no"),
@@ -15178,11 +15223,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
    [anyone, "minister_grant_fief_complete",
    [
+   (str_store_party_name, s1, "$fief_selected"),
+   (str_store_troop_name, s2, "$lord_selected"),
    ], "Very well - {s2} shall receive {s1}.", "minister_pretalk",
    [
    (call_script, "script_give_center_to_lord", "$fief_selected", "$lord_selected", 0),
-   (str_store_party_name, s1, "$fief_selected"),
-   (str_store_troop_name, s2, "$lord_selected"),
+   # (str_store_party_name, s1, "$fief_selected"),
+   # (str_store_troop_name, s2, "$lord_selected"),
    
    (try_begin),
     (faction_slot_eq, "$players_kingdom", slot_faction_political_issue, "$fief_selected"),
@@ -39457,21 +39504,21 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   ],
   
 [anyone, "view_prisoner_inventory",
-    [], "This is what i have, please don't hurt me!", "view_prisoner_inventory_2", #####Use {s0} instead of {sir/madam}
-    [
-      (call_script, "script_dplmc_copy_inventory", "trp_player", "trp_temp_array_a"),
-      (call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
+[], "This is what i have, please don't hurt me!", "view_prisoner_inventory_2", #####Use {s0} instead of {sir/madam}
+[
+  (call_script, "script_dplmc_copy_inventory", "trp_player", "trp_temp_array_a"),
+  (call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
 
-      (try_for_range, ":i_slot", 0, 10),
-        (troop_get_inventory_slot, ":item", "trp_temp_array_b", ":i_slot"),
-        (gt, ":item", -1),
-        (troop_get_inventory_slot_modifier, ":imod", "trp_temp_array_b", ":i_slot"),
-        (troop_add_item, "trp_temp_array_b", ":item", ":imod"),
-        (troop_set_inventory_slot, "trp_temp_array_b", ":i_slot", -1),
-      (try_end),
+  (try_for_range, ":i_slot", 0, 10),
+    (troop_get_inventory_slot, ":item", "trp_temp_array_b", ":i_slot"),
+    (gt, ":item", -1),
+    (troop_get_inventory_slot_modifier, ":imod", "trp_temp_array_b", ":i_slot"),
+    (troop_add_item, "trp_temp_array_b", ":item", ":imod"),
+    (troop_set_inventory_slot, "trp_temp_array_b", ":i_slot", -1),
+  (try_end),
 
-      (change_screen_loot, "trp_temp_array_b"),
-    ]],
+  (change_screen_loot, "trp_temp_array_b"),
+]],
     
     
 ####### NEW v2.9-KOMKE START-  
@@ -39485,7 +39532,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ],
 [anyone|plyr, "view_prisoner_inventory_3", [],
 "I don't want your rags!", "prisoner_options", [
-      (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
+(call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
 ],
 
 ####### NEW v2.9-KOMKE END-   
@@ -40612,31 +40659,35 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "regular_member_talk", [],
 "Let me see your equipment.", "dplmc_view_regular_inventory", []
   ],
+##########################
 [anyone, "dplmc_view_regular_inventory",
-    [], "Very well, here is what I am using...", "dplmc_do_view_regular_inventory",#Use {s0} instead of {sir/madam}
-    [
-      (call_script, "script_dplmc_copy_inventory", "trp_player", "trp_temp_array_a"),
-      (call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
+[], "Very well, here is what I am using...", "dplmc_do_view_regular_inventory",#Use {s0} instead of {sir/madam}
+[
+  (call_script, "script_dplmc_copy_inventory", "trp_player", "trp_temp_array_a"),
+  (call_script, "script_dplmc_copy_inventory", "$g_talk_troop", "trp_temp_array_b"),
 
-      (try_for_range, ":i_slot", 0, 10),
-        (troop_get_inventory_slot, ":item", "trp_temp_array_b", ":i_slot"),
-        (gt, ":item", -1),
-        (troop_get_inventory_slot_modifier, ":imod", "trp_temp_array_b", ":i_slot"),
-        (troop_add_item, "trp_temp_array_b", ":item", ":imod"),
-        (troop_set_inventory_slot, "trp_temp_array_b", ":i_slot", -1),
-      (try_end),
+  (try_for_range, ":i_slot", 0, 10),
+    (troop_get_inventory_slot, ":item", "trp_temp_array_b", ":i_slot"),
+    (gt, ":item", -1),
+    (troop_get_inventory_slot_modifier, ":imod", "trp_temp_array_b", ":i_slot"),
+    (troop_add_item, "trp_temp_array_b", ":item", ":imod"),
+    (troop_set_inventory_slot, "trp_temp_array_b", ":i_slot", -1),
+  (try_end),
 
-      (change_screen_loot, "trp_temp_array_b"),
-    ]],
+  (change_screen_loot, "trp_temp_array_b"),
+]],
+##########################
 [anyone, "dplmc_do_view_regular_inventory", [],
 "Is that satisfactory?", "dplmc_do_view_regular_inventory_2", []#Use {s0} instead of {sir/madam}
-  ],
+],
+##########################
 [anyone|plyr, "dplmc_do_view_regular_inventory_2",
-    [
-    ],
-"Indeed.", "do_regular_member_view_char", [
-      (call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),]
-  ],
+[],
+"Indeed.", "do_regular_member_view_char", 
+[
+(call_script, "script_dplmc_copy_inventory", "trp_temp_array_a", "trp_player"),
+]
+],
 ## CC view regular's equipment
 ##diplomacy end+
 ####################################################################################################
