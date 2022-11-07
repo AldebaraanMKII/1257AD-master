@@ -23713,7 +23713,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (neq, ":faction_marshal", "$g_talk_troop"),
   (str_store_troop_name, s4, ":faction_marshal"),
   ],
-      "Our leader {s4} is far too cautious. {reg4?She:He} should either use the army to attack the enemy, or let it go home.",
+      "Our leader {s4} is far too cautious. {reg4?He:She} should either use the army to attack the enemy, or let it go home.",
 "lord_strategy_follow_up",[
   (assign, "$g_talk_troop_disagrees_with_marshal", 1),
 

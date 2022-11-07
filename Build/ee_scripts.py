@@ -19156,172 +19156,273 @@ scripts = [
         ### Full village connection-order goes: Manual castles --> manual towns --> autoscript castles --> autoscript towns
         (try_begin),
           ### Kingdom of Denmark
-          (party_set_slot, "p_village_4_9", slot_village_bound_center, "p_castle_4_1"),
+          (party_set_slot, "p_village_4_9", slot_village_bound_center, "p_castle_4_1"), ### Æggersburgh
           (store_faction_of_party, ":town_faction", "p_castle_4_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_4_9", ":town_faction"),
 
-          (party_set_slot, "p_village_4_14", slot_village_bound_center, "p_castle_4_7"),
+          (party_set_slot, "p_village_4_14", slot_village_bound_center, "p_castle_4_7"), ### Helsingiæburgh
           (store_faction_of_party, ":town_faction", "p_castle_4_7"),
           (call_script, "script_give_center_to_faction_aux", "p_village_4_14", ":town_faction"),
 
-          (party_set_slot, "p_village_4_4", slot_village_bound_center, "p_town_4_1"),
+          (party_set_slot, "p_village_4_4", slot_village_bound_center, "p_town_4_1"), ### Lund
           (store_faction_of_party, ":town_faction", "p_town_4_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_4_4", ":town_faction"),
 
-          (party_set_slot, "p_village_4_2", slot_village_bound_center, "p_town_4_2"),
+          (party_set_slot, "p_village_4_2", slot_village_bound_center, "p_town_4_2"), ### Roarskeldae
           (store_faction_of_party, ":town_faction", "p_town_4_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_4_2", ":town_faction"),
 
-          (party_set_slot, "p_village_4_5", slot_village_bound_center, "p_town_4_3"),
+          (party_set_slot, "p_village_4_5", slot_village_bound_center, "p_town_4_3"), ### Reval
           (store_faction_of_party, ":town_faction", "p_town_4_3"),
           (call_script, "script_give_center_to_faction_aux", "p_village_4_5", ":town_faction"),
 
-          (party_set_slot, "p_village_4_8", slot_village_bound_center, "p_town_4_4"),
+          (party_set_slot, "p_village_4_8", slot_village_bound_center, "p_town_4_4"), ### Wybærgh
           (store_faction_of_party, ":town_faction", "p_town_4_4"),
           (call_script, "script_give_center_to_faction_aux", "p_village_4_8", ":town_faction"),
 
+          ### Polish Principalities
+          (party_set_slot, "p_village_5_13", slot_village_bound_center, "p_town_5_3"), ### Gdańsk
+          (store_faction_of_party, ":town_faction", "p_town_5_3"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_5_13", ":town_faction"),
+
+          (party_set_slot, "p_village_5_7", slot_village_bound_center, "p_town_5_4"), ### Poznań
+          (store_faction_of_party, ":town_faction", "p_town_5_4"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_5_7", ":town_faction"),
+
           ### Kingdom of England
-          (party_set_slot, "p_village_9_1", slot_village_bound_center, "p_castle_9_1"),
+          (party_set_slot, "p_village_9_1", slot_village_bound_center, "p_castle_9_1"), ### Beeston Castle
           (store_faction_of_party, ":town_faction", "p_castle_9_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_1", ":town_faction"),
 
-          (party_set_slot, "p_village_9_4", slot_village_bound_center, "p_castle_9_2"),
+          (party_set_slot, "p_village_9_4", slot_village_bound_center, "p_castle_9_2"), ### Lewes Castle
           (store_faction_of_party, ":town_faction", "p_castle_9_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_4", ":town_faction"),
 
-          (party_set_slot, "p_village_9_3", slot_village_bound_center, "p_castle_9_4"),
+          (party_set_slot, "p_village_9_3", slot_village_bound_center, "p_castle_9_4"), ### Dover Castle
           (store_faction_of_party, ":town_faction", "p_castle_9_4"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_3", ":town_faction"),
 
-          (party_set_slot, "p_village_9_12", slot_village_bound_center, "p_town_9_1"),
+          (party_set_slot, "p_village_9_12", slot_village_bound_center, "p_town_9_1"), ### London
           (store_faction_of_party, ":town_faction", "p_town_9_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_12", ":town_faction"),
 
-          (party_set_slot, "p_village_9_6", slot_village_bound_center, "p_town_9_2"),
+          (party_set_slot, "p_village_9_6", slot_village_bound_center, "p_town_9_2"), ### Bristol
           (store_faction_of_party, ":town_faction", "p_town_9_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_6", ":town_faction"),
 
-          (party_set_slot, "p_village_9_9", slot_village_bound_center, "p_town_9_3"),
+          (party_set_slot, "p_village_9_9", slot_village_bound_center, "p_town_9_3"), ### Chester
           (store_faction_of_party, ":town_faction", "p_town_9_3"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_9", ":town_faction"),
 
-          (party_set_slot, "p_village_9_11", slot_village_bound_center, "p_town_9_4"),
+          (party_set_slot, "p_village_9_11", slot_village_bound_center, "p_town_9_4"), ### York
           (store_faction_of_party, ":town_faction", "p_town_9_4"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_11", ":town_faction"),
 
-          (party_set_slot, "p_village_9_18", slot_village_bound_center, "p_town_9_5"),
+          (party_set_slot, "p_village_9_18", slot_village_bound_center, "p_town_9_5"), ### Bordeaux
           (store_faction_of_party, ":town_faction", "p_town_9_5"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_18", ":town_faction"),
 
-          (party_set_slot, "p_village_9_19", slot_village_bound_center, "p_town_9_6"),
+          (party_set_slot, "p_village_9_19", slot_village_bound_center, "p_town_9_6"), ### Dublin
           (store_faction_of_party, ":town_faction", "p_town_9_6"),
           (call_script, "script_give_center_to_faction_aux", "p_village_9_19", ":town_faction"),
 
           ### Kingdom of France
-          (party_set_slot, "p_village_10_14", slot_village_bound_center, "p_castle_10_2"),
+          (party_set_slot, "p_village_10_14", slot_village_bound_center, "p_castle_10_2"), ### Mortain
           (store_faction_of_party, ":town_faction", "p_castle_10_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_14", ":town_faction"),
 
-          (party_set_slot, "p_village_10_20", slot_village_bound_center, "p_castle_10_4"),
+          (party_set_slot, "p_village_10_20", slot_village_bound_center, "p_castle_10_4"), ### Châlons
           (store_faction_of_party, ":town_faction", "p_castle_10_4"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_20", ":town_faction"),
 
-          (party_set_slot, "p_village_10_18", slot_village_bound_center, "p_castle_10_6"),
+          (party_set_slot, "p_village_10_8", slot_village_bound_center, "p_castle_10_5"), ### Angoulême
+          (store_faction_of_party, ":town_faction", "p_castle_10_5"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_10_8", ":town_faction"),
+
+          (party_set_slot, "p_village_10_18", slot_village_bound_center, "p_castle_10_6"), ### Cahors
           (store_faction_of_party, ":town_faction", "p_castle_10_6"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_18", ":town_faction"),
 
-          (party_set_slot, "p_village_10_23", slot_village_bound_center, "p_castle_10_7"),
+          (party_set_slot, "p_village_10_23", slot_village_bound_center, "p_castle_10_7"), ### Clermont
           (store_faction_of_party, ":town_faction", "p_castle_10_7"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_23", ":town_faction"),
 
-          (party_set_slot, "p_village_10_5", slot_village_bound_center, "p_castle_10_8"),
+          (party_set_slot, "p_village_10_5", slot_village_bound_center, "p_castle_10_8"), ### Orléans
           (store_faction_of_party, ":town_faction", "p_castle_10_8"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_5", ":town_faction"),
 
-          (party_set_slot, "p_village_10_3", slot_village_bound_center, "p_town_10_1"),
+          (party_set_slot, "p_village_10_1", slot_village_bound_center, "p_castle_10_10"), ### Chinon
+          (store_faction_of_party, ":town_faction", "p_castle_10_10"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_10_1", ":town_faction"),
+
+          (party_set_slot, "p_village_10_3", slot_village_bound_center, "p_town_10_1"), ### Paris
           (store_faction_of_party, ":town_faction", "p_town_10_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_3", ":town_faction"),
 
-          (party_set_slot, "p_village_10_16", slot_village_bound_center, "p_town_10_2"),
+          (party_set_slot, "p_village_10_16", slot_village_bound_center, "p_town_10_2"), ### Nantes
           (store_faction_of_party, ":town_faction", "p_town_10_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_16", ":town_faction"),
 
-          (party_set_slot, "p_village_10_24", slot_village_bound_center, "p_town_10_3"),
+          (party_set_slot, "p_village_10_24", slot_village_bound_center, "p_town_10_3"), ### Dijon
           (store_faction_of_party, ":town_faction", "p_town_10_3"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_24", ":town_faction"),
 
-          (party_set_slot, "p_village_10_10", slot_village_bound_center, "p_town_10_4"),
+          (party_set_slot, "p_village_10_10", slot_village_bound_center, "p_town_10_4"), ### Toulouse
           (store_faction_of_party, ":town_faction", "p_town_10_4"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_10", ":town_faction"),
 
-          (party_set_slot, "p_village_10_4", slot_village_bound_center, "p_town_10_5"),
+          (party_set_slot, "p_village_10_4", slot_village_bound_center, "p_town_10_5"), ### Rouen
           (store_faction_of_party, ":town_faction", "p_town_10_5"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_4", ":town_faction"),
 
-          (party_set_slot, "p_village_10_17", slot_village_bound_center, "p_town_10_6"),
+          (party_set_slot, "p_village_10_17", slot_village_bound_center, "p_town_10_6"), ### Aix-en-Provence
           (store_faction_of_party, ":town_faction", "p_town_10_6"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_17", ":town_faction"),
 
-          (party_set_slot, "p_village_10_21", slot_village_bound_center, "p_town_10_7"),
+          (party_set_slot, "p_village_10_19", slot_village_bound_center, "p_town_10_6"), ### Aix-en-Provence
+          (store_faction_of_party, ":town_faction", "p_town_10_6"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_10_19", ":town_faction"),
+
+          (party_set_slot, "p_village_10_21", slot_village_bound_center, "p_town_10_7"), ### Reims
           (store_faction_of_party, ":town_faction", "p_town_10_7"),
           (call_script, "script_give_center_to_faction_aux", "p_village_10_21", ":town_faction"),
 
           ### Kingdom of Norway
-          (party_set_slot, "p_village_11_11", slot_village_bound_center, "p_castle_11_3"),
+          (party_set_slot, "p_village_11_11", slot_village_bound_center, "p_castle_11_3"), ### Stafangr
           (store_faction_of_party, ":town_faction", "p_castle_11_3"),
           (call_script, "script_give_center_to_faction_aux", "p_village_11_11", ":town_faction"),
 
-          (party_set_slot, "p_village_11_8", slot_village_bound_center, "p_castle_11_4"),
+          (party_set_slot, "p_village_11_8", slot_village_bound_center, "p_castle_11_4"), ### Túnsberg
           (store_faction_of_party, ":town_faction", "p_castle_11_4"),
           (call_script, "script_give_center_to_faction_aux", "p_village_11_8", ":town_faction"),
 
-          (party_set_slot, "p_village_11_2", slot_village_bound_center, "p_town_11_1"),
+          (party_set_slot, "p_village_11_2", slot_village_bound_center, "p_town_11_1"), ### Niðarós
           (store_faction_of_party, ":town_faction", "p_town_11_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_11_2", ":town_faction"),
 
-          (party_set_slot, "p_village_11_3", slot_village_bound_center, "p_town_11_2"),
+          (party_set_slot, "p_village_11_3", slot_village_bound_center, "p_town_11_2"), ### Biǫrgyn
           (store_faction_of_party, ":town_faction", "p_town_11_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_11_3", ":town_faction"),
 
-          (party_set_slot, "p_village_11_1", slot_village_bound_center, "p_town_11_2"),
+          (party_set_slot, "p_village_11_1", slot_village_bound_center, "p_town_11_2"), ### Biǫrgyn
           (store_faction_of_party, ":town_faction", "p_town_11_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_11_1", ":town_faction"),
 
-          (party_set_slot, "p_village_11_4", slot_village_bound_center, "p_town_11_3"),
+          (party_set_slot, "p_village_11_4", slot_village_bound_center, "p_town_11_3"), ### Ásló
           (store_faction_of_party, ":town_faction", "p_town_11_3"),
           (call_script, "script_give_center_to_faction_aux", "p_village_11_4", ":town_faction"),
 
-          (party_set_slot, "p_village_11_5", slot_village_bound_center, "p_town_11_3"),
+          (party_set_slot, "p_village_11_5", slot_village_bound_center, "p_town_11_3"), ### Ásló
           (store_faction_of_party, ":town_faction", "p_town_11_3"),
           (call_script, "script_give_center_to_faction_aux", "p_village_11_5", ":town_faction"),
 
           ### Kingdom of Scotland
-          (party_set_slot, "p_village_12_1", slot_village_bound_center, "p_castle_12_1"),
+          (party_set_slot, "p_village_12_1", slot_village_bound_center, "p_castle_12_1"), ### Urquhart
           (store_faction_of_party, ":town_faction", "p_castle_12_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_12_1", ":town_faction"),
 
-          (party_set_slot, "p_village_12_3", slot_village_bound_center, "p_castle_12_2"),
+          (party_set_slot, "p_village_12_3", slot_village_bound_center, "p_castle_12_2"), ### Dingwall
           (store_faction_of_party, ":town_faction", "p_castle_12_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_12_3", ":town_faction"),
 
           ### Kingdom of Sweden
-          (party_set_slot, "p_village_14_7", slot_village_bound_center, "p_castle_14_1"),
+          (party_set_slot, "p_village_14_7", slot_village_bound_center, "p_castle_14_1"), ### Kalmarnir
           (store_faction_of_party, ":town_faction", "p_castle_14_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_14_7", ":town_faction"),
 
-          (party_set_slot, "p_village_14_8", slot_village_bound_center, "p_castle_14_6"),
+          (party_set_slot, "p_village_14_8", slot_village_bound_center, "p_castle_14_6"), ### Linkøpang
           (store_faction_of_party, ":town_faction", "p_castle_14_6"),
           (call_script, "script_give_center_to_faction_aux", "p_village_14_8", ":town_faction"),
 
+          ### Kingdom of Portugal
+          (party_set_slot, "p_village_16_8", slot_village_bound_center, "p_castle_16_1"), ### Guimarães
+          (store_faction_of_party, ":town_faction", "p_castle_16_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_16_8", ":town_faction"),
+
+          (party_set_slot, "p_village_16_7", slot_village_bound_center, "p_castle_16_4"), ### Bragança
+          (store_faction_of_party, ":town_faction", "p_castle_16_4"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_16_7", ":town_faction"),
+
+          (party_set_slot, "p_village_16_3", slot_village_bound_center, "p_town_16_1"), ### Lisboa
+          (store_faction_of_party, ":town_faction", "p_town_16_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_16_3", ":town_faction"),
+
+          (party_set_slot, "p_village_16_2", slot_village_bound_center, "p_town_16_2"), ### Coimbra
+          (store_faction_of_party, ":town_faction", "p_town_16_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_16_2", ":town_faction"),
+
+          ### Crown of Aragon
+          (party_set_slot, "p_village_17_5", slot_village_bound_center, "p_castle_17_1"), ### Zaragoza
+          (store_faction_of_party, ":town_faction", "p_castle_17_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_17_5", ":town_faction"),
+
+          (party_set_slot, "p_village_17_6", slot_village_bound_center, "p_castle_17_2"), ### Castellciutat
+          (store_faction_of_party, ":town_faction", "p_castle_17_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_17_6", ":town_faction"),
+
+          (party_set_slot, "p_village_17_1", slot_village_bound_center, "p_castle_17_5"), ### Tortosa
+          (store_faction_of_party, ":town_faction", "p_castle_17_5"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_17_1", ":town_faction"),
+
+          (party_set_slot, "p_village_17_10", slot_village_bound_center, "p_castle_17_6"), ### Jaca
+          (store_faction_of_party, ":town_faction", "p_castle_17_6"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_17_10", ":town_faction"),
+
+          (party_set_slot, "p_village_17_11", slot_village_bound_center, "p_castle_17_7"), ### Albarracín
+          (store_faction_of_party, ":town_faction", "p_castle_17_7"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_17_11", ":town_faction"),
+
+          (party_set_slot, "p_village_17_2", slot_village_bound_center, "p_town_17_1"), ### Barcelona
+          (store_faction_of_party, ":town_faction", "p_town_17_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_17_2", ":town_faction"),
+
+          (party_set_slot, "p_village_17_8", slot_village_bound_center, "p_town_17_2"), ### Valencia
+          (store_faction_of_party, ":town_faction", "p_town_17_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_17_8", ":town_faction"),
+
           ### Kingdom of Navarra
-          (party_set_slot, "p_village_19_3", slot_village_bound_center, "p_castle_19_1"),
+          (party_set_slot, "p_village_19_3", slot_village_bound_center, "p_castle_19_1"), ### San Sebastian
           (store_faction_of_party, ":town_faction", "p_castle_19_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_19_3", ":town_faction"),
 
+          ### Emirate of Granada
+          (party_set_slot, "p_village_20_7", slot_village_bound_center, "p_castle_20_3"), ### Qasbat Wadi-Aci
+          (store_faction_of_party, ":town_faction", "p_castle_20_3"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_20_7", ":town_faction"),
+
+          (party_set_slot, "p_village_20_5", slot_village_bound_center, "p_castle_20_4"), ### Qasbat Al-Mariyya
+          (store_faction_of_party, ":town_faction", "p_castle_20_4"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_20_5", ":town_faction"),
+
+          (party_set_slot, "p_village_20_9", slot_village_bound_center, "p_castle_20_6"), ### Shalubānya
+          (store_faction_of_party, ":town_faction", "p_castle_20_6"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_20_9", ":town_faction"),
+
+          (party_set_slot, "p_village_20_10", slot_village_bound_center, "p_castle_20_7"), ### Baza
+          (store_faction_of_party, ":town_faction", "p_castle_20_7"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_20_10", ":town_faction"),
+
+          (party_set_slot, "p_village_20_11", slot_village_bound_center, "p_town_20_1"), ### Granada
+          (store_faction_of_party, ":town_faction", "p_town_20_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_20_11", ":town_faction"),
+
+          (party_set_slot, "p_village_20_2", slot_village_bound_center, "p_town_20_2"), ### Málaga
+          (store_faction_of_party, ":town_faction", "p_town_20_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_20_2", ":town_faction"),
+
+          (party_set_slot, "p_village_20_4", slot_village_bound_center, "p_town_20_2"), ### Málaga
+          (store_faction_of_party, ":town_faction", "p_town_20_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_20_4", ":town_faction"),
+
           ### Kingdom of Sicily
-          (party_set_slot, "p_village_24_3", slot_village_bound_center, "p_castle_24_1"),
+          (party_set_slot, "p_village_24_3", slot_village_bound_center, "p_castle_24_1"), ### Scilla
           (store_faction_of_party, ":town_faction", "p_castle_24_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_24_3", ":town_faction"),
+
+          ### Marinid Dynasty
+          (party_set_slot, "p_village_31_8", slot_village_bound_center, "p_castle_31_2"), ### Algiers
+          (store_faction_of_party, ":town_faction", "p_castle_31_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_31_8", ":town_faction"),
         (try_end),
         ### End of manual assignments pre-loop for exceptions.
 
