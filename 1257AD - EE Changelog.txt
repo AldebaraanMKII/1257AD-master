@@ -14,9 +14,9 @@ NOTE: Things with the "New game:" prefix requires a new game to take effect.
 
 v3.8
 1). Fixed some music tracks not being played because of wrong extensions on module_music.py
-2). Improved the basic startup script for village assignments, castles now have priority over towns.
-3). Nidaros and Steinker have now switched places to improve the Norwegian geography and village/town layout.
-4). Fixed typo in the string for the Norwegian (faction) language.
+2). Improved the basic startup script for village assignments, castles now have priority over towns (Thanks to @Khanor).
+3). Nidaros and Steinker have now switched places to improve the Norwegian geography and village/town layout (Thanks to @Khanor).
+4). Fixed typo in the string for the Norwegian (faction) language (Thanks to @Khanor).
 5). Fixed player starting with villages in non-noble starts.
 6). Fixed tournament ambiance sounds playing even after the tournament finished.
 7). (Freelancer) Fixed player being unable to return to a lord's service after a leave or being captured in battle.
@@ -32,7 +32,7 @@ v3.8
 17). Fixed crossbowmen bugging out and not doing anything after some time.
 18). Fixed player receiving a notification and errors about someone being executed even if he hasn't ordered any execution.
 19). Fixed player king not getting a notification when a border incident involving his faction happened.
-20). Fixed Mayors/Village Elders misgendering the player (Thanks to @Khanor).
+20). Temporary fix to Mayors/Village Elders/etc. misgendering the player, they will just default to male gendering for now (Thanks to @Khanor).
 21). Fixed debug menu bugs for declare peace/war.
 22). Added new failsafe to block income from reaching very high values due to calculation errors.
 23). Fixed constable lacking dialogue for exchanging prisoners.

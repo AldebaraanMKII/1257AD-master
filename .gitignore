@@ -23,4 +23,5 @@ ID/ID_sounds.py
 ID/ID_strings.py
 ID/ID_tableau_materials.py
 
+.vscode/settings.json
 Build/module_info.py
