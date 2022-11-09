@@ -11422,7 +11422,7 @@ game_menus = [ #
      (try_begin),
 	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
 	   (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
-	   (val_mul, reg6, ":player_renown", 8)
+	   (val_mul, reg6, ":player_renown", 8),
      (try_end),
 ############################
 
