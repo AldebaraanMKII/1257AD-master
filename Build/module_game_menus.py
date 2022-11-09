@@ -11456,12 +11456,25 @@ game_menus = [ #
      (party_get_slot, ":new_owner", "$g_center_to_give_to_player", slot_town_lord),
      (str_store_troop_name, s5, ":new_owner"),
      # (assign, reg6, 900),
-	 ############## NEW v3.9.1 - 
-     (assign, reg6, 900),  ### default
+	 ############## NEW v3.9.1 - (base 500 + (5 * renown)) + (liege relations * 20) 
+     (assign, reg6, 500),  ### default
      (try_begin),
 	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
-	   (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
-	   (val_mul, reg6, ":player_renown", 8)
+	     (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+	     (store_mul, ":value", ":player_renown", 5),
+	     (val_add, reg6, ":value"),
+     (try_end),
+     (try_begin),
+       (call_script, "script_troop_get_player_relation", ":faction_leader"),
+       (assign, ":relation", reg0),
+	   (ge, ":relation", 0),
+	     (store_mul, ":value", ":relation", 20),
+	     (val_add, reg6, ":value"),
+     (else_try), ###### negative relation
+	   (lt, ":relation", 0),
+	     (val_mul, ":relation", -1), ###### turns into positive
+	     (store_mul, ":value", ":relation", 20),
+	     (val_sub, reg6, ":value"),
      (try_end),
 ############################
 
