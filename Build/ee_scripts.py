@@ -19155,6 +19155,11 @@ scripts = [
         ### villages for one town, and just one for others. Castles first for each faction to keep the system working as intended.
         ### Full village connection-order goes: Manual castles --> manual towns --> autoscript castles --> autoscript towns
         (try_begin),
+          ### Teutonic Order (Livonia and Prussia)
+          (party_set_slot, "p_village_1_9", slot_village_bound_center, "p_castle_1_2"), ### Balga
+          (store_faction_of_party, ":town_faction", "p_castle_1_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_1_9", ":town_faction"),
+
           ### Kingdom of Denmark
           (party_set_slot, "p_village_4_9", slot_village_bound_center, "p_castle_4_1"), ### Æggersburgh
           (store_faction_of_party, ":town_faction", "p_castle_4_1"),

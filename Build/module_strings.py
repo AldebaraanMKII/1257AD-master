@@ -5905,7 +5905,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("npc_intro_disband", "Haha... No."),
  ("npc_payment", "Excellent. I require {reg3} denars in gold as a compensation for my family while I am away."),
  ("npc_payment_recruit", "Of course, I'll get my steward to provide the gold to you right away."),
- ("npc_payment_disband", "Oh... Perhaps after I collected my taxes...."),
+ ("npc_payment_disband", "Oh... Perhaps after I collected my taxes..."),
  ("economy_build", "BUILD"),
  ("economy_demolish", "DEMOLISH"),
  
