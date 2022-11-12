@@ -52,12 +52,12 @@ game_menus = [
        (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
        (this_or_next|eq, "$cheat_mode", 1),
        (eq, ":town_lord", "trp_player"),
-       (str_store_string, s40, "@You currently have {reg20} lances available for recruitment."),
+       (str_store_string, s40, "@You currently have {reg20} lance(s) available for recruitment."),
        (party_get_slot, reg24, "$current_town", slot_number_nobles),
        (party_get_slot, reg25, "$current_town", slot_number_commoner),
        (this_or_next|gt, reg24, 0),
        (gt, reg25, 0),
-       (str_store_string, s40, "@You currently have {reg20} lances available for recruitment. Among them are {reg24} nobles and {reg25} commoners that have experiance in the field of battle."),
+       (str_store_string, s40, "@You currently have {reg20} lance(s) available for recruitment. Among them are {reg24} nobles and {reg25} commoners that have experience on the field of battle."),
      (try_end),
      
      (try_begin),
@@ -70,7 +70,7 @@ game_menus = [
      (try_end),
      
      (try_begin),
-       (is_between,  "$current_town", centers_begin, centers_end),
+       (is_between, "$current_town", centers_begin, centers_end),
        (try_begin),
          (party_slot_ge, "$current_town", slot_center_has_quarters_genoese, 1),
          (str_store_string, s42, "@Genoese crossbowman are stationed here."),
@@ -3731,7 +3731,7 @@ game_menus = [
   
   #######
  ("disband_lances",0,
-   "Do you realy want to disband your feudal forces? (This will only effect forces that where recruited in lances.)",
+   "Do you realy want to disband your feudal forces? (This will only affect forces that were recruited in lances.)",
    "none",
    [
 
@@ -3743,7 +3743,7 @@ game_menus = [
          
       ],
       "Yes! The peasants emit strong foul odour... Reward the nobles, however!",
-      [        
+      [
         (call_script, "script_balance_lance_storage"),
         #1st loop - find troops from this fief, that is in the player party.
         (try_for_range, ":fief", centers_begin, centers_end),

@@ -5898,12 +5898,12 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("manor_breeder_description", "Produces horses"),
  ("manor_walls_description", "Manor no longer gets infested by bandits, has no effect if the bound village is looter - costs 500 gold to maintain."),
  
- ("manor_gathering_army_explained", "Allright sir, however summoning men to arms will not only decrease our folk that pay taxes, but also decrease the settlement propserity as there will not be enough hands working in the field or in the shops. You will also have to pay for there upkeep. That being said, what size    of a force do you wish to gather?"),
+ ("manor_gathering_army_explained", "All right sir, however summoning men to arms will not only decrease our folk that pay taxes, but also decrease the settlement prosperity as there will not be enough hands working in the fields or in the shops. You will also have to pay for their upkeep. That being said, what size of a force do you wish to gather?"),
  
  ("npc_intro", "Greetings {your Lordship/Milady}, perhaps you called me here because you'd like me to represent you on the field of battle?"),
  ("npc_intro_recruit", "Yes, I would."),
  ("npc_intro_disband", "Haha... No."),
- ("npc_payment", "Excelent. I require {reg3} gold coins as a compensation for my family while I am away."),
+ ("npc_payment", "Excellent. I require {reg3} denars in gold as a compensation for my family while I am away."),
  ("npc_payment_recruit", "Of course, I'll get my steward to provide the gold to you right away."),
  ("npc_payment_disband", "Oh... Perhaps after I collected my taxes...."),
  ("economy_build", "BUILD"),

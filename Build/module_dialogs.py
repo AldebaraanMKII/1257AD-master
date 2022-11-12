@@ -2013,7 +2013,7 @@ dialogs = [
              #(assign, reg0, ":gold"),
              (party_get_slot, reg0, "$g_encountered_party", manor_slot_gold),
           ],
-        "Currently there is {reg0} dinars in the treasury, do you want to deposit or retrieve {Milord/Milady}?", "manor_seneschal_treasury",
+        "Currently there is {reg0} denars in the treasury, do you want to deposit or retrieve {Milord/Milady}?", "manor_seneschal_treasury",
             #"WOOT", "close_window",
          [
         
@@ -2260,7 +2260,7 @@ dialogs = [
                (eq, ":building", 0),
                (str_store_string, s13, "@We currently have no building projects going on"),
              (else_try),
-               (str_store_string, s13, "@Currently were are building: {s5}"),
+               (str_store_string, s13, "@Currently we are building: {s5}"),
              (try_end),
           ],
         "Of course. Currently in our {s12} we have: {s11}. {s13}, what would you like to build {Milord/Milady}?", "manor_build_ask",
@@ -2389,7 +2389,7 @@ dialogs = [
               (str_store_string, s15, "@This building will take up to a week to build."),
             (try_end)
           ],
-        "That will cost us {reg0} dinars, and we currently possess {reg1} within the treasury. {s15}.", "manor_seneschal_buidling_cost",
+        "That will cost us {reg0} denars, and we currently possess {reg1} within the treasury. {s15}.", "manor_seneschal_buidling_cost",
           [
         
           ],
@@ -2984,7 +2984,7 @@ dialogs = [
         
         [trp_manor_marshal, "manor_marshal_army",
         [
-         # Allright sir, however summoning men to arms will not only decrease our folk that pay taxes, but also decrease the settlement propserity as there will not be enough hands working in the field or in the shops. You will also have to pay for there upkeep. That being said, what size    of a force do you wish to gather?"
+         # All right sir, however summoning men to arms will not only decrease our folk that pay taxes, but also decrease the settlement prosperity as there will not be enough hands working in the field or in the shops. You will also have to pay for there upkeep. That being said, what size of a force do you wish to gather?"
           (str_store_string, s0, "str_manor_gathering_army_explained"),
         ],
         "{s0}", "manor_marshal_army",
@@ -3484,7 +3484,7 @@ dialogs = [
             (store_troop_gold, ":gold" , "trp_player"),
             (ge, ":gold", 2000),
           ],
-        "I will give all I can spare, 2000 dinars", "priest_begin",
+        "I will give all I can spare, 2000 denars", "priest_begin",
           [
             (str_store_string, s0, "@Your donation is most appreciated my son, go with the blessing and forgiveness of our\
                                     Holy Father. Benedictus Deus. Benedictum Nomen Sanctum eius?"),
@@ -3498,7 +3498,7 @@ dialogs = [
             (store_troop_gold, ":gold" , "trp_player"),
             (ge, ":gold", 3000),
           ],
-        "No expense is too great in matters of faith, please accept 3000 dinars", "priest_begin",
+        "No expense is too great in matters of faith, please accept 3000 denars", "priest_begin",
           [
             (str_store_string, s0, "@Your donation is most appreciated my son, go with the blessing and forgiveness of our\
                                     Holy Father. Benedictus Deus. Benedictum Nomen Sanctum eius?"),
@@ -3526,7 +3526,7 @@ dialogs = [
             (store_troop_gold, ":gold" , "trp_player"),
             (ge, ":gold", 1000),
           ],
-        "Very well, then perhaps 1000 dinars would be a suitable gesture.", "priest_begin",
+        "Very well, then perhaps 1000 denars would be a suitable gesture.", "priest_begin",
           [
             (call_script, "script_change_player_party_morale", 10),
             (troop_remove_gold, "trp_player", 1000),
@@ -3790,7 +3790,7 @@ dialogs = [
           (val_sub, reg10, ":charisma"),
           (val_clamp, reg10, 100, 1051),
         ],
-        "Sure honey, but that will cost you {reg10} dinars", "whore_ask_army_reply",
+        "Sure honey, but that will cost you {reg10} denars", "whore_ask_army_reply",
         [],
         ],
         

@@ -19143,9 +19143,9 @@ scripts = [
           (assign, ":end_villages", "p_village_player"),
         (try_end),
 
-        #####################################################################################################
-        #### -- Manual assignments pre-loop for exceptions due to distance/location/etc. (by Khanor.) -- ####
-        #####################################################################################################
+        ####################################################################################################################
+        #### -- Manual assignments pre-loop/pre-autoscript for exceptions due to distance/location/etc. (by Khanor.) -- ####
+        ####################################################################################################################
         ### This might also save time on startup due to the village searching script having to run less.
         ### If this is indeed the case, utilizing manual village connections more often could benefit more than
         ### territorial and geographical modeling.
@@ -19188,6 +19188,68 @@ scripts = [
           (party_set_slot, "p_village_5_7", slot_village_bound_center, "p_town_5_4"), ### Poznań
           (store_faction_of_party, ":town_faction", "p_town_5_4"),
           (call_script, "script_give_center_to_faction_aux", "p_village_5_7", ":town_faction"),
+
+          ### Holy Roman Empire
+          (party_set_slot, "p_village_6_13", slot_village_bound_center, "p_town_6_1"), ### Nürnberg
+          (store_faction_of_party, ":town_faction", "p_town_6_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_13", ":town_faction"),
+
+          (party_set_slot, "p_village_6_22", slot_village_bound_center, "p_town_6_2"), ### Köln
+          (store_faction_of_party, ":town_faction", "p_town_6_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_22", ":town_faction"),
+
+          (party_set_slot, "p_village_6_15", slot_village_bound_center, "p_town_6_3"), ### Frankfurt
+          (store_faction_of_party, ":town_faction", "p_town_6_3"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_15", ":town_faction"),
+
+          (party_set_slot, "p_village_6_26", slot_village_bound_center, "p_town_6_4"), ### Basel
+          (store_faction_of_party, ":town_faction", "p_town_6_4"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_26", ":town_faction"),
+
+          (party_set_slot, "p_village_6_5", slot_village_bound_center, "p_town_6_5"), ### Magdeburg
+          (store_faction_of_party, ":town_faction", "p_town_6_5"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_5", ":town_faction"),
+
+          (party_set_slot, "p_village_6_24", slot_village_bound_center, "p_town_6_6"), ### Lübeck
+          (store_faction_of_party, ":town_faction", "p_town_6_6"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_24", ":town_faction"),
+
+          (party_set_slot, "p_village_6_19", slot_village_bound_center, "p_castle_6_1"), ### Aachen
+          (store_faction_of_party, ":town_faction", "p_castle_6_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_19", ":town_faction"),
+
+          (party_set_slot, "p_village_6_10", slot_village_bound_center, "p_castle_6_2"), ### Trier
+          (store_faction_of_party, ":town_faction", "p_castle_6_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_10", ":town_faction"),
+
+          (party_set_slot, "p_village_6_16", slot_village_bound_center, "p_castle_6_3"), ### Wien
+          (store_faction_of_party, ":town_faction", "p_castle_6_3"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_16", ":town_faction"),
+
+          (party_set_slot, "p_village_6_3", slot_village_bound_center, "p_castle_6_4"), ### Mainz
+          (store_faction_of_party, ":town_faction", "p_castle_6_4"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_3", ":town_faction"),
+
+          (party_set_slot, "p_village_6_2", slot_village_bound_center, "p_castle_6_8"), ### Nancy
+          (store_faction_of_party, ":town_faction", "p_castle_6_8"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_6_2", ":town_faction"),
+
+          ### Novgorod Republic
+          (party_set_slot, "p_village_8_2", slot_village_bound_center, "p_town_8_1"), ### Velikiy Novgorod
+          (store_faction_of_party, ":town_faction", "p_town_8_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_8_2", ":town_faction"),
+
+          (party_set_slot, "p_village_8_5", slot_village_bound_center, "p_town_8_2"), ### Russa
+          (store_faction_of_party, ":town_faction", "p_town_8_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_8_5", ":town_faction"),
+
+          (party_set_slot, "p_village_8_7", slot_village_bound_center, "p_castle_8_3"), ### Torzhok
+          (store_faction_of_party, ":town_faction", "p_castle_8_3"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_8_7", ":town_faction"),
+
+          (party_set_slot, "p_village_8_8", slot_village_bound_center, "p_castle_8_4"), ### Ladoga
+          (store_faction_of_party, ":town_faction", "p_castle_8_4"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_8_8", ":town_faction"),
 
           ### Kingdom of England
           (party_set_slot, "p_village_9_1", slot_village_bound_center, "p_castle_9_1"), ### Beeston Castle
@@ -19423,6 +19485,15 @@ scripts = [
           (party_set_slot, "p_village_31_8", slot_village_bound_center, "p_castle_31_2"), ### Algiers
           (store_faction_of_party, ":town_faction", "p_castle_31_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_31_8", ":town_faction"),
+
+          ### Curonians
+          (party_set_slot, "p_village_35_1", slot_village_bound_center, "p_castle_35_1"), ### Dzintare
+          (store_faction_of_party, ":town_faction", "p_castle_35_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_35_1", ":town_faction"),
+
+          (party_set_slot, "p_village_35_3", slot_village_bound_center, "p_castle_35_2"), ### Įpiltis
+          (store_faction_of_party, ":town_faction", "p_castle_35_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_35_3", ":town_faction"),
         (try_end),
         ### End of manual assignments pre-loop for exceptions.
 
