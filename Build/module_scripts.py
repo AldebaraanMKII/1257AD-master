@@ -940,6 +940,9 @@ scripts = [
         
         (troop_set_slot, "trp_knight_5_2", slot_troop_cur_culture, "fac_culture_mazovian"),
         (troop_set_slot, "trp_knight_7_15", slot_troop_cur_culture, "fac_culture_cuman"),  ####### NEW v3.3
+        ####### NEW v3.10
+        # (troop_set_slot, "trp_knight_7_15", slot_troop_cur_culture, "fac_culture_cuman"),  
+        #######
         ##########
       (try_end),
       #############
@@ -2346,98 +2349,99 @@ scripts = [
         (party_set_slot, ":center_no", slot_feudal_lances, ":manpower"),
       (try_end),      
       ##TOM
-      
-      (try_for_range, ":center_no", walled_centers_begin, walled_centers_end),#add town garrisons
-        #Add initial center wealth
-        # (assign, ":initial_wealth", 5000),
-        # (try_begin),
-          # (is_between, ":center_no", towns_begin, towns_end),
-          # (val_mul, ":initial_wealth", 2),
-        # (try_end),
-        
-        (assign, ":garrison_strength", 32),
-        # (assign, ":garrison_strength", 10),
-        
-        # #rafi
-        # (try_begin),
-          # #tom
-          # (this_or_next|eq, ":center_no", "p_town_21_1"),
-          # (this_or_next|eq, ":center_no", "p_town_19_1"),
-          # (this_or_next|eq, ":center_no", "p_town_37_1"),
-          # (this_or_next|eq, ":center_no", "p_castle_33_1"),
-          # (this_or_next|eq, ":center_no", "p_castle_34_1"),
-          # (this_or_next|eq, ":center_no", "p_castle_36_1"),
-          # (this_or_next|eq, ":center_no", "p_castle_35_1"),
-          # #tom
-          # (eq, ":center_no", "p_town_26_1"),
-          # (val_add, ":initial_wealth", 5000),
-          # (assign, ":garrison_strength", 30), #tom - for balts castles
-        # (try_end),
-        # #rafi
-        
-        # (party_set_slot, ":center_no", slot_town_wealth, ":initial_wealth"),
-        
-        (try_begin),
-          (party_slot_eq, ":center_no", slot_party_type, spt_town),
-          #(assign, ":garrison_strength", 40),
-          (assign, ":garrison_strength", 40), #tom was 20
-          #tom
-          (try_begin),
-            (this_or_next|eq, ":center_no", "p_town_21_1"),
-            (this_or_next|eq, ":center_no", "p_town_19_1"),
-            (eq, ":center_no", "p_town_37_1"),
-            (assign, ":garrison_strength", 80),
-          (try_end),
-          #tom
-          # rafi
-          (try_begin),
-            (eq, ":center_no", "p_town_26_1"),
-            (assign, ":garrison_strength", 80),
-          (try_end),
-          # rafi
-        (try_end),
-        (try_for_range, ":unused", 0, ":garrison_strength"),
-          (call_script, "script_cf_reinforce_party", ":center_no"),
-        (try_end),
-        ## ADD some XP initially
-        (store_div, ":xp_rounds", ":garrison_strength", 5),
-        (val_add, ":xp_rounds", 2),
-        
-        (game_get_reduce_campaign_ai, ":reduce_campaign_ai"),
-        # rafi no xp for joo
-        (try_begin), #hard
-          (eq, ":reduce_campaign_ai", 0),
-          (assign, ":xp_addition_for_centers", 15000),
-          #(assign, ":xp_addition_for_centers", 3750),
-        (else_try), #moderate
-          (eq, ":reduce_campaign_ai", 1),
-          (assign, ":xp_addition_for_centers", 10000),
-          #(assign, ":xp_addition_for_centers", 2500),
-        (else_try), #easy
-          (eq, ":reduce_campaign_ai", 2),
-          (assign, ":xp_addition_for_centers", 5000),
-          #(assign, ":xp_addition_for_centers", 1250),
-        (try_end),
-        
-        (try_for_range, ":unused", 0, ":xp_rounds"),
-          (party_upgrade_with_xp, ":center_no", ":xp_addition_for_centers", 0),
-        (try_end),
-        
-        #Fill town food stores upto half the limit
-        (call_script, "script_center_get_food_store_limit", ":center_no"),
-        (assign, ":food_store_limit", reg0),
-        (val_div, ":food_store_limit", 2),
-        (party_set_slot, ":center_no", slot_party_food_store, ":food_store_limit"),
-        
-        #create lord parties
-        (party_get_slot, ":center_lord", ":center_no", slot_town_lord),
-        (ge, ":center_lord", 1),
-        (troop_slot_eq, ":center_lord", slot_troop_leaded_party, 0),
-        (call_script, "script_create_kingdom_hero_party", ":center_lord", ":center_no"),
-        (assign, ":lords_party", "$pout_party"),
-        (party_attach_to_party, ":lords_party", ":center_no"),
-        (party_set_slot, ":center_no", slot_town_player_odds, 1000),
-      (try_end),
+      ############### NEW v3.10 - removed the code from here and added to game_menus initiliazation menu
+###     (try_for_range, ":center_no", walled_centers_begin, walled_centers_end),#add town garrisons
+###      #Add initial center wealth
+###      # (assign, ":initial_wealth", 5000),
+###      # (try_begin),
+###        # (is_between, ":center_no", towns_begin, towns_end),
+###        # (val_mul, ":initial_wealth", 2),
+###      # (try_end),
+###      
+###      (assign, ":garrison_strength", 32),
+###      # (assign, ":garrison_strength", 10),
+###      
+###      # #rafi
+###      # (try_begin),
+###        # #tom
+###        # (this_or_next|eq, ":center_no", "p_town_21_1"),
+###        # (this_or_next|eq, ":center_no", "p_town_19_1"),
+###        # (this_or_next|eq, ":center_no", "p_town_37_1"),
+###        # (this_or_next|eq, ":center_no", "p_castle_33_1"),
+###        # (this_or_next|eq, ":center_no", "p_castle_34_1"),
+###        # (this_or_next|eq, ":center_no", "p_castle_36_1"),
+###        # (this_or_next|eq, ":center_no", "p_castle_35_1"),
+###        # #tom
+###        # (eq, ":center_no", "p_town_26_1"),
+###        # (val_add, ":initial_wealth", 5000),
+###        # (assign, ":garrison_strength", 30), #tom - for balts castles
+###      # (try_end),
+###      # #rafi
+###      
+###      # (party_set_slot, ":center_no", slot_town_wealth, ":initial_wealth"),
+###      
+###      (try_begin),
+###        (party_slot_eq, ":center_no", slot_party_type, spt_town),
+###        #(assign, ":garrison_strength", 40),
+###        (assign, ":garrison_strength", 40), #tom was 20
+###        #tom
+###        (try_begin),
+###          (this_or_next|eq, ":center_no", "p_town_21_1"),
+###          (this_or_next|eq, ":center_no", "p_town_19_1"),
+###          (eq, ":center_no", "p_town_37_1"),
+###          (assign, ":garrison_strength", 80),
+###        (try_end),
+###        #tom
+###        # rafi
+###        (try_begin),
+###          (eq, ":center_no", "p_town_26_1"),
+###          (assign, ":garrison_strength", 80),
+###        (try_end),
+###        # rafi
+###      (try_end),
+###      (try_for_range, ":unused", 0, ":garrison_strength"),
+###        (call_script, "script_cf_reinforce_party", ":center_no"),
+###      (try_end),
+###      ## ADD some XP initially
+###      (store_div, ":xp_rounds", ":garrison_strength", 5),
+###      (val_add, ":xp_rounds", 2),
+###      
+###      (game_get_reduce_campaign_ai, ":reduce_campaign_ai"),
+###      # rafi no xp for joo
+###      (try_begin), #hard
+###        (eq, ":reduce_campaign_ai", 0),
+###        (assign, ":xp_addition_for_centers", 15000),
+###        #(assign, ":xp_addition_for_centers", 3750),
+###      (else_try), #moderate
+###        (eq, ":reduce_campaign_ai", 1),
+###        (assign, ":xp_addition_for_centers", 10000),
+###        #(assign, ":xp_addition_for_centers", 2500),
+###      (else_try), #easy
+###        (eq, ":reduce_campaign_ai", 2),
+###        (assign, ":xp_addition_for_centers", 5000),
+###        #(assign, ":xp_addition_for_centers", 1250),
+###      (try_end),
+###      
+###      (try_for_range, ":unused", 0, ":xp_rounds"),
+###        (party_upgrade_with_xp, ":center_no", ":xp_addition_for_centers", 0),
+###      (try_end),
+###      
+###      #Fill town food stores upto half the limit
+###      (call_script, "script_center_get_food_store_limit", ":center_no"),
+###      (assign, ":food_store_limit", reg0),
+###      (val_div, ":food_store_limit", 2),
+###      (party_set_slot, ":center_no", slot_party_food_store, ":food_store_limit"),
+###      
+###      #create lord parties
+###      (party_get_slot, ":center_lord", ":center_no", slot_town_lord),
+###      (ge, ":center_lord", 1),
+###      (troop_slot_eq, ":center_lord", slot_troop_leaded_party, 0),
+###      (call_script, "script_create_kingdom_hero_party", ":center_lord", ":center_no"),
+###      (assign, ":lords_party", "$pout_party"),
+###      (party_attach_to_party, ":lords_party", ":center_no"),
+###      (party_set_slot, ":center_no", slot_town_player_odds, 1000),
+###    (try_end),
+############### 
       
       #More pre-Warband family structures removed here
       
@@ -5289,19 +5293,23 @@ scripts = [
                                 (val_sub, ":cur_slot_value", 1),
                                 (faction_set_slot, ":defeated_faction", slot_faction_party_type_count_mercenary_company, ":cur_slot_value"),
                             (else_try),
-                            # (store_faction_of_party, ":defeated_faction", ":root_defeated_party"),
+							############## NEW v3.10
+                              (eq, ":defeated_party_template", "pt_wagon_train_template"),
+                                (assign, "$wagon_active", 0),
+                                (display_message, "@Your wagon train has been destroyed in battle!", 16732240),
+                            ############################
                            (try_end),
                         (try_end),
 ####################################################################################################
                         
                         ############ NEW v3.5 - fix wagon trains not resetting
-                        (try_begin),
+                        # (try_begin),
                           # (eq, ":root_defeated_party", "p_wagon_train"),
-                          (party_get_template_id, ":p_template", ":root_defeated_party"),
-                          (eq, ":p_template", "pt_wagon_train_template"),
-                            (assign, "$wagon_active", 0),
-                            (display_message, "@Your wagon train has been destroyed in battle!", 16732240),
-                        (try_end),
+                          # (party_get_template_id, ":p_template", ":root_defeated_party"),
+                            # (eq, ":p_template", "pt_wagon_train_template"),
+                              # (assign, "$wagon_active", 0),
+                              # (display_message, "@Your wagon train has been destroyed in battle!", 16732240),
+                        # (try_end),
                         ########################
                         
                         (try_begin),
@@ -5460,7 +5468,7 @@ scripts = [
                                     (call_script, "script_get_message_color", 1, ":cur_troop_id"),
                                     (display_log_message, "@{s1} of the {s3} was defeated in battle by the {s2} but managed to escape.", reg20), 
                                     ############ NEW v2.7 - being defeated generates animosity
-                                    (call_script, "script_troop_change_relation_with_troop", ":leader_troop_id", ":cur_troop_id", -3),
+                                    # (call_script, "script_troop_change_relation_with_troop", ":leader_troop_id", ":cur_troop_id", -3),
                                     (val_add, "$total_battle_enemy_changes", -2),      
                                     ########################                                    
                                   (else_try),
@@ -5544,7 +5552,7 @@ scripts = [
                              ############# NEW
                              (call_script, "script_get_message_color_siege_win", 8, ":winner_faction", ":defeated_faction"),
                              # (display_log_message, "str_center_captured", reg20),
-                             (display_log_message, "@{s2} have taken {s1} from {s3}", reg20),
+                             (display_log_message, "@{s2} have taken {s1} from {s3}.", reg20),
 			                 ############## NEW v3.9.1 - 
                              (try_begin),
                                (eq, "$g_auto_change_captured_fief_culture", 1),
@@ -5570,7 +5578,7 @@ scripts = [
 								 ############### NEW v3.8 
                                  (call_script, "script_change_troop_renown", ":leader_troop_no", 30), 
 								 (faction_get_slot, ":faction_liege", ":winner_faction", slot_faction_leader),
-								 (call_script, "script_troop_change_relation_with_troop", ":faction_liege", ":leader_troop_no", 3), 
+								 (call_script, "script_troop_change_relation_with_troop", ":faction_liege", ":leader_troop_no", 5), 
 								 ###############################
                              (else_try),
                                  (party_set_slot, ":root_defeated_party", slot_center_last_taken_by_troop, -1),
@@ -8568,300 +8576,6 @@ scripts = [
         (faction_get_slot, ":troop", ":culture", slot_faction_religion),
         (faction_set_slot, ":faction_no", slot_faction_religion, ":troop"),
 ###################################################
-        
-        
-        ###PLAYER CULTURE
-        # (try_begin),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_player"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_cstm_custom_troop_3_tiers_0_1_1"),  ##B2
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_cstm_custom_troop_3_tiers_0_2_3"),           ##C4
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_cstm_custom_troop_3_tiers_0_2_2"),     ##C3
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_cstm_custom_troop_3_tiers_0_1_2"),            ##B3
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_cstm_custom_troop_3_tiers_0_2_3"),     ##C4
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_cstm_kingdom_player_3_tiers_0_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_cstm_kingdom_player_3_tiers_0_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_cstm_kingdom_player_3_tiers_0_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-        ###END OF PLAYER CULTURE       
-
-
-                
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_teutonic"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_teutonic_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_teu_horse_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_teutonic_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_teutonic_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_teu_horse_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_teutonic_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_teutonic_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_teutonic_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_baltic"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_lithuanian_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_balt_veteran_spearman"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_lithuanian_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_lithuanian_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_lithuanian_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_baltic_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_baltic_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_baltic_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_pagan_balt),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_mongol"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_tatar_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_tatar_lancer"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_tatar_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_tatar_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_tatar_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_mongol_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_mongol_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_mongol_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_muslim),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_nordic"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_danish_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_nordic_swords_sergeant"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_danish_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_danish_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_danish_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_nordic_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_nordic_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_nordic_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_western"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_polish_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_euro_spearman_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_polish_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_polish_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_polish_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_western_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_western_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_western_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_rus"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_russian_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_rus_town_4_2"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_russian_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_russian_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_russian_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_rus_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_rus_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_rus_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_orthodox),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_scotish"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_scottish_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_euro_spearman_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_scottish_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_scottish_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_scottish_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_scot_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_scot_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_scot_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_gaelic"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_irish_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_euro_spearman_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_irish_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_irish_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_irish_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_gaelic_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_gaelic_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_gaelic_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_iberian"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_irish_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_iberian_spears_sergeant"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_irish_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_irish_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_iberian_spears_sergeant"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_iberain_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_iberain_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_iberain_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_italian"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_irish_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_iberian_spears_sergeant"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_irish_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_irish_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_iberian_spears_sergeant"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_italian_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_italian_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_italian_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_andalus"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_sarranid_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_andalus_horse_4"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_sarranid_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_andalus_horse_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_andalus_horse_4"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_andalus_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_andalus_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_andalus_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_muslim),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_byzantium"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_russian_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_byz_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_russian_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_russian_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_russian_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_byzantium_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_byzantium_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_byzantium_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_orthodox),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_mamluke"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_sarranid_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_mamluke_elite_horse_archer"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_sarranid_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_sarranid_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_mamluke_elite_horse_archer"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_mamluke_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_mamluke_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_mamluke_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_muslim),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_serbian"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_russian_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_balkan_vil_4_1_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_russian_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_russian_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_balkan_vil_4_1_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_serbian_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_serbian_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_serbian_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_orthodox),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_balkan"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_russian_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_balkan_vil_4_1_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_russian_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_russian_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_balkan_vil_4_1_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_balkan_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_balkan_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_balkan_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_orthodox),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_marinid"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_sarranid_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_marinid_swordsman"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_sarranid_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_sarranid_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_marinid_swordsman"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_marinid_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_marinid_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_marinid_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_muslim),
-          
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_welsh"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_english_deserter"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_euro_spearman_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_english_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_english_prison_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_english_castle_guard"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_welsh_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_welsh_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_welsh_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-####################### NEW v1.8 - Crusader cultures
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_templar"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_templar_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_templar_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_english_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_templar_spearman_2"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_templar_knight_dismounted"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_templar_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_templar_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_templar_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_hospitaller"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_hospitaller_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_hospitaller_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_english_messenger"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_hospitaller_spearman_2"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_hospitaller_knight_dismounted"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_hospitaller_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_hospitaller_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_hospitaller_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-          
-############################################################################
-          
-####################### NEW v1.8 - Missing cultures
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_finnish"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_finn_footman"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_finn_footman"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_finn_skirmisher"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_finn_spearman"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_finn_noble_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_finnish_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_finnish_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_finnish_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_mazovian"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_mazovian_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_mazovian_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_mazovian_archer_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_mazovian_spearman_2"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_mazovian_horse_3"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_mazovian_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_mazovian_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_mazovian_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_anatolian_christian"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_anatolian_christian_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_anatolian_christian_spearman_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_anatolian_christian_archer_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_anatolian_christian_spearman_2"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_anatolian_medium_cavalry"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_anatolian_christian_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_anatolian_christian_reinforcements_b"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_anatolian_christian_reinforcements_c"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_catholic),
-        # (else_try),
-          # (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_anatolian"),
-          # (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_anatolian_muslim_infantry_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_anatolian_muslim_infantry_1"),
-          # (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_anatolian_muslim_javelineer"),
-          # (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_anatolian_muslim_infantry_2"),
-          # (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_anatolian_turkoman_2"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_a, "pt_kingdom_anatolian_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_b, "pt_kingdom_anatolian_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_reinforcements_c, "pt_kingdom_anatolian_reinforcements_a"),
-          # (faction_set_slot, ":faction_no", slot_faction_religion, religion_muslim),
- 
 #############################################################################
       (try_end),
       
@@ -47838,6 +47552,12 @@ scripts = [
 		    (this_or_next|eq, ":fac_culture", "fac_culture_ibelin"),
 		    (this_or_next|eq, ":fac_culture", "fac_culture_jerusalem"),
 		    (this_or_next|eq, ":fac_culture", "fac_culture_crusader"),
+            ############## NEW v3.10
+		    (this_or_next|eq, ":fac_culture", "fac_culture_english"),
+		    (this_or_next|eq, ":fac_culture", "fac_culture_french"),
+		    (this_or_next|eq, ":fac_culture", "fac_culture_hungarian"),
+		    (this_or_next|eq, ":fac_culture", "fac_culture_polish"),
+############################
 		    (eq, ":fac_culture", "fac_culture_player"),
               (assign, ":culture", mtf_tom_euro),
           (else_try),
@@ -55333,9 +55053,29 @@ scripts = [
           # (eq, ":faction_no", "$players_kingdom"),
           (faction_slot_eq, ":faction_no", slot_faction_leader, "trp_player"),  ######## NEW v3.7
           (val_sub, ":faction_score", 100),
-          (val_add, "$player_right_to_rule"),
+          # (val_add, "$player_right_to_rule"),  
+          (val_add, ":faction_score", "$player_right_to_rule"),   ###### NEW v3.10 - 
         (try_end),
-
+############## NEW v3.10
+        (try_begin),
+            (troop_get_slot, ":lord_culture", ":troop_no", slot_troop_culture),
+            (faction_slot_eq,  ":faction_no", slot_faction_culture, ":lord_culture"),  
+            (val_add, ":faction_score", 150),
+        (try_end),
+        
+        (try_begin),
+            (troop_get_slot, ":lord_culture", ":troop_no", slot_troop_culture),
+            (faction_get_slot, ":faction_religion", ":lord_culture", slot_faction_religion),
+            (faction_slot_eq,  ":faction_no", slot_faction_religion, ":faction_religion"),  
+            (val_add, ":faction_score", 100),
+        (try_end),
+        
+        (try_begin),
+            (troop_get_slot, ":liege_renown", ":liege", slot_troop_renown),
+            (val_div, ":liege_renown", 20),
+            (val_add, ":faction_score", ":liege_renown"),
+        (try_end),
+############################
         (gt, ":faction_score", ":score_to_beat"),
 
         (assign, ":score_to_beat", ":faction_score"),
@@ -68333,8 +68073,27 @@ scripts = [
               (eq, ":number", 28),
                 (assign, ":lower_range", cuman_culture_start),
                 (assign, ":upper_range", cuman_culture_end),
+            ############ 
+            ############ NEW v3.10    
             (else_try),
               (eq, ":number", 29),
+                (assign, ":lower_range", english_culture_start),
+                (assign, ":upper_range", english_culture_end),
+            (else_try),
+              (eq, ":number", 30),
+                (assign, ":lower_range", french_culture_start),
+                (assign, ":upper_range", french_culture_end),
+            (else_try),
+              (eq, ":number", 31),
+                (assign, ":lower_range", hungarian_culture_start),
+                (assign, ":upper_range", hungarian_culture_end),
+            (else_try),
+              (eq, ":number", 32),
+                (assign, ":lower_range", polish_culture_start),
+                (assign, ":upper_range", polish_culture_end),
+            ############ 
+            (else_try),
+              (eq, ":number", 33),
                 (assign, ":lower_range", trp_cstm_custom_troop_3_tiers_0_0_0),
                 (assign, ":upper_range", trp_cstm_custom_troop_3_tiers_1_0_0),
             ############
@@ -68675,7 +68434,12 @@ scripts = [
       
         #get prosperity, original faction
         # (party_get_slot, ":orig_faction", ":center", slot_center_original_faction),
-
+############## NEW v3.10
+        (str_store_party_name, s0, ":spawned_party"),
+        (str_store_party_name, s1, ":center"),
+        # (display_message, "@calling fill_lance for {s0} to be filled with troops from {s1}."),
+############################
+        
         (party_get_slot, ":orig_culture", ":center", slot_center_culture),
         (party_get_slot, ":prosperity", ":center", slot_town_prosperity),
         (party_get_slot, ":nobles", ":center", slot_center_nobility_law),
@@ -69730,7 +69494,21 @@ scripts = [
           (is_between, ":troop", cuman_culture_start, cuman_culture_end),
           (troop_set_slot, ":troop", slot_troop_culture, "fac_culture_cuman"),
 ########################################################
-          
+
+######################################################## NEW v3.10
+        (else_try),
+          (is_between, ":troop", english_culture_start, english_culture_end),
+          (troop_set_slot, ":troop", slot_troop_culture, "fac_culture_english"),
+        (else_try),
+          (is_between, ":troop", french_culture_start, french_culture_end),
+          (troop_set_slot, ":troop", slot_troop_culture, "fac_culture_french"),
+        (else_try),
+          (is_between, ":troop", hungarian_culture_start, hungarian_culture_end),
+          (troop_set_slot, ":troop", slot_troop_culture, "fac_culture_hungarian"),
+        (else_try),
+          (is_between, ":troop", polish_culture_start, polish_culture_end),
+          (troop_set_slot, ":troop", slot_troop_culture, "fac_culture_polish"),
+########################################################
         (try_end),
       (try_end),
     ]

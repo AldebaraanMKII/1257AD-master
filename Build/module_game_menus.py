@@ -4302,7 +4302,7 @@ game_menus = [ #
       (assign, "$g_party_fugitive_serf_max", 10),
       (assign, "$g_party_mercenary_warband_max", 20),
 	  
-      (jump_to_menu, "mnu_start_game_2"),
+      (jump_to_menu, "mnu_start_game_new_3dot10"),
       ]
       ),
 	  
@@ -4333,7 +4333,7 @@ game_menus = [ #
       (assign, "$g_party_fugitive_serf_max", 15),
       (assign, "$g_party_mercenary_warband_max", 30),
 	  
-      (jump_to_menu, "mnu_start_game_2"),
+      (jump_to_menu, "mnu_start_game_new_3dot10"),
       ]
       ),
 
@@ -4341,7 +4341,7 @@ game_menus = [ #
       [],
       "Normal (3.5GHz)",
       [
-      (jump_to_menu, "mnu_start_game_2"),
+      (jump_to_menu, "mnu_start_game_new_3dot10"),
       ]
       ),
 
@@ -4372,7 +4372,7 @@ game_menus = [ #
       (assign, "$g_party_fugitive_serf_max", 25),
       (assign, "$g_party_mercenary_warband_max", 50),
 	  
-      (jump_to_menu, "mnu_start_game_2"),
+      (jump_to_menu, "mnu_start_game_new_3dot10"),
       ]
       ),
 
@@ -4403,7 +4403,7 @@ game_menus = [ #
       (assign, "$g_party_fugitive_serf_max", 30),
       (assign, "$g_party_mercenary_warband_max", 60),
 	  
-      (jump_to_menu, "mnu_start_game_2"),
+      (jump_to_menu, "mnu_start_game_new_3dot10"),
       ]
       ),
 
@@ -4417,7 +4417,40 @@ game_menus = [ #
     ],
   ),
 ##################################################################
-  
+
+############### NEW v3.10 - 
+("start_game_new_3dot10", menu_text_color(0xFF000000),
+"Choose the garrison size.",
+"none",
+[],
+[
+
+    ("select_opt1on_1",
+    [],
+    "Set it to default EE size (600 max for castles/800 for towns).",
+    [
+      (assign, "$g_party_garrison_max_size_castles", 600),
+      (assign, "$g_party_garrison_max_size_towns", 800),
+      (call_script, "script_ee_set_garrison_size", 30, 1),
+      (jump_to_menu, "mnu_start_game_2"),
+    ]
+    ),
+
+    ("select_opt1on_2",
+    [],
+    "Set it to 1257 default size (300 max for castles/500 for towns).",
+    [
+      (assign, "$g_party_garrison_max_size_castles", 300),
+      (assign, "$g_party_garrison_max_size_towns", 500),
+      (call_script, "script_ee_set_garrison_size", 15, 1),
+      (jump_to_menu, "mnu_start_game_2"),
+    ]
+    ),
+
+],
+),
+############### 
+
   
   # ("optional_1", menu_text_color(0xFF000000),
     # "Would you like to Enable or Disable decapitations? Note: Decapitations can be enabled or disabled at any time inside (Camp --> More mod options pages).",
@@ -7307,7 +7340,7 @@ game_menus = [ #
     ("camp_wagon",
 	[
 	(eq, "$wagon_active", 0),
-	],"Form a wagon train (300 coins)",
+	],"Form a wagon train (300 coins).",
     [
 	 (store_troop_gold, ":gold_amount", "trp_player"),
      (try_begin),
@@ -11204,6 +11237,13 @@ game_menus = [ #
         (call_script, "script_change_center_prosperity", "$g_encountered_party", -5),
         # (call_script, "script_change_troop_renown", "trp_player", 5),
         (call_script, "script_change_troop_renown", "trp_player", 30), ##### NEW v2.7
+		############## NEW v3.10
+        (try_begin),
+          (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),  
+		    (faction_get_slot, ":faction_liege", "$players_kingdom", slot_faction_leader),
+		    (call_script, "script_troop_change_relation_with_troop", ":faction_liege", "trp_player", 5), 
+        (try_end),
+############################
 
         #(assign, ":damage", 20),
         (assign, ":damage", 60), # rafi
@@ -11417,12 +11457,26 @@ game_menus = [ #
      (party_get_slot, ":new_owner", "$g_center_to_give_to_player", slot_town_lord),
      (str_store_troop_name, s5, ":new_owner"),
      # (assign, reg6, 900),
-	 ############## NEW v3.9.1 - 
-     (assign, reg6, 900),  ### default
+	 ############## NEW v3.9.1 - (base 500 + (5 * renown)) + (liege relations * 20) 
+     (assign, reg6, 500),  ### default
      (try_begin),
 	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
-	   (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
-	   (val_mul, reg6, ":player_renown", 8),
+	     (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+		 # 1000 * 5 = 5000 + 500 = 5500
+	     (store_mul, ":value", ":player_renown", 5),
+	     (val_add, reg6, ":value"),
+     (try_end),
+     (try_begin),
+       (call_script, "script_troop_get_player_relation", ":faction_leader"),
+       (assign, ":relation", reg0),
+	   (gt, ":relation", 0),
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_add, reg6, ":value2"),
+     (else_try), ###### negative relation
+	   (lt, ":relation", 0),
+	     (val_mul, ":relation", -1), ###### turns into positive
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_sub, reg6, ":value2"),
      (try_end),
 ############################
 
@@ -11433,6 +11487,30 @@ game_menus = [ #
     [
       ("accept_decision",[], "Accept the decision.",
        [
+	 ############## NEW v3.10
+     (faction_get_slot, ":faction_leader", "$players_kingdom", slot_faction_leader),
+     (assign, reg6, 500),  ### default
+     (try_begin),
+	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
+	     (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+		 # 1000 * 5 = 5000 + 500 = 5500
+	     (store_mul, ":value", ":player_renown", 5),
+	     (val_add, reg6, ":value"),
+     (try_end),
+     (try_begin),
+       (call_script, "script_troop_get_player_relation", ":faction_leader"),
+       (assign, ":relation", reg0),
+	   (gt, ":relation", 0),
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_add, reg6, ":value2"),
+     (else_try), ###### negative relation
+	   (lt, ":relation", 0),
+	     (val_mul, ":relation", -1), ###### turns into positive
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_sub, reg6, ":value2"),
+     (try_end),
+############################
+
        (call_script, "script_troop_add_gold", "trp_player", reg6),
        (change_screen_return),
        ]),
@@ -11440,7 +11518,7 @@ game_menus = [ #
        ("leave_faction",[], "You have been wronged! Renounce your oath to your liege! ",
        [
          (jump_to_menu, "mnu_leave_faction"),
-         (call_script, "script_troop_add_gold", "trp_player", reg6),
+         # (call_script, "script_troop_add_gold", "trp_player", reg6),
         ]),
      ],
   ),
@@ -11461,20 +11539,21 @@ game_menus = [ #
      (try_begin),
 	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
 	     (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+		 # 1000 * 5 = 5000 + 500 = 5500
 	     (store_mul, ":value", ":player_renown", 5),
 	     (val_add, reg6, ":value"),
      (try_end),
      (try_begin),
        (call_script, "script_troop_get_player_relation", ":faction_leader"),
        (assign, ":relation", reg0),
-	   (ge, ":relation", 0),
-	     (store_mul, ":value", ":relation", 20),
-	     (val_add, reg6, ":value"),
+	   (gt, ":relation", 0),
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_add, reg6, ":value2"),
      (else_try), ###### negative relation
 	   (lt, ":relation", 0),
 	     (val_mul, ":relation", -1), ###### turns into positive
-	     (store_mul, ":value", ":relation", 20),
-	     (val_sub, reg6, ":value"),
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_sub, reg6, ":value2"),
      (try_end),
 ############################
 
@@ -11485,6 +11564,30 @@ game_menus = [ #
     [
         ("accept_decision",[], "Accept the decision.",
         [
+        
+	 ############## NEW v3.10
+     (faction_get_slot, ":faction_leader", "$players_kingdom", slot_faction_leader),
+     (assign, reg6, 500),  ### default
+     (try_begin),
+	   (troop_slot_ge, "trp_player", slot_troop_renown, 1),
+	     (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+		 # 1000 * 5 = 5000 + 500 = 5500
+	     (store_mul, ":value", ":player_renown", 5),
+	     (val_add, reg6, ":value"),
+     (try_end),
+     (try_begin),
+       (call_script, "script_troop_get_player_relation", ":faction_leader"),
+       (assign, ":relation", reg0),
+	   (gt, ":relation", 0),
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_add, reg6, ":value2"),
+     (else_try), ###### negative relation
+	   (lt, ":relation", 0),
+	     (val_mul, ":relation", -1), ###### turns into positive
+	     (store_mul, ":value2", ":relation", 20),
+	     (val_sub, reg6, ":value2"),
+     (try_end),
+############################
         (call_script, "script_troop_add_gold", "trp_player", reg6),
         (change_screen_return),
         ]),

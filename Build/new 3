@@ -1,0 +1,164 @@
+
+trp_english_sherwood_archer = 3720
+trp_english_longbowman = trp_english_sherwood_archer + 1
+trp_english_retinue_longbowman = trp_english_sherwood_archer + 2
+trp_english_vil_peasant = trp_english_sherwood_archer + 3
+trp_english_levy_spearman = trp_english_sherwood_archer + 4
+trp_english_militia_footman = trp_english_sherwood_archer + 5
+trp_english_armoured_swordsman = trp_english_sherwood_archer + 6
+trp_english_billman = trp_english_sherwood_archer + 7
+trp_english_heavy_billman = trp_english_sherwood_archer + 8
+trp_english_hobilar = trp_english_sherwood_archer + 9
+trp_english_demi_lancer = trp_english_sherwood_archer + 10
+trp_english_squire = trp_english_sherwood_archer + 11
+trp_english_knight = trp_english_sherwood_archer + 12
+trp_french_peasant_archer = trp_english_sherwood_archer + 13
+trp_french_crossbow_militia = trp_english_sherwood_archer + 14
+trp_french_heavy_crossbowman = trp_english_sherwood_archer + 15
+trp_french_vil_peasant = trp_english_sherwood_archer + 16
+trp_french_town_militia = trp_english_sherwood_archer + 17
+trp_french_levy_spearman = trp_english_sherwood_archer + 18
+trp_french_armoured_sergeant = trp_english_sherwood_archer + 19
+trp_french_volgue_militia = trp_english_sherwood_archer + 20
+trp_french_voulgier = trp_english_sherwood_archer + 21
+trp_french_pikeman = trp_english_sherwood_archer + 22
+trp_french_mounted_archer = trp_english_sherwood_archer + 23
+trp_french_mounted_sergeant = trp_english_sherwood_archer + 24
+trp_french_squire = trp_english_sherwood_archer + 25
+trp_french_knight = trp_english_sherwood_archer + 26
+trp_hungarian_peasant_archer = trp_english_sherwood_archer + 27
+trp_slav_veteran_archer = trp_english_sherwood_archer + 28
+trp_hungarian_crossbow_militia = trp_english_sherwood_archer + 29
+trp_hungarian_pavise_crossbow = trp_english_sherwood_archer + 30
+trp_transylvanian_peasant = trp_english_sherwood_archer + 31
+trp_slav_levy = trp_english_sherwood_archer + 32
+trp_hungarian_pavise_spearman = trp_english_sherwood_archer + 33
+trp_hungarian_battlefield_assassin = trp_english_sherwood_archer + 34
+trp_hungarian_halbard_levy = trp_english_sherwood_archer + 35
+trp_croat_axeman = trp_english_sherwood_archer + 36
+trp_hungarian_merchant_cavalry = trp_english_sherwood_archer + 37
+trp_hungarian_noble_cavalry = trp_english_sherwood_archer + 38
+trp_hungarian_squire = trp_english_sherwood_archer + 39
+trp_hungarian_knight = trp_english_sherwood_archer + 40
+trp_polish_peasant = trp_english_sherwood_archer + 41
+trp_polish_town_militia = trp_english_sherwood_archer + 42
+trp_polish_spear_levy = trp_english_sherwood_archer + 43
+trp_dismounted_polish_noble = trp_english_sherwood_archer + 44
+trp_polish_halberd_levy = trp_english_sherwood_archer + 45
+trp_polish_woodsman = trp_english_sherwood_archer + 46
+trp_polish_strzelcy = trp_english_sherwood_archer + 47
+trp_polish_retainer = trp_english_sherwood_archer + 48
+trp_polish_noble = trp_english_sherwood_archer + 49
+trp_polish_guard = trp_english_sherwood_archer + 50
+trp_polish_peasant_archer = trp_english_sherwood_archer + 51
+trp_polish_veteran_archer = trp_english_sherwood_archer + 52
+trp_polish_crossbow_militia = trp_english_sherwood_archer + 53
+trp_scots_guard = trp_english_sherwood_archer + 54
+trp_magyar_cavalry = trp_english_sherwood_archer + 55
+trp_hussar_cavalry = trp_english_sherwood_archer + 56
+
+
+
+
+
+
+                                            
+fac_culture_english                          = fac_culture_cuman + 1
+fac_culture_french                           = fac_culture_cuman + 2
+fac_culture_hungarian                        = fac_culture_cuman + 3  
+fac_culture_polish                           = fac_culture_cuman + 4
+fac_culture_player                           = fac_culture_cuman + 5
+fac_player_faction                           = fac_culture_cuman + 6
+fac_player_supporters_faction                = fac_culture_cuman + 7
+fac_kingdom_1                                = fac_culture_cuman + 8
+fac_kingdom_2                                = fac_culture_cuman + 9
+fac_kingdom_3                                = fac_culture_cuman + 10
+fac_kingdom_4                                = fac_culture_cuman + 11
+fac_kingdom_5                                = fac_culture_cuman + 12
+fac_kingdom_6                                = fac_culture_cuman + 13
+fac_kingdom_7                                = fac_culture_cuman + 14
+fac_kingdom_8                                = fac_culture_cuman + 15
+fac_kingdom_9                                = fac_culture_cuman + 16
+fac_kingdom_10                               = fac_culture_cuman + 17
+fac_kingdom_11                               = fac_culture_cuman + 18
+fac_kingdom_12                               = fac_culture_cuman + 19
+fac_kingdom_13                               = fac_culture_cuman + 20
+fac_kingdom_14                               = fac_culture_cuman + 21
+fac_kingdom_15                               = fac_culture_cuman + 22
+fac_kingdom_16                               = fac_culture_cuman + 23
+fac_kingdom_17                               = fac_culture_cuman + 24
+fac_kingdom_18                               = fac_culture_cuman + 25
+fac_kingdom_19                               = fac_culture_cuman + 26
+fac_kingdom_20                               = fac_culture_cuman + 27
+fac_papacy                                   = fac_culture_cuman + 28
+fac_kingdom_22                               = fac_culture_cuman + 29
+fac_kingdom_23                               = fac_culture_cuman + 30
+fac_kingdom_24                               = fac_culture_cuman + 31
+fac_kingdom_25                               = fac_culture_cuman + 32
+fac_kingdom_26                               = fac_culture_cuman + 33
+fac_kingdom_27                               = fac_culture_cuman + 34
+fac_kingdom_28                               = fac_culture_cuman + 35
+fac_kingdom_29                               = fac_culture_cuman + 36
+fac_kingdom_30                               = fac_culture_cuman + 37
+fac_kingdom_31                               = fac_culture_cuman + 38
+fac_kingdom_32                               = fac_culture_cuman + 39
+fac_kingdom_33                               = fac_culture_cuman + 40
+fac_kingdom_34                               = fac_culture_cuman + 41
+fac_kingdom_35                               = fac_culture_cuman + 42
+fac_kingdom_36                               = fac_culture_cuman + 43
+fac_kingdom_37                               = fac_culture_cuman + 44
+fac_kingdom_38                               = fac_culture_cuman + 45
+fac_kingdom_39                               = fac_culture_cuman + 46
+fac_kingdom_40                               = fac_culture_cuman + 47
+fac_kingdom_41                               = fac_culture_cuman + 48
+fac_kingdom_42                               = fac_culture_cuman + 49
+fac_enhanced_kingdom_1                       = fac_culture_cuman + 50
+fac_enhanced_kingdom_2                       = fac_culture_cuman + 51
+fac_enhanced_kingdom_3                       = fac_culture_cuman + 52
+fac_enhanced_kingdom_4                       = fac_culture_cuman + 53
+fac_enhanced_kingdom_5                       = fac_culture_cuman + 54
+fac_enhanced_kingdom_6                       = fac_culture_cuman + 55
+fac_enhanced_kingdom_7                       = fac_culture_cuman + 56
+fac_enhanced_kingdom_8                       = fac_culture_cuman + 57
+fac_enhanced_kingdom_9                       = fac_culture_cuman + 58
+fac_enhanced_kingdom_10                      = fac_culture_cuman + 59
+fac_enhanced_kingdom_11                      = fac_culture_cuman + 60
+fac_enhanced_kingdom_12                      = fac_culture_cuman + 61
+fac_enhanced_kingdom_13                      = fac_culture_cuman + 62
+fac_enhanced_kingdom_14                      = fac_culture_cuman + 63
+fac_enhanced_kingdom_15                      = fac_culture_cuman + 64
+fac_enhanced_kingdom_16                      = fac_culture_cuman + 65
+fac_enhanced_kingdom_17                      = fac_culture_cuman + 66
+fac_enhanced_kingdom_18                      = fac_culture_cuman + 67
+fac_enhanced_kingdom_19                      = fac_culture_cuman + 68
+fac_enhanced_kingdom_20                      = fac_culture_cuman + 69
+fac_enhanced_kingdom_21                      = fac_culture_cuman + 70
+fac_enhanced_kingdom_22                      = fac_culture_cuman + 71
+fac_enhanced_kingdom_23                      = fac_culture_cuman + 72
+fac_enhanced_kingdom_24                      = fac_culture_cuman + 73
+fac_enhanced_kingdom_25                      = fac_culture_cuman + 74
+fac_enhanced_kingdom_26                      = fac_culture_cuman + 75
+fac_enhanced_kingdom_27                      = fac_culture_cuman + 76
+fac_enhanced_kingdom_28                      = fac_culture_cuman + 77
+fac_enhanced_kingdom_29                      = fac_culture_cuman + 78
+fac_enhanced_kingdom_30                      = fac_culture_cuman + 79
+fac_kingdoms_end                             = fac_culture_cuman + 80
+fac_robber_knights                           = fac_culture_cuman + 81
+fac_manhunters                               = fac_culture_cuman + 82
+fac_deserters                                = fac_culture_cuman + 83
+fac_mountain_bandits                         = fac_culture_cuman + 84
+fac_forest_bandits                           = fac_culture_cuman + 85
+fac_undeads                                  = fac_culture_cuman + 86
+fac_peasant_rebels                           = fac_culture_cuman + 87
+fac_crusade                                  = fac_culture_cuman + 88
+fac_escaped_prisoners_faction                = fac_culture_cuman + 89
+fac_end_minor_faction                        = fac_culture_cuman + 90
+fac_culture_player2                          = fac_culture_cuman + 91
+ 
+ 
+
+
+
+
+
+

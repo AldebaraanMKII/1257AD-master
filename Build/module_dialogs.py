@@ -5222,6 +5222,7 @@ dialogs = [
   
   
 [anyone|plyr, "member_question_2", [
+    (is_between, "$g_talk_troop", companions_begin, companions_end), ###### NEW v3.10 - fixed being able to give fiefs to normal troops
     (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
   ], "Would you be interested in holding a fief?", "member_fief_grant_1",[]],
 
@@ -6386,7 +6387,7 @@ dialogs = [
       (eq, "$g_encountered_party_type", spt_patrol), ######## NEW v3.3
       # (store_faction_of_troop, ":player_faction", "trp_player"),
       (eq, "$g_encountered_party_faction", "$players_kingdom"),
-	  (neg|party_slot_eq, "$g_encountered_party", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),  ########## NEW v3.3
+	  # (neg|party_slot_eq, "$g_encountered_party", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),  ########## NEW v3.3 - removed to allow constable patrols to be disbanded as well
       (party_get_slot, ":target_party", "$g_encountered_party", slot_party_ai_object),    
       (party_slot_ge, ":target_party", slot_town_lord, 0),
       (party_get_slot, ":town_lord", ":target_party", slot_town_lord),
@@ -6397,6 +6398,39 @@ dialogs = [
     ], "Greetings, Sire. We are patrolling {s6} under the orders of {s7}.", "dplmc_patrol_talk_no_action", []
   ],
   
+  
+############## NEW v3.10
+[anyone|plyr, "dplmc_patrol_talk_no_action", 
+    [
+    (party_get_slot, ":target_party", "$g_encountered_party", slot_party_ai_object),    
+    (this_or_next|faction_slot_eq, "$g_encountered_party_faction", slot_faction_leader, "trp_player"),   
+    (party_slot_eq, ":target_party", slot_town_lord, trp_player),
+    ], 
+    "I'm here to tell you to disband (Cannot be undone!).", "dplmc_patrol_talk_disband_now", 
+	[
+    ]
+],
+
+[anyone, "dplmc_patrol_talk_disband_now", [], 
+    "I understand. Goodbye.", "close_window", 
+	[
+    (try_begin),
+	  (neg|party_slot_eq, "$g_encountered_party", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
+        (remove_party, "$g_encountered_party", 1),
+        (faction_get_slot, ":patrol_count", "$g_encountered_party_faction", slot_faction_party_type_count_patrol),   
+        (val_sub, ":patrol_count", 1),   
+        (faction_set_slot, "$g_encountered_party_faction", slot_faction_party_type_count_patrol, ":patrol_count"),   
+    (else_try),
+	  (party_slot_eq, "$g_encountered_party", dplmc_slot_party_mission_diplomacy, "trp_dplmc_constable"),
+        (remove_party, "$g_encountered_party", 1),
+    (try_end),
+    
+    (assign, "$g_leave_encounter", 1),
+    ]
+],
+############################
+
+
 [anyone|plyr, "dplmc_patrol_talk_no_action", [], 
     "Great. Keep up the good work.", "close_window", 
 	[(assign, "$g_leave_encounter", 1),]
@@ -9055,8 +9089,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "dplmc_constable_patrol_disband_confirm_ask",
 [
 (str_store_party_name, s5, "$diplomacy_var"),
+(remove_party, "$diplomacy_var"), ###### NEW v3.10 - 
 ],
-"As you wish, I will send a messenger who will tell {s5} to disband.", "dplmc_constable_patrol_disband_confirm",
+"As you wish, I will tell {s5} to disband.", "dplmc_constable_patrol_disband_confirm",   ###### NEW v3.10 - 
 []],
 
 [anyone|plyr, "dplmc_constable_patrol_disband_confirm",
@@ -9068,7 +9103,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 #OLD:
 #(call_script, "script_dplmc_send_messenger_to_party", "$diplomacy_var", spai_retreating_to_center, -1),
 #NEW:
-(call_script, "script_dplmc_send_messenger_to_party", "$diplomacy_var", spai_undefined, -1),
+# (call_script, "script_dplmc_send_messenger_to_party", "$diplomacy_var", spai_undefined, -1),
 ##diplomacy end+
 ]],
 
@@ -10287,21 +10322,21 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (display_message, "@Your horse(s) have been added to your inventory.")
 ]],
 ######################################
-[anyone|plyr, "dplmc_constable_stables_talk_2",
-[
-(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
-(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 0),
-(this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 0),
-(troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 0),
-(party_slot_ge, "$g_encountered_party", slot_center_has_stables, 2),  ######### need stables level 2
-(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
-(assign, ":horse_condition", reg0),
-(neq, ":horse_condition", 0),     ########## no horse
-(neq, ":horse_condition", imod_lame),     ########## at full health
-(neq, ":horse_condition", imod_swaybacked), ##########
-(neq, ":horse_condition", imod_champion), ########## can't train max level
-],
-"I want to train my horse.", "dplmc_constable_stables_train_horse.",[]],
+# [anyone|plyr, "dplmc_constable_stables_talk_2",
+# [
+# (troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
+# (this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_1, 0),
+# (this_or_next|troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_2, 0),
+# (troop_slot_ge, "$g_talk_troop", slot_troop_horse_train_cur_horse_3, 0),
+# (party_slot_ge, "$g_encountered_party", slot_center_has_stables, 2),  ######### need stables level 2
+# (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+# (assign, ":horse_condition", reg0),
+# (neq, ":horse_condition", 0),     ########## no horse
+# (neq, ":horse_condition", imod_lame),     ########## at full health
+# (neq, ":horse_condition", imod_swaybacked), ##########
+# (neq, ":horse_condition", imod_champion), ########## can't train max level
+# ],
+# "I want to train my horse.", "dplmc_constable_stables_train_horse.",[]],
 ######################################
 [anyone, "dplmc_constable_stables_train_horse", 
 [
@@ -12213,6 +12248,31 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
  ], "Holy Father, I wish to fund a crusade to fight against the infidels.", "pope_talk_crusade",[]],
  
+ 
+############## NEW v3.10
+[anyone|plyr, "lord_talk", 
+[  
+   (faction_slot_eq, "$g_talk_troop_faction", slot_faction_leader, "$g_talk_troop"),
+   (eq, "$g_talk_troop_faction", "fac_papacy"),
+   (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0),
+   (faction_slot_eq, "fac_papacy", slot_faction_state, sfs_active),
+], "Holy Father, Is there any crusade active at this moment?", "pope_talk_crusade_active",[]],
+
+
+[anyone, "pope_talk_crusade_active", 
+[  
+(gt, "$crusader_state", -1),
+(str_store_faction_name, s1, "$crusader_faction"),
+(str_store_party_name, s2, "$crusade_target"),
+(str_store_faction_name, s3, "$crusade_target_faction"),
+], "Yes! They assembled at {s1} and their target is {s2} ({s3}).", "lord_talk",[]],
+
+[anyone, "pope_talk_crusade_active", 
+[  
+(eq, "$crusader_state", -1),
+], "No. There's no crusade active at this moment.", "lord_talk",[]],
+############################
+ 
    # [trp_pope, "pope_talk_crusade", 
    [anyone, "pope_talk_crusade", 
  [
@@ -13496,8 +13556,21 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_cuman"),
       (assign, "$g_player_know_culture_cuman", 1),
+############### NEW v3.10
   (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_english"),
+      (assign, "$g_player_know_culture_english", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_french"),
+      (assign, "$g_player_know_culture_french", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_hungarian"),
+      (assign, "$g_player_know_culture_hungarian", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_polish"),
+      (assign, "$g_player_know_culture_polish", 1),
 ################# NEW v2.1 - display a dialogue that makes the player choose a language
+  (else_try),
     (eq, ":cur_faction_culture", "fac_culture_player"),
       (assign, "$g_player_know_culture_player", 1),      
       (assign, "$g_ask_for_language", 1),     
@@ -28853,7 +28926,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     (call_script, "script_end_quest", "qst_duel_for_lady"),
     ]],
 
-    [anyone|plyr, "lady_escort_lady_succeeded", [], "It was an honor to serve you, {s65}.", "close_window",[]],
+    # [anyone|plyr, "lady_escort_lady_succeeded", [], "It was an honor to serve you, {s65}.", "close_window",[]],
 
     [anyone, "start", [
     (troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_lady),
@@ -32618,10 +32691,32 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     (assign, "$g_bounty_activo", 0),
     ]],
 
-[anyone, "tavernkeeper_hunt_down_fugitive_success", [],
+[anyone, "tavernkeeper_hunt_down_fugitive_success", 
+[
+   (store_partner_quest, ":tavernkeepers_quest"),
+   (try_begin),
+     (eq, ":tavernkeepers_quest", "qst_bounty_1"),
+       (assign, reg10, "$g_random_gold_1"),
+   (else_try),
+     (eq, ":tavernkeepers_quest", "qst_bounty_2"),
+       (assign, reg10, "$g_random_gold_2"),
+   (else_try),
+     (eq, ":tavernkeepers_quest", "qst_bounty_3"),
+       (assign, reg10, "$g_random_gold_3"),
+   (else_try),
+     (eq, ":tavernkeepers_quest", "qst_bounty_4"),
+       (assign, reg10, "$g_random_gold_4"),
+   (else_try),
+     (eq, ":tavernkeepers_quest", "qst_bounty_5"),
+       (assign, reg10, "$g_random_gold_5"),
+   (else_try),
+     (eq, ":tavernkeepers_quest", "qst_bounty_6"),
+       (assign, reg10, "$g_random_gold_6"),
+   (try_end),
+],
 "Well done, {playername}!\
   'Tis good to know you can be trusted to handle things with an appropriate level of tactfulness.\
- A bounty I promised, and a bounty you shall have. {s5} coins and not a copper less!", "tavernkeeper_hunt_down_fugitive_success_2",
+ A bounty I promised, and a bounty you shall have. {reg10} coins and not a copper less!", "tavernkeeper_hunt_down_fugitive_success_2",
    [
    (add_xp_as_reward, 300),
     ]],
@@ -39441,7 +39536,14 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "prisoner_chat_noble_execute_4_leave", [], "A-A wise decision...", "close_window",[]],
 
-[anyone|plyr, "prisoner_chat_noble_execute_4_kill", [(str_store_troop_name, s1, "$g_talk_troop")], "({s1} struggles against his shackles, desperate to free himself and escape you, but to no avail. You strike him with a knife to the gut and watch, satisfied, as his corpse sags to the floor.)", "close_window",
+[anyone|plyr, "prisoner_chat_noble_execute_4_kill", 
+[
+############### NEW v3.10 - 
+(str_clear, s20),
+(str_store_troop_name, s20, "$g_talk_troop"),
+############### 
+], 
+"({s20} struggles against his shackles, desperate to free himself and escape you, but to no avail. You strike him with a knife to the gut and watch, satisfied, as his corpse sags to the floor.)", "close_window",
 [
 # (assign, "$g_method_of_execution", 5),
 # (call_script, "script_kill_lord_execution", "trp_player", "$g_talk_troop", "p_main_party", "$g_method_of_execution"),
@@ -39606,21 +39708,21 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ]],
 
 ######################################
-[anyone|plyr, "town_merchant_talk", [
-(is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
-(troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
-(call_script, "script_ee_get_troop_horse_imod", "trp_player"),
-(assign, ":horse", reg0),
-(assign, ":horse_condition", reg0),
-(gt, ":horse", -1),     ########## no horse
-(neq, ":horse_condition", -1),     ##########
-(neq, ":horse_condition", imod_lame),     ########## at full health
-(neq, ":horse_condition", imod_swaybacked), ##########
-(neq, ":horse_condition", imod_heavy), ########## horse merchants can't train this or higher
-(neq, ":horse_condition", imod_spirited), ########## 
-(neq, ":horse_condition", imod_champion), ########## 
-],
-"I want you to train my horse.", "trade_requested_horse_train",[]],
+# [anyone|plyr, "town_merchant_talk", [
+# (is_between, "$g_talk_troop",horse_merchants_begin,horse_merchants_end),
+# (troop_slot_eq, "$g_talk_troop", slot_troop_horse_train_cur_horse, 0),
+# (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
+# (assign, ":horse", reg0),
+# (assign, ":horse_condition", reg0),
+# (gt, ":horse", -1),     ########## no horse
+# (neq, ":horse_condition", -1),     ##########
+# (neq, ":horse_condition", imod_lame),     ########## at full health
+# (neq, ":horse_condition", imod_swaybacked), ##########
+# (neq, ":horse_condition", imod_heavy), ########## horse merchants can't train this or higher
+# (neq, ":horse_condition", imod_spirited), ########## 
+# (neq, ":horse_condition", imod_champion), ########## 
+# ],
+# "I want you to train my horse.", "trade_requested_horse_train",[]],
 
 
 [anyone, "trade_requested_horse_train", [], 

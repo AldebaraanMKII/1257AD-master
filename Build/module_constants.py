@@ -2756,6 +2756,19 @@ crusader_culture_start = trp_euro_town_recruit
 crusader_culture_end = trp_tatar_tribesman
 cuman_culture_start = trp_cuman_tribesman
 cuman_culture_end = trp_crusader_turkopole
+################## NEW v3.10
+english_culture_start = trp_english_sherwood_archer
+english_culture_end = trp_french_peasant_archer
+
+french_culture_start = trp_french_peasant_archer
+french_culture_end = trp_hungarian_peasant_archer
+
+hungarian_culture_start = trp_hungarian_peasant_archer
+hungarian_culture_end = trp_polish_town_recruit
+
+polish_culture_start = trp_polish_town_recruit
+polish_culture_end = trp_scots_guard
+##################
 player_culture_start = trp_cstm_custom_troop_3_tiers_0_0_0
 player_culture_end = trp_cstm_custom_troop_3_tiers_1_0_0
 ####################################

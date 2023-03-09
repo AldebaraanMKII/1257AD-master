@@ -6341,9 +6341,11 @@ simple_triggers = [
         (try_end),
         (try_begin),
           (eq, ":village_lord", "trp_player"),
+############## NEW v3.10
+          (str_store_party_name, s21, ":village"),
           (try_begin),##renown increase
             (eq, ":slot", manor_slot_whorehouse),
-            (display_message, "@Peasants rejoice of your whorehouse in the regional manor. You gain fame!"),
+            (display_message, "@Peasants rejoice of your whorehouse in the regional manor at {s21}. You gain fame!"),
             (call_script, "script_change_troop_renown", "trp_player", 5),
           (else_try),##RTR increase
             (this_or_next|eq, ":slot", manor_slot_prison),
@@ -6352,11 +6354,12 @@ simple_triggers = [
             (this_or_next|eq, ":slot", manor_slot_fletcher),
             (this_or_next|eq, ":slot", manor_slot_breeder),
             (eq, ":slot", manor_slot_walls),
-            (display_message, "@You gain right to rule for building an important building in your regional manor!"),
-            (call_script, "script_change_player_right_to_rule", 2),
+            (display_message, "@You gain right to rule for building an important building in your regional manor at {s21}!"),
+            (call_script, "script_change_player_right_to_rule", 1),
           (else_try),##renown increase
-            (display_message, "@You gain renown for funding a building in your regional manor"),
-            (call_script, "script_change_troop_renown", "trp_player", 1),
+            (display_message, "@You gain renown for funding a building in your regional manor at {s21}."),
+            (call_script, "script_change_troop_renown", "trp_player", 10),
+############################
           (try_end),
         (try_end),
       (try_end),
@@ -6529,9 +6532,18 @@ simple_triggers = [
       (try_begin),
         (party_slot_eq, ":manor_id", manor_slot_Monastery_upgrade, manor_Monastery_scriptorium), 
         
+        ############## NEW v3.10
         (store_random_in_range, ":book", "itm_book_tactics", "itm_spice"),
         (troop_clear_inventory, "trp_manor_trader_book"),
-        (troop_add_items, "trp_manor_trader_book", ":book", 1), ######one book each week
+        (troop_add_items, "trp_manor_trader_book", ":book", 1),
+        
+        (store_random_in_range, ":book", "itm_book_tactics", "itm_spice"),
+        (troop_add_items, "trp_manor_trader_book", ":book", 1), 
+        
+        (store_random_in_range, ":book", "itm_book_tactics", "itm_spice"),
+        (troop_add_items, "trp_manor_trader_book", ":book", 1), 
+############################
+        
         (store_troop_gold, ":gold_trader", "trp_manor_trader_book"),
         (troop_remove_gold, "trp_manor_trader_book", ":gold_trader"),
         (store_random_in_range, ":gold_trader", 200, 300),
@@ -7466,10 +7478,16 @@ simple_triggers = [
    (party_get_num_prisoner_stacks, ":prisoner_stack_num", "$g_prisoners_escape_cur_center"),
    (party_get_num_prisoners, ":prisoner_num", "$g_prisoners_escape_cur_center"),
    (try_begin),
-     (ge, ":prisoner_num", 400),
-     (store_div, ":var3", ":prisoner_num", 100),
-     (store_random_in_range, ":random", 0, 100),
-     (le, ":random", ":var3"),
+     (ge, ":prisoner_num", 100),
+   ############## NEW v3.10
+     (store_div, ":escape_chance", ":prisoner_num", 10), 
+     (try_begin),
+        (party_slot_eq, "$g_prisoners_escape_cur_center", slot_center_has_prisoner_tower, 1),
+        (val_div, ":escape_chance", 3),
+     (try_end),
+############################
+     (store_random_in_range, ":random", 0, 101),
+     (le, ":random", ":escape_chance"),
      (set_spawn_radius, 2),
      (spawn_around_party, "$g_prisoners_escape_cur_center", "pt_escaped_prisoners_party"),
      (assign, ":spawned_party", reg0),
@@ -7484,7 +7502,7 @@ simple_triggers = [
        (party_remove_prisoners, "$g_prisoners_escape_cur_center", ":prisoner_troop_id", ":prisoner_stack_size"),
      (try_end),
      (str_store_party_name_link, s4, "$g_prisoners_escape_cur_center"),
-     (display_message, "@There was a massive prisoner break from {s4}!"),
+     (display_message, "@There was a prisoner break from {s4}!"),
    (try_end),
  (try_end),
  

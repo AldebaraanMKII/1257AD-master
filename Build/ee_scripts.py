@@ -1526,9 +1526,122 @@ scripts = [
     (assign, "$g_player_constable", "trp_dplmc_constable"),
     (troop_set_faction, "trp_dplmc_constable", "fac_player_supporters_faction"),
     
-    # (call_script, "script_ee_activate_player_faction", "trp_player", ":fac_kingdom"), ###### NEW v3.8
-	# (call_script, "script_recalculate_ais_for_faction", "fac_player_supporters_faction"), ###### NEW v3.8
-    (set_show_messages, 1),
+   ########## NEW v3.10
+   (try_begin),
+     (faction_get_slot, ":cur_faction_culture", "$players_kingdom", slot_faction_culture),
+     (try_begin),
+       (eq, ":cur_faction_culture", "fac_culture_finnish"),
+         (assign, "$g_player_know_culture_finnish", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mazovian"),
+         (assign, "$g_player_know_culture_mazovian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_serbian"),
+         (assign, "$g_player_know_culture_serbian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_welsh"),
+         (assign, "$g_player_know_culture_welsh", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_teutonic"),
+         (assign, "$g_player_know_culture_teutonic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_balkan"),
+         (assign, "$g_player_know_culture_balkan", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_rus"),
+         (assign, "$g_player_know_culture_rus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_nordic"),
+         (assign, "$g_player_know_culture_nordic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_baltic"),
+         (assign, "$g_player_know_culture_baltic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_marinid"),
+         (assign, "$g_player_know_culture_marinid", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mamluke"),
+         (assign, "$g_player_know_culture_mamluke", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_byzantium"),
+         (assign, "$g_player_know_culture_byzantium", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_iberian"),
+         (assign, "$g_player_know_culture_iberian", 1), 
+         (assign, "$g_ask_for_language", 1),     
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_italian"),
+         (assign, "$g_player_know_culture_italian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_andalus"),
+         (assign, "$g_player_know_culture_andalus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_gaelic"),
+         (assign, "$g_player_know_culture_gaelic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian_christian"),
+         (assign, "$g_player_know_culture_anatolian_christian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian"),
+         (assign, "$g_player_know_culture_anatolian", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_western"),
+         (assign, "$g_player_know_culture_western", 1),
+         (assign, "$g_ask_for_language", 1),    ########## NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mongol"),
+         (assign, "$g_player_know_culture_mongol", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_templar"),
+         (assign, "$g_player_know_culture_templar", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hospitaller"),
+         (assign, "$g_player_know_culture_hospitaller", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_antioch"),
+         (assign, "$g_player_know_culture_antiochian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_tripoli"),
+         (assign, "$g_player_know_culture_tripoli", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_ibelin"),
+         (assign, "$g_player_know_culture_ibelin", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_jerusalem"),
+         (assign, "$g_player_know_culture_jerusalem", 1),
+   ############### NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_crusader"),
+         (assign, "$g_player_know_culture_crusader", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_cuman"),
+         (assign, "$g_player_know_culture_cuman", 1),
+   ################# 
+   ############## NEW v3.10
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_english"),
+         (assign, "$g_player_know_culture_english", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_french"),
+         (assign, "$g_player_know_culture_french", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hungarian"),
+         (assign, "$g_player_know_culture_hungarian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_polish"),
+         (assign, "$g_player_know_culture_polish", 1),
+############################
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_player"),
+         (assign, "$g_player_know_culture_player", 1),      
+     (try_end),
+   (try_end),
+   (troop_set_slot, "trp_player", slot_troop_cur_culture, ":cur_faction_culture"),  
+   ######################################
+   (set_show_messages, 1),
   ]),
 
 #####################################################  
@@ -1906,6 +2019,121 @@ scripts = [
     
     (troop_set_slot, "trp_player", slot_troop_cur_culture, ":capital_cur_culture"),  ########### NEW v3.3
     
+   ########## NEW v3.10
+   (try_begin),
+     (faction_get_slot, ":cur_faction_culture", "$players_kingdom", slot_faction_culture),
+     (try_begin),
+       (eq, ":cur_faction_culture", "fac_culture_finnish"),
+         (assign, "$g_player_know_culture_finnish", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mazovian"),
+         (assign, "$g_player_know_culture_mazovian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_serbian"),
+         (assign, "$g_player_know_culture_serbian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_welsh"),
+         (assign, "$g_player_know_culture_welsh", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_teutonic"),
+         (assign, "$g_player_know_culture_teutonic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_balkan"),
+         (assign, "$g_player_know_culture_balkan", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_rus"),
+         (assign, "$g_player_know_culture_rus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_nordic"),
+         (assign, "$g_player_know_culture_nordic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_baltic"),
+         (assign, "$g_player_know_culture_baltic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_marinid"),
+         (assign, "$g_player_know_culture_marinid", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mamluke"),
+         (assign, "$g_player_know_culture_mamluke", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_byzantium"),
+         (assign, "$g_player_know_culture_byzantium", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_iberian"),
+         (assign, "$g_player_know_culture_iberian", 1), 
+         (assign, "$g_ask_for_language", 1),     
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_italian"),
+         (assign, "$g_player_know_culture_italian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_andalus"),
+         (assign, "$g_player_know_culture_andalus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_gaelic"),
+         (assign, "$g_player_know_culture_gaelic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian_christian"),
+         (assign, "$g_player_know_culture_anatolian_christian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian"),
+         (assign, "$g_player_know_culture_anatolian", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_western"),
+         (assign, "$g_player_know_culture_western", 1),
+         (assign, "$g_ask_for_language", 1),    ########## NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mongol"),
+         (assign, "$g_player_know_culture_mongol", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_templar"),
+         (assign, "$g_player_know_culture_templar", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hospitaller"),
+         (assign, "$g_player_know_culture_hospitaller", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_antioch"),
+         (assign, "$g_player_know_culture_antiochian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_tripoli"),
+         (assign, "$g_player_know_culture_tripoli", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_ibelin"),
+         (assign, "$g_player_know_culture_ibelin", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_jerusalem"),
+         (assign, "$g_player_know_culture_jerusalem", 1),
+   ############### NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_crusader"),
+         (assign, "$g_player_know_culture_crusader", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_cuman"),
+         (assign, "$g_player_know_culture_cuman", 1),
+   ################# 
+   ############## NEW v3.10
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_english"),
+         (assign, "$g_player_know_culture_english", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_french"),
+         (assign, "$g_player_know_culture_french", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hungarian"),
+         (assign, "$g_player_know_culture_hungarian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_polish"),
+         (assign, "$g_player_know_culture_polish", 1),
+   ################# 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_player"),
+         (assign, "$g_player_know_culture_player", 1),      
+     (try_end),
+   (try_end),
+   (troop_set_slot, "trp_player", slot_troop_cur_culture, ":cur_faction_culture"),  
+   ######################################
     (set_show_messages, 1),
   ]),
 #################################################
@@ -2235,6 +2463,121 @@ scripts = [
     (call_script, "script_update_all_notes"),
     
     (troop_set_slot, "trp_player", slot_troop_cur_culture, ":capital_cur_culture"),  ########### NEW v3.3
+   ########## NEW v3.10
+   (try_begin),
+     (faction_get_slot, ":cur_faction_culture", "$players_kingdom", slot_faction_culture),
+     (try_begin),
+       (eq, ":cur_faction_culture", "fac_culture_finnish"),
+         (assign, "$g_player_know_culture_finnish", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mazovian"),
+         (assign, "$g_player_know_culture_mazovian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_serbian"),
+         (assign, "$g_player_know_culture_serbian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_welsh"),
+         (assign, "$g_player_know_culture_welsh", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_teutonic"),
+         (assign, "$g_player_know_culture_teutonic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_balkan"),
+         (assign, "$g_player_know_culture_balkan", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_rus"),
+         (assign, "$g_player_know_culture_rus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_nordic"),
+         (assign, "$g_player_know_culture_nordic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_baltic"),
+         (assign, "$g_player_know_culture_baltic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_marinid"),
+         (assign, "$g_player_know_culture_marinid", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mamluke"),
+         (assign, "$g_player_know_culture_mamluke", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_byzantium"),
+         (assign, "$g_player_know_culture_byzantium", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_iberian"),
+         (assign, "$g_player_know_culture_iberian", 1), 
+         (assign, "$g_ask_for_language", 1),     
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_italian"),
+         (assign, "$g_player_know_culture_italian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_andalus"),
+         (assign, "$g_player_know_culture_andalus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_gaelic"),
+         (assign, "$g_player_know_culture_gaelic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian_christian"),
+         (assign, "$g_player_know_culture_anatolian_christian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian"),
+         (assign, "$g_player_know_culture_anatolian", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_western"),
+         (assign, "$g_player_know_culture_western", 1),
+         (assign, "$g_ask_for_language", 1),    ########## NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mongol"),
+         (assign, "$g_player_know_culture_mongol", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_templar"),
+         (assign, "$g_player_know_culture_templar", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hospitaller"),
+         (assign, "$g_player_know_culture_hospitaller", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_antioch"),
+         (assign, "$g_player_know_culture_antiochian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_tripoli"),
+         (assign, "$g_player_know_culture_tripoli", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_ibelin"),
+         (assign, "$g_player_know_culture_ibelin", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_jerusalem"),
+         (assign, "$g_player_know_culture_jerusalem", 1),
+   ############### NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_crusader"),
+         (assign, "$g_player_know_culture_crusader", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_cuman"),
+         (assign, "$g_player_know_culture_cuman", 1),
+   ################# 
+   ############## NEW v3.10
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_english"),
+         (assign, "$g_player_know_culture_english", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_french"),
+         (assign, "$g_player_know_culture_french", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hungarian"),
+         (assign, "$g_player_know_culture_hungarian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_polish"),
+         (assign, "$g_player_know_culture_polish", 1),
+############################
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_player"),
+         (assign, "$g_player_know_culture_player", 1),      
+     (try_end),
+   (try_end),
+   (troop_set_slot, "trp_player", slot_troop_cur_culture, ":cur_faction_culture"),  
+   ######################################
     (set_show_messages, 1),
   ]),
 #################################################
@@ -8604,6 +8947,20 @@ scripts = [
       (else_try),
         (is_between, ":troop_no", cuman_culture_start, cuman_culture_end),
         (store_sub, ":page_no", "fac_culture_cuman", npc_cultures_begin_2),
+      ########################## NEW v3.10
+      (else_try),
+        (is_between, ":troop_no", english_culture_start, english_culture_end),
+        (store_sub, ":page_no", "fac_culture_english", npc_cultures_begin_2),
+      (else_try),
+        (is_between, ":troop_no", french_culture_start, french_culture_end),
+        (store_sub, ":page_no", "fac_culture_french", npc_cultures_begin_2),
+      (else_try),
+        (is_between, ":troop_no", hungarian_culture_start, hungarian_culture_end),
+        (store_sub, ":page_no", "fac_culture_hungarian", npc_cultures_begin_2),
+      (else_try),
+        (is_between, ":troop_no", polish_culture_start, polish_culture_end),
+        (store_sub, ":page_no", "fac_culture_polish", npc_cultures_begin_2),
+############################
       (else_try),
         (is_between, ":troop_no", player_culture_start, player_culture_end),
         (store_sub, ":page_no", "fac_culture_player", npc_cultures_begin_2),
@@ -8997,12 +9354,12 @@ scripts = [
    (else_try), 
      ##### Poland
      # (eq, ":faction_no", "fac_kingdom_5"),
-     (eq, ":faction_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_polish),
+     (eq, ":faction_culture", "fac_culture_polish"), ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_polish),
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 80),
-           (assign, ":culture", "fac_culture_western"),
+           (assign, ":culture", "fac_culture_polish"), ###### NEW v3.10 - 
        (else_try),
          (ge, ":random_chance", 80),
            (assign, ":culture", "fac_culture_mazovian"),
@@ -9033,12 +9390,12 @@ scripts = [
    (else_try), 
      ##### Hungary
      # (eq, ":faction_no", "fac_kingdom_7"),
-     (eq, ":faction_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_hungarian),
+     (eq, ":faction_culture", "fac_culture_hungarian"),  ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_hungarian),
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 75),
-           (assign, ":culture", "fac_culture_western"),
+           (assign, ":culture", "fac_culture_hungarian"),  ###### NEW v3.10 - 
        (else_try),
          (ge, ":random_chance", 75),
          (lt, ":random_chance", 85),
@@ -9063,12 +9420,12 @@ scripts = [
    (else_try), 
      ##### England
      # (eq, ":faction_no", "fac_kingdom_9"),
-     (eq, ":faction_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_english),
+     (eq, ":faction_culture", "fac_culture_english"),  ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_english),
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 70),
-           (assign, ":culture", "fac_culture_western"),
+           (assign, ":culture", "fac_culture_english"),  ###### NEW v3.10 - 
        (else_try),
          (ge, ":random_chance", 70),
          (lt, ":random_chance", 77),
@@ -9093,12 +9450,12 @@ scripts = [
    (else_try), 
      ##### France
      # (eq, ":faction_no", "fac_kingdom_10"),
-     (eq, ":faction_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_french),
+     (eq, ":faction_culture", "fac_culture_french"),  ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_french),
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 75),
-           (assign, ":culture", "fac_culture_western"),
+           (assign, ":culture", "fac_culture_french"),  ###### NEW v3.10 - 
        (else_try),
          (ge, ":random_chance", 75),
          (lt, ":random_chance", 80),
@@ -9685,6 +10042,7 @@ scripts = [
        (str_store_string, s2, ":random_surname"),  
 ########### 
    (else_try),
+     (this_or_next|eq, ":cur_lord_culture", "fac_culture_polish"),  ###### NEW v3.10 - 
      (eq, ":cur_lord_culture", "fac_culture_mazovian"),
        (store_random_in_range, ":random_name", "str_enhanced_name_polish_1", "str_enhanced_surname_polish_1"),
        (store_random_in_range, ":random_surname", "str_enhanced_surname_polish_1", "str_enhanced_name_hungarian_1"),
@@ -9692,18 +10050,8 @@ scripts = [
        (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (this_or_next|faction_slot_eq, ":faction_no", slot_faction_language, faction_language_polish),
-     (this_or_next|eq, ":faction_no", "fac_kingdom_5"),
-     (eq, ":faction_no", "fac_kingdom_42"),
-       (store_random_in_range, ":random_name", "str_enhanced_name_polish_1", "str_enhanced_surname_polish_1"),
-       (store_random_in_range, ":random_surname", "str_enhanced_surname_polish_1", "str_enhanced_name_hungarian_1"),
-       (str_store_string, s1, ":random_name"),  
-       (str_store_string, s2, ":random_surname"), 
-###########
-   (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_hungarian),
+     (eq, ":cur_lord_culture", "fac_culture_hungarian"),
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_hungarian),
      # (eq, ":faction_no", "fac_kingdom_7"),
        (store_random_in_range, ":random_name", "str_enhanced_name_hungarian_1", "str_enhanced_surname_hungarian_1"),
        (store_random_in_range, ":random_surname", "str_enhanced_surname_hungarian_1", "str_enhanced_name_english_1"),
@@ -9711,8 +10059,8 @@ scripts = [
        (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (this_or_next|faction_slot_eq, ":faction_no", slot_faction_language, faction_language_english),
+     (eq, ":cur_lord_culture", "fac_culture_english"),
+     # (this_or_next|faction_slot_eq, ":faction_no", slot_faction_language, faction_language_english),
      (this_or_next|eq, ":faction_no", "fac_kingdom_9"),
      (this_or_next|eq, ":faction_no", "fac_kingdom_12"),
      (this_or_next|eq, ":faction_no", "fac_kingdom_13"),
@@ -9723,8 +10071,8 @@ scripts = [
        (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (this_or_next|faction_slot_eq, ":faction_no", slot_faction_language, faction_language_french),
+     (eq, ":cur_lord_culture", "fac_culture_french"),
+     # (this_or_next|faction_slot_eq, ":faction_no", slot_faction_language, faction_language_french),
      (this_or_next|eq, ":faction_no", "fac_kingdom_10"),
      (this_or_next|eq, ":faction_no", "fac_kingdom_16"),
      (this_or_next|eq, ":faction_no", "fac_kingdom_17"),
@@ -10323,6 +10671,79 @@ scripts = [
        (troop_add_item, ":cur_lord", "itm_mail_mittens", imod_reinforced),
        (troop_add_item, ":cur_lord", "itm_heraldic_lance"),
        (troop_add_item, ":cur_lord", "itm_mail_chausses"),
+############## NEW v3.10
+   (else_try),
+     (eq, ":cur_lord_culture", "fac_culture_english"),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_english_knight", itp_type_head_armor), ## helm
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_english_knight", itp_type_body_armor), ## body armor
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_english_knight", itp_type_foot_armor), ## greaves
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_english_knight", itp_type_shield), ## shield
+       (troop_add_item, ":cur_lord", reg0, imod_reinforced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_english_knight", itp_type_one_handed_wpn), ## 1H
+       (troop_add_item, ":cur_lord", reg0, imod_balanced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_english_knight", itp_type_horse), ## Horse
+       (troop_add_item, ":cur_lord", reg0, imod_heavy),
+       (troop_add_item, ":cur_lord", "itm_mail_mittens", imod_reinforced),
+       (troop_add_item, ":cur_lord", "itm_heraldic_lance"),
+       (troop_add_item, ":cur_lord", "itm_mail_chausses"),
+##############
+   (else_try),
+     (eq, ":cur_lord_culture", "fac_culture_french"),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_french_knight", itp_type_head_armor), ## helm
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_french_knight", itp_type_body_armor), ## body armor
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_french_knight", itp_type_foot_armor), ## greaves
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_french_knight", itp_type_shield), ## shield
+       (troop_add_item, ":cur_lord", reg0, imod_reinforced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_french_knight", itp_type_one_handed_wpn), ## 1H
+       (troop_add_item, ":cur_lord", reg0, imod_balanced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_french_knight", itp_type_horse), ## Horse
+       (troop_add_item, ":cur_lord", reg0, imod_heavy),
+       (troop_add_item, ":cur_lord", "itm_mail_mittens", imod_reinforced),
+       (troop_add_item, ":cur_lord", "itm_heraldic_lance"),
+       (troop_add_item, ":cur_lord", "itm_mail_chausses"),
+##############
+   (else_try),
+     (eq, ":cur_lord_culture", "fac_culture_hungarian"),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_hungarian_knight", itp_type_head_armor), ## helm
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_hungarian_knight", itp_type_body_armor), ## body armor
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_hungarian_knight", itp_type_foot_armor), ## greaves
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_hungarian_knight", itp_type_shield), ## shield
+       (troop_add_item, ":cur_lord", reg0, imod_reinforced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_hungarian_knight", itp_type_one_handed_wpn), ## 1H
+       (troop_add_item, ":cur_lord", reg0, imod_balanced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_hungarian_knight", itp_type_horse), ## Horse
+       (troop_add_item, ":cur_lord", reg0, imod_heavy),
+       (troop_add_item, ":cur_lord", "itm_mail_mittens", imod_reinforced),
+       (troop_add_item, ":cur_lord", "itm_heraldic_lance"),
+       (troop_add_item, ":cur_lord", "itm_mail_chausses"),
+##############
+   (else_try),
+     (eq, ":cur_lord_culture", "fac_culture_polish"),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_polish_guard", itp_type_head_armor), ## helm
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_polish_guard", itp_type_body_armor), ## body armor
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_polish_guard", itp_type_foot_armor), ## greaves
+       (troop_add_item, ":cur_lord", reg0),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_polish_guard", itp_type_shield), ## shield
+       (troop_add_item, ":cur_lord", reg0, imod_reinforced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_polish_guard", itp_type_one_handed_wpn), ## 1H
+       (troop_add_item, ":cur_lord", reg0, imod_balanced),
+       (call_script, "script_get_random_equipment_type_from_troop", "trp_polish_guard", itp_type_horse), ## Horse
+       (troop_add_item, ":cur_lord", reg0, imod_heavy),
+       (troop_add_item, ":cur_lord", "itm_mail_mittens", imod_reinforced),
+       (troop_add_item, ":cur_lord", "itm_heraldic_lance"),
+       (troop_add_item, ":cur_lord", "itm_mail_chausses"),
+############################
 ##############
    (else_try),
      (eq, ":cur_lord_culture", "fac_culture_player"),
@@ -12442,6 +12863,20 @@ scripts = [
       (eq, ":culture_no", "fac_culture_cuman"),
         (assign, ":source_troop", "trp_cuman_heavy_lancer"),
 ###########################
+######### NEW v3.10        
+    (else_try), 
+      (eq, ":culture_no", "fac_culture_english"),
+        (assign, ":source_troop", "trp_english_knight"),
+    (else_try), 
+      (eq, ":culture_no", "fac_culture_french"),
+        (assign, ":source_troop", "trp_french_knight"),
+    (else_try), 
+      (eq, ":culture_no", "fac_culture_hungarian"),
+        (assign, ":source_troop", "trp_hungarian_knight"),
+    (else_try), 
+      (eq, ":culture_no", "fac_culture_polish"),
+        (assign, ":source_troop", "trp_polish_guard"),
+###########################
     (else_try), 
       (eq, ":culture_no", "fac_culture_player"),
         (assign, ":source_troop", "trp_cstm_custom_troop_3_tiers_0_2_4"), #### NEW v3.2 - fixes player culture lords not having any equipment
@@ -12629,9 +13064,9 @@ scripts = [
               
    (else_try), 
      ##### Poland
-     (eq, ":faction_culture", "fac_culture_western"),
+     (eq, ":faction_culture", "fac_culture_polish"),  ###### NEW v3.10 - 
      # (eq, "$kaos_kings_kingdom", 5),
-     (eq, ":faction_language", faction_language_polish),  #### NEW v2.7
+     # (eq, ":faction_language", faction_language_polish),  #### NEW v2.7
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 80),
@@ -12665,9 +13100,9 @@ scripts = [
               
    (else_try), 
      ##### Hungary
-     (eq, ":faction_culture", "fac_culture_western"),
+     (eq, ":faction_culture", "fac_culture_hungarian"),  ###### NEW v3.10 - 
      # (eq, "$kaos_kings_kingdom", 7),
-     (eq, ":faction_language", faction_language_hungarian),   #### NEW v2.7
+     # (eq, ":faction_language", faction_language_hungarian),   #### NEW v2.7
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 75),
@@ -12695,9 +13130,9 @@ scripts = [
               
    (else_try), 
      ##### England
-     (eq, ":faction_culture", "fac_culture_western"),
+     (eq, ":faction_culture", "fac_culture_english"),  ###### NEW v3.10 - 
      # (eq, "$kaos_kings_kingdom", 9),
-     (eq, ":faction_language", faction_language_english),   #### NEW v2.7
+     # (eq, ":faction_language", faction_language_english),   #### NEW v2.7
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 70),
@@ -12725,9 +13160,9 @@ scripts = [
               
    (else_try), 
      ##### France
-     (eq, ":faction_culture", "fac_culture_western"),
+     (eq, ":faction_culture", "fac_culture_french"), ###### NEW v3.10 - 
      # (eq, "$kaos_kings_kingdom", 10),
-     (eq, ":faction_language", faction_language_french),   #### NEW v2.7
+     # (eq, ":faction_language", faction_language_french),   #### NEW v2.7
        (store_random_in_range, ":random_chance", 0, 100),
        (try_begin),
          (lt, ":random_chance", 80),
@@ -13356,32 +13791,32 @@ scripts = [
        (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_polish),
+     (eq, ":cur_lord_culture", "fac_culture_polish"), ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_polish),
        (store_random_in_range, ":random_name", "str_enhanced_name_polish_1", "str_enhanced_surname_polish_1"),
        (store_random_in_range, ":random_surname", "str_enhanced_surname_polish_1", "str_enhanced_name_hungarian_1"),
        (str_store_string, s1, ":random_name"),  
        (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_hungarian),
+     (eq, ":cur_lord_culture", "fac_culture_hungarian"), ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_hungarian),
        (store_random_in_range, ":random_name", "str_enhanced_name_hungarian_1", "str_enhanced_surname_hungarian_1"),
        (store_random_in_range, ":random_surname", "str_enhanced_surname_hungarian_1", "str_enhanced_name_english_1"),
        (str_store_string, s1, ":random_name"),  
        (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_english),
+     (eq, ":cur_lord_culture", "fac_culture_english"), ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_english),
        (store_random_in_range, ":random_name", "str_enhanced_name_english_1", "str_enhanced_surname_english_1"),
        (store_random_in_range, ":random_surname", "str_enhanced_surname_english_1", "str_enhanced_name_french_1"),
        (str_store_string, s1, ":random_name"),  
        (str_store_string, s2, ":random_surname"), 
 ###########
    (else_try),
-     (eq, ":cur_lord_culture", "fac_culture_western"),
-     (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_french),
+     (eq, ":cur_lord_culture", "fac_culture_french"), ###### NEW v3.10 - 
+     # (faction_slot_eq, ":faction_no", slot_faction_language, faction_language_french),
        (store_random_in_range, ":random_name", "str_enhanced_name_french_1", "str_enhanced_surname_french_1"),
        (store_random_in_range, ":random_surname", "str_enhanced_surname_french_1", "str_enhanced_name_mongolian_1"),
        (str_store_string, s1, ":random_name"),  
@@ -14189,7 +14624,13 @@ scripts = [
      ######## NEW v3.3
      (faction_set_slot, "fac_culture_crusader", slot_faction_language, faction_language_mixed_euro), 
      (faction_set_slot, "fac_culture_cuman", slot_faction_language, faction_language_cuman), 
-     ################
+     #################
+     ############# NEW v3.10
+     (faction_set_slot, "fac_culture_english", slot_faction_language, faction_language_english), 
+     (faction_set_slot, "fac_culture_french", slot_faction_language, faction_language_french), 
+     (faction_set_slot, "fac_culture_hungarian", slot_faction_language, faction_language_hungarian), 
+     (faction_set_slot, "fac_culture_polish", slot_faction_language, faction_language_polish), 
+############################
      (faction_set_slot, "fac_culture_player", slot_faction_language, faction_language_mixed_euro), #### New v2.7 
    (try_end),
 ]),
@@ -17330,7 +17771,13 @@ scripts = [
      (this_or_next|eq, ":cur_lord_culture", fac_culture_antioch),  
      (this_or_next|eq, ":cur_lord_culture", fac_culture_tripoli),  
      (this_or_next|eq, ":cur_lord_culture", fac_culture_ibelin),  
-     (this_or_next|eq, ":cur_lord_culture", fac_culture_player),  
+     ############## NEW v3.10
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_english),  
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_french),  
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_hungarian),  
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_polish),  
+############################
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_player),   
      (eq, ":cur_lord_culture", fac_culture_jerusalem),
        # (call_script, "script_rand", "str_ee_face_key_euro_1", "str_ee_face_key_muslim_1"),   ### european
        (store_random_in_range, ":random", "str_ee_face_key_euro_1", "str_ee_face_key_muslim_1"),   ### european
@@ -18300,7 +18747,111 @@ scripts = [
       (faction_set_slot, "fac_culture_cuman", slot_faction_reinforcements_c, "pt_kingdom_cuman_reinforcements_c"),
       (faction_set_slot, "fac_culture_cuman", slot_faction_religion, religion_pagan_mongol),
 ############################################################################################################
-
+############## NEW v3.10
+      (faction_set_slot, "fac_culture_english", slot_faction_tier_1_troop, "trp_english_village_recruit"),
+      (faction_set_slot, "fac_culture_english", slot_faction_tier_2_troop, "trp_english_levy_spearman"),
+      (faction_set_slot, "fac_culture_english", slot_faction_tier_3_troop, "trp_english_demi_lancer"),
+      (faction_set_slot, "fac_culture_english", slot_faction_tier_4_troop, "trp_english_squire"),
+      (faction_set_slot, "fac_culture_english", slot_faction_tier_5_troop, "trp_english_knight"),
+                                      
+      (faction_set_slot, "fac_culture_english", slot_faction_tier_1_town_troop, "trp_english_town_recruit"),
+      (faction_set_slot, "fac_culture_english", slot_faction_tier_1_castle_troop, "trp_english_hobilar"),
+                                      
+      (faction_set_slot, "fac_culture_english", slot_faction_town_walker_male_troop, "trp_town_walker_1"),
+      (faction_set_slot, "fac_culture_english", slot_faction_town_walker_female_troop, "trp_town_walker_2"),
+      (faction_set_slot, "fac_culture_english", slot_faction_village_walker_male_troop, "trp_village_walker_1"),
+      (faction_set_slot, "fac_culture_english", slot_faction_village_walker_female_troop, "trp_village_walker_2"),
+      (faction_set_slot, "fac_culture_english", slot_faction_town_spy_male_troop, "trp_spy_walker_1"),
+      (faction_set_slot, "fac_culture_english", slot_faction_town_spy_female_troop, "trp_spy_walker_2"),
+                                      
+      (faction_set_slot, "fac_culture_english", slot_faction_deserter_troop, "trp_english_levy_spearman"),
+      (faction_set_slot, "fac_culture_english", slot_faction_guard_troop, "trp_english_levy_spearman"),
+      (faction_set_slot, "fac_culture_english", slot_faction_messenger_troop, "trp_english_demi_lancer"),
+      (faction_set_slot, "fac_culture_english", slot_faction_prison_guard_troop, "trp_english_levy_spearman"),
+      (faction_set_slot, "fac_culture_english", slot_faction_castle_guard_troop, "trp_english_armoured_swordsman"),
+      (faction_set_slot, "fac_culture_english", slot_faction_reinforcements_a, "pt_kingdom_english_reinforcements_a"),
+      (faction_set_slot, "fac_culture_english", slot_faction_reinforcements_b, "pt_kingdom_english_reinforcements_b"),
+      (faction_set_slot, "fac_culture_english", slot_faction_reinforcements_c, "pt_kingdom_english_reinforcements_c"),
+      (faction_set_slot, "fac_culture_english", slot_faction_religion, religion_catholic),
+############################
+      (faction_set_slot, "fac_culture_french", slot_faction_tier_1_troop, "trp_french_village_recruit"),
+      (faction_set_slot, "fac_culture_french", slot_faction_tier_2_troop, "trp_french_levy_spearman"),
+      (faction_set_slot, "fac_culture_french", slot_faction_tier_3_troop, "trp_french_mounted_sergeant"),
+      (faction_set_slot, "fac_culture_french", slot_faction_tier_4_troop, "trp_french_squire"),
+      (faction_set_slot, "fac_culture_french", slot_faction_tier_5_troop, "trp_french_knight"),
+                                      
+      (faction_set_slot, "fac_culture_french", slot_faction_tier_1_town_troop, "trp_french_town_recruit"),
+      (faction_set_slot, "fac_culture_french", slot_faction_tier_1_castle_troop, "trp_french_mounted_archer"),
+                                      
+      (faction_set_slot, "fac_culture_french", slot_faction_town_walker_male_troop, "trp_town_walker_1"),
+      (faction_set_slot, "fac_culture_french", slot_faction_town_walker_female_troop, "trp_town_walker_2"),
+      (faction_set_slot, "fac_culture_french", slot_faction_village_walker_male_troop, "trp_village_walker_1"),
+      (faction_set_slot, "fac_culture_french", slot_faction_village_walker_female_troop, "trp_village_walker_2"),
+      (faction_set_slot, "fac_culture_french", slot_faction_town_spy_male_troop, "trp_spy_walker_1"),
+      (faction_set_slot, "fac_culture_french", slot_faction_town_spy_female_troop, "trp_spy_walker_2"),
+                                      
+      (faction_set_slot, "fac_culture_french", slot_faction_deserter_troop, "trp_french_levy_spearman"),
+      (faction_set_slot, "fac_culture_french", slot_faction_guard_troop, "trp_french_levy_spearman"),
+      (faction_set_slot, "fac_culture_french", slot_faction_messenger_troop, "trp_french_mounted_archer"),
+      (faction_set_slot, "fac_culture_french", slot_faction_prison_guard_troop, "trp_french_levy_spearman"),
+      (faction_set_slot, "fac_culture_french", slot_faction_castle_guard_troop, "trp_french_armoured_sergeant"),
+      (faction_set_slot, "fac_culture_french", slot_faction_reinforcements_a, "pt_kingdom_french_reinforcements_a"),
+      (faction_set_slot, "fac_culture_french", slot_faction_reinforcements_b, "pt_kingdom_french_reinforcements_b"),
+      (faction_set_slot, "fac_culture_french", slot_faction_reinforcements_c, "pt_kingdom_french_reinforcements_c"),
+      (faction_set_slot, "fac_culture_french", slot_faction_religion, religion_catholic),
+############################
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_tier_1_troop, "trp_hungarian_village_recruit"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_tier_2_troop, "trp_slav_levy"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_tier_3_troop, "trp_hungarian_pavise_spearman"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_tier_4_troop, "trp_hungarian_squire"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_tier_5_troop, "trp_hungarian_knight"),
+                                      
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_tier_1_town_troop, "trp_hungarian_town_recruit"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_tier_1_castle_troop, "trp_hungarian_merchant_cavalry"),
+                                      
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_town_walker_male_troop, "trp_town_walker_1"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_town_walker_female_troop, "trp_town_walker_2"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_village_walker_male_troop, "trp_village_walker_1"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_village_walker_female_troop, "trp_village_walker_2"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_town_spy_male_troop, "trp_spy_walker_1"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_town_spy_female_troop, "trp_spy_walker_2"),
+                                      
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_deserter_troop, "trp_slav_levy"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_guard_troop, "trp_hungarian_pavise_spearman"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_messenger_troop, "trp_hungarian_merchant_cavalry"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_prison_guard_troop, "trp_hungarian_pavise_spearman"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_castle_guard_troop, "trp_hungarian_battlefield_assassin"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_reinforcements_a, "pt_kingdom_hungarian_reinforcements_a"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_reinforcements_b, "pt_kingdom_hungarian_reinforcements_b"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_reinforcements_c, "pt_kingdom_hungarian_reinforcements_c"),
+      (faction_set_slot, "fac_culture_hungarian", slot_faction_religion, religion_catholic),
+############################
+      (faction_set_slot, "fac_culture_polish", slot_faction_tier_1_troop, "trp_polish_village_recruit"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_tier_2_troop, "trp_polish_spear_levy"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_tier_3_troop, "trp_dismounted_polish_noble"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_tier_4_troop, "trp_polish_noble"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_tier_5_troop, "trp_polish_guard"),
+                                      
+      (faction_set_slot, "fac_culture_polish", slot_faction_tier_1_town_troop, "trp_polish_town_recruit"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_tier_1_castle_troop, "trp_polish_strzelcy"),
+                                      
+      (faction_set_slot, "fac_culture_polish", slot_faction_town_walker_male_troop, "trp_town_walker_1"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_town_walker_female_troop, "trp_town_walker_2"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_village_walker_male_troop, "trp_village_walker_1"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_village_walker_female_troop, "trp_village_walker_2"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_town_spy_male_troop, "trp_spy_walker_1"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_town_spy_female_troop, "trp_spy_walker_2"),
+                                      
+      (faction_set_slot, "fac_culture_polish", slot_faction_deserter_troop, "trp_polish_spear_levy"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_guard_troop, "trp_polish_spear_levy"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_messenger_troop, "trp_polish_strzelcy"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_prison_guard_troop, "trp_polish_spear_levy"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_castle_guard_troop, "trp_polish_retainer"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_reinforcements_a, "pt_kingdom_polish_reinforcements_a"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_reinforcements_b, "pt_kingdom_polish_reinforcements_b"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_reinforcements_c, "pt_kingdom_polish_reinforcements_c"),
+      (faction_set_slot, "fac_culture_polish", slot_faction_religion, religion_catholic),
+############################
 ##########################################################################  NEW v2.5 - CTT now only has 1 tree with 3 branches
       (faction_set_slot, "fac_culture_player", slot_faction_tier_1_troop, "trp_cstm_custom_troop_3_tiers_0_0_0"), ##A1
       (faction_set_slot, "fac_culture_player", slot_faction_tier_2_troop, "trp_cstm_custom_troop_3_tiers_0_1_1"), ##B2
@@ -18624,21 +19175,21 @@ scripts = [
       
       (faction_set_slot, "fac_kingdom_3", slot_faction_culture, "fac_culture_mongol"),
       (faction_set_slot, "fac_kingdom_3", slot_faction_leader, "trp_kingdom_3_lord"),
-      (troop_set_slot, "trp_kingdom_3_lord", slot_troop_renown, 1200),
+      (troop_set_slot, "trp_kingdom_3_lord", slot_troop_renown, 1500),
       
       (faction_set_slot, "fac_kingdom_4", slot_faction_culture, "fac_culture_nordic"),
       (faction_set_slot, "fac_kingdom_4", slot_faction_leader, "trp_kingdom_4_lord"),
       (troop_set_slot, "trp_kingdom_4_lord", slot_troop_renown, 1200),
       
-      (faction_set_slot, "fac_kingdom_5", slot_faction_culture, "fac_culture_western"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_culture, "fac_culture_polish"), ###### NEW v3.10 - 
       (faction_set_slot, "fac_kingdom_5", slot_faction_leader, "trp_kingdom_5_lord"),
       (troop_set_slot, "trp_kingdom_5_lord", slot_troop_renown, 1200),
       
       (faction_set_slot, "fac_kingdom_6", slot_faction_culture, "fac_culture_western"),
       (faction_set_slot, "fac_kingdom_6", slot_faction_leader, "trp_kingdom_6_lord"),
-      (troop_set_slot, "trp_kingdom_6_lord", slot_troop_renown, 1200),
+      (troop_set_slot, "trp_kingdom_6_lord", slot_troop_renown, 1500),
       
-      (faction_set_slot, "fac_kingdom_7", slot_faction_culture, "fac_culture_western"),
+      (faction_set_slot, "fac_kingdom_7", slot_faction_culture, "fac_culture_hungarian"),  ###### NEW v3.10 - 
       (faction_set_slot, "fac_kingdom_7", slot_faction_leader, "trp_kingdom_7_lord"),
       (troop_set_slot, "trp_kingdom_7_lord", slot_troop_renown, 1200),
       
@@ -18646,13 +19197,13 @@ scripts = [
       (faction_set_slot, "fac_kingdom_8", slot_faction_leader, "trp_kingdom_8_lord"),
       (troop_set_slot, "trp_kingdom_8_lord", slot_troop_renown, 1200),
       
-      (faction_set_slot, "fac_kingdom_9", slot_faction_culture, "fac_culture_western"),
+      (faction_set_slot, "fac_kingdom_9", slot_faction_culture, "fac_culture_english"), ###### NEW v3.10 - 
       (faction_set_slot, "fac_kingdom_9", slot_faction_leader, "trp_kingdom_9_lord"),
-      (troop_set_slot, "trp_kingdom_9_lord", slot_troop_renown, 1200),
+      (troop_set_slot, "trp_kingdom_9_lord", slot_troop_renown, 1500),
       
-      (faction_set_slot, "fac_kingdom_10", slot_faction_culture, "fac_culture_western"),
+      (faction_set_slot, "fac_kingdom_10", slot_faction_culture, "fac_culture_french"), ###### NEW v3.10 - 
       (faction_set_slot, "fac_kingdom_10", slot_faction_leader, "trp_kingdom_10_lord"),
-      (troop_set_slot, "trp_kingdom_10_lord", slot_troop_renown, 1200),
+      (troop_set_slot, "trp_kingdom_10_lord", slot_troop_renown, 1500),
       
       (faction_set_slot, "fac_kingdom_11", slot_faction_culture, "fac_culture_nordic"),
       (faction_set_slot, "fac_kingdom_11", slot_faction_leader, "trp_kingdom_11_lord"),
@@ -18696,7 +19247,7 @@ scripts = [
       
       (faction_set_slot, "fac_papacy", slot_faction_culture, "fac_culture_italian"),
       (faction_set_slot, "fac_papacy", slot_faction_leader, "trp_pope"),
-      (troop_set_slot, "trp_pope", slot_troop_renown, 1500),
+      (troop_set_slot, "trp_pope", slot_troop_renown, 1800),
       
       (faction_set_slot, "fac_kingdom_22", slot_faction_culture, "fac_culture_byzantium"),
       (faction_set_slot, "fac_kingdom_22", slot_faction_leader, "trp_kingdom_22_lord"),
@@ -18712,7 +19263,7 @@ scripts = [
       
       (faction_set_slot, "fac_kingdom_25", slot_faction_culture, "fac_culture_mamluke"),
       (faction_set_slot, "fac_kingdom_25", slot_faction_leader, "trp_kingdom_25_lord"),
-      (troop_set_slot, "trp_kingdom_25_lord", slot_troop_renown, 1200),
+      (troop_set_slot, "trp_kingdom_25_lord", slot_troop_renown, 1500),
       
       # (faction_set_slot, "fac_kingdom_26", slot_faction_culture, "fac_culture_byzantium"),
       (faction_set_slot, "fac_kingdom_26", slot_faction_culture, "fac_culture_italian"), ######### NEW v2.7
@@ -18721,7 +19272,7 @@ scripts = [
       
       (faction_set_slot, "fac_kingdom_27", slot_faction_culture, "fac_culture_mongol"),
       (faction_set_slot, "fac_kingdom_27", slot_faction_leader, "trp_kingdom_27_lord"),
-      (troop_set_slot, "trp_kingdom_27_lord", slot_troop_renown, 1200),
+      (troop_set_slot, "trp_kingdom_27_lord", slot_troop_renown, 1500),
       
       (faction_set_slot, "fac_kingdom_28", slot_faction_culture, "fac_culture_marinid"),
       (faction_set_slot, "fac_kingdom_28", slot_faction_leader, "trp_kingdom_28_lord"),
@@ -21673,6 +22224,28 @@ scripts = [
        (neq, "$g_player_know_culture_cuman", 1),
        (assign, "$g_player_know_culture_cuman", 1),
 		 (display_message, "@You learned a new culture (cuman)!"),
+############## NEW v3.10
+   (else_try),
+     (eq, ":cur_fief_culture", "fac_culture_english"),
+       (neq, "$g_player_know_culture_english", 1),
+       (assign, "$g_player_know_culture_english", 1),
+		 (display_message, "@You learned a new culture (english)!"),
+   (else_try),
+     (eq, ":cur_fief_culture", "fac_culture_french"),
+       (neq, "$g_player_know_culture_french", 1),
+       (assign, "$g_player_know_culture_french", 1),
+		 (display_message, "@You learned a new culture (french)!"),
+   (else_try),
+     (eq, ":cur_fief_culture", "fac_culture_hungarian"),
+       (neq, "$g_player_know_culture_hungarian", 1),
+       (assign, "$g_player_know_culture_hungarian", 1),
+		 (display_message, "@You learned a new culture (hungarian)!"),
+   (else_try),
+     (eq, ":cur_fief_culture", "fac_culture_polish"),
+       (neq, "$g_player_know_culture_polish", 1),
+       (assign, "$g_player_know_culture_polish", 1),
+		 (display_message, "@You learned a new culture (polish)!"),
+############################
    (else_try),
      (eq, ":cur_fief_culture", "fac_culture_player"),
        (neq, "$g_player_know_culture_player", 1),
@@ -23239,7 +23812,100 @@ scripts = [
         (assign, reg3, ":relevant_faction"),
     ]),
 ############################
-
+############################
+("ee_set_garrison_size",
+  #
+  [
+      (store_script_param_1, ":garrison_strength"),
+      (store_script_param_2, ":create_lords"),
+        
+        
+      # (assign, reg23, ":garrison_strength"),
+	  # (display_message, "@#######################################################"),      
+	  # (display_message, "@garrison strength is {reg23}."),      
+      (assign, ":garrison_strength_orig", ":garrison_strength"),
+      
+      (try_for_range, ":center_no", walled_centers_begin, walled_centers_end),#add town garrisons
+        (neq, ":center_no", "p_castle_player"),
+        # (assign, ":garrison_strength", 32),
+        # (assign, ":garrison_strength", 10),
+        (assign, ":garrison_strength", ":garrison_strength_orig"),  ###### prevents the garrison_strength from snowballing and causing massive garrison sizes
+        
+        (try_begin),
+          (party_slot_eq, ":center_no", slot_party_type, spt_town),
+          #(assign, ":garrison_strength", 40),
+          (val_add, ":garrison_strength", 10), 
+          
+          # (assign, reg23, ":garrison_strength"),
+	      # (display_message, "@garrison strength for town is {reg23}."),      
+          #tom
+          (try_begin),
+            (this_or_next|eq, ":center_no", "p_town_21_1"),
+            (this_or_next|eq, ":center_no", "p_town_19_1"),
+            (eq, ":center_no", "p_town_37_1"),
+            # (assign, ":garrison_strength", 80),
+            (val_add, ":garrison_strength", 40), 
+          (try_end),
+          #tom
+          # rafi
+          (try_begin),
+            (eq, ":center_no", "p_town_26_1"),
+            # (assign, ":garrison_strength", 80),
+            (val_add, ":garrison_strength", 40), 
+          (try_end),
+          # rafi
+        (try_end),
+        
+        # (str_store_party_name, s20, ":center_no"),
+        (try_for_range, ":unused", 0, ":garrison_strength"),
+          (call_script, "script_cf_reinforce_party", ":center_no"),
+          
+          # (party_get_num_companions, reg23, ":center_no"),
+	      # (display_message, "@garrison size for {s20} is {reg23}."),      
+        (try_end),
+        
+        ## ADD some XP initially
+        (store_div, ":xp_rounds", ":garrison_strength", 5),
+        (val_add, ":xp_rounds", 2),
+        
+        (game_get_reduce_campaign_ai, ":reduce_campaign_ai"),
+        # rafi no xp for joo
+        (try_begin), #hard
+          (eq, ":reduce_campaign_ai", 0),
+          (assign, ":xp_addition_for_centers", 15000),
+        (else_try), #moderate
+          (eq, ":reduce_campaign_ai", 1),
+          (assign, ":xp_addition_for_centers", 10000),
+        (else_try), #easy
+          (eq, ":reduce_campaign_ai", 2),
+          (assign, ":xp_addition_for_centers", 5000),
+        (try_end),
+        
+        (try_for_range, ":unused", 0, ":xp_rounds"),
+          (party_upgrade_with_xp, ":center_no", ":xp_addition_for_centers", 0),
+        (try_end),
+        
+        #Fill town food stores upto half the limit
+        (call_script, "script_center_get_food_store_limit", ":center_no"),
+        (assign, ":food_store_limit", reg0),
+        (val_div, ":food_store_limit", 2),
+        (party_set_slot, ":center_no", slot_party_food_store, ":food_store_limit"),
+        
+        #create lord parties
+        
+        (try_begin),
+          (eq, ":create_lords", 1),
+            (party_get_slot, ":center_lord", ":center_no", slot_town_lord),
+            (ge, ":center_lord", 1),
+            (troop_slot_eq, ":center_lord", slot_troop_leaded_party, 0),
+            (call_script, "script_create_kingdom_hero_party", ":center_lord", ":center_no"),
+            (assign, ":lords_party", "$pout_party"),
+            (party_attach_to_party, ":lords_party", ":center_no"),
+            (party_set_slot, ":center_no", slot_town_player_odds, 1000),
+        (try_end),
+        
+      (try_end),
+]),
 ####################################
 
 ####################

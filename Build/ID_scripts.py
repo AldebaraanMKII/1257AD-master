@@ -1051,3 +1051,4 @@ script_ee_get_chance_of_execution = 1049
 script_ee_get_execution_method = 1050
 script_ee_get_quest = 1051
 script_ee_get_dynamic_quest = 1052
+script_ee_set_garrison_size = 1053

@@ -8265,6 +8265,58 @@ game_menus = [
         (troop_remove_gold, "trp_player", reg15),
         (display_message, "@Fief culture changed to Cuman.", 0x0000ff),
       ]),
+################################## NEW v3.10
+      ("change_culture_english",
+      [
+        (eq, "$g_player_know_culture_english", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_english"),
+      ],
+      "Change it to english.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_english"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to english.", 0x0000ff),
+      ]),      
+      
+      ("change_culture_french",
+      [
+        (eq, "$g_player_know_culture_french", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_french"),
+      ],
+      "Change it to french.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_french"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to french.", 0x0000ff),
+      ]),
+      
+      ("change_culture_hungarian",
+      [
+        (eq, "$g_player_know_culture_hungarian", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_hungarian"),
+      ],
+      "Change it to hungarian.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_hungarian"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to hungarian.", 0x0000ff),
+      ]),
+            
+      ("change_culture_polish",
+      [
+        (eq, "$g_player_know_culture_polish", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_polish"),
+      ],
+      "Change it to polish.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_polish"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to polish.", 0x0000ff),
+      ]),
 ##################################
      ("change_culture_next_dot",[], "Next page.",
      [
@@ -9426,7 +9478,7 @@ game_menus = [
    ],     
     [      
 	   ######### NEW v3.0
-       ("debug_options_new_2",[], "Spawn a patrol in a player fief.",
+       ("debug_options_new_1_1",[], "Spawn a patrol in a player fief.",
        [
        (assign, ":loop_end", 0),
        (try_for_range, ":cur_fief", centers_begin, ":loop_end"),
@@ -9441,7 +9493,7 @@ game_menus = [
 	   #########
 	   
 	   ######### NEW v3.0
-       ("debug_options_new_3",[], "Print current statistics.",
+       ("debug_options_new_1_2",[], "Print current statistics.",
        [
        (assign, ":pt_looters", 0),
        (assign, ":pt_curonians", 0),
@@ -9700,13 +9752,13 @@ game_menus = [
        ),
 	   #########
 	   
-       ("debug_options_new_4",[], "Activate player faction.",
+       ("debug_options_new_1_3",[], "Activate player faction.",
        [
        (call_script, "script_activate_player_faction", "trp_player"),
        ]
        ),
 	   #######################################
-       ("debug_options_new_5",[], "Display belligerent drunk locations and troop types.",
+       ("debug_options_new_1_4",[], "Display belligerent drunk locations and troop types.",
 	   [
           (try_for_range, ":belligerent_drunk_tavern", towns_begin, towns_end),
             (party_slot_ge, ":belligerent_drunk_tavern", slot_center_tavern_troop, 1),
@@ -9718,7 +9770,7 @@ game_menus = [
 		      
 	   ]),
 	   #######################################
-       ("debug_options_new_6",[], "Add 5 random lords as prisoners to the main party.",
+       ("debug_options_new_1_5",[], "Add 5 random lords as prisoners to the main party.",
 	   [
           (try_for_range, ":unused", 0, 5),
             (store_random_in_range, ":random_lord", lords_begin, lords_end),
@@ -9727,7 +9779,7 @@ game_menus = [
           (try_end),
 	   ]),
 	   #######################################
-       ("debug_options_new_7",[], "Give player staff and culture.",
+       ("debug_options_new_1_6",[], "Give player staff and culture.",
 	   [
        (assign, "$g_player_minister", "trp_temporary_minister"),
        (troop_set_faction, "trp_temporary_minister", "$players_kingdom"),
@@ -9741,7 +9793,7 @@ game_menus = [
        (troop_set_slot, "trp_player", slot_troop_cur_culture, ":culture"),
 	   ]),
 	   #######################################
-       ("debug_options_new_8",[], "Remove all non-kingdom parties on the map.",
+       ("debug_options_new_1_7",[], "Remove all non-kingdom parties on the map.",
 	   [
        (try_for_parties, ":party"),
          (party_is_active, ":party"),
@@ -9782,7 +9834,7 @@ game_menus = [
        (try_end),
 	   ]),
 	   #######################################
-       ("debug_options_new_9",[], "Give king of england a random face (Face key slot undefined).",
+       ("debug_options_new_1_8",[], "Give king of england a random face (Face key slot undefined).",
 	   [
        (store_random_in_range, ":random", "str_ee_face_key_euro_1", "str_ee_face_key_muslim_1"),   ### european
        (troop_set_slot, "trp_kingdom_9_lord", slot_troop_face_key, ":random"),  
@@ -9791,7 +9843,7 @@ game_menus = [
        (troop_set_face_keys, "trp_kingdom_9_lord", ":random"),  
 	   ]),
 	   #######################################
-       ("debug_options_new_10",[], "Give king of england a random face (Both face keys).",
+       ("debug_options_new_1_9",[], "Give king of england a random face (Both face keys).",
 	   [
        (store_random_in_range, ":random", "str_ee_face_key_euro_1", "str_ee_face_key_muslim_1"),   ### european
        (troop_set_slot, "trp_kingdom_9_lord", slot_troop_face_key, ":random"),  
@@ -9801,7 +9853,7 @@ game_menus = [
        (troop_set_face_keys, "trp_kingdom_9_lord", ":random", 1),  
 	   ]),
 	   ####################################### NEW 3.5
-       ("debug_options_new_11",[], "Test marshall elections for current player faction.",
+       ("debug_options_new_1_10",[], "Test marshall elections for current player faction.",
 	   [
          (try_for_range, ":cur_lord", lords_begin, lords_end),
            (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
@@ -9812,7 +9864,7 @@ game_menus = [
          (call_script, "script_decide_faction_ai", "$players_kingdom"),
 	   ]),
 	   #######################################
-       ("debug_options_new_12",[], "Test marshall elections for all factions.",
+       ("debug_options_new_1_11",[], "Test marshall elections for all factions.",
 	   [
          (try_for_range, ":cur_lord", lords_begin, lords_end),
            (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
@@ -9828,7 +9880,7 @@ game_menus = [
 	   ]),
 	   #######################################
 	   #######################################
-       ("debug_options_new_13",[], "Test crusades.",
+       ("debug_options_new_1_12",[], "Test crusades.",
 	   [
         (assign, "$crusader_faction", "fac_papacy"),
         
@@ -9856,7 +9908,7 @@ game_menus = [
 	   ]),
 	   #######################################
 	   #######################################
-       ("debug_options_new_14",[], "Test enlopment.",
+       ("debug_options_new_1_13",[], "Test enlopment.",
 	   [
        (assign, ":end", kingdom_ladies_end),
        (try_for_range, ":cur_lady", kingdom_ladies_begin, ":end"),
@@ -9866,13 +9918,13 @@ game_menus = [
        (try_end),
 	   ]),
 	   #######################################
-       ("debug_options_15",[], "More options.",
+       ("debug_options_new_1_14",[], "More options.",
        [
        (jump_to_menu, "mnu_debug_options_new_2"),
        ]
        ),
 	   
-       ("debug_options_new_99",[], "Go back.",
+       ("debug_options_new_1_99",[], "Go back.",
        [
          (jump_to_menu, "mnu_debug_options"),
        ]
@@ -10190,6 +10242,43 @@ game_menus = [
           (party_set_slot, "p_town_26_1", slot_town_store, "scn_town_eastern_store"),
           (party_set_slot, "p_town_26_1", slot_town_arena, "scn_town_eastern_arena"),
           (party_set_slot, "p_town_26_1", slot_center_siege_with_belfry,   1),
+        (try_end),
+       ]
+       ),
+	   #######################################
+       ("debug_options2_12",[], "Test compensation money for not receiving a fief.",
+       [
+        (try_begin),
+		  (display_message, "@##################################"),
+          (assign, reg6, 500),  ### default
+          (try_begin),
+	        (troop_slot_ge, "trp_player", slot_troop_renown, 1),
+	          (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
+	  	    # 1000 * 5 = 5000 + 500 = 5500
+	          (store_mul, reg7, ":player_renown", 5),
+			  (display_message, "@Renown is {reg7}."),
+	          (val_add, reg6, reg7),
+          (try_end),
+          (try_begin),
+            # (call_script, "script_troop_get_player_relation", ":faction_leader"),
+			(store_random_in_range, reg7, -100, 101),
+			(display_message, "@Relation is {reg7}."),
+            (assign, ":relation", reg7),
+	        (assign, reg7, 0),
+	        (gt, ":relation", 0),
+	          (store_mul, reg7, ":relation", 20),
+	          (val_add, reg6, reg7),
+			  (display_message, "@Positive relation bonus is {reg7}."),
+          (else_try), ###### negative relation
+	        (lt, ":relation", 0),
+	          (assign, reg7, 0),
+	          (val_mul, ":relation", -1), ###### turns into positive
+	          (store_mul, reg7, ":relation", 20),
+	          (val_sub, reg6, reg7),
+			  (display_message, "@Negative relation bonus is {reg7}."),
+          (try_end),
+		  (display_message, "@Final value is {reg6}."),
+		  (display_message, "@##################################"),
         (try_end),
        ]
        ),

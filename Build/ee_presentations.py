@@ -3594,7 +3594,7 @@ presentations = [
         (overlay_add_item, "$g_presentation_obj_1", "@Mercenary"),
         (try_for_range_backwards, ":page_no", 0, ":num_factions"),
           (store_add, ":faction_no", ":page_no", npc_cultures_begin_2),
-		  (neq, ":faction_no", "fac_culture_crusader"), ###### NEW v3.9.1 - 
+		  # (neq, ":faction_no", "fac_culture_crusader"), ###### NEW v3.9.1 - 
             (str_store_faction_name, s0, ":faction_no"),
             (overlay_add_item, "$g_presentation_obj_1", s0),
         (try_end),
