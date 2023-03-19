@@ -2267,8 +2267,11 @@ triggers = [
           (party_set_slot, ":town",slot_mongol_camp,-1),  
           
           (store_faction_of_party, ":faction", ":town"),
-          (this_or_next|eq, ":faction", "fac_kingdom_3"),
-          (eq, ":faction", "fac_kingdom_27"),
+          # (this_or_next|eq, ":faction", "fac_kingdom_3"),
+          # (eq, ":faction", "fac_kingdom_27"),
+        ############## NEW v3.10
+          (faction_slot_eq, ":faction", slot_faction_culture, "fac_culture_mongol"),
+        ############################
           #(str_store_party_name,s0, ":town"),
           #TODO MONGOLIANS INVITED INTO TOWN
           #(party_get_slot, ":camp", ":town",slot_mongol_camp),

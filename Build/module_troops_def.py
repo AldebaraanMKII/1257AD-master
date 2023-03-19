@@ -173,7 +173,10 @@ footman_wp                = wp_one_handed(140)|wp_two_handed(100)|wp_polearm(140
 
 ########## NEW v3.8 - sea raiders
 sea_raider_wp                = wp_one_handed(140)|wp_two_handed(60)|wp_polearm(140)|wp_archery(120)|wp_crossbow(120)|wp_throwing(100)
-sea_raider_veteran_wp        = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(160)|wp_archery(160)|wp_crossbow(160)|wp_throwing(140)
+sea_raider_veteran_wp        = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(160)|wp_archery(160)|wp_crossbow(160)|wp_throwing(140) 
+############### NEW v3.10 - 
+sea_raider_elite_wp        = wp_one_handed(300)|wp_two_handed(60)|wp_polearm(200)|wp_archery(200)|wp_crossbow(200)|wp_throwing(180)
+############### 
 ####################
 
 swords_regulars_skills    = knows_ironflesh_4|knows_power_strike_5|knows_athletics_2|knows_weapon_master_5|knows_shield_4|knows_power_throw_2|knows_inventory_management_10

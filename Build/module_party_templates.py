@@ -219,7 +219,7 @@ party_templates = [
   ####### NEW v3.0-KOMKE START-
   ("kingdom_scot_reinforcements_a", "{!}kingdom_scot_reinforcements_a", 0, 0, fac_kingdom_12, soldier_personality, [(trp_scottish_light_cavalry,1,3),(trp_scottish_village_recruit,4,9),(trp_scottish_infantry_recruit,4,9)]),
   ("kingdom_scot_reinforcements_b", "{!}kingdom_scot_reinforcements_b", 0, 0, fac_kingdom_12, soldier_personality, [(trp_scottish_archer_2,1,3),(trp_scottish_archer_2,1,3),(trp_scottish_clansman,1,3),(trp_scottish_clansman,1,3),(trp_scottish_forinsec_spearman,1,3)]),
-  ("kingdom_scot_reinforcements_c", "{!}kingdom_scot_reinforcements_c", 0, 0, fac_kingdom_12, soldier_personality, [(trp_scottish_medium_cavalry, 2,5),(trp_scottish_knight, 1,2)]),
+  ("kingdom_scot_reinforcements_c", "{!}kingdom_scot_reinforcements_c", 0, 0, fac_kingdom_12, soldier_personality, [(trp_scottish_medium_cavalry, 2,5),(trp_scottish_knight, 1,2), (trp_scots_guard, 1, 2)]),
   ####### NEW v3.0-KOMKE END-
 
   # Ireland
@@ -308,6 +308,23 @@ party_templates = [
   ("kingdom_cuman_reinforcements_c", "{!}kingdom_cuman_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_cuman_horse_archer, 2,5), (trp_cuman_lancer, 1,2)]),
 ##########
 
+############## NEW v3.10
+  ("kingdom_english_reinforcements_a", "{!}kingdom_english_reinforcements_a", 0, 0, fac_kingdom_5, soldier_personality, [(trp_english_village_recruit,6,9),(trp_english_town_recruit,6,9)]),
+  ("kingdom_english_reinforcements_b", "{!}kingdom_english_reinforcements_b", 0, 0, fac_kingdom_5, soldier_personality, [(trp_english_hobilar,2,4),(trp_english_levy_spearman,5,8), (trp_english_sherwood_archer,1,2)]),
+  ("kingdom_english_reinforcements_c", "{!}kingdom_english_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_english_demi_lancer, 2,5), (trp_english_knight, 1,2)]),
+  
+  ("kingdom_french_reinforcements_a", "{!}kingdom_french_reinforcements_a", 0, 0, fac_kingdom_5, soldier_personality, [(trp_french_village_recruit,6,9),(trp_french_town_recruit,6,9)]),
+  ("kingdom_french_reinforcements_b", "{!}kingdom_french_reinforcements_b", 0, 0, fac_kingdom_5, soldier_personality, [(trp_french_mounted_archer,2,4),(trp_french_levy_spearman,5,8), (trp_french_crossbow_militia,1,2)]),
+  ("kingdom_french_reinforcements_c", "{!}kingdom_french_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_french_mounted_sergeant, 2,5), (trp_french_knight, 1,2), (trp_scots_guard, 1, 2)]),
+  
+  ("kingdom_hungarian_reinforcements_a", "{!}kingdom_hungarian_reinforcements_a", 0, 0, fac_kingdom_5, soldier_personality, [(trp_hungarian_village_recruit,6,9),(trp_hungarian_town_recruit,6,9)]),
+  ("kingdom_hungarian_reinforcements_b", "{!}kingdom_hungarian_reinforcements_b", 0, 0, fac_kingdom_5, soldier_personality, [(trp_hungarian_merchant_cavalry,2,4),(trp_slav_levy,5,8), (trp_hungarian_peasant_archer,1,2)]),
+  ("kingdom_hungarian_reinforcements_c", "{!}kingdom_hungarian_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_hungarian_noble_cavalry, 2,5), (trp_hungarian_knight, 1,2), (trp_magyar_cavalry, 1,2)]),
+  
+  ("kingdom_polish_reinforcements_a", "{!}kingdom_polish_reinforcements_a", 0, 0, fac_kingdom_5, soldier_personality, [(trp_polish_village_recruit,6,9),(trp_polish_town_recruit,6,9)]),
+  ("kingdom_polish_reinforcements_b", "{!}kingdom_polish_reinforcements_b", 0, 0, fac_kingdom_5, soldier_personality, [(trp_polish_strzelcy,2,4),(trp_polish_spear_levy,5,8), (trp_polish_peasant_archer,1,2)]),
+  ("kingdom_polish_reinforcements_c", "{!}kingdom_polish_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_polish_retainer, 2,5), (trp_polish_guard, 1,2), (trp_hussar_cavalry, 1,2)]),
+############################
 
   ("steppe_bandit_lair" , "Steppe Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_steppe_bandit,15,58)]),
   ("taiga_bandit_lair", "Tundra Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_taiga_bandit,15,58)]),
@@ -509,7 +526,19 @@ party_templates = [
    
    
   ("mongolian_camp", "Mongolian Horde",icon_khergit|pf_label_small|carries_goods(5)|pf_show_faction,0,fac_commoners,soldier_personality,[(trp_tatar_veteran_horse_archer,1,2),(trp_tatar_heavy_lancer,1,1),(trp_tatar_skirmisher,10,14),(trp_tatar_tribesman,8,13)]),
-
+############### NEW v3.10 - New mercs
+  ("company_scots_guard_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_scots_guard,6,9)]), 
+  ("company_scots_guard_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_scots_guard,9,12)]), 
+  ("company_scots_guard_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_scots_guard,12,15)]), 
+  
+  ("company_magyar_cavalry_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_magyar_cavalry,6,9)]), 
+  ("company_magyar_cavalry_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_magyar_cavalry,9,12)]), 
+  ("company_magyar_cavalry_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_magyar_cavalry,12,15)]), 
+  
+  ("company_hussar_cavalry_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hussar_cavalry,6,9)]), 
+  ("company_hussar_cavalry_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hussar_cavalry,9,12)]), 
+  ("company_hussar_cavalry_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hussar_cavalry,12,15)]), 
+############### 
 ######################### NEW PARTIES #####################################  
   ("war_party", "War Party",icon_gray_knight|carries_goods(4)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
   ("mercenary_company", "Mercenary Company",icon_gray_knight|carries_goods(3)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
