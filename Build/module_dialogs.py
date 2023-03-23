@@ -23055,21 +23055,21 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (party_slot_eq, ":center_no", slot_town_lord, "$g_talk_troop"),
 (str_store_party_name, s1, ":center_no"),
 
-], "{s1}", "dplmc_lord_ask_exchange_fief_2", ##CABA - bugfix? was "dplmc_lord_exchange_fief_select_2", 
+], "{s1}.", "dplmc_lord_ask_exchange_fief_2", ##CABA - bugfix? was "dplmc_lord_exchange_fief_select_2", 
 [
 (store_repeat_object, "$fief_selected"),
 ]],
 
 [anyone|plyr, "dplmc_lord_exchange_fief_select_1",
 [
-], "Never mind", "lord_pretalk",
+], "Never mind.", "lord_pretalk",
 []],
 
 #Now the NPC has to be offered a fief in exchange
 [anyone, "dplmc_lord_ask_exchange_fief_2", [  ##CABA - bugfix? was "dplmc_lord_exchange_fief_select_2",
    (str_store_string, s19, "str_dplmc_fief_exchange_listen_2"),
     ],
-   "{s19}", "dplmc_lord_exchange_fief_select_2",
+   "{s19}.", "dplmc_lord_exchange_fief_select_2",
    [],
 ],
 
@@ -23085,14 +23085,14 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
 (str_store_party_name, s1, ":center_no"),
 
-], "{s1}", "dplmc_lord_exchange_fief_select_3",
+], "{s1}.", "dplmc_lord_exchange_fief_select_3",
 [
 (store_repeat_object, "$diplomacy_var"),
 ]],
 
 [anyone|plyr, "dplmc_lord_exchange_fief_select_2",
 [
-], "Never mind", "lord_pretalk",
+], "Never mind.", "lord_pretalk",
 []],
 
 #NPC considers offer.  Acceptance:

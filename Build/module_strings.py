@@ -9198,7 +9198,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("dplmc_fief_exchange_ask_interest", "Would you be interested in exchanging fiefs?"),
 ("dplmc_fief_exchange_not_interested", "No, I would not be interested in that."),
 
-("dplmc_fief_exchange_listen", "This is somewhat unusual but not unprecendented.  I will listen.  Which fief of mine did you have in mind?"),
+("dplmc_fief_exchange_listen", "This is somewhat unusual but not unprecedented.  I will listen.  Which fief of mine did you have in mind?"),
 ("dplmc_fief_exchange_listen_player_approval", "This is somewhat unusual, but since you're the {king/queen} there is no one to object.  Which fief of mine did you have in mind?"),
 ("dplmc_fief_exchange_listen_s10_approval", "This is somewhat unusual, but unless {s10} objects there is no reason we could not.  Which fief of mine did you have in mind?"),
 

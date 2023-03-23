@@ -39,12 +39,12 @@ from module_constants import *
 
 game_menus = [ #
   ("start_game_0",menu_text_color(0xFF000000)|mnf_disable_all_keys,
-    "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition.) This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose wisely, as you will not be able to change it after you started the game!",
+    "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition.) This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose wisely, as you will not be able to change it after you start the game!",
     "none",
     [],
     [
     #tom
-     ("continue_feudal",[], "Start a new game, with the lance recruitment system",
+     ("continue_feudal",[], "Start a new game, with the lance recruitment system.",
        [
        (assign, "$use_feudal_lance", 1),
        #feudal recruitment fill in the lances
@@ -52,7 +52,7 @@ game_menus = [ #
         ]
        ),
        #tom
-       ("continue_native",[], "Start a new game, with the native Warband recruitment system",
+       ("continue_native",[], "Start a new game, with the native Warband recruitment system.",
        [
        (assign, "$use_feudal_lance", 0),
        (jump_to_menu, "mnu_start_game_1"),
@@ -3987,7 +3987,7 @@ game_menus = [ #
     [
       ("start_male",
       [],
-      "Male",
+      "Male.",
       [
         (troop_set_type, "trp_player", 0),
         (assign, "$character_gender", 0),
@@ -4014,7 +4014,7 @@ game_menus = [ #
 	  
       ("start_female",
       [],
-      "Female",
+      "Female.",
       [
         (troop_set_type, "trp_player", 1),
         (assign, "$character_gender", 1),
@@ -4052,7 +4052,7 @@ game_menus = [ #
 
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (jump_to_menu, "mnu_start_game_0"),
       ]
@@ -4089,7 +4089,7 @@ game_menus = [ #
 	  
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (jump_to_menu, "mnu_start_game_0"),
       ]
@@ -4130,7 +4130,7 @@ game_menus = [ #
 	  
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (jump_to_menu, "mnu_start_game_new_2dot1"),
       ]
@@ -4163,7 +4163,7 @@ game_menus = [ #
 	  
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (jump_to_menu, "mnu_start_game_new_2dot1_2"),
       ]
@@ -4258,7 +4258,7 @@ game_menus = [ #
 
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (jump_to_menu, "mnu_start_game_new_2dot1_3"),
       ]
@@ -4427,7 +4427,7 @@ game_menus = [ #
 
     ("select_opt1on_1",
     [],
-    "Set it to default EE size (600 max for castles/800 for towns).",
+    "Set it to default EE size (600 max for castles/800 for towns.)",
     [
       (assign, "$g_party_garrison_max_size_castles", 600),
       (assign, "$g_party_garrison_max_size_towns", 800),
@@ -4438,7 +4438,7 @@ game_menus = [ #
 
     ("select_opt1on_2",
     [],
-    "Set it to 1257 default size (300 max for castles/500 for towns).",
+    "Set it to 1257 default size (300 max for castles/500 for towns.)",
     [
       (assign, "$g_party_garrison_max_size_castles", 300),
       (assign, "$g_party_garrison_max_size_towns", 500),
@@ -4611,7 +4611,7 @@ game_menus = [ #
 
       ("start_adventurer",
       [],
-      "Start_as_a_Adventurer.",
+      "Start_as_an_Adventurer.",
       [
         (assign, "$g_start_faction", -1),
         (assign, "$background_type", cb_adventurer),
@@ -4645,7 +4645,7 @@ game_menus = [ #
 	  ################## NEW v3.0
       ("start_mercenary_captain",
       [],
-      "Start_as_a_mercenary_captain.",
+      "Start_as_a_Mercenary_Captain.",
       [
         (assign, "$g_start_faction", -1),
         (assign, "$background_type", cb_mercenary_captain),
@@ -4662,7 +4662,7 @@ game_menus = [ #
       ####################################
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (jump_to_menu, "mnu_start_game_1"),
       ]
