@@ -19694,9 +19694,9 @@ scripts = [
           (assign, ":end_villages", "p_village_player"),
         (try_end),
 
-        ####################################################################################################################
-        #### -- Manual assignments pre-loop/pre-autoscript for exceptions due to distance/location/etc. (by Khanor.) -- ####
-        ####################################################################################################################
+        ###################################################################################################################
+        #### -- Manual assignments pre-loop/pre-autoscript for exceptions due to distance/location/etc. (by Khanor) -- ####
+        ###################################################################################################################
         ### This might also save time on startup due to the village searching script having to run less.
         ### If this is indeed the case, utilizing manual village connections more often could benefit more than
         ### territorial and geographical modeling.
@@ -20037,6 +20037,52 @@ scripts = [
           (store_faction_of_party, ":town_faction", "p_castle_24_1"),
           (call_script, "script_give_center_to_faction_aux", "p_village_24_3", ":town_faction"),
 
+          ### Mamluk Sultanate
+          (party_set_slot, "p_village_25_7", slot_village_bound_center, "p_castle_25_1"), ### Mansoura
+          (store_faction_of_party, ":town_faction", "p_castle_25_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_7", ":town_faction"),
+
+          (party_set_slot, "p_village_25_8", slot_village_bound_center, "p_castle_25_2"), ### Al`Arish
+          (store_faction_of_party, ":town_faction", "p_castle_25_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_8", ":town_faction"),
+
+          (party_set_slot, "p_village_25_9", slot_village_bound_center, "p_castle_25_3"), ### Ismailiya
+          (store_faction_of_party, ":town_faction", "p_castle_25_3"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_9", ":town_faction"),
+
+          (party_set_slot, "p_village_25_12", slot_village_bound_center, "p_castle_25_6"), ### Karak
+          (store_faction_of_party, ":town_faction", "p_castle_25_6"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_12", ":town_faction"),
+
+          (party_set_slot, "p_village_25_4", slot_village_bound_center, "p_town_25_2"), ### Alexandria
+          (store_faction_of_party, ":town_faction", "p_town_25_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_4", ":town_faction"),
+
+          (party_set_slot, "p_village_25_6", slot_village_bound_center, "p_town_25_3"), ### Damietta
+          (store_faction_of_party, ":town_faction", "p_town_25_3"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_6", ":town_faction"),
+
+          (party_set_slot, "p_village_25_14", slot_village_bound_center, "p_town_25_4"), ### Damascus
+          (store_faction_of_party, ":town_faction", "p_town_25_4"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_14", ":town_faction"),
+
+          (party_set_slot, "p_village_25_16", slot_village_bound_center, "p_town_25_5"), ### Jerusalem
+          (store_faction_of_party, ":town_faction", "p_town_25_5"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_25_16", ":town_faction"),
+
+          ### Kingdom of Bulgaria
+          (party_set_slot, "p_village_30_4", slot_village_bound_center, "p_castle_30_1"), ### Drastar
+          (store_faction_of_party, ":town_faction", "p_castle_30_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_30_4", ":town_faction"),
+
+          (party_set_slot, "p_village_30_2", slot_village_bound_center, "p_town_30_1"), ### Tarnovo
+          (store_faction_of_party, ":town_faction", "p_town_30_1"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_30_2", ":town_faction"),
+
+          (party_set_slot, "p_village_30_5", slot_village_bound_center, "p_town_30_2"), ### Plovdiv
+          (store_faction_of_party, ":town_faction", "p_town_30_2"),
+          (call_script, "script_give_center_to_faction_aux", "p_village_30_5", ":town_faction"),
+
           ### Marinid Dynasty
           (party_set_slot, "p_village_31_8", slot_village_bound_center, "p_castle_31_2"), ### Algiers
           (store_faction_of_party, ":town_faction", "p_castle_31_2"),
@@ -20051,20 +20097,20 @@ scripts = [
           (store_faction_of_party, ":town_faction", "p_castle_35_2"),
           (call_script, "script_give_center_to_faction_aux", "p_village_35_3", ":town_faction"),
         (try_end),
-        ### End of manual assignments pre-loop for exceptions.
+        ### End of manual assignments/exceptions pre-autoscript handouts.
 
         (try_for_range, ":cur_center", ":start_castles", ":end_castles"),
           (assign, ":min_dist", 999999),
           (assign, ":min_dist_village", -1),
           (try_for_range, ":cur_village", ":start_villages", ":end_villages"),
-            (neg|party_slot_ge, ":cur_village", slot_village_bound_center, 1), #skip villages which are already bound.
+            (neg|party_slot_ge, ":cur_village", slot_village_bound_center, 1), ### Skip villages which are already bound.
             (store_distance_to_party_from_party, ":cur_dist", ":cur_village", ":cur_center"),
             (lt, ":cur_dist", ":min_dist"),
             (assign, ":min_dist", ":cur_dist"),
             (assign, ":min_dist_village", ":cur_village"),
           (try_end),
           (assign, ":dontbind", 0),
-          (try_for_range, ":cur_village", ":start_villages", ":end_villages"), # and check if the castle has any bound villages already
+          (try_for_range, ":cur_village", ":start_villages", ":end_villages"), ### And check if the castle has any bound villages already.
             (party_slot_eq, ":cur_village", slot_village_bound_center, ":cur_center"),
             (assign, ":dontbind", 1),
           (try_end),

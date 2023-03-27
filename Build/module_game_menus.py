@@ -59,7 +59,7 @@ game_menus = [ #
         ]
        ),
        
-      ("go_back",[], "Go back",
+      ("go_back",[], "Go back.",
        [
          (change_screen_quit),
        ]),
@@ -4002,7 +4002,7 @@ game_menus = [ #
 
 ############## MF for testing start ####################NEW v2.9-KOMKE
 
-     ("start_mod",[(eq,1,1),],"Quick Character (for mod testing)",## when releasing new version set this to false so it is disabled
+     ("start_mod",[(eq,1,1),],"Quick Character (for mod testing.)",## when releasing new version set this to false so it is disabled
        [
            (troop_set_type,"trp_player",0),
            (assign,"$character_gender",tf_male),
@@ -4071,7 +4071,7 @@ game_menus = [ #
     [
       ("suffix_yes_1",
       [],
-      "1257AD_wage_system_(Windows).",
+      "1257AD_wage_system_(Windows.)",
       [
         (assign, "$native_wages", 0),
         (jump_to_menu, "mnu_start_game_new_2dot1_2"),
@@ -4080,7 +4080,7 @@ game_menus = [ #
 
       ("suffix_no_1",
       [],
-      "Native_wage_system_(Mac_&_Linux).",
+      "Native_wage_system_(Mac_&_Linux.)",
       [
         (assign, "$native_wages", 1),
         (jump_to_menu, "mnu_start_game_new_2dot1_2"),
