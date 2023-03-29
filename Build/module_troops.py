@@ -44103,8 +44103,8 @@ troops = [
 
 
   ["knight_11_6",
-     "Loþinn Gunnason",
-     "Loþinn Gunnason",
+     "Loþinn Gunnarrsson",
+     "Loþinn Gunnarrsson",
     tf_hero,
     0, 0, fac_kingdom_11,
     [
@@ -44837,7 +44837,7 @@ troops = [
 
   ["knight_13_10",
      "Diarmaid galloglaigh mac Lochlainn, Lord of Inishowen",
-    "Diarmaid galloglaigh mac Lochlainn",
+     "Diarmaid galloglaigh mac Lochlainn",
     tf_hero,
     0, 0, fac_kingdom_13,
     [

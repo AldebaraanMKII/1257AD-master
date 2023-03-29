@@ -1698,13 +1698,13 @@ logent_war_declaration_types_end                            = 96
 #lord reputation type, for commentaries
 #"Martial" will be twice as common as the other types
 lrep_none           = 0 
-lrep_martial        = 1 #chivalrous but not terribly empathetic or introspective, - eg Richard Lionheart, your average 14th century French baron
-lrep_quarrelsome    = 2 #spiteful, cynical, a bit paranoid, possibly hotheaded - eg Robert Graves' Tiberius, some of Charles VI's uncles
-lrep_selfrighteous  = 3 #coldblooded, moralizing, often cruel - eg William the Conqueror, Timur, Octavian, Aurangzeb (although he is arguably upstanding instead, particularly after his accession)
-lrep_cunning        = 4 #coldblooded, pragmatic, amoral - eg Louis XI, Guiscard, Akbar Khan, Abd al-Aziz Ibn Saud
-lrep_debauched      = 5 #spiteful, amoral, sadistic - eg Caligula, Tuchman's Charles of Navarre
-lrep_goodnatured    = 6 #chivalrous, benevolent, perhaps a little too decent to be a good warlord - eg Hussein ibn Ali. Few well-known historical examples maybe. because many lack the drive to rise to faction leadership. Ranjit Singh has aspects
-lrep_upstanding     = 7 #moralizing, benevolent, pragmatic, - eg Bernard Cornwell's Alfred, Charlemagne, Salah al-Din, Sher Shah Suri
+lrep_martial        = 1 #chivalrous but not terribly empathetic or introspective, - e.g. Richard Lionheart, your average 14th century French baron
+lrep_quarrelsome    = 2 #spiteful, cynical, a bit paranoid, possibly hotheaded - e.g. Robert Graves' Tiberius, some of Charles VI's uncles
+lrep_selfrighteous  = 3 #coldblooded, moralizing, often cruel - e.g. William the Conqueror, Timur, Octavian, Aurangzeb (although he is arguably upstanding instead, particularly after his accession)
+lrep_cunning        = 4 #coldblooded, pragmatic, amoral - e.g. Louis XI, Guiscard, Akbar Khan, Abd al-Aziz Ibn Saud
+lrep_debauched      = 5 #spiteful, amoral, sadistic - e.g. Caligula, Tuchman's Charles of Navarre
+lrep_goodnatured    = 6 #chivalrous, benevolent, perhaps a little too decent to be a good warlord - e.g. Hussein ibn Ali. Few well-known historical examples, maybe because many lack the drive to rise to faction leadership. Ranjit Singh has aspects
+lrep_upstanding     = 7 #moralizing, benevolent, pragmatic, - e.g. Bernard Cornwell's Alfred, Charlemagne, Salah al-Din, Sher Shah Suri
 
 lrep_roguish        = 8 #used for commons, specifically ex-companions. Tries to live life as a lord to the full
 lrep_benefactor     = 9 #used for commons, specifically ex-companions. Tries to improve lot of folks on land

@@ -16113,6 +16113,9 @@ scripts = [
         (party_get_current_terrain, ":party_terrain", ":party_no"),
         
         (try_begin),
+          (eq, ":party_terrain", rt_water), ### Set high as ships/boats with sails were generally faster than horses over distances (and can move all day and night without stops for rest/sleep.)
+            (val_add, ":terrain_speed_modifier", 22),
+        (else_try),
           (eq, ":party_terrain", rt_steppe),
             (val_add, ":terrain_speed_modifier", 15),
         (else_try),
@@ -16125,10 +16128,10 @@ scripts = [
           (eq, ":party_terrain", rt_snow),
             (val_sub, ":terrain_speed_modifier", 5),
         (else_try),
-          (eq, ":party_terrain", rt_desert), ##### too hot must move faster to comfy location
+          (eq, ":party_terrain", rt_desert), ### Too hot must move faster to comfy location
             (val_add, ":terrain_speed_modifier", 5),
         (else_try),
-          (eq, ":party_terrain", rt_bridge), ######## army can't cross all at once
+          (eq, ":party_terrain", rt_bridge), ### Army can't cross all at once
             (val_sub, ":terrain_speed_modifier", 10),
         (else_try),
           (eq, ":party_terrain", rt_river),

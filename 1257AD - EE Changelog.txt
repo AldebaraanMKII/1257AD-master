@@ -2,21 +2,200 @@
 
 Taleworlds: https://forums.taleworlds.com/index.php?topic=379851
 Nexus: https://www.nexusmods.com/mbwarband/mods/6251
-Moddb: https://www.moddb.com/mods/1257ad-enhanced-edition/downloads
 Discord: https://discord.gg/GvB2REENr2
+Patreon: https://www.patreon.com/1257adenhanced
+Changelog: https://pastebin.com/PXC5UcuN
 
 
-Current version: v3.8
+(Discord ids)
+Devs: @Beowulf#6300, @Khanor#3713
+Devs (Inactive): @komke#3087
+Contributors: @Black_Kangaroo#7894, @Lang#9858, @the_duke#8749, @mamacrooo#5615
+Patrons: @the_duke#8749, @grim_grollie#0873, ivan.ant13, @B^()#4099, @Mentoss#3127, @Phoenix#3892
 
-NOTE: Things with the "New game:" prefix requires a new game to take effect.
+
+Current version: v3.10
+
+NOTES: 
+Things with the "New game:" prefix requires a new game to take effect.
+Things with the "Debug:" prefix requires a new game but can be activated/fixed by using the debug menu under camp.
+
+
+
+
+v3.10 (Requires a new game)
+1). Increased relation gain with king after capturing a fief that player and NPCs have to 5 from 3.
+2). Fixed player not receiving any relation gain after capturing a fief.
+3). Removed javelins from mongol skirmishers.
+4). Added confirmation menu to outpost demolish so that player can rethink the choice.
+5). Added dialogue for player to ask Pope if there's any crusade active at the moment. 
+6). Removed relation loss with a leader when someone loses a battle.
+7). Fixed player not knowing his faction culture and thus being unable to change a fief's culture to it when starting as king, prince or vassal.
+8). Fixed duplicated dialogue after escorting a lady.
+9). Fixed tavernkeeper not informing the player of the correct value that a bounty had when finishing the quest.
+10). Fixed second troop tree presentation.
+11). Removed stable horse train for the time being.
+12). Any faction that has mongol culture will spawn mongol camps around their fiefs. Make sure the mongol camp limit (camp menu option) is high enough if you have several mongol factions though.
+13). Increased renown of the more well known kings to 1500 from 1200.
+14). Fixed being able to give fiefs to normal troops.
+15). Reworked prison break system. Minimum amount of prisoners required for it to trigger is 100 and each 10 increases chance of escape by 1%. If the settlement has a prisoner tower built it decreases the chance by 3x. This should make huge prisoner breaks much less frequent (but breaks overall more frequent).
+16). Fixed patrols not being disbanded when ordered to through the constable. 
+17). Increased renown gained from contructing a building in a manor to 10 from 2.
+18). Decreased right to rule gained from contructing a important building in a manor to 1 from 2.
+19). Increased number of random books in manor book seller to 3 from 1.
+20). Added option to disband a patrol (if the player is king or owner of the fief the patrol is patrolling) by talking to it directly.
+21). Fixed player right to rule not being taken into account when a lord of a defeated faction decided to join a new one.
+22). Reworked lord defection system. Before only relations and the number of walled fiefs divided by number of lords were taken into consideration. Now it will consider culture, religion and king renown.
+23). (@Black_Kangaroo#7894) fixed jerusalem king armor visual bugs.
+24). Fixed some Italian lords not having lances.
+25). (@the_duke#8749) Added 4 new cultures and troop trees: English, French, Hungarian and Polish.
+26). Fixed noble prisoner execution message displaying anything but the prisoner name.
+27). Fixed sea raider captain weapon proficiency discrepancy when compared to sea raider veterans.
+28). Added option to choose garrison size at game start.
+29). (@mamacrooo#5615) Added optional faces under Optional\Culturedguy's female character overhaul. Read the installation intructions.txt file on how to install it.
+30). Fixed player receiving compensation money for capturing a fief even when he decided to rebel.
+31). Fixed player compensation money bug.
+
+
+bug report notes:
+1). No relationship is gained when you send a gift to a lord or king (I sent beer)
+A: The chance is random. There's a 50% chance that the NPC will accept the gift.
+
+
+
+
+v3.9.1 (Requires a new game)
+1). Fixed invisible byzantine sabre.
+2). Removed Shoes with Mail because it was too short for the way 1257 armors were designed.
+3). Added komke to the dev list (sorry about that komke).
+4). Fixed Welsh Archers having greater proficiency than Welsh Veteran Archers.
+5). Fixed dead heirs that got recycled and assigned another faction receiving fiefs when their former father died.
+6). Fixed kings executing lords for treason even if executions were disabled in the 1257 menu.
+7). Fixed belligerent drunks sometimes spawning as debug troops.
+8). Fixed typos in faction notes.
+9). Fixed kidnapped girl crashing the game after dialogue and set her to follow the party (since for some unknown reason the game crashes when it tries to merge her party with the player).
+10). Changed some units names from "Arabian" to "Arabic".
+11). Added "none" option to constable recruit dialogue if player changed his mind.
+12). Fixed former vassal faction notes bug.
+13). Removed modding menu from camp if cheat menu is turned off.
+14). Fixed player vassal/prince/king and mercenary being able to enlist on someone's army.
+15). Fixed typos on freelancer dialogue/menus.
+16). Fixed fights envolving villages.
+17). Fixed enterprise profits bug.
+18). Fixed debug peace option not working.
+19). Fixed player king getting companion dialogue when talking to normal troops, thus being able to give them fiefs or ask them to send a message to vassals when marshal. This means no more "Lord Baltic Veteran Mercenary Horseman" unfortunately XD.
+20). Fixed grammatical errors on manor bandit infestation menu.
+21). Increased village relationship boost when player defeats manor bandits to 3 from 1.
+22). Fixed script errors that occurred when player started a battle against bandits infesting a village.
+23). Fixed player being able to take their troops equipment for free infinitely.
+24). Fixed lords not being removed from the game when executed while being prisoner of a world map party.
+25). (Debug) Fixed Constantinople not having byzantine interior scenes.
+26). Disabled civil wars again.
+27). Fixed marriage quest and several other quests not being cancelled when their giver/target died.
+28). Fixed random war bug.
+29). Fixed player wife not automatically changing location to court. This will happen now in up to 72 in game hours.
+30). Changing culture now costs 5% less per level of player party trading skill (default 15000).
+31). Fixed factions leaders telling the player that he/she is disputing their claim of Europe on a new non-king start.
+32). Fixed crusader iberian lords spawning without names.
+33). Fixed byzantine armor being named "Scoutati" instead of "Skoutatoi".
+34). Moved attributes, skills and proficiencies a bit to the left in the troop trees for easier readability.
+35). Removed crusader culture from troop tree since they use the western euro troop tree.
+36). Fixed ibelin shield having jerusalem texture.
+37). Fixed piercing bolts costing less than steel bolts and doing more damage.
+38). Added 25, 50 and 100k withdraw from treasury options (chamberlain).
+39). Added new misc option to make player receive money directly instead of in the treasury.
+40). Changed random time for player to escape captivity to be between 12-72 hours.
+41). Fixed player culture not updating when he changed his kingdom's culture through his minister.
+42). Fixed player castle guards not updating when he changed his kingdom's culture through his minister.
+43). Added new misc option to make captured fiefs auto change culture to their new faction.
+44). Made changes to how much money the player receives as compensation for being denied a fief he conquered. New value is (player renown * 8) + (player relation with king * 20)(negative relations wield -20 per point)(was always 900 before).
+
+45). (New Game)(@Khanor#3713) Optimized village connections to castles/towns in the Kingdom of Norway, the Kingdom of Denmark, the Kingdom of England, the Kingdom of France, the Kingdom of Portugal, the Crown of Aragon, the Emirate of Granada, the Marinid Dynasty and the Polish Principalities.
+     Now even towns should generally pick up villages in their area, and the manual assignments pre-loop has been expanded with a description. Manual comments for which castles and towns are being handed village connections have also been added.
+     These village assignment improvements also include the outcome of a democratic Discord vote for Angoulême castle and Chinon castle's village connections (thanks for voting!)
+46). (New Game)(@Khanor#3713) Moved Stafangr, Ragnhildarhólmr and Konungahella closer to their real life locations (e.g. Ragnhildarhólmr has been moved significantly southwards.) Stafangr has also been moved onto land properly now.
+47). (@Khanor#3713) Fixed the Village Elders, Mayors, etc. gendering the player incorrectly for real. They will now take into account the gender of those involved in the conversation properly.
+48). (@Khanor#3713) In addition to player misgendering, fixed a dialogue speaking about an NPC as Marshall, which led to a realm's Marshall being misgendered in dialogue about them being too cautious.
+49). (@Khanor#3713) Fixed the English language ui-file so that attributes name their correct skills after the 1257 AD changes/additions. Also fixed spelling and capitalization of skills in the attribute description to match their appearance on the character screen.
+
+
+These bug reports were tested, but could not be reproduced:
+1). Troops don't follow player in battle
+2). Sergeant armour have no stats
+
+
+
+
+v3.9
+1). Fixed player getting lords without culture if he set his culture to anatolian.
+2). Added missing credits in v3.8 changelog. 
+3). Fixed fiefs sometimes not being unnasigned when their owner died.
+4). Fixed player king start.
+5). Fixed random lords not getting their face randomized according to culture.
+6). Fixed player getting lords without culture if he set his culture to mongol.
+7). Fixed player vassal being unable to request a fief after conquering it.
+8). Fixed "SCRIPT ERROR ON OPCODE -2147483108".
+9). Player now only loses honor and party morale if he executes a lord by burning, quartering or executes him on the spot.
+10). Fixed king always choosing someone he likes to get fiefs. Now a lord's renown will be taken into consideration.
+11). Fixed cwe spears not being taken into account when dealing with spear bracing.
+12). Fixed spear bracing only working in field battles. Now it should work in any battle outside sieges.
+13). The majority of polearms that can be braced are now affected by spear bracing.
+14). Fixed battle orders menu (backspace) closing after a few seconds open.
+15). Fixed formation menu (f4) closing after a few seconds open.
+16). Optimized spear bracing code.
+17). Due to poll results, only two handed polearms can be braced.
+18). Fixed cuman lords not getting any culture and thus spawning without name.
+19). Player random lords from a golden horde start have 10% chance of being cuman.
+20). (New game) All gaelic troops wear boots/shoes now.
+21). Fixed script erros for decide_faction_ai.
+22). Fixed player being unable to exit the fief culture change menu when there was a large amount of cultures to be displayed. Now they are divided by pages.
+23). Fixed kings sometimes choosing a dead lord as winner of a fief.
+24). Fixed factions not being defeated if their king went into hiding and that faction had not fiefs. Now a faction is defeated if they have no fiefs (it can take 1 to 48 hours for this to happen).
+25). Player can now recruit 1 knight for every 20 points of renown he has from manors (before it was 3). Knight respawn rates still apply.
+26). Added spearbracing and shield bash to camp visit map.
+27). Lords that order assassinations of other lords of their faction and are discovered lose considerable relations with their king and lords of the same faction.
+28). Fixed lords that order assassinations and are discovered not getting negative/positive relations with friends/enemies of the assassinated lord. The relation depends on how much they liked/hated the dead lord.
+29). Lords that raid villages get less relation with the owner (-5).
+30). Lords that besiege centers get less relation with the owner (-8).
+31). Lords that kill another lord (battle/execution/assassination) lose significant relations with the dead's relatives like father/mother/etc. The impact depends on what they were (e.g. killing someone's father/mother bears the greatest impact) and also if they didn't hate the dead or not.
+32). Lords can be summary executed after being captured by other NPC lords. The chance depends on how much the winner dislikes them and also their (the winner's) personality. The relations hit still apply.
+33). Freed lords gain relations with whoever freed them (+5).
+34). Decreased relations needed for enterprises to be sequestered to -5 from 0.
+35). Increased staff salary by 4x (e.g. wife weekly cost went from 10 to 40).
+36). Fixed typo in patrol line.
+37). Optimized king start code.
+38). When a player changes the culture of a fief, the regional mercs change as well.
+39). Removed some persistent flags from ambient music tracks which hopefully will make the other music play more often.
+40). Fixed music tracks not playing in certain areas of the map.
+41). Fixed 2 tracks not playing at all while traveling the map.
+42). Fixed kings being executed with the same chance as regular lords.
+43). (New game) Increased king execution chance variation to 20% (was 10%).
+44). Kings can choose to execute a lord instead of indicting them for treason. The less they like them, the more chance.
+45). Fixed a bug in the execution code that made executions less likely to occur. 
+46). Removed tier 6 surcoat from Gaelic Clansmen.
+47). Increased deadline for report to the marshall quest to 6 days (was 4). 
+48). Added "whistle for you horse" feature (Press H during a battle to have your horse go back to you).
+49). Fixed player starting without proper title if choosing the female ruler start.
+50). (New game) Added option to disband a wagon train if active. You're going to need a new game if you have a wagon train already active and want to disband it.
+51). Fixed player "former vassal" bug.
+52). Reduced town walkers by half to avoid them and the player getting stuck in traffic.
+53). Fixed player not appearing in the vassal list.
+54). Fixed wagon train disband dialogue not disbanding it.
+55). Fixed mercenary player not needing to pay troop wages.
+56). Fixed new wagon trains not paying wages.
+57). Fixed tavern bounties.
+58). Fixed player clone spawning in villages.
+59). Fixed player being able to request a horse merchant to return his horse even if he hasn't given him any.
+60). Fixed "Player" faction appearing in faction statistics.
+
 
 
 
 v3.8
 1). Fixed some music tracks not being played because of wrong extensions on module_music.py
-2). Improved the basic startup script for village assignments, castles now have priority over towns (Thanks to @Khanor).
-3). Nidaros and Steinker have now switched places to improve the Norwegian geography and village/town layout (Thanks to @Khanor).
-4). Fixed typo in the string for the Norwegian (faction) language (Thanks to @Khanor).
+2). (New Game)(@Khanor#3713) Improved the basic startup script for village assignments, castles now have priority over towns.
+3). (New Game)(@Khanor#3713) Nidaros and Steinker have now switched places to improve the Norwegian geography and village/town layout.
+4). (@Khanor#3713) Fixed typo in the string for the Norwegian (faction) language.
 5). Fixed player starting with villages in non-noble starts.
 6). Fixed tournament ambiance sounds playing even after the tournament finished.
 7). (Freelancer) Fixed player being unable to return to a lord's service after a leave or being captured in battle.
@@ -27,27 +206,80 @@ v3.8
 12). Fixed companion missions added by diplomacy not completing if the player accessed the companion report menu.
 13). Fixed player relations with a faction resetting to max 12 when joining said faction.
 14). Fixed mercenary captains not being randomly chosen in tavern bounties.
-15). (New game) Moved Venice more to the west to fix a bug where lords couldn't enter it (Thanks to @Khanor).
+15). (New game)(@Khanor#3713) Moved Venice more to the west to fix a bug where lords couldn't enter it.
 16). Recruiters now get troops based upon culture instead of faction.
 17). Fixed crossbowmen bugging out and not doing anything after some time.
 18). Fixed player receiving a notification and errors about someone being executed even if he hasn't ordered any execution.
 19). Fixed player king not getting a notification when a border incident involving his faction happened.
-20). Temporary fix to Mayors/Village Elders/etc. misgendering the player, they will just default to male gendering for now (Thanks to @Khanor).
+20). (@Khanor#3713) Simple initial fix to Mayors/Village Elders misgendering the player.
 21). Fixed debug menu bugs for declare peace/war.
 22). Added new failsafe to block income from reaching very high values due to calculation errors.
 23). Fixed constable lacking dialogue for exchanging prisoners.
-24). Fixed dead lords causing script errors after battle.
-25). Fixed random lords appearing with no name nor culture if the player faction culture was crusader (e.g. jerusalem, antioch, etc).
-26). Faction banners are now available to be used by the player at the game start.
-27).
-28).
-29).
-30).
-31).
-32).
-33).
-34).
-35).
+24). Fixed random lords appearing with no name nor culture if the player faction culture was crusader (e.g. jerusalem, antioch, etc).
+25). Faction banners are now available to be used by the player at the banner selection presentation.
+26). Fixed lords sometimes getting their names filled with titles when they defected. Now only random lords will get their titles changed due to the way naming works.
+27). Fixed serbian spearmen not having shields and their top tier cavalry not having warhorses.
+28). Made faction banners (e.g. byzantine banner) available at the banner selection presentation.
+29). Fixed rus mercenary guisarmers not having two handed weapons and not wearing helmets 100% of the time.
+30). Re-added option to change ministers.
+31). Fixed morale report showing extra text in the food variety line.
+32). Player can tell lords to besiege a location even when he's marshall.
+33). Player created patrols cost 35% less than normal wage for troops on the field.
+34). Fixed patrols assigned to reinforce not reinforcing anything.
+35). Fixed factions not becoming hostile after the player attacked some types of parties like scouts, mercenary companies, etc.
+36). Now it's possible to wait in a manor, just like manors in villages. But the player needs to build a housing improvement first.
+37). Manor gold now goes directly to treasury, so no need to go in the manor to collect it.
+38). Added option to demolish a fort.
+39). Fixed dead lords sometimes getting fiefs or being choosen as marshalls.
+40). Fixed script errors and crashes that occurred when a lord died in battle against the player or was assassinated.
+41). Fixed belligerent drunks sometimes getting the mercenary dialogue.
+42). Fixed player prince being unable to ask the king to participate in a crusade.
+43). Fixed script error that occurred when finishing talking to a normal fugitive (not the tavern bounty type), which prevented the quest from proceeding.
+44). Minor modifications to arrows stats and prices.
+45). Increased costs for every staff (e.g. constable).
+46). Added stables improvement (Level 1-4). Can be used to store, heal and train horses through the constable. 
+47). Horse merchants can also heal and train horses, but only to heavy modifier.
+48). Fixed player prisoner lords being executed randomly without player consent.
+49). Fixed player feasts ending in a day.
+50). Fixed random war bug caused by player losing relations with all faction when attacking another. Now this will only happen if the factions have 20+ relation with the attacked faction.
+51). Factions need to be less than -5 relation for war to be declared.
+52). If the player sends a threat to a faction and it refuses it now counts as a provocation and player or the faction can declare war.
+53). Player now learns the culture of the fief he conquers (or given by the king) without needing to pay for it.
+54). Fixed player wife moving once a day without player input.
+55). Fixed lords from defeated faction switching to a new faction while being held prisoner, which could cause a miriad of issues (e.g. if they were executed = war with that new faction).
+56). Fixed troop ratio bar not refreshing during normal battles.
+57). Added lancer fix from here: https://forums.taleworlds.com/index.php?threads/lancers-use-the-right-weapon-battle-edition.128605/post-3197289
+58). Added missing mission triggers to player sally out and village raid mission templates.
+59). Changed trigger that changes ladies locations to fire once every 3 days instead of every day.
+60). Kings who lose their kingdoms will either go into exile or commit suicide (30% chance). This is to account for the fact that normal lords can become kings.
+61). Fixed script errors "npc_decision_checklist_ai_alt", "decide_faction_ai" and "find_center_to_defend".
+62). Fixed player being unable to launch a crusade if the original pope died.
+63). Fixed friendly faction lords sometimes being sent to the prisoner row after a battle involving the player.
+64). Reduced minimum free party size requirement for recruiting mercs to 20 from 30.
+65). Fixed player being able to send companions on missions (while talking to them directly) without being a king.
+66). Fixed female player character being incorrectly labeled as part of a another faction and thus being unable to marry a lord even as a adventurer.
+67). Fixed player village being selected as a valid target during incidents even when it didn't exist yet.
+68). Fixed player sometimes not receiving tax from several fiefs. This will still happen when the village is raided or during extremely low prosperity.
+69). Fixed some lances not breaking when lance breaking was on.
+70). Fixed CWE spears not breaking when weapon breaking was on.
+71). Fixed tavern keeper saying random unrelated strings of text when the player refused to take the reward for a bounty.
+72). Lords that lead sieges gain 30 renown when they conquer a fief.
+73). Fixed several dialogue entries.
+74). Fixed player not getting prisoners after a battle.
+75). Fixed improvements not being built.
+76). Fixed player fiefs changing to neutral faction after the player gave them away back to the king.
+77). Fixed castle guards appearing in byzantine armies.
+78). (New game) Fixed sea raiders having low archery and crossbow proficiencies.
+79). Fixed player getting lords with no names nor culture if choosing to switch to anatolian christian (armenian) culture later on.
+80). Added more menu options to customize custom troop proficiency, budget, etc per level.
+81). Fixed player being able to manage the garrison of fiefs taken by his faction even after they're assigned to someone else.
+82). Leading lords that win sieges gain +3 relations with their king.
+83). Fixed player being forced to make a donation to a village elder if he clicked on it by mistake or made up his mind.
+84). Fixed factions not becoming hostile to player vassal/prince if his faction became hostile to other factions.
+85). Fixed bug that occurred when the player refused to do a retaliation quest for a guildmaster.
+86). Fixed player spouse vanishing if the player left a faction.
+87). Fixed a castle scene during sieges. (@Black_Kangaroo)
+88). Fixed a Arab town battle scene (while approaching the ladders the screen would turn blueish, and sometimes soldiers would get stuck on the left ladder). (@Black_Kangaroo)
 
 
 
@@ -241,8 +473,6 @@ v3.3 (Requires a new game)
 
 
 
-
-
 v3.2 (Requires a new game)
 1). Fixed a debug message showing up when besiegers initiated their assault on a fief.
 2). Removed the option to change a lord's culture and equipment. It will now only appear if cheat mode is on.
@@ -268,8 +498,6 @@ v3.2 (Requires a new game)
 22). Fixed two handed axes being the most widespread weapon in the shops. Other two handed weapons will appear as well (some polearms that hardly appeared too).
 23). Fixed issues related to random lords when the player started as king of a Italian culture faction.
 24). Fixed player being "framed" for a king's assassination everytime that happened.
-
-
 
 
 
@@ -315,7 +543,6 @@ You still need to be of the same level as the troop you want to enlist (so senio
 33). New game: Fixed all noble starts receiving king start item modifiers (e.g. player vassal getting champion horses). Now they receive items on their level.
 34). New game: Fixed Floris bank slots being overriden by new slots and causing the player to already have acres in fiefs in a new game.
 35). Fixed Byzantine tier 3 infantry having tier 5 armor while the tier 4 infantry had tier 4 armor.
-
 
 
 
@@ -378,7 +605,7 @@ Decapitation requirements (default):
   5. After all those variables are met the chance of decap is damage dealt divided by 2 (e.g. 50 damage = 25%)
   6. Heroes cannot be decapitated.
 Those variables can be changed in the new menu under camp > enhanced options
-  
+
 
 
 
@@ -409,7 +636,6 @@ v2.9
 24). Fixed Kingdom of Bohemia having pretenders and "Random End" NPC as lords when the player started as king of it. 
 25). Fixed looting bug that happened when the player party had skill in looting.
 26). Fixed mercenary payment notification appearing during freelancer and decreased the time it takes to renew contract to 14 days from 30.
-
 
 
 
@@ -494,7 +720,6 @@ The following bug reports were tested and turned out to be false:
 
 
 
-
 v2.6 (Requires a new game)
 1). Increased the maximum number of items that appear when viewing a troop's inventory when using the troop tree presentations.
 2). Fixed veteran and elite turcopoles not being assigned to horse archer category at game start.
@@ -548,10 +773,6 @@ The following bug reports were tested and turned out to be false:
 
 
 
-
-
-
-
 v2.5 
 1). Ransom for the player now is 300 gold coins per level if king, 150 if lord and 100 if commoner.
 2). Fixed siege ladder traffic jams.
@@ -569,8 +790,6 @@ v2.5
 14). Several helmets introduced in v2.1 were added to some troops. 
 15). Fixed formation order menu (F4) overlap problems.
 16). New Game: Fixed some units not always having a helmet.
-
-
 
 
 
@@ -599,8 +818,6 @@ The following bug reports were tested and turned out to be false:
 
 
 
-
-
 v2.3 (Requires a new game)
 1). Fixed desert bandits not having weapons.
 2). Fixed budget reports troop wages giving money to the player.
@@ -625,9 +842,6 @@ The following bug reports were tested and turned out to be false:
 
 
 
-
-
-
 v2.2 (Requires a new game)
 1). Fixed some crusader order armors, horses and shields (teutonic, hospitaller and templar) not appearing in shops when the fief's culture is one of them.
 2). Fixed CWE spears not having upstab and not appearing on the back of the user.
@@ -644,9 +858,6 @@ v2.2 (Requires a new game)
 13). Fixed player monarch not receiving troops at game start.
 14). Fixed player monarch fiefs having the "foraging party" culture at game start.
 15). Fixed player inability to leave the culture selection dialogue once a culture had been selected.
-
-
-
 
 
 
@@ -779,9 +990,6 @@ Desert Forest: no change
 
 
 
-
-
-
 v2.0 
 1). Reduced mongol bow power draw requirement to 3 from 6.
 2). Fixed bug where improvement built wouldn't be the one that the player selected and the party's engineering skill wouldn't be taken into account when calculating the build time. 
@@ -815,15 +1023,10 @@ v2.0
 
 
 
-
-
-
 v1.9.1 Hotfix (Requires new game)
 1). Fixed body sliding camera bug.
 2). Patched files with Brainy Bots.
 3). Changed the amount of XP the player gets from the arena master. It's now 30xp per enemy beaten.
-
-
 
 
 
@@ -865,12 +1068,6 @@ v1.9 (I didn't find any problems loading a existing save from 1.8. But it's bett
 34). Added kill count at the top left of the screen during battles.
 35). Implemented new improved death camera https://forums.taleworlds.com/index.php/topic,282550.0.html
 36). Player will always go visit a fief mounted (if he has a horse of course).
-
-
-
-
-
-
 
 
 
@@ -939,12 +1136,6 @@ All other combinations = Very aggressive
 
 
 
-
-
-
-
-
-
 v1.7 COLOR UPDATE (requires a new game)
 1). Removed some debug messages that showed up even if the cheatmenu was turned off.
 2). Fixed all bugs related to prisoner dialogues. Now they will properly have dialogue depending if they're commoners or lords.
@@ -991,8 +1182,6 @@ v1.7 COLOR UPDATE (requires a new game)
 
 
 
-
-
 v1.6 (requires a new game)
 1). Fixed/Improved a few scenes (most notably added a extra ladder to arab town siege scene).
 2). Nerfed horse archers and horse throwers.
@@ -1003,8 +1192,6 @@ v1.6 (requires a new game)
 7). Crusader parties are now more varied (e.g. euro crusaders, scandinavian crusaders, etc).
 8). In the previous versions, if the player selected anything other than 3 branches for their CTT troops, troops from the 3 branches still appeared as reinforcements. Since there was no way to select their stats and equipment, they stayed naked and weak. To fix that i added a half-assed fix that can be accessed under the reloaded menu under camp. If you selected anything other than 3 branches, go there and hit the option that reflect your choice. After that the troops from reinforcements as well as guards from fiefs scenes will be updated.
 9). Fixed incorrect name for veteran welsh mercenary bowman.
-
-
 
 
 
@@ -1103,23 +1290,13 @@ v1.2
 
 
 
+
 v1.1
 1). Fixed battle map speed.
 2). New game: Player will receive more food to account for troops if noble start selected.
 
 
 
+
 v1.0
 Initial release
-
-
-
-
-
-
-
-
-
-
-
-
