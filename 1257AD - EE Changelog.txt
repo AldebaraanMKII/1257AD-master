@@ -1,4 +1,4 @@
-[MOD] - 1257AD Enhanced Edition 
+[MOD] - 1257 AD Enhanced Edition 
 
 Taleworlds: https://forums.taleworlds.com/index.php?topic=379851
 Nexus: https://www.nexusmods.com/mbwarband/mods/6251
@@ -19,6 +19,26 @@ Current version: v3.10
 NOTES: 
 Things with the "New game:" prefix requires a new game to take effect.
 Things with the "Debug:" prefix requires a new game but can be activated/fixed by using the debug menu under camp.
+
+
+
+
+v3.11 "???"
+1). (New Game)(@Khanor#3713) Village connections optimized for six more factions.
+     - (The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.)
+2). (New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
+     Kingdom of Norway: Þorshofn moved east, Borgló and Véey moved southwest, Ragnhildarhólmr and Konungahella moved (even further) southeast.
+     Kingdom of Denmark: Varbiargh and Falkenbærgh moved south-southeast.
+3). (@Khanor#3713) Improved movement speed when travelling on water/Seas (water is now the fastest terrain by a small margin, but coasts/embarking is still slow, which makes sense.)
+     - Land travel is still a better choice when providing a more direct route to the destination, however.
+4). (@Khanor#3713) Fixed a misspelled lord name (both in module_troops.py and troops.csv.)
+5). (@Khanor#3713) A large amount of dialogue and text string language, spelling and punctuation improvements over several different files.
+     - Some examples being certain manor dialogues and the fief exchange dialogues.
+6). (@Khanor#3713) Game menu punctuation and spelling improvements for most of the options seen when starting a new game.
+7). (@Khanor#3713) Improved the old changelog with some corrections and formatting improvements (e.g. standardized spacing), and some of the newest info from the Nexusmods changelog.
+8). (@Khanor#3713) Moved and improved the readability and placement of the old text for displaying the mod's title and the original AD 1257 version the mod is built upon.
+9). (@Khanor#3713) Added Enhanced Edition version to the old revision string instead, to be displayed prominently on the main menu from here on out.
+10). (@Khanor#3713) Updated the README.md file with basic instructions and information for users and devs.
 
 
 
@@ -46,7 +66,7 @@ v3.10 (Requires a new game)
 20). Added option to disband a patrol (if the player is king or owner of the fief the patrol is patrolling) by talking to it directly.
 21). Fixed player right to rule not being taken into account when a lord of a defeated faction decided to join a new one.
 22). Reworked lord defection system. Before only relations and the number of walled fiefs divided by number of lords were taken into consideration. Now it will consider culture, religion and king renown.
-23). (@Black_Kangaroo#7894) fixed jerusalem king armor visual bugs.
+23). (@Black_Kangaroo#7894) Fixed jerusalem king armor visual bugs.
 24). Fixed some Italian lords not having lances.
 25). (@the_duke#8749) Added 4 new cultures and troop trees: English, French, Hungarian and Polish.
 26). Fixed noble prisoner execution message displaying anything but the prisoner name.
@@ -60,6 +80,59 @@ v3.10 (Requires a new game)
 bug report notes:
 1). No relationship is gained when you send a gift to a lord or king (I sent beer)
 A: The chance is random. There's a 50% chance that the NPC will accept the gift.
+
+
+
+
+v3.9.2 "Swift Cogs" (3.9 definitive edition)
+(Save game compatible with other 3.9-, 3.8- and maybe some earlier versions, but new village connections and geographical changes will need a new game to take effect.)
+Anno Domini 1257, Enhanced Edition version 3.9.2 is based on 3.9.1, but comes with many polished 3.10 and 3.11+ features on top for as smooth and bug free an experience as possible. As such this patch is a good choice for continuing old saves, or prioritizing a balance of polish and features over just all the very newest features.
+
+1). (3.10 feature) Increased relation gain with king after capturing a fief that player and NPCs have to 5 from 3.
+2). (3.10 feature) Added option to choose garrison size at game start.
+3). (3.10 feature) Removed javelins from mongol skirmishers.
+4). (3.10 feature) Added confirmation menu to outpost demolish so that player can rethink the choice.
+5). (3.10 feature) Added dialogue for player to ask Pope if there's any crusade active at the moment. 
+6). (3.10 feature) Removed relation loss with a leader when someone loses a battle.
+7). (3.10 feature) Fixed player not knowing his faction culture and thus being unable to change a fief's culture to it when starting as king, prince or vassal.
+8). (3.10 feature) Fixed duplicated dialogue after escorting a lady.
+9). (3.10 feature) Fixed tavernkeeper not informing the player of the correct value that a bounty had when finishing the quest.
+10). (3.10 feature) Fixed second troop tree presentation.
+11). (3.10 feature) Removed stable horse train for the time being.
+12). (3.10 feature) Any faction that has mongol culture will spawn mongol camps around their fiefs. Make sure the mongol camp limit (camp menu option) is high enough if you have several mongol factions though.
+13). (3.10 feature) Increased renown of the more well known kings to 1500 from 1200.
+14). (3.10 feature) Fixed being able to give fiefs to normal troops.
+15). (3.10 feature) Reworked prison break system. Minimum amount of prisoners required for it to trigger is 100 and each 10 increases chance of escape by 1%. If the settlement has a prisoner tower built it decreases the chance by 3x. This should make huge prisoner breaks much less frequent (but breaks overall more frequent).
+16). (3.10 feature) Fixed patrols not being disbanded when ordered to through the constable. 
+17). (3.10 feature) Increased renown gained from contructing a building in a manor to 10 from 2.
+18). (3.10 feature) Decreased right to rule gained from contructing a important building in a manor to 1 from 2.
+19). (3.10 feature) Increased number of random books in manor book seller to 3 from 1.
+20). (3.10 feature) Added option to disband a patrol (if the player is king or owner of the fief the patrol is patrolling) by talking to it directly.
+21). (3.10 feature) Fixed player right to rule not being taken into account when a lord of a defeated faction decided to join a new one.
+22). (3.10 feature) Reworked lord defection system. Before only relations and the number of walled fiefs divided by number of lords were taken into consideration. Now it will consider culture, religion and king renown.
+23). (3.10 feature)(@Black_Kangaroo#7894) Fixed jerusalem king armor visual bugs.
+24). (3.10 feature) Fixed some Italian lords not having lances.
+25). (3.10 feature) Fixed noble prisoner execution message displaying anything but the prisoner name.
+26). (3.10 feature) Fixed sea raider captain weapon proficiency discrepancy when compared to sea raider veterans.
+27). (3.10 feature) Added option to choose garrison size at game start.
+28). (3.10 feature)(@mamacrooo#5615) Added optional faces under Optional\Culturedguy's female character overhaul. Read the installation intructions.txt file on how to install it.
+29). (3.10 feature) Fixed player receiving compensation money for capturing a fief even when he decided to rebel.
+30). (3.10 feature) Fixed player compensation money bug.
+31). (3.11+ feature)(New Game)(@Khanor#3713) Village connections optimized for six more factions.
+     - (The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.)
+32). (3.11+ feature)(New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
+     Kingdom of Norway: Þorshofn moved east, Borgló and Véey moved southwest, Ragnhildarhólmr and Konungahella moved (even further) southeast.
+     Kingdom of Denmark: Varbiargh and Falkenbærgh moved south-southeast.
+33). (3.11+ feature)(@Khanor#3713) Improved movement speed when travelling on water/Seas (water is now the fastest terrain by a small margin, but coasts/embarking is still slow, which makes sense.)
+     - Land travel is still a better choice when providing a more direct route to the destination, however.
+34). (3.11+ feature)(@Khanor#3713) Fixed a misspelled lord name (both in module_troops.py and troops.csv.)
+35). (3.11+ feature)(@Khanor#3713) A large amount of dialogue and text string language, spelling and punctuation improvements over several different files.
+     - Some examples being certain manor dialogues and the fief exchange dialogues.
+36). (3.11+ feature)(@Khanor#3713) Game menu punctuation and spelling improvements for most of the options seen when starting a new game.
+37). (3.11+ feature)(@Khanor#3713) Improved the old changelog with some corrections and formatting improvements (e.g. standardized spacing), and some of the newest info from the Nexusmods changelog.
+38). (3.11+ feature)(@Khanor#3713) Moved and improved the readability and placement of the old text for displaying the mod's title and the original AD 1257 version the mod is built upon.
+39). (3.11+ feature)(@Khanor#3713) Added Enhanced Edition version to the old revision string instead, to be displayed prominently on the main menu from here on out.
+40). (3.11+ feature)(@Khanor#3713) Updated the README.md file with basic instructions and information for users and devs.
 
 
 
@@ -111,8 +184,8 @@ v3.9.1 (Requires a new game)
 44). Made changes to how much money the player receives as compensation for being denied a fief he conquered. New value is (player renown * 8) + (player relation with king * 20)(negative relations wield -20 per point)(was always 900 before).
 
 45). (New Game)(@Khanor#3713) Optimized village connections to castles/towns in the Kingdom of Norway, the Kingdom of Denmark, the Kingdom of England, the Kingdom of France, the Kingdom of Portugal, the Crown of Aragon, the Emirate of Granada, the Marinid Dynasty and the Polish Principalities.
-     Now even towns should generally pick up villages in their area, and the manual assignments pre-loop has been expanded with a description. Manual comments for which castles and towns are being handed village connections have also been added.
-     These village assignment improvements also include the outcome of a democratic Discord vote for Angoulême castle and Chinon castle's village connections (thanks for voting!)
+     - Now even towns should generally pick up villages in their area, and the manual assignments pre-loop has been expanded with a description. Manual comments for which castles and towns are being handed village connections have also been added.
+     - These village assignment improvements also include the outcome of a democratic Discord vote for Angoulême castle and Chinon castle's village connections (thanks for voting!)
 46). (New Game)(@Khanor#3713) Moved Stafangr, Ragnhildarhólmr and Konungahella closer to their real life locations (e.g. Ragnhildarhólmr has been moved significantly southwards.) Stafangr has also been moved onto land properly now.
 47). (@Khanor#3713) Fixed the Village Elders, Mayors, etc. gendering the player incorrectly for real. They will now take into account the gender of those involved in the conversation properly.
 48). (@Khanor#3713) In addition to player misgendering, fixed a dialogue speaking about an NPC as Marshall, which led to a realm's Marshall being misgendered in dialogue about them being too cautious.

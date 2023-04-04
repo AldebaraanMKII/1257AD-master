@@ -44,6 +44,7 @@ presentations = [
         (overlay_set_color, "$g_presentation_credits_obj_1", 0x000000),
         (overlay_set_color, "$g_presentation_credits_obj_2", 0x000000),
 
+        ### From the TaleWorlds forums on positions, allegedly: y goes from 0 (bottom of screen) to 750 (top of screen), and x goes from 0 (left) to 1000 (right), so a 3:4 ratio.
         (position_set_x, pos1, 5),
         (position_set_y, pos1, 720),
         (overlay_set_position, "$g_presentation_credits_obj_1", pos1),
