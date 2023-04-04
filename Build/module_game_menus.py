@@ -39,9 +39,15 @@ from module_constants import *
 
 game_menus = [ #
   ("start_game_0",menu_text_color(0xFF000000)|mnf_disable_all_keys,
+<<<<<<< Updated upstream
     "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition.) This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose wisely, as you will not be able to change it after you start the game!",
+=======
+    "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition)({s22}). This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose whisely, as you will not be able to change it after you started the game!",
+>>>>>>> Stashed changes
     "none",
-    [],
+    [
+    (str_store_string, s22, "str_mod_version"), ############### NEW v3.11 - 
+    ],
     [
     #tom
      ("continue_feudal",[], "Start a new game, with the lance recruitment system.",
@@ -3712,7 +3718,8 @@ game_menus = [ #
   ),
 
   ("reports",0,
-   "Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
+   # "Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
+   "Mod Version: {s22}^Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
    "none",
    [(call_script, "script_game_get_party_companion_limit"),
     (assign, ":party_size_limit", reg0),
@@ -3720,6 +3727,7 @@ game_menus = [ #
     (assign, reg5, ":renown"),
     (assign, reg6, "$player_honor"),
     (assign, reg7, ":party_size_limit"),
+    (str_store_string, s22, "str_mod_version"), ############### NEW v3.11 - 
     #(call_script, "script_get_player_party_morale_values"),
     #(party_set_morale, "p_main_party", reg0),
     (party_get_morale, reg8, "p_main_party"),
@@ -14871,22 +14879,44 @@ game_menus = [ #
              (try_begin),
                 (store_current_hours, ":hours"),
                 (store_sub, ":hours_since_last_attempt", ":hours", "$g_last_assassination_attempt_time"),
-                (gt, ":hours_since_last_attempt", 168),
+############################## NEW v3.11 - 
+                (store_random_in_range, ":random_time", 120, 216),  #### 5 to 9 days
+                (gt, ":hours_since_last_attempt", ":random_time"),
                 (try_for_range, ":lord", active_npcs_begin, active_npcs_end),
                     (troop_slot_eq, ":lord", slot_troop_is_alive, 1),  ## he's alive/active
-                    (troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_debauched),
+                    (try_begin),
+                        (troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_debauched),
+                        (assign, ":negative_relation", -20),
+                    (else_try),
+                        (troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_martial),
+                        (assign, ":negative_relation", -60),
+                    (else_try),
+                        (troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_quarrelsome),
+                        (assign, ":negative_relation", -40),
+                    (else_try),
+                        (this_or_next|troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_cunning),
+                        (troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_selfrighteous),
+                        (assign, ":negative_relation", -30),
+                    (else_try),
+                        (troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_upstanding),
+                        (assign, ":negative_relation", -75),
+                    (else_try),
+                        (troop_slot_eq, ":lord", slot_lord_reputation_type, lrep_goodnatured),
+                        (assign, ":negative_relation", -90),
+                    (try_end),
                     (troop_get_slot, ":led_party", ":lord", slot_troop_leaded_party),
                     (party_is_active, ":led_party"),
-                    (party_get_attached_to, ":led_party_attached", ":led_party"),
-                    (eq, ":led_party_attached", "$g_encountered_party"),
+                    # (party_get_attached_to, ":led_party_attached", ":led_party"),
+                    # (eq, ":led_party_attached", "$g_encountered_party"),
                     (call_script, "script_troop_get_relation_with_troop", "trp_player", ":lord"),
-                    (lt, reg0, -20),
+                    (le, reg0, ":negative_relation"),
                     (assign, "$g_last_assassination_attempt_time", ":hours"),
 #                    (assign, "$g_last_assassination_attempt_location", "$g_encountered_party"),
 #                    (assign, "$g_last_assassination_attempt_perpetrator", ":lord"),
 
                     (troop_set_slot, "trp_hired_assassin", slot_troop_cur_center, "$g_encountered_party"),
                 (try_end),
+############################################# 
              (try_end),
 
              (try_begin),
@@ -20233,9 +20263,11 @@ game_menus = [ #
     (faction_get_slot, ":issue", "$players_kingdom", slot_faction_political_issue),
     (try_begin),
         (eq, ":issue", 1),
+        (str_clear, s11),   ############### NEW v3.11 - 
         (str_store_string, s11, "str_the_marshalship"),
         (str_store_string, s12, "@^^Note that so long as you remain marshal, the lords of the realm will be expecting you to lead them on campaign. So, if you are awaiting a feast, either for a wedding or for other purposes, you may wish to resign the marshalship by speaking to your liege."),
     (else_try),
+        (str_clear, s11),   ############### NEW v3.11 - 
         (str_clear, s12),
         (str_store_party_name, s11, ":issue"),
     (try_end),

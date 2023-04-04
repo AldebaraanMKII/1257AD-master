@@ -45,22 +45,69 @@ party_templates = [
 ##  ("vaegir_nobleman", "Vaegir Nobleman",icon_vaegir_knight|carries_goods(10)|pf_quest_party,0,fac_commoners,merchant_personality,[(trp_nobleman,1,1),(trp_vaegir_knight,2,6),(trp_vaegir_horseman,4,12)]),
 ##  ("swadian_nobleman", "Swadian Nobleman",icon_gray_knight|carries_goods(10)|pf_quest_party,0,fac_commoners,merchant_personality,[(trp_nobleman,1,1),(trp_swadian_knight,2,6),(trp_swadian_man_at_arms,4,12)]),
 # Ryan BEGIN
-  ("looters", "Looters",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_looter,15,50)]),
   #("looters", "Roving Robber Knight Band",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_mercenary_knight, 1, 2), (trp_looter,5,18)]),
 # Ryan END
+  #("yotvingians",   "Jotvingiai",   icon_axeman|carries_goods(2),0, fac_kingdom_35, soldier_personality, [(trp_nordic_veteran_swordsman,90,100)]),
+  
+
+########################### BANDITS
   ("manhunters", "Manhunters",icon_gray_knight,0,fac_manhunters,soldier_personality,[(trp_manhunter,9,40)]),
+  ("looters", "Looters",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_looter,15,50)]),
+  
+  ("peasant_rebels_euro", "Peasant Rebels", icon_peasant,0,fac_peasant_rebels,soldier_personality,[]),  
+  
+  ("steppe_bandits", "Steppe Bandits",icon_khergit|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_steppe_bandit,15,58)]),
+  ("taiga_bandits", "Taiga Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_taiga_bandit,15,58)]),
+  ("desert_bandits", "Desert Bandits",icon_vaegir_knight|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_desert_bandit,15,58)]),
+  ("forest_bandits", "Forest Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_forest_bandit,15,52)]),
+  ("mountain_bandits", "Mountain Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_mountain_bandit,15,60)]),
+  
+  ("sea_raiders", "Sea Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sea_raider,18,40),(trp_sea_raider_veteran,5,15),(trp_sea_raider_captain,1,1)]),
+  ("robber_knights", "Roving Robber Knight Band",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_euro_horse_4, 1, 5), (trp_raider,5,20)]),
+
+  ("deserters", "Deserters",icon_vaegir_knight|carries_goods(3),0,fac_deserters,bandit_personality,[]), 
+  
+  ("fugitive_serfs", "Fugitive Serfs",icon_peasant|carries_goods(8)|pf_default_behavior,0,fac_peasant_rebels,merchant_personality,[(trp_farmer,6,30), (trp_peasant_woman,4,25)]),
+  ("rogue_mercenaries", "Rogue Mercenary Company", icon_gray_knight|carries_goods(3),0,fac_outlaws,bandit_personality,[]),
+  ("rebels", "Rebels", icon_gray_knight,0,fac_peasant_rebels,soldier_personality,[]),
+  ############# NEW v2.1 - escaped prisoner template
+  ("escaped_prisoners_party", "Escaped Prisoners", icon_gray_knight|carries_goods(4), 0, fac_escaped_prisoners_faction, bandit_personality, []),
+  
+  ("mercenary_warband", "Mercenary Warband", icon_gray_knight|carries_goods(3),0,fac_outlaws,bandit_personality,[]), ###### NEW v3.9.1 - 
+
+########################### 
+
+########################### Kingdom Parties
+  ("kingdom_hero_party", "War Party",icon_flagbearer_a|pf_show_faction|pf_default_behavior,0,fac_commoners,soldier_personality,[]),
+  
+  ("forager_party", "Foraging Party",icon_gray_knight|carries_goods(5)|pf_show_faction,0,fac_commoners,merchant_personality,[]),
+  ("scout_party", "Scouts",icon_gray_knight|carries_goods(1)|pf_show_faction,0,fac_commoners,bandit_personality,[]),
+  ("patrol_party", "Patrol",icon_gray_knight|carries_goods(2)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
+  ("messenger_party", "Messenger",icon_gray_knight|pf_show_faction,0,fac_commoners,merchant_personality,[]),
+  ("raider_party", "Raiders",icon_gray_knight|carries_goods(16)|pf_quest_party,0,fac_commoners,bandit_personality,[]),
+  ("raider_captives", "Raider Captives",0,0,fac_commoners,0,[(trp_peasant_woman,6,30,pmf_is_prisoner)]),
+  ("kingdom_caravan_party", "Caravan",icon_mule|carries_goods(45)|pf_show_faction,0,fac_commoners,merchant_personality,[(trp_caravan_master,1,1),(trp_merc_euro_horse,1,8)]),
+  ("prisoner_train_party", "Prisoner Train",icon_gray_knight|carries_goods(5)|pf_show_faction,0,fac_commoners,merchant_personality,[]),
+  
+  ("war_party", "War Party",icon_gray_knight|carries_goods(4)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
+  ("mercenary_company", "Mercenary Company",icon_gray_knight|carries_goods(3)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
+########################### 
+
+
+########################### Parties Affiliated with any faction 
+  ("merc_party", "Angry band of alchoholics", icon_gray_knight|pf_show_faction, 0 , fac_commoners, soldier_personality,[]),
+
   ("curonians",     "Curonians",     icon_axeman|carries_goods(2),0, fac_kingdom_35, soldier_personality, [(trp_balt_skirmisher,7,10),(trp_balt_footman,7,10),(trp_balt_jav,7,10),(trp_balt_veteran_jav,1,4),(trp_balt_billman,7,10),(trp_balt_spearman,7,10)]),
   ("prussians",     "Prussians",      icon_axeman|carries_goods(2),0, fac_kingdom_34, soldier_personality, [(trp_balt_skirmisher,7,10),(trp_balt_footman,7,10),(trp_balt_jav,7,10),(trp_balt_veteran_jav,1,4),(trp_balt_billman,7,10),(trp_balt_spearman,7,10)]),
   ("samogitians",   "Samogitians",  icon_axeman|carries_goods(2),0, fac_kingdom_36, soldier_personality, [(trp_balt_skirmisher,7,10),(trp_balt_footman,7,10),(trp_balt_jav,7,10),(trp_balt_veteran_jav,1,4),(trp_balt_billman,7,10),(trp_balt_spearman,7,10)]),
   ("yotvingians",   "Yotvingians",   icon_axeman|carries_goods(2),0, fac_kingdom_33, soldier_personality, [(trp_balt_skirmisher,7,10),(trp_balt_footman,7,10),(trp_balt_jav,7,10),(trp_balt_veteran_jav,1,4),(trp_balt_billman,7,10),(trp_balt_spearman,7,10)]),
-  #("yotvingians",   "Jotvingiai",   icon_axeman|carries_goods(2),0, fac_kingdom_35, soldier_personality, [(trp_nordic_veteran_swordsman,90,100)]), 
+  
   ("welsh",   "Welsh",   icon_axeman|carries_goods(2),0, fac_kingdom_37, soldier_personality, [(trp_merc_welsh_bowman,24,31)]),
+  
   ("guelphs", "Guelphs", icon_gray_knight,0, fac_kingdom_40, soldier_personality, [(trp_italian_knight,1,8), (trp_italian_billman,15,30), (trp_italian_veteran_crossbowman,10,15), (trp_italian_veteran_spearman,10,15), (trp_italian_light_cavalry,10, 15)]),
   ("ghibellines", "Ghibellines", icon_gray_knight,0, fac_kingdom_41, soldier_personality, [(trp_italian_knight,1,4), (trp_merc_euro_guisarmer,10,15), (trp_merc_euro_range,10,15), (trp_merc_euro_spearman,10,15), (trp_italian_light_cavalry,10, 15)]),
-  ("crusaders", "Crusaders", icon_crusaders,0, fac_crusade, soldier_personality, [(trp_euro_horse_4, 10, 25), (trp_euro_spearman_2, 150, 200), (trp_merc_euro_range, 50, 100), (trp_merc_euro_guisarmer, 50, 100), (trp_merc_euro_spearman, 50, 100), (trp_merc_euro_horse, 25, 50)]),
-  ("merc_party", "Angry band of alchoholics", icon_gray_knight|pf_show_faction, 0 , fac_commoners, soldier_personality,[]),
   
-
+  ("crusaders", "Crusaders", icon_crusaders,0, fac_crusade, soldier_personality, [(trp_euro_horse_4, 10, 25), (trp_euro_spearman_2, 150, 200), (trp_merc_euro_range, 50, 100), (trp_merc_euro_guisarmer, 50, 100), (trp_merc_euro_spearman, 50, 100), (trp_merc_euro_horse, 25, 50)]),
 ########################### NEW CRUSADER VARIANTS
   ("crusader_raiders_iberian", "Iberian Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_iberian_knight,1,4), (trp_iberian_light_cavalry,5, 10), (trp_iberian_town_footman_1, 10, 15), (trp_iberian_veteran_spearman, 5, 8), (trp_iberian_veteran_crossbowman, 5, 15), (trp_iberian_billman, 5,10),]),
   ("crusader_raiders_scandinavian", "Scandinavian Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_nordic_knight,1,4), (trp_nordic_light_cavalry,5, 10), (trp_nordic_spearman, 10, 15), (trp_nordic_veteran_spearman, 5, 8), (trp_nordic_veteran_crossbowman, 5, 15), (trp_nordic_billman, 5,10),]),
@@ -76,19 +123,15 @@ party_templates = [
   ("crusader_raiders_hospitaller", "Hospitaller Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_hospitaller_knight,1,4), (trp_hospitaller_half_brother,5, 10), (trp_hospitaller_knight_dismounted, 2, 4), (trp_hospitaller_half_brother_dismounted, 4, 6), (trp_hospitaller_spearman_1, 10, 15), (trp_hospitaller_crossbowman_1, 15,20), (trp_hospitaller_spearman_2, 5, 10), (trp_hospitaller_crossbowman_1, 5,10),]),
     
   ("crusader_raiders_saint_lazarus", "Saint Lazarus Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_saint_lazarus_knight_dismounted,1,4), (trp_saint_lazarus_half_brother,5, 10), (trp_saint_lazarus_knight_dismounted, 2, 4), (trp_saint_lazarus_half_brother_dismounted, 4, 8), (trp_crusader_turkopole, 15, 20), (trp_crusader_turkopole_veteran, 5,10),]),
- 
   ("crusader_raiders_santiago", "Santiago Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_santiago_knight_dismounted,1,4), (trp_santiago_half_brother,5, 10), (trp_santiago_knight_dismounted, 2, 4), (trp_santiago_half_brother_dismounted, 4, 8), (trp_crusader_turkopole, 15, 20), (trp_crusader_turkopole_veteran, 5,10),]),
- 
   ("crusader_raiders_calatrava", "Calatrava Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_calatrava_knight_dismounted,1,4), (trp_calatrava_half_brother,5, 10), (trp_calatrava_knight_dismounted, 2, 4), (trp_calatrava_half_brother_dismounted, 4, 8), (trp_crusader_turkopole, 15, 20), (trp_crusader_turkopole_veteran, 5,10),]),
-  
   ("crusader_raiders_saint_thomas", "Saint Thomas Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_23, soldier_personality,[(trp_saint_thomas_knight_dismounted,1,4), (trp_saint_thomas_half_brother,5, 10), (trp_saint_thomas_knight_dismounted, 2, 4), (trp_saint_thomas_half_brother_dismounted, 4, 8), (trp_crusader_turkopole, 15, 20), (trp_crusader_turkopole_veteran, 5,10),]),
-  
-###########################
-  
-  
+
   ("jihadist_raiders", "Jihadists", icon_khergit|pf_show_faction, 0 , fac_kingdom_25, soldier_personality,[(trp_bedouin_javelin_1,10,20),(trp_halqa_archer,10,15),(trp_bedouin_cavalry_2,10,15),(trp_mamluk_cavalry_2,5,8),(trp_halqa_cavalry_2,5,10)]),
   ("teutonic_raiders", "Crusaders", icon_crusaders|pf_show_faction, 0 , fac_kingdom_1, soldier_personality,[(trp_teu_horse_3, 1, 3), (trp_teu_town_2_2,2,6),(trp_teu_ger_1,3,10),(trp_teu_ger_2_1,5,10),(trp_teu_town_2_1,10,16),(trp_teu_town_3_2,5,8) ]),
-  #villages
+###########################
+########################### 
+#villages
   #("empty", "Fields", pf_manor,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]), #this should be outside the range of a regular manor?
   ("manor", "Manor", pf_manor,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]),
   ("farm", "Farm", pf_manor,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]),
@@ -115,7 +158,6 @@ party_templates = [
   #("blacksmith", "Blacksmith Village", pf_manor ,0, fac_commoners, soldier_personality, []),
  # ("trading_village", "Trading Village", pf_manor ,0, fac_commoners, soldier_personality, []),
   
-  ("peasant_rebels_euro", "Peasant Rebels", icon_peasant,0,fac_peasant_rebels,soldier_personality,[]),
   # ("peasant_rebels_euro", "Peasant Rebels", icon_peasant,0,fac_peasant_rebels,soldier_personality,[(trp_rebel_leader,3,9),(trp_euro_village_recruit, 225, 340),(trp_euro_town_recruit, 75, 112)]),
   # ("peasant_rebels_scot", "Peasant Rebels", icon_peasant,0,fac_peasant_rebels,soldier_personality,[(trp_rebel_leader,3,9),(trp_scottish_village_recruit, 225, 340),(trp_euro_town_recruit, 75, 112)]), 
   # ("peasant_rebels_eastern", "Peasant Rebels", icon_peasant,0,fac_peasant_rebels,soldier_personality,[(trp_rebel_leader,3,9),(trp_rus_vil_1, 225, 340),(trp_rus_town_1, 150, 112)]),
@@ -128,17 +170,8 @@ party_templates = [
     
 ##  ("peasant", "Peasant",icon_peasant,0,fac_commoners,merchant_personality,[(trp_farmer,1,6),(trp_peasant_woman,0,7)]),
 
+  ("runaway_serfs", "Runaway Serfs",icon_peasant|carries_goods(8)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_farmer,6,7), (trp_peasant_woman,3,3)]),
 #  ("black_khergit_raiders", "Black Khergit Raiders",icon_khergit_horseman_b|carries_goods(2),0,fac_black_khergits,bandit_personality,[(trp_black_khergit_guard,1,10),(trp_black_khergit_horseman,5,5)]),
-  ("steppe_bandits", "Steppe Bandits",icon_khergit|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_steppe_bandit,15,58)]),
-  ("taiga_bandits", "Taiga Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_taiga_bandit,15,58)]),
-  ("desert_bandits", "Desert Bandits",icon_vaegir_knight|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_desert_bandit,15,58)]),
-  ("forest_bandits", "Forest Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_forest_bandit,15,52)]),
-  ("mountain_bandits", "Mountain Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_mountain_bandit,15,60)]),
-  ("sea_raiders", "Sea Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sea_raider,18,40),(trp_sea_raider_veteran,5,15),(trp_sea_raider_captain,1,1)]),
-  ("robber_knights", "Roving Robber Knight Band",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_euro_horse_4, 1, 5), (trp_raider,5,20)]),
-
-  ("deserters", "Deserters",icon_vaegir_knight|carries_goods(3),0,fac_deserters,bandit_personality,[]),
-    
   ("merchant_caravan", "Merchant Caravan",icon_gray_knight|carries_goods(20)|pf_auto_remove_in_town|pf_quest_party,0,fac_commoners,escorted_merchant_personality,[(trp_caravan_master,1,1),(trp_merc_euro_horse,5,15)]),
   ("troublesome_bandits", "Troublesome Bandits",icon_axeman|carries_goods(9)|pf_quest_party,0,fac_outlaws,bandit_personality,[(trp_bandit,14,55)]),
   ("bandits_awaiting_ransom", "Bandits Awaiting Ransom",icon_axeman|carries_goods(9)|pf_auto_remove_in_town|pf_quest_party,0,fac_neutral,bandit_personality,[(trp_bandit,24,58),(trp_kidnapped_girl,1,1,pmf_is_prisoner)]),
@@ -150,7 +183,6 @@ party_templates = [
 ##  ("dark_hunters", "Dark Hunters",icon_gray_knight,0,fac_dark_knights,soldier_personality,[(trp_dark_knight,4,42),(trp_dark_hunter,13,25)]),
 
   ("spy_partners", "Unremarkable Travellers", icon_gray_knight|carries_goods(3)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_spy_partner,1,1),(trp_merc_euro_horse,5,11)]),
-  ("runaway_serfs", "Runaway Serfs",icon_peasant|carries_goods(8)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_farmer,6,7), (trp_peasant_woman,3,3)]),
   ("spy", "Ordinary Townsman", icon_gray_knight|carries_goods(3)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_spy,1,1)]),
   ("sacrificed_messenger", "Sacrificed Messenger", icon_gray_knight|carries_goods(3)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[]),
 ##  ("conspirator", "Conspirators", icon_gray_knight|carries_goods(8)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_conspirator,3,4)]),
@@ -159,16 +191,7 @@ party_templates = [
 ##  ("noble_refugees", "Noble Refugees", icon_gray_knight|carries_goods(12)|pf_quest_party,0,fac_noble_refugees,merchant_personality,[(trp_noble_refugee,3,5),(trp_noble_refugee_woman,5,7)]),
 
 
-  ("forager_party", "Foraging Party",icon_gray_knight|carries_goods(5)|pf_show_faction,0,fac_commoners,merchant_personality,[]),
-  ("scout_party", "Scouts",icon_gray_knight|carries_goods(1)|pf_show_faction,0,fac_commoners,bandit_personality,[]),
-  ("patrol_party", "Patrol",icon_gray_knight|carries_goods(2)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
-#  ("war_party", "War Party",icon_gray_knight|carries_goods(3),0,fac_commoners,soldier_personality,[]),
-  ("messenger_party", "Messenger",icon_gray_knight|pf_show_faction,0,fac_commoners,merchant_personality,[]),
-  ("raider_party", "Raiders",icon_gray_knight|carries_goods(16)|pf_quest_party,0,fac_commoners,bandit_personality,[]),
-  ("raider_captives", "Raider Captives",0,0,fac_commoners,0,[(trp_peasant_woman,6,30,pmf_is_prisoner)]),
-  ("kingdom_caravan_party", "Caravan",icon_mule|carries_goods(45)|pf_show_faction,0,fac_commoners,merchant_personality,[(trp_caravan_master,1,1),(trp_merc_euro_horse,1,8)]),
-  ("prisoner_train_party", "Prisoner Train",icon_gray_knight|carries_goods(5)|pf_show_faction,0,fac_commoners,merchant_personality,[]),
-  ("default_prisoners", "Default Prisoners",0,0,fac_commoners,0,[(trp_bandit,5,10,pmf_is_prisoner)]),
+("default_prisoners", "Default Prisoners",0,0,fac_commoners,0,[(trp_bandit,5,10,pmf_is_prisoner)]),
 
   ("routed_warriors", "Routed Enemies",icon_vaegir_knight,0,fac_commoners,soldier_personality,[]),
 
@@ -176,9 +199,6 @@ party_templates = [
 # Caravans
   ("center_reinforcements", "Reinforcements",icon_axeman|carries_goods(16),0,fac_commoners,soldier_personality,[(trp_merc_euro_spearman,9,50)]), #tom - was town_recruit
   
-  ("kingdom_hero_party", "War Party",icon_flagbearer_a|pf_show_faction|pf_default_behavior,0,fac_commoners,soldier_personality,[]),
-  
-
 
 # Reinforcements
 #  ("default_reinforcements_a", "default_reinforcements_a",0,0,fac_commoners,0,[(trp_caravan_guard,1,10),(trp_watchman,3,16),(trp_farmer,9,24)]),
@@ -540,12 +560,6 @@ party_templates = [
   ("company_hussar_cavalry_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hussar_cavalry,12,15)]), 
 ############### 
 ######################### NEW PARTIES #####################################  
-  ("war_party", "War Party",icon_gray_knight|carries_goods(4)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
-  ("mercenary_company", "Mercenary Company",icon_gray_knight|carries_goods(3)|pf_show_faction,0,fac_commoners,soldier_personality,[]),
-
-  ("fugitive_serfs", "Fugitive Serfs",icon_peasant|carries_goods(8)|pf_default_behavior,0,fac_peasant_rebels,merchant_personality,[(trp_farmer,6,30), (trp_peasant_woman,4,25)]),
-  ("rogue_mercenaries", "Rogue Mercenary Company", icon_gray_knight|carries_goods(3),0,fac_outlaws,bandit_personality,[]),
-  ("rebels", "Rebels", icon_gray_knight,0,fac_peasant_rebels,soldier_personality,[]),
 ###########################################################################  
   
 
@@ -572,12 +586,6 @@ party_templates = [
 
   ("send_reinf_to_fief_party", "Sent Troop Party", icon_gray_knight, 0, fac_neutral, soldier_personality, []),
   
-  ############# NEW v2.1 - escaped prisoner template
-  ("escaped_prisoners_party", "Escaped Prisoners", icon_gray_knight|carries_goods(4), 0, fac_escaped_prisoners_faction, bandit_personality, []),
-  
-  # ("mercenary_warband", "Mercenary Warband", icon_gray_knight,0,fac_outlaws,bandit_personality,[]),
-  ("mercenary_warband", "Mercenary Warband", icon_gray_knight|carries_goods(3),0,fac_outlaws,bandit_personality,[]), ###### NEW v3.9.1 - 
-
   
 ############################ NEW v3.5 - moved those here because IDs are a pain to deal with
   # ("manor", "Manor", icon_manor_icon|pf_label_small|pf_is_static|pf_hide_defenders,0, fac_commoners, bandit_personality, [(trp_manor_master, 1, 2)]),

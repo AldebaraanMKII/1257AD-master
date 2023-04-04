@@ -6735,6 +6735,12 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("culture_29_adjective",     "Crusader"),
 ("culture_30_adjective",     "Cuman"),
 ##############
+############## NEW v3.10
+("culture_31_adjective",     "English"),
+("culture_32_adjective",     "French"),
+("culture_33_adjective",     "Hungarian"),
+("culture_34_adjective",     "Polish"),
+##############
 ("culture_player_adjective", "Player Culture"),
 
 
@@ -9845,6 +9851,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("dplmc_hero_wpn_slot_no_metatype","No Preference"), #23
  
   ("dplmc_political_explanation_original_lord", "In this case, the fortress should go its original owner."),
+  
+  ("mod_version", "v3.11"),
 ###################################################################################
 # End Autoloot
 ###################################################################################

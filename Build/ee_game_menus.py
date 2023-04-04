@@ -9829,6 +9829,7 @@ game_menus = [
          (this_or_next|eq, ":party_template", "pt_mercenary_company"),
          (this_or_next|eq, ":party_template", "pt_mercenary_warband"),
          (this_or_next|eq, ":party_template", "pt_rogue_mercenaries"),
+         (this_or_next|eq, ":party_template", "pt_escaped_prisoners_party"), ############### NEW v3.11 - 
          (eq, ":party_template", "pt_rebels"),
 		   (remove_party, ":party"),
        (try_end),

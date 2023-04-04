@@ -5962,6 +5962,7 @@ simple_triggers = [
       (this_or_next | eq, ":party_template", "pt_crusader_raiders_saint_lazarus"),
       (this_or_next | eq, ":party_template", "pt_crusader_raiders_santiago"),
       (this_or_next | eq, ":party_template", "pt_crusader_raiders_calatrava"),
+      (this_or_next | eq, ":party_template", "pt_escaped_prisoners_party"), ############### NEW v3.11 - 
       (this_or_next | eq, ":party_template", "pt_crusader_raiders_saint_thomas"),
       (eq, ":party_template", "pt_sea_raiders"),
       
@@ -7478,12 +7479,21 @@ simple_triggers = [
    (party_get_num_prisoner_stacks, ":prisoner_stack_num", "$g_prisoners_escape_cur_center"),
    (party_get_num_prisoners, ":prisoner_num", "$g_prisoners_escape_cur_center"),
    (try_begin),
-     (ge, ":prisoner_num", 100),
+     # (ge, ":prisoner_num", 100),
    ############## NEW v3.10
+     # (store_div, ":escape_chance", ":prisoner_num", 10), 
+     ############### NEW v3.11 - 
+     (ge, ":prisoner_num", 10),
      (store_div, ":escape_chance", ":prisoner_num", 10), 
      (try_begin),
+        (party_get_num_companions, ":garrison_size", "$g_prisoners_escape_cur_center"),
+        (val_div, ":garrison_size", 20),
+        (val_sub, ":escape_chance", ":garrison_size"),
+     (try_end),
+############### 
+     (try_begin),
         (party_slot_eq, "$g_prisoners_escape_cur_center", slot_center_has_prisoner_tower, 1),
-        (val_div, ":escape_chance", 3),
+        (val_div, ":escape_chance", 2),
      (try_end),
 ############################
      (store_random_in_range, ":random", 0, 101),

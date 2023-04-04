@@ -256,7 +256,10 @@ head_armor_full = weight(3)|abundance(30)|head_armor(90)
 # all_euro_factions = euro_factions + [fac_kingdom_23] + iberian_factions + [fac_kingdom_26] #+ nordic_factions
 ##new
 mongol_factions = [fac_culture_mongol]
-euro_factions = [fac_culture_mazovian, fac_culture_teutonic,  fac_culture_western]
+# euro_factions = [fac_culture_mazovian, fac_culture_teutonic,  fac_culture_western]
+############### NEW v3.11 - 
+euro_factions = [fac_culture_mazovian, fac_culture_teutonic,  fac_culture_western, fac_culture_english, fac_culture_french, fac_culture_hungarian, fac_culture_polish]
+############### 
 eastern_factions = [fac_culture_rus]
 byzantine_factions = [fac_culture_serbian, fac_culture_balkan, fac_culture_byzantium]
 iberian_factions = [fac_culture_iberian]

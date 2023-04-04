@@ -2011,8 +2011,8 @@ mayors_end             = "trp_village_1_elder"
 village_elders_begin   = "trp_village_1_elder"
 village_elders_end     = "trp_merchants_end"
 
-startup_merchants_begin = "trp_merchant_kingdom_1"
-startup_merchants_end = "trp_startup_merchants_end"
+# startup_merchants_begin = "trp_merchant_kingdom_1"
+# startup_merchants_end = "trp_startup_merchants_end"
 
 num_max_items = 10000 #used for multiplayer mode
 

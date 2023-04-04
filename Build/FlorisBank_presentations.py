@@ -32,6 +32,7 @@ presentations = [
 		
 		(try_begin),
           (eq, "$g_misc_floris_bank_receive_directly", 0),  #### Disabled
+          (party_slot_ge, "$current_town", slot_town_bank_assets, 1), ############### NEW v3.11 - 
 		    (party_get_slot, ":assets", "$current_town", slot_town_bank_assets),
 		    (troop_add_gold, "trp_player", ":assets"),
 		    (party_set_slot, "$current_town", slot_town_bank_assets, 0),

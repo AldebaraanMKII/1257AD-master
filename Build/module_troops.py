@@ -6159,7 +6159,8 @@ troops = [
     itm_green_hose_b,
     itm_blue_hose_mod,
 
-    itm_tab_shield_heater_c,
+    # itm_tab_shield_heater_c,  
+    itm_1257_pavise,      ############### NEW v3.11 - 
     ],
     ranged_attrib_5, genoese_crossbowman_wp, genoese_crossbowman_skills,
     nord_face_young_1, swadian_face_old_2
@@ -6213,7 +6214,8 @@ troops = [
 
     itm_leather_fur_boots,
 
-    itm_tab_shield_heater_c,
+    # itm_tab_shield_heater_c,
+    itm_1257_pavise,    ############### NEW v3.11 - 
     ],
     ranged_attrib_elite, genoese_crossbowman_commander_wp, genoese_crossbowman_commander_skills,
     nord_face_young_1, swadian_face_old_2
@@ -6238,7 +6240,8 @@ troops = [
     itm_surcoat_g,
 
     itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
+    # itm_tab_shield_heater_c,
+    itm_1257_pavise,  ############### NEW v3.11 - 
 
     itm_priest_cap_1,
     itm_mail_coif,
@@ -8566,6 +8569,427 @@ troops = [
     arab_face_3, arab_face_4
   ],
 
+############### NEW v3.11 - moved this here
+############################
+  ["saint_lazarus_half_brother_dismounted",
+     "Dismounted Saint Lazarus Serjeant",
+     "Dismounted Saint Lazarus Serjeants",
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_lance,
+    itm_sword_type_xiii,
+    itm_morningstar,
+    itm_mace_4,
+      ########### itm_raf_one_handed_axe_h,
+    itm_talak_warhammer,
+
+    itm_lazarus_serjeant_tunic,
+
+    itm_mail_coif,
+    itm_great_helmet_d,
+    itm_elm1,
+    itm_elm2,
+    itm_great_helmet_decorative,
+    itm_norman_coif_d,
+    itm_kettle_cloth,
+    itm_elm3,
+    itm_elm8,
+    itm_maciejowski_kettle_hat_b,
+    itm_maciejowski_kettle_hat_a,
+    itm_norman_faceplate,
+
+    itm_norman_coif_a,
+    itm_vik_spangen_a,
+    itm_norman_coif_e,
+    itm_kettlehat_b,
+
+    itm_flat_topped_helmet_b,
+    itm_rhodok_nasal_helmet_a,
+    itm_rhodok_kettle_hat_c,
+    itm_rhodok_four_plated_helmet,
+
+    (itm_tab_shield_kite_c, imod_thick),
+
+    itm_mail_boots_long,
+    ],
+    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
+    nord_face_young_1, swadian_face_old_2
+  ],
+
+
+  ["saint_lazarus_knight_dismounted",
+     "Dismounted Saint Lazarus Knight",
+     "Dismounted Saint Lazarus Knights",
+    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_mail_boots_long,
+    itm_lance,
+    itm_morningstar,
+
+    itm_talak_warhammer,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiii,
+
+    itm_mail_mittens,
+    itm_rnd_helm_03,
+    itm_frenchpepperpot2,
+    itm_frenchpepperpot3,
+    itm_munitionshelm2,
+    itm_pepperpothelm1,
+    itm_munitionshelm1,
+    itm_frenchpepperpot,
+
+    itm_mail_coif,
+
+    itm_mail_coif_c,
+    itm_rnd_helm_04,
+    itm_great_helmet_decorative,
+    itm_flat_topped_helmet_b,
+    itm_great_helmet_a,
+    itm_elm6,
+    itm_elm8,
+    itm_great_helmet_b,
+    itm_great_helmet_c,
+    itm_kettlehat_b,
+
+    itm_norman_faceplate,
+    itm_rnd_helm_05,
+    itm_rnd_helm_06,
+    itm_mail_coif,
+    itm_rhodok_great_helmet,
+
+    (itm_tab_shield_heater_cav_a, imod_thick),
+    (itm_tab_shield_heater_cav_a, imod_reinforced),
+
+    (itm_tab_shield_heater_cav_b, imod_thick),
+    (itm_tab_shield_heater_cav_b, imod_reinforced),
+
+    itm_lazarus_serjeant_tunic,
+
+    ],
+    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
+  ],
+
+  ["santiago_half_brother_dismounted",
+     "Dismounted Santiago Serjeant",
+     "Dismounted Santiago Serjeants",
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_lance,
+    itm_sword_type_xiii,
+    itm_kau_santiago,
+    itm_mace_4,
+      ########### itm_raf_one_handed_axe_h,
+    itm_talak_warhammer,
+
+    itm_santiago_knight,
+
+
+
+    itm_mail_coif,
+    itm_andalusian_helmet_b,
+    itm_great_helmet_decorative,
+    itm_andalusian_helmet_d,
+    itm_mail_coif_b,
+    itm_mail_coif_c,
+    itm_norman_coif_c,
+    itm_elm1,
+    itm_elm2,
+    itm_elm3,
+    itm_elm6,
+    itm_elm7,
+    itm_elm8,
+    itm_flat_topped_helmet_a,
+    itm_flat_topped_helmet_a,
+
+    (itm_tab_shield_kite_c, imod_thick),
+
+    itm_andalusian_helmet_b,
+
+    itm_mail_boots_long,
+    ],
+    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
+    nord_face_young_1, swadian_face_old_2
+  ],
+
+
+  ["santiago_knight_dismounted",
+     "Dismounted Santiago Knight",
+     "Dismounted Santiago Knights",
+    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_mail_boots_long,
+    itm_lance,
+
+    itm_talak_warhammer,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiii,
+
+    itm_mail_mittens,
+    itm_kau_santiago,
+
+    itm_mail_coif,
+    itm_andalusian_helmet_b,
+    itm_great_helmet_decorative,
+    itm_andalusian_helmet_d,
+    itm_mail_coif_b,
+    itm_mail_coif_c,
+    itm_norman_coif_c,
+    itm_elm1,
+    itm_elm2,
+    itm_elm3,
+    itm_elm6,
+    itm_elm7,
+    itm_elm8,
+    itm_flat_topped_helmet_a,
+    itm_flat_topped_helmet_a,
+
+    itm_kolpak_mail,
+    itm_rhodok_great_helmet,
+    itm_mail_coif,
+
+    itm_frenchpepperpot2,
+    itm_frenchpepperpot3,
+    itm_munitionshelm2,
+    itm_pepperpothelm1,
+    itm_munitionshelm1,
+    itm_frenchpepperpot,
+
+    (itm_tab_shield_heater_cav_a, imod_thick),
+    (itm_tab_shield_heater_cav_a, imod_reinforced),
+
+    (itm_tab_shield_heater_cav_b, imod_thick),
+    (itm_tab_shield_heater_cav_b, imod_reinforced),
+
+    itm_santiago_knight,
+
+        ],
+    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
+  ],
+
+  ["calatrava_half_brother_dismounted",
+     "Dismounted Calatrava Serjeant",
+     "Dismounted Calatrava Serjeants",
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_lance,
+    itm_sword_type_xiii,
+    itm_morningstar,
+    itm_mace_4,
+      ########### itm_raf_one_handed_axe_h,
+    itm_talak_warhammer,
+
+    itm_calatrava_knight,
+
+
+
+    itm_mail_coif,
+
+    itm_mail_coif,
+    itm_great_helmet_d,
+    itm_elm1,
+    itm_elm2,
+    itm_great_helmet_decorative,
+    itm_norman_coif_d,
+    itm_kettle_cloth,
+    itm_elm3,
+    itm_elm8,
+    itm_andalusian_helmet_b,
+    itm_maciejowski_kettle_hat_a,
+    itm_norman_faceplate,
+
+    itm_norman_coif_a,
+    itm_vik_spangen_a,
+    itm_andalusian_helmet_d,
+    itm_kettlehat_b,
+
+    itm_flat_topped_helmet_b,
+    itm_rhodok_nasal_helmet_a,
+    itm_rhodok_kettle_hat_c,
+    itm_rhodok_four_plated_helmet,
+
+    (itm_tab_shield_kite_c, imod_thick),
+
+    itm_mail_boots_long,
+    ],
+    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
+    nord_face_young_1, swadian_face_old_2
+  ],
+
+
+  ["calatrava_knight_dismounted",
+     "Dismounted Calatrava Knight",
+     "Dismounted Calatrava Knights",
+    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_mail_boots_long,
+    itm_lance,
+    itm_morningstar,
+
+    itm_talak_warhammer,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiii,
+
+    itm_mail_mittens,
+    itm_rnd_helm_03,
+
+    itm_mail_coif,
+
+    itm_mail_coif_c,
+    itm_rnd_helm_04,
+    itm_great_helmet_decorative,
+    itm_flat_topped_helmet_b,
+    itm_great_helmet_a,
+    itm_elm6,
+    itm_elm8,
+    itm_great_helmet_b,
+    itm_great_helmet_c,
+    itm_kettlehat_b,
+    itm_frenchpepperpot2,
+    itm_frenchpepperpot3,
+    itm_munitionshelm2,
+    itm_pepperpothelm1,
+    itm_munitionshelm1,
+    itm_frenchpepperpot,
+
+    itm_norman_faceplate,
+
+    itm_rnd_helm_05,
+    itm_rnd_helm_06,
+    itm_mail_coif,
+    itm_rhodok_great_helmet,
+
+    (itm_tab_shield_heater_cav_a, imod_thick),
+    (itm_tab_shield_heater_cav_a, imod_reinforced),
+
+    (itm_tab_shield_heater_cav_b, imod_thick),
+    (itm_tab_shield_heater_cav_b, imod_reinforced),
+
+    itm_calatrava_knight,
+
+        ],
+    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
+  ],
+
+
+  ["saint_thomas_half_brother_dismounted",
+     "Dismounted Sergeant of the Order of Saint Thomas of Acre",
+     "Dismounted Sergeants of the Order of Saint Thomas of Acre",
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_lance,
+    itm_sword_type_xiii,
+    itm_morningstar,
+    itm_mace_4,
+      ########### itm_raf_one_handed_axe_h,
+    itm_talak_warhammer,
+
+    itm_saint_thomas_knight,
+
+
+
+    itm_mail_coif,
+    itm_great_helmet_d,
+    itm_elm1,
+    itm_elm2,
+    itm_great_helmet_decorative,
+    itm_norman_coif_d,
+    itm_kettle_cloth,
+    itm_elm3,
+    itm_elm8,
+    itm_maciejowski_kettle_hat_b,
+    itm_maciejowski_kettle_hat_a,
+    itm_norman_faceplate,
+
+    itm_norman_coif_a,
+    itm_vik_spangen_a,
+    itm_norman_coif_e,
+    itm_kettlehat_b,
+
+    itm_flat_topped_helmet_b,
+    itm_rhodok_nasal_helmet_a,
+    itm_rhodok_kettle_hat_c,
+    itm_rhodok_four_plated_helmet,
+
+    (itm_tab_shield_kite_c, imod_thick),
+
+    itm_mail_boots_long,
+    ],
+    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
+    nord_face_young_1, swadian_face_old_2
+  ],
+
+
+  ["saint_thomas_knight_dismounted",
+     "Dismounted Knight of the Order Saint Thomas of Acre",
+     "Dismounted Knights of the Order Saint Thomas of Acre",
+    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    0, 0, fac_kingdom_1,
+    [
+    itm_mail_boots_long,
+    itm_lance,
+    itm_morningstar,
+
+    itm_saint_thomas_knight,
+
+    itm_sword_type_xii,
+    itm_sword_type_xiii,
+
+    itm_mail_mittens,
+    itm_rnd_helm_03,
+
+    itm_mail_coif,
+
+    itm_mail_coif_c,
+    itm_rnd_helm_04,
+    itm_great_helmet_decorative,
+    itm_flat_topped_helmet_b,
+    itm_great_helmet_a,
+    itm_elm6,
+    itm_elm8,
+    itm_great_helmet_b,
+    itm_great_helmet_c,
+    itm_kettlehat_b,
+    itm_frenchpepperpot2,
+    itm_frenchpepperpot3,
+    itm_munitionshelm2,
+    itm_pepperpothelm1,
+    itm_munitionshelm1,
+    itm_frenchpepperpot,
+	itm_wenceslav_helmet,
+
+    itm_norman_faceplate,
+
+    itm_rnd_helm_05,
+    itm_rnd_helm_06,
+    itm_mail_coif,
+
+    (itm_tab_shield_heater_cav_a, imod_thick),
+    (itm_tab_shield_heater_cav_a, imod_reinforced),
+
+    (itm_tab_shield_heater_cav_b, imod_thick),
+    (itm_tab_shield_heater_cav_b, imod_reinforced),
+
+        ],
+    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
+  ],
+#################################################
+
+
 
   ["mercenaries_end","mercenaries_end","mercenaries_end",0,no_scene,reserved,fac_commoners,
    [],
@@ -9308,6 +9732,7 @@ troops = [
     nord_face_young_1, swadian_face_old_2
   ],
 ###FINNISH
+
 
 ###MAZOVIANS - Eastern/Balt(mainly Eastern) mix with some western things on top. Open helmets
   ["mazovian_town_recruit",
@@ -35761,10 +36186,14 @@ troops = [
 
 
 
+#####################
+###### troops end here
+#####################
 
-  #####################
-  ###### troops end here
-  #####################
+
+#####################
+###### Mercs begin here
+#####################
 
   ["looter",
     "Fur",
@@ -36396,6 +36825,2139 @@ troops = [
 
 
 
+############################
+  ["english_sherwood_archer",
+     "English Sherwood Archer",
+     "English Sherwood Archers",
+    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
+    0, 0, fac_kingdom_9,
+    [
+    itm_arrows,
+
+    itm_dagger,
+	itm_hatchet,
+	itm_butchering_knife,
+	itm_knife,
+
+    itm_short_bow,
+    
+	itm_pilgrim_hood,
+	itm_pilgrim_disguise,
+    
+    itm_ankle_boots,
+    itm_green_hose,
+	itm_green_hose_b,
+	itm_yellow_hose,
+	itm_grey_hose,
+	itm_dark_grey_hose,
+	itm_shoes,
+	itm_legs_with_shoes,
+	itm_tied_up_shoes,
+	
+    itm_talak_buckler,
+    ],
+    ranged_attrib_3, archer_regulars_wp, archer_regulars_skills,
+    nord_face_young_1, swadian_face_old_2
+  ],
+
+
+  ["english_longbowman",
+     "English Longbowman",
+     "English Longbowmen",
+    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
+    0, 0, fac_kingdom_9,
+    [
+    itm_strely,
+
+    itm_hatchet,
+	itm_almogavar_sword,
+	itm_falchion,
+	itm_modded_falchion_1,
+	itm_modded_falchion_2,
+    
+    itm_long_bow,
+
+    itm_thomas_padded_armour,
+
+    itm_almogavar_helmet,
+	itm_koif_monie_a,
+	itm_koif_monie_b,
+    
+    itm_leather_boots,
+    itm_leather_fur_boots,
+	itm_kau_mail_boots,
+	itm_hunter_boots,
+	itm_hide_boots,
+	itm_highlander_boots_1,
+
+    itm_talak_buckler,
+    ],
+    ranged_attrib_4, archer_veteran_wp, archer_veteran_skills,
+    nord_face_young_1, swadian_face_old_2
+  ],
+
+  ["english_retinue_longbowman",
+     "English Retinue Longbowman",
+     "English Retinue Longbowmen",
+    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
+    0, 0, fac_kingdom_9,
+    [
+    itm_bodkin_arrows,
+	itm_barbed_arrows,
+    
+	itm_sa_gloves_b,
+	itm_sa_gloves_a,
+	itm_leather_gloves,
+	itm_dethertir_gloves,
+	
+    itm_long_bow,
+	itm_modded_euro_sidesword_1,
+	itm_modded_euro_sidesword_2,
+    
+	itm_light_capelina_crusader,
+	itm_light_crusader_helm_3,
+	itm_vik_spangen_b,
+	itm_modded_helmet_kettle_cloth_1,
+	itm_modded_helmet_kettle_cloth_2,
+	itm_modded_helmet_kettle_cloth_3,
+	itm_modded_helmet_kettle_cloth_4,
+	itm_footman_helmet,
+	itm_kettle_cloth,
+	itm_elm2,
+	itm_sa_crusader_koif_a,
+	itm_light_crusader_helm_2,
+	
+	itm_kau_rus_mail_shirt_b,
+    
+	itm_splinted_leather_greaves,
+
+    itm_1257_pavise,
+	itm_tab_shield_pavise_d,
+    ],
+    ranged_attrib_elite, archer_veteran_wp, archer_veteran_skills,
+    nord_face_young_1, swadian_face_old_2
+  ],
+############################
+
+
+
+   ["english_town_recruit",
+     "English Town Recruit",
+	 "English Town Recruits",
+	  tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_byz_psiloi_b,
+  
+     itm_red_hose,
+     itm_green_hose,
+     itm_grey_hose,
+     itm_yellow_hose,
+	 itm_dark_grey_hose,
+	 itm_grey_hose,
+	 itm_green_hose_b,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+	 itm_tied_up_shoes,
+  
+     itm_head_wrappings,
+	 itm_arming_cap,
+	 itm_priest_cap_1,
+  
+     itm_hammer,
+     itm_pitch_fork,
+     itm_club,
+	 itm_fighting_pick,
+	 itm_cleaver,
+	 itm_military_pick,
+	 itm_military_hammer,
+	 itm_military_fork,
+	 itm_battle_fork,
+	 itm_short_bow,
+	 itm_arrows,
+  
+     itm_talak_buckler,
+     ],
+     foot_attrib_2, militia_wp, militia_skills,
+     euro_face_3, euro_face_4
+   ],
+   
+   ["english_village_recruit",
+     "English Village Recruit",
+     "English Village Recruits",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_byz_psiloi_b,
+  
+     itm_red_hose,
+     itm_green_hose,
+     itm_grey_hose,
+     itm_yellow_hose,
+	 itm_dark_grey_hose,
+	 itm_grey_hose,
+	 itm_green_hose_b,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+	 itm_tied_up_shoes,
+  
+     itm_head_wrappings,
+	 itm_arming_cap,
+	 itm_priest_cap_1,
+  
+     itm_hammer,
+     itm_pitch_fork,
+     itm_club,
+	 itm_fighting_pick,
+	 itm_cleaver,
+	 itm_military_pick,
+	 itm_military_hammer,
+	 itm_military_fork,
+	 itm_battle_fork,
+  
+     itm_talak_buckler,
+     ],
+     foot_attrib_2, militia_wp, militia_skills,
+     euro_face_3, euro_face_4
+   ],
+ 
+   ["english_levy_spearman",
+     "English Levy Spearman",
+     "English Levy Spearmen",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_militia_tunic_b,
+  
+     itm_ankle_boots,
+     itm_hide_boots,
+	 itm_leather_fur_boots,
+  
+     itm_skullcap,
+	 itm_leather_warrior_cap,
+	 itm_koif_monie_a,
+	 itm_koif_monie_b,
+	 itm_leather_cap,
+	 itm_1257_hood,
+	 itm_padded_coif,
+  
+     itm_spear_a,
+	 itm_spear_b,
+	 itm_spear_c,
+	 itm_spear_d,
+	 itm_spear_e,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	 itm_falchion,
+	 itm_modded_falchion_1,
+  
+     itm_tab_shield_round_a,
+     ],
+     foot_attrib_3, footman_wp, footman_skills,
+     euro_face_3, euro_face_4
+    ],
+ 
+   ["english_militia_footman",
+     "English Militia Footman",
+     "English Militia Footmen",
+     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_kau_haubergeon_a,
+  
+     itm_leather_boots,
+     itm_kau_mail_boots,
+	 itm_green_hose,
+	 itm_red_hose,
+	 itm_grey_hose,
+	
+     itm_light_capelina_crusader,
+	 itm_light_crusader_helm_3,
+	 itm_vik_spangen_b,
+	 itm_modded_helmet_kettle_cloth_1,
+	 itm_modded_helmet_kettle_cloth_2,
+	 itm_modded_helmet_kettle_cloth_3,
+	 itm_modded_helmet_kettle_cloth_4,
+	 itm_norman_coif_c,
+	 itm_footman_helmet,
+	 itm_almogavar_helmet,
+	 itm_kettle_cloth,
+	 itm_norman_coif_d,
+	 itm_sa_crusader_koif_a,
+	 itm_elm2,
+  
+     itm_modded_euro_sidesword_1,
+	 itm_modded_euro_sidesword_2,
+     itm_spear_b,
+	 itm_spear_g,
+	 itm_spear_a,
+	 itm_spear_j,
+  
+     itm_tab_shield_round_c,
+     ],
+     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
+     euro_face_3, euro_face_4
+   ],
+
+   ["english_armoured_swordsman",
+     "English Armoured Swordsman",
+     "English Armoured Swordsmen",
+     tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_shield| tf_guarantee_helmet| tf_guarantee_gloves,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_mail_with_surcoat,
+  
+     itm_sa_shoes_crusader,
+	 itm_sa_vizantia_greaves,
+  
+     itm_mail_mittens,
+	 itm_gauntlets_crysader,
+	 itm_dethertir_gauntlets,
+  
+     itm_sa_crusader_hard_helm_4,
+  
+     itm_modded_euro_armingsword_1,
+	 itm_modded_euro_armingsword_2,
+	 itm_modded_euro_armingsword_3,
+	 itm_modded_damascus_sword,
+	 itm_cp391_sword,
+	 itm_sword_type_xiv,
+  
+     itm_tab_shield_heater_c,
+	 itm_tab_shield_kite_c,
+     ],
+     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
+     euro_face_3, euro_face_4
+   ], 
+  
+  
+   ["english_billman",
+     "English Billman",
+     "English Billmen",
+     tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_surcoat_d,
+  
+     itm_leather_boots,
+	 itm_leather_fur_boots,
+	 itm_hunter_boots,
+	 itm_hide_boots,
+	 itm_highlander_boots_1,
+  
+     itm_light_capelina_crusader,
+	 itm_light_crusader_helm_3,
+	 itm_vik_spangen_b,
+	 itm_modded_helmet_kettle_cloth_1,
+	 itm_kettle_cloth,
+	 itm_modded_helmet_kettle_cloth_2,
+	 itm_norman_coif_c,
+	 itm_norman_coif_d,
+	 itm_flat_kettle_hat,
+	 itm_vik_norman_helmet_e,
+	 itm_footman_helmet,
+	 itm_almogavar_helmet,
+  
+     itm_modded_billhook_fork_1,
+     itm_modded_billhook_fork_2,
+     itm_modded_billhook_2,
+     ],
+     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
+     euro_face_1, euro_face_2
+   ], 
+ 
+   ["english_heavy_billman",
+     "English Heavy Billman",
+     "English Heavy Billmen",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_sa_vizantia_greaves,
+	 itm_sa_shoes_crusader,
+  
+     itm_mail_mittens,
+	 itm_dethertir_gauntlets,
+	 itm_gauntlets_crysader,
+  
+     itm_sa_crusader_helm_10,
+	 itm_capelina_crusader,
+	 itm_sa_crusader_helm_1,
+	 itm_elm3,
+	 itm_great_helmet_d,
+	 itm_kolpak_mail,
+	 itm_kettlehat_e,
+	 itm_kettlehat_d,
+	 
+	 itm_coat_of_plates_red,
+  
+     itm_modded_bill_1,
+     itm_modded_billhook_1,
+	 itm_bill,
+	 itm_modded_bill_2,
+	 itm_modded_billhook_3,
+     ],
+     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
+     euro_face_1, euro_face_2
+   ],
+
+   ["english_hobilar",
+     "English Hobilar",
+     "English Hobilars",
+     tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_genoa_padded_b,
+  
+     itm_yellow_hose,
+     itm_green_hose_b,
+     itm_red_hose,
+	 itm_green_hose_b,
+	 itm_dark_grey_hose,
+	 itm_grey_hose,
+  
+     itm_padded_coif,
+	 itm_leather_cap,
+	 itm_1257_hood,
+	 itm_koif_monie_a,
+	 itm_koif_monie_b,
+	 itm_turret_hat_green,
+  
+     itm_saddle_horse,
+	 itm_sumpter_horse,
+  
+     itm_spear_k,
+	 itm_spear_l,
+	 itm_spear_i,
+	 itm_spear_o,
+     itm_modded_falchion_1,
+	 itm_falchion,
+	 itm_modded_falchion_2,
+	 itm_modded_falchion_3,
+  
+     itm_gaelic_shield_b,
+     ],
+     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
+     euro_face_3, euro_face_4
+   ],
+
+   ["english_demi_lancer",
+     "English Demi Lancer",
+     "English Demi Lancers",
+     tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_man_at_arms_c,
+  
+     itm_hunter_boots,
+     itm_kau_mail_boots,
+	 itm_leather_boots,
+	 itm_highlander_boots_1,
+	
+     itm_elm2,
+	 itm_vik_norman_helmet_e,
+	 itm_flat_kettle_hat,
+	 itm_footman_helmet,
+	 itm_almogavar_helmet,
+	 itm_kettle_cloth,
+	 itm_norman_coif_c,
+	 itm_norman_coif_d,
+	 
+     itm_horse_d,
+	 itm_horse_e,
+  
+     itm_lance,
+     itm_modded_euro_shortsword_1,
+	 itm_modded_euro_shortsword_2,
+	 itm_modded_euro_shortsword_3,
+	 itm_light_lance,
+	 itm_cp391_sword,
+	 itm_sword_type_xiv,
+  
+     itm_tab_shield_small_round_b,
+     ],
+     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
+     euro_face_3, euro_face_4
+   ],
+
+   ["english_squire",
+     "English Squire",
+     "English Squires",
+     tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted| tf_guarantee_gloves,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_mail_with_surcoat,
+  
+     itm_splinted_leather_greaves,
+  
+     itm_dethertir_gloves,
+	 itm_leather_gloves,
+	 itm_sa_gloves_a,
+  
+     itm_mail_coif_b,
+	 itm_mail_coif,
+  
+     itm_courser,
+   	 itm_european_horse_a,
+	 itm_european_horse_b,
+	 itm_european_horse_c,
+	 itm_european_horse_d,
+  
+     itm_light_lance,
+     itm_sword_type_xii,
+     itm_cp391_sword,
+     itm_modded_damascus_sword,
+	 itm_lance,
+	 itm_talak_warhammer,
+	 itm_modded_euro_armingsword_1,
+	 itm_modded_euro_armingsword_2,
+	 itm_modded_euro_armingsword_3,
+	
+     itm_tab_shield_heater_c,
+	 itm_tab_shield_kite_c,
+     ],
+     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+
+   ["english_knight",
+     "English_Knight",
+     "English Knights",
+     tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted| tf_guarantee_gloves,
+     0, 0, fac_kingdom_9,
+     [
+  
+     itm_surcoat_bigod,
+	 itm_rnd_surcoat_08,
+	 itm_rnd_surcoat_17,
+	 itm_rnd_surcoat_20,
+	 itm_rnd_surcoat_23,
+	 itm_modded_surcoat_5,
+	 itm_modded_surcoat_11,
+	 itm_modded_surcoat_12,
+  
+     itm_mail_chausses,
+	 itm_raf_mail_chausses,
+  
+     itm_scale_gauntlets,
+  
+     itm_rhodok_great_helmet,
+	 itm_sa_crusader_hard_helm_4,
+	 itm_sa_crusader_hard_helm_5,
+	 itm_mail_coif_c,
+	 itm_munitionshelm2,
+	 itm_sa_crusader_hard_helm_6,
+	 itm_rnd_helm_03,
+	 itm_rnd_helm_04,
+	 itm_rnd_helm_06,
+	 itm_rnd_helm_05,
+	 itm_modded_helmet_heavy_3,
+	 itm_great_helmet_a,
+	 itm_great_helmet_b,
+	 itm_great_helmet_c,
+  
+     itm_warhorse_bigod,
+	 itm_rnd_horse_08,
+	 itm_rnd_horse_10,
+	 itm_rnd_horse_17,
+	 itm_rnd_horse_20,
+	 itm_rnd_horse_21,
+	 itm_rnd_horse_03,
+	 itm_rnd_horse_22,
+	 itm_rnd_horse_23,
+	 
+     itm_heraldic_lance,
+     itm_modded_euro_longsword_1,
+     itm_modded_damascus_sword,
+	 itm_mace_4,
+   	 itm_morningstar,
+	 itm_talak_warhammer,
+	 itm_modded_euro_longsword_2,
+	 itm_heavy_lance,
+	 itm_sword_type_xiia,
+	 itm_sword_type_xiiia,
+	
+     itm_tab_shield_heater_cav_b,
+	 itm_tab_shield_kite_cav_b,
+     ],
+     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+
+###French
+   ["french_peasant_archer",
+     "French Peasant Archer",
+     "French Peasant Archers",
+     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield,
+     0, 0, fac_kingdom_10,
+     [
+  
+     itm_leather_jerkin,
+  
+     itm_blue_hose,
+     itm_blue_hose_mod,
+     itm_grey_hose,
+	 itm_dark_grey_hose,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+  
+     itm_leather_cap,
+	 itm_koif_monie_a,
+	 itm_koif_monie_b,
+	 itm_skullcap,
+  
+     itm_hunting_bow,
+     itm_arrows,
+     itm_butchering_knife,
+	 itm_knife,
+	 itm_dagger,
+  
+     itm_leather_covered_round_shield,
+     ],
+     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
+     euro_face_1, euro_face_2
+   ], 
+  
+   ["french_crossbow_militia",
+     "French Crossbow Militia",
+	 "French Crossbow Militiamen",
+     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield,
+     0, 0, fac_kingdom_10,
+     [
+	
+	 itm_kau_mail_shirt_d,
+	
+	 itm_blue_hose,
+	 itm_blue_hose_mod,
+	 itm_grey_hose,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+    
+	 itm_skullcap,
+	 itm_leather_warrior_cap,
+	
+	 itm_hunting_crossbow,
+	 itm_crossbow,
+	 itm_bolts,
+	 itm_pickaxe,
+	 itm_knife,
+	 itm_butchering_knife,
+	 itm_dagger,
+	
+	 itm_leather_covered_round_shield,
+	 itm_talak_buckler,
+	 ],
+	 ranged_attrib_3, crossbow_regulars_wp, crossbow_regulars_skills,
+     euro_face_1, euro_face_2
+   ], 
+   
+   ["french_heavy_crossbowman",
+     "French Heavy Crossbowman",
+	 "French Heavy Crossbowmen",
+     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_10,
+     [
+    
+	 itm_genoa_mail_c,
+	
+	 itm_hunter_boots,
+	 itm_leather_boots,
+	 itm_leather_fur_boots,
+	 itm_hide_boots,
+	 itm_highlander_boots_1,
+	
+	 itm_sa_gloves_a,
+	 itm_leather_gloves,
+	
+	 itm_vik_spangen_a,
+	 itm_footman_helmet,
+	 itm_vik_norman_helmet_e,
+	 itm_norman_coif_e,
+	 itm_light_crusader_helm_1,
+	 
+     itm_heavy_crossbow,
+	 itm_steel_bolts,
+ 	 itm_almogavar_sword,
+	 itm_modded_falchion_1,
+	 itm_modded_falchion_2,
+	 itm_falchion,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	
+	 itm_tab_shield_round_b,
+	 ],
+	 ranged_attrib_5, crossbow_sergeant_wp, crossbow_sergeant_skills,
+	 euro_face_1, euro_face_2
+   ],
+   
+   ["french_village_recruit",
+     "French Village Recruit",
+	 "French Village Recruits",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_10,
+     [
+	
+	 itm_balt_shirt_e,
+	
+	 itm_woolen_hose,
+	 itm_shoes,
+	 itm_blue_hose,
+	 itm_legs_with_shoes,
+	
+	 itm_priest_cap_3,
+	 itm_head_wrappings,
+	 itm_arming_cap,
+	 itm_priest_cap_1,
+	 itm_1257_hood_2,
+	
+	 itm_hatchet,
+ 	 itm_pitch_fork,
+	 itm_club,
+	 itm_military_fork,
+	 itm_military_hammer,
+	 itm_military_pick,
+	 itm_sickle,
+	 itm_hammer,
+	
+	 itm_targe_2,
+     ],
+     foot_attrib_2, militia_wp, militia_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["french_town_recruit",
+     "French Town Recruit",
+	 "French Town Recruits",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_10,
+     [
+	
+	 itm_balt_shirt_e,
+	
+	 itm_woolen_hose,
+	 itm_shoes,
+	 itm_blue_hose,
+	 itm_legs_with_shoes,
+	
+	 itm_priest_cap_3,
+	 itm_head_wrappings,
+	 itm_arming_cap,
+	 itm_priest_cap_1,
+	 itm_1257_hood_2,
+	
+	 itm_hatchet,
+ 	 itm_pitch_fork,
+	 itm_club,
+	 itm_military_fork,
+	 itm_military_hammer,
+	 itm_military_pick,
+	 itm_sickle,
+	 itm_hammer,
+	
+	 itm_targe_2,
+     ],
+     foot_attrib_2, militia_wp, militia_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["french_peasant_militia",
+     "French Peasant Militia",
+	 "French Peasant Militiamen",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_10,
+     [
+	
+	 itm_gambeson_c,
+	
+	 itm_ankle_boots,
+	
+	 itm_vik_norman_helmet_a,
+	 itm_footman_helmet,
+	
+	 itm_spear_a,
+	 itm_spear_b,
+	 itm_spear_c,
+	 itm_spear_d,
+	 itm_spear_e,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	 itm_raf_one_handed_axe_c,
+	 itm_almogavar_sword,
+	 itm_falchion,
+	
+	 itm_nordic_shield,
+	 ],
+	 foot_attrib_3, footman_wp, footman_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["french_levy_spearman",
+	 "French Levy Spearman",
+	 "French Levy Spearmen",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_10,
+     [
+	
+	 itm_surcoat_b,
+	
+	 itm_highlander_boots_1,
+	 itm_leather_boots,
+	 itm_hide_boots,
+	 itm_hunter_boots,
+	
+	 itm_light_crusader_helm_1,
+	 itm_footman_helmet,
+	
+	 itm_spear_a,
+	 itm_spear_p,
+	 itm_spear_i,
+	 itm_spear_j,
+	 itm_long_spiked_club,
+	 itm_scythe,
+	 itm_modded_euro_shortsword_1,
+	 itm_modded_euro_shortsword_2,
+	
+	 itm_tab_shield_round_c,
+     ],
+     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["french_armoured_sergeant",
+     "French Armoured Sergeant",
+	 "French Armoured Sergeants",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_10,
+     [
+	
+	 itm_modded_mail_2,
+	
+	 itm_splinted_leather_greaves,
+	
+	 itm_mail_mittens,
+	
+	 itm_sa_crusader_helm_7,
+	 itm_vik_norman_helmet_c,
+	 itm_vik_norman_helmet_e,
+	 itm_elm8,
+	 itm_flat_topped_helmet_a,
+	 itm_flat_topped_helmet_b,
+	
+	 itm_spear_k,
+	 itm_spear_a,
+	 itm_spear_d,
+	 itm_military_cleaver_b,
+	 itm_raf_one_handed_axe_h,
+	 itm_raf_one_handed_axe_c,
+	 itm_modded_euro_sidesword_1,
+	 itm_modded_euro_sidesword_2,
+	
+	 itm_tab_shield_small_round_c,
+     ],
+     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   ["french_volgue_militia",
+     "French Volgue Militia",
+	 "French Volgue Militiamen",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots,
+	 0,0, fac_kingdom_10,
+	 [
+	
+	 itm_iberian_leather_armour_c,
+	
+	 itm_ankle_boots,
+	 itm_wrapping_boots,
+	 itm_hide_boots,
+	 itm_leather_fur_boots,
+	 itm_highlander_boots_1,
+	
+	 itm_light_crusader_helm_1,
+	
+	 itm_modded_cleaving_voulge,
+	 itm_modded_hooked_voulge_3,
+	 ],
+	 foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
+     euro_face_1, euro_face_2
+   ],	
+	
+   
+   ["french_voulgier",
+     "French Voulgier",
+	 "French Voulgmen",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
+     0, 0, fac_kingdom_10,
+     [
+  
+     itm_man_at_arms_a,
+	
+	 itm_splinted_leather_greaves,
+	
+	 itm_sa_gloves_a,
+	 itm_leather_gloves,
+	
+	 itm_vik_norman_helmet_a,
+	 itm_vik_norman_helmet_c,
+	 itm_rhodok_nasal_helmet_a,
+	 itm_elm8,
+	 itm_sa_crusader_helm_3,
+	 itm_sa_crusader_helm_4,
+	 itm_sa_crusader_helm_5,
+	 itm_sa_crusader_helm_9,
+	
+	 itm_modded_voulge,
+	 itm_modded_spiked_voulge,
+	 itm_modded_hooked_voulge_1,
+	 itm_shortened_voulge,
+     ],
+     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],	
+
+    
+   ["french_pikeman",
+     "French Pikeman",
+     "French Pikemen",	
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
+     0, 0, fac_kingdom_10,
+	 [
+	
+	 itm_man_at_arms_b,
+	
+	 itm_byz_cavalry_boots,
+	
+	 itm_mail_mittens,
+	
+	 itm_rhodok_four_plated_helmet,
+	 itm_flat_topped_helmet_a,
+	 itm_flat_topped_helmet_b,
+	 itm_vik_norman_helmet_a,
+	 itm_vik_norman_helmet_c,
+	
+	 itm_modded_pike,
+	 ],
+     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   
+   ["french_mounted_archer",
+     "French Mounted Archer",
+	 "French Mounted Archers",
+     tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_ranged| tf_mounted| tf_guarantee_shield| tf_guarantee_helmet| tf_guarantee_horse,
+     0,0,fac_kingdom_10,
+     [
+	
+	 itm_noble_cloak,
+	
+	 itm_grey_hose,
+	 itm_blue_hose,
+	 itm_blue_hose_mod,
+	 itm_dark_grey_hose,
+	 itm_shoes,
+	 itm_woolen_hose,
+	 itm_tied_up_shoes,
+	 itm_legs_with_shoes,
+	
+	 itm_vik_norman_helmet_e,
+	 itm_turret_hat_green,
+	
+	 itm_saddle_horse,
+	 itm_sumpter_horse,
+	
+	 itm_hunting_bow,
+	 itm_arrows,
+	 itm_spear_b,
+	 itm_spear_c,
+	 itm_spear_d,
+	 itm_almogavar_sword,
+	 itm_falchion,
+	 itm_modded_falchion_1,
+	
+	 itm_tab_shield_small_round_a,
+	 itm_talak_buckler,
+	 ],
+	 horse_attrib_3, cum_harcher_wp, cum_harcher_skills,
+	 euro_face_1, euro_face_2
+   ],
+   
+   ["french_mounted_sergeant",
+     "French Mounted Sergeant",
+	 "French Mounted Sergeants",
+	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_10,
+     [
+	  
+	 itm_modded_mail_2,
+	
+	 itm_splinted_leather_greaves,
+	
+	 itm_sa_gloves_a,
+	 itm_leather_gloves,
+	
+	 itm_vik_norman_helmet_e,
+	 itm_norman_coif_e,
+	 itm_vik_spangen_a,
+	 itm_footman_helmet,
+	 itm_light_crusader_helm_1,
+	 
+     itm_spear_k,
+	 itm_spear_l,
+	 itm_spear_m,
+	 itm_military_cleaver_b,
+	 itm_modded_euro_sidesword_2,
+	 itm_modded_euro_sidesword_2,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	 itm_cp391_sword,
+	
+	 itm_horse_d,
+	 itm_horse_e,
+	
+	 itm_tab_shield_small_round_c,
+     ],
+     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
+     euro_face_3, euro_face_4
+   ],
+   
+   ["french_squire",
+     "French Squire",
+	 "French Squires",
+	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_10,
+     [
+	
+	 itm_veteran_surcoat_c,
+	
+	 itm_sa_vizantia_greaves,
+	 itm_sa_shoes_crusader,
+	
+	 itm_mail_mittens,
+	
+	 itm_vik_norman_helmet_a,
+	 itm_vik_norman_helmet_c,
+	 itm_rhodok_four_plated_helmet,
+	 itm_rhodok_nasal_helmet_a,
+	 itm_sa_crusader_helm_3,
+	 itm_sa_crusader_helm_8,
+	 itm_elm6,
+	
+	 itm_european_horse_a,
+	 itm_european_horse_b,
+	 itm_european_horse_c,
+	 itm_european_horse_d,
+	
+	 itm_modded_euro_armingsword_2,
+	 itm_lance,
+	 itm_modded_euro_armingsword_1,
+	 itm_light_lance,
+	 itm_modded_euro_armingsword_3,
+	 itm_sword_type_xii,
+	 itm_talak_warhammer,
+	 itm_mace_1,
+	
+ 	 itm_tab_shield_kite_cav_a,
+	 itm_tab_shield_heater_cav_a,
+	 ], 
+	 horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   ["french_knight",
+     "French Knight",
+     "French Knights", 
+	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_10,
+     [
+	 itm_surcoat_france_a,
+	 itm_rnd_surcoat_13,
+	 itm_rnd_surcoat_12,
+	 itm_rnd_surcoat_15,
+	 itm_rnd_surcoat_02,
+	 itm_rnd_surcoat_08,
+	 itm_modded_surcoat_19,
+	
+	 itm_splinted_greaves_long,
+	
+	 itm_lamellar_gauntlets,
+	
+	 itm_modded_helmet_heavy_1,
+	 itm_frenchpepperpot,
+	 itm_frenchpepperpot2,
+	 itm_frenchpepperpot3,
+	
+	 itm_warhorse_france_a,
+	 itm_warhorse_blue,
+	 itm_rnd_horse_15,
+	 itm_rnd_horse_02,
+	 itm_rnd_horse_04,
+	 itm_warhorse_white,
+	
+	 itm_modded_euro_longsword_1,
+	 itm_modded_euro_longsword_2,
+	 itm_sword_type_xiiia,
+	 itm_sword_type_xiia,
+	 itm_modded_templar_arming_sword,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	 itm_raf_one_handed_axe_c,
+	 itm_heraldic_lance,
+	 itm_heavy_lance,
+	 itm_morningstar,
+	 itm_mace_4,
+	 itm_talak_warhammer,
+	
+	 itm_tab_shield_kite_cav_b,
+	 itm_tab_shield_heater_cav_b,
+	 ],
+     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+
+###Hungary
+
+   ["hungarian_peasant_archer",
+     "Hungarian Peasant Archer",
+	 "Hungarian Peasant Archers",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_ranged| tf_guarantee_shield,
+	 0,0, fac_kingdom_7,
+	 [
+	
+	 itm_pelt_coat,
+	
+	 itm_berber_shoes,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+	 itm_tied_up_shoes,
+	
+	 itm_balt_rus_cap,
+	 itm_rus_hat_with_padding,
+	 itm_nomad_cap,
+	 itm_nomad_cap_b,
+	 itm_nomad_cap_c,
+	
+	 itm_hunting_bow,
+	 itm_arrows,
+	 itm_dagger,
+	 itm_knife,
+	 itm_butchering_knife,
+	 itm_hatchet,
+	
+	 itm_targe_2,
+	 itm_targe_3,
+	 ],
+	 ranged_attrib_3, skirmisher_wp, skirmisher_skills,
+     euro_face_1, euro_face_2
+   ], 
+	
+	
+   ["hungarian_veteran_archer",
+     "Hungarian Veteran Archer",
+	 "Hungarian Veteran Archers",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_ranged| tf_guarantee_gloves| tf_guarantee_shield,
+	 0,0, fac_kingdom_7,
+	 [
+	
+	 itm_archers_vest,
+	
+	 itm_sa_boot_average_crusader_1,
+	 itm_leather_boots,
+	 itm_hunter_boots,
+	 itm_hide_boots,
+	 itm_leather_fur_boots,
+	
+	 itm_sa_gloves_a,
+	 itm_leather_gloves,
+	
+	 itm_balt_helmet_a,
+	 itm_balt_footman_helmet,
+	 itm_balt_helmet_b,
+	 itm_rus_militia_helmet,
+	
+	 itm_strong_bow,
+	 itm_strely,
+	 itm_modded_baltic_falchion_2,
+	 itm_modded_baltic_falchion_1,
+	
+	 itm_berber_shield_3,
+	 ],
+	 ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
+     nord_face_young_1, swadian_face_old_2
+   ], 
+     
+	 
+   ["hungarian_crossbow_militia",
+     "Hungarian Crossbow Militia",
+	 "Hungarian Corssbow Militia",
+	 tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield,
+     0, 0, fac_kingdom_7,
+     [
+	
+	 itm_genoa_padded_c,
+	
+	 itm_legs_with_shoes,
+	 itm_berber_shoes,
+	 itm_tied_up_shoes,
+	 itm_shoes,
+	 itm_woolen_hose,
+	
+	 itm_balt_rus_cap,
+	 itm_rus_hat_with_padding,
+	 itm_nomad_cap,
+	 itm_nomad_cap_b,
+	 itm_nomad_cap_c,
+	 
+	 itm_hunting_crossbow,
+	 itm_crossbow,
+	 itm_bolts,
+	 itm_knife,
+	 itm_hatchet,
+	 itm_butchering_knife,
+	 itm_dagger,
+	
+	 itm_lit_pavise_f_3,
+	 ],
+	 ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   ["hungarian_pavise_crossbow",
+     "Hungarian Pavise Crossbow",
+	 "Hungarian Pavise Crossbowmen",
+     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_7,
+     [
+	
+	 itm_bulgar_warrior_b,
+	 itm_baltic_ponted_helmet,
+	 itm_balt_footman_helmet,
+	 itm_balt_helmet_a,
+	 itm_balt_helmet_b,
+	
+	 itm_byzantine_greaves,
+	
+	 itm_leather_gloves,
+	
+	 itm_baltic_ponted_helmet,
+	
+	 itm_heavy_crossbow,
+	 itm_crossbow,
+	 itm_steel_bolts,
+	 itm_modded_baltic_falchion_2,
+	 itm_modded_baltic_falchion_1,
+	 itm_raf_one_handed_axe_c,
+	 itm_raf_one_handed_axe_d,
+	
+	 itm_lit_pavise_g_3,
+	 ],
+	 ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+
+   
+   ["hungarian_town_recruit",
+     "Hungarian Town Recruit",
+	 "Hungarian Town Recruits",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_7,
+     [
+	
+	 itm_pelt_coat,
+	
+	 itm_berber_shoes,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+	
+	 itm_balt_rus_cap,
+	 itm_steppe_cap,
+	 itm_cuman_cap_a,
+	 itm_cuman_cap_c,
+	
+	 itm_pitch_fork,
+	 itm_hatchet,
+	 itm_battle_fork,
+	 itm_military_fork,
+	 itm_military_hammer,
+	 itm_military_pick,
+	 itm_hammer,
+	 itm_club,
+	 itm_cudgel,
+	
+	 itm_targe_3,
+	 itm_targe_4,
+	 ],
+	 foot_attrib_2, militia_wp, militia_skills,
+     euro_face_1, euro_face_2
+   ],
+	 
+   ["hungarian_village_recruit",
+     "Hungarian Village Recruit",
+	 "Hungarian Village Recruits",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_7,
+     [
+	
+	 itm_pelt_coat,
+	
+	 itm_berber_shoes,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+	
+	 itm_balt_rus_cap,
+	 itm_steppe_cap,
+	 itm_cuman_cap_a,
+	 itm_cuman_cap_c,
+	
+	 itm_pitch_fork,
+	 itm_hatchet,
+	 itm_battle_fork,
+	 itm_military_fork,
+	 itm_military_hammer,
+	 itm_military_pick,
+	 itm_hammer,
+	 itm_club,
+	 itm_cudgel,
+	 itm_short_bow,
+	 itm_arrows,
+	
+	 itm_targe_3,
+	 itm_targe_4,
+	 ],
+	 foot_attrib_2, militia_wp, militia_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["slav_levy",
+     "Slav Levy",
+	 "Slav Levies",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_7,
+     [
+	 itm_militia_tunic_a,
+	
+	 itm_ankle_boots,
+	 itm_berber_shoes,
+	 itm_shoes,
+	 itm_woolen_hose,
+	 itm_grey_hose,
+	
+	 itm_balt_rus_cap,
+	 itm_rus_hat_with_padding,
+	
+	 itm_berber_spear,
+	 itm_modded_baltic_falchion_2,
+	 itm_modded_baltic_falchion_1,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	
+	 itm_lit_pavise_e_3,
+	 ],
+	 foot_attrib_3, footman_wp, footman_skills,
+     euro_face_1, euro_face_2
+   ],
+	
+   ["hungarian_pavise_spearman",
+     "Hungarian Pavise Spearman",
+	 "Hungarian Pavise Spearmen",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_7,
+     [
+	
+	 itm_balt_padded_b,
+	
+	 itm_rus_boots_a,
+	 itm_rus_boots_b,
+	 itm_rus_cav_boots,
+	
+	 itm_bulgar_helm_b,
+	 itm_balt_footman_helmet,
+	
+	 itm_berber_spear,
+	 itm_spear_h,
+	 itm_spear_i,
+	 itm_spear_d,
+	 itm_modded_baltic_sword_1,
+	 itm_modded_baltic_sword_2,
+	 itm_modded_baltic_sword_5,
+	
+	 itm_lit_pavise_h_3,
+	 itm_lit_pavise_e_3,
+	 itm_lit_pavise_d_3,
+	 ],
+     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["hungarian_battlefield_assassin",
+     "Hungarian Battlefield Assassin",
+	 "Hungarian Battlefield Assassins",
+	 tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_shield| tf_guarantee_helmet| tf_guarantee_gloves,
+     0, 0, fac_kingdom_7,
+     [
+  
+     itm_kau_rus_mail_shirt_a,
+  
+     itm_byzantine_greaves,
+  
+     itm_sa_gloves_a,
+	 itm_leather_gloves,
+  
+     itm_rus_helmet_b,
+	 itm_rus_helmet_3,
+	 itm_rus_helmet,
+    
+	 itm_scimitar,
+     itm_modded_baltic_sword_4,
+	 itm_modded_baltic_sword_3,
+	 itm_baltic_sword,
+	 itm_czekan,
+  
+     itm_tab_shield_heater_c,
+     ],
+     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
+     nord_face_young_1, swadian_face_old_2,
+   ], 
+	
+   ["hungarian_halbard_levy",
+     "Hungarian Halbard Levy",
+	 "Hungarian Halbard Levies",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots,
+	 0,0, fac_kingdom_7,
+	 [
+	
+	 itm_gambeson_b,
+	
+	 itm_lapcie,
+	 itm_rus_boots_a,
+	 itm_rus_boots_b,
+	 itm_woolen_hose,
+	 itm_hide_boots,
+	
+	 itm_balt_footman_helmet,
+	 itm_balt_helmet_c,
+	
+	 itm_glaive,
+	 itm_bill,
+	 itm_modded_bill_1,
+	 itm_modded_bill_2,
+	 itm_modded_glaive_1,
+	 ],
+	 foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
+     euro_face_1, euro_face_2
+   ],	
+    
+   ["croat_axeman",
+     "Croat Axeman",
+	 "Croat Axemen",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
+	 0,0, fac_kingdom_7,
+	 [
+	
+	 itm_surcoat_lithuania_a,
+	
+	 itm_sa_shoes_crusader,
+	 itm_sa_vizantia_greaves,
+	
+	 itm_mail_mittens,
+	
+	 itm_bulgar_helm,
+	 itm_bulgar_helm_b,
+	 itm_balt_footman_helmet,
+	 itm_baltic_ponted_helmet,
+	
+	 itm_raf_two_handed_axe_a,
+	 itm_raf_two_handed_axe_b,
+	 itm_long_axe_b_alt,
+	 itm_long_axe,
+	 ],
+     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
+     nord_face_young_1, swadian_face_old_2,
+   ],
+	
+	
+   ["hungarian_merchant_cavalry",
+     "Hungarian Merchant Cavalry",
+	 "Hungarian Merchant Cavalrymen",
+	 tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted,
+     0, 0, fac_kingdom_7,
+     [
+  
+     itm_merchant_outfit,
+	 itm_merchant_outfit_2,
+  
+	 itm_rus_boots_b,
+	 itm_rus_boots_a,
+	 itm_lapcie,
+	 itm_berber_shoes,
+  
+     itm_nordic_fur_cap,
+  
+     itm_european_horse_bandits_d,
+	 itm_european_horse_bandits_a,
+	 itm_european_horse_bandits_c,
+  
+     itm_berber_spear,
+     itm_modded_baltic_falchion_2,
+	 itm_modded_baltic_falchion_1,
+  
+     itm_lit_pavise_f_3,
+     ],
+     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
+     euro_face_3, euro_face_4
+   ],
+   
+   ["hungarian_noble_cavalry",
+     "Hungarian Noble Cavalry",
+	 "Hungarian Noble Cavalrymen",
+	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
+     0, 0, fac_kingdom_7,
+     [
+    
+	 itm_surcoat_lithuania_b,
+	
+	 itm_rus_boots_b,
+	 itm_rus_boots_a,
+	 itm_rus_cav_boots,
+	
+	 itm_sa_gloves_a,
+	
+	 itm_steppe_helmet,
+	 itm_kipchak_steppe_helmet,
+	 itm_baltic_ponted_helmet,
+	
+	 itm_european_horse_d,
+	 itm_european_horse_b,
+	 itm_european_horse_e,
+	
+	 itm_strong_bow,
+	 itm_khergit_arrows,
+	 itm_strely,
+	 itm_modded_baltic_sword_3,
+	 itm_modded_baltic_sword_4,
+	 itm_modded_baltic_sword_5,
+	 
+	
+	 itm_lit_pavise_f_3,
+	 itm_tab_shield_small_round_c,
+     ],
+     horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
+     rhodok_face_younger_1, rhodok_face_old_2
+   ],
+   
+   
+   ["hungarian_squire",
+     "Hungarian Squire",
+	 "Hungarian Squires",
+	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_7,
+     [
+	
+	 itm_haubergeon,
+	
+	 itm_byz_cavalry_boots,
+	
+	 itm_sa_gloves_a,
+	 itm_leather_gloves,
+	
+	 itm_balt_spiked_helmet,
+	
+	 itm_european_horse_a,
+	 itm_european_horse_b,
+	
+	 itm_modded_baltic_sword_4,
+	 itm_baltic_sword,
+	 itm_berber_spear,
+	 itm_lance,
+	 itm_talak_warhammer,
+	 # itm_talak_mace,
+	 itm_modded_baltic_sword_3,
+	 itm_raf_one_handed_axe_d,
+	 itm_raf_one_handed_axe_c,
+	
+	 itm_lithuanian_shield9,
+	 itm_tab_shield_heater_cav_a,
+	 ], 
+	 horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   
+   ["hungarian_knight",
+     "Hungarian Knight",
+	 "Hungarian Knights",
+	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_7,
+     [
+	 itm_surcoat_hungary_a,
+	 itm_surcoat_bohemia,
+	
+	 itm_kau_mail_boots_dark_long,
+	
+	 itm_mail_mittens,
+	
+	 itm_great_helmet_c,
+	
+	 itm_warhorse_hungary_a,
+	 itm_warhorse_bohemia,
+	
+	 itm_bb_rus_sword_1,
+	 itm_modded_rus_sword_1,
+	 itm_bb_rus_sword_6,
+	 itm_heavy_lance,
+	 itm_heraldic_lance,
+	 itm_morningstar,
+	 itm_mace_4,
+	 itm_talak_warhammer,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	 itm_raf_one_handed_axe_c,
+	
+	 itm_lit_pavise_b_3,
+	 ],
+     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   
+####Poland   
+	
+   ["polish_town_recruit",
+     "Polish Town Recruit",
+	 "Polish Town Recruits",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_5,
+     [
+	
+	 itm_almogavar_a,
+	
+	 itm_green_hose,
+	 itm_yellow_hose,
+	 itm_red_hose,
+	 itm_berber_shoes,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+	 
+	 itm_leather_warrior_cap,
+	 itm_rus_hat_with_padding,
+	 itm_balt_rus_cap,
+	
+	 itm_pitch_fork,
+	 itm_hatchet,
+	 itm_fighting_pick,
+	 itm_hammer,
+	 itm_military_fork,
+	 itm_military_hammer,
+	 itm_military_pick,
+	 itm_battle_fork,
+	
+	 itm_targe_6,
+	 ],
+	 foot_attrib_2, militia_wp, militia_skills,
+     euro_face_1, euro_face_2
+   ],
+	
+   ["polish_village_recruit",
+     "Polish Village Recruit",
+	 "Polish Village Recruits",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_5,
+     [
+	
+	 itm_almogavar_a,
+	
+	 itm_green_hose,
+	 itm_yellow_hose,
+	 itm_red_hose,
+	 itm_berber_shoes,
+	 itm_shoes,
+	 itm_legs_with_shoes,
+	 
+	 itm_leather_warrior_cap,
+	 itm_rus_hat_with_padding,
+	 itm_balt_rus_cap,
+	
+	 itm_pitch_fork,
+	 itm_hatchet,
+	 itm_fighting_pick,
+	 itm_hammer,
+	 itm_military_fork,
+	 itm_military_hammer,
+	 itm_military_pick,
+	 itm_battle_fork,
+	 itm_short_bow,
+	 itm_arrows,
+	
+	 itm_targe_6,
+	 ],
+	 foot_attrib_2, militia_wp, militia_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   
+   ["polish_peasant_militia",
+     "Polish Peasant Militia",
+	 "Polish Peasant Militiamen",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_5,
+     [
+	
+	 itm_kau_arab_lamellar_vest_b,
+	
+	 itm_ankle_boots,
+	 itm_berber_shoes,
+	 itm_tied_up_shoes,
+	
+	 itm_nomad_cap_b,
+	 itm_rus_militia_helmet,
+	 itm_balt_rus_cap,
+	
+	 itm_spear_b,
+	 itm_spear_d,
+	 itm_spear_e,
+	 itm_spear_a,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	
+	 itm_lit_pavise_e_3,
+	 ],
+	 foot_attrib_3, footman_wp, footman_skills,
+     euro_face_1, euro_face_2
+   ],
+
+   ["polish_spear_levy",
+     "Polish Spear Levy",
+     "Polish Spear Levies",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
+     0, 0, fac_kingdom_5,
+     [
+	
+	 itm_padded_cloth,
+	
+	 itm_hunter_boots,
+	 itm_lapcie,
+	 itm_hide_boots,
+	 itm_leather_fur_boots,
+	
+	 itm_nomad_cap_b,
+	 itm_balt_footman_helmet,
+	 itm_rus_hat_with_padding,
+	 itm_nomad_cap,
+	 itm_nomad_cap_c,
+	
+	 itm_spear_a,
+	 itm_spear_i,
+	 itm_spear_m,
+	 itm_spear_c,
+	 itm_modded_baltic_falchion_1,
+	 itm_modded_baltic_falchion_2,
+	 itm_raf_one_handed_axe_c,
+	 itm_raf_one_handed_axe_b,
+	
+	 itm_lithuanian_shield9,
+	 ],
+	 foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
+     euro_face_3, euro_face_4
+   ],
+  
+  
+   ["dismounted_polish_noble",
+     "Dismounted Polish Noble",
+	 "Dismounted Polish Nobles",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield| tf_guarantee_gloves,
+     0, 0, fac_kingdom_5,
+     [
+   
+     # itm_md_surcoat_22,
+     itm_rnd_surcoat_22,
+     itm_civil_rich_boots_b,
+	 itm_civil_rich_boots_a,
+   
+     itm_mail_mittens,
+   
+     itm_rhodok_four_plated_helmet,
+	 itm_polski_helm,
+   
+     itm_bb_rus_sword_1,
+	 itm_bb_rus_sword_3,
+	 itm_bb_rus_sword_6,
+	 itm_spear_g,
+	 itm_spear_h,
+     itm_spear_k,
+     itm_raf_one_handed_axe_d,
+	 itm_raf_one_handed_axe_b,
+   
+     itm_lit_pavise_d_3,
+     ],
+     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
+     nord_face_young_1, swadian_face_old_2,
+   ],
+   
+   
+   ["polish_halberd_levy",
+     "Polish Halberd Levy",
+	 "Polish Halberd Levies",
+     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots,
+     0,0, fac_kingdom_5,
+     [
+   
+     itm_padded_cloth,
+ 	
+     itm_hunter_boots,
+	 itm_lapcie,
+	 itm_hide_boots,
+	 itm_cuman_boots,
+	
+     itm_nomad_cap_b,
+	
+     itm_glaive,
+     itm_bill,
+     ],
+     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
+     euro_face_1, euro_face_2
+   ],
+
+    
+   ["polish_woodsman",
+     "Polish Woodsman",
+	 "Polish Woodsmen",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
+     0,0, fac_kingdom_5,
+	 [
+	
+	 itm_rus_leather_scale_b,
+	
+	 itm_sa_boot_average_crusader_1,
+	 itm_sa_boot_light_crusader,
+	 itm_rus_boots_a,
+	 itm_rus_boots_b,
+	
+	 itm_sa_gloves_a,
+	 itm_leather_gloves,
+	
+	 itm_raf_spangen,
+	 itm_polski_helm,
+	
+	 itm_raf_two_handed_axe_a,
+	 itm_raf_two_handed_axe_b,
+	 itm_long_axe_b_alt,
+	 itm_long_axe,
+	 ],
+     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
+     nord_face_young_1, swadian_face_old_2
+    ],
+	
+   
+   ["polish_strzelcy",
+     "Polish Strzelcy",
+	 "Polish Strzelcy Cav Crossbowmen",
+	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
+     0, 0, fac_kingdom_5,
+     [
+    
+	 itm_balt_lamellar_coat_b,
+	
+	 itm_sa_boot_average_crusader_1,
+	 itm_rus_boots_a,
+	 itm_rus_boots_b,
+	
+	 itm_sa_gloves_a,
+	 itm_leather_gloves,
+	
+	 itm_raf_spangen,
+	
+	 itm_horse_d,
+	 itm_horse_e,
+	
+	 itm_light_crossbow,
+	 itm_bolts,
+	 itm_raf_one_handed_axe_d,
+	 itm_raf_one_handed_axe_e,
+	 itm_raf_one_handed_axe_g,
+	 itm_modded_baltic_falchion_1,
+	 itm_modded_baltic_falchion_2,
+	
+	 itm_lithuanian_shield9,
+     ],
+     horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   ["polish_retainer",
+     "Polish Retainer",
+	 "Polish Retainers",
+	 tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves,
+     0, 0, fac_kingdom_5,
+     [
+	  
+	 # itm_byz_lamellar_b,
+	 itm_surcoat_f, ############### NEW v3.11 - 
+	
+	 itm_leather_gloves,
+	 itm_mail_boots_long,   ############### NEW v3.11 - 
+	
+	 itm_european_horse_d,
+	 itm_european_horse_a,
+	
+	 itm_mail_coif,
+	 itm_polski_helm,
+	 
+	 itm_modded_templar_arming_sword,
+	 itm_modded_euro_shortsword_1,
+	 itm_modded_euro_shortsword_2,
+	 itm_modded_euro_shortsword_3,
+	 itm_lance,
+	 itm_spear_d,
+	 itm_spear_k,
+	 itm_spear_e,
+	 itm_spear_l,
+	
+	 itm_lithuanian_shield9,
+     ],
+     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
+     euro_face_3, euro_face_4
+   ],
+   
+   ["polish_noble",
+     "Polish Noble",
+	 "Polish Noble",
+	 tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet|tf_guarantee_gloves,
+     0, 0, fac_kingdom_5,
+     [
+   
+     itm_rnd_surcoat_22,
+   
+     itm_civil_rich_boots_b,
+	 itm_civil_rich_boots_a,
+   
+     itm_mail_mittens,
+   
+     itm_rhodok_four_plated_helmet,
+	 itm_polski_helm,
+	 itm_mail_coif,
+	 itm_mail_coif_b,
+    
+     itm_javelin,
+     itm_throwing_spears,
+     itm_bb_rus_sword_1, 
+	 itm_bb_rus_sword_3,
+	 itm_bb_rus_sword_6,
+	 itm_modded_euro_armingsword_2,
+	 
+     itm_lit_pavise_d_3,
+     ],
+     horse_attrib_5, cum_harcher_wp, cum_harcher_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+   ["polish_guard",
+     "Polish Guard",
+	 "Polish Guards",
+	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_5,
+     [
+	 
+	 itm_surcoat_pol_a,
+	 
+	 itm_kau_mail_boots_dark_long,
+	 
+	 itm_mail_mittens,
+	 
+	 itm_frenchpepperpot3,
+	 itm_pepperpothelm1,
+	 itm_polski_helm,
+	 
+	 itm_warhorse_pol_a,
+	 
+	 itm_modded_euro_longsword_1,
+	 itm_modded_euro_longsword_2,
+	 itm_heavy_lance,
+	 itm_lance,
+	 itm_talak_warhammer,
+	 # itm_talak_mace,
+	 itm_morningstar,
+	 itm_raf_one_handed_axe_h,
+	 itm_raf_one_handed_axe_g,
+	 
+     itm_lit_pavise_b_3,
+     ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+   
+
+   ["polish_peasant_archer",
+     "Polish Peasant Archer",
+     "Polish Peasant Archers",	 
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
+	 0,0, fac_kingdom_5,
+	 [
+	
+	 itm_almogavar_a,
+	
+	 itm_green_hose,
+	
+	 itm_leather_warrior_cap,
+	
+	 itm_hunting_bow,
+	 itm_arrows,
+	 itm_dagger,
+	 itm_knife,
+	 itm_butchering_knife,
+	
+	 itm_targe_6,
+	 ],
+	 ranged_attrib_3, skirmisher_wp, skirmisher_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["polish_veteran_archer",
+     "Polish Veteran Archer",
+	 "Polish Veteran Archers",
+	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
+	 0,0, fac_kingdom_5,
+	 [
+	 
+	 itm_kau_arab_lamellar_vest_b,
+	
+	 itm_ankle_boots,
+	
+	 itm_nomad_cap_b,
+	 itm_polski_helm,
+	
+	 itm_short_bow,
+	 itm_strely,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	
+	 itm_lit_pavise_e_3,
+	 ],
+	 ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+	 
+	 
+   ["polish_crossbow_militia",
+     "Polish Crossbow Militia",
+	 "Polish Crossbow Militiamen",
+	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
+	 0,0, fac_kingdom_5,
+	 [
+	 
+	 itm_kau_arab_lamellar_vest_b,
+	
+	 itm_ankle_boots,
+	
+	 itm_nomad_cap_b,
+	 
+	 itm_hunting_crossbow,
+	 itm_bolts,
+	 itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	 
+	 itm_targe_4,
+	 ],
+     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
+     euro_face_1, euro_face_2
+   ], 
+   
+   
+#### Mercenaries
+
+   ["scots_guard",
+     "Scots Guard",
+	 "Scots_Guards",
+	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_ranged| tf_guarantee_shield| tf_guarantee_gloves,
+	 0,0, fac_kingdom_10,
+	 [
+     
+     itm_surcoat_over_mail,
+     
+     itm_splinted_leather_greaves,
+
+     itm_mail_mittens,
+
+     itm_raf_spangen,
+	 itm_vik_norman_helmet_b,
+
+     itm_long_bow,
+     itm_strely,
+     itm_raf_one_handed_axe_a,
+	 itm_raf_one_handed_axe_b,
+	 itm_raf_one_handed_axe_c,
+	 itm_modded_falchion_3,
+	 itm_almogavar_sword,
+     
+     itm_gaelic_shield_a,
+     ],
+	 ranged_attrib_5, welsh_veteran_archer_wp, welsh_veteran_archer_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+  
+   ["magyar_cavalry",
+     "Magyar Cavalry",
+	 "Magyar Cavalrymen",
+	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
+     0, 0, fac_kingdom_7,
+     [
+	 
+	 itm_lamellar_vest,
+	 
+	 itm_byz_cavalry_boots,
+	 
+	 itm_leather_gloves,
+	 
+	 itm_steppe_helmet,
+	 
+	 itm_steppe_horse,
+	 itm_saracin_hard_horses_b_v1,
+	 
+	 itm_strong_bow,
+	 itm_barbed_arrows,
+	 itm_modded_baltic_sword_2,
+	 
+	 itm_targe_4,
+	 ],
+	 horse_attrib_elite, cum_vharcher_wp, cum_vharcher_skills,
+     khergit_face_middle_1, khergit_face_older_2
+   ],
+	 
+   ["hussar_cavalry",
+     "Hussar Cavalry",
+	 "Hussar Cavalry",
+	 tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_gloves,
+     0, 0, fac_kingdom_5,
+     [
+     itm_balt_lamellar_vest_c,
+	 itm_byz_cavalry_boots,
+	 itm_leather_gloves,
+	 itm_raf_spangen,
+     
+	 itm_lance,
+	 itm_light_lance,
+	 itm_bb_rus_sword_1,
+	 
+	 itm_arabian_horse_a,
+	 
+	 itm_tab_shield_small_round_c,
+     ],
+     horse_attrib_elite, cum_hlancer_wp, cum_hlancer_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+	
+
+
+
 ###################################################################################################
 
 #This troop is the troop marked as soldiers_end and town_walkers_begin
@@ -36453,7 +39015,7 @@ troops = [
 ###### Zendar
   ["tournament_master","Tournament Master","{!}Tournament Master",tf_hero, scn_zendar_center|entry(1),reserved,  fac_commoners,[itm_nomad_armor,itm_wrapping_boots],def_attrib|level(2),wp(20),knows_common,0x000000000008414401e28f534c8a2d09],
   ["trainer","Trainer","Trainer",tf_hero, scn_zendar_center|entry(2),reserved,  fac_commoners,[itm_red_shirt,itm_hide_boots],def_attrib|level(2),wp(20),knows_common,0x00000000000430c701ea98836781647f],
-  ["Constable_Hareck","Constable Hareck","Constable Hareck",tf_hero, scn_zendar_center|entry(5),reserved,  fac_commoners,[itm_leather_jacket,itm_hide_boots],def_attrib|level(5),wp(20),knows_common,0x00000000000c41c001fb15234eb6dd3f],
+  # ["Constable_Hareck","Constable Hareck","Constable Hareck",tf_hero, scn_zendar_center|entry(5),reserved,  fac_commoners,[itm_leather_jacket,itm_hide_boots],def_attrib|level(5),wp(20),knows_common,0x00000000000c41c001fb15234eb6dd3f],
 
 ###### Ryan BEGIN
   ["Ramun_the_slave_trader","Ramun, the slave trader","Ramun, the slave trader",tf_hero, no_scene,reserved, fac_commoners,[itm_leather_jacket,itm_hide_boots],def_attrib|level(5),wp(20),knows_common,0x0000000fd5105592385281c55b8e44eb00000000001d9b220000000000000000],
@@ -55038,8 +57600,14 @@ troops = [
   ##diplomacy begin
   ["dplmc_chamberlain","Chamberlain", "Chamberlains",tf_hero|tf_male,0,0,fac_commoners,[itm_archer_a, itm_leather_boots], def_attrib|level(60), wp(40),knows_inventory_management_10,0x0000000dfc0c238838e571c8d469c91b00000000001e39230000000000000000],
 
-  ["dplmc_constable","Constable","Constables",tf_hero|tf_male,0,0,fac_commoners,[itm_kau_mail_a, itm_leather_boots],
-   knight_attrib_5,wp_melee(200),knows_common|knows_shield_3|knows_ironflesh_3|knows_power_strike_4|knows_athletics_4,0x0000000b4b1015054b1b4d591cba28d300000000001e472b0000000000000000],
+  # ["dplmc_constable","Constable","Constables",tf_hero|tf_male,0,0,fac_commoners,[itm_kau_mail_a, itm_leather_boots],
+   # knight_attrib_5,wp_melee(200),knows_common|knows_shield_3|knows_ironflesh_3|knows_power_strike_4|knows_athletics_4,0x0000000b4b1015054b1b4d591cba28d300000000001e472b0000000000000000],
+   
+  ["dplmc_constable","Constable","Constables",tf_hero|tf_male,0,0,fac_commoners,[itm_ee_constable_kau_mail_a, itm_leather_boots],
+   def_attrib|level(1), wp(100), knows_inventory_management_10, 0x0000000b4b1015054b1b4d591cba28d300000000001e472b0000000000000000],
+############### NEW v3.11 - 
+  ["ee_constable_armory","Armory","Armory",tf_hero|tf_male,0,0,fac_commoners,[],def_attrib|level(60), wp(40),knows_inventory_management_10, 0x00000009a20c21cf491bad28a28628d400000000001e371a0000000000000000],
+############### 
 
   ["dplmc_chancellor","Chancellor","Chancellors",tf_hero|tf_male,0,0,fac_commoners,[itm_priest_cap_2,itm_priest_robe_2,itm_hide_boots],def_attrib|level(60), wp(40),knows_inventory_management_10, 0x00000009a20c21cf491bad28a28628d400000000001e371a0000000000000000],
 
@@ -56539,427 +59107,6 @@ troops = [
 
 
 
-
-
-
-
-############################
-  ["saint_lazarus_half_brother_dismounted",
-     "Dismounted Saint Lazarus Serjeant",
-     "Dismounted Saint Lazarus Serjeants",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_lance,
-    itm_sword_type_xiii,
-    itm_morningstar,
-    itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
-    itm_talak_warhammer,
-
-    itm_lazarus_serjeant_tunic,
-
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
-    ],
-    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
-    nord_face_young_1, swadian_face_old_2
-  ],
-
-
-  ["saint_lazarus_knight_dismounted",
-     "Dismounted Saint Lazarus Knight",
-     "Dismounted Saint Lazarus Knights",
-    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_mail_boots_long,
-    itm_lance,
-    itm_morningstar,
-
-    itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_rnd_helm_03,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_lazarus_serjeant_tunic,
-
-    ],
-    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-  ],
-
-  ["santiago_half_brother_dismounted",
-     "Dismounted Santiago Serjeant",
-     "Dismounted Santiago Serjeants",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_lance,
-    itm_sword_type_xiii,
-    itm_kau_santiago,
-    itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
-    itm_talak_warhammer,
-
-    itm_santiago_knight,
-
-
-
-    itm_mail_coif,
-    itm_andalusian_helmet_b,
-    itm_great_helmet_decorative,
-    itm_andalusian_helmet_d,
-    itm_mail_coif_b,
-    itm_mail_coif_c,
-    itm_norman_coif_c,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_elm7,
-    itm_elm8,
-    itm_flat_topped_helmet_a,
-    itm_flat_topped_helmet_a,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_andalusian_helmet_b,
-
-    itm_mail_boots_long,
-    ],
-    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
-    nord_face_young_1, swadian_face_old_2
-  ],
-
-
-  ["santiago_knight_dismounted",
-     "Dismounted Santiago Knight",
-     "Dismounted Santiago Knights",
-    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_mail_boots_long,
-    itm_lance,
-
-    itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_kau_santiago,
-
-    itm_mail_coif,
-    itm_andalusian_helmet_b,
-    itm_great_helmet_decorative,
-    itm_andalusian_helmet_d,
-    itm_mail_coif_b,
-    itm_mail_coif_c,
-    itm_norman_coif_c,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_elm7,
-    itm_elm8,
-    itm_flat_topped_helmet_a,
-    itm_flat_topped_helmet_a,
-
-    itm_kolpak_mail,
-    itm_rhodok_great_helmet,
-    itm_mail_coif,
-
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_santiago_knight,
-
-        ],
-    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-  ],
-
-  ["calatrava_half_brother_dismounted",
-     "Dismounted Calatrava Serjeant",
-     "Dismounted Calatrava Serjeants",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_lance,
-    itm_sword_type_xiii,
-    itm_morningstar,
-    itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
-    itm_talak_warhammer,
-
-    itm_calatrava_knight,
-
-
-
-    itm_mail_coif,
-
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_andalusian_helmet_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_andalusian_helmet_d,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
-    ],
-    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
-    nord_face_young_1, swadian_face_old_2
-  ],
-
-
-  ["calatrava_knight_dismounted",
-     "Dismounted Calatrava Knight",
-     "Dismounted Calatrava Knights",
-    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_mail_boots_long,
-    itm_lance,
-    itm_morningstar,
-
-    itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_rnd_helm_03,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_calatrava_knight,
-
-        ],
-    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-  ],
-
-
-  ["saint_thomas_half_brother_dismounted",
-     "Dismounted Sergeant of the Order of Saint Thomas of Acre",
-     "Dismounted Sergeants of the Order of Saint Thomas of Acre",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_lance,
-    itm_sword_type_xiii,
-    itm_morningstar,
-    itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
-    itm_talak_warhammer,
-
-    itm_saint_thomas_knight,
-
-
-
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
-    ],
-    horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
-    nord_face_young_1, swadian_face_old_2
-  ],
-
-
-  ["saint_thomas_knight_dismounted",
-     "Dismounted Knight of the Order Saint Thomas of Acre",
-     "Dismounted Knights of the Order Saint Thomas of Acre",
-    tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
-    0, 0, fac_kingdom_1,
-    [
-    itm_mail_boots_long,
-    itm_lance,
-    itm_morningstar,
-
-    itm_saint_thomas_knight,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_rnd_helm_03,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-	itm_wenceslav_helmet,
-
-    itm_norman_faceplate,
-
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-        ],
-    horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-    0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
-  ],
 
 
 
@@ -58867,2137 +61014,6 @@ troops = [
 
 ########## NEW v3.10
 
-
-
-
-############################
-  ["english_sherwood_archer",
-     "English Sherwood Archer",
-     "English Sherwood Archers",
-    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
-    0, 0, fac_kingdom_9,
-    [
-    itm_arrows,
-
-    itm_dagger,
-	itm_hatchet,
-	itm_butchering_knife,
-	itm_knife,
-
-    itm_short_bow,
-    
-	itm_pilgrim_hood,
-	itm_pilgrim_disguise,
-    
-    itm_ankle_boots,
-    itm_green_hose,
-	itm_green_hose_b,
-	itm_yellow_hose,
-	itm_grey_hose,
-	itm_dark_grey_hose,
-	itm_shoes,
-	itm_legs_with_shoes,
-	itm_tied_up_shoes,
-	
-    itm_talak_buckler,
-    ],
-    ranged_attrib_3, archer_regulars_wp, archer_regulars_skills,
-    nord_face_young_1, swadian_face_old_2
-  ],
-
-
-  ["english_longbowman",
-     "English Longbowman",
-     "English Longbowmen",
-    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
-    0, 0, fac_kingdom_9,
-    [
-    itm_strely,
-
-    itm_hatchet,
-	itm_almogavar_sword,
-	itm_falchion,
-	itm_modded_falchion_1,
-	itm_modded_falchion_2,
-    
-    itm_long_bow,
-
-    itm_thomas_padded_armour,
-
-    itm_almogavar_helmet,
-	itm_koif_monie_a,
-	itm_koif_monie_b,
-    
-    itm_leather_boots,
-    itm_leather_fur_boots,
-	itm_kau_mail_boots,
-	itm_hunter_boots,
-	itm_hide_boots,
-	itm_highlander_boots_1,
-
-    itm_talak_buckler,
-    ],
-    ranged_attrib_4, archer_veteran_wp, archer_veteran_skills,
-    nord_face_young_1, swadian_face_old_2
-  ],
-
-  ["english_retinue_longbowman",
-     "English Retinue Longbowman",
-     "English Retinue Longbowmen",
-    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
-    0, 0, fac_kingdom_9,
-    [
-    itm_bodkin_arrows,
-	itm_barbed_arrows,
-    
-	itm_sa_gloves_b,
-	itm_sa_gloves_a,
-	itm_leather_gloves,
-	itm_dethertir_gloves,
-	
-    itm_long_bow,
-	itm_modded_euro_sidesword_1,
-	itm_modded_euro_sidesword_2,
-    
-	itm_light_capelina_crusader,
-	itm_light_crusader_helm_3,
-	itm_vik_spangen_b,
-	itm_modded_helmet_kettle_cloth_1,
-	itm_modded_helmet_kettle_cloth_2,
-	itm_modded_helmet_kettle_cloth_3,
-	itm_modded_helmet_kettle_cloth_4,
-	itm_footman_helmet,
-	itm_kettle_cloth,
-	itm_elm2,
-	itm_sa_crusader_koif_a,
-	itm_light_crusader_helm_2,
-	
-	itm_kau_rus_mail_shirt_b,
-    
-	itm_splinted_leather_greaves,
-
-    itm_1257_pavise,
-	itm_tab_shield_pavise_d,
-    ],
-    ranged_attrib_elite, archer_veteran_wp, archer_veteran_skills,
-    nord_face_young_1, swadian_face_old_2
-  ],
-############################
-
-
-
-   ["english_town_recruit",
-     "English Town Recruit",
-	 "English Town Recruits",
-	  tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_byz_psiloi_b,
-  
-     itm_red_hose,
-     itm_green_hose,
-     itm_grey_hose,
-     itm_yellow_hose,
-	 itm_dark_grey_hose,
-	 itm_grey_hose,
-	 itm_green_hose_b,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-	 itm_tied_up_shoes,
-  
-     itm_head_wrappings,
-	 itm_arming_cap,
-	 itm_priest_cap_1,
-  
-     itm_hammer,
-     itm_pitch_fork,
-     itm_club,
-	 itm_fighting_pick,
-	 itm_cleaver,
-	 itm_military_pick,
-	 itm_military_hammer,
-	 itm_military_fork,
-	 itm_battle_fork,
-	 itm_short_bow,
-	 itm_arrows,
-  
-     itm_talak_buckler,
-     ],
-     foot_attrib_2, militia_wp, militia_skills,
-     euro_face_3, euro_face_4
-   ],
-   
-   ["english_village_recruit",
-     "English Village Recruit",
-     "English Village Recruits",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_byz_psiloi_b,
-  
-     itm_red_hose,
-     itm_green_hose,
-     itm_grey_hose,
-     itm_yellow_hose,
-	 itm_dark_grey_hose,
-	 itm_grey_hose,
-	 itm_green_hose_b,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-	 itm_tied_up_shoes,
-  
-     itm_head_wrappings,
-	 itm_arming_cap,
-	 itm_priest_cap_1,
-  
-     itm_hammer,
-     itm_pitch_fork,
-     itm_club,
-	 itm_fighting_pick,
-	 itm_cleaver,
-	 itm_military_pick,
-	 itm_military_hammer,
-	 itm_military_fork,
-	 itm_battle_fork,
-  
-     itm_talak_buckler,
-     ],
-     foot_attrib_2, militia_wp, militia_skills,
-     euro_face_3, euro_face_4
-   ],
- 
-   ["english_levy_spearman",
-     "English Levy Spearman",
-     "English Levy Spearmen",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_militia_tunic_b,
-  
-     itm_ankle_boots,
-     itm_hide_boots,
-	 itm_leather_fur_boots,
-  
-     itm_skullcap,
-	 itm_leather_warrior_cap,
-	 itm_koif_monie_a,
-	 itm_koif_monie_b,
-	 itm_leather_cap,
-	 itm_1257_hood,
-	 itm_padded_coif,
-  
-     itm_spear_a,
-	 itm_spear_b,
-	 itm_spear_c,
-	 itm_spear_d,
-	 itm_spear_e,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_falchion,
-	 itm_modded_falchion_1,
-  
-     itm_tab_shield_round_a,
-     ],
-     foot_attrib_3, footman_wp, footman_skills,
-     euro_face_3, euro_face_4
-    ],
- 
-   ["english_militia_footman",
-     "English Militia Footman",
-     "English Militia Footmen",
-     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_kau_haubergeon_a,
-  
-     itm_leather_boots,
-     itm_kau_mail_boots,
-	 itm_green_hose,
-	 itm_red_hose,
-	 itm_grey_hose,
-	
-     itm_light_capelina_crusader,
-	 itm_light_crusader_helm_3,
-	 itm_vik_spangen_b,
-	 itm_modded_helmet_kettle_cloth_1,
-	 itm_modded_helmet_kettle_cloth_2,
-	 itm_modded_helmet_kettle_cloth_3,
-	 itm_modded_helmet_kettle_cloth_4,
-	 itm_norman_coif_c,
-	 itm_footman_helmet,
-	 itm_almogavar_helmet,
-	 itm_kettle_cloth,
-	 itm_norman_coif_d,
-	 itm_sa_crusader_koif_a,
-	 itm_elm2,
-  
-     itm_modded_euro_sidesword_1,
-	 itm_modded_euro_sidesword_2,
-     itm_spear_b,
-	 itm_spear_g,
-	 itm_spear_a,
-	 itm_spear_j,
-  
-     itm_tab_shield_round_c,
-     ],
-     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
-     euro_face_3, euro_face_4
-   ],
-
-   ["english_armoured_swordsman",
-     "English Armoured Swordsman",
-     "English Armoured Swordsmen",
-     tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_shield| tf_guarantee_helmet| tf_guarantee_gloves,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_mail_with_surcoat,
-  
-     itm_sa_shoes_crusader,
-	 itm_sa_vizantia_greaves,
-  
-     itm_mail_mittens,
-	 itm_gauntlets_crysader,
-	 itm_dethertir_gauntlets,
-  
-     itm_sa_crusader_hard_helm_4,
-  
-     itm_modded_euro_armingsword_1,
-	 itm_modded_euro_armingsword_2,
-	 itm_modded_euro_armingsword_3,
-	 itm_modded_damascus_sword,
-	 itm_cp391_sword,
-	 itm_sword_type_xiv,
-  
-     itm_tab_shield_heater_c,
-	 itm_tab_shield_kite_c,
-     ],
-     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-     euro_face_3, euro_face_4
-   ], 
-  
-  
-   ["english_billman",
-     "English Billman",
-     "English Billmen",
-     tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_surcoat_d,
-  
-     itm_leather_boots,
-	 itm_leather_fur_boots,
-	 itm_hunter_boots,
-	 itm_hide_boots,
-	 itm_highlander_boots_1,
-  
-     itm_light_capelina_crusader,
-	 itm_light_crusader_helm_3,
-	 itm_vik_spangen_b,
-	 itm_modded_helmet_kettle_cloth_1,
-	 itm_kettle_cloth,
-	 itm_modded_helmet_kettle_cloth_2,
-	 itm_norman_coif_c,
-	 itm_norman_coif_d,
-	 itm_flat_kettle_hat,
-	 itm_vik_norman_helmet_e,
-	 itm_footman_helmet,
-	 itm_almogavar_helmet,
-  
-     itm_modded_billhook_fork_1,
-     itm_modded_billhook_fork_2,
-     itm_modded_billhook_2,
-     ],
-     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
-     euro_face_1, euro_face_2
-   ], 
- 
-   ["english_heavy_billman",
-     "English Heavy Billman",
-     "English Heavy Billmen",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_sa_vizantia_greaves,
-	 itm_sa_shoes_crusader,
-  
-     itm_mail_mittens,
-	 itm_dethertir_gauntlets,
-	 itm_gauntlets_crysader,
-  
-     itm_sa_crusader_helm_10,
-	 itm_capelina_crusader,
-	 itm_sa_crusader_helm_1,
-	 itm_elm3,
-	 itm_great_helmet_d,
-	 itm_kolpak_mail,
-	 itm_kettlehat_e,
-	 itm_kettlehat_d,
-	 
-	 itm_coat_of_plates_red,
-  
-     itm_modded_bill_1,
-     itm_modded_billhook_1,
-	 itm_bill,
-	 itm_modded_bill_2,
-	 itm_modded_billhook_3,
-     ],
-     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     euro_face_1, euro_face_2
-   ],
-
-   ["english_hobilar",
-     "English Hobilar",
-     "English Hobilars",
-     tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_genoa_padded_b,
-  
-     itm_yellow_hose,
-     itm_green_hose_b,
-     itm_red_hose,
-	 itm_green_hose_b,
-	 itm_dark_grey_hose,
-	 itm_grey_hose,
-  
-     itm_padded_coif,
-	 itm_leather_cap,
-	 itm_1257_hood,
-	 itm_koif_monie_a,
-	 itm_koif_monie_b,
-	 itm_turret_hat_green,
-  
-     itm_saddle_horse,
-	 itm_sumpter_horse,
-  
-     itm_spear_k,
-	 itm_spear_l,
-	 itm_spear_i,
-	 itm_spear_o,
-     itm_modded_falchion_1,
-	 itm_falchion,
-	 itm_modded_falchion_2,
-	 itm_modded_falchion_3,
-  
-     itm_gaelic_shield_b,
-     ],
-     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
-     euro_face_3, euro_face_4
-   ],
-
-   ["english_demi_lancer",
-     "English Demi Lancer",
-     "English Demi Lancers",
-     tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_man_at_arms_c,
-  
-     itm_hunter_boots,
-     itm_kau_mail_boots,
-	 itm_leather_boots,
-	 itm_highlander_boots_1,
-	
-     itm_elm2,
-	 itm_vik_norman_helmet_e,
-	 itm_flat_kettle_hat,
-	 itm_footman_helmet,
-	 itm_almogavar_helmet,
-	 itm_kettle_cloth,
-	 itm_norman_coif_c,
-	 itm_norman_coif_d,
-	 
-     itm_horse_d,
-	 itm_horse_e,
-  
-     itm_lance,
-     itm_modded_euro_shortsword_1,
-	 itm_modded_euro_shortsword_2,
-	 itm_modded_euro_shortsword_3,
-	 itm_light_lance,
-	 itm_cp391_sword,
-	 itm_sword_type_xiv,
-  
-     itm_tab_shield_small_round_b,
-     ],
-     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
-     euro_face_3, euro_face_4
-   ],
-
-   ["english_squire",
-     "English Squire",
-     "English Squires",
-     tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted| tf_guarantee_gloves,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_mail_with_surcoat,
-  
-     itm_splinted_leather_greaves,
-  
-     itm_dethertir_gloves,
-	 itm_leather_gloves,
-	 itm_sa_gloves_a,
-  
-     itm_mail_coif_b,
-	 itm_mail_coif,
-  
-     itm_courser,
-   	 itm_european_horse_a,
-	 itm_european_horse_b,
-	 itm_european_horse_c,
-	 itm_european_horse_d,
-  
-     itm_light_lance,
-     itm_sword_type_xii,
-     itm_cp391_sword,
-     itm_modded_damascus_sword,
-	 itm_lance,
-	 itm_talak_warhammer,
-	 itm_modded_euro_armingsword_1,
-	 itm_modded_euro_armingsword_2,
-	 itm_modded_euro_armingsword_3,
-	
-     itm_tab_shield_heater_c,
-	 itm_tab_shield_kite_c,
-     ],
-     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-
-   ["english_knight",
-     "English_Knight",
-     "English Knights",
-     tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted| tf_guarantee_gloves,
-     0, 0, fac_kingdom_9,
-     [
-  
-     itm_surcoat_bigod,
-	 itm_rnd_surcoat_08,
-	 itm_rnd_surcoat_17,
-	 itm_rnd_surcoat_20,
-	 itm_rnd_surcoat_23,
-	 itm_modded_surcoat_5,
-	 itm_modded_surcoat_11,
-	 itm_modded_surcoat_12,
-  
-     itm_mail_chausses,
-	 itm_raf_mail_chausses,
-  
-     itm_scale_gauntlets,
-  
-     itm_rhodok_great_helmet,
-	 itm_sa_crusader_hard_helm_4,
-	 itm_sa_crusader_hard_helm_5,
-	 itm_mail_coif_c,
-	 itm_munitionshelm2,
-	 itm_sa_crusader_hard_helm_6,
-	 itm_rnd_helm_03,
-	 itm_rnd_helm_04,
-	 itm_rnd_helm_06,
-	 itm_rnd_helm_05,
-	 itm_modded_helmet_heavy_3,
-	 itm_great_helmet_a,
-	 itm_great_helmet_b,
-	 itm_great_helmet_c,
-  
-     itm_warhorse_bigod,
-	 itm_rnd_horse_08,
-	 itm_rnd_horse_10,
-	 itm_rnd_horse_17,
-	 itm_rnd_horse_20,
-	 itm_rnd_horse_21,
-	 itm_rnd_horse_03,
-	 itm_rnd_horse_22,
-	 itm_rnd_horse_23,
-	 
-     itm_heraldic_lance,
-     itm_modded_euro_longsword_1,
-     itm_modded_damascus_sword,
-	 itm_mace_4,
-   	 itm_morningstar,
-	 itm_talak_warhammer,
-	 itm_modded_euro_longsword_2,
-	 itm_heavy_lance,
-	 itm_sword_type_xiia,
-	 itm_sword_type_xiiia,
-	
-     itm_tab_shield_heater_cav_b,
-	 itm_tab_shield_kite_cav_b,
-     ],
-     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-
-###French
-   ["french_peasant_archer",
-     "French Peasant Archer",
-     "French Peasant Archers",
-     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield,
-     0, 0, fac_kingdom_10,
-     [
-  
-     itm_leather_jerkin,
-  
-     itm_blue_hose,
-     itm_blue_hose_mod,
-     itm_grey_hose,
-	 itm_dark_grey_hose,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-  
-     itm_leather_cap,
-	 itm_koif_monie_a,
-	 itm_koif_monie_b,
-	 itm_skullcap,
-  
-     itm_hunting_bow,
-     itm_arrows,
-     itm_butchering_knife,
-	 itm_knife,
-	 itm_dagger,
-  
-     itm_leather_covered_round_shield,
-     ],
-     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
-     euro_face_1, euro_face_2
-   ], 
-  
-   ["french_crossbow_militia",
-     "French Crossbow Militia",
-	 "French Crossbow Militiamen",
-     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield,
-     0, 0, fac_kingdom_10,
-     [
-	
-	 itm_kau_mail_shirt_d,
-	
-	 itm_blue_hose,
-	 itm_blue_hose_mod,
-	 itm_grey_hose,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-    
-	 itm_skullcap,
-	 itm_leather_warrior_cap,
-	
-	 itm_hunting_crossbow,
-	 itm_crossbow,
-	 itm_bolts,
-	 itm_pickaxe,
-	 itm_knife,
-	 itm_butchering_knife,
-	 itm_dagger,
-	
-	 itm_leather_covered_round_shield,
-	 itm_talak_buckler,
-	 ],
-	 ranged_attrib_3, crossbow_regulars_wp, crossbow_regulars_skills,
-     euro_face_1, euro_face_2
-   ], 
-   
-   ["french_heavy_crossbowman",
-     "French Heavy Crossbowman",
-	 "French Heavy Crossbowmen",
-     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_10,
-     [
-    
-	 itm_genoa_mail_c,
-	
-	 itm_hunter_boots,
-	 itm_leather_boots,
-	 itm_leather_fur_boots,
-	 itm_hide_boots,
-	 itm_highlander_boots_1,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_vik_spangen_a,
-	 itm_footman_helmet,
-	 itm_vik_norman_helmet_e,
-	 itm_norman_coif_e,
-	 itm_light_crusader_helm_1,
-	 
-     itm_heavy_crossbow,
-	 itm_steel_bolts,
- 	 itm_almogavar_sword,
-	 itm_modded_falchion_1,
-	 itm_modded_falchion_2,
-	 itm_falchion,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	
-	 itm_tab_shield_round_b,
-	 ],
-	 ranged_attrib_5, crossbow_sergeant_wp, crossbow_sergeant_skills,
-	 euro_face_1, euro_face_2
-   ],
-   
-   ["french_village_recruit",
-     "French Village Recruit",
-	 "French Village Recruits",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_10,
-     [
-	
-	 itm_balt_shirt_e,
-	
-	 itm_woolen_hose,
-	 itm_shoes,
-	 itm_blue_hose,
-	 itm_legs_with_shoes,
-	
-	 itm_priest_cap_3,
-	 itm_head_wrappings,
-	 itm_arming_cap,
-	 itm_priest_cap_1,
-	 itm_1257_hood_2,
-	
-	 itm_hatchet,
- 	 itm_pitch_fork,
-	 itm_club,
-	 itm_military_fork,
-	 itm_military_hammer,
-	 itm_military_pick,
-	 itm_sickle,
-	 itm_hammer,
-	
-	 itm_targe_2,
-     ],
-     foot_attrib_2, militia_wp, militia_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   ["french_town_recruit",
-     "French Town Recruit",
-	 "French Town Recruits",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_10,
-     [
-	
-	 itm_balt_shirt_e,
-	
-	 itm_woolen_hose,
-	 itm_shoes,
-	 itm_blue_hose,
-	 itm_legs_with_shoes,
-	
-	 itm_priest_cap_3,
-	 itm_head_wrappings,
-	 itm_arming_cap,
-	 itm_priest_cap_1,
-	 itm_1257_hood_2,
-	
-	 itm_hatchet,
- 	 itm_pitch_fork,
-	 itm_club,
-	 itm_military_fork,
-	 itm_military_hammer,
-	 itm_military_pick,
-	 itm_sickle,
-	 itm_hammer,
-	
-	 itm_targe_2,
-     ],
-     foot_attrib_2, militia_wp, militia_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   ["french_peasant_militia",
-     "French Peasant Militia",
-	 "French Peasant Militiamen",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_10,
-     [
-	
-	 itm_gambeson_c,
-	
-	 itm_ankle_boots,
-	
-	 itm_vik_norman_helmet_a,
-	 itm_footman_helmet,
-	
-	 itm_spear_a,
-	 itm_spear_b,
-	 itm_spear_c,
-	 itm_spear_d,
-	 itm_spear_e,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_raf_one_handed_axe_c,
-	 itm_almogavar_sword,
-	 itm_falchion,
-	
-	 itm_nordic_shield,
-	 ],
-	 foot_attrib_3, footman_wp, footman_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   ["french_levy_spearman",
-	 "French Levy Spearman",
-	 "French Levy Spearmen",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_10,
-     [
-	
-	 itm_surcoat_b,
-	
-	 itm_highlander_boots_1,
-	 itm_leather_boots,
-	 itm_hide_boots,
-	 itm_hunter_boots,
-	
-	 itm_light_crusader_helm_1,
-	 itm_footman_helmet,
-	
-	 itm_spear_a,
-	 itm_spear_p,
-	 itm_spear_i,
-	 itm_spear_j,
-	 itm_long_spiked_club,
-	 itm_scythe,
-	 itm_modded_euro_shortsword_1,
-	 itm_modded_euro_shortsword_2,
-	
-	 itm_tab_shield_round_c,
-     ],
-     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   ["french_armoured_sergeant",
-     "French Armoured Sergeant",
-	 "French Armoured Sergeants",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_10,
-     [
-	
-	 itm_modded_mail_2,
-	
-	 itm_splinted_leather_greaves,
-	
-	 itm_mail_mittens,
-	
-	 itm_sa_crusader_helm_7,
-	 itm_vik_norman_helmet_c,
-	 itm_vik_norman_helmet_e,
-	 itm_elm8,
-	 itm_flat_topped_helmet_a,
-	 itm_flat_topped_helmet_b,
-	
-	 itm_spear_k,
-	 itm_spear_a,
-	 itm_spear_d,
-	 itm_military_cleaver_b,
-	 itm_raf_one_handed_axe_h,
-	 itm_raf_one_handed_axe_c,
-	 itm_modded_euro_sidesword_1,
-	 itm_modded_euro_sidesword_2,
-	
-	 itm_tab_shield_small_round_c,
-     ],
-     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   ["french_volgue_militia",
-     "French Volgue Militia",
-	 "French Volgue Militiamen",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots,
-	 0,0, fac_kingdom_10,
-	 [
-	
-	 itm_iberian_leather_armour_c,
-	
-	 itm_ankle_boots,
-	 itm_wrapping_boots,
-	 itm_hide_boots,
-	 itm_leather_fur_boots,
-	 itm_highlander_boots_1,
-	
-	 itm_light_crusader_helm_1,
-	
-	 itm_modded_cleaving_voulge,
-	 itm_modded_hooked_voulge_3,
-	 ],
-	 foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
-     euro_face_1, euro_face_2
-   ],	
-	
-   
-   ["french_voulgier",
-     "French Voulgier",
-	 "French Voulgmen",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
-     0, 0, fac_kingdom_10,
-     [
-  
-     itm_man_at_arms_a,
-	
-	 itm_splinted_leather_greaves,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_vik_norman_helmet_a,
-	 itm_vik_norman_helmet_c,
-	 itm_rhodok_nasal_helmet_a,
-	 itm_elm8,
-	 itm_sa_crusader_helm_3,
-	 itm_sa_crusader_helm_4,
-	 itm_sa_crusader_helm_5,
-	 itm_sa_crusader_helm_9,
-	
-	 itm_modded_voulge,
-	 itm_modded_spiked_voulge,
-	 itm_modded_hooked_voulge_1,
-	 itm_shortened_voulge,
-     ],
-     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],	
-
-    
-   ["french_pikeman",
-     "French Pikeman",
-     "French Pikemen",	
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
-     0, 0, fac_kingdom_10,
-	 [
-	
-	 itm_man_at_arms_b,
-	
-	 itm_byz_cavalry_boots,
-	
-	 itm_mail_mittens,
-	
-	 itm_rhodok_four_plated_helmet,
-	 itm_flat_topped_helmet_a,
-	 itm_flat_topped_helmet_b,
-	 itm_vik_norman_helmet_a,
-	 itm_vik_norman_helmet_c,
-	
-	 itm_modded_pike,
-	 ],
-     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   
-   ["french_mounted_archer",
-     "French Mounted Archer",
-	 "French Mounted Archers",
-     tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_ranged| tf_mounted| tf_guarantee_shield| tf_guarantee_helmet| tf_guarantee_horse,
-     0,0,fac_kingdom_10,
-     [
-	
-	 itm_noble_cloak,
-	
-	 itm_grey_hose,
-	 itm_blue_hose,
-	 itm_blue_hose_mod,
-	 itm_dark_grey_hose,
-	 itm_shoes,
-	 itm_woolen_hose,
-	 itm_tied_up_shoes,
-	 itm_legs_with_shoes,
-	
-	 itm_vik_norman_helmet_e,
-	 itm_turret_hat_green,
-	
-	 itm_saddle_horse,
-	 itm_sumpter_horse,
-	
-	 itm_hunting_bow,
-	 itm_arrows,
-	 itm_spear_b,
-	 itm_spear_c,
-	 itm_spear_d,
-	 itm_almogavar_sword,
-	 itm_falchion,
-	 itm_modded_falchion_1,
-	
-	 itm_tab_shield_small_round_a,
-	 itm_talak_buckler,
-	 ],
-	 horse_attrib_3, cum_harcher_wp, cum_harcher_skills,
-	 euro_face_1, euro_face_2
-   ],
-   
-   ["french_mounted_sergeant",
-     "French Mounted Sergeant",
-	 "French Mounted Sergeants",
-	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_10,
-     [
-	  
-	 itm_modded_mail_2,
-	
-	 itm_splinted_leather_greaves,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_vik_norman_helmet_e,
-	 itm_norman_coif_e,
-	 itm_vik_spangen_a,
-	 itm_footman_helmet,
-	 itm_light_crusader_helm_1,
-	 
-     itm_spear_k,
-	 itm_spear_l,
-	 itm_spear_m,
-	 itm_military_cleaver_b,
-	 itm_modded_euro_sidesword_2,
-	 itm_modded_euro_sidesword_2,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_cp391_sword,
-	
-	 itm_horse_d,
-	 itm_horse_e,
-	
-	 itm_tab_shield_small_round_c,
-     ],
-     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
-     euro_face_3, euro_face_4
-   ],
-   
-   ["french_squire",
-     "French Squire",
-	 "French Squires",
-	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_10,
-     [
-	
-	 itm_veteran_surcoat_c,
-	
-	 itm_sa_vizantia_greaves,
-	 itm_sa_shoes_crusader,
-	
-	 itm_mail_mittens,
-	
-	 itm_vik_norman_helmet_a,
-	 itm_vik_norman_helmet_c,
-	 itm_rhodok_four_plated_helmet,
-	 itm_rhodok_nasal_helmet_a,
-	 itm_sa_crusader_helm_3,
-	 itm_sa_crusader_helm_8,
-	 itm_elm6,
-	
-	 itm_european_horse_a,
-	 itm_european_horse_b,
-	 itm_european_horse_c,
-	 itm_european_horse_d,
-	
-	 itm_modded_euro_armingsword_2,
-	 itm_lance,
-	 itm_modded_euro_armingsword_1,
-	 itm_light_lance,
-	 itm_modded_euro_armingsword_3,
-	 itm_sword_type_xii,
-	 itm_talak_warhammer,
-	 itm_mace_1,
-	
- 	 itm_tab_shield_kite_cav_a,
-	 itm_tab_shield_heater_cav_a,
-	 ], 
-	 horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   ["french_knight",
-     "French Knight",
-     "French Knights", 
-	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_10,
-     [
-	 itm_surcoat_france_a,
-	 itm_rnd_surcoat_13,
-	 itm_rnd_surcoat_12,
-	 itm_rnd_surcoat_15,
-	 itm_rnd_surcoat_02,
-	 itm_rnd_surcoat_08,
-	 itm_modded_surcoat_19,
-	
-	 itm_splinted_greaves_long,
-	
-	 itm_lamellar_gauntlets,
-	
-	 itm_modded_helmet_heavy_1,
-	 itm_frenchpepperpot,
-	 itm_frenchpepperpot2,
-	 itm_frenchpepperpot3,
-	
-	 itm_warhorse_france_a,
-	 itm_warhorse_blue,
-	 itm_rnd_horse_15,
-	 itm_rnd_horse_02,
-	 itm_rnd_horse_04,
-	 itm_warhorse_white,
-	
-	 itm_modded_euro_longsword_1,
-	 itm_modded_euro_longsword_2,
-	 itm_sword_type_xiiia,
-	 itm_sword_type_xiia,
-	 itm_modded_templar_arming_sword,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_raf_one_handed_axe_c,
-	 itm_heraldic_lance,
-	 itm_heavy_lance,
-	 itm_morningstar,
-	 itm_mace_4,
-	 itm_talak_warhammer,
-	
-	 itm_tab_shield_kite_cav_b,
-	 itm_tab_shield_heater_cav_b,
-	 ],
-     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-
-###Hungary
-
-   ["hungarian_peasant_archer",
-     "Hungarian Peasant Archer",
-	 "Hungarian Peasant Archers",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_ranged| tf_guarantee_shield,
-	 0,0, fac_kingdom_7,
-	 [
-	
-	 itm_pelt_coat,
-	
-	 itm_berber_shoes,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-	 itm_tied_up_shoes,
-	
-	 itm_balt_rus_cap,
-	 itm_rus_hat_with_padding,
-	 itm_nomad_cap,
-	 itm_nomad_cap_b,
-	 itm_nomad_cap_c,
-	
-	 itm_hunting_bow,
-	 itm_arrows,
-	 itm_dagger,
-	 itm_knife,
-	 itm_butchering_knife,
-	 itm_hatchet,
-	
-	 itm_targe_2,
-	 itm_targe_3,
-	 ],
-	 ranged_attrib_3, skirmisher_wp, skirmisher_skills,
-     euro_face_1, euro_face_2
-   ], 
-	
-	
-   ["hungarian_veteran_archer",
-     "Hungarian Veteran Archer",
-	 "Hungarian Veteran Archers",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_ranged| tf_guarantee_gloves| tf_guarantee_shield,
-	 0,0, fac_kingdom_7,
-	 [
-	
-	 itm_archers_vest,
-	
-	 itm_sa_boot_average_crusader_1,
-	 itm_leather_boots,
-	 itm_hunter_boots,
-	 itm_hide_boots,
-	 itm_leather_fur_boots,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_balt_helmet_a,
-	 itm_balt_footman_helmet,
-	 itm_balt_helmet_b,
-	 itm_rus_militia_helmet,
-	
-	 itm_strong_bow,
-	 itm_strely,
-	 itm_modded_baltic_falchion_2,
-	 itm_modded_baltic_falchion_1,
-	
-	 itm_berber_shield_3,
-	 ],
-	 ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
-   ], 
-     
-	 
-   ["hungarian_crossbow_militia",
-     "Hungarian Crossbow Militia",
-	 "Hungarian Corssbow Militia",
-	 tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield,
-     0, 0, fac_kingdom_7,
-     [
-	
-	 itm_genoa_padded_c,
-	
-	 itm_legs_with_shoes,
-	 itm_berber_shoes,
-	 itm_tied_up_shoes,
-	 itm_shoes,
-	 itm_woolen_hose,
-	
-	 itm_balt_rus_cap,
-	 itm_rus_hat_with_padding,
-	 itm_nomad_cap,
-	 itm_nomad_cap_b,
-	 itm_nomad_cap_c,
-	 
-	 itm_hunting_crossbow,
-	 itm_crossbow,
-	 itm_bolts,
-	 itm_knife,
-	 itm_hatchet,
-	 itm_butchering_knife,
-	 itm_dagger,
-	
-	 itm_lit_pavise_f_3,
-	 ],
-	 ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   ["hungarian_pavise_crossbow",
-     "Hungarian Pavise Crossbow",
-	 "Hungarian Pavise Crossbowmen",
-     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_7,
-     [
-	
-	 itm_bulgar_warrior_b,
-	 itm_baltic_ponted_helmet,
-	 itm_balt_footman_helmet,
-	 itm_balt_helmet_a,
-	 itm_balt_helmet_b,
-	
-	 itm_byzantine_greaves,
-	
-	 itm_leather_gloves,
-	
-	 itm_baltic_ponted_helmet,
-	
-	 itm_heavy_crossbow,
-	 itm_crossbow,
-	 itm_steel_bolts,
-	 itm_modded_baltic_falchion_2,
-	 itm_modded_baltic_falchion_1,
-	 itm_raf_one_handed_axe_c,
-	 itm_raf_one_handed_axe_d,
-	
-	 itm_lit_pavise_g_3,
-	 ],
-	 ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-
-   
-   ["hungarian_town_recruit",
-     "Hungarian Town Recruit",
-	 "Hungarian Town Recruits",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_7,
-     [
-	
-	 itm_pelt_coat,
-	
-	 itm_berber_shoes,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-	
-	 itm_balt_rus_cap,
-	 itm_steppe_cap,
-	 itm_cuman_cap_a,
-	 itm_cuman_cap_c,
-	
-	 itm_pitch_fork,
-	 itm_hatchet,
-	 itm_battle_fork,
-	 itm_military_fork,
-	 itm_military_hammer,
-	 itm_military_pick,
-	 itm_hammer,
-	 itm_club,
-	 itm_cudgel,
-	
-	 itm_targe_3,
-	 itm_targe_4,
-	 ],
-	 foot_attrib_2, militia_wp, militia_skills,
-     euro_face_1, euro_face_2
-   ],
-	 
-   ["hungarian_village_recruit",
-     "Hungarian Village Recruit",
-	 "Hungarian Village Recruits",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_7,
-     [
-	
-	 itm_pelt_coat,
-	
-	 itm_berber_shoes,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-	
-	 itm_balt_rus_cap,
-	 itm_steppe_cap,
-	 itm_cuman_cap_a,
-	 itm_cuman_cap_c,
-	
-	 itm_pitch_fork,
-	 itm_hatchet,
-	 itm_battle_fork,
-	 itm_military_fork,
-	 itm_military_hammer,
-	 itm_military_pick,
-	 itm_hammer,
-	 itm_club,
-	 itm_cudgel,
-	 itm_short_bow,
-	 itm_arrows,
-	
-	 itm_targe_3,
-	 itm_targe_4,
-	 ],
-	 foot_attrib_2, militia_wp, militia_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   ["slav_levy",
-     "Slav Levy",
-	 "Slav Levies",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_7,
-     [
-	 itm_militia_tunic_a,
-	
-	 itm_ankle_boots,
-	 itm_berber_shoes,
-	 itm_shoes,
-	 itm_woolen_hose,
-	 itm_grey_hose,
-	
-	 itm_balt_rus_cap,
-	 itm_rus_hat_with_padding,
-	
-	 itm_berber_spear,
-	 itm_modded_baltic_falchion_2,
-	 itm_modded_baltic_falchion_1,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	
-	 itm_lit_pavise_e_3,
-	 ],
-	 foot_attrib_3, footman_wp, footman_skills,
-     euro_face_1, euro_face_2
-   ],
-	
-   ["hungarian_pavise_spearman",
-     "Hungarian Pavise Spearman",
-	 "Hungarian Pavise Spearmen",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_7,
-     [
-	
-	 itm_balt_padded_b,
-	
-	 itm_rus_boots_a,
-	 itm_rus_boots_b,
-	 itm_rus_cav_boots,
-	
-	 itm_bulgar_helm_b,
-	 itm_balt_footman_helmet,
-	
-	 itm_berber_spear,
-	 itm_spear_h,
-	 itm_spear_i,
-	 itm_spear_d,
-	 itm_modded_baltic_sword_1,
-	 itm_modded_baltic_sword_2,
-	 itm_modded_baltic_sword_5,
-	
-	 itm_lit_pavise_h_3,
-	 itm_lit_pavise_e_3,
-	 itm_lit_pavise_d_3,
-	 ],
-     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   ["hungarian_battlefield_assassin",
-     "Hungarian Battlefield Assassin",
-	 "Hungarian Battlefield Assassins",
-	 tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_shield| tf_guarantee_helmet| tf_guarantee_gloves,
-     0, 0, fac_kingdom_7,
-     [
-  
-     itm_kau_rus_mail_shirt_a,
-  
-     itm_byzantine_greaves,
-  
-     itm_sa_gloves_a,
-	 itm_leather_gloves,
-  
-     itm_rus_helmet_b,
-	 itm_rus_helmet_3,
-	 itm_rus_helmet,
-    
-	 itm_scimitar,
-     itm_modded_baltic_sword_4,
-	 itm_modded_baltic_sword_3,
-	 itm_baltic_sword,
-	 itm_czekan,
-  
-     itm_tab_shield_heater_c,
-     ],
-     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-     nord_face_young_1, swadian_face_old_2,
-   ], 
-	
-   ["hungarian_halbard_levy",
-     "Hungarian Halbard Levy",
-	 "Hungarian Halbard Levies",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots,
-	 0,0, fac_kingdom_7,
-	 [
-	
-	 itm_gambeson_b,
-	
-	 itm_lapcie,
-	 itm_rus_boots_a,
-	 itm_rus_boots_b,
-	 itm_woolen_hose,
-	 itm_hide_boots,
-	
-	 itm_balt_footman_helmet,
-	 itm_balt_helmet_c,
-	
-	 itm_glaive,
-	 itm_bill,
-	 itm_modded_bill_1,
-	 itm_modded_bill_2,
-	 itm_modded_glaive_1,
-	 ],
-	 foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
-     euro_face_1, euro_face_2
-   ],	
-    
-   ["croat_axeman",
-     "Croat Axeman",
-	 "Croat Axemen",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
-	 0,0, fac_kingdom_7,
-	 [
-	
-	 itm_surcoat_lithuania_a,
-	
-	 itm_sa_shoes_crusader,
-	 itm_sa_vizantia_greaves,
-	
-	 itm_mail_mittens,
-	
-	 itm_bulgar_helm,
-	 itm_bulgar_helm_b,
-	 itm_balt_footman_helmet,
-	 itm_baltic_ponted_helmet,
-	
-	 itm_raf_two_handed_axe_a,
-	 itm_raf_two_handed_axe_b,
-	 itm_long_axe_b_alt,
-	 itm_long_axe,
-	 ],
-     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2,
-   ],
-	
-	
-   ["hungarian_merchant_cavalry",
-     "Hungarian Merchant Cavalry",
-	 "Hungarian Merchant Cavalrymen",
-	 tf_guarantee_horse| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_armor| tf_guarantee_boots| tf_mounted,
-     0, 0, fac_kingdom_7,
-     [
-  
-     itm_merchant_outfit,
-	 itm_merchant_outfit_2,
-  
-	 itm_rus_boots_b,
-	 itm_rus_boots_a,
-	 itm_lapcie,
-	 itm_berber_shoes,
-  
-     itm_nordic_fur_cap,
-  
-     itm_european_horse_bandits_d,
-	 itm_european_horse_bandits_a,
-	 itm_european_horse_bandits_c,
-  
-     itm_berber_spear,
-     itm_modded_baltic_falchion_2,
-	 itm_modded_baltic_falchion_1,
-  
-     itm_lit_pavise_f_3,
-     ],
-     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
-     euro_face_3, euro_face_4
-   ],
-   
-   ["hungarian_noble_cavalry",
-     "Hungarian Noble Cavalry",
-	 "Hungarian Noble Cavalrymen",
-	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
-     0, 0, fac_kingdom_7,
-     [
-    
-	 itm_surcoat_lithuania_b,
-	
-	 itm_rus_boots_b,
-	 itm_rus_boots_a,
-	 itm_rus_cav_boots,
-	
-	 itm_sa_gloves_a,
-	
-	 itm_steppe_helmet,
-	 itm_kipchak_steppe_helmet,
-	 itm_baltic_ponted_helmet,
-	
-	 itm_european_horse_d,
-	 itm_european_horse_b,
-	 itm_european_horse_e,
-	
-	 itm_strong_bow,
-	 itm_khergit_arrows,
-	 itm_strely,
-	 itm_modded_baltic_sword_3,
-	 itm_modded_baltic_sword_4,
-	 itm_modded_baltic_sword_5,
-	 
-	
-	 itm_lit_pavise_f_3,
-	 itm_tab_shield_small_round_c,
-     ],
-     horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
-     rhodok_face_younger_1, rhodok_face_old_2
-   ],
-   
-   
-   ["hungarian_squire",
-     "Hungarian Squire",
-	 "Hungarian Squires",
-	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_7,
-     [
-	
-	 itm_haubergeon,
-	
-	 itm_byz_cavalry_boots,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_balt_spiked_helmet,
-	
-	 itm_european_horse_a,
-	 itm_european_horse_b,
-	
-	 itm_modded_baltic_sword_4,
-	 itm_baltic_sword,
-	 itm_berber_spear,
-	 itm_lance,
-	 itm_talak_warhammer,
-	 # itm_talak_mace,
-	 itm_modded_baltic_sword_3,
-	 itm_raf_one_handed_axe_d,
-	 itm_raf_one_handed_axe_c,
-	
-	 itm_lithuanian_shield9,
-	 itm_tab_shield_heater_cav_a,
-	 ], 
-	 horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   
-   ["hungarian_knight",
-     "Hungarian Knight",
-	 "Hungarian Knights",
-	 tf_mounted| tf_guarantee_horse| tf_guarantee_armor| tf_guarantee_boots| tf_guarantee_helmet| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_7,
-     [
-	 itm_surcoat_hungary_a,
-	 itm_surcoat_bohemia,
-	
-	 itm_kau_mail_boots_dark_long,
-	
-	 itm_mail_mittens,
-	
-	 itm_great_helmet_c,
-	
-	 itm_warhorse_hungary_a,
-	 itm_warhorse_bohemia,
-	
-	 itm_bb_rus_sword_1,
-	 itm_modded_rus_sword_1,
-	 itm_bb_rus_sword_6,
-	 itm_heavy_lance,
-	 itm_heraldic_lance,
-	 itm_morningstar,
-	 itm_mace_4,
-	 itm_talak_warhammer,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_raf_one_handed_axe_c,
-	
-	 itm_lit_pavise_b_3,
-	 ],
-     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   
-####Poland   
-	
-   ["polish_town_recruit",
-     "Polish Town Recruit",
-	 "Polish Town Recruits",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_5,
-     [
-	
-	 itm_almogavar_a,
-	
-	 itm_green_hose,
-	 itm_yellow_hose,
-	 itm_red_hose,
-	 itm_berber_shoes,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-	 
-	 itm_leather_warrior_cap,
-	 itm_rus_hat_with_padding,
-	 itm_balt_rus_cap,
-	
-	 itm_pitch_fork,
-	 itm_hatchet,
-	 itm_fighting_pick,
-	 itm_hammer,
-	 itm_military_fork,
-	 itm_military_hammer,
-	 itm_military_pick,
-	 itm_battle_fork,
-	
-	 itm_targe_6,
-	 ],
-	 foot_attrib_2, militia_wp, militia_skills,
-     euro_face_1, euro_face_2
-   ],
-	
-   ["polish_village_recruit",
-     "Polish Village Recruit",
-	 "Polish Village Recruits",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_5,
-     [
-	
-	 itm_almogavar_a,
-	
-	 itm_green_hose,
-	 itm_yellow_hose,
-	 itm_red_hose,
-	 itm_berber_shoes,
-	 itm_shoes,
-	 itm_legs_with_shoes,
-	 
-	 itm_leather_warrior_cap,
-	 itm_rus_hat_with_padding,
-	 itm_balt_rus_cap,
-	
-	 itm_pitch_fork,
-	 itm_hatchet,
-	 itm_fighting_pick,
-	 itm_hammer,
-	 itm_military_fork,
-	 itm_military_hammer,
-	 itm_military_pick,
-	 itm_battle_fork,
-	 itm_short_bow,
-	 itm_arrows,
-	
-	 itm_targe_6,
-	 ],
-	 foot_attrib_2, militia_wp, militia_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   
-   ["polish_peasant_militia",
-     "Polish Peasant Militia",
-	 "Polish Peasant Militiamen",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_5,
-     [
-	
-	 itm_kau_arab_lamellar_vest_b,
-	
-	 itm_ankle_boots,
-	 itm_berber_shoes,
-	 itm_tied_up_shoes,
-	
-	 itm_nomad_cap_b,
-	 itm_rus_militia_helmet,
-	 itm_balt_rus_cap,
-	
-	 itm_spear_b,
-	 itm_spear_d,
-	 itm_spear_e,
-	 itm_spear_a,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	
-	 itm_lit_pavise_e_3,
-	 ],
-	 foot_attrib_3, footman_wp, footman_skills,
-     euro_face_1, euro_face_2
-   ],
-
-   ["polish_spear_levy",
-     "Polish Spear Levy",
-     "Polish Spear Levies",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
-     0, 0, fac_kingdom_5,
-     [
-	
-	 itm_padded_cloth,
-	
-	 itm_hunter_boots,
-	 itm_lapcie,
-	 itm_hide_boots,
-	 itm_leather_fur_boots,
-	
-	 itm_nomad_cap_b,
-	 itm_balt_footman_helmet,
-	 itm_rus_hat_with_padding,
-	 itm_nomad_cap,
-	 itm_nomad_cap_c,
-	
-	 itm_spear_a,
-	 itm_spear_i,
-	 itm_spear_m,
-	 itm_spear_c,
-	 itm_modded_baltic_falchion_1,
-	 itm_modded_baltic_falchion_2,
-	 itm_raf_one_handed_axe_c,
-	 itm_raf_one_handed_axe_b,
-	
-	 itm_lithuanian_shield9,
-	 ],
-	 foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
-     euro_face_3, euro_face_4
-   ],
-  
-  
-   ["dismounted_polish_noble",
-     "Dismounted Polish Noble",
-	 "Dismounted Polish Nobles",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield| tf_guarantee_gloves,
-     0, 0, fac_kingdom_5,
-     [
-   
-     # itm_md_surcoat_22,
-     itm_rnd_surcoat_22,
-     itm_civil_rich_boots_b,
-	 itm_civil_rich_boots_a,
-   
-     itm_mail_mittens,
-   
-     itm_rhodok_four_plated_helmet,
-	 itm_polski_helm,
-   
-     itm_bb_rus_sword_1,
-	 itm_bb_rus_sword_3,
-	 itm_bb_rus_sword_6,
-	 itm_spear_g,
-	 itm_spear_h,
-     itm_spear_k,
-     itm_raf_one_handed_axe_d,
-	 itm_raf_one_handed_axe_b,
-   
-     itm_lit_pavise_d_3,
-     ],
-     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-     nord_face_young_1, swadian_face_old_2,
-   ],
-   
-   
-   ["polish_halberd_levy",
-     "Polish Halberd Levy",
-	 "Polish Halberd Levies",
-     tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots,
-     0,0, fac_kingdom_5,
-     [
-   
-     itm_padded_cloth,
- 	
-     itm_hunter_boots,
-	 itm_lapcie,
-	 itm_hide_boots,
-	 itm_cuman_boots,
-	
-     itm_nomad_cap_b,
-	
-     itm_glaive,
-     itm_bill,
-     ],
-     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
-     euro_face_1, euro_face_2
-   ],
-
-    
-   ["polish_woodsman",
-     "Polish Woodsman",
-	 "Polish Woodsmen",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
-     0,0, fac_kingdom_5,
-	 [
-	
-	 itm_rus_leather_scale_b,
-	
-	 itm_sa_boot_average_crusader_1,
-	 itm_sa_boot_light_crusader,
-	 itm_rus_boots_a,
-	 itm_rus_boots_b,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_raf_spangen,
-	 itm_polski_helm,
-	
-	 itm_raf_two_handed_axe_a,
-	 itm_raf_two_handed_axe_b,
-	 itm_long_axe_b_alt,
-	 itm_long_axe,
-	 ],
-     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
-    ],
-	
-   
-   ["polish_strzelcy",
-     "Polish Strzelcy",
-	 "Polish Strzelcy Cav Crossbowmen",
-	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
-     0, 0, fac_kingdom_5,
-     [
-    
-	 itm_balt_lamellar_coat_b,
-	
-	 itm_sa_boot_average_crusader_1,
-	 itm_rus_boots_a,
-	 itm_rus_boots_b,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_raf_spangen,
-	
-	 itm_horse_d,
-	 itm_horse_e,
-	
-	 itm_light_crossbow,
-	 itm_bolts,
-	 itm_raf_one_handed_axe_d,
-	 itm_raf_one_handed_axe_e,
-	 itm_raf_one_handed_axe_g,
-	 itm_modded_baltic_falchion_1,
-	 itm_modded_baltic_falchion_2,
-	
-	 itm_lithuanian_shield9,
-     ],
-     horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   ["polish_retainer",
-     "Polish Retainer",
-	 "Polish Retainers",
-	 tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves,
-     0, 0, fac_kingdom_5,
-     [
-	  
-	 itm_byz_lamellar_b,
-	
-	 itm_leather_gloves,
-	
-	 itm_european_horse_d,
-	 itm_european_horse_a,
-	
-	 itm_mail_coif,
-	 itm_polski_helm,
-	 
-	 itm_modded_templar_arming_sword,
-	 itm_modded_euro_shortsword_1,
-	 itm_modded_euro_shortsword_2,
-	 itm_modded_euro_shortsword_3,
-	 itm_lance,
-	 itm_spear_d,
-	 itm_spear_k,
-	 itm_spear_e,
-	 itm_spear_l,
-	
-	 itm_lithuanian_shield9,
-     ],
-     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
-     euro_face_3, euro_face_4
-   ],
-   
-   ["polish_noble",
-     "Polish Noble",
-	 "Polish Noble",
-	 tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet|tf_guarantee_gloves,
-     0, 0, fac_kingdom_5,
-     [
-   
-     itm_rnd_surcoat_22,
-   
-     itm_civil_rich_boots_b,
-	 itm_civil_rich_boots_a,
-   
-     itm_mail_mittens,
-   
-     itm_rhodok_four_plated_helmet,
-	 itm_polski_helm,
-	 itm_mail_coif,
-	 itm_mail_coif_b,
-    
-     itm_javelin,
-     itm_throwing_spears,
-     itm_bb_rus_sword_1, 
-	 itm_bb_rus_sword_3,
-	 itm_bb_rus_sword_6,
-	 itm_modded_euro_armingsword_2,
-	 
-     itm_lit_pavise_d_3,
-     ],
-     horse_attrib_5, cum_harcher_wp, cum_harcher_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-   ["polish_guard",
-     "Polish Guard",
-	 "Polish Guards",
-	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
-     0, 0, fac_kingdom_5,
-     [
-	 
-	 itm_surcoat_pol_a,
-	 
-	 itm_kau_mail_boots_dark_long,
-	 
-	 itm_mail_mittens,
-	 
-	 itm_frenchpepperpot3,
-	 itm_pepperpothelm1,
-	 itm_polski_helm,
-	 
-	 itm_warhorse_pol_a,
-	 
-	 itm_modded_euro_longsword_1,
-	 itm_modded_euro_longsword_2,
-	 itm_heavy_lance,
-	 itm_lance,
-	 itm_talak_warhammer,
-	 # itm_talak_mace,
-	 itm_morningstar,
-	 itm_raf_one_handed_axe_h,
-	 itm_raf_one_handed_axe_g,
-	 
-     itm_lit_pavise_b_3,
-     ],
-	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-   
-
-   ["polish_peasant_archer",
-     "Polish Peasant Archer",
-     "Polish Peasant Archers",	 
-     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
-	 0,0, fac_kingdom_5,
-	 [
-	
-	 itm_almogavar_a,
-	
-	 itm_green_hose,
-	
-	 itm_leather_warrior_cap,
-	
-	 itm_hunting_bow,
-	 itm_arrows,
-	 itm_dagger,
-	 itm_knife,
-	 itm_butchering_knife,
-	
-	 itm_targe_6,
-	 ],
-	 ranged_attrib_3, skirmisher_wp, skirmisher_skills,
-     euro_face_1, euro_face_2
-   ],
-   
-   ["polish_veteran_archer",
-     "Polish Veteran Archer",
-	 "Polish Veteran Archers",
-	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
-	 0,0, fac_kingdom_5,
-	 [
-	 
-	 itm_kau_arab_lamellar_vest_b,
-	
-	 itm_ankle_boots,
-	
-	 itm_nomad_cap_b,
-	 itm_polski_helm,
-	
-	 itm_short_bow,
-	 itm_strely,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	
-	 itm_lit_pavise_e_3,
-	 ],
-	 ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-	 
-	 
-   ["polish_crossbow_militia",
-     "Polish Crossbow Militia",
-	 "Polish Crossbow Militiamen",
-	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
-	 0,0, fac_kingdom_5,
-	 [
-	 
-	 itm_kau_arab_lamellar_vest_b,
-	
-	 itm_ankle_boots,
-	
-	 itm_nomad_cap_b,
-	 
-	 itm_hunting_crossbow,
-	 itm_bolts,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 
-	 itm_targe_4,
-	 ],
-     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
-     euro_face_1, euro_face_2
-   ], 
-   
-   
-#### Mercenaries
-
-   ["scots_guard",
-     "Scots Guard",
-	 "Scots_Guards",
-	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_ranged| tf_guarantee_shield| tf_guarantee_gloves,
-	 0,0, fac_kingdom_10,
-	 [
-     
-     itm_surcoat_over_mail,
-     
-     itm_splinted_leather_greaves,
-
-     itm_mail_mittens,
-
-     itm_raf_spangen,
-	 itm_vik_norman_helmet_b,
-
-     itm_long_bow,
-     itm_strely,
-     itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_raf_one_handed_axe_c,
-	 itm_modded_falchion_3,
-	 itm_almogavar_sword,
-     
-     itm_gaelic_shield_a,
-     ],
-	 ranged_attrib_5, welsh_veteran_archer_wp, welsh_veteran_archer_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-  
-   ["magyar_cavalry",
-     "Magyar Cavalry",
-	 "Magyar Cavalrymen",
-	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
-     0, 0, fac_kingdom_7,
-     [
-	 
-	 itm_lamellar_vest,
-	 
-	 itm_byz_cavalry_boots,
-	 
-	 itm_leather_gloves,
-	 
-	 itm_steppe_helmet,
-	 
-	 itm_steppe_horse,
-	 itm_saracin_hard_horses_b_v1,
-	 
-	 itm_strong_bow,
-	 itm_barbed_arrows,
-	 itm_modded_baltic_sword_2,
-	 
-	 itm_targe_4,
-	 ],
-	 horse_attrib_elite, cum_vharcher_wp, cum_vharcher_skills,
-     khergit_face_middle_1, khergit_face_older_2
-   ],
-	 
-   ["hussar_cavalry",
-     "Hussar Cavalry",
-	 "Hussar Cavalry",
-	 tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_gloves,
-     0, 0, fac_kingdom_5,
-     [
-     itm_balt_lamellar_vest_c,
-	 itm_byz_cavalry_boots,
-	 itm_leather_gloves,
-	 itm_raf_spangen,
-     
-	 itm_lance,
-	 itm_light_lance,
-	 itm_bb_rus_sword_1,
-	 
-	 itm_arabian_horse_a,
-	 
-	 itm_tab_shield_small_round_c,
-     ],
-     horse_attrib_elite, cum_hlancer_wp, cum_hlancer_skills,
-     nord_face_young_1, swadian_face_old_2
-   ],
-	
    
 #### Mercenaries
 ####################
@@ -61686,7 +61702,7 @@ upgrade(troops,"french_squire", "french_knight")
 
 ####Hungarian
 upgrade2(troops,"hungarian_village_recruit", "hungarian_peasant_archer", "hungarian_crossbow_militia")
-upgrade(troops,"hungarian_peasant_archer", "slav_veteran_archer")
+upgrade(troops,"hungarian_peasant_archer", "hungarian_veteran_archer")
 upgrade(troops,"hungarian_crossbow_militia", "hungarian_pavise_crossbow")
 
 upgrade(troops,"hungarian_town_recruit", "slav_levy")

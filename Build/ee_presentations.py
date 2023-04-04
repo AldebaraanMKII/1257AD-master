@@ -2229,6 +2229,13 @@ presentations = [
         (val_sub, reg1, ":value_difference"),
         (position_set_y, pos1, reg1),
         (overlay_set_position, reg0, pos1),
+        
+        ############### NEW v3.11 - 
+        (create_text_overlay, reg0, "@Player receives bank money directly without visiting the fief:", tf_vertical_align_center),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, reg0, pos1),
+        ############### 
 		
         (create_text_overlay, reg0, "@Captured fiefs auto switch to the new faction culture:", tf_vertical_align_center),
         (val_sub, reg1, ":value_difference"),
@@ -2370,13 +2377,20 @@ presentations = [
         (position_set_y, pos1, reg1),
         (overlay_set_position, "$g_presentation_obj_31", pos1),
         (overlay_set_val, "$g_presentation_obj_31", "$g_receive_money_directly"),
-		
-		
+        
+		############### NEW v3.11 - 
         (create_check_box_overlay, "$g_presentation_obj_32", "mesh_checkbox_off", "mesh_checkbox_on"),
         (val_sub, reg1, ":value_difference"),
         (position_set_y, pos1, reg1),
         (overlay_set_position, "$g_presentation_obj_32", pos1),
-        (overlay_set_val, "$g_presentation_obj_32", "$g_auto_change_captured_fief_culture"),
+        (overlay_set_val, "$g_presentation_obj_32", "$g_misc_floris_bank_receive_directly"),
+        ############### 
+		
+        (create_check_box_overlay, "$g_presentation_obj_33", "mesh_checkbox_off", "mesh_checkbox_on"),
+        (val_sub, reg1, ":value_difference"),
+        (position_set_y, pos1, reg1),
+        (overlay_set_position, "$g_presentation_obj_33", pos1),
+        (overlay_set_val, "$g_presentation_obj_33", "$g_auto_change_captured_fief_culture"),
         ######################
 
 
@@ -2533,8 +2547,13 @@ presentations = [
         (else_try),
           (eq, ":object", "$g_presentation_obj_31"),
           (assign, "$g_receive_money_directly", ":value"),
+        ############### NEW v3.11 - 
         (else_try),
           (eq, ":object", "$g_presentation_obj_32"),
+          (assign, "$g_misc_floris_bank_receive_directly", ":value"),
+        ############### 
+        (else_try),
+          (eq, ":object", "$g_presentation_obj_33"),
           (assign, "$g_auto_change_captured_fief_culture", ":value"),
         ###############
 
@@ -3640,6 +3659,7 @@ presentations = [
           # page_no_for_cur_troop
           (call_script, "script_get_page_no_of_troop_tree_for_troop_on_2", ":cur_troop"),
           (assign, ":page_no_for_cur_troop", reg0),
+          # (display_message, "@Page is {reg0}."), ############### NEW v3.11 - 
           # on current page_no
           (eq, ":page_no_for_cur_troop", "$g_selected_page"),
           (assign, reg0, 1), # reg0: init max_tier to 1

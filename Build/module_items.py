@@ -553,6 +553,12 @@ items = [
 ["kau_mail_shirt_b", "Mail Shirt", [("kau_mail_shirt_b",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], euro_factions],
 ["kau_mail_b", "Maille", [("kau_mail_b", 0)], itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], euro_factions],
 ["kau_mail_a", "Mail", [("kau_mail_a", 0)], itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], euro_factions],
+
+
+############### NEW v3.11 - 
+["ee_constable_kau_mail_a", "Mail", [("kau_mail_a", 0)], itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, tier_4_body_armor_price, weight(21)|abundance(80)|head_armor(0)|body_armor(41)|leg_armor(17)|difficulty(0), imodbits_armor, []],
+############### 
+
 ["scale_shirt_a", "Scale_Shirt", [("raf_scale_armour_a", 0)], itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [], eastern_factions + balt_factions],
 ["teu_sariant_mail", "Teutonic Mail_with_Surcoat", [("teu_sariant_surcoat", 0)], itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [],[fac_culture_teutonic, fac_kingdom_23]],
 ["teu_postulant_a", "Teutonic Postulant Tunic", [("teu_postulant", 0)], itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, tier_4_body_armor_price, tier_4_body_armor, imodbits_armor, [],[fac_culture_teutonic, fac_kingdom_23]],

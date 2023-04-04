@@ -8104,24 +8104,25 @@ dialogs = [
 "I would like to take a look at the armory.", "dplmc_constable_armory_end", #Floris - gear fix "dplmc_constable_pretalk",
 [
 #Floris - gear fix
-(try_for_range, ":i", ek_item_0, ek_food), #Double check worn gear is gone
-  (agent_get_item_slot, ":item", "$g_talk_agent", ":i"),
-  (gt, ":item", 0),
-  (troop_remove_item, "$g_talk_troop", ":item"),
-(try_end),
+# (try_for_range, ":i", ek_item_0, ek_food), #Double check worn gear is gone
+  # (agent_get_item_slot, ":item", "$g_talk_agent", ":i"),
+  # (gt, ":item", 0),
+  # (troop_remove_item, "$g_talk_troop", ":item"),
+# (try_end),
 #Floris - end    
-(change_screen_loot, "trp_dplmc_constable"),]],
+(change_screen_loot, "trp_ee_constable_armory"),
+]],
 ##diplomacy end+
 
 #Floris - gear fix - to allow for delay in returning gear
 [anyone, "dplmc_constable_armory_end",[(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0")], "Do you need anything else, {s0}?", "dplmc_constable_armory_end_2",[]],
 [anyone, "dplmc_constable_armory_end_2",[(call_script, "script_dplmc_print_subordinate_says_sir_madame_to_s0")], "Do you need anything else, {s0}?", "dplmc_constable_talk",
 [
- (try_begin),
-   (neg|agent_has_item_equipped, "$g_talk_agent", "itm_kau_mail_a"),
-   (agent_equip_item, "$g_talk_agent", "itm_kau_mail_a"),
-   (agent_equip_item, "$g_talk_agent", "itm_leather_boots"),
- (try_end),
+ # (try_begin),
+   # (neg|agent_has_item_equipped, "$g_talk_agent", "itm_kau_mail_a"),
+   # (agent_equip_item, "$g_talk_agent", "itm_kau_mail_a"),
+   # (agent_equip_item, "$g_talk_agent", "itm_leather_boots"),
+ # (try_end),
 ]],
 #Floris - end
 ###############################################################
@@ -10119,16 +10120,16 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 
 ############### NEW v3.8 - Stables
-[anyone|plyr, "dplmc_constable_talk",[],
-"I want to talk about the stables.", "dplmc_constable_stables_talk",
-[
-(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, 0),
-(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_new, 0),
-(troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_old, 0),
-(troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
-(str_store_party_name, s1, "$g_encountered_party"),
-(display_message, "@Your main stable is now located at {s1}."),
-]],
+# [anyone|plyr, "dplmc_constable_talk",[],
+# "I want to talk about the stables.", "dplmc_constable_stables_talk",
+# [
+# (troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location, 0),
+# (troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_new, 0),
+# (troop_slot_eq, "trp_dplmc_constable", slot_troop_constable_stable_location_old, 0),
+# (troop_set_slot, "trp_dplmc_constable", slot_troop_constable_stable_location, "$g_encountered_party"),
+# (str_store_party_name, s1, "$g_encountered_party"),
+# (display_message, "@Your main stable is now located at {s1}."),
+# ]],
 
 
 # # [anyone, "dplmc_constable_stables_talk",
@@ -28204,7 +28205,6 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (assign, "$political_quest_target_troop", reg1),
    (assign, "$political_quest_object_troop", reg2),
  ]],
-
 ######################## NEW v2.1
  ##diplomacy start+ Add "dedicate a tournament" option even after marriage
 [anyone|plyr, "spouse_talk",

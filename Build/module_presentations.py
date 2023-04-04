@@ -12279,7 +12279,7 @@ presentations = [
         (store_troop_gold, ":player_wealth", "trp_household_possessions"),
       (else_try),
       ##diplomacy end
-      (store_troop_gold, ":player_wealth", "trp_player"),
+        (store_troop_gold, ":player_wealth", "trp_player"),
       ##diplomacy begin
       (try_end),
       ##diplomacy end

@@ -5552,7 +5552,7 @@ scripts = [
                              ############# NEW
                              (call_script, "script_get_message_color_siege_win", 8, ":winner_faction", ":defeated_faction"),
                              # (display_log_message, "str_center_captured", reg20),
-                             (display_log_message, "@{s2} have taken {s1} from {s3}.", reg20),
+                             (display_log_message, "@{s2} have taken {s1} from {s3}.", reg20),                             
 			                 ############## NEW v3.9.1 - 
                              (try_begin),
                                (eq, "$g_auto_change_captured_fief_culture", 1),
@@ -22532,7 +22532,7 @@ scripts = [
             (lt, ":reln_with_player", 0),
             (gt, ":reln_with_enemy", 0),
             # (party_get_slot, ":party_type", ":party_no"),  
-            (party_get_slot, ":party_type", ":party_no", slot_party_type),  #### NEW v2.1 - fix - was missing the slot parameter
+            # (party_get_slot, ":party_type", ":party_no", slot_party_type),  #### NEW v2.1 - fix - was missing the slot parameter
             
             (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 0),
             (try_begin),
@@ -22542,38 +22542,45 @@ scripts = [
               (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
             (try_end),
             (party_get_template_id, ":template", ":party_no"),
-            (this_or_next|eq, ":party_type", spt_kingdom_hero_party),
-            (this_or_next|eq, ":party_type", spt_patrol), # tom
-            (this_or_next|eq, ":template", "pt_mongolian_camp"),
-            (this_or_next|eq, ":template", "pt_welsh"),
-            (this_or_next|eq, ":template", "pt_guelphs"),
-            (this_or_next|eq, ":template", "pt_ghibellines"),
-            (this_or_next|eq, ":template", "pt_crusaders"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_iberian"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_scandinavian"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_euro"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_italian"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_welsh"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_gaelic"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_teutonic"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_templar"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_hospitaller"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_saint_lazarus"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_santiago"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_calatrava"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_saint_thomas"),
-            (this_or_next|eq, ":template", "pt_jihadist_raiders"),
-            (this_or_next|eq, ":template", "pt_teutonic_raiders"),
-            (this_or_next|eq, ":template", "pt_curonians"),
-            (this_or_next|eq, ":template", "pt_prussians"),
-            (this_or_next|eq, ":template", "pt_samogitians"),
-            (this_or_next|eq, ":template", "pt_yotvingians"),
-            (this_or_next|eq, ":party_type", spt_merc_party),
-            ############ NEW v3.3
-            (this_or_next|eq, ":party_type", spt_war_party),
-            (this_or_next|eq, ":party_type", spt_scout),
-            (this_or_next|eq, ":party_type", spt_mercenary_company),
+            # (this_or_next|eq, ":party_type", spt_kingdom_hero_party),
+            # (this_or_next|eq, ":party_type", spt_patrol), # tom
+            # (this_or_next|eq, ":template", "pt_mongolian_camp"),
+            # (this_or_next|eq, ":template", "pt_welsh"),
+            # (this_or_next|eq, ":template", "pt_guelphs"),
+            # (this_or_next|eq, ":template", "pt_ghibellines"),
+            # (this_or_next|eq, ":template", "pt_crusaders"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_iberian"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_scandinavian"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_euro"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_italian"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_welsh"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_gaelic"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_teutonic"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_templar"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_hospitaller"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_saint_lazarus"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_santiago"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_calatrava"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_saint_thomas"),
+            # (this_or_next|eq, ":template", "pt_jihadist_raiders"),
+            # (this_or_next|eq, ":template", "pt_teutonic_raiders"),
+            # (this_or_next|eq, ":template", "pt_curonians"),
+            # (this_or_next|eq, ":template", "pt_prussians"),
+            # (this_or_next|eq, ":template", "pt_samogitians"),
+            # (this_or_next|eq, ":template", "pt_yotvingians"),
+            # ############### NEW v3.11 - 
+            # (this_or_next|eq, ":template", "pt_escaped_prisoners_party"), 
+            # (this_or_next|eq, ":template", "pt_mercenary_warband"),
+            # ############### 
+            # (this_or_next|eq, ":party_type", spt_merc_party),
+            # ############ NEW v3.3
+            # (this_or_next|eq, ":party_type", spt_war_party),
+            # (this_or_next|eq, ":party_type", spt_scout),
+            # (this_or_next|eq, ":party_type", spt_mercenary_company),
             ########################
+            ############### NEW v3.11 - 
+            (is_between, ":template", "pt_manhunters", "pt_manor"),
+            ############### 
             (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
             
             (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
@@ -22650,39 +22657,45 @@ scripts = [
             (str_store_party_name, s1, ":party_no"),
             (display_message, "str_s1_joined_battle_friend", 0x50FF50),
           (else_try), ## various parties join in
-          
             (party_get_template_id, ":template", ":party_no"),
-            (this_or_next|eq, ":party_type", spt_patrol), # tom
-            (this_or_next|eq, ":template", "pt_mongolian_camp"),
-            (this_or_next|eq, ":template", "pt_welsh"),
-            (this_or_next|eq, ":template", "pt_guelphs"),
-            (this_or_next|eq, ":template", "pt_ghibellines"),
-            (this_or_next|eq, ":template", "pt_crusaders"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_iberian"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_scandinavian"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_euro"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_italian"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_welsh"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_gaelic"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_teutonic"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_templar"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_hospitaller"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_saint_lazarus"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_santiago"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_calatrava"),
-            (this_or_next|eq, ":template", "pt_crusader_raiders_saint_thomas"),
-            (this_or_next|eq, ":template", "pt_jihadist_raiders"),
-            (this_or_next|eq, ":template", "pt_teutonic_raiders"),
-            (this_or_next|eq, ":template", "pt_curonians"),
-            (this_or_next|eq, ":template", "pt_prussians"),
-            (this_or_next|eq, ":template", "pt_samogitians"),
-            (this_or_next|eq, ":template", "pt_yotvingians"),
-            ############ NEW v3.3
-            (this_or_next|eq, ":party_type", spt_war_party),
-            (this_or_next|eq, ":party_type", spt_scout),
-            (this_or_next|eq, ":party_type", spt_mercenary_company),
-            ########################
-            (eq, ":party_type", spt_merc_party),
+            # (this_or_next|eq, ":party_type", spt_patrol), # tom
+            # (this_or_next|eq, ":template", "pt_mongolian_camp"),
+            # (this_or_next|eq, ":template", "pt_welsh"),
+            # (this_or_next|eq, ":template", "pt_guelphs"),
+            # (this_or_next|eq, ":template", "pt_ghibellines"),
+            # (this_or_next|eq, ":template", "pt_crusaders"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_iberian"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_scandinavian"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_euro"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_italian"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_welsh"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_gaelic"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_teutonic"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_templar"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_hospitaller"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_saint_lazarus"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_santiago"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_calatrava"),
+            # (this_or_next|eq, ":template", "pt_crusader_raiders_saint_thomas"),
+            # (this_or_next|eq, ":template", "pt_jihadist_raiders"),
+            # (this_or_next|eq, ":template", "pt_teutonic_raiders"),
+            # (this_or_next|eq, ":template", "pt_curonians"),
+            # (this_or_next|eq, ":template", "pt_prussians"),
+            # (this_or_next|eq, ":template", "pt_samogitians"),
+            # (this_or_next|eq, ":template", "pt_yotvingians"),
+            # ############### NEW v3.11 - 
+            # (this_or_next|eq, ":template", "pt_escaped_prisoners_party"), 
+            # (this_or_next|eq, ":template", "pt_mercenary_warband"),
+            # ############### 
+            # ############ NEW v3.3
+            # (this_or_next|eq, ":party_type", spt_war_party),
+            # (this_or_next|eq, ":party_type", spt_scout),
+            # (this_or_next|eq, ":party_type", spt_mercenary_company),
+            # ########################
+            # (eq, ":party_type", spt_merc_party),
+            ############### NEW v3.11 - 
+            (is_between, ":template", "pt_manhunters", "pt_manor"),
+            ############### 
             
             (try_begin),
               (party_slot_eq, ":party_no", slot_party_ai_state, spai_accompanying_army),
@@ -53338,10 +53351,14 @@ scripts = [
           # rafi
           (try_begin),
             (is_between, ":party_current_faction", kingdoms_begin, kingdoms_end),
-            (this_or_next | party_slot_eq, ":party_no", slot_party_type, spt_castle),
-            (this_or_next | party_slot_eq, ":party_no", slot_party_type, spt_town),
-            (this_or_next | party_slot_eq, ":party_no", slot_party_type, spt_kingdom_hero_party),
-            (this_or_next | party_slot_eq, ":party_no", slot_party_type, spt_mongol_party), #rom
+            (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_castle),
+            (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_town),
+            (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_kingdom_hero_party),
+            (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_mongol_party), #rom
+            ############### NEW v3.11 - 
+            (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_war_party), #rom
+            (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_mercenary_company), #rom
+            ############### 
             (party_slot_eq, ":party_no", slot_party_type, spt_patrol),
             (party_get_slot, ":party_value", ":party_no", slot_party_cached_strength),
             (le, ":party_value", 0),
@@ -68986,6 +69003,7 @@ scripts = [
           (else_try),
             (this_or_next | eq, ":cur_template", "pt_manhunters"),
             (this_or_next | eq, ":cur_template", "pt_dplmc_recruiter"),
+            (this_or_next | eq, ":cur_template", "pt_escaped_prisoners_party"), ############### NEW v3.11 - 
             (this_or_next | eq, ":cur_template", "pt_crusaders"),
             (eq, ":cur_template", "pt_merchant_caravan"),
             (party_set_icon, ":cur_party", "icon_gray_knight"),
