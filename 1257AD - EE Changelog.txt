@@ -25,10 +25,10 @@ Things with the "Debug:" prefix requires a new game but can be activated/fixed b
 
 v3.11 "???"
 1). (New Game)(@Khanor#3713) Village connections optimized for six more factions.
-     - (The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.)
+     - Factions optimized: The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.
 2). (New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
-     Kingdom of Norway: Þorshofn moved east, Borgló and Véey moved southwest, Ragnhildarhólmr and Konungahella moved (even further) southeast.
-     Kingdom of Denmark: Varbiargh and Falkenbærgh moved south-southeast.
+     - Kingdom of Norway: Þorshofn moved east, Borgló and Véey moved southwest, Ragnhildarhólmr and Konungahella moved (even further) southeast.
+     - Kingdom of Denmark: Varbiargh and Falkenbærgh moved south-southeast.
 3). (@Khanor#3713) Improved movement speed when travelling on water/Seas (water is now the fastest terrain by a small margin, but coasts/embarking is still slow, which makes sense.)
      - Land travel is still a better choice when providing a more direct route to the destination, however.
 4). (@Khanor#3713) Fixed a misspelled lord name (both in module_troops.py and troops.csv.)
@@ -119,10 +119,10 @@ Anno Domini 1257, Enhanced Edition version 3.9.2 is based on 3.9.1, but comes wi
 29). (3.10 feature) Fixed player receiving compensation money for capturing a fief even when he decided to rebel.
 30). (3.10 feature) Fixed player compensation money bug.
 31). (3.11+ feature)(New Game)(@Khanor#3713) Village connections optimized for six more factions.
-     - (The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.)
+     - Factions optimized: The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.
 32). (3.11+ feature)(New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
-     Kingdom of Norway: Þorshofn moved east, Borgló and Véey moved southwest, Ragnhildarhólmr and Konungahella moved (even further) southeast.
-     Kingdom of Denmark: Varbiargh and Falkenbærgh moved south-southeast.
+     - Kingdom of Norway: Þorshofn moved east, Borgló and Véey moved southwest, Ragnhildarhólmr and Konungahella moved (even further) southeast.
+     - Kingdom of Denmark: Varbiargh and Falkenbærgh moved south-southeast.
 33). (3.11+ feature)(@Khanor#3713) Improved movement speed when travelling on water/Seas (water is now the fastest terrain by a small margin, but coasts/embarking is still slow, which makes sense.)
      - Land travel is still a better choice when providing a more direct route to the destination, however.
 34). (3.11+ feature)(@Khanor#3713) Fixed a misspelled lord name (both in module_troops.py and troops.csv.)
