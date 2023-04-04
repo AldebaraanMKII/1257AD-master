@@ -39,11 +39,7 @@ from module_constants import *
 
 game_menus = [ #
   ("start_game_0",menu_text_color(0xFF000000)|mnf_disable_all_keys,
-<<<<<<< Updated upstream
-    "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition.) This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose wisely, as you will not be able to change it after you start the game!",
-=======
     "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition)({s22}). This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose whisely, as you will not be able to change it after you started the game!",
->>>>>>> Stashed changes
     "none",
     [
     (str_store_string, s22, "str_mod_version"), ############### NEW v3.11 - 
