@@ -276,7 +276,7 @@ parties = [
     ("castle_4_5", "Swinaburgh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-24.85), scale_f(61.02)), [], 90),
     ("castle_4_6", "Kalundæburgh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-21.27), scale_f(65.53)), [], 90),
     ("castle_4_7", "Helsingiæburgh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-9.32), scale_f(68.91)), [], 90),
-    ("castle_4_8", "Varbiargh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-13.81), scale_f(79.52)), [], 90),
+    ("castle_4_8", "Varbiargh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-13.33), scale_f(78.80)), [], 90),
 
     ("castle_5_1", "Gniezno", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(30.86), scale_f(32.17)), [], 135),
     ("castle_5_2", "Sandomierz", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(52.22), scale_f(25.57)), []),
@@ -343,7 +343,7 @@ parties = [
     ("castle_11_2", "Borgyndr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-47.63), scale_f(110.48)), [], 90),
     ("castle_11_3", "Stafangr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-56.98), scale_f(94.81)), [], 90),
     ("castle_11_4", "Túnsberg", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-28.55), scale_f(93.53)), [], 90),
-    ("castle_11_5", "Ragnhildarhólmr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-16.92), scale_f(85.74)), [], 90),
+    ("castle_11_5", "Ragnhildarhólmr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.00), scale_f(82.86)), [], 90),
     ("castle_11_6", "Mann", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-125.71), scale_f(53.06)), [], 90),
 
     ("castle_12_1", "Urquhart", icon_norman_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-188.92, 118.77), [], 135),
@@ -554,7 +554,7 @@ parties = [
     ("village_4_12", "Oþænswé", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-25.71), scale_f(63.59)), [], 10),
     ("village_4_13", "Flænsburgh", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-31.54), scale_f(56.05)), [], 10),
     ("village_4_14", "Halmstaþr", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-10.23), scale_f(74.08)), [], 10),
-    ("village_4_15", "Falkenbærgh", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.59), scale_f(77.16)), [], 10),
+    ("village_4_15", "Falkenbærgh", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.11), scale_f(76.44)), [], 10),
     ("village_4_16", "Ringstaþr", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.93), scale_f(61.58)), [], 10),
 
     ("village_5_1", "Wieleń", icon_village_middle_europe|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(16.40), scale_f(36.93)), [], 260),
@@ -692,7 +692,7 @@ parties = [
     ("village_11_6", "Véey", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-46.47), scale_f(126.26)), [], 10),
     ("village_11_7", "Kaupangr", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-52.39), scale_f(110.72)), [], 10),
     ("village_11_8", "Skiða", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-32.25), scale_f(92.57)), [], 10),
-    ("village_11_9", "Konungahella", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.29), scale_f(86.54)), [], 10),
+    ("village_11_9", "Konungahella", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-13.37), scale_f(83.66)), [], 10),
     ("village_11_10", "Suðreyjar", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-141.33), scale_f(85.08)), [], 10),
     ("village_11_11", "Orkneyjar", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-115.70), scale_f(93.06)), [], 10),
     ("village_11_12", "Steinker", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-18.54), scale_f(137.69)), [], 10),
