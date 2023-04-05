@@ -5844,11 +5844,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("horse_archers", "Horse Archers"),
  ("spearmen", "Spearmen"),
  
-<<<<<<< Updated upstream
- ("revision", "Enhanced Edition version: 3.9.2 \"Swift Cogs\" (3.9 definitive edition)"), ### Update this on non-hotfix patches! -Khanor
-=======
  # ("revision", "1.13 - Angry peasants edition!"),
->>>>>>> Stashed changes
  
  ("manor_marketplace", "Marketplace"),
  ("manor_tavern", "Tavern"),
