@@ -5844,7 +5844,11 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("horse_archers", "Horse Archers"),
  ("spearmen", "Spearmen"),
  
+<<<<<<< Updated upstream
  ("revision", "Enhanced Edition version: 3.9.2 \"Swift Cogs\" (3.9 definitive edition)"), ### Update this on non-hotfix patches! -Khanor
+=======
+ # ("revision", "1.13 - Angry peasants edition!"),
+>>>>>>> Stashed changes
  
  ("manor_marketplace", "Marketplace"),
  ("manor_tavern", "Tavern"),
@@ -9853,6 +9857,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("dplmc_political_explanation_original_lord", "In this case, the fortress should go its original owner."),
   
   ("mod_version", "v3.11"),
+  ("revision", "Enhanced Edition (v3.11)"),
 ###################################################################################
 # End Autoloot
 ###################################################################################
