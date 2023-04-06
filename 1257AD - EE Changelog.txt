@@ -14,7 +14,7 @@ Contributors: @Black_Kangaroo#7894, @Lang#9858, @the_duke#8749, @mamacrooo#5615
 Patrons: @the_duke#8749, @grim_grollie#0873, ivan.ant13, @B^()#4099, @Mentoss#3127, @Phoenix#3892
 
 
-Current version: v3.10
+Current version: v3.11
 
 NOTES: 
 Things with the "New game:" prefix requires a new game to take effect.
@@ -23,7 +23,7 @@ Things with the "Debug:" prefix requires a new game but can be activated/fixed b
 
 
 
-v3.11 "???"
+v3.11 (Requires a new game)
 1). (New Game)(@Khanor#3713) Village connections optimized for six more factions.
      - Factions optimized: The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.
 2). (New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
@@ -39,6 +39,40 @@ v3.11 "???"
 8). (@Khanor#3713) Moved and improved the readability and placement of the old text for displaying the mod's title and the original AD 1257 version the mod is built upon.
 9). (@Khanor#3713) Added Enhanced Edition version to the old revision string instead, to be displayed prominently on the main menu from here on out.
 10). (@Khanor#3713) Updated the README.md file with basic instructions and information for users and devs.
+11). (@Spades#8972) New models and textures for some counter point series swords.
+12). Fixed faction notes culture being incorrect.
+13). Fixed polish retainer not having boots and using byzantine armor.
+14). Fixed troop tree presentation not displaying the new cultures.
+15). (Fix) Disabled constable stable dialogue.
+16). (Improvement) Genoese crossbowman now use pavise shields.
+17). Fixed hungarian archer not upgrading to veteran.
+18). Fixed constable armory only having 9 slots.
+19). Fixed constable wearing and removing items from the armory.
+20). (Improvement) any lord of any personality can try to assassinate the player using hired assassins when the player is visiting any town. The negative relation needed depends on the personality of the lord in questions (e.g. debauched lords are the most likely to attempt to kill the player)
+21). (Improvement) the player doesn't need to be in the same fief as the lord for the assassination attempt to occur.
+22). (Improvement) Timer for assassination attempts is randomized to between 5 and 9 days (it was a fixed 7 days before).
+23). Fixed some mercs (e.g. saint lazarus units) not appearing in the mercenary troop tree under reports.
+24). Minimum amount of prisoners for a break to occur decreased to 10 (from 100)
+25). Garrison size is taken into account when calculating prison break chance (every 20 guards decrease chance by 1%).
+26). Prisoner tower decreases chance by 2x (was 3x).
+     - E.g. a town with default garrison size of 800 that has 500 prisoners has a weekly 10% chance of a break occurring. Add a prisoner tower and the chance decreases to 5%.
+27). Fixed issues with bank deposits and players not receiving money automatically.
+28). Fixed option under camp to receive money from banks directly without needing to visit the fief in question not showing up.
+29). Fixed war parties and mercenary companies not being taken into account when calculating a kingdom's strength.
+30). Fixed escaped prisoner party not reverting to their default icon in the map when returning from the sea.
+31). Fixed parties not ganging up on certain party types (e.g. escaped prisoners, looters) when the latter attacked one of their faction's parties and they had the chance of winning.
+32). Fixed the new cultures (e.g. english) not being added to the western euro culture list and thus missing the typical euro items in their merchants.
+33). Speed improvements to code related to parties joining friendly parties battles in the map.
+34). Added game version to new game menu and reports.
+
+
+This bug reports were tested and could not be reproduced:
+1). "recruiting generic mamluke regional mercenaries (not the expensive 4000 denar ones) gets you mamluke junior cavalry (lance troop) instead of the less-equipped mercenary version!"
+
+
+bug report notes:
+1). "hafsid dynasty's regional mercenaries are generic mamluke mercenaries (spearmen, javelinmen, archers, horse archers) instead of generic muslim mercenaries (spearmen, archers, horsemen)"
+This is present on the original 1257 and was probably done on purpose of balancing, since there's already 2 factions who use generic muslim mercenaries. 
 
 
 
@@ -133,6 +167,26 @@ Anno Domini 1257, Enhanced Edition version 3.9.2 is based on 3.9.1, but comes wi
 38). (3.11+ feature)(@Khanor#3713) Moved and improved the readability and placement of the old text for displaying the mod's title and the original AD 1257 version the mod is built upon.
 39). (3.11+ feature)(@Khanor#3713) Added Enhanced Edition version to the old revision string instead, to be displayed prominently on the main menu from here on out.
 40). (3.11+ feature)(@Khanor#3713) Updated the README.md file with basic instructions and information for users and devs.
+41). (3.11+ feature)(@Spades#8972) New models and textures for some counter point series swords.
+42). (3.11+ feature)(Fix) Disabled constable stable dialogue.
+43). (3.11+ feature)(Improvement) Genoese crossbowman now use pavise shields.
+44). (3.11+ feature)Fixed constable armory only having 9 slots.
+45). (3.11+ feature)Fixed constable wearing and removing items from the armory.
+46). (3.11+ feature)(Improvement) any lord of any personality can try to assassinate the player using hired assassins when the player is visiting any town. The negative relation needed depends on the personality of the lord in questions (e.g. debauched lords are the most likely to attempt to kill the player)
+47). (3.11+ feature)(Improvement) the player doesn't need to be in the same fief as the lord for the assassination attempt to occur.
+48). (3.11+ feature)(Improvement) Timer for assassination attempts is randomized to between 5 and 9 days (it was a fixed 7 days before).
+49). (3.11+ feature)Fixed some mercs (e.g. saint lazarus units) not appearing in the mercenary troop tree under reports.
+50). (3.11+ feature)Minimum amount of prisoners for a break to occur decreased to 10 (from 100)
+51). (3.11+ feature)Garrison size is taken into account when calculating prison break chance (every 20 guards decrease chance by 1%).
+52). (3.11+ feature)Prisoner tower decreases chance by 2x (was 3x).
+     - E.g. a town with default garrison size of 800 that has 500 prisoners has a weekly 10% chance of a break occurring. Add a prisoner tower and the chance decreases to 5%.
+53). (3.11+ feature)Fixed issues with bank deposits and players not receiving money automatically.
+54). (3.11+ feature)Fixed option under camp to receive money from banks directly without needing to visit the fief in question not showing up.
+55). (3.11+ feature)Fixed war parties and mercenary companies not being taken into account when calculating a kingdom's strength.
+56). (3.11+ feature)Fixed escaped prisoner party not reverting to their default icon in the map when returning from the sea.
+57). (3.11+ feature)Fixed parties not ganging up on certain party types (e.g. escaped prisoners, looters) when the latter attacked one of their faction's parties and they had the chance of winning.
+58). (3.11+ feature)Speed improvements to code related to parties joining friendly parties battles in the map.
+59). (3.11+ feature)Added game version to new game menu and reports.
 
 
 
@@ -182,7 +236,6 @@ v3.9.1 (Requires a new game)
 42). Fixed player castle guards not updating when he changed his kingdom's culture through his minister.
 43). Added new misc option to make captured fiefs auto change culture to their new faction.
 44). Made changes to how much money the player receives as compensation for being denied a fief he conquered. New value is (player renown * 8) + (player relation with king * 20)(negative relations wield -20 per point)(was always 900 before).
-
 45). (New Game)(@Khanor#3713) Optimized village connections to castles/towns in the Kingdom of Norway, the Kingdom of Denmark, the Kingdom of England, the Kingdom of France, the Kingdom of Portugal, the Crown of Aragon, the Emirate of Granada, the Marinid Dynasty and the Polish Principalities.
      - Now even towns should generally pick up villages in their area, and the manual assignments pre-loop has been expanded with a description. Manual comments for which castles and towns are being handed village connections have also been added.
      - These village assignment improvements also include the outcome of a democratic Discord vote for Angoulême castle and Chinon castle's village connections (thanks for voting!)
