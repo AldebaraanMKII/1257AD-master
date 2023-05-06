@@ -39,10 +39,11 @@ from module_constants import *
 
 game_menus = [ #
   ("start_game_0",menu_text_color(0xFF000000)|mnf_disable_all_keys,
-    "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition)({s22}). This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose whisely, as you will not be able to change it after you started the game!",
+    "Welcome to Anno Domini 1257 - Enhanced Edition [v{s22}], a Mount & Blade: Warband mod. This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose wisely, as you will not be able to change it after you start the game!",
     "none",
     [
-    (str_store_string, s22, "str_mod_version"), ############### NEW v3.11 - 
+    (str_store_string, s22, "str_mod_version"), ### NEW 3.11/3.9.2
+    #(str_store_string, s22, "str_revision"),
     ],
     [
     #tom
@@ -3715,7 +3716,7 @@ game_menus = [ #
 
   ("reports",0,
    # "Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
-   "Mod Version: {s22}^Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
+   "Mod Version: v{s22}^Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
    "none",
    [(call_script, "script_game_get_party_companion_limit"),
     (assign, ":party_size_limit", reg0),
@@ -3723,7 +3724,8 @@ game_menus = [ #
     (assign, reg5, ":renown"),
     (assign, reg6, "$player_honor"),
     (assign, reg7, ":party_size_limit"),
-    (str_store_string, s22, "str_mod_version"), ############### NEW v3.11 - 
+    (str_store_string, s22, "str_mod_version"), ### NEW 3.11/3.9.2 - 
+    #(str_store_string, s22, "str_revision"), ### NEW 3.11/3.9.2 - 
     #(call_script, "script_get_player_party_morale_values"),
     #(party_set_morale, "p_main_party", reg0),
     (party_get_morale, reg8, "p_main_party"),
@@ -3747,7 +3749,7 @@ game_menus = [ #
          ]
         ),
 		
-       ("action_view_troop_trees_2",[], "View troop trees (Cont.).",
+       ("action_view_troop_trees_2",[], "View troop trees (Cont.)",
         [
          (start_presentation, "prsnt_faction_troop_trees_2"),
          ]
@@ -3788,7 +3790,7 @@ game_menus = [ #
        ("faction_statistics_1",
 	   [
        (gt, "$g_current_factions_active", 0),
-	   ], "View faction statistics (Part I).",
+	   ], "View faction statistics (Part I.)",
         [
          (assign, "$g_misc_current_statistics_menu", 1),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3798,7 +3800,7 @@ game_menus = [ #
        ("faction_statistics_2",
 	   [
        (gt, "$g_current_factions_active", 20),
-	   ], "View faction statistics (Part II).",
+	   ], "View faction statistics (Part II.)",
         [
          (assign, "$g_misc_current_statistics_menu", 2),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3808,7 +3810,7 @@ game_menus = [ #
        ("faction_statistics_3",
 	   [
        (gt, "$g_current_factions_active", 43),
-	   ], "View faction statistics (Part III).",
+	   ], "View faction statistics (Part III.)",
         [
          (assign, "$g_misc_current_statistics_menu", 3),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3818,7 +3820,7 @@ game_menus = [ #
        ("faction_statistics_4",
 	   [
        (gt, "$g_current_factions_active", 55),
-	   ], "View faction statistics (Part IV).",
+	   ], "View faction statistics (Part IV.)",
         [
          (assign, "$g_misc_current_statistics_menu", 4),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3909,7 +3911,7 @@ game_menus = [ #
         ]
        ),
 
-      ("go_back",[], "{!}Go back",
+      ("go_back",[], "{!}Go back.",
        [(change_screen_quit),
         ]
        ),
@@ -4069,7 +4071,7 @@ game_menus = [ #
 
 ################################### NEW v2.1 - choose wage system  
   ("start_game_new_2dot1", menu_text_color(0xFF000000),
-    "Use 1257AD wage system, or the Native-friendly wages system? ^Note: 1257AD wage system is recommended for Windows players, and Native-friendly wage system for Mac/Linux. If you are a MAC/LINUX user make sure to choose the Native-friendly wage system, otherwise your troops will have buggy wages every once in a while, putting you in debt of billions.^(Note: Can be changed later in the EE Misc Options under Camp)",
+    "Use 1257AD wage system, or the Native-friendly wages system? ^Note: 1257AD wage system is recommended for Windows players, and Native-friendly wage system for Mac/Linux. If you are a MAC/LINUX user make sure to choose the Native-friendly wage system, otherwise your troops will have buggy wages every once in a while, putting you in debt of billions.^(Note: Can be changed later in the EE Misc. Options under Camp)",
     "none",
     [],
     [
@@ -4105,7 +4107,7 @@ game_menus = [ #
 
 ################################### NEW v2.1 - turn those things on or off at the beggining	  
   ("start_game_new_2dot1_2", menu_text_color(0xFF000000),
-    "Turn lord killing on?^If turned on lords have a chance to die in battle, get executed or assassinated by other lords or the player.^(Note: Can be changed later in the EE Misc Options under Camp)",
+    "Turn lord killing on?^If turned on lords have a chance to die in battle, get executed or assassinated by other lords or the player.^(Note: Can be changed later in the EE Misc. Options under Camp)",
     "none",
     [],
     [
@@ -4144,7 +4146,7 @@ game_menus = [ #
   
 	  
   ("start_game_new_2dot1_3", menu_text_color(0xFF000000),
-    "Turn lord creation on?^If turned on factions will get randomly generated lords based on their current fief count.^(Note: Can be changed later in the EE Misc Options under Camp)",
+    "Turn lord creation on?^If turned on factions will get randomly generated lords based on their current fief count.^(Note: Can be changed later in the EE Misc. Options under Camp)",
     "none",
     [],
     [
@@ -7344,7 +7346,7 @@ game_menus = [ #
     ("camp_wagon",
 	[
 	(eq, "$wagon_active", 0),
-	],"Form a wagon train (300 coins).",
+	],"Form a wagon train (300 coins.)",
     [
 	 (store_troop_gold, ":gold_amount", "trp_player"),
      (try_begin),
@@ -13314,7 +13316,7 @@ game_menus = [ #
        (eq,  ":num_improvements", 0),
        (str_store_string, s19, "@The {s17} has no improvements."),
      (else_try),
-       (str_store_string, s19, "@The {s17} has the following improvements:{s18}."),
+       (str_store_string, s19, "@The {s17} has the following improvements: {s18}."),
      (try_end),
 
      (assign, reg6, 0),
@@ -15551,7 +15553,7 @@ game_menus = [ #
       ("fief_misc_options_menus",
       [
       ],
-      "Misc Options.",
+      "Misc. Options.",
       [
         (jump_to_menu, "mnu_fief_misc_options"),
       ]),
@@ -19705,7 +19707,7 @@ game_menus = [ #
       ],
     [
 
-      ("continue",[], "Tell the woman to inform her mistress that you will come shortly",
+      ("continue",[], "Tell the woman to inform her mistress that you will come shortly.",
        [
 
          (assign, ":lady_to_visit", "$g_notification_menu_var1"),
@@ -19727,7 +19729,7 @@ game_menus = [ #
         (change_screen_return),
         ]),
 
-      ("continue",[], "Tell the woman to inform her mistress that you are indisposed",
+      ("continue",[], "Tell the woman to inform her mistress that you are indisposed.",
        [
         (troop_set_slot, "$g_notification_menu_var1", slot_lady_no_messages, 1),
         (change_screen_return),
@@ -21836,7 +21838,7 @@ game_menus = [ #
       (eq, ":continue", 0),
       (try_begin),
         # (party_slot_eq, "$g_encountered_party", manor_slot_unique, manor_building_inprogress), 
-        # (str_store_string, s22, "@A new manor is being build and peasants are being relocated to live near it."),    
+        # (str_store_string, s22, "@A new manor is being built and peasants are being relocated to live near it."),    
       # (else_try),#bandits
         (party_slot_eq, "$g_encountered_party", slot_village_infested_by_bandits, 1),
         (str_store_string, s22, "@Troublesome bandits are abusing the peasants."),

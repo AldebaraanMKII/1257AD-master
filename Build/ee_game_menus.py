@@ -2859,10 +2859,10 @@ game_menus = [
      [
        (party_slot_eq, "$current_town", slot_garrison_control, town_controled),
      # ], "Take control of the garrison (Warning: this will disband current garrison).",
-     ], "Take control of the garrison (Warning: this will disband current garrison if option in EE menu is checked).",
+     ], "Take control of the garrison (Warning: This will disband current garrison if option in EE menu is checked.)",
      [
        (party_set_slot, "$current_town", slot_garrison_control, lord_controled),      
-       (try_begin), 
+       (try_begin),
          (eq, "$g_misc_garrison_dont_disband_troops_when_taking_control", 0),
            (call_script, "script_party_remove_all_companions", "$current_town"),
        (try_end),
@@ -2880,7 +2880,7 @@ game_menus = [
      ("garrison_control_ai",
      [
        (party_slot_eq, "$current_town", slot_garrison_control, lord_controled),
-     ], "Give the control of the garrison to the town.(Warning: this will disband current garrison).",
+     ], "Give control of the garrison to the local settlement. (Warning: This will disband current garrison.)",
      [
        (party_set_slot, "$current_town", slot_garrison_control, town_controled),
        #remove the rest
@@ -3970,26 +3970,26 @@ game_menus = [
      #(set_background_mesh, "mesh_pic_test_menu"),
    ],     
     [      
-       ("enhanced_mod_options_1",[], "Party Options",
+       ("enhanced_mod_options_1",[], "Party Options.",
        [
           (start_presentation, "prsnt_enhanced_mod_options_party"),
         ]
        ),
              
-       ("enhanced_mod_options_2",[], "Kingdom Party Options",
+       ("enhanced_mod_options_2",[], "Kingdom Party Options.",
        [
           (start_presentation, "prsnt_enhanced_mod_options_party_kingdom"),
         ]
        ),
              
-       ("enhanced_mod_options_3",[], "Non-Kingdom Party Options",
+       ("enhanced_mod_options_3",[], "Non-Kingdom Party Options.",
        [
           (start_presentation, "prsnt_enhanced_mod_options_party_non_kingdom"),
         ]
        ),
 
              
-       ("enhanced_mod_options_4",[], "Merchant Options",
+       ("enhanced_mod_options_4",[], "Merchant Options.",
        [
           (start_presentation, "prsnt_enhanced_mod_options_merchants"),
         ]
@@ -4003,14 +4003,14 @@ game_menus = [
        # ),
 
             
-       ("enhanced_mod_options_6",[], "Misc Options",
+       ("enhanced_mod_options_6",[], "Misc. Options.",
        [
           (start_presentation, "prsnt_enhanced_mod_options_misc"),
         ]
        ),
 
         ############## NEW v3.8 - 
-        ("enhanced_mod_options_7",[], "Misc Options #2",
+        ("enhanced_mod_options_7",[], "Misc. Options #2.",
         [
            (start_presentation, "prsnt_enhanced_mod_options_misc_2"),
          ]
@@ -4024,16 +4024,196 @@ game_menus = [
        # ),
        
       ("enhanced_mod_options_8",[], "Sorting options.",
-       [
-           (jump_to_menu, "mnu_ee_sort"),
+        [
+          (jump_to_menu, "mnu_ee_sort"),
         ]
-       ),
+      ),
+
+      ### Troop update button, bringing older saves up to the current version's troop attributes, skills and proficiencies ### (NEW 3.9.2, by Khanor)
+      ### Remember to add newly tweaked troops here if wanting players to update them!
+      ("enhanced_mod_options_9",[], "Update troops to the current mod version.",
+        [
+          (try_for_range, ":cur_updating_troop", "trp_ee_constable_armory", "trp_ramun_the_slave_trader"), ### Armory (accessed via Constable)
+            (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 18),
+            (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 20),
+            (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_updating_troop", 21),
+            (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_updating_troop", 21),
+
+            (call_script, "script_ee_lower_actor_attribute", ca_strength, ":cur_updating_troop", 18),
+            (call_script, "script_ee_lower_actor_attribute", ca_agility, ":cur_updating_troop", 20),
+            (call_script, "script_ee_lower_actor_attribute", ca_intelligence, ":cur_updating_troop", 21),
+            (call_script, "script_ee_lower_actor_attribute", ca_charisma, ":cur_updating_troop", 21),
+
+            # (call_script, "script_ee_raise_actor_skill", skl_inventory_management, ":cur_updating_troop", 10),
+
+            # (call_script, "script_ee_lower_actor_skill", skl_inventory_management, ":cur_updating_troop", 10),
+
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 40),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 40),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 40),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 40),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 40),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 40),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 40),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 40),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 40),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 40),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 40),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 40),
+          (try_end),
+          
+          (try_for_range, ":cur_updating_troop", "trp_follower_woman", "trp_hunter_woman"), ### Camp Follower
+            (troop_set_class, ":cur_updating_troop", grc_archers), ### Set to "Archers"-class.
+
+            (try_begin),
+              (store_character_level, ":cur_level", ":cur_updating_troop"),
+              (lt, ":cur_level", 12), ### Add enough exp for level 12.
+                (add_xp_to_troop, 600, ":cur_updating_troop"), ### Add exp repeatedly until desired level.
+            (try_end),
+
+            (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 10),
+            (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 8),
+            (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_updating_troop", 7),
+            (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_updating_troop", 7),
+
+            (call_script, "script_ee_lower_actor_attribute", ca_strength, ":cur_updating_troop", 10),
+            (call_script, "script_ee_lower_actor_attribute", ca_agility, ":cur_updating_troop", 8),
+            (call_script, "script_ee_lower_actor_attribute", ca_intelligence, ":cur_updating_troop", 7),
+            (call_script, "script_ee_lower_actor_attribute", ca_charisma, ":cur_updating_troop", 7),
+            
+            # (call_script, "script_ee_raise_actor_skill", skl_ironflesh, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_raise_actor_skill", skl_power_strike, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_power_draw, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_power_throw, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_weapon_master, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_athletics, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_shield, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_raise_actor_skill", skl_riding, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_pathfinding, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_wound_treatment, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_first_aid, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_surgery, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_raise_actor_skill", skl_inventory_management, ":cur_updating_troop", 10),
+            
+            # (call_script, "script_ee_lower_actor_skill", skl_ironflesh, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_lower_actor_skill", skl_power_strike, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_power_draw, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_power_throw, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_weapon_master, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_athletics, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_shield, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_lower_actor_skill", skl_riding, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_pathfinding, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_wound_treatment, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_first_aid, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_surgery, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_lower_actor_skill", skl_inventory_management, ":cur_updating_troop", 10),
+
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 80),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 120),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 120),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 120),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 80),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 120),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 120),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 120),
+          (try_end),
+
+          (try_for_range, ":cur_updating_troop", "trp_hunter_woman", "trp_sword_sister"), ### Camp Huntress, Camp Defender
+            (troop_set_class, ":cur_updating_troop", grc_archers), ### Set to "Archers"-class.
+
+            (try_begin),
+              (store_character_level, ":cur_level", ":cur_updating_troop"),
+              (lt, ":cur_level", 19), ### Add enough exp for level 19.
+                (add_xp_to_troop, 600, ":cur_updating_troop"), ### Add exp repeatedly until desired level.
+            (try_end),
+            
+            (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 14),
+            (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 11),
+            (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_updating_troop", 8),
+            (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_lower_actor_attribute", ca_strength, ":cur_updating_troop", 14),
+            (call_script, "script_ee_lower_actor_attribute", ca_agility, ":cur_updating_troop", 11),
+            (call_script, "script_ee_lower_actor_attribute", ca_intelligence, ":cur_updating_troop", 8),
+            (call_script, "script_ee_lower_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+            
+            # (call_script, "script_ee_raise_actor_skill", skl_ironflesh, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_power_strike, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_power_draw, ":cur_updating_troop", 3),
+            # (call_script, "script_ee_raise_actor_skill", skl_power_throw, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_raise_actor_skill", skl_weapon_master, ":cur_updating_troop", 5),
+            # (call_script, "script_ee_raise_actor_skill", skl_athletics, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_shield, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_riding, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_pathfinding, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_wound_treatment, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_first_aid, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_raise_actor_skill", skl_surgery, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_raise_actor_skill", skl_inventory_management, ":cur_updating_troop", 10),
+            
+            # (call_script, "script_ee_lower_actor_skill", skl_ironflesh, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_power_strike, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_power_draw, ":cur_updating_troop", 3),
+            # (call_script, "script_ee_lower_actor_skill", skl_power_throw, ":cur_updating_troop", 0),
+            # (call_script, "script_ee_lower_actor_skill", skl_weapon_master, ":cur_updating_troop", 5),
+            # (call_script, "script_ee_lower_actor_skill", skl_athletics, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_shield, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_riding, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_pathfinding, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_wound_treatment, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_first_aid, ":cur_updating_troop", 2),
+            # (call_script, "script_ee_lower_actor_skill", skl_surgery, ":cur_updating_troop", 1),
+            # (call_script, "script_ee_lower_actor_skill", skl_inventory_management, ":cur_updating_troop", 10),
+
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 200),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 60),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 200),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 60),
+          (try_end),
+
+          (try_for_range, ":cur_updating_troop", "trp_sea_raider_captain", "trp_steppe_bandit"), ### Sea Raider Captain
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 300),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 200),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 200),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 200),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 180),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 300),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 200),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 200),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 200),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 180),
+          (try_end),
+
+          (display_message, "@Troop attributes, skills and proficiencies updated for the current mod version."),
+
+          (jump_to_menu, "mnu_camp"),
+        ]
+      ),
        
       ("enhanced_mod_options_10",[], "Go back.",
-       [
-           (jump_to_menu, "mnu_camp"),
+        [
+          (jump_to_menu, "mnu_camp"),
         ]
-       ),
+      ),
        
     ]
   ),
@@ -4065,7 +4245,7 @@ game_menus = [
        ),    
        
        ("debug_options_2",[], "Give me equipment!",
-       [
+        [
          (troop_raise_skill, "trp_player", "skl_inventory_management", 10),
          
          (troop_add_item, "trp_player", "itm_maciejowski_crown", 29),
@@ -4097,7 +4277,7 @@ game_menus = [
          (troop_add_item, "trp_player", "itm_coat_of_plates", 29),
          (troop_add_item, "trp_player", "itm_hirdman_a", 29),
          (troop_add_item, "trp_player", "itm_hirdman_a", 29),
-                                         
+         
          (troop_add_item, "trp_player", "itm_hunting_crossbow", 17),
          (troop_add_item, "trp_player", "itm_hunting_crossbow", 17),
          (troop_add_item, "trp_player", "itm_hunting_crossbow", 17),
@@ -4105,13 +4285,13 @@ game_menus = [
          (troop_add_item, "trp_player", "itm_crossbow", 17),
          (troop_add_item, "trp_player", "itm_crossbow", 17),
          (troop_add_item, "trp_player", "itm_heavy_crossbow", 17),
-                                         
+         
          (troop_add_item, "trp_player", "itm_steel_bolts", 42),
          (troop_add_item, "trp_player", "itm_steel_bolts", 42),
          (troop_add_item, "trp_player", "itm_steel_bolts", 42),
          (troop_add_item, "trp_player", "itm_steel_bolts", 42),
          (troop_add_item, "trp_player", "itm_steel_bolts", 42),
-                                         
+         
          (troop_add_item, "trp_player", "itm_lamellar_gauntlets", 29),
          (troop_add_item, "trp_player", "itm_lamellar_gauntlets", 29),
          (troop_add_item, "trp_player", "itm_lamellar_gauntlets", 29),
@@ -4122,7 +4302,7 @@ game_menus = [
          (troop_add_item, "trp_player", "itm_lamellar_gauntlets", 29),
          (troop_add_item, "trp_player", "itm_lamellar_gauntlets", 29),
          (troop_add_item, "trp_player", "itm_lamellar_gauntlets", 29),
-                                         
+         
          (troop_add_item, "trp_player", "itm_osp_great_helm_a", 29),
          (troop_add_item, "trp_player", "itm_osp_great_helm_a", 29),
          (troop_add_item, "trp_player", "itm_rnd_helm_03", 29),
@@ -4131,7 +4311,7 @@ game_menus = [
          (troop_add_item, "trp_player", "itm_rnd_helm_04", 29),
          (troop_add_item, "trp_player", "itm_rnd_helm_05", 29),
          (troop_add_item, "trp_player", "itm_rnd_helm_06", 29),
-                                         
+         
          (troop_add_item, "trp_player", "itm_mail_boots_long", 29),
          (troop_add_item, "trp_player", "itm_mail_boots_long", 29),
          (troop_add_item, "trp_player", "itm_mail_boots_long", 29),
@@ -4165,8 +4345,6 @@ game_menus = [
          (troop_add_item, "trp_player", "itm_tab_shield_heater_cav_b", 27),
          (troop_add_item, "trp_player", "itm_tab_shield_heater_cav_b", 27),
          (troop_add_item, "trp_player", "itm_tab_shield_heater_cav_b", 27),
-                                         
-
         ]
        ),
 
@@ -8521,7 +8699,7 @@ game_menus = [
 
 ######################### NEW v1.9 - fixes bug where if there was a tournament in town player was unable to leave because the option disappeared.
    ("fief_misc_options",0,
-    "Misc Options.",
+    "Misc. Options.",
     "none",
     [
   
@@ -8713,7 +8891,7 @@ game_menus = [
 
     (gt, "$love_interest_in_town", 0),
     ],
-      "Attempt to visit a lady",
+      "Attempt to visit a lady.",
        [
         (jump_to_menu, "mnu_lady_visit"),
         ], "Door to the garden."),
@@ -8922,26 +9100,26 @@ game_menus = [
     (set_background_mesh, "mesh_pic_camp"),
    ],     
     [      
-       ("sort_inventory_1",[], "Sort your inventory (compact)",
+       ("sort_inventory_1",[], "Sort your inventory (compact.)",
        [
          (call_script, "script_rearrange_inventory", "trp_player", 0),
-         (display_message, "@Inventory sorted (compact)."),
+         (display_message, "@Inventory sorted (compact.)"),
        ]
-       ),    
+       ),
        
-       ("sort_inventory_2",[], "Sort your inventory (by cost)",
+       ("sort_inventory_2",[], "Sort your inventory (by cost.)",
        [
          (call_script, "script_rearrange_inventory", "trp_player", 1),
          (display_message, "@Inventory sorted by item cost."),
        ]
-       ),    
+       ),
        
-       ("sort_inventory_3",[], "Sort your inventory (by type)",
+       ("sort_inventory_3",[], "Sort your inventory (by type.)",
        [
          (call_script, "script_rearrange_inventory", "trp_player", 2),
          (display_message, "@Inventory sorted by item type."),
        ]
-       ),    
+       ),
        
        # ("sort_party_1",[], "Sort your party (by level)",
        # [
@@ -8963,7 +9141,7 @@ game_menus = [
 
 ######################################################
   ("ee_center_manage",mnf_scale_picture, #### mnf_disable_all_keys
-    "Choose a action.",
+    "Choose an action.",
     "none",
     [],
     [
@@ -8972,7 +9150,7 @@ game_menus = [
         (neg|party_slot_eq, "$current_town", slot_village_state, svs_under_siege),
         (party_slot_eq, "$current_town", slot_town_lord, "trp_player"),
        ],
-       "Build a improvement.",
+       "Build an improvement.",
        [
          (assign, "$g_next_menu", "mnu_ee_center_manage"),
          (jump_to_menu, "mnu_center_manage"),
@@ -9121,7 +9299,7 @@ game_menus = [
            (troop_raise_proficiency_linear, "$g_player_troop", wpt_polearm, 300),
            (troop_raise_proficiency_linear, "$g_player_troop", wpt_archery, 300),
            (troop_raise_proficiency_linear, "$g_player_troop", wpt_crossbow, 300),
-           (troop_raise_proficiency_linear, "$g_player_troop", wpt_throwing, 300),           
+           (troop_raise_proficiency_linear, "$g_player_troop", wpt_throwing, 300),
 		   (display_message, "@Skills and attributes raised."),
 		  ]
 		),	   

@@ -5844,9 +5844,6 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("horse_archers", "Horse Archers"),
  ("spearmen", "Spearmen"),
  
- ("revision", "Enhanced Edition version: 3.11"), ### Update this on non-hotfix patches! -Khanor
- ("mod_version", "v3.11"),
- 
  ("manor_marketplace", "Marketplace"),
  ("manor_tavern", "Tavern"),
  ("manor_whorehouse", "Brothel"),
@@ -9852,7 +9849,9 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  ("dplmc_hero_wpn_slot_no_metatype","No Preference"), #23
  
   ("dplmc_political_explanation_original_lord", "In this case, the fortress should go its original owner."),
-  
+
+  ("mod_version", "3.11"), ### This holds short form version name, revision holds long form name, if applicable. -Khanor
+  ("revision", "3.11"), ### Update this and the "mod_version"-line above on non-hotfix patches! -Khanor
 ###################################################################################
 # End Autoloot
 ###################################################################################

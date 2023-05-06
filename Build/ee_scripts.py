@@ -8967,13 +8967,16 @@ scripts = [
       ############
       (else_try),
         (is_between, ":troop_no", mercenary_troops_begin, mercenary_troops_end),
-        (store_add, ":page_no", ":num_factions", 0), # mercenary
+        (store_add, ":page_no", ":num_factions", 0), ### Mercenaries
       (else_try),
         (is_between, ":troop_no", "trp_looter", "trp_black_khergit_horseman"),
-        (store_add, ":page_no", ":num_factions", 1), # Outlaws
+        (store_add, ":page_no", ":num_factions", 1), ### Outlaws
+      (else_try),
+        (is_between, ":troop_no", "trp_refugee", "trp_kidnapped_girl"),
+        (store_add, ":page_no", ":num_factions", 2), ### Others (peasants)
       (else_try),
         (neg|is_between, ":troop_no", soldiers_begin, soldiers_end),
-        (store_add, ":page_no", ":num_factions", 2), # Others
+        (store_add, ":page_no", ":num_factions", 2), ### Others (all others)
       (try_end),
       (assign, reg0, ":page_no"),
   ]),
@@ -22075,13 +22078,13 @@ scripts = [
         (try_end),
     ]),
 ####################################
-################ NEW v3.7 raises a attribute/skill/proficiency until the value desired 
+### Raises an attribute/skill/proficiency until the value desired ### (NEW 3.7)
     ("ee_raise_actor_attribute",
       [
-	    (store_script_param, ":attribute", 1),
-	    (store_script_param, ":actor", 2),
-	    (store_script_param, ":value", 3),
-		
+      (store_script_param, ":attribute", 1),
+      (store_script_param, ":actor", 2),
+      (store_script_param, ":value", 3),
+      
         (store_attribute_level, ":cur_value", ":actor", ":attribute"),
         (assign, ":end", ":value"),
         (try_for_range, ":unused", 0, ":end"),
@@ -22129,6 +22132,66 @@ scripts = [
             (lt, ":cur_value", ":value"),
               (troop_raise_proficiency_linear, ":actor", ":proficiency", 5),
               (val_add, ":cur_value", 5),
+          (else_try),
+            (ge, ":cur_value", ":value"),
+              (assign, ":end", -1),
+          (try_end),
+        (try_end),
+    ]),
+### Lowers an attribute/skill/proficiency until the value desired ### (NEW 3.9.2, by Khanor)
+    ("ee_lower_actor_attribute",
+      [
+      (store_script_param, ":attribute", 1),
+      (store_script_param, ":actor", 2),
+      (store_script_param, ":value", 3),
+
+        (store_attribute_level, ":cur_value", ":actor", ":attribute"),
+        (assign, ":end", ":value"),
+        (try_for_range, ":unused", 0, ":end"),
+          (try_begin),
+            (gt, ":cur_value", ":value"), ### The "lt" stands for "less than", thus in these reversed operations we must use "gt" for "greater than." - Khanor
+              (troop_raise_attribute, ":actor", ":attribute", -1),
+              (val_add, ":cur_value", -1),
+          (else_try),
+            (ge, ":cur_value", ":value"),
+              (assign, ":end", -1),
+          (try_end),
+        (try_end),
+    ]),
+
+    ("ee_lower_actor_skill",
+      [
+	    (store_script_param, ":skill", 1),
+	    (store_script_param, ":actor", 2),
+	    (store_script_param, ":value", 3),
+		
+        (store_skill_level, ":cur_value", ":actor", ":skill"),
+        (assign, ":end", ":value"),
+        (try_for_range, ":unused", 0, ":end"),
+          (try_begin),
+            (gt, ":cur_value", ":value"),
+              (troop_raise_skill, ":actor", ":skill", -1),
+              (val_add, ":cur_value", -1),
+          (else_try),
+            (ge, ":cur_value", ":value"),
+              (assign, ":end", -1),
+          (try_end),
+        (try_end),
+    ]),
+
+    ("ee_lower_actor_proficiency",
+      [
+	    (store_script_param, ":proficiency", 1),
+	    (store_script_param, ":actor", 2),
+	    (store_script_param, ":value", 3),
+		
+        (store_proficiency_level, ":cur_value", ":actor", ":proficiency"),
+        (assign, ":end", ":value"),
+        (try_for_range, ":unused", 0, ":end"),
+          (try_begin),
+            (gt, ":cur_value", ":value"),
+              (troop_raise_proficiency_linear, ":actor", ":proficiency", -5),
+              (val_add, ":cur_value", -5),
           (else_try),
             (ge, ":cur_value", ":value"),
               (assign, ":end", -1),
