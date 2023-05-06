@@ -4133,6 +4133,12 @@ game_menus = [
               (lt, ":cur_level", 19), ### Add enough exp for level 19.
                 (add_xp_to_troop, 600, ":cur_updating_troop"), ### Add exp repeatedly until desired level.
             (try_end),
+
+            (try_begin),
+              (store_character_level, ":cur_level", ":cur_updating_troop"),
+              (gt, ":cur_level", 19), ### Remove enough exp for level 19.
+                (add_xp_to_troop, -600, ":cur_updating_troop"), ### Remove exp repeatedly until desired level.
+            (try_end),
             
             (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 14),
             (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 11),
