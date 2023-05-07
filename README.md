@@ -1,5 +1,5 @@
 # 1257AD-EE
-"Anno Domini 1257, Enhanced Edition" (also known as "AD 1257, Enhanced Edition" and "1257 AD, Enhanced Edition")
+"Anno Domini 1257 - Enhanced Edition" (also known as "AD 1257 - Enhanced Edition" and "1257 AD - Enhanced Edition")
 
 Basic instructions/information about the mod (by Khanor)
 
