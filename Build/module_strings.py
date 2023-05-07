@@ -9850,8 +9850,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  
   ("dplmc_political_explanation_original_lord", "In this case, the fortress should go its original owner."),
 
-  ("mod_version", "3.11"), ### This holds short form version name, revision holds long form name, if applicable. -Khanor
-  ("revision", "3.11"), ### Update this and the "mod_version"-line above on non-hotfix patches! -Khanor
+  ("mod_version", "3.11"), ### This holds short form version name, revision holds long form name, if applicable. - Khanor
+  ("revision", "3.11"), ### Update this and the "mod_version"-line above on non-hotfix patches! - Khanor
 ###################################################################################
 # End Autoloot
 ###################################################################################
