@@ -4136,6 +4136,24 @@ game_menus = [
 
             (try_begin),
               (store_character_level, ":cur_level", ":cur_updating_troop"),
+              (gt, ":cur_level", 40), ### Remove enough exp for level 40.
+                (add_xp_to_troop, -600000, ":cur_updating_troop"), ### Remove exp repeatedly until desired level.
+            (try_end),
+
+            (try_begin),
+              (store_character_level, ":cur_level", ":cur_updating_troop"),
+              (gt, ":cur_level", 30), ### Remove enough exp for level 30.
+                (add_xp_to_troop, -60000, ":cur_updating_troop"), ### Remove exp repeatedly until desired level.
+            (try_end),
+
+            (try_begin),
+              (store_character_level, ":cur_level", ":cur_updating_troop"),
+              (gt, ":cur_level", 20), ### Remove enough exp for level 20.
+                (add_xp_to_troop, -6000, ":cur_updating_troop"), ### Remove exp repeatedly until desired level.
+            (try_end),
+
+            (try_begin),
+              (store_character_level, ":cur_level", ":cur_updating_troop"),
               (gt, ":cur_level", 19), ### Remove enough exp for level 19.
                 (add_xp_to_troop, -600, ":cur_updating_troop"), ### Remove exp repeatedly until desired level.
             (try_end),
