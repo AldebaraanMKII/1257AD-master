@@ -4276,7 +4276,7 @@ game_menus = [ #
   
 ################################# NEW v3.0 - SPAWN PRESETS
   ("start_game_new_spawn_presets", menu_text_color(0xFF000000),
-    "What spawn preset do you wish to use? (Spawn presets affect the maximum amount of parties like bandits that can exist in the map at one time. Since warband only runs on a single core the only thing that matters for it cpu wise is clock speed. Below are the recommended speeds in GHz).",
+    "What spawn preset do you wish to use? (Spawn presets affect the maximum amount of parties like bandits that can exist in the map at one time. Since warband only runs on a single core the only thing that matters for it cpu wise is clock speed. Below are the recommended speeds in GHz.)",
     "none",
     [
     ],
@@ -7035,7 +7035,7 @@ game_menus = [ #
   ),
   
   ("mod_troop_rebalance",0,
-   "This is an experimental feature to rebalances troop armour values to their appropriate tier. {s10}^^   What does it do? The troops are automatically re-equipped via scripts with a set range of body armours and helmets   appriopriate to their tier and culture.^^   Using this feature will make the gameplay more balanced, while still being historically correct. This   however will likely make the artistic values of the troop design obsolete.^^   To turn of this feature you will require to reload the game (it will not effect the save game in any way).   It's required you to do so, so the game engine could reload the troop items from the mod files. Turning on this feature   does not require you to reload the game.",
+   "This is an experimental feature to rebalances troop armour values to their appropriate tier. {s10}^^   What does it do? The troops are automatically re-equipped via scripts with a set range of body armours and helmets   appriopriate to their tier and culture.^^   Using this feature will make the gameplay more balanced, while still being historically correct. This   however will likely make the artistic values of the troop design obsolete.^^   To turn of this feature you will require to reload the game (it will not effect the save game in any way.)   It's required you to do so, so the game engine could reload the troop items from the mod files. Turning on this feature   does not require you to reload the game.",
    "none",
    [
     (try_begin),
@@ -12215,7 +12215,7 @@ game_menus = [ #
           (party_get_slot, ":center_relation", "$current_town", slot_center_player_relation),
           (call_script, "script_describe_center_relation_to_s3", ":center_relation"),
           (assign, reg9, ":center_relation"),
-          (str_store_string, s7, "@{!} {s3} ({reg9})."),
+          (str_store_string, s7, "@{!} {s3} ({reg9}.)"),
         (try_end),
         (str_clear, s6),
         (try_begin),
@@ -13133,7 +13133,7 @@ game_menus = [ #
           (try_end)
       ]),
       ("recruit_them",[(gt, reg5, 0)],
-       "Recruit all of them ({reg6} denars).",
+       "Recruit all of them ({reg6} denars.)",
         [
           (call_script, "script_village_recruit_volunteers_recruit", -1),
           (try_begin),
@@ -13148,7 +13148,7 @@ game_menus = [ #
 
       ]),
       ("recruit_one_of_them",[(gt, reg5, 0)],
-       "Recruit one of them ({reg7} denars).",
+       "Recruit one of them ({reg7} denars.)",
         [
           (call_script, "script_village_recruit_volunteers_recruit", 1),
           (try_begin),
@@ -16192,7 +16192,7 @@ game_menus = [ #
       ("bash_heads", 
       [
         (lt, "$current_opponent", 7),
-      ], "Let's go bash some skulls!.",
+      ], "Let's go bash some skulls!",
       [  
         
         (party_get_slot, ":arena_scene", "$current_town", slot_town_arena),
@@ -22526,7 +22526,7 @@ game_menus = [ #
       ("manor_infest_victory",
       [
         (eq, "$g_battle_result", 1),
-      ], "Huzzah!... Now to the looting...",
+      ], "Huzzah! Now for the looting...",
       [
         (display_message, "@Relationship with the regional center improves!", 0x00FF00),
         (party_get_slot, ":bound_center", "$g_encountered_party",slot_village_bound_center),

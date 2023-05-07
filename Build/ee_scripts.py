@@ -14531,7 +14531,7 @@ scripts = [
    (str_clear, s2),
    (str_store_faction_name_link, s1, ":faction_no"),
    (str_store_faction_name_link, s2, ":faction_selected"),
-   (display_message, "@Disgruntled lords from the {s1} have joined forces and started a rebellion! A civil war in the lands of the {s1} now begins!."),
+   (display_message, "@Disgruntled lords from the {s1} have joined forces and started a rebellion! A civil war in the lands of the {s1} has begun."),
    (call_script, "script_diplomacy_start_war_between_kingdoms", ":faction_selected", ":faction_no", 0),
      
    (call_script, "script_faction_recalculate_strength", ":faction_no"), ### updates strenght of both
