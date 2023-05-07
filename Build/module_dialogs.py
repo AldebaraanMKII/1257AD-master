@@ -2024,7 +2024,7 @@ dialogs = [
           [
              
           ],
-        "I want to collect my gold from the treasury", "manor_seneschal_treasury_action",
+        "I want to collect my gold from the treasury.", "manor_seneschal_treasury_action",
           [
             (assign, "$temp", 1),
             (assign, "$temp2", 10),
@@ -2035,7 +2035,7 @@ dialogs = [
           [
              
           ],
-        "I want to deposit some gold into my treasury", "manor_seneschal_treasury_action",
+        "I want to deposit some gold into my treasury.", "manor_seneschal_treasury_action",
           [
             (assign, "$temp", 2),
             (assign, "$temp2", 10),
@@ -2085,7 +2085,7 @@ dialogs = [
              (eq, ":continue", 1),
              (assign, reg1, "$temp2"),
           ],
-        "10", "manor_seneschal_treasury_action_done",
+        "10.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 10),
           ],
@@ -2108,7 +2108,7 @@ dialogs = [
              (eq, ":continue", 1),
              (assign, reg1, "$temp2"),
           ],
-        "100", "manor_seneschal_treasury_action_done",
+        "100.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 100),
           ],
@@ -2130,7 +2130,7 @@ dialogs = [
              (try_end),
              (eq, ":continue", 1),
           ],
-        "1000", "manor_seneschal_treasury_action_done",
+        "1000.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 1000),
           ],
@@ -2152,7 +2152,7 @@ dialogs = [
              (try_end),
              (eq, ":continue", 1),
           ],
-        "10000", "manor_seneschal_treasury_action_done",
+        "10000.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 10000),
           ],
@@ -2174,7 +2174,7 @@ dialogs = [
              (try_end),
              (eq, ":continue", 1),
           ],
-        "100000", "manor_seneschal_treasury_action_done",
+        "100000.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 100000),
           ],
@@ -2206,7 +2206,7 @@ dialogs = [
                #(troop_add_gold, "$g_talk_troop", "$temp2"),
              (try_end),
           ],
-        "It shall be done, {Milord/Milady}", "manor_seneschal_treasury",
+        "It shall be done, {Milord/Milady}.", "manor_seneschal_treasury",
           [
              
           ],
@@ -11407,7 +11407,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       
       (party_get_slot, ":accumulated_rents", ":selected_party", slot_center_accumulated_rents),
       (assign, reg0, ":accumulated_rents"),
-      (str_store_string, s61, "@ We are expecting {reg0} denars for rents."),
+      (str_store_string, s61, "@We are expecting {reg0} denars for rents."),
       
       (assign, ":overall", ":accumulated_rents"),  
       (assign, ":total_wage", 0),
@@ -11455,7 +11455,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (assign, reg0, ":overall"),
       (str_store_string, s62, "@{!}{reg0}"),
 
-      (str_store_string, s51, "@{s4} {s3}. The tax rate is {s50}. {s59} {s61}. Overall this sums up to {s62} denars."),
+      (str_store_string, s51, "@{s4} {s3}. The tax rate is {s50}. {s59} {s61} Overall this sums up to {s62} denars."),
     (try_end),
    ],
 "{s51}", "dplmc_chamberlain_status", []],    
@@ -22229,7 +22229,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "Let us wait until we are in a hall, my wife, as it is difficult to deal with household inventories and such matters in the field.", "lord_pretalk",[]],
 
 [anyone, "lord_switch_to_spouse", [],
-"Certainly, my wife", "spouse_talk",[]],
+"Certainly, my wife.", "spouse_talk",[]],
 
 
 
@@ -22278,7 +22278,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),
     (eq, ":continue", 1),
     ],
-"Hmm.. Perhaps we can discuss this matter in a more private setting, at a later date.", "lord_pretalk",[
+"Hmm... Perhaps we can discuss this matter in a more private setting, at a later date.", "lord_pretalk",[
    ]],
 
    [anyone, "combined_political_quests", [
@@ -28214,7 +28214,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
   (this_or_next|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_lady),
       (is_between, "$g_talk_troop", kingdom_ladies_begin, kingdom_ladies_end),
   ],
- "My {reg63?wife:husband}, I would like to dedicate my successes in this recent tournament to you", "dplmc_spouse_tournament_dedication_reaction", ## Floris - bugfix was wife/husband but needed : not /
+ "My {reg63?wife:husband}, I would like to dedicate my successes in this recent tournament to you.", "dplmc_spouse_tournament_dedication_reaction", ## Floris - bugfix was wife/husband but needed : not /
   [
 
   (try_begin),
@@ -28265,13 +28265,13 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [
     (neg|check_quest_active, "qst_organize_feast"),
    ],
-"I was thinking that perhaps we could host a feast", "spouse_organize_feast",[
+"I was thinking that perhaps we could host a feast.", "spouse_organize_feast",[
  ]],
 
 [anyone|plyr, "spouse_talk",
    [
    ],
-"Let us take inventory of our household possessions", "spouse_household_possessions",[
+"Let us take inventory of our household possessions.", "spouse_household_possessions",[
    (change_screen_loot, "trp_household_possessions"),
  ]],
 
@@ -28283,7 +28283,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 
 [anyone|plyr, "spouse_talk", [],
-"We shall speak later, my {wife/husband}", "close_window",[
+"We shall speak later, my {wife/husband}.", "close_window",[
      (assign, "$g_leave_encounter", 1),
  ]],
 
@@ -28401,7 +28401,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 [anyone|plyr, "spouse_feast_confirm",
    [
    ],
-"Let me add more items to our storehouses",   "spouse_feast_added_items", 
+"Let me add more items to our storehouses.",   "spouse_feast_added_items", 
    [
    (change_screen_loot, "trp_household_possessions"),
    ]],
@@ -28415,12 +28415,12 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [
    (gt, "$feast_quality", 1),
    ],
-"Let us dispatch the invitations",   "spouse_feast_confirm_yes", []],
+"Let us dispatch the invitations.",   "spouse_feast_confirm_yes", []],
 
 [anyone|plyr, "spouse_feast_confirm",
    [
    ],
-"Let us wait, then",   "spouse_pretalk",[]],
+"Let us wait, then.",   "spouse_pretalk",[]],
 
    
 [anyone, "spouse_feast_confirm_yes",
@@ -28666,12 +28666,12 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
         (str_store_string, s5, "str_for_s4"),
     (try_end),
     ],
-"We will shortly depart{s5}. It is good to know that some people in this world retain a sense of honor.", "close_window",[
+"We will shortly depart {s5}. It is good to know that some people in this world retain a sense of honor.", "close_window",[
  ]],
 
 
 [anyone|plyr, "lady_talk_refugee", [],
-"Of course, my lady", "close_window",[
+"Of course, my lady.", "close_window",[
     (troop_get_slot, ":current_location", "$g_talk_troop", slot_troop_cur_center),
     (call_script, "script_get_kingdom_lady_social_determinants", "$g_talk_troop"),
     (assign, ":new_location", reg1),
@@ -28723,7 +28723,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 
 [anyone|plyr, "kingdom_lady_captive", [],
-"I have changed my mind -- you are free to go", "close_window",[
+"I have changed my mind -- you are free to go.", "close_window",[
     (troop_set_slot, "$g_talk_troop", slot_troop_prisoner_of_party, -1),
     (troop_set_slot, "$g_talk_troop", slot_troop_met, 1),
     ]],#incomplete
@@ -28765,7 +28765,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  ]],
 
 [anyone|plyr, "lady_duel_lost",
-    [], "Very well - we must do as tradition demands... Farewell, my lady", "close_window", [
+    [], "Very well - we must do as tradition demands... Farewell, my lady.", "close_window", [
  ]],
 
 [anyone|plyr, "lady_duel_lost",

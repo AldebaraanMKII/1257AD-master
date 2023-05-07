@@ -3490,7 +3490,7 @@ game_menus = [ #
     [
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (change_screen_quit),
       ]
@@ -4761,7 +4761,7 @@ game_menus = [ #
         (str_store_string, s10, "@As the {reg3?daughter:son} of a thief, you had very little 'formal' education. Instead you were out on the street, begging until you learned how to cut purses, cutting purses until you learned how to pick locks, all the way through your childhood. Still, these long years made you streetwise and sharp to the secrets of cities and shadowy backways."),
     (jump_to_menu, "mnu_start_character_2"),
     ]),
-    ("go_back",[], "Go back",
+    ("go_back",[], "Go back.",
      [(jump_to_menu, "mnu_start_game_1"),
     ]),
     ]
@@ -16140,10 +16140,10 @@ game_menus = [ #
         (str_store_troop_name, s0, ":participent"),
         (try_begin),  #one-on-one
           (eq, "$tournament_type", 0),
-          (str_store_string, s1, "@{s1} {s0} wins:{reg1}, loses: {reg2}^"),
+          (str_store_string, s1, "@{s1} {s0} wins:{reg1}, losses: {reg2}^"),
         (else_try),  #team-on-team
           (str_store_string, s0, "@{s0}'s team"),
-          (str_store_string, s1, "@{s1} {s0}, wins:{reg1}, loses: {reg2}^"),
+          (str_store_string, s1, "@{s1} {s0}, wins:{reg1}, losses: {reg2}^"),
         (try_end),
       (try_end),
       
@@ -17042,7 +17042,7 @@ game_menus = [ #
       (jump_to_menu, "$g_next_menu"),
         ]),
     ("change_settings",[], "Change settings.",[(start_presentation, "prsnt_auto_sell_options"),]),
-    ("go_back",[], "Go back",[(jump_to_menu, "$g_next_menu")]),
+    ("go_back",[], "Go back.",[(jump_to_menu, "$g_next_menu")]),
   ]
   ),
 
@@ -17107,7 +17107,7 @@ game_menus = [ #
 
       (jump_to_menu, "$g_next_menu"),
       ]),
-    ("go_back",[], "Go back",[(jump_to_menu, "$g_next_menu")]),
+    ("go_back",[], "Go back.",[(jump_to_menu, "$g_next_menu")]),
     ]
   ),
 ## CC
@@ -20763,7 +20763,7 @@ game_menus = [ #
       (str_store_troop_name, s0, "$g_player_troop"),
     ],
     [
-      ("export_import_back",[], "Go back",
+      ("export_import_back",[], "Go back.",
         [
           (assign, "$g_player_troop", "trp_player"),
           (set_player_troop, "$g_player_troop"),
@@ -20882,7 +20882,7 @@ game_menus = [ #
                 ]
             ),
 
-      ("go_back",[], "Go back",
+      ("go_back",[], "Go back.",
        [(jump_to_menu, "mnu_start_character_4"),
         ]
        ),
@@ -21243,7 +21243,7 @@ game_menus = [ #
           (jump_to_menu, "mnu_dplmc_deny_terms"),
         (try_end),        ]
        ),
-      ("dplmc_go_back",[], "Go back",
+      ("dplmc_go_back",[], "Go back.",
        [
          (jump_to_menu, "mnu_question_peace_offer"),
        ]),

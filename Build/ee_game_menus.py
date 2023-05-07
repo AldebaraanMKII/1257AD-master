@@ -185,7 +185,7 @@ game_menus = [
        
        (store_troop_gold, ":gold", "trp_player"),
        (ge, ":gold", reg5),
-     ], "Recruit one lance {s1}",
+     ], "Recruit one lance. {s1}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_feudal_lances),
        (val_sub, ":manpower", 1),
@@ -2794,7 +2794,7 @@ game_menus = [
      ("go_back",
      [
        
-     ], "Go back",
+     ], "Go back.",
      [
        (try_begin),
          (this_or_next|party_slot_eq, "$current_town", slot_party_type, spt_town),
@@ -4810,7 +4810,7 @@ game_menus = [
           (change_screen_mission),
         ]) for x in range(0, 8)]+[
       
-      ("debug_jump_to_scene_back",[], "Go back",
+      ("debug_jump_to_scene_back",[], "Go back.",
         [(jump_to_menu, "mnu_debug_options"),]),
     ]
 ),
@@ -10576,7 +10576,7 @@ game_menus = [
    "none",
     [],
     [
-      ("debug_choose_faction_to_war_back",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back",[], "Go back.", [(jump_to_menu, "mnu_debug_options_new_2")]),
 ########################
     ]+[("choose_faction_1"+str(x+1),
         [
@@ -10599,7 +10599,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options_new_2")]),
       ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_1")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -10622,7 +10622,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options_new_2")]),
       ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_2")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -10646,7 +10646,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options_new_2")]),
       ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_3")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -10670,7 +10670,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options_new_2")]),
+      ("debug_choose_faction_to_war_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options_new_2")]),
       ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_4")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -10694,7 +10694,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_war_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_war_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options")]),
       ("debug_choose_faction_to_war_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_war_5")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -10993,7 +10993,7 @@ game_menus = [
    "none",
     [],
     [
-      ("debug_choose_faction_to_spawn_lord_back",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back",[], "Go back.", [(jump_to_menu, "mnu_debug_options")]),
 ########################
     ]+[("choose_faction_1"+str(x+1),
         [
@@ -11015,7 +11015,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options")]),
       ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_1")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -11037,7 +11037,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options")]),
       ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_2")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -11060,7 +11060,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options")]),
       ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_3")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -11083,7 +11083,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options")]),
       ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_4")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
@@ -11106,7 +11106,7 @@ game_menus = [
     "none",
      [],
     [
-      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back", [(jump_to_menu, "mnu_debug_options")]),
+      ("debug_choose_faction_to_spawn_lord_back_2",[], "Go back.", [(jump_to_menu, "mnu_debug_options")]),
       ("debug_choose_faction_to_spawn_lord_back",[], "Previous page", [(jump_to_menu, "mnu_choose_faction_to_spawn_lord_5")]),
 ########################
     ]+[("export_import_npc"+str(x+1),
