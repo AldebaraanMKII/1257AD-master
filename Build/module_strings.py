@@ -9202,11 +9202,11 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("dplmc_fief_exchange_ask_interest", "Would you be interested in exchanging fiefs?"),
 ("dplmc_fief_exchange_not_interested", "No, I would not be interested in that."),
 
-("dplmc_fief_exchange_listen", "This is somewhat unusual but not unprecedented.  I will listen.  Which fief of mine did you have in mind?"),
-("dplmc_fief_exchange_listen_player_approval", "This is somewhat unusual, but since you're the {king/queen} there is no one to object.  Which fief of mine did you have in mind?"),
-("dplmc_fief_exchange_listen_s10_approval", "This is somewhat unusual, but unless {s10} objects there is no reason we could not.  Which fief of mine did you have in mind?"),
+("dplmc_fief_exchange_listen", "This is somewhat unusual but not unprecedented. I will listen. Which fief of mine did you have in mind?"),
+("dplmc_fief_exchange_listen_player_approval", "This is somewhat unusual, but since you're the {king/queen} there is no one to object. Which fief of mine did you have in mind?"),
+("dplmc_fief_exchange_listen_s10_approval", "This is somewhat unusual, but unless {s10} objects there is no reason we could not. Which fief of mine did you have in mind?"),
 
-("dplmc_fief_exchange_listen_2", "What fief do you offer in exchange?"),
+("dplmc_fief_exchange_listen_2", "Which fief do you offer in exchange?"),
 
 ("dplmc_fief_exchange_refuse_home", "I have no intention of giving up {s14}."),
 ("dplmc_fief_exchange_refuse_town", "I don't want to exchange a town for a castle or village."),
@@ -9218,7 +9218,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("dplmc_fief_exchange_accept_reg3_denars", "That exchange is acceptable to me, if you are willing to provide {reg3} denars to cover my expenses from the relocation."),
 
 ("dplmc_fief_exchange_confirm", "It is settled then."),
-("dplmc_fief_exchange_confirm_reg3_denars", "It is settled then.  Here are your {reg3} denars."),
+("dplmc_fief_exchange_confirm_reg3_denars", "It is settled then. Here are your {reg3} denars."),
 ##############################################
 
 

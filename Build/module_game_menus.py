@@ -12215,7 +12215,7 @@ game_menus = [ #
           (party_get_slot, ":center_relation", "$current_town", slot_center_player_relation),
           (call_script, "script_describe_center_relation_to_s3", ":center_relation"),
           (assign, reg9, ":center_relation"),
-          (str_store_string, s7, "@{!} {s3} ({reg9}.)"),
+          (str_store_string, s7, "@{!} {s3} ({reg9})."), ### Ignore conventional writing here, tidier with period outside parenthesis here. - Khanor
         (try_end),
         (str_clear, s6),
         (try_begin),
@@ -14339,7 +14339,7 @@ game_menus = [ #
           (party_get_slot, ":center_relation", "$current_town", slot_center_player_relation),
           (call_script, "script_describe_center_relation_to_s3", ":center_relation"),
           (assign, reg9, ":center_relation"),
-          (str_store_string, s12, "@{!} {s3} ({reg9})."),
+          (str_store_string, s12, "@{!} {s3} ({reg9})."), ### Ignore conventional writing here, tidier with period outside parenthesis here. - Khanor
         (try_end),
 
         (str_clear, s13),
