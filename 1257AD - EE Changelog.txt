@@ -199,7 +199,7 @@ Anno Domini 1257 - Enhanced Edition version 3.9.2 is an optional patch based on 
 69). (@Khanor#3713) Improved spacing, punctuation and spelling of multiple dialogues for Lords, Ladies and other NPCs, as well as some of their related player responses.
 70). (@Khanor#3713) Improved spacing, punctuation and spelling of some settlement (village/castle/town) menu options, as well as some reports, camp menu, tournament and main menu texts/options.
 71). (@Khanor#3713) The Crown of Castile is now correctly named "Crown of Castile" instead of "Kingdom of Castille." Thanks go to our Discord feedback givers.
-72). (@Khanor#3713) Added fief amount and tax inefficiency calculations to the end of the fief exchange code to avoid the weekly budget report being bugged (temporarily) after the fief exchange happened.
+72). (@Khanor#3713) Added fief amount, rent, tariff, tax inefficiency and salary calculations to the end of the fief exchange code to avoid the weekly budget report being bugged (temporarily) after the fief exchange happened. Does not solve all issues remaining with the budget report display, such as 0 rents displayed on recent load.
 
 
 
