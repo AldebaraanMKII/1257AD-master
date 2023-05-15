@@ -13,4 +13,4 @@ For users:
 
 For devs:
 - Things to check before posting the new version on Nexusmods and the Discord:
-    - Remember to update module_strings.py on the "mod_version"- and "revision"-lines with the new patch numbers (and optional patch name) for every non-hotfix patch. This is now visible in the main menu as of Enhanced Edition version 3.11 and 3.9.2 (3.9 definitive series.)
+    - Remember to update module_strings.py on the "mod_version"- and "revision"-lines with the new patch numbers (and optional patch name) for every non-hotfix patch. This is now visible in the main menu as of Enhanced Edition version 3.11 and 3.9.2 (3.9 Definitive Series.)
