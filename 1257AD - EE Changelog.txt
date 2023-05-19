@@ -118,6 +118,18 @@ A: The chance is random. There's a 50% chance that the NPC will accept the gift.
 
 
 
+v3.9.2a "Smooth Sailing" (3.9 definitive series)
+(Save game compatible with all versions from 3.5 to 3.9.2.)
+
+1). (@Khanor#3713) Fixed code adaptation for the code letting opposing parties merge together for battles (now adapted for the differences between 3.11 and 3.9.2 in a more proper way.)
+2). (@Khanor#3713) Fixed all instances of misspelled "Sergeant" in troop names (15 individual troop types affected.)
+3). (@Khanor#3713) Updated troop stats (with error corrections) for the first two tiers of "Gaelic Mercenary Spearmen" and "Gaelic Mercenary Axemen" so that these are gradual upgrades proficiency- and attribute-wise. Especially a noticeable improvement for the proficiencies of the second tier in the Axemen-line, which one of our Discord-members led me to (thank you.)
+4). (@Khanor#3713) Added attribute and proficiency updates for the above point's Gaelic Mercenaries to the "Update troops to the current mod version"-button under "Enhanced Options."
+5). (@Khanor#3713) Tuned the scripts for raising and lowering proficiencies so they can also tweak proficiency values with full accuracy in the cases where the before values for the proficiencies were not a multiple of 5 like in most cases for troops.
+
+
+
+
 v3.9.2 "Smooth Sailing" (3.9 definitive series)
 (Save game compatible with other 3.9-, 3.8-, and maybe some earlier versions, but new village connections and geographical changes will need a new game to take effect.)
 Anno Domini 1257 - Enhanced Edition version 3.9.2 is an optional patch based on 3.9.1, created by Khanor (@Khanor#3713.) It comes with many polished 3.10 and 3.11 (and some original) features on top for as smooth and bug free an experience as possible. As such this patch is a good choice for continuing old saves, or prioritizing a balance of polish and features over just all the very newest features.

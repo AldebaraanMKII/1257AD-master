@@ -22084,7 +22084,7 @@ scripts = [
       (store_script_param, ":attribute", 1),
       (store_script_param, ":actor", 2),
       (store_script_param, ":value", 3),
-      
+        
         (store_attribute_level, ":cur_value", ":actor", ":attribute"),
         (assign, ":end", ":value"),
         (try_for_range, ":unused", 0, ":end"),
@@ -22124,7 +22124,7 @@ scripts = [
 	    (store_script_param, ":proficiency", 1),
 	    (store_script_param, ":actor", 2),
 	    (store_script_param, ":value", 3),
-		
+        
         (store_proficiency_level, ":cur_value", ":actor", ":proficiency"),
         (assign, ":end", ":value"),
         (try_for_range, ":unused", 0, ":end"),
@@ -22137,6 +22137,20 @@ scripts = [
               (assign, ":end", -1),
           (try_end),
         (try_end),
+
+        ### Light correction in the other direction to catch cases where proficiency is not a multiple of 5 ### (NEW 3.9.2a, by Khanor)
+        (store_proficiency_level, ":cur_value", ":actor", ":proficiency"),
+        (assign, ":end", ":value"),
+        (try_for_range, ":unused", 0, ":end"),
+          (try_begin),
+            (gt, ":cur_value", ":value"),
+              (troop_raise_proficiency_linear, ":actor", ":proficiency", -1),
+              (val_add, ":cur_value", -1),
+          (else_try),
+            (ge, ":cur_value", ":value"),
+              (assign, ":end", -1),
+          (try_end),
+        (try_end),
     ]),
 ### Lowers an attribute/skill/proficiency until the value desired ### (NEW 3.9.2, by Khanor)
     ("ee_lower_actor_attribute",
@@ -22144,7 +22158,7 @@ scripts = [
       (store_script_param, ":attribute", 1),
       (store_script_param, ":actor", 2),
       (store_script_param, ":value", 3),
-
+        
         (store_attribute_level, ":cur_value", ":actor", ":attribute"),
         (assign, ":end", ":value"),
         (try_for_range, ":unused", 0, ":end"),
@@ -22184,7 +22198,7 @@ scripts = [
 	    (store_script_param, ":proficiency", 1),
 	    (store_script_param, ":actor", 2),
 	    (store_script_param, ":value", 3),
-		
+        
         (store_proficiency_level, ":cur_value", ":actor", ":proficiency"),
         (assign, ":end", ":value"),
         (try_for_range, ":unused", 0, ":end"),
@@ -22192,6 +22206,20 @@ scripts = [
             (gt, ":cur_value", ":value"),
               (troop_raise_proficiency_linear, ":actor", ":proficiency", -5),
               (val_add, ":cur_value", -5),
+          (else_try),
+            (ge, ":cur_value", ":value"),
+              (assign, ":end", -1),
+          (try_end),
+        (try_end),
+
+        ### Light correction in the other direction to catch cases where proficiency is not a multiple of 5 ### (NEW 3.9.2a, by Khanor)
+        (store_proficiency_level, ":cur_value", ":actor", ":proficiency"),
+        (assign, ":end", ":value"),
+        (try_for_range, ":unused", 0, ":end"),
+          (try_begin),
+            (lt, ":cur_value", ":value"),
+              (troop_raise_proficiency_linear, ":actor", ":proficiency", 1),
+              (val_add, ":cur_value", 1),
           (else_try),
             (ge, ":cur_value", ":value"),
               (assign, ":end", -1),

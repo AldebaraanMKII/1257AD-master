@@ -5903,7 +5903,7 @@ troops = [
     itm_gaelic_long_tunic_b,
     itm_gaelic_long_tunic_c,
     ],
-    foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
+    foot_attrib_3, gaelic_spearman_wp_1, gaelic_spearman_skills_1,
     nord_face_young_1, swadian_face_old_2
   ],
 
@@ -5935,7 +5935,7 @@ troops = [
     itm_wrapping_boots,
     itm_highlander_boots_1,
     ],
-    foot_attrib_3, gaelic_spearman_wp_1, gaelic_spearman_skills_1,
+    foot_attrib_3, gaelic_axeman_wp_1, gaelic_axeman_skills_1,
     euro_face_1, euro_face_2
   ],
 
@@ -6018,7 +6018,7 @@ troops = [
 
 ##KOMKE END
 
-    foot_attrib_5, gaelic_axeman_skills_2, gaelic_axeman_skills_2,
+    foot_attrib_4, gaelic_axeman_wp_2, gaelic_axeman_skills_2,
     euro_face_3, euro_face_4
   ],
 
@@ -31499,8 +31499,8 @@ troops = [
 
 
   ["euro_xbow_3_antioch",
-     "Antioch Seargent Crossbowman",
-     "Antioch Seargent Crossbowmen",
+     "Antioch Sergeant Crossbowman",
+     "Antioch Sergeant Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
@@ -31749,8 +31749,8 @@ troops = [
 
 
   ["euro_spearman_3_antioch",
-     "Antioch Seargent Spearman",
-     "Antioch Seargent Spearmen",
+     "Antioch Sergeant Spearman",
+     "Antioch Sergeant Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
@@ -31935,8 +31935,8 @@ troops = [
 
 
   ["euro_guisarm_3_antioch",
-     "Antioch Seargent Guisarmer",
-     "Antioch Seargent Guisarmer",
+     "Antioch Sergeant Guisarmer",
+     "Antioch Sergeant Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
@@ -32781,8 +32781,8 @@ troops = [
 
 
   ["euro_xbow_3_tripoli",
-     "Tripoli Seargent Crossbowman",
-     "Tripoli Seargent Crossbowmen",
+     "Tripoli Sergeant Crossbowman",
+     "Tripoli Sergeant Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
@@ -33031,8 +33031,8 @@ troops = [
 
 
   ["euro_spearman_3_tripoli",
-     "Tripoli Seargent Spearman",
-     "Tripoli Seargent Spearmen",
+     "Tripoli Sergeant Spearman",
+     "Tripoli Sergeant Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
@@ -33217,8 +33217,8 @@ troops = [
 
 
   ["euro_guisarm_3_tripoli",
-     "Tripoli Seargent Guisarmer",
-     "Tripoli Seargent Guisarmer",
+     "Tripoli Sergeant Guisarmer",
+     "Tripoli Sergeant Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
@@ -34060,8 +34060,8 @@ troops = [
 
 
   ["euro_xbow_3_ibelin",
-     "Ibelin Seargent Crossbowman",
-     "Ibelin Seargent Crossbowmen",
+     "Ibelin Sergeant Crossbowman",
+     "Ibelin Sergeant Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
@@ -34310,8 +34310,8 @@ troops = [
 
 
   ["euro_spearman_3_ibelin",
-     "Ibelin Seargent Spearman",
-     "Ibelin Seargent Spearmen",
+     "Ibelin Sergeant Spearman",
+     "Ibelin Sergeant Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
@@ -34496,8 +34496,8 @@ troops = [
 
 
   ["euro_guisarm_3_ibelin",
-     "Ibelin Seargent Guisarmer",
-     "Ibelin Seargent Guisarmer",
+     "Ibelin Sergeant Guisarmer",
+     "Ibelin Sergeant Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
@@ -35340,8 +35340,8 @@ troops = [
 
 
   ["euro_xbow_3_jerusalem",
-     "Jerusalem Seargent Crossbowman",
-     "Jerusalem Seargent Crossbowmen",
+     "Jerusalem Sergeant Crossbowman",
+     "Jerusalem Sergeant Crossbowmen",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
@@ -35590,8 +35590,8 @@ troops = [
 
 
   ["euro_spearman_3_jerusalem",
-     "Jerusalem Seargent Spearman",
-     "Jerusalem Seargent Spearmen",
+     "Jerusalem Sergeant Spearman",
+     "Jerusalem Sergeant Spearmen",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
@@ -35776,8 +35776,8 @@ troops = [
 
 
   ["euro_guisarm_3_jerusalem",
-     "Jerusalem Seargent Guisarmer",
-     "Jerusalem Seargent Guisarmer",
+     "Jerusalem Sergeant Guisarmer",
+     "Jerusalem Sergeant Guisarmer",
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [

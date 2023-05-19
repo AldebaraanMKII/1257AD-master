@@ -22537,7 +22537,8 @@ scripts = [
             (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 0),
             (try_begin),
               (party_stack_get_troop_id, ":stack_troop", ":party_no", 0),
-              (is_between, ":stack_troop", "trp_looter", "trp_black_khergit_horseman"),
+              # (is_between, ":stack_troop", "trp_looter", "trp_black_khergit_horseman"),
+              (is_between, ":stack_troop", "trp_euro_horse_4_jerusalem", "trp_manhunter"),
               (gt, ":player_level", 6),
               (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
             (try_end),
@@ -22579,9 +22580,13 @@ scripts = [
             # (this_or_next|eq, ":party_type", spt_mercenary_company),
             ########################
             ############### NEW v3.11 - 
-            (is_between, ":template", "pt_manhunters", "pt_manor"),
-            ############### 
+            (is_between, ":template", "pt_manhunters", "pt_manor"), 
             (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+
+            ############### NEW v3.9.2a, by Khanor
+            # (is_between, ":template", "pt_cattle_herd", "pt_manor") and (neq, ":template", "pt_manhunters"),
+            # (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+            ########################
             
             (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
             (neq, ":ai_bhvr", ai_bhvr_avoid_party),

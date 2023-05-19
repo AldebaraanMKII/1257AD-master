@@ -4033,6 +4033,110 @@ game_menus = [
       ### Remember to add newly tweaked troops here if wanting players to update them!
       ("enhanced_mod_options_9",[], "Update troops to the current mod version.",
         [
+          (try_for_range, ":cur_updating_troop", "trp_merc_gaelic_spearman", "trp_merc_gaelic_axeman"), ### Gaelic Mercenary Spearman
+            (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 12),
+            (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 9),
+            (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_lower_actor_attribute", ca_strength, ":cur_updating_troop", 12),
+            (call_script, "script_ee_lower_actor_attribute", ca_agility, ":cur_updating_troop", 9),
+            (call_script, "script_ee_lower_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_lower_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 210),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 40),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 210),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 40),
+          (try_end),
+
+          (try_for_range, ":cur_updating_troop", "trp_merc_gaelic_axeman", "trp_merc_veteran_gaelic_spearman"), ### Gaelic Mercenary Axeman
+            (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 12),
+            (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 9),
+            (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_lower_actor_attribute", ca_strength, ":cur_updating_troop", 12),
+            (call_script, "script_ee_lower_actor_attribute", ca_agility, ":cur_updating_troop", 9),
+            (call_script, "script_ee_lower_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_lower_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 210),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 40),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 210),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 40),
+          (try_end),
+
+          (try_for_range, ":cur_updating_troop", "trp_merc_veteran_gaelic_spearman", "trp_merc_veteran_gaelic_axeman"), ### Veteran Gaelic Mercenary Spearman
+            (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 15),
+            (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 12),
+            (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_lower_actor_attribute", ca_strength, ":cur_updating_troop", 15),
+            (call_script, "script_ee_lower_actor_attribute", ca_agility, ":cur_updating_troop", 12),
+            (call_script, "script_ee_lower_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_lower_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+            
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 160),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 280),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 50),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 160),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 280),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 50),
+          (try_end),
+
+          (try_for_range, ":cur_updating_troop", "trp_merc_veteran_gaelic_axeman", "trp_merc_elite_gaelic_spearman"), ### Veteran Gaelic Mercenary Axeman
+            (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 15),
+            (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 12),
+            (call_script, "script_ee_raise_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_raise_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_lower_actor_attribute", ca_strength, ":cur_updating_troop", 15),
+            (call_script, "script_ee_lower_actor_attribute", ca_agility, ":cur_updating_troop", 12),
+            (call_script, "script_ee_lower_actor_attribute", ca_intelligence, ":cur_updating_troop", 6),
+            (call_script, "script_ee_lower_actor_attribute", ca_charisma, ":cur_updating_troop", 6),
+
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 280),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 50),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 280),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 50),
+          (try_end),
+
           (try_for_range, ":cur_updating_troop", "trp_ee_constable_armory", "trp_ramun_the_slave_trader"), ### Armory (accessed via Constable)
             (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 18),
             (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 20),
