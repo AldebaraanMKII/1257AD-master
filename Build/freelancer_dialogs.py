@@ -50,7 +50,7 @@ lord_talk_addon = [
         (eq, "$freelancer_state", 0),
         (ge, "$g_talk_troop_faction_relation", 0),
         (neq, "$players_kingdom", "$g_talk_troop_faction"),
-        (eq, "$g_player_cur_role", role_adventurer), ######## NEW v3.4
+        # (eq, "$g_player_cur_role", role_adventurer), ######## NEW v3.4   - NEW v3.12 - removed
 		############### NEW v3.9.1 - fixes player vassal and mercenary being able to enlist on someone's army
         (eq, "$player_has_homage", 0),   ###### not mercenary
         (neq, "$g_player_cur_role", role_king),  

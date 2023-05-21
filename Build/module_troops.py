@@ -38659,7 +38659,7 @@ troops = [
 	
    
    ["polish_strzelcy",
-     "Polish Strzelcy",
+     "Polish Strzelec",
 	 "Polish Strzelcy Cav Crossbowmen",
 	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
      0, 0, fac_kingdom_5,
@@ -42695,7 +42695,8 @@ troops = [
     itm_warhorse_lithuania_a,
 
     itm_kau_rus_lamellar_vest,
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
 
       ##### itm_talak_mace,
     itm_byzantine_sword,
@@ -47360,7 +47361,8 @@ troops = [
     itm_warhorse_ireland_a,
     itm_haubergeon,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_raf_one_handed_axe_c,
     itm_tab_shield_heater_cav_b,
     ],
@@ -47822,7 +47824,8 @@ troops = [
     itm_mon_lamellar_horse_b,
     itm_kau_rus_noble_a,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_scimitar,
     itm_rus_shield_2,
     ],
@@ -49214,7 +49217,8 @@ troops = [
     itm_warhorse_red,
     itm_rnd_surcoat_02,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_sword_type_xiii,
     itm_tab_shield_heater_cav_b,
     ],
@@ -49735,7 +49739,8 @@ troops = [
     itm_warhorse_white,
     itm_kau_papal,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_sword_type_xiii,
     itm_tab_shield_heater_cav_b,
     ],
@@ -49859,7 +49864,8 @@ troops = [
 
     itm_elm9,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -49884,7 +49890,8 @@ troops = [
 
     itm_elm9,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -49909,7 +49916,8 @@ troops = [
 
     itm_elm9,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -49934,7 +49942,8 @@ troops = [
 
     itm_elm9,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -49959,7 +49968,8 @@ troops = [
 
     itm_elm9,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -49984,7 +49994,8 @@ troops = [
 
     itm_elm9,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50008,7 +50019,8 @@ troops = [
 
     itm_elm9,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50032,7 +50044,8 @@ troops = [
 
     itm_elm10,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50056,7 +50069,8 @@ troops = [
 
     itm_elm10,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50079,7 +50093,8 @@ troops = [
 
     itm_byzantine_greaves,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50103,7 +50118,8 @@ troops = [
 
     itm_elm10,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50127,7 +50143,8 @@ troops = [
 
     itm_elm10,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50151,7 +50168,8 @@ troops = [
 
     itm_byzantine_greaves,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50175,7 +50193,8 @@ troops = [
 
     itm_elm10,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50199,7 +50218,8 @@ troops = [
 
     itm_elm10,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_spatha,
     itm_tab_shield_kite_cav_b
     ],
@@ -50454,7 +50474,8 @@ troops = [
     itm_warhorse_white,
     itm_varangian_c,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_sword_type_xiii,
     itm_sword_type_xiv,
 
@@ -51390,7 +51411,8 @@ troops = [
     itm_warhorse_white,
     itm_kau_latin_b,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],
@@ -51565,7 +51587,8 @@ troops = [
     itm_warhorse_white,
     itm_kau_latin_b,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_raf_one_handed_axe_c,
     itm_tab_shield_heater_cav_b,
     ],
@@ -51646,7 +51669,8 @@ troops = [
     itm_warhorse_novgorod_a,
     itm_varangian_c,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_spatha,
     itm_byz_shield_3,
     ],
@@ -51693,7 +51717,8 @@ troops = [
     itm_seljuk_horse,
     itm_seljuk_lamellar_a,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_scimitar,
     itm_tab_shield_kite_cav_b
     ],
@@ -52377,7 +52402,8 @@ troops = [
     itm_mon_lamellar_horse_b,
     itm_byz_kataphrakt,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_scimitar,
     itm_tab_shield_kite_cav_b
     ],
@@ -52626,7 +52652,8 @@ troops = [
     itm_mon_lamellar_horse_b,
     itm_byz_hcavalry_c,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_scimitar,
     itm_tab_shield_kite_cav_b
     ],
@@ -53244,7 +53271,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_01,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],
@@ -53420,7 +53448,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_07,
 
-    itm_spear_k,
+    # itm_spear_k,
+    itm_light_lance,
     itm_raf_one_handed_axe_c,
     itm_tab_shield_heater_cav_b,
     ],
@@ -53446,7 +53475,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_08,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_sword_type_xii,
     itm_tab_shield_heater_cav_b,
 
@@ -53828,7 +53858,8 @@ troops = [
     itm_warhorse_white,
     itm_rnd_surcoat_12,
 
-    itm_spear_l,
+    # itm_spear_l,
+    itm_light_lance,
     itm_sword_type_xiii,
     itm_tab_shield_heater_cav_b,
     ],
@@ -53903,7 +53934,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_01,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],
@@ -54028,7 +54060,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_01,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],
@@ -54153,7 +54186,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_01,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],
@@ -54278,7 +54312,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_01,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],
@@ -54403,7 +54438,8 @@ troops = [
     itm_warhorse_yellow,
     itm_rnd_surcoat_01,
 
-    itm_spear_n,
+    # itm_spear_n,
+    itm_light_lance,
     itm_sword_type_xiv,
     itm_tab_shield_heater_cav_b,
     ],

@@ -1202,7 +1202,7 @@ scripts = [
         (eq, ":freelancer_culture", "fac_culture_player"),## fac_culture_player is custom troops culture included in cultures range
         (faction_get_slot, ":freelancer_culture", "$g_talk_troop_faction", slot_faction_culture), ## if player culture culture get faction culture
     (try_end),
-    (try_for_range, ":cur_troop", regulars_begin, regulars_end),
+    (try_for_range, ":cur_troop", soldiers_begin, soldiers_end),
         (troop_get_slot, ":cur_culture", ":cur_troop", slot_troop_culture),
         (eq, ":cur_culture", ":freelancer_culture"),## only troops with culture = freelancer culture
         (store_character_level, ":cur_level", ":cur_troop"),

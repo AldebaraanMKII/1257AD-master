@@ -5470,12 +5470,14 @@ scripts = [
                                     ############ NEW v2.7 - being defeated generates animosity
                                     # (call_script, "script_troop_change_relation_with_troop", ":leader_troop_id", ":cur_troop_id", -3),
                                     (val_add, "$total_battle_enemy_changes", -2),      
+                                    (call_script, "script_change_troop_renown", ":cur_troop_id", -10), ############### NEW v3.12 - 
                                     ########################                                    
                                   (else_try),
                                     (neg|is_between, ":faction_receiving_prisoners", kingdoms_begin, kingdoms_end),
                                     # (display_message, "@{s1} of {s3} was defeated in battle but managed to escape."),
                                     (call_script, "script_get_message_color", 1, ":cur_troop_id"),
                                     (display_log_message, "@{s1} of the {s3} was defeated in battle but managed to escape.", reg20),
+                                    (call_script, "script_change_troop_renown", ":cur_troop_id", -10), ############### NEW v3.12 - 
                                   (try_end),
                               (try_end),
                             (try_end),
@@ -37087,8 +37089,6 @@ scripts = [
         (faction_set_slot, "fac_player_supporters_faction", slot_faction_religion, religion_catholic),
         # end rafi
 ####### NEW v3.1-KOMKE START- player culture is assigned to prevent kingdom parties spawning before the kingdom has a culture and thus having no slot reinforcements causing bug
-        (assign, "$g_player_culture", "fac_culture_western"),
-        (faction_set_slot, "fac_player_supporters_faction", slot_faction_culture, "fac_culture_western"),
         (call_script, "script_initialize_faction_troop_types_player"),
 ####### NEW v3.1-KOMKE END-
         (assign, ":original_kingdom", "$players_kingdom"),
@@ -37097,7 +37097,16 @@ scripts = [
           (is_between, ":original_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
           (call_script, "script_player_leave_faction", 0), #Ends quests, transfers control of centers
         (try_end),
+        ############### NEW v3.12 - 
+        (faction_get_slot, ":faction_culture", ":original_kingdom", slot_faction_culture),
+        (faction_get_slot, ":faction_religion", ":original_kingdom", slot_faction_religion),
+        (faction_get_slot, ":faction_language", ":original_kingdom", slot_faction_language),
         
+        (assign, "$g_player_culture", ":faction_culture"),
+        (faction_set_slot, "fac_player_supporters_faction", slot_faction_culture, ":faction_culture"),
+        (faction_set_slot, "fac_player_supporters_faction", slot_faction_religion, ":faction_religion"),
+        (faction_set_slot, "fac_player_supporters_faction", slot_faction_language, ":faction_language"),
+############### 
         #Name faction
         (try_begin),
           (is_between, ":liege", active_npcs_begin, active_npcs_end),

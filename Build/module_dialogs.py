@@ -13441,7 +13441,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (val_add, ":offset", "str_culture_1_adjective"),
 (str_store_string, s11, ":offset"),
 ],
-"{s11}.", "dplmc_chancellor_kingdom_language_select_1",
+"{s11}.", "minister_pretalk",
 [
 (store_repeat_object, ":faction_no"),
 # (troop_remove_gold, "trp_player", 15000),
@@ -13581,6 +13581,14 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ]],
 
 
+############### NEW v3.12 - 
+[anyone|plyr, "minister_talk",
+[
+],
+"I wish to select the kingdom's language.", "dplmc_chancellor_kingdom_language_select_1",
+[
+(assign, "$g_ask_for_language", 1),     
+]],
 ###################################################
 [anyone, "dplmc_chancellor_kingdom_language_select_1", 
 [
@@ -13588,9 +13596,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ], 
 "And what language would you like to use (This affects the names of the lords recruited into your faction)?", "dplmc_chancellor_kingdom_language_select_2", []
 ],
-
+###################################################
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_finnish"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Finnish", "minister_pretalk", 
@@ -13604,7 +13613,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+(this_or_next|eq, "$g_player_culture", "fac_culture_polish"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Polish", "minister_pretalk", 
@@ -13617,6 +13626,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_serbian"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Serbian", "minister_pretalk", 
@@ -13629,6 +13639,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_welsh"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ],  
 "Welsh", "minister_pretalk", 
@@ -13654,6 +13665,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_balkan"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Bulgarian", "minister_pretalk", 
@@ -13666,6 +13678,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_rus"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Rus", "minister_pretalk", 
@@ -13678,6 +13691,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_nordic"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Danish", "minister_pretalk", 
@@ -13690,6 +13704,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_nordic"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Norwegian", "minister_pretalk", 
@@ -13702,6 +13717,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_nordic"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Swedish", "minister_pretalk", 
@@ -13714,6 +13730,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_baltic"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Baltic", "minister_pretalk", 
@@ -13726,6 +13743,12 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+############### NEW v3.12 - 
+(this_or_next|eq, "$g_player_culture", "fac_culture_marinid"),   
+(this_or_next|eq, "$g_player_culture", "fac_culture_mamluke"),   
+(this_or_next|eq, "$g_player_culture", "fac_culture_andalus"),   
+(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian"),   
+############### 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Arab", "minister_pretalk", 
@@ -13737,7 +13760,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ],
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
-[
+[############### NEW v3.12 - 
+(this_or_next|eq, "$g_player_culture", "fac_culture_byzantium"),   
+(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian_christian"),   
+############### 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Greek", "minister_pretalk", 
@@ -13777,6 +13803,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_italian"),  ############### NEW v3.12 -   
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Italian", "minister_pretalk", 
@@ -13789,6 +13816,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_gaelic"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Gaelic", "minister_pretalk", 
@@ -13801,6 +13829,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian_christian"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Armenian", "minister_pretalk", 
@@ -13813,6 +13842,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",  
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Seljuk", "minister_pretalk", 
@@ -13825,6 +13855,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_scotish"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Scottish", "minister_pretalk", 
@@ -13837,7 +13868,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+############### NEW v3.12 - 
+(this_or_next|eq, "$g_player_culture", "fac_culture_hungarian"),   
 (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+###############
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Hungarian", "minister_pretalk", 
@@ -13850,6 +13884,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_english"),   ############### NEW v3.12 - 
 (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
@@ -13863,6 +13898,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_french"),   ############### NEW v3.12 - 
 (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
@@ -13889,6 +13925,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_mongol"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Mongolian", "minister_pretalk", 
@@ -13901,6 +13938,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
 [
+(this_or_next|eq, "$g_player_culture", "fac_culture_crusader"),   ############### NEW v3.12 - 
+(this_or_next|eq, "$g_player_culture", "fac_culture_western"),   ############### NEW v3.12 - 
 (eq, "$g_player_culture", "fac_culture_player"),
 ], 
 "Mixed European", "minister_pretalk", 
@@ -26698,6 +26737,20 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
                           (ge, reg0, 0),
                          ], "Sir, perhaps you have work for a mercenary?", "lord_propose_mercenary", []],
                          #tom
+
+
+############### NEW v3.12 - 
+[anyone|plyr, "lord_talk", 
+[
+(ge, "$cheat_mode", 1),
+], "[DEBUG] Randomize this lord's name [Leave the conversation to see effects].", "lord_pretalk", 
+[
+(troop_get_slot, ":cur_lord_culture", "$g_talk_troop", slot_troop_culture),
+(call_script, "script_get_random_name_for_lord", "$g_talk_troop_faction", "$g_talk_troop", ":cur_lord_culture"), 
+]
+],
+############### 
+                         
 
 [anyone, "lord_propose_mercenary", [(call_script, "script_party_calculate_strength", "p_main_party", 0),
                                      (assign, ":offer_value", reg0),
