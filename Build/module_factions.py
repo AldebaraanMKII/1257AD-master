@@ -345,8 +345,8 @@ factions = [
     0x07b233
   ),
 
-  ("kingdom_18",  "Regnum Castiliae",
-  #"Kingdom of Castille",
+  ("kingdom_18",  "Corona Castiliae",
+  #"Crown of Castile",
     0, 0.9,
     [
       ("papacy",0.0),

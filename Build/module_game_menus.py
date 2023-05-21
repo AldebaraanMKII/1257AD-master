@@ -39,10 +39,11 @@ from module_constants import *
 
 game_menus = [ #
   ("start_game_0",menu_text_color(0xFF000000)|mnf_disable_all_keys,
-    "Welcome to Mount and Blade: Warband mod - Anno Domini 1257 (Enhanced Edition)({s22}). This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose whisely, as you will not be able to change it after you started the game!",
+    "Welcome to Anno Domini 1257 - Enhanced Edition [v{s22}], a Mount & Blade: Warband mod. This mod attempts to reflect the reality of 13th century Europe. Before starting your game you need to choose the recruitment type for your game. Choose wisely, as you will not be able to change it after you start the game!",
     "none",
     [
-    (str_store_string, s22, "str_mod_version"), ############### NEW v3.11 - 
+    (str_store_string, s22, "str_mod_version"), ### NEW 3.11/3.9.2
+    #(str_store_string, s22, "str_revision"),
     ],
     [
     #tom
@@ -3489,7 +3490,7 @@ game_menus = [ #
     [
       ("go_back",
       [],
-      "Go_back",
+      "Go_back.",
       [
         (change_screen_quit),
       ]
@@ -3715,7 +3716,7 @@ game_menus = [ #
 
   ("reports",0,
    # "Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
-   "Mod Version: {s22}^Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
+   "Mod Version: v{s22}^Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
    "none",
    [(call_script, "script_game_get_party_companion_limit"),
     (assign, ":party_size_limit", reg0),
@@ -3723,7 +3724,8 @@ game_menus = [ #
     (assign, reg5, ":renown"),
     (assign, reg6, "$player_honor"),
     (assign, reg7, ":party_size_limit"),
-    (str_store_string, s22, "str_mod_version"), ############### NEW v3.11 - 
+    (str_store_string, s22, "str_mod_version"), ### NEW 3.11/3.9.2 - 
+    #(str_store_string, s22, "str_revision"), ### NEW 3.11/3.9.2 - 
     #(call_script, "script_get_player_party_morale_values"),
     #(party_set_morale, "p_main_party", reg0),
     (party_get_morale, reg8, "p_main_party"),
@@ -3747,7 +3749,7 @@ game_menus = [ #
          ]
         ),
 		
-       ("action_view_troop_trees_2",[], "View troop trees (Cont.).",
+       ("action_view_troop_trees_2",[], "View troop trees (Cont.)",
         [
          (start_presentation, "prsnt_faction_troop_trees_2"),
          ]
@@ -3788,7 +3790,7 @@ game_menus = [ #
        ("faction_statistics_1",
 	   [
        (gt, "$g_current_factions_active", 0),
-	   ], "View faction statistics (Part I).",
+	   ], "View faction statistics (Part I.)",
         [
          (assign, "$g_misc_current_statistics_menu", 1),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3798,7 +3800,7 @@ game_menus = [ #
        ("faction_statistics_2",
 	   [
        (gt, "$g_current_factions_active", 20),
-	   ], "View faction statistics (Part II).",
+	   ], "View faction statistics (Part II.)",
         [
          (assign, "$g_misc_current_statistics_menu", 2),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3808,7 +3810,7 @@ game_menus = [ #
        ("faction_statistics_3",
 	   [
        (gt, "$g_current_factions_active", 43),
-	   ], "View faction statistics (Part III).",
+	   ], "View faction statistics (Part III.)",
         [
          (assign, "$g_misc_current_statistics_menu", 3),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3818,7 +3820,7 @@ game_menus = [ #
        ("faction_statistics_4",
 	   [
        (gt, "$g_current_factions_active", 55),
-	   ], "View faction statistics (Part IV).",
+	   ], "View faction statistics (Part IV.)",
         [
          (assign, "$g_misc_current_statistics_menu", 4),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3909,7 +3911,7 @@ game_menus = [ #
         ]
        ),
 
-      ("go_back",[], "{!}Go back",
+      ("go_back",[], "{!}Go back.",
        [(change_screen_quit),
         ]
        ),
@@ -4069,7 +4071,7 @@ game_menus = [ #
 
 ################################### NEW v2.1 - choose wage system  
   ("start_game_new_2dot1", menu_text_color(0xFF000000),
-    "Use 1257AD wage system, or the Native-friendly wages system? ^Note: 1257AD wage system is recommended for Windows players, and Native-friendly wage system for Mac/Linux. If you are a MAC/LINUX user make sure to choose the Native-friendly wage system, otherwise your troops will have buggy wages every once in a while, putting you in debt of billions.^(Note: Can be changed later in the EE Misc Options under Camp)",
+    "Use 1257AD wage system, or the Native-friendly wages system? ^Note: 1257AD wage system is recommended for Windows players, and Native-friendly wage system for Mac/Linux. If you are a MAC/LINUX user make sure to choose the Native-friendly wage system, otherwise your troops will have buggy wages every once in a while, putting you in debt of billions.^(Note: Can be changed later in the EE Misc. Options under Camp)",
     "none",
     [],
     [
@@ -4105,7 +4107,7 @@ game_menus = [ #
 
 ################################### NEW v2.1 - turn those things on or off at the beggining	  
   ("start_game_new_2dot1_2", menu_text_color(0xFF000000),
-    "Turn lord killing on?^If turned on lords have a chance to die in battle, get executed or assassinated by other lords or the player.^(Note: Can be changed later in the EE Misc Options under Camp)",
+    "Turn lord killing on?^If turned on lords have a chance to die in battle, get executed or assassinated by other lords or the player.^(Note: Can be changed later in the EE Misc. Options under Camp)",
     "none",
     [],
     [
@@ -4144,7 +4146,7 @@ game_menus = [ #
   
 	  
   ("start_game_new_2dot1_3", menu_text_color(0xFF000000),
-    "Turn lord creation on?^If turned on factions will get randomly generated lords based on their current fief count.^(Note: Can be changed later in the EE Misc Options under Camp)",
+    "Turn lord creation on?^If turned on factions will get randomly generated lords based on their current fief count.^(Note: Can be changed later in the EE Misc. Options under Camp)",
     "none",
     [],
     [
@@ -4274,7 +4276,7 @@ game_menus = [ #
   
 ################################# NEW v3.0 - SPAWN PRESETS
   ("start_game_new_spawn_presets", menu_text_color(0xFF000000),
-    "What spawn preset do you wish to use? (Spawn presets affect the maximum amount of parties like bandits that can exist in the map at one time. Since warband only runs on a single core the only thing that matters for it cpu wise is clock speed. Below are the recommended speeds in GHz).",
+    "What spawn preset do you wish to use? (Spawn presets affect the maximum amount of parties like bandits that can exist in the map at one time. Since warband only runs on a single core the only thing that matters for it cpu wise is clock speed. Below are the recommended speeds in GHz.)",
     "none",
     [
     ],
@@ -4759,7 +4761,7 @@ game_menus = [ #
         (str_store_string, s10, "@As the {reg3?daughter:son} of a thief, you had very little 'formal' education. Instead you were out on the street, begging until you learned how to cut purses, cutting purses until you learned how to pick locks, all the way through your childhood. Still, these long years made you streetwise and sharp to the secrets of cities and shadowy backways."),
     (jump_to_menu, "mnu_start_character_2"),
     ]),
-    ("go_back",[], "Go back",
+    ("go_back",[], "Go back.",
      [(jump_to_menu, "mnu_start_game_1"),
     ]),
     ]
@@ -7033,7 +7035,7 @@ game_menus = [ #
   ),
   
   ("mod_troop_rebalance",0,
-   "This is an experimental feature to rebalances troop armour values to their appropriate tier. {s10}^^   What does it do? The troops are automatically re-equipped via scripts with a set range of body armours and helmets   appriopriate to their tier and culture.^^   Using this feature will make the gameplay more balanced, while still being historically correct. This   however will likely make the artistic values of the troop design obsolete.^^   To turn of this feature you will require to reload the game (it will not effect the save game in any way).   It's required you to do so, so the game engine could reload the troop items from the mod files. Turning on this feature   does not require you to reload the game.",
+   "This is an experimental feature to rebalances troop armour values to their appropriate tier. {s10}^^   What does it do? The troops are automatically re-equipped via scripts with a set range of body armours and helmets   appriopriate to their tier and culture.^^   Using this feature will make the gameplay more balanced, while still being historically correct. This   however will likely make the artistic values of the troop design obsolete.^^   To turn of this feature you will require to reload the game (it will not effect the save game in any way.)   It's required you to do so, so the game engine could reload the troop items from the mod files. Turning on this feature   does not require you to reload the game.",
    "none",
    [
     (try_begin),
@@ -7344,7 +7346,7 @@ game_menus = [ #
     ("camp_wagon",
 	[
 	(eq, "$wagon_active", 0),
-	],"Form a wagon train (300 coins).",
+	],"Form a wagon train (300 coins.)",
     [
 	 (store_troop_gold, ":gold_amount", "trp_player"),
      (try_begin),
@@ -12213,7 +12215,7 @@ game_menus = [ #
           (party_get_slot, ":center_relation", "$current_town", slot_center_player_relation),
           (call_script, "script_describe_center_relation_to_s3", ":center_relation"),
           (assign, reg9, ":center_relation"),
-          (str_store_string, s7, "@{!} {s3} ({reg9})."),
+          (str_store_string, s7, "@{!} {s3} ({reg9})."), ### Ignore conventional writing here, tidier with period outside parenthesis here. - Khanor
         (try_end),
         (str_clear, s6),
         (try_begin),
@@ -13131,7 +13133,7 @@ game_menus = [ #
           (try_end)
       ]),
       ("recruit_them",[(gt, reg5, 0)],
-       "Recruit all of them ({reg6} denars).",
+       "Recruit all of them ({reg6} denars.)",
         [
           (call_script, "script_village_recruit_volunteers_recruit", -1),
           (try_begin),
@@ -13146,7 +13148,7 @@ game_menus = [ #
 
       ]),
       ("recruit_one_of_them",[(gt, reg5, 0)],
-       "Recruit one of them ({reg7} denars).",
+       "Recruit one of them ({reg7} denars.)",
         [
           (call_script, "script_village_recruit_volunteers_recruit", 1),
           (try_begin),
@@ -13314,7 +13316,7 @@ game_menus = [ #
        (eq,  ":num_improvements", 0),
        (str_store_string, s19, "@The {s17} has no improvements."),
      (else_try),
-       (str_store_string, s19, "@The {s17} has the following improvements:{s18}."),
+       (str_store_string, s19, "@The {s17} has the following improvements: {s18}."),
      (try_end),
 
      (assign, reg6, 0),
@@ -14337,7 +14339,7 @@ game_menus = [ #
           (party_get_slot, ":center_relation", "$current_town", slot_center_player_relation),
           (call_script, "script_describe_center_relation_to_s3", ":center_relation"),
           (assign, reg9, ":center_relation"),
-          (str_store_string, s12, "@{!} {s3} ({reg9})."),
+          (str_store_string, s12, "@{!} {s3} ({reg9})."), ### Ignore conventional writing here, tidier with period outside parenthesis here. - Khanor
         (try_end),
 
         (str_clear, s13),
@@ -15551,7 +15553,7 @@ game_menus = [ #
       ("fief_misc_options_menus",
       [
       ],
-      "Misc Options.",
+      "Misc. Options.",
       [
         (jump_to_menu, "mnu_fief_misc_options"),
       ]),
@@ -16138,10 +16140,10 @@ game_menus = [ #
         (str_store_troop_name, s0, ":participent"),
         (try_begin),  #one-on-one
           (eq, "$tournament_type", 0),
-          (str_store_string, s1, "@{s1} {s0} wins:{reg1}, loses: {reg2}^"),
+          (str_store_string, s1, "@{s1} {s0} wins:{reg1}, losses: {reg2}^"),
         (else_try),  #team-on-team
           (str_store_string, s0, "@{s0}'s team"),
-          (str_store_string, s1, "@{s1} {s0}, wins:{reg1}, loses: {reg2}^"),
+          (str_store_string, s1, "@{s1} {s0}, wins:{reg1}, losses: {reg2}^"),
         (try_end),
       (try_end),
       
@@ -16190,7 +16192,7 @@ game_menus = [ #
       ("bash_heads", 
       [
         (lt, "$current_opponent", 7),
-      ], "Let's go bash some skulls!.",
+      ], "Let's go bash some skulls!",
       [  
         
         (party_get_slot, ":arena_scene", "$current_town", slot_town_arena),
@@ -17040,7 +17042,7 @@ game_menus = [ #
       (jump_to_menu, "$g_next_menu"),
         ]),
     ("change_settings",[], "Change settings.",[(start_presentation, "prsnt_auto_sell_options"),]),
-    ("go_back",[], "Go back",[(jump_to_menu, "$g_next_menu")]),
+    ("go_back",[], "Go back.",[(jump_to_menu, "$g_next_menu")]),
   ]
   ),
 
@@ -17105,7 +17107,7 @@ game_menus = [ #
 
       (jump_to_menu, "$g_next_menu"),
       ]),
-    ("go_back",[], "Go back",[(jump_to_menu, "$g_next_menu")]),
+    ("go_back",[], "Go back.",[(jump_to_menu, "$g_next_menu")]),
     ]
   ),
 ## CC
@@ -19705,7 +19707,7 @@ game_menus = [ #
       ],
     [
 
-      ("continue",[], "Tell the woman to inform her mistress that you will come shortly",
+      ("continue",[], "Tell the woman to inform her mistress that you will come shortly.",
        [
 
          (assign, ":lady_to_visit", "$g_notification_menu_var1"),
@@ -19727,7 +19729,7 @@ game_menus = [ #
         (change_screen_return),
         ]),
 
-      ("continue",[], "Tell the woman to inform her mistress that you are indisposed",
+      ("continue",[], "Tell the woman to inform her mistress that you are indisposed.",
        [
         (troop_set_slot, "$g_notification_menu_var1", slot_lady_no_messages, 1),
         (change_screen_return),
@@ -20761,7 +20763,7 @@ game_menus = [ #
       (str_store_troop_name, s0, "$g_player_troop"),
     ],
     [
-      ("export_import_back",[], "Go back",
+      ("export_import_back",[], "Go back.",
         [
           (assign, "$g_player_troop", "trp_player"),
           (set_player_troop, "$g_player_troop"),
@@ -20880,7 +20882,7 @@ game_menus = [ #
                 ]
             ),
 
-      ("go_back",[], "Go back",
+      ("go_back",[], "Go back.",
        [(jump_to_menu, "mnu_start_character_4"),
         ]
        ),
@@ -21241,7 +21243,7 @@ game_menus = [ #
           (jump_to_menu, "mnu_dplmc_deny_terms"),
         (try_end),        ]
        ),
-      ("dplmc_go_back",[], "Go back",
+      ("dplmc_go_back",[], "Go back.",
        [
          (jump_to_menu, "mnu_question_peace_offer"),
        ]),
@@ -21836,7 +21838,7 @@ game_menus = [ #
       (eq, ":continue", 0),
       (try_begin),
         # (party_slot_eq, "$g_encountered_party", manor_slot_unique, manor_building_inprogress), 
-        # (str_store_string, s22, "@A new manor is being build and peasants are being relocated to live near it."),    
+        # (str_store_string, s22, "@A new manor is being built and peasants are being relocated to live near it."),    
       # (else_try),#bandits
         (party_slot_eq, "$g_encountered_party", slot_village_infested_by_bandits, 1),
         (str_store_string, s22, "@Troublesome bandits are abusing the peasants."),
@@ -22524,7 +22526,7 @@ game_menus = [ #
       ("manor_infest_victory",
       [
         (eq, "$g_battle_result", 1),
-      ], "Huzzah!... Now to the looting...",
+      ], "Huzzah! Now for the looting...",
       [
         (display_message, "@Relationship with the regional center improves!", 0x00FF00),
         (party_get_slot, ":bound_center", "$g_encountered_party",slot_village_bound_center),

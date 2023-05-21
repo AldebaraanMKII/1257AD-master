@@ -328,7 +328,7 @@ dialogs = [
 
 [anyone, "tavern_walkers_pre_brawl_2", [], "You wanna fight asshole?", "tavern_walkers_pre_brawl_3", []],
 
-[anyone|plyr, "tavern_walkers_pre_brawl_3", [], "If it's a fight you want, it's a fight you will get!.", "tavern_walkers_pre_brawl_4", []],
+[anyone|plyr, "tavern_walkers_pre_brawl_3", [], "If it's a fight you want, it's a fight you will get!", "tavern_walkers_pre_brawl_4", []],
 [anyone|plyr, "tavern_walkers_pre_brawl_3", [], "I'm not worth the effort, let me buy you a beer.", "close_window", 
                                                 [
                                                 (troop_remove_gold, "trp_player", 5),
@@ -552,7 +552,7 @@ dialogs = [
   (party_get_template_id, ":template", "$g_encountered_party"),
   (is_between, ":template", "pt_crusader_raiders_iberian", "pt_jihadist_raiders"),
   ],
-  "We came here to destroy those Saracen dogs!.", "encounter_crusader_friendly",[]],
+  "We came here to destroy those Saracen dogs!", "encounter_crusader_friendly",[]],
 
 [anyone|plyr, "encounter_crusader_friendly", [
   ],
@@ -566,7 +566,7 @@ dialogs = [
   (party_get_template_id, ":template", "$g_encountered_party"),
   (eq, ":template", "pt_jihadist_raiders"),
   ],
-  "We came here to destroy those infidel pigs!.", "encounter_jihadist_friendly",[]],
+  "We came here to destroy those infidel pigs!", "encounter_jihadist_friendly",[]],
 
 [anyone|plyr, "encounter_jihadist_friendly", [
   ],
@@ -1940,7 +1940,7 @@ dialogs = [
             (eq, 0, 1),
             #todo - event
           ],
-        "TODO:{Milord/Milady}, we have a problem!.", "manor_seneschal",
+        "TODO:{Milord/Milady}, we have a problem!", "manor_seneschal",
           [
         
           ],
@@ -2024,7 +2024,7 @@ dialogs = [
           [
              
           ],
-        "I want to collect my gold from the treasury", "manor_seneschal_treasury_action",
+        "I want to collect my gold from the treasury.", "manor_seneschal_treasury_action",
           [
             (assign, "$temp", 1),
             (assign, "$temp2", 10),
@@ -2035,7 +2035,7 @@ dialogs = [
           [
              
           ],
-        "I want to deposit some gold into my treasury", "manor_seneschal_treasury_action",
+        "I want to deposit some gold into my treasury.", "manor_seneschal_treasury_action",
           [
             (assign, "$temp", 2),
             (assign, "$temp2", 10),
@@ -2085,7 +2085,7 @@ dialogs = [
              (eq, ":continue", 1),
              (assign, reg1, "$temp2"),
           ],
-        "10", "manor_seneschal_treasury_action_done",
+        "10.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 10),
           ],
@@ -2108,7 +2108,7 @@ dialogs = [
              (eq, ":continue", 1),
              (assign, reg1, "$temp2"),
           ],
-        "100", "manor_seneschal_treasury_action_done",
+        "100.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 100),
           ],
@@ -2130,7 +2130,7 @@ dialogs = [
              (try_end),
              (eq, ":continue", 1),
           ],
-        "1000", "manor_seneschal_treasury_action_done",
+        "1000.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 1000),
           ],
@@ -2152,7 +2152,7 @@ dialogs = [
              (try_end),
              (eq, ":continue", 1),
           ],
-        "10000", "manor_seneschal_treasury_action_done",
+        "10000.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 10000),
           ],
@@ -2174,7 +2174,7 @@ dialogs = [
              (try_end),
              (eq, ":continue", 1),
           ],
-        "100000", "manor_seneschal_treasury_action_done",
+        "100000.", "manor_seneschal_treasury_action_done",
           [
              (assign, "$temp2", 100000),
           ],
@@ -2206,7 +2206,7 @@ dialogs = [
                #(troop_add_gold, "$g_talk_troop", "$temp2"),
              (try_end),
           ],
-        "It shall be done, {Milord/Milady}", "manor_seneschal_treasury",
+        "It shall be done, {Milord/Milady}.", "manor_seneschal_treasury",
           [
              
           ],
@@ -2508,7 +2508,7 @@ dialogs = [
               (str_store_string, s0, "@As you command. This is a reasonable move, {Milord/Milady}."),
             (else_try),
               (party_slot_eq, "$g_encountered_party", manor_slot_taxes,manor_high_taxes),
-              (str_store_string, s0, "@We will make those smelly peasants squeal {Milord/Milady}!...Lets hope they don't rise up though."),
+              (str_store_string, s0, "@We will make those smelly peasants squeal {Milord/Milady}. Lets hope they don't rise up though..."),
             (else_try),
               (str_store_string, s0, "@I'm confused!"),
             (try_end),
@@ -6406,7 +6406,7 @@ dialogs = [
     (this_or_next|faction_slot_eq, "$g_encountered_party_faction", slot_faction_leader, "trp_player"),   
     (party_slot_eq, ":target_party", slot_town_lord, trp_player),
     ], 
-    "I'm here to tell you to disband (Cannot be undone!).", "dplmc_patrol_talk_disband_now", 
+    "I'm here to tell you to disband (Cannot be undone!)", "dplmc_patrol_talk_disband_now", 
 	[
     ]
 ],
@@ -7878,7 +7878,7 @@ dialogs = [
 "Please give me a status report about the convoy of a lord.", "dplmc_constable_lord", []], 
    
    [anyone, "dplmc_constable_lord", [],
-"About which lord do you like to be informed?", "dplmc_constable_status_lord_select", []],  
+"About which lord would you like to be informed?", "dplmc_constable_status_lord_select", []],  
    
    [anyone|plyr|repeat_for_troops, "dplmc_constable_status_lord_select",
    [
@@ -7908,7 +7908,6 @@ dialogs = [
     (assign, ":selected_troop", "$diplomacy_var"),
     (str_store_troop_name, s60, ":selected_troop"),
     
-
     (call_script, "script_update_troop_location_notes", ":selected_troop", 1),
     (call_script, "script_get_information_about_troops_position", ":selected_troop", 0),
     
@@ -7917,7 +7916,7 @@ dialogs = [
     (str_store_string, s52, "str_empty_string"),
     (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
     
-    (le, ":num_stacks", 20),    
+    (le, ":num_stacks", 20),
 
     (try_for_range, ":i_stack", 1, ":num_stacks"),
       (party_stack_get_troop_id, ":stack_troop", ":selected_party", ":i_stack"),
@@ -7926,12 +7925,12 @@ dialogs = [
       (assign, reg2, ":stack_size"),
       (str_store_troop_name, s53, ":stack_troop"),
       (str_store_string, s52, "@{s52} {reg2} {s53}."),
-    (try_end),   
+    (try_end),
   
     (assign, reg2, ":party_size"),
     (str_store_string, s51, "@He fields {reg2} soldiers."),
    ],
-"{s1} {s51} {s52}", "dplmc_constable_lord", []],   
+"{s1} {s51}{s52}", "dplmc_constable_lord", []],
    
    [anyone, "dplmc_constable_status_lord_info",
    [
@@ -7957,12 +7956,12 @@ dialogs = [
         (str_store_troop_name, s53, ":stack_troop"),
         (str_store_string, s52, "@{s52} {reg2} {s53}."),
       (try_end),
-    (try_end),   
+    (try_end),
   
     (assign, reg2, ":party_size"),
     (str_store_string, s51, "@He fields {reg2} soldiers."),
    ],
-"{s1} {s51} {s52}", "dplmc_constable_status_lord_info_6", []], 
+"{s1} {s51}{s52}", "dplmc_constable_status_lord_info_6", []], 
    
    [anyone, "dplmc_constable_status_lord_info_6",
    [
@@ -7996,7 +7995,7 @@ dialogs = [
    
    
    [anyone, "dplmc_constable_status", [],
-"About which fief do you like to be informed?", "dplmc_constable_status_select_fief", []],  
+"About which fief would you like to be informed?", "dplmc_constable_status_select_fief", []],  
    
    [anyone|plyr|repeat_for_parties, "dplmc_constable_status_select_fief",
    [
@@ -8039,7 +8038,7 @@ dialogs = [
     (assign, reg2, ":garrison_size"),
     (str_store_string, s51, "@We currently have {reg2} soldiers garrisoned in {s60}."),
    ],
-"{s51} {s52}", "dplmc_constable_status", []],   
+"{s51}{s52}", "dplmc_constable_status", []],   
    
    [anyone, "dplmc_constable_status_info",
    [
@@ -8066,7 +8065,7 @@ dialogs = [
     (assign, reg2, ":garrison_size"),
     (str_store_string, s51, "@We currently have {reg2} soldiers garrisoned in {s60}."),
    ],
-"{s51} {s52}", "dplmc_constable_status_info_6", []], 
+"{s51}{s52}", "dplmc_constable_status_info_6", []], 
    
    [anyone, "dplmc_constable_status_info_6",
    [
@@ -9339,7 +9338,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (remove_member_from_party, "$g_emissary_selected", "p_main_party"),
   ]],
    
-[anyone|plyr, "constable_diplomatic_dispatch_confirm",[], "Actually, hold off on that", "dplmc_constable_pretalk",[]],
+[anyone|plyr, "constable_diplomatic_dispatch_confirm",[], "Actually, hold off on that.", "dplmc_constable_pretalk",[]],
 #########################
 
 
@@ -9376,7 +9375,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                     
               
    [anyone|plyr, "dplmc_companion_prisoner_exchange_confirm", [],
-"Yes set him free.", "companion_rejoin_response",
+"Yes, set him free.", "companion_rejoin_response",
    [  (troop_get_slot, ":enemy_prisoner", "$g_talk_troop", dplmc_slot_troop_mission_diplomacy), 
       (troop_get_slot, ":own_prisoner", "$g_talk_troop", dplmc_slot_troop_mission_diplomacy2),
       (call_script, "script_remove_troop_from_prison", ":enemy_prisoner"),
@@ -9819,7 +9818,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (call_script, "script_troop_get_player_relation", ":troop_no"),
   (assign, reg10, reg0),
   ],
-  "{s10} of {s11} (Relations: {reg10}).", "dplmc_constable_execution_ask_confirm",
+  "{s10} of {s11} (Relations: {reg10}.)", "dplmc_constable_execution_ask_confirm",
   #########
 [
   (store_repeat_object, "$lord_to_execute"),
@@ -9838,7 +9837,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
  [
  (str_store_troop_name, s10, "$lord_to_execute"),
  ],
-  "Yes i'm sure. {s10} is a threat to my interests.", "dplmc_constable_execution_confirm_2",[]],
+  "Yes I'm sure. {s10} is a threat to my interests.", "dplmc_constable_execution_confirm_2",[]],
    
  [anyone|plyr, "dplmc_constable_execution_confirm", [],
   "No, I changed my mind.", "dplmc_constable_pretalk",[]], 
@@ -9849,7 +9848,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   "What method do you want to execute him?", "dplmc_constable_execution_confirm_3",[]],
   
  [anyone|plyr, "dplmc_constable_execution_confirm_3", [],
- "Beheading (honorable death).", "dplmc_constable_execution_confirm_4",
+ "Beheading (honorable death.)", "dplmc_constable_execution_confirm_4",
  [(assign, "$g_method_of_execution", 1),]],
   
  [anyone|plyr, "dplmc_constable_execution_confirm_3", [],
@@ -9901,7 +9900,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   "No, I changed my mind.", "dplmc_constable_pretalk",[]], 
   
  [anyone, "dplmc_constable_execution_confirm_6", [],
-  "Very well. I will schedule his execution as soon as possible. You will be notified when it happens (will take up to 3 days).", "dplmc_constable_pretalk",[]],
+  "Very well. I will schedule his execution as soon as possible. You will be notified when it happens (will take up to 3 days.)", "dplmc_constable_pretalk",[]],
 #####
 
 #############################################
@@ -9985,7 +9984,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
  [anyone|plyr, "dplmc_constable_assassination_confirm", 
  [(str_store_troop_name, s10, "$lord_to_assassinate"),],
-  "Yes i'm sure. {s10} is a threat to my interests.", "dplmc_constable_assassination_confirm_2",[]],
+  "Yes I'm sure. {s10} is a threat to my interests.", "dplmc_constable_assassination_confirm_2",[]],
    
  [anyone|plyr, "dplmc_constable_assassination_confirm", [],
   "No, I changed my mind.", "dplmc_constable_pretalk",[]], 
@@ -10001,7 +10000,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
  (store_mul, reg12, reg11, 70), ## 70%
  (val_mul, reg11, 30), #### 30%
  ],
- "By my calculations, to eliminate someone of the status of {s10}, it would require {reg10} coins. You pay 30% upfront ({reg11}). If the assassination suceeds you pay the rest ({reg12}). Do you want to proceed?", "dplmc_constable_assassination_confirm_3",[]],
+ "By my calculations, to eliminate someone of the status of {s10}, it would require {reg10} coins. You pay 30% upfront ({reg11}.) If the assassination succeeds you pay the rest ({reg12}.) Do you want to proceed?", "dplmc_constable_assassination_confirm_3",[]],
   
  [anyone|plyr, "dplmc_constable_assassination_confirm_3", 
  [
@@ -10053,7 +10052,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone, "dplmc_constable_send_reinf_to_fief1",
     [],
-    "Yes {reg63?madam:sir}. Keep in mind that you will have to provide 5 coins per troop to account for the supplies, plus 50 coins to organize all of this. Where would you like to send them?",
+    "Yes, {reg63?madam:sir}. Keep in mind that you will have to provide 5 coins per troop to account for the supplies, plus 50 coins to organize all of this. Where would you like to send them?",
     "dplmc_constable_send_reinf_to_fief2",
     []],
 
@@ -10250,7 +10249,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", "$reserved_88"),
 ],
-"Yes change it.", "dplmc_constable_stables_change_location_5.",[]],
+"Yes, change it.", "dplmc_constable_stables_change_location_5.",[]],
 
 [anyone|plyr, "dplmc_constable_stables_change_location_4",
 [
@@ -10415,7 +10414,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Normal ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+"Normal ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -10505,7 +10504,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Heavy ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+"Heavy ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -10633,7 +10632,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Spirited ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+"Spirited ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -10796,7 +10795,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Champion ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
+"Champion ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -10903,7 +10902,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (assign, reg1, "$g_current_horse_price"),
 (assign, reg2, "$g_current_horse_hours"),
 ],
-"Yes. Do it. ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm_3",
+"Yes. Do it. ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm_3",
 []],
 
 [anyone|plyr, "constable_horse_train_confirm_2", 
@@ -10920,7 +10919,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (lt, ":gold", "$g_current_horse_price"),
 (assign, reg1, "$g_current_horse_price"),
 ],
-"I don't have the money right now ({reg1} coins).", "dplmc_constable_talk",
+"I don't have the money right now ({reg1} coins.)", "dplmc_constable_talk",
 []],
 ########################
 [anyone, "constable_horse_train_confirm_3", [], "Very well. You will be notified when it's done.", "dplmc_constable_talk",
@@ -11376,7 +11375,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "Please give me a status report about the financial situation of a fief.", "dplmc_chamberlain_status", []], 
    
    [anyone, "dplmc_chamberlain_status", [],
-"About which fief do you like to be informed?", "dplmc_chamberlain_status_select_fief", []],  
+"About which fief would you like to be informed?", "dplmc_chamberlain_status_select_fief", []],  
    
    [anyone|plyr|repeat_for_parties, "dplmc_chamberlain_status_select_fief",
    [
@@ -11385,7 +11384,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (party_slot_eq, ":party_no", slot_town_lord, "trp_player"),
     (str_store_party_name, s60, ":party_no"),
    ],
-"{s60}", "dplmc_chamberlain_status_info",
+"{s60}.", "dplmc_chamberlain_status_info",
    [
     (store_repeat_object, "$diplomacy_var"),
    ]],
@@ -11408,7 +11407,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       
       (party_get_slot, ":accumulated_rents", ":selected_party", slot_center_accumulated_rents),
       (assign, reg0, ":accumulated_rents"),
-      (str_store_string, s61, "@ We are expecting {reg0} denars for rents"),
+      (str_store_string, s61, "@We are expecting {reg0} denars for rents."),
       
       (assign, ":overall", ":accumulated_rents"),  
       (assign, ":total_wage", 0),
@@ -11429,17 +11428,17 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
           (val_mul, ":cur_wage", ":stack_size"),
           (val_add, ":total_wage", ":cur_wage"),
         (try_end),
-        (val_div, ":total_wage", 2), #Half payment for garrisons
+        (val_div, ":total_wage", 2), ### Half payment for garrisons.
         (assign, reg0, ":troop_size"),
         (assign, reg1, ":total_wage"),
-        (str_store_string, s59, "@ The troop wages for {reg0} troops cost us {reg1} denars."),
+        (str_store_string, s59, "@The troop wages for {reg0} troops cost us {reg1} denars."),
 
 
         (try_begin),
           (party_slot_eq, ":selected_party", slot_party_type, spt_town),
           (party_get_slot, ":accumulated_tariffs", ":selected_party", slot_center_accumulated_tariffs),
           (assign, reg0, ":accumulated_tariffs"),
-          (str_store_string, s61, "@{s61} and {reg0} denars for tariffs"),
+          (str_store_string, s61, "@{s61} and {reg0} denars for tariffs."),
           (val_add, ":overall", ":accumulated_tariffs"),
         (try_end),            
       (try_end),
@@ -11456,7 +11455,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (assign, reg0, ":overall"),
       (str_store_string, s62, "@{!}{reg0}"),
 
-      (str_store_string, s51, "@{s4} {s3}. The tax rate is {s50}.{s59}{s61}. Overall this sums up to {s62} denars."),
+      (str_store_string, s51, "@{s4} {s3}. The tax rate is {s50}. {s59} {s61} Overall this sums up to {s62} denars."),
     (try_end),
    ],
 "{s51}", "dplmc_chamberlain_status", []],    
@@ -11484,7 +11483,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (eq, ":center_faction", "$players_kingdom"),
     (str_store_party_name, s6, ":center_no"),
    ],
-"{s6}", "dplmc_chamberlain_tax_ask_rate",
+"{s6}.", "dplmc_chamberlain_tax_ask_rate",
    [
     (store_repeat_object, "$diplomacy_var"), 
    ]],
@@ -11613,7 +11612,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (eq, ":center_faction", "$players_kingdom"),
     (str_store_party_name, s6, ":center_no"),
    ],
-"{s6}", "dplmc_chamberlain_noble_ask_rate",
+"{s6}.", "dplmc_chamberlain_noble_ask_rate",
    [
     (store_repeat_object, "$diplomacy_var"), 
    ]],
@@ -11635,7 +11634,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
     (neg|party_slot_eq, "$diplomacy_var", slot_center_nobility_law, size_small),
    ],
-"Only willing nobles should go to war.", "dplmc_chamberlain_noble_ask_confirm",
+"Only willing nobles should go to war. The nobility of {s6} has earned some lenience from their dues.", "dplmc_chamberlain_noble_ask_confirm",
    [
     (str_store_string, s11, "@recruit only willing men"),
     (assign, "$temp", size_small),
@@ -11645,9 +11644,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
     (neg|party_slot_eq, "$diplomacy_var", slot_center_nobility_law, size_average),
    ],
-"Every noble family should provide a well armed men.", "dplmc_chamberlain_noble_ask_confirm",
+"Every noble family should provide some able and well-armed men if they can, as is their due.", "dplmc_chamberlain_noble_ask_confirm",
    [
-    (str_store_string, s11, "@recruit only well armed men"),
+    (str_store_string, s11, "@recruit only well-armed men"),
     (assign, "$temp", size_average),
    ]],
 
@@ -11655,9 +11654,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
     (neg|party_slot_eq, "$diplomacy_var", slot_center_nobility_law, size_large),
    ],
-"I expect every able man from the nobles faimlies to muster up!.", "dplmc_chamberlain_noble_ask_confirm",
+"I expect every able man from the nobles' families to muster up! And those shields better hold up for inspection.", "dplmc_chamberlain_noble_ask_confirm",
    [
-    (str_store_string, s11, "@recruit only every men"),   
+    (str_store_string, s11, "@recruit every man"),   
     (assign, "$temp", size_large),
    ]],
    
@@ -11710,7 +11709,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (eq, ":center_faction", "$players_kingdom"),
     (str_store_party_name, s6, ":center_no"),
    ],
-"{s6}", "dplmc_chamberlain_commoner_ask_rate",
+"{s6}.", "dplmc_chamberlain_commoner_ask_rate",
    [
     (store_repeat_object, "$diplomacy_var"), 
    ]],
@@ -11733,7 +11732,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
     (neg|party_slot_eq, "$diplomacy_var", slot_center_commoner_law, size_small),
    ],
-"Only willing peasants or freemen, that can equip accordingly should go to war.", "dplmc_chamberlain_commoner_ask_confirm",
+"Only willing peasants or freemen, that can equip themselves accordingly, should go to war.", "dplmc_chamberlain_commoner_ask_confirm",
    [
     (str_store_string, s11, "@recruit only willing men"),
     (assign, "$temp", size_small),
@@ -11743,7 +11742,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
     (neg|party_slot_eq, "$diplomacy_var", slot_center_commoner_law, size_average),
    ],
-"Every settlement should provide a couple of armed men.", "dplmc_chamberlain_commoner_ask_confirm",
+"Every settlement should provide some well-armed men to our cause.", "dplmc_chamberlain_commoner_ask_confirm",
    [
     (str_store_string, s11, "@recruit only well-armed men"),
     (assign, "$temp", size_average),
@@ -11753,9 +11752,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
     (neg|party_slot_eq, "$diplomacy_var", slot_center_commoner_law, size_large),
    ],
-"Every man able to hold a weapon should be called to war! Let the enemy know how foul smelling our peasants are!", "dplmc_chamberlain_commoner_ask_confirm",
+"Every man able to hold a weapon should be called to war! Let every last peasant, filthy or not, at the enemy!", "dplmc_chamberlain_commoner_ask_confirm",
    [
-    (str_store_string, s11, "@recruit only every men"),   
+    (str_store_string, s11, "@recruit every man"),   
     (assign, "$temp", size_large),
    ]],
    
@@ -11800,12 +11799,12 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     ##(try_begin),
     # (eq, ":has_fief", 1),
    # ],
-# "I like to hire a new staff member.", "dplmc_chamberlain_staff_talk_ask", []],
+# "I'd like to hire a new staff member.", "dplmc_chamberlain_staff_talk_ask", []],
    
    # [anyone, "dplmc_chamberlain_staff_talk_ask",
    # [
    # ],
-# "Which staff member do you like to hire?", "dplmc_talk_staff", []],
+# "Which staff member would you like to hire?", "dplmc_talk_staff", []],
 #######################################
    
    
@@ -11860,12 +11859,12 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     ###(try_begin),
     (eq, ":has_fief", 1),
    ],
-"I like to hire a new staff member.", "dplmc_spouse_staff_talk_ask", []],
+"I'd like to hire a new staff member.", "dplmc_spouse_staff_talk_ask", []],
    
    [anyone, "dplmc_spouse_staff_talk_ask",
    [
    ],
-"Which staff member do you like to hire?", "dplmc_talk_staff", []],
+"Which staff member would you like to hire?", "dplmc_talk_staff", []],
 
 ##appoint constable
    [anyone|plyr, "dplmc_talk_staff",
@@ -11880,7 +11879,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     ###(try_begin),
     (eq, ":has_fief", 1),
    ],
-"I like to appoint a constable.", "dplmc_talk_appoint_constable", []],
+"I'd like to appoint a constable.", "dplmc_talk_appoint_constable", []],
    
    [anyone, "dplmc_talk_appoint_constable",
    [
@@ -12045,7 +12044,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [anyone, "dplmc_spouse_talk_buy_food_amount_ask",
    [
    ],
-"How much bread do you like?", "dplmc_spouse_talk_buy_food_amount", []],
+"How much bread would you like?", "dplmc_spouse_talk_buy_food_amount", []],
    
    [anyone|plyr, "dplmc_spouse_talk_buy_food_amount",
    [
@@ -12161,7 +12160,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [anyone, "dplmc_spouse_talk_buy_food",
    [   
    ],
-"Currently no merchant has enough bread. We have to wait.", "spouse_pretalk", []],
+"Currently no merchant has enough bread. We'll have to wait.", "spouse_pretalk", []],
    
 ##confirm spouse buy food
    [anyone|plyr, "dplmc_spouse_talk_buy_food_confirm",
@@ -12222,7 +12221,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     ###(try_begin),
     (eq, ":has_fief", 1),
    ],
-"I like to hire a new staff member.", "dplmc_minister_staff_talk_ask", []],
+"I'd like to hire a new staff member.", "dplmc_minister_staff_talk_ask", []],
    
    [anyone, "dplmc_minister_staff_talk_ask",
    [
@@ -12266,7 +12265,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (str_store_faction_name, s1, "$crusader_faction"),
 (str_store_party_name, s2, "$crusade_target"),
 (str_store_faction_name, s3, "$crusade_target_faction"),
-], "Yes! They assembled at {s1} and their target is {s2} ({s3}).", "lord_talk",[]],
+], "Yes! They assembled at {s1} and their target is {s2} ({s3}.)", "lord_talk",[]],
 
 [anyone, "pope_talk_crusade_active", 
 [  
@@ -12611,7 +12610,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [anyone|plyr, "dplmc_lord_give_back_fief_confirm",
    [
     (str_store_party_name, s11, "$diplomacy_var"),
-   ], "Yes I want to give up on {s11}.", "lord_pretalk",
+   ], "Yes, I want to give up on {s11}.", "lord_pretalk",
    [
     (call_script, "script_change_player_honor", -1),
     (call_script, "script_change_player_relation_with_troop", "$g_talk_troop", -3),
@@ -12941,7 +12940,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),
     (gt, ":has_fief", 1),
    ],
-"I like to move our residence.", "dplmc_spouse_move_residence_ask",[
+"I'd like to move our residence.", "dplmc_spouse_move_residence_ask",[
  ]],
  
 
@@ -13011,7 +13010,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
  
 [anyone|plyr, "dplmc_spouse_move_residence_confirm", 
    [],
-"Yes,  please arrange everything.", "dplmc_spouse_move_residence_moved",[
+"Yes, please arrange everything.", "dplmc_spouse_move_residence_moved",[
     (troop_remove_items, "trp_household_possessions", "itm_wool_cloth", 2),
     (troop_remove_item, "trp_household_possessions", "itm_tools"),
         (troop_set_slot, "$g_talk_troop", slot_troop_cur_center, "$diplomacy_var"),
@@ -13416,7 +13415,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (assign, reg20, ":cost"),
 ##################
 ],
-"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20})).", "dplmc_chancellor_kingdom_culture_select",
+"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20}.))", "dplmc_chancellor_kingdom_culture_select",
 []],
 
 
@@ -14031,7 +14030,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (lt, ":player_gold", ":cost"),
 ########################
 ],
-"Forget about it (not enough money).", "minister_pretalk",
+"Forget about it (not enough money.)", "minister_pretalk",
 []],
 ######
 ##diplomacy end+
@@ -15132,7 +15131,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (try_end),
    ], "Very well -- I shall send {s11} to the {s12} to {s14}.", "minister_diplomatic_dispatch_confirm",[]],
 
-[anyone|plyr, "minister_diplomatic_dispatch_confirm",[], "Yes, do that", "minister_pretalk",[
+[anyone|plyr, "minister_diplomatic_dispatch_confirm",[], "Yes, do that.", "minister_pretalk",[
     (troop_set_slot, "$g_emissary_selected", slot_troop_days_on_mission, 3),
       (troop_set_slot, "$g_emissary_selected", slot_troop_current_mission, "$g_initiative_selected"),
       (troop_set_slot, "$g_emissary_selected", slot_troop_mission_object, "$g_faction_selected"),
@@ -15145,7 +15144,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   ]],
    
    
-[anyone|plyr, "minister_diplomatic_dispatch_confirm",[], "Actually, hold off on that", "minister_pretalk",[]],
+[anyone|plyr, "minister_diplomatic_dispatch_confirm",[], "Actually, hold off on that.", "minister_pretalk",[]],
 
 ####### NEW v3.1-KOMKE START-disabled
 [anyone, "minister_replace", [], "Very good. Whom will you appoint in my stead?", "minister_replace_select", []],
@@ -16452,10 +16451,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (try_begin),
     (neg|faction_slot_eq, "$g_talk_troop_faction", slot_faction_ai_state, sfai_feast),
     (neg|faction_slot_eq, "$g_talk_troop_faction", slot_faction_ai_state, sfai_default),
-    (str_store_string, s12, "@ We will of course need to wait until the realm is no longer on campaign."),
+    (str_store_string, s12, "@We will of course need to wait until the realm is no longer on campaign."),
   (try_end),
   ],
-"My lady, I look forward to our marriage, as soon as there is an opportunity to hold a proper feast.{s12}", "lord_start", [
+"My lady, I look forward to our marriage, as soon as there is an opportunity to hold a proper feast. {s12}", "lord_start", [
    ]],
 
 #Feast, but not at the venue
@@ -20664,7 +20663,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (try_begin),
      (troop_slot_eq, "$g_talk_troop", slot_troop_recruitment_random, 0),
 
-       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads).
+       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads.)
      (troop_get_slot, ":temp_ai_seed", "$g_talk_troop", slot_troop_temp_decision_seed),
      (store_div, ":random", ":temp_ai_seed", 100),  #I used div instead of mod to have a different random value, value generated from (mod 100) will be used in next steps. These two values should be non-related.
      (val_add, ":random", 1),
@@ -20688,7 +20687,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (try_begin),
      (troop_slot_eq, "$g_talk_troop", slot_troop_recruitment_random, 0),
 
-       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads).
+       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads.)
      (troop_get_slot, ":temp_ai_seed", "$g_talk_troop", slot_troop_temp_decision_seed),
      (store_div, ":random", ":temp_ai_seed", 100),  #I used div instead of mod to have a different random value, value generated from (mod 100) will be used in next steps. These two values should be non-related.
      (val_add, ":random", 1),
@@ -22269,7 +22268,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 "Let us wait until we are in a hall, my wife, as it is difficult to deal with household inventories and such matters in the field.", "lord_pretalk",[]],
 
 [anyone, "lord_switch_to_spouse", [],
-"Certainly, my wife", "spouse_talk",[]],
+"Certainly, my wife.", "spouse_talk",[]],
 
 
 
@@ -22318,7 +22317,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (try_end),
     (eq, ":continue", 1),
     ],
-"Hmm.. Perhaps we can discuss this matter in a more private setting, at a later date.", "lord_pretalk",[
+"Hmm... Perhaps we can discuss this matter in a more private setting, at a later date.", "lord_pretalk",[
    ]],
 
    [anyone, "combined_political_quests", [
@@ -22336,7 +22335,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
                              (faction_slot_eq, "$players_kingdom", slot_faction_leader, "$g_talk_troop"),
                              (faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"),
                             ],
-"I wish to resign the marshalship", "lord_ask_resign_marshalship",[]],
+"I wish to resign the marshalship.", "lord_ask_resign_marshalship",[]],
 
 [anyone, "lord_ask_resign_marshalship", [],
 "So be it. I shall have to find someone else.", "lord_pretalk",[
@@ -22630,7 +22629,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 	   ##### NEW v3.8
     #######(neg|faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"), #not an order,  only a suggestion 
 ],
-"There is a fortress which can easily be taken. Go to..", "lord_give_order_details_ask",
+"There is a fortress which can easily be taken. Go to...", "lord_give_order_details_ask",
    [
    (assign, "$temp", spai_besieging_center),
    ]],
@@ -23109,7 +23108,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone, "dplmc_lord_ask_exchange_fief_2", [  ##CABA - bugfix? was "dplmc_lord_exchange_fief_select_2",
    (str_store_string, s19, "str_dplmc_fief_exchange_listen_2"),
     ],
-   "{s19}.", "dplmc_lord_exchange_fief_select_2",
+   "{s19}", "dplmc_lord_exchange_fief_select_2", ### String variable with sentence, no extra punctuation needed. - Khanor
    [],
 ],
 
@@ -23304,16 +23303,210 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (call_script, "script_update_troop_notes", "trp_player"),
   (party_clear, "p_temp_party"),
   (party_clear, "p_temp_party_2"),
- #Display mesage
-(str_store_troop_name, s1, "trp_player"),
-(str_store_party_name, s2, "$diplomacy_var"),
-(str_store_troop_name, s3, "$g_talk_troop"),
-(str_store_party_name, s4, "$fief_selected"),
-(display_log_message, "@{s1} exchanged {s2} to {s3} for {s4}."),
- (else_try),
-    (display_message, "str_ERROR_string"),
- (try_end),
-(assign, "$g_move_heroes", ":push_g_move_heroes"),#revert this at the end of the script
+
+  ###############################################################################################################################
+  ### Update number of fiefs and tax inefficiency on exchanging fiefs to avoid a bugged budget report! (NEW 3.9.2, by Khanor) ###
+  (try_begin),
+    (eq, "$tom_difficulty_fief", 0), ### Hard
+    (assign, ":num_centers_needed_for_efficiency_loss", 2),
+    (assign, ":tax_efficiency_loss_ratio_per_center", 5),
+  (else_try),
+    (eq, "$tom_difficulty_fief", 1), ### Medium
+    (assign, ":num_centers_needed_for_efficiency_loss", 4),
+    (assign, ":tax_efficiency_loss_ratio_per_center", 4),
+  (else_try),
+    (eq, "$tom_difficulty_fief", 2), ### Easy
+    (assign, ":num_centers_needed_for_efficiency_loss", 6),
+    (assign, ":tax_efficiency_loss_ratio_per_center", 3),
+  (try_end),
+  (assign, ":num_lines", 0),
+  (assign, ":num_owned_center_values_for_tax_efficiency", 0),
+  (assign, ":all_centers_accumulated_total", 0),
+  (assign, ":all_centers_accumulated_taxes_and_rents", 0),
+  (try_for_range, ":center_no", centers_begin, centers_end),
+    (try_begin),
+      (party_slot_ge, ":center_no", slot_center_player_enterprise, 1),
+      (val_add, ":num_lines", 1),
+    (try_end),
+    (party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
+    (val_add, ":num_lines", 1),
+    (val_add, ":num_owned_center_values_for_tax_efficiency", 1),
+    (try_begin),
+      (is_between, ":center_no", towns_begin, towns_end),
+      (val_add, ":num_lines", 1),
+      (val_add, ":num_owned_center_values_for_tax_efficiency", 1),
+    (try_end),
+  (try_end),
+  (try_begin),
+    (gt, "$players_kingdom", 0),
+    (neg|faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+    (eq, "$player_has_homage", 0),
+    (val_add, ":num_lines", 1),
+  (try_end),
+  (try_begin),
+    (gt, ":num_owned_center_values_for_tax_efficiency", ":num_centers_needed_for_efficiency_loss"),
+    (val_add, ":num_lines", 1),
+  (try_end),
+  (try_for_parties, ":party_no"),
+    (assign, ":garrison_troop", 0),
+    (try_begin),
+      (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_town),
+      (party_slot_eq, ":party_no", slot_party_type, spt_castle),
+      (party_slot_eq, ":party_no", slot_town_lord, "trp_player"),
+      (assign, ":garrison_troop", 1),
+    (else_try),
+      (this_or_next|party_slot_eq, ":party_no", slot_party_type, spt_town),
+      (party_slot_eq, ":party_no", slot_party_type, spt_castle),
+      (neg|party_slot_ge, ":party_no", slot_town_lord, 1), ### Unassigned
+      (store_faction_of_party, ":center_faction", ":party_no"),
+      (eq, ":center_faction", "$players_kingdom"),
+      (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+      (assign, ":garrison_troop", 1),
+    (try_end),
+    (this_or_next|eq, ":party_no", "p_main_party"),
+    (assign, ":patrol_troop", 0),
+    (try_begin),
+      (party_slot_eq, ":party_no",slot_party_type, spt_patrol),
+      (store_faction_of_troop, ":player_faction", "trp_player"),
+      (store_faction_of_party, ":party_faction", ":party_no"),
+      (eq, ":party_faction", ":player_faction"),
+      (assign, ":patrol_troop", 1),
+    (try_end),
+    (this_or_next|eq, ":patrol_troop", 1),
+    (eq, ":garrison_troop", 1),
+    (val_add, ":num_lines", 1), ### Include empty towns/castles
+  (try_end),
+  (try_begin),
+    (gt, "$g_player_debt_to_party_members", 0),
+    (val_add, ":num_lines", 2), ### Include new debt line
+  (try_end),
+  (val_add, ":num_lines", 1),
+  (try_begin),
+    (this_or_next|gt, "$g_player_minister", 0),
+    (this_or_next|troop_slot_ge, "trp_player", slot_troop_spouse, 0),
+    (this_or_next|gt, "$g_player_chamberlain", 0),
+    (gt, "$g_player_constable", 0),
+    (val_add, ":num_lines", 1), ### Staff salary
+  (try_end),
+  (try_begin),
+    (gt, "$g_player_chamberlain", 0),
+    (val_add, ":num_lines", 2), ### Earlier cash, new cash
+  (try_end),
+  (val_add, ":num_lines", 3),
+  (store_mul, ":cur_y", 27, ":num_lines"),
+  (assign, ":net_change", 0), ### This is the amount added
+  ### ------------------------------------- ###
+  ### Skipping irrelevant budget code here. ###
+  ### ------------------------------------- ###
+  ### RENTS AND TARIFFS ###
+  (try_for_range, ":center_no", centers_begin, centers_end),
+    (party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
+    (party_get_slot, ":accumulated_rents", ":center_no", slot_center_accumulated_rents),
+    (party_get_slot, ":accumulated_tariffs", ":center_no", slot_center_accumulated_tariffs),
+    (store_add, ":accumulated_total", ":accumulated_rents", ":accumulated_tariffs"),
+    (val_add, ":all_centers_accumulated_total", ":accumulated_total"),
+    (val_add, ":all_centers_accumulated_taxes_and_rents", ":accumulated_total"),
+    (val_add, ":net_change", ":accumulated_total"),
+    (str_store_party_name, s0, ":center_no"),
+    (try_begin),
+      (neg|is_between, ":center_no", castles_begin, castles_end),
+      (party_get_slot, ":tax_rate", ":center_no", dplmc_slot_center_taxation),
+      (neq, ":tax_rate", 0),
+      (call_script, "script_dplmc_describe_tax_rate_to_s50", ":tax_rate"),
+      (str_store_string, s0, "@{s0} ({s50})"),
+    (try_end),
+    (str_store_party_name, s0, ":center_no"),
+    (try_begin),
+      (gt, ":accumulated_rents", 0),
+      (assign, reg0, ":accumulated_rents"),
+    (try_end),
+    (val_sub, ":cur_y", 27),
+    (try_begin),
+      (is_between, ":center_no", towns_begin, towns_end),
+      (try_begin),
+        (gt, ":accumulated_tariffs", 0),
+        (assign, reg0, ":accumulated_tariffs"),
+      (try_end),
+      (val_sub, ":cur_y", 27),
+    (try_end),
+  (try_end),
+  ### TAX INEFFICIENCY ###
+  (try_begin),
+    (gt, ":num_owned_center_values_for_tax_efficiency", ":num_centers_needed_for_efficiency_loss"),
+    (gt, ":all_centers_accumulated_total", 0),
+    (store_sub, ":ratio_lost", ":num_owned_center_values_for_tax_efficiency", ":num_centers_needed_for_efficiency_loss"),
+      (val_mul, ":ratio_lost", ":tax_efficiency_loss_ratio_per_center"),
+      (val_min, ":ratio_lost", "$g_misc_max_tax_inneficiency"),
+    (store_mul, ":tax_lost", ":all_centers_accumulated_taxes_and_rents", ":ratio_lost"),
+      (val_div, ":tax_lost", 100),
+    (assign, ":percent", 0),
+    (try_begin),
+      (gt, "$g_player_chamberlain", 0),
+      (val_add, ":percent", 10),
+    (try_end),
+    (store_mul, ":save", ":tax_lost", ":percent"),
+    (val_div, ":save", 100),
+    (store_mul, ":percent", ":save", 100),
+    (val_div, ":percent", ":tax_lost"),
+    (val_sub, ":tax_lost", ":save"),
+    (val_sub, ":net_change", ":tax_lost"),
+    (try_begin),
+      (gt, "$g_player_chamberlain", 0),
+      (str_store_string, s55, "str_loss_due_to_tax_inefficiency"),
+      (assign, reg0, ":percent"),
+        (str_store_string, s55, "@{s55} (-{reg0}%)"),
+      (create_text_overlay, reg1, "@{s55}", 0),
+    (else_try),
+      (create_text_overlay, reg1, "str_loss_due_to_tax_inefficiency", 0),
+    (try_end),
+    (store_mul, reg0, ":tax_lost", -1),
+    (val_sub, ":cur_y", 27),
+  (try_end),
+  ### (Diplomacy) STAFF SALARIES ###
+  (assign, ":staff_salary", 0),
+  (try_begin),
+    (gt, "$g_player_minister", 0),
+    # (val_add, ":staff_salary", 15),
+    (val_add, ":staff_salary", 60), ### From v3.9
+  (try_end),
+  (try_begin),
+    (troop_slot_ge, "trp_player", slot_troop_spouse, 0),
+    # (val_add, ":staff_salary", 10),
+    (val_add, ":staff_salary", 40), ### From v3.9
+  (try_end),
+  (try_begin),
+    (gt, "$g_player_chamberlain", 0),
+    # (val_add, ":staff_salary", 15),
+    (val_add, ":staff_salary", 60), ### From v3.9
+  (try_end),
+  (try_begin),
+    (gt, "$g_player_constable", 0),
+    # (val_add, ":staff_salary", 15),
+    (val_add, ":staff_salary", 60), ### From v3.9
+  (try_end),
+  (try_begin),
+    (gt, "$g_player_chancellor", 0),
+    # (val_add, ":staff_salary", 20),
+    (val_add, ":staff_salary", 80), ### From v3.9
+  (try_end),
+  (try_begin),
+    (gt, ":staff_salary", 0),
+    (val_sub, ":net_change", ":staff_salary"),
+  (try_end),
+  ### Fief number, enterprise, rent, tariff, tax inefficiency and salary updates end here. ###
+  ############################################################################################
+
+  ### Display message
+  (str_store_troop_name, s1, "trp_player"),
+  (str_store_party_name, s2, "$diplomacy_var"),
+  (str_store_troop_name, s3, "$g_talk_troop"),
+  (str_store_party_name, s4, "$fief_selected"),
+  (display_log_message, "@{s1} exchanged {s2} to {s3} for {s4}."),
+    (else_try),
+      (display_message, "str_ERROR_string"),
+    (try_end),
+
+  (assign, "$g_move_heroes", ":push_g_move_heroes"),#revert this at the end of the script
  ],
 ],
 
@@ -23352,7 +23545,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
     (call_script, "script_troop_get_family_relation_to_troop", ":bride", "$g_talk_troop"),
   ],
-"It is not my way to push my {s11} to marry against her will or her better judgment", "lord_pretalk",[
+"It is not my way to push my {s11} to marry against her will or her better judgment.", "lord_pretalk",[
    (call_script, "script_fail_quest", "qst_formal_marriage_proposal"),
    (call_script, "script_end_quest", "qst_formal_marriage_proposal"),
    
@@ -23381,7 +23574,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (call_script, "script_troop_get_family_relation_to_troop",  ":bride", "$g_talk_troop"),
 
   ],
-"Sorry, lad -- I'm not going to make my {s11} marry you, when I'd rather see her married to {s12}", "lord_pretalk",[
+"Sorry, lad -- I'm not going to make my {s11} marry you, when I'd rather see her married to {s12}.", "lord_pretalk",[
    (call_script, "script_fail_quest", "qst_formal_marriage_proposal"),
    (call_script, "script_end_quest", "qst_formal_marriage_proposal"),
    ]],
@@ -23392,7 +23585,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (quest_get_slot, ":bride", "qst_formal_marriage_proposal", slot_quest_giver_troop),
     (str_store_troop_name, s11, ":bride"),
   ],
-"Splendid news, my young man -- I shall be proud to have you in our family. Now, let us talk the terms of the marriage. As per our custom, the two of us must make sure that {s11} has sufficient finances to support herself, in the event of any unforeseen circumstances..", "lord_marriage_permission_endowment",[
+"Splendid news, my young man -- I shall be proud to have you in our family. Now, let us talk the terms of the marriage. As per our custom, the two of us must make sure that {s11} has sufficient finances to support herself, in the event of any unforeseen circumstances.", "lord_marriage_permission_endowment",[
     (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
     (troop_get_slot, ":guardian_renown", "$g_talk_troop", slot_troop_renown),
 
@@ -23922,7 +24115,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 # "lord_strategy_why_not",[
 # ]],
 
-#This dialog appears when lord disagrees with marshal about the selected faction ai (attack/defend/gather/other).
+#This dialog appears when lord disagrees with marshal about the selected faction ai (attack/defend/gather/other.)
 #To Steve - I took that dialog upper from below one. Lord should compare his faction ai choice with marshal's one before comparing preffered ai objects.
 [anyone, "lord_strategy_follow_evaluation",
 [
@@ -24066,7 +24259,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "lord_strategy_follow_up", [
   ],
-"I see....",
+"I see...",
 "lord_talk_ask_something_again",[
    ]],
 
@@ -24818,7 +25011,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "lord_change_culture_equipment_confirm_2",
     # [], "Yes do it.", "lord_talk",
-    [], "Yes do it.", "close_window",
+    [], "Yes, do it.", "close_window",
     [
     # ((display_log_message, "@calling script", 0xffffff),##Debugging)
     (troop_set_slot, "$g_talk_troop", slot_troop_cur_culture,  "$temp"),
@@ -25816,7 +26009,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
      (gt, ":is_war", 0),
      (val_add, ":honor_change", -5),
  (try_end),
- #The baseline change is -10.  The greatest possible is -25 (100 relation with the king, and at war).
+ #The baseline change is -10.  The greatest possible is -25 (100 relation with the king, and at war.)
  (val_sub, ":honor_change", 10),
  
  #If the player was insufficiently recognized for his service, the honor loss
@@ -25934,7 +26127,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
      (try_end),
              
      #Lords who would consider the rebellion more justified if the player was "under-fiefed"
-     #(some will only care if they liked the player; others have a more general sense of fairness).
+     #(some will only care if they liked the player; others have a more general sense of fairness.)
      (try_begin),
          (ge, ":fief_unfairness", 1),
          (try_begin),
@@ -26020,7 +26213,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
         (call_script, "script_player_leave_faction", 1), #1 means give back fiefs
     ]],
 
-[anyone|plyr , "lord_ask_leave_service_end", [], "Thank you, sir. It was an honour to serve you..", "lord_ask_leave_service_end_2",[]],
+[anyone|plyr , "lord_ask_leave_service_end", [], "Thank you, sir. It was an honour to serve you...", "lord_ask_leave_service_end_2",[]],
 [anyone|plyr , "lord_ask_leave_service_end", [], "My thanks. It feels good to be {a free man/free} once again.", "lord_ask_leave_service_end_2",[]],
 
 [anyone , "lord_ask_leave_service_end_2", [], "Farewell then, {playername}, and good luck go with you.", "close_window",
@@ -28252,7 +28445,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 
 [anyone|plyr, "spouse_talk", [],
-"Let us think of a way to improve our standing in this realm", "combined_political_quests",[
+"Let us think of a way to improve our standing in this realm.", "combined_political_quests",[
    (call_script, "script_get_political_quest", "$g_talk_troop"),
    (assign, "$political_quest_found", reg0),
    (assign, "$political_quest_target_troop", reg1),
@@ -28268,7 +28461,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
   (this_or_next|troop_slot_eq, "$g_talk_troop", slot_troop_occupation, slto_kingdom_lady),
       (is_between, "$g_talk_troop", kingdom_ladies_begin, kingdom_ladies_end),
   ],
- "My {reg63?wife:husband}, I would like to dedicate my successes in this recent tournament to you", "dplmc_spouse_tournament_dedication_reaction", ## Floris - bugfix was wife/husband but needed : not /
+ "My {reg63?wife:husband}, I would like to dedicate my successes in this recent tournament to you.", "dplmc_spouse_tournament_dedication_reaction", ## Floris - bugfix was wife/husband but needed : not /
   [
 
   (try_begin),
@@ -28319,13 +28512,13 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [
     (neg|check_quest_active, "qst_organize_feast"),
    ],
-"I was thinking that perhaps we could host a feast", "spouse_organize_feast",[
+"I was thinking that perhaps we could host a feast.", "spouse_organize_feast",[
  ]],
 
 [anyone|plyr, "spouse_talk",
    [
    ],
-"Let us take inventory of our household possessions", "spouse_household_possessions",[
+"Let us take inventory of our household possessions.", "spouse_household_possessions",[
    (change_screen_loot, "trp_household_possessions"),
  ]],
 
@@ -28337,7 +28530,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 
 [anyone|plyr, "spouse_talk", [],
-"We shall speak later, my {wife/husband}", "close_window",[
+"We shall speak later, my {wife/husband}.", "close_window",[
      (assign, "$g_leave_encounter", 1),
  ]],
 
@@ -28455,7 +28648,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 [anyone|plyr, "spouse_feast_confirm",
    [
    ],
-"Let me add more items to our storehouses",   "spouse_feast_added_items", 
+"Let me add more items to our storehouses.",   "spouse_feast_added_items", 
    [
    (change_screen_loot, "trp_household_possessions"),
    ]],
@@ -28469,12 +28662,12 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    [
    (gt, "$feast_quality", 1),
    ],
-"Let us dispatch the invitations",   "spouse_feast_confirm_yes", []],
+"Let us dispatch the invitations.",   "spouse_feast_confirm_yes", []],
 
 [anyone|plyr, "spouse_feast_confirm",
    [
    ],
-"Let us wait, then",   "spouse_pretalk",[]],
+"Let us wait, then.",   "spouse_pretalk",[]],
 
    
 [anyone, "spouse_feast_confirm_yes",
@@ -28720,12 +28913,12 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
         (str_store_string, s5, "str_for_s4"),
     (try_end),
     ],
-"We will shortly depart{s5}. It is good to know that some people in this world retain a sense of honor.", "close_window",[
+"We will shortly depart {s5}. It is good to know that some people in this world retain a sense of honor.", "close_window",[
  ]],
 
 
 [anyone|plyr, "lady_talk_refugee", [],
-"Of course, my lady", "close_window",[
+"Of course, my lady.", "close_window",[
     (troop_get_slot, ":current_location", "$g_talk_troop", slot_troop_cur_center),
     (call_script, "script_get_kingdom_lady_social_determinants", "$g_talk_troop"),
     (assign, ":new_location", reg1),
@@ -28777,7 +28970,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 
 [anyone|plyr, "kingdom_lady_captive", [],
-"I have changed my mind -- you are free to go", "close_window",[
+"I have changed my mind -- you are free to go.", "close_window",[
     (troop_set_slot, "$g_talk_troop", slot_troop_prisoner_of_party, -1),
     (troop_set_slot, "$g_talk_troop", slot_troop_met, 1),
     ]],#incomplete
@@ -28819,7 +29012,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  ]],
 
 [anyone|plyr, "lady_duel_lost",
-    [], "Very well - we must do as tradition demands... Farewell, my lady", "close_window", [
+    [], "Very well - we must do as tradition demands... Farewell, my lady.", "close_window", [
  ]],
 
 [anyone|plyr, "lady_duel_lost",
@@ -29280,7 +29473,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     "No word so far...", "close_window",[]],
 
     [anyone|plyr, "lady_proposal_pending", [],
-    "On second thought, now is not the time for us to marry", "lady_proposal_pending_end",[]],
+    "On second thought, now is not the time for us to marry.", "lady_proposal_pending_end",[]],
 
 [anyone, "lady_proposal_pending_end", [
     (try_begin),
@@ -29307,7 +29500,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     "Perhaps I may still be able to change your {s11}'s mind", "lady_pretalk",[]],
 
     [anyone|plyr, "lady_betrothed", [],
-    "So be it -- let us then part", "lady_conclude_relationship",[
+    "So be it -- let us then part.", "lady_conclude_relationship",[
     ]],
 
 
@@ -29574,7 +29767,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     
     (neq, "$lady_flirtation_location", "$g_encountered_party"),
     ],
-"My lady, I would like to profess myself your most ardent admirer", "lady_profess_admiration",
+"My lady, I would like to profess myself your most ardent admirer.", "lady_profess_admiration",
     [
     (call_script, "script_troop_get_romantic_chemistry_with_troop", "$g_talk_troop", "trp_player"),
     (assign, ":reaction_change", reg0),
@@ -29613,7 +29806,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     (gt, "$g_player_tournament_placement", 3),
     (neg|troop_slot_ge, "trp_player", slot_troop_spouse, active_npcs_begin),
     ],
-"My lady, I would like to dedicate my successes in this recent tournament to you", "lady_tournament_dedication_reaction",
+"My lady, I would like to dedicate my successes in this recent tournament to you.", "lady_tournament_dedication_reaction",
     [
 
     (try_begin),
@@ -29999,7 +30192,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     (eq, 1, 0),
     (neg|check_quest_active, "qst_formal_marriage_proposal"),
     ],
-    "I am tired of these games! I will speak to your family about arranging a wedding immediately..", "lady_player_threatens_compel",[
+    "I am tired of these games! I will speak to your family about arranging a wedding immediately.", "lady_player_threatens_compel",[
     ]],
 
 [anyone, "lady_player_threatens_compel",
@@ -30009,7 +30202,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
 [anyone|plyr, "lady_player_threatens_compel_2",
     [],
-    "No, of couse not. Please forgive my burst of temper", "lady_private_conversation_end",[
+    "No, of couse not. Please forgive my burst of temper.", "lady_private_conversation_end",[
     ]],
 
 [anyone|plyr, "lady_player_threatens_compel_2",
@@ -30034,7 +30227,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     #rival suitor sequence
 [anyone|plyr, "lady_other_suitor",
     [],
-    "It grieves me to hear that, my lady, but such things must be", "lady_pretalk",
+    "It grieves me to hear that, my lady, but such things must be.", "lady_pretalk",
     []],
 
 [anyone|plyr, "lady_other_suitor",
@@ -30047,7 +30240,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
     [
     (eq, 1, 0),
     ],
-    "I am tired of these games! I will demand that your family compel you to marry me..", "lady_player_threatens_compel",[
+    "I am tired of these games! I will demand that your family compel you to marry me.", "lady_player_threatens_compel",[
     ]],
 
 [anyone, "lady_other_suitor_challenge",
@@ -30056,7 +30249,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
       (call_script, "script_troop_get_relation_with_troop", "$g_talk_troop", "$romantic_rival"),
       (lt, reg0, 0)
     ],
-    "I would be so grateful! But from what I understand, you already have a duel on your hands. He is not honor-bound to fight you, if you are committed to another combat. Please, conclude your other business in a hurry, to rescue me from that man's attentions!.", "lady_pretalk",
+    "I would be so grateful! But from what I understand, you already have a duel on your hands. He is not honor-bound to fight you, if you are committed to another combat. Please, conclude your other business in a hurry, to rescue me from that man's attentions!", "lady_pretalk",
     []],
 
 [anyone, "lady_other_suitor_challenge",
@@ -30278,7 +30471,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 [anyone|plyr, "lady_mission_told", [], "{s66}, I fear I cannot help you right now.", "lady_mission_rejected",[]],
 
 [anyone, "lady_mission_accepted", [], "You are a true {gentleman/lady}, {playername}.\
- Thank you so much for helping me", "close_window",
+ Thank you so much for helping me.", "close_window",
    [
    (try_begin),
      (eq, "$random_quest_no", "qst_deliver_message_to_prisoner_lord"),
@@ -33746,7 +33939,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
       (store_troop_gold, ":player_gold", "trp_player"),
       (ge, ":player_gold", reg27),
     ],
-    "Yes, please dispatch a messenger.  Here is {reg27} denars to cover the cost.",
+    "Yes, please dispatch a messenger. Here is {reg27} denars to cover the cost.",
     "tavernkeeper_acknowledge_messenger",
     []
   ],
@@ -34438,7 +34631,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   (store_troop_gold, ":gold", "trp_player"),
   (ge, ":gold", 300),
   ],
-"Yes -- teach me that one",
+"Yes -- teach me that one.",
 "minstrel_courtship_poem_teach_3", []],
 
 [anyone|plyr, "minstrel_courtship_poem_teach_2", [],
@@ -34936,7 +35129,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
   (str_store_troop_name, s11, "$romantic_rival"),
   (str_store_troop_name, s12, "$lady_selected"),
   ],
-"Yes -- I intend to force {s11} to relinquish his suit of {s12}",
+"Yes -- I intend to force {s11} to relinquish his suit of {s12}.",
 "minstrel_duel_issued", []],
 
 [anyone|plyr, "minstrel_duel_confirm_2", [
@@ -39583,7 +39776,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 
 [anyone, "prisoner_chat_noble_execute_2", 
 [
-], "P-Please don't! I have a family!. And t-think about the consequences to your reputation!", "prisoner_chat_noble_execute_3",[]],
+], "P-Please don't! I have a family! And t-think about the consequences to your reputation!", "prisoner_chat_noble_execute_3",[]],
 [anyone|plyr, "prisoner_chat_noble_execute_3", [], "I don't care about that. Now die!", "prisoner_chat_noble_execute_4_kill",[]],
 [anyone|plyr, "prisoner_chat_noble_execute_3", [], "Very well. You may live then.", "prisoner_chat_noble_execute_4_leave",[]],
 
@@ -39813,7 +40006,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 # (store_troop_gold, ":gold", "trp_player"),
 # (ge, ":gold", reg1),
 ],
-"Normal ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
+"Normal ({reg1} coins, {reg2} days.)", "trade_requested_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -39862,7 +40055,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 # (store_troop_gold, ":gold", "trp_player"),
 # (ge, ":gold", reg1),
 ],
-"Heavy ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
+"Heavy ({reg1} coins, {reg2} days.)", "trade_requested_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -39910,7 +40103,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (assign, reg1, "$g_current_horse_price"),
 (assign, reg2, "$g_current_horse_days"),
 ],
-"Yes. Do it. ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm_3",
+"Yes. Do it. ({reg1} coins, {reg2} days.)", "trade_requested_horse_train_confirm_3",
 []],
 
 [anyone|plyr, "trade_requested_horse_train_confirm_2", 
@@ -39927,7 +40120,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (lt, ":gold", "$g_current_horse_price"),
 (assign, reg1, "$g_current_horse_price"),
 ],
-"Sorry, i don't have the money right now ({reg1} coins).", "merchant_trade",
+"Sorry, i don't have the money right now ({reg1} coins.)", "merchant_trade",
 []],
 ########################
 [anyone, "trade_requested_horse_train_confirm_3", [], "Very well. You will be notified when it's done.", "merchant_trade",
@@ -39983,7 +40176,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Yes. Bring it back to health ({reg1} coins, {reg2} days).", "trade_requested_horse_nurse_confirm",
+"Yes. Bring it back to health ({reg1} coins, {reg2} days.)", "trade_requested_horse_nurse_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -40030,7 +40223,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (store_troop_gold, ":gold", "trp_player"),
 (lt, ":gold", reg1),
 ],
-"Sorry, i don't have the money right now ({reg1} coins).", "merchant_trade",
+"Sorry, i don't have the money right now ({reg1} coins.)", "merchant_trade",
 []],
 
 [anyone|plyr, "trade_nurse_options", 
@@ -41695,11 +41888,11 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "maid_talk", [], "Nothing right now", "close_window",[]],
   
 [anyone, "maid_talk_buy", [], "Certainly. What would you like to buy?", "maid_talk_buy_select",[]],
-[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A bed", "close_window",[]],
-[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A crap bowl", "close_window",[]],
-[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A writing table", "close_window",[]],
-[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A chest to keep my things", "close_window",[]],
-[anyone|plyr, "maid_talk_buy_select", [], "Nevermind....", "close_window",[]],
+[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A bed.", "close_window",[]],
+[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A crap bowl.", "close_window",[]],
+[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A writing table.", "close_window",[]],
+[anyone|plyr, "maid_talk_buy_select", [], "For my bedroom. A chest to keep my things.", "close_window",[]],
+[anyone|plyr, "maid_talk_buy_select", [], "Nevermind...", "close_window",[]],
 
 ###TOM HOSUING MAID END
 
