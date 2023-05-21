@@ -395,7 +395,7 @@ light_infantry_wp_2         = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(22
 light_infantry_wp_3         = wp_one_handed(280)|wp_two_handed(60)|wp_polearm(280)|wp_archery(60)|wp_crossbow(60)|wp_throwing(280)
 
 
-gaelic_spearman_skills_1     = knows_ironflesh_4|knows_power_strike_4|knows_athletics_4|knows_weapon_master_4 |knows_shield_3|knows_power_throw_1|knows_inventory_management_10
+gaelic_spearman_skills_1     = knows_ironflesh_4|knows_power_strike_4|knows_athletics_4|knows_weapon_master_4|knows_shield_3|knows_power_throw_1|knows_inventory_management_10
 gaelic_spearman_skills_2     = knows_ironflesh_6|knows_power_strike_6|knows_athletics_5|knows_weapon_master_5|knows_shield_4|knows_power_throw_2|knows_inventory_management_10
 gaelic_spearman_skills_3     = knows_ironflesh_8|knows_power_strike_8|knows_athletics_6|knows_weapon_master_6|knows_shield_5|knows_power_throw_2|knows_inventory_management_10
 
@@ -405,7 +405,7 @@ gaelic_spearman_wp_3   = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(350)|wp
 
 
 
-gaelic_axeman_skills_1   = knows_ironflesh_4|knows_power_strike_4|knows_athletics_4|knows_weapon_master_4 |knows_shield_3|knows_power_throw_1|knows_inventory_management_10
+gaelic_axeman_skills_1   = knows_ironflesh_4|knows_power_strike_4|knows_athletics_4|knows_weapon_master_4|knows_shield_3|knows_power_throw_1|knows_inventory_management_10
 gaelic_axeman_skills_2   = knows_ironflesh_6|knows_power_strike_6|knows_athletics_5|knows_weapon_master_5|knows_shield_4|knows_power_throw_2|knows_inventory_management_10
 gaelic_axeman_skills_3   = knows_ironflesh_8|knows_power_strike_8|knows_athletics_6|knows_weapon_master_6|knows_shield_5|knows_power_throw_2|knows_inventory_management_10
 

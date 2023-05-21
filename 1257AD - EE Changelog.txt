@@ -1,4 +1,4 @@
-[MOD] - 1257 AD Enhanced Edition 
+[MOD]: Anno Domini 1257 - Enhanced Edition (1257 AD - Enhanced Edition)
 
 Taleworlds: https://forums.taleworlds.com/index.php?topic=379851
 Nexus: https://www.nexusmods.com/mbwarband/mods/6251
@@ -14,7 +14,7 @@ Contributors: @Black_Kangaroo#7894, @Lang#9858, @the_duke#8749, @mamacrooo#5615
 Patrons: @the_duke#8749, @grim_grollie#0873, ivan.ant13, @B^()#4099, @Mentoss#3127, @Phoenix#3892
 
 
-Current version: v3.10
+Current version: v3.11
 
 NOTES: 
 Things with the "New game:" prefix requires a new game to take effect.
@@ -23,7 +23,7 @@ Things with the "Debug:" prefix requires a new game but can be activated/fixed b
 
 
 
-v3.11 "???"
+v3.11 (Requires a new game)
 1). (New Game)(@Khanor#3713) Village connections optimized for six more factions.
      - Factions optimized: The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.
 2). (New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
@@ -39,14 +39,48 @@ v3.11 "???"
 8). (@Khanor#3713) Moved and improved the readability and placement of the old text for displaying the mod's title and the original AD 1257 version the mod is built upon.
 9). (@Khanor#3713) Added Enhanced Edition version to the old revision string instead, to be displayed prominently on the main menu from here on out.
 10). (@Khanor#3713) Updated the README.md file with basic instructions and information for users and devs.
+11). (@Spades#8972) New models and textures for some counter point series swords.
+12). Fixed faction notes culture being incorrect.
+13). Fixed polish retainer not having boots and using byzantine armor.
+14). Fixed troop tree presentation not displaying the new cultures.
+15). (Fix) Disabled constable stable dialogue.
+16). (Improvement) Genoese crossbowman now use pavise shields.
+17). Fixed hungarian archer not upgrading to veteran.
+18). Fixed constable armory only having 9 slots.
+19). Fixed constable wearing and removing items from the armory.
+20). (Improvement) Any lord of any personality can try to assassinate the player using hired assassins when the player is visiting any town. The negative relation needed depends on the personality of the lord in questions (e.g. debauched lords are the most likely to attempt to kill the player.)
+21). (Improvement) The player doesn't need to be in the same fief as the lord for the assassination attempt to occur.
+22). (Improvement) Timer for assassination attempts is randomized to between 5 and 9 days (it was a fixed 7 days before.)
+23). Fixed some mercs (e.g. Saint Lazarus units) not appearing in the mercenary troop tree under reports.
+24). Minimum amount of prisoners for a break to occur decreased to 10 (from 100.)
+25). Garrison size is taken into account when calculating prison break chance (every 20 guards decrease chance by 1%.)
+26). Prisoner tower decreases chance by 2x (was 3x.)
+     - E.g. a town with default garrison size of 800 that has 500 prisoners has a weekly 10% chance of a break occurring. Add a prisoner tower and the chance decreases to 5%.
+27). Fixed issues with bank deposits and players not receiving money automatically.
+28). Fixed option under camp to receive money from banks directly without needing to visit the fief in question not showing up.
+29). Fixed war parties and mercenary companies not being taken into account when calculating a Kingdom's strength.
+30). Fixed escaped prisoner party not reverting to their default icon in the map when returning from the sea.
+31). Fixed parties not ganging up on certain party types (e.g. escaped prisoners, looters) when the latter attacked one of their faction's parties and they had the chance of winning.
+32). Fixed the new cultures (e.g. English) not being added to the western euro culture list and thus missing the typical euro items in their merchants.
+33). Speed improvements to code related to parties joining friendly parties battles in the map.
+34). Added game version to new game menu and reports.
+
+
+This bug reports were tested and could not be reproduced:
+1). "recruiting generic mamluke regional mercenaries (not the expensive 4000 denar ones) gets you mamluke junior cavalry (lance troop) instead of the less-equipped mercenary version!"
+
+
+bug report notes:
+1). "Hafsid Dynasty's regional mercenaries are generic mamluke mercenaries (spearmen, javelinmen, archers, horse archers) instead of generic muslim mercenaries (spearmen, archers, horsemen)"
+This is present on the original 1257 and was probably done on purpose of balancing, since there's already 2 factions who use generic muslim mercenaries. 
 
 
 
 
 v3.10 (Requires a new game)
-1). Increased relation gain with king after capturing a fief that player and NPCs have to 5 from 3.
+1). Increased relation gain with King/Faction Leader after capturing a fief that player and NPCs have to 5 from 3.
 2). Fixed player not receiving any relation gain after capturing a fief.
-3). Removed javelins from mongol skirmishers.
+3). Removed javelins from Mongol skirmishers.
 4). Added confirmation menu to outpost demolish so that player can rethink the choice.
 5). Added dialogue for player to ask Pope if there's any crusade active at the moment. 
 6). Removed relation loss with a leader when someone loses a battle.
@@ -55,7 +89,7 @@ v3.10 (Requires a new game)
 9). Fixed tavernkeeper not informing the player of the correct value that a bounty had when finishing the quest.
 10). Fixed second troop tree presentation.
 11). Removed stable horse train for the time being.
-12). Any faction that has mongol culture will spawn mongol camps around their fiefs. Make sure the mongol camp limit (camp menu option) is high enough if you have several mongol factions though.
+12). Any faction that has Mongol culture will spawn Mongol camps around their fiefs. Make sure the Mongol camp limit (camp menu option) is high enough if you have several Mongol factions though.
 13). Increased renown of the more well known kings to 1500 from 1200.
 14). Fixed being able to give fiefs to normal troops.
 15). Reworked prison break system. Minimum amount of prisoners required for it to trigger is 100 and each 10 increases chance of escape by 1%. If the settlement has a prisoner tower built it decreases the chance by 3x. This should make huge prisoner breaks much less frequent (but breaks overall more frequent).
@@ -84,13 +118,25 @@ A: The chance is random. There's a 50% chance that the NPC will accept the gift.
 
 
 
-v3.9.2 "Swift Cogs" (3.9 definitive edition)
-(Save game compatible with other 3.9-, 3.8- and maybe some earlier versions, but new village connections and geographical changes will need a new game to take effect.)
-Anno Domini 1257, Enhanced Edition version 3.9.2 is based on 3.9.1, but comes with many polished 3.10 and 3.11+ features on top for as smooth and bug free an experience as possible. As such this patch is a good choice for continuing old saves, or prioritizing a balance of polish and features over just all the very newest features.
+v3.9.2a "Smooth Sailing" (3.9 definitive series)
+(Save game compatible with all versions from 3.5 to 3.9.2.)
 
-1). (3.10 feature) Increased relation gain with king after capturing a fief that player and NPCs have to 5 from 3.
+1). (@Khanor#3713) Fixed code adaptation for the code letting opposing parties merge together for battles (now adapted for the differences between 3.11 and 3.9.2 in a more proper way.)
+2). (@Khanor#3713) Fixed all instances of misspelled "Sergeant" in troop names (15 individual troop types affected.)
+3). (@Khanor#3713) Updated troop stats (with error corrections) for the first two tiers of "Gaelic Mercenary Spearmen" and "Gaelic Mercenary Axemen" so that these are gradual upgrades proficiency- and attribute-wise. Especially a noticeable improvement for the proficiencies of the second tier in the Axemen-line, which one of our Discord-members led me to (thank you.)
+4). (@Khanor#3713) Added attribute and proficiency updates for the above point's Gaelic Mercenaries to the "Update troops to the current mod version"-button under "Enhanced Options."
+5). (@Khanor#3713) Tuned the scripts for raising and lowering proficiencies so they can also tweak proficiency values with full accuracy in the cases where the before values for the proficiencies were not a multiple of 5 like in most cases for troops.
+
+
+
+
+v3.9.2 "Smooth Sailing" (3.9 definitive series)
+(Save game compatible with other 3.9-, 3.8-, and maybe some earlier versions, but new village connections and geographical changes will need a new game to take effect.)
+Anno Domini 1257 - Enhanced Edition version 3.9.2 is an optional patch based on 3.9.1, created by Khanor (@Khanor#3713.) It comes with many polished 3.10 and 3.11 (and some original) features on top for as smooth and bug free an experience as possible. As such this patch is a good choice for continuing old saves, or prioritizing a balance of polish and features over just all the very newest features.
+
+1). (3.10 feature) Increased relation gain with King/Faction Leader after capturing a fief that player and NPCs have to 5 from 3.
 2). (3.10 feature) Added option to choose garrison size at game start.
-3). (3.10 feature) Removed javelins from mongol skirmishers.
+3). (3.10 feature) Removed javelins from Mongol skirmishers.
 4). (3.10 feature) Added confirmation menu to outpost demolish so that player can rethink the choice.
 5). (3.10 feature) Added dialogue for player to ask Pope if there's any crusade active at the moment. 
 6). (3.10 feature) Removed relation loss with a leader when someone loses a battle.
@@ -99,7 +145,7 @@ Anno Domini 1257, Enhanced Edition version 3.9.2 is based on 3.9.1, but comes wi
 9). (3.10 feature) Fixed tavernkeeper not informing the player of the correct value that a bounty had when finishing the quest.
 10). (3.10 feature) Fixed second troop tree presentation.
 11). (3.10 feature) Removed stable horse train for the time being.
-12). (3.10 feature) Any faction that has mongol culture will spawn mongol camps around their fiefs. Make sure the mongol camp limit (camp menu option) is high enough if you have several mongol factions though.
+12). (3.10 feature) Any faction that has Mongol culture will spawn Mongol camps around their fiefs. Make sure the Mongol camp limit (camp menu option) is high enough if you have several Mongol factions though.
 13). (3.10 feature) Increased renown of the more well known kings to 1500 from 1200.
 14). (3.10 feature) Fixed being able to give fiefs to normal troops.
 15). (3.10 feature) Reworked prison break system. Minimum amount of prisoners required for it to trigger is 100 and each 10 increases chance of escape by 1%. If the settlement has a prisoner tower built it decreases the chance by 3x. This should make huge prisoner breaks much less frequent (but breaks overall more frequent).
@@ -118,26 +164,59 @@ Anno Domini 1257, Enhanced Edition version 3.9.2 is based on 3.9.1, but comes wi
 28). (3.10 feature)(@mamacrooo#5615) Added optional faces under Optional\Culturedguy's female character overhaul. Read the installation intructions.txt file on how to install it.
 29). (3.10 feature) Fixed player receiving compensation money for capturing a fief even when he decided to rebel.
 30). (3.10 feature) Fixed player compensation money bug.
-31). (3.11+ feature)(New Game)(@Khanor#3713) Village connections optimized for six more factions.
+31). (3.11 feature)(New Game)(@Khanor#3713) Village connections optimized for six more factions.
      - Factions optimized: The Holy Roman Empire, the Teutonic Order, the Curonians, the Novgorod Republic, the Kingdom of Bulgaria and the Mamluk Sultanate.
-32). (3.11+ feature)(New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
+32). (3.11 feature)(New Game)(@Khanor#3713) Moved Norwegian and Danish settlements closer to their real life locations on the map:
      - Kingdom of Norway: Þorshofn moved east, Borgló and Véey moved southwest, Ragnhildarhólmr and Konungahella moved (even further) southeast.
      - Kingdom of Denmark: Varbiargh and Falkenbærgh moved south-southeast.
-33). (3.11+ feature)(@Khanor#3713) Improved movement speed when travelling on water/Seas (water is now the fastest terrain by a small margin, but coasts/embarking is still slow, which makes sense.)
+33). (3.11 feature)(@Khanor#3713) Improved movement speed when travelling on water/Seas (water is now the fastest terrain by a small margin, but coasts/embarking is still slow, which makes sense.)
      - Land travel is still a better choice when providing a more direct route to the destination, however.
-34). (3.11+ feature)(@Khanor#3713) Fixed a misspelled lord name (both in module_troops.py and troops.csv.)
-35). (3.11+ feature)(@Khanor#3713) A large amount of dialogue and text string language, spelling and punctuation improvements over several different files.
+34). (3.11 feature)(@Khanor#3713) Fixed a misspelled lord name (both in module_troops.py and troops.csv.)
+35). (3.11 feature)(@Khanor#3713) A large amount of dialogue and text string language, spelling and punctuation improvements over several different files.
      - Some examples being certain manor dialogues and the fief exchange dialogues.
-36). (3.11+ feature)(@Khanor#3713) Game menu punctuation and spelling improvements for most of the options seen when starting a new game.
-37). (3.11+ feature)(@Khanor#3713) Improved the old changelog with some corrections and formatting improvements (e.g. standardized spacing), and some of the newest info from the Nexusmods changelog.
-38). (3.11+ feature)(@Khanor#3713) Moved and improved the readability and placement of the old text for displaying the mod's title and the original AD 1257 version the mod is built upon.
-39). (3.11+ feature)(@Khanor#3713) Added Enhanced Edition version to the old revision string instead, to be displayed prominently on the main menu from here on out.
-40). (3.11+ feature)(@Khanor#3713) Updated the README.md file with basic instructions and information for users and devs.
+36). (3.11 feature)(@Khanor#3713) Game menu punctuation and spelling improvements for most of the options seen when starting a new game.
+37). (3.11 feature)(@Khanor#3713) Improved the old changelog with some corrections and formatting improvements (e.g. standardized spacing), and some of the newest info from the Nexusmods changelog.
+38). (3.11 feature)(@Khanor#3713) Moved and improved the readability and placement of the old text for displaying the mod's title and the original AD 1257 version the mod is built upon.
+39). (3.11 feature)(@Khanor#3713) Added Enhanced Edition version to the old revision string instead, to be displayed prominently on the main menu from here on out.
+40). (3.11 feature)(@Khanor#3713) Updated the README.md file with basic instructions and information for users and devs.
+41). (3.11 feature)(@Spades#8972) New models and textures for some counter point series swords.
+42). (3.11 feature)(Fix) Disabled constable stable dialogue.
+43). (3.11 feature)(Improvement) Genoese crossbowman now use pavise shields.
+44). (3.11 feature) Fixed constable armory only having 9 slots.
+45). (3.11 feature) Fixed constable wearing and removing items from the armory.
+46). (3.11 feature)(Improvement) Any lord of any personality can try to assassinate the player using hired assassins when the player is visiting any town. The negative relation needed depends on the personality of the lord in questions (e.g. debauched lords are the most likely to attempt to kill the player.)
+47). (3.11 feature)(Improvement) The player doesn't need to be in the same fief as the lord for the assassination attempt to occur.
+48). (3.11 feature)(Improvement) Timer for assassination attempts is randomized to between 5 and 9 days (it was a fixed 7 days before.)
+49). (3.11 feature) Fixed some mercs (e.g. Saint Lazarus units) not appearing in the mercenary troop tree under reports.
+50). (3.11 feature) Minimum amount of prisoners for a break to occur decreased to 10 (from 100.)
+51). (3.11 feature) Garrison size is taken into account when calculating prison break chance (every 20 guards decrease chance by 1%.)
+52). (3.11 feature) Prisoner tower decreases chance by 2x (was 3x.)
+     - E.g. a town with default garrison size of 800 that has 500 prisoners has a weekly 10% chance of a break occurring. Add a prisoner tower and the chance decreases to 5%.
+53). (3.11 feature) Fixed issues with bank deposits and players not receiving money automatically.
+54). (3.11 feature) Fixed option under camp to receive money from banks directly without needing to visit the fief in question not showing up.
+55). (3.11 feature) Fixed war parties and mercenary companies not being taken into account when calculating a Kingdom's strength.
+56). (3.11 feature) Fixed escaped prisoner party not reverting to their default icon in the map when returning from the sea.
+57). (3.11 feature) Fixed parties not ganging up on certain party types (e.g. escaped prisoners, looters) when the latter attacked one of their faction's parties and they had the chance of winning.
+58). (3.11 feature) Speed improvements to code related to parties joining friendly parties battles in the map.
+59). (3.11 feature) Added game version to new game menu and reports.
+60). (@Khanor#3713) The Mamluk Horse Archer mercenaries now no longer spawn with unnecessary bolts in their inventory, but instead have guaranteed Barbed Arrows in their inventory.
+61). (@Khanor#3713) Tweaked code a little to ensure every Faction leader meant to have a reinforced shield in their inventory actually gets one.
+62). (@Khanor#3713) Added in some basic upgrades for Peasant Women, so they can support the player's camp/party as auxiliary archers in a pinch, up to the level of around regular/experienced archers at best (a more historically plausible and less helmet-shunning option than the Sword Sisters of Vanilla/Native Warband.)
+63). (@Khanor#3713) Added some support skills to the Peasant Woman upgrades, so they have some utility as path-finders and healers too in addition to the new combat auxiliary option.
+64). (@Khanor#3713) Added peasant units to the "Others"-troop tree.
+65). (@Khanor#3713) Added gloves to the item lists of Scandinavian Armored Swordsmen and Balt Magnates, as they were lacking this despite having the "guarantee gloves"-flag.
+66). (@Khanor#3713) Added an "Update troops to the current mod version" button to the "Enhanced Options" camp menu choice, which updates some recently tweaked troops to the most recent patch for added save game compatibility for future small troop tweaks. As of being added, this works for Sea Raider Captains and some peasant troops.
+67). (@Khanor#3713) Improved spacing, punctuation and language of multiple Chamberlain dialogues, reports, tax options and recruitment options.
+68). (@Khanor#3713) Improved spacing and punctuation of some Constable dialogues and reports.
+69). (@Khanor#3713) Improved spacing, punctuation and spelling of multiple dialogues for Lords, Ladies and other NPCs, as well as some of their related player responses.
+70). (@Khanor#3713) Improved spacing, punctuation and spelling of some settlement (village/castle/town) menu options, as well as some reports, camp menu, tournament and main menu texts/options.
+71). (@Khanor#3713) The Crown of Castile is now correctly named "Crown of Castile" instead of "Kingdom of Castille." Thanks go to our Discord feedback givers.
+72). (@Khanor#3713) Added fief amount, rent, tariff, tax inefficiency and salary calculations to the end of the fief exchange code to avoid the weekly budget report being bugged (temporarily) after the fief exchange happened. Does not solve all issues remaining with the budget report display, such as 0 rents displayed on recent load.
 
 
 
 
-v3.9.1 (Requires a new game)
+v3.9.1
 1). Fixed invisible byzantine sabre.
 2). Removed Shoes with Mail because it was too short for the way 1257 armors were designed.
 3). Added komke to the dev list (sorry about that komke).
@@ -182,7 +261,6 @@ v3.9.1 (Requires a new game)
 42). Fixed player castle guards not updating when he changed his kingdom's culture through his minister.
 43). Added new misc option to make captured fiefs auto change culture to their new faction.
 44). Made changes to how much money the player receives as compensation for being denied a fief he conquered. New value is (player renown * 8) + (player relation with king * 20)(negative relations wield -20 per point)(was always 900 before).
-
 45). (New Game)(@Khanor#3713) Optimized village connections to castles/towns in the Kingdom of Norway, the Kingdom of Denmark, the Kingdom of England, the Kingdom of France, the Kingdom of Portugal, the Crown of Aragon, the Emirate of Granada, the Marinid Dynasty and the Polish Principalities.
      - Now even towns should generally pick up villages in their area, and the manual assignments pre-loop has been expanded with a description. Manual comments for which castles and towns are being handed village connections have also been added.
      - These village assignment improvements also include the outcome of a democratic Discord vote for Angoulême castle and Chinon castle's village connections (thanks for voting!)
@@ -205,7 +283,7 @@ v3.9
 3). Fixed fiefs sometimes not being unnasigned when their owner died.
 4). Fixed player king start.
 5). Fixed random lords not getting their face randomized according to culture.
-6). Fixed player getting lords without culture if he set his culture to mongol.
+6). Fixed player getting lords without culture if he set his culture to Mongol.
 7). Fixed player vassal being unable to request a fief after conquering it.
 8). Fixed "SCRIPT ERROR ON OPCODE -2147483108".
 9). Player now only loses honor and party morale if he executes a lord by burning, quartering or executes him on the spot.
@@ -343,7 +421,7 @@ v3.8
 76). Fixed player fiefs changing to neutral faction after the player gave them away back to the king.
 77). Fixed castle guards appearing in byzantine armies.
 78). (New game) Fixed sea raiders having low archery and crossbow proficiencies.
-79). Fixed player getting lords with no names nor culture if choosing to switch to anatolian christian (armenian) culture later on.
+79). Fixed player getting lords with no names nor culture if choosing to switch to Anatolian Christian (Armenian) culture later on.
 80). Added more menu options to customize custom troop proficiency, budget, etc per level.
 81). Fixed player being able to manage the garrison of fiefs taken by his faction even after they're assigned to someone else.
 82). Leading lords that win sieges gain +3 relations with their king.
@@ -461,7 +539,7 @@ v3.4 (Requires a new game)
 8). Fixed several issues with freelancer.
 9). Player will NOT be able to enlist in any army unless he's a adventurer (not tied with any faction as mercenary captain or vassal).
 10). Fixed player being unable to create a new faction after renouncing his oath.
-11). Fixed golden horde fiefs having anatolian culture and thus the player was unable to get mongol equipment anywhere but from loot.
+11). Fixed golden horde fiefs having anatolian culture and thus the player was unable to get Mongol equipment anywhere but from loot.
 12). Fixed castle and town guards sometimes having the same dialogue as belligerent drunks.
 
 
@@ -523,7 +601,7 @@ v3.3 (Requires a new game)
 53). Fixed player needing to pay to wait in a fief from his kingdom (Member of a existing faction).
 54). Fixed several issues that occurred when the player court's was lost (King by succession).
 55). Fixed diplomatic notifications like alliances and peace proposals not working correctly (King by succession).
-56). Fixed bugs related to mongol camp menu and recruitment (King by succession).
+56). Fixed bugs related to Mongol camp menu and recruitment (King by succession).
 57). Fixed player inability to move his court through the town menu (King by succession).
 58). Fixed lords wanting to join the player faction not appearing in the player's court (King by succession).
 59). Fixed player being able to incriminate a lord from his own faction (Incriminate commander quest) (Member of a existing faction).
@@ -555,7 +633,7 @@ v3.2 (Requires a new game)
 6). Fixed script error that occurred when the player changed any of the lord creation thresholds (villages, castles and towns) to 0.
 7). Reverted arena fighters back to vanilla (they no longer spawn with knight gear).
 8). Fixed roving knight spawn rate and max amount options being reverted.
-9). Added two new options to control mongol camp spawns.
+9). Added two new options to control Mongol camp spawns.
 10). Fixed player minister changing faces everytime the player entered the court.
 11). Fixed parties like teutonic crusaders (baltic) changing to deserters faction if the player started as king of their faction.
 12). Fixed player king start incorrect titles.
@@ -601,7 +679,7 @@ v3.1 (Requires a new game)
 23). Player can enter the prison from the town menu if he's the town lord.
 24). Added one on one fights to tournaments again, but this time both participants are restricted to fight on foot and with a two handed sword.
 25). Changed MINIMUM lord creation and threshold options for all fiefs to 0 from 1 like the readme says it does.
-26). Fixed mongolian camps spawning without a set limit and causing performance issues (now the maximum at one time is 20).
+26). Fixed Mongolian camps spawning without a set limit and causing performance issues (now the maximum at one time is 20).
 27). Apparently the freelancer equipment bug was fixed. I don't know if this is present in the v3.0 as well.
 28). Reduced the manor spawn radius to 5 from 7. This will decrease the chances of a manor spawning in inaccessible terrain.
 29). Reduced the minimum amount of skills required to enlist in a division in freelancer
@@ -653,7 +731,7 @@ v3.0 (Requires a new game)
 30). Fixed welsh low tier troops not having boots.
 31). Fixed hire special mercenaries (cumans, kipchaks, etc) not working for garrisons of towns. 
 32). Removed almost all short versions of leg armors that were giving the invisible leg bug with certain body armors.
-33). Fixed mongol troop tree presentation bug.
+33). Fixed Mongol troop tree presentation bug.
 34). Removed plenty of unused troops. This shall improve performance.
 35). Reworked belligerent drunks:
 1. There will be up to 30 of them in the map
@@ -740,7 +818,7 @@ Mamluke units = castles
 20). Added the crown back to the Emperor of Nicaea start.
 21). New game: Fixed some nordic countries being entirely of nordic culture. Now some of their lords will start as Finnish.
 22). Fixed mercenary company dialogue not appearing if player started as a adventurer. 
-23). Fixed Bishop Mittres and some plated surcoats appearing in muslim and mongolian towns. Also fixed some templar and hospitaller armors not having the proper culture tags.
+23). Fixed Bishop Mittres and some plated surcoats appearing in muslim and Mongolian towns. Also fixed some templar and hospitaller armors not having the proper culture tags.
 24). @Komke fixed most of the veteran and elite mercenary troop equipment.
 25). New game: Fixed Almogabar being level 28 and costing 120 denars a week.
 
@@ -763,7 +841,7 @@ Note that not all factions have mounted troops in the top tiers.
 7). Kingdom ladies that don't have any father or guardian will be assigned one if they have a relation of 20 or more with one of the lords of their faction. The check happens once a week so it may take a while.
 8). Fixed betrothals not being cleared when a lord dies.
 9). Fixed dead lords being considered valid targets for a lady's father or guardian roles when the script that checks this is called.
-10). A user from the chinese forum (@lejgood) fixed the grass shadow and the mongolian helmet bugs. I included them in this patch. Link: http://bbs.mountblade.com.cn/thread-2039872-1-1.html
+10). A user from the chinese forum (@lejgood) fixed the grass shadow and the Mongolian helmet bugs. I included them in this patch. Link: http://bbs.mountblade.com.cn/thread-2039872-1-1.html
 11). Fixed vegetation blocking the troop's face during a conversation (this only happened when the player talked to someone in the party).
 12). Removed the ability that the player had to shoot and kill NPCs when walking around the streets of a fief.
 13). New game: Fixed Latin Empire having Byzantine culture and receiving Greek troops. Also fixed them not being Catholic.
@@ -850,7 +928,7 @@ v2.5
 1). Ransom for the player now is 300 gold coins per level if king, 150 if lord and 100 if commoner.
 2). Fixed siege ladder traffic jams.
 3). Fixed prisoner/rescued transfer screen not appearing after winning a battle.
-4). Fixed player faction religion not being equal to the template faction (e.q. Player Roman Empire of Nicaea started as catholic).
+4). Fixed player faction religion not being equal to the template faction (e.q. Player Roman Empire of Nicaea started as Catholic).
 5). Fixed tavern bounty targets not attacking the player after being confronted.
 6). Increased the time it takes for defenders in sieges to get their arrows/bolts refilled to 3 minutes (it was 2).
 7). Improved performance in sieges (CPU wise).
@@ -972,7 +1050,7 @@ v2.1 (Requires a new game)
 34). Fixed bug: If the tavern keeper was knocked out by the belligerent drunk the game would crash.
 35). Added looting tweak by Tingyun - https://www.reddit.com/r/mountandblade/comments/8p48ge/kill_order_effect_on_looting_and_mod_solutions/
 36). Added perfect troop tree presentation by rubik - https://forums.taleworlds.com/index.php?topic=340676.0
-37). Fixed crusader turcopole and mongolian horseman line stat discrepancies.
+37). Fixed Crusader Turcopole and Mongolian horseman line stat discrepancies.
 38). Fixed issues related to party size bonuses at non king/prince/vassal game starts.
 39). Thanks to OpenBRF i was able to create tons of new LODs. Performance improved significantly, especially when flora is involved.
 40). Added new misc menu under camp > enhanced options.
@@ -1064,7 +1142,7 @@ Desert Forest: no change
 
 
 v2.0 
-1). Reduced mongol bow power draw requirement to 3 from 6.
+1). Reduced Mongol bow power draw requirement to 3 from 6.
 2). Fixed bug where improvement built wouldn't be the one that the player selected and the party's engineering skill wouldn't be taken into account when calculating the build time. 
 3). Fixed player not consuming any food if he's the only one in party.
 4). Removed some lower tier helmets from tier 3/4 cavalry.
@@ -1132,7 +1210,7 @@ v1.9 (I didn't find any problems loading a existing save from 1.8. But it's bett
 25). New game: Fixed Templar and Hospitaller troop trees. They have the same low tier setup as the euro culture but their troop upgrade to the respective order troops. This will fix the bug in native recruitment where knights are unobtainable.
 26). New game: Fixed Templar/Hospitaller serjeant crossbowman having wrong skills and proficiencies.
 27). Tweaked some troops equipment.
-28). Changed the religion of the following factions: Ilkhanate to mongol pagan, Latin Empire to catholic.
+28). Changed the religion of the following factions: Ilkhanate to Mongolian pagan, Latin Empire to Catholic.
 29). If player in defending a siege, and is the town lord, marshall or king of the faction, he can order archers to move to their initial siege positions if he presses the numpad 0 key.
 30). New game: Fixed rus culture guards being archers instead of spearman.
 31). Player party will consume half the food required if stationed in a walled fief. This is to simulate the player paying for accommodation with food included.
@@ -1158,7 +1236,7 @@ v1.8 (requires a new game)
 10). If chance for any of kingdom party types spawn chance is set to 0, code will no longer execute (before it did thus adding unnecessary stress to engine).
 11). Player troops will position themselves more orderly at battle start (Infantry on front, archers behind. Cavalry to the left, Horse Archers to the right).
 12). NPC lord parties and walled centers will update their strength checks quicker now (those checks are used to decide whether to flee or to fight).
-13). Fixed Welsh not having religion set to catholic at game start.
+13). Fixed Welsh not having religion set to Catholic at game start.
 14). Changes to kingdom reinforcement numbers.
 15). Added 2 more cultures for player selection: Templar and Hospitaller.
 16). Fixed some cultures in the player culture selection that were missing stuff and thus didn't get their effects applied to the player faction (Finnish, Mazovian, Anatolian and Anatolian Christian).
@@ -1218,7 +1296,7 @@ v1.7 COLOR UPDATE (requires a new game)
 6). Fixed bug where changing party size options in the reloaded menu had no effect on player's party size.
 7). Added message when a fief is awarded to someone in your faction (vassal of someone or king yourself).
 8). Added message when player vassals have no fiefs (helpful to prevent relationship loss.).
-9). Various messages now have different colors depending if what they say is positive or negative. Also, messages that were limited to be displayed only if the faction involved was the player faction, will now be displayed regardless of that (e.g. "X has been besieged by Y of Z"). (Red = negative outcome, Green = Positive, Orange = Neutral. There's also some blue. Report in the forum any deviation from this.).
+9). Various messages now have different colors depending if what they say is positive or negative. Also, messages that were limited to be displayed only if the faction involved was the player faction, will now be displayed regardless of that (e.g. "X has been besieged by Y of Z"). (Red = negative outcome, Green = Positive, Orange = Neutral. There's also some blue. Report in the forum any deviation from this.)
 10). Added links to the fiefs or lords in question in certain messages, such as "x village has been raided by y", with x and y having links in the notes to what they're referring to.
 11). Modified armor penetration/damage reduction values in module.ini 
 12). Removed fugitive serf spawn message.

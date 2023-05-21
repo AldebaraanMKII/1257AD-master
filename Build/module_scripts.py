@@ -22537,7 +22537,8 @@ scripts = [
             (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 0),
             (try_begin),
               (party_stack_get_troop_id, ":stack_troop", ":party_no", 0),
-              (is_between, ":stack_troop", "trp_looter", "trp_black_khergit_horseman"),
+              # (is_between, ":stack_troop", "trp_looter", "trp_black_khergit_horseman"),
+              (is_between, ":stack_troop", "trp_euro_horse_4_jerusalem", "trp_manhunter"),
               (gt, ":player_level", 6),
               (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
             (try_end),
@@ -22579,9 +22580,13 @@ scripts = [
             # (this_or_next|eq, ":party_type", spt_mercenary_company),
             ########################
             ############### NEW v3.11 - 
-            (is_between, ":template", "pt_manhunters", "pt_manor"),
-            ############### 
+            (is_between, ":template", "pt_manhunters", "pt_manor"), 
             (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+
+            ############### NEW v3.9.2a, by Khanor
+            # (is_between, ":template", "pt_cattle_herd", "pt_manor") and (neq, ":template", "pt_manhunters"),
+            # (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+            ########################
             
             (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
             (neq, ":ai_bhvr", ai_bhvr_avoid_party),
@@ -40601,28 +40606,28 @@ scripts = [
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 1),
           (str_store_string, s0, "@Stable upgrade I"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (30% chance for each once a week)."),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (30% chance for each once a week.)"),
           (assign, reg0, 5000),
           (assign, reg1, 10),
         (else_try),
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 2),
           (str_store_string, s0, "@Stable upgrade II"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (45% chance for each once a week). Can also train your horses (max modifier: heavy, max at once: 1) by talking to the constable. "),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (45% chance for each once a week.) Can also train your horses (max modifier: heavy, max at once: 1) by talking to the constable."),
           (assign, reg0, 8000),
           (assign, reg1, 12),
         (else_try),
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 3),
           (str_store_string, s0, "@Stable upgrade III"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (60% chance for each once a week). Can also train your horses (max modifier: spirited, max at once: 2, cost: -15%, train time: -25%) by talking to the constable."),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (60% chance for each once a week.) Can also train your horses (max modifier: spirited, max at once: 2, cost: -15%, train time: -25%) by talking to the constable."),
           (assign, reg0, 12000),
           (assign, reg1, 15),
         (else_try),
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 4),
           (str_store_string, s0, "@Stable upgrade IV"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (75% chance for each once a week). Can also train your horses (max modifier: champion, max at once: 3, cost: -25%, train time: -40%) by talking to the constable. Will train horses (with less than heavy modifier) automatically."),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (75% chance for each once a week.) Can also train your horses (max modifier: champion, max at once: 3, cost: -25%, train time: -40%) by talking to the constable. Will train horses (with less than heavy modifier) automatically."),
           (assign, reg0, 18000),
           (assign, reg1, 18),
 ####################################
