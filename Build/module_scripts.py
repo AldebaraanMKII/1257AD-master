@@ -7247,6 +7247,12 @@ scripts = [
 ######################### NEW v2.1 - if he's dead don't display information
           (try_begin),
             (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
+            ############### NEW v3.12 - 
+            (try_begin),
+              (eq, "$cheat_mode", 1),
+               (display_message, "@{s54} is alive."),      
+            (try_end),
+            ############### 
             ################ NEW v2.4 - fixes extra info being displayed for kingdom ladies
             (try_begin),
               (is_between, ":troop_no", active_npcs_begin, active_npcs_end),
@@ -7259,11 +7265,19 @@ scripts = [
           (else_try),
             (str_clear, s0),
             (troop_slot_eq, ":troop_no", slot_troop_is_alive, 0),
+            ############### NEW v3.12 - 
+            (try_begin),
+              (eq, "$cheat_mode", 1),
+                 (troop_get_slot, ":killer_id", ":troop_no", slot_troop_death_battle_killer),
+                 (str_store_troop_name, s20, ":killer_id"),
+                 (display_message, "@{s54} is dead. Killer was {s20}."),      
+            (try_end),
+            ############### 
 #########################
               (try_begin),
                 (troop_slot_eq, ":troop_no", slot_troop_death_cause, 1),
                   (troop_get_slot, ":killer_id", ":troop_no", slot_troop_death_battle_killer),
-                  (troop_slot_eq, ":killer_id", slot_troop_is_alive, 1),
+                  # (troop_slot_eq, ":killer_id", slot_troop_is_alive, 1), ############### NEW v3.12 - commented this
                     (str_clear, s1),
                     (str_store_troop_name_link, s1, ":killer_id"),
                     (str_store_string, s0, "str_enhanced_troop_was_killed_battle"),
@@ -37951,7 +37965,7 @@ scripts = [
                 (try_for_range, ":unused", 0, ":end_loop2"),  
                   (party_get_slot, ":current_tavern_merc", ":belligerent_drunk_tavern", slot_center_mercenary_troop_type),
                   (call_script, "script_select_mercenary_troop", ":belligerent_drunk_tavern"),
-                  (assign, ":troop", reg1),
+                  (assign, ":troop", reg0),
                   (neq, ":troop", ":current_tavern_merc"),  
                   (is_between, ":troop", "trp_merc_euro_spearman", "trp_mercenaries_end"),  ###### NEW v3.9.1
                   (party_set_slot, ":belligerent_drunk_tavern", slot_center_tavern_troop, ":troop"),

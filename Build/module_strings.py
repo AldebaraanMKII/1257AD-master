@@ -9321,7 +9321,15 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_culture_title_king_jerusalem", "King {s0}"),
 ("ee_culture_title_king_crusader", "Constable {s0}"),   ###### NEW v3.3
 ("ee_culture_title_king_cuman", "{s0} Khan"),   ###### NEW v3.3
+############### NEW v3.12 - 
+("ee_culture_title_king_english", "King {s0}"),   
+("ee_culture_title_king_french", "King {s0}"),   
+("ee_culture_title_king_hungary", "King {s0}"),   
+("ee_culture_title_king_polish", "King {s0}"),   
+############### 
 ("ee_culture_title_king_custom", "King {s0}"),
+
+
 
 ################################### NEW v3.9 - female titles
 ("ee_culture_title_female_finnish", "Queen {s0}"),
@@ -9354,6 +9362,12 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_culture_title_female_jerusalem", "Queen {s0}"),
 ("ee_culture_title_female_crusader", "Constable {s0}"),   
 ("ee_culture_title_female_cuman", "{s0} Khatun"),   
+############### NEW v3.12 - 
+("ee_culture_title_female_english", "Queen {s0}"),   
+("ee_culture_title_female_french", "Queen {s0}"),   
+("ee_culture_title_female_hungary", "Queen {s0}"),   
+("ee_culture_title_female_polish", "Queen {s0}"),   
+############### 
 ("ee_culture_title_female_custom", "Queen {s0}"),
 ###################################
 
@@ -9850,8 +9864,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  
   ("dplmc_political_explanation_original_lord", "In this case, the fortress should go its original owner."),
 
-  ("mod_version", "3.11"), ### This holds short form version name, revision holds long form name, if applicable. - Khanor
-  ("revision", "3.11"), ### Update this and the "mod_version"-line above on non-hotfix patches! - Khanor
+  ("mod_version", "3.12"), ### This holds short form version name, revision holds long form name, if applicable. - Khanor
+  ("revision", "3.12"), ### Update this and the "mod_version"-line above on non-hotfix patches! - Khanor
 ###################################################################################
 # End Autoloot
 ###################################################################################

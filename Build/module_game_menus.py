@@ -8944,9 +8944,23 @@ game_menus = [ #
                 (lt, ":chance", "$g_lord_death_chance_battle_king"), 
                   (str_store_troop_name, s1, ":stack_troop"),
                   (str_store_faction_name, s3, ":defeated_faction"),
-                  (str_store_string, s17, "@{s1} of {s3} has died from wounds!"),
-                  (display_log_message, "@{!}{s17}"),
+                  # (str_store_string, s17, "@"),
+                  (display_log_message, "@{!}{s1} of {s3} has died from wounds!"), ############### NEW v3.12 - 
                   (jump_to_menu, "mnu_enemy_died_from_wounds"),
+                  ############### NEW v3.12 - 
+                  (assign, ":party_leader", -1),
+                  (try_begin),
+                      (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+                        (assign, ":party_leader", "trp_player"),
+                  (else_try),
+                      (party_stack_get_troop_id, ":party_leader", "p_collective_ally", 0),
+                          (try_begin),
+                              (gt, ":party_leader", -1),
+                          (else_try),
+                              (assign, ":party_leader", "trp_player"),
+                          (try_end),
+                  (try_end),
+                  ############### 
                   (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),   
                   ########### NEW v3.7 - fixes lords parties not disappearing from the map
                   # (call_script, "script_remove_dead_lord_from_game", ":stack_troop"),   
@@ -8966,6 +8980,20 @@ game_menus = [ #
                   (str_store_string, s17, "@{s1} of {s3} has died from wounds!"),
                   (display_log_message, "@{!}{s17}"),
                   (jump_to_menu, "mnu_enemy_died_from_wounds"),
+                  ############### NEW v3.12 - 
+                  (assign, ":party_leader", -1),
+                  (try_begin),
+                      (faction_slot_eq, "$players_kingdom", slot_faction_leader, "trp_player"),
+                        (assign, ":party_leader", "trp_player"),
+                  (else_try),
+                      (party_stack_get_troop_id, ":party_leader", "p_collective_ally", 0),
+                          (try_begin),
+                              (gt, ":party_leader", -1),
+                          (else_try),
+                              (assign, ":party_leader", "trp_player"),
+                          (try_end),
+                  (try_end),
+                  ############### 
                   (call_script, "script_kill_lord_battle", ":party_leader", ":stack_troop"),  
                   ########### NEW v3.7 - fixes lords parties not disappearing from the map
                   # (call_script, "script_remove_dead_lord_from_game", ":stack_troop"),   

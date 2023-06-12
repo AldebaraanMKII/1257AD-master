@@ -1130,6 +1130,7 @@ scripts = [
       (store_faction_of_troop, ":faction_lady_faction", ":faction_lady"),
       (eq, ":faction_lady_faction", ":fac_kingdom"),
       (call_script, "script_change_troop_faction_game_start", ":faction_lady", "fac_player_supporters_faction"),
+      (troop_set_slot, ":faction_lady", slot_troop_met, 1), ############### NEW v3.12 - 
     (try_end),
     
     (faction_set_note_available, "fac_player_supporters_faction", 1),
@@ -13040,25 +13041,6 @@ scripts = [
          (ge, ":random_chance", 85),
            (assign, ":culture", "fac_culture_rus"),
        (try_end),
-       
-   (else_try), 
-     ##### Golden Horde
-     (eq, ":faction_culture", "fac_culture_mongol"),
-     (eq, "$kaos_kings_kingdom", 3),
-       (store_random_in_range, ":random_chance", 0, 100),
-       (try_begin),
-         (lt, ":random_chance", 70),
-           (assign, ":culture", "fac_culture_mongol"),
-       (else_try),
-         (ge, ":random_chance", 70),
-         (lt, ":random_chance", 90),
-           (assign, ":culture", "fac_culture_rus"),
-	   ############## NEW v3.9 - 
-       (else_try),
-         (ge, ":random_chance", 90),
-           (assign, ":culture", "fac_culture_cuman"),
-       ############################
-       (try_end),
               
    (else_try), 
      ##### Denmark
@@ -13298,8 +13280,8 @@ scripts = [
      # (this_or_next|eq, "$kaos_kings_kingdom", 39),
      # (eq, "$kaos_kings_kingdom", 40),
      ########## NEW v3.2
-     (neq, "$kaos_kings_kingdom", 26),  
-     (neq, "$kaos_kings_kingdom", 41),  
+     # (neq, "$kaos_kings_kingdom", 26),  
+     # (neq, "$kaos_kings_kingdom", 41),  
      (neq, ":faction_no", "fac_kingdom_26"),  
      (neq, ":faction_no", "fac_kingdom_41"),  
      ########## 
@@ -13421,7 +13403,26 @@ scripts = [
          (ge, ":random_chance", 90),
            (assign, ":culture", "fac_culture_anatolian_christian"),
        (try_end),
-       
+       ############### NEW v3.12 - moved this down here
+   (else_try), 
+     ##### Golden Horde
+     (eq, ":faction_culture", "fac_culture_mongol"),
+     # (eq, "$kaos_kings_kingdom", 3),  ############### NEW v3.12 - 
+       (store_random_in_range, ":random_chance", 0, 100),
+       (try_begin),
+         (lt, ":random_chance", 70),
+           (assign, ":culture", "fac_culture_mongol"),
+       (else_try),
+         (ge, ":random_chance", 70),
+         (lt, ":random_chance", 90),
+           (assign, ":culture", "fac_culture_rus"),
+	   ############## NEW v3.9 - 
+       (else_try),
+         (ge, ":random_chance", 90),
+           (assign, ":culture", "fac_culture_cuman"),
+       ############################
+       (try_end),
+############### 
    (else_try), 
      ##### Mamluk 
      (eq, ":faction_culture", "fac_culture_mamluke"),

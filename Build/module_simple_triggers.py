@@ -6700,9 +6700,13 @@ simple_triggers = [
       (troop_clear_inventory, ":merchant"),
       (try_begin),###HATS!
         (is_between, ":merchant", "trp_trader_hat1", "trp_trader_sword1"),
-        (try_for_range, reg0, 0, 30),
+        (try_for_range, reg0, 0, 32),
           # (store_random_in_range, ":itm", "itm_sarranid_head_cloth", "itm_leather_steppe_cap_a"),
           (store_random_in_range, ":itm", "itm_head_wrappings", "itm_wooden_shield"), ##### NEW v2.6 - bugfix
+          ############### NEW v3.12 - 
+          (neq, ":itm", "itm_head_african"),
+          (neq, ":itm", "itm_african_hat"),
+############### 
           (troop_add_item, ":merchant", ":itm"),
         (try_end),
       (else_try), ########sword

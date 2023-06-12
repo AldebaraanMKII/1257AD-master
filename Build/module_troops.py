@@ -38904,6 +38904,9 @@ troops = [
 	 itm_polski_helm,
 	 itm_mail_coif,
 	 itm_mail_coif_b,
+     
+	 itm_european_horse_d,
+	 itm_european_horse_a,
     
      itm_javelin,
      itm_throwing_spears,

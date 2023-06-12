@@ -10590,6 +10590,29 @@ game_menus = [
        ]
        ),
 	   #######################################
+       ############### NEW v3.12 - 
+       ("debug_options2_13",[], "Make all marshals siege something.",
+       [
+	   # (try_for_range, ":cur_lord", lords_begin, lords_end),
+		 # (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
+         # (neg|troop_slot_ge, ":cur_lord", slot_troop_prisoner_of_party, 0), 
+         # (store_troop_faction, ":lord_faction", ":cur_lord"),
+         # (faction_slot_eq, ":lord_faction", slot_faction_marshall, ":cur_lord"),
+       (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
+            # (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
+		   (faction_set_slot, ":faction", slot_faction_ai_state, sfai_gathering_army),
+       (try_end),
+       ]
+       ),
+	   #######################################
+       ("debug_options2_14",[], "Loot all villages.",
+       [
+       (try_for_range, ":village", villages_begin, villages_end),
+            (call_script, "script_village_set_state",  ":village", svs_looted),
+       (try_end),
+       ]
+       ),
+	   #######################################
 	   #######################################
        ("debug_options2_99",[], "Go back.",
        [
@@ -10664,6 +10687,8 @@ game_menus = [
        (try_end),
        ]
        ),
+       
+############### 
 ###########################
        ("debug_options_quest_select_1_20",[], "Go back.",
        [

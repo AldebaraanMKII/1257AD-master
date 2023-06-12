@@ -10951,7 +10951,22 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 
 
+############### NEW v3.12 - 
+[anyone|plyr, "dplmc_constable_talk",
+[
+],
+"I want to change your equipment.", "dplmc_constable_change_inventory", []],
 
+
+[anyone, "dplmc_constable_change_inventory",
+[
+],
+"Yes. Here`s what i`m using...", "dplmc_constable_pretalk", ]
+[
+(change_screen_equip_other)
+]
+],
+############### 
 
 
 
@@ -13415,7 +13430,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (assign, reg20, ":cost"),
 ##################
 ],
-"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20}.))", "dplmc_chancellor_kingdom_culture_select",
+"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20}.)). If you already know that culture then the cost is free.", "dplmc_chancellor_kingdom_culture_select",
 []],
 
 
@@ -13431,7 +13446,9 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_mul, ":reduction", ":trade_skill"),
 (val_sub, ":cost", ":reduction"),
 (store_troop_gold, ":player_gold", "trp_player"),
-(ge, ":player_gold", ":cost"),
+
+
+# (ge, ":player_gold", ":cost"),
 ##################
 (store_repeat_object, ":faction_no"),
 (is_between, ":faction_no", cultures_begin, cultures_end),
@@ -13439,12 +13456,158 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_sub, ":offset", ":faction_no", cultures_begin),
 (val_add, ":offset", "str_culture_1_adjective"),
 (str_store_string, s11, ":offset"),
+
+############### NEW v3.12 - 
+  (try_begin),
+    (eq, "$g_player_know_culture_finnish", 1),
+    (eq, ":offset", "fac_culture_finnish"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_mazovian", 1),
+    (eq, ":offset", "fac_culture_mazovian"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_serbian", 1),
+    (eq, ":offset", "fac_culture_serbian"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_welsh", 1),
+    (eq, ":offset", "fac_culture_welsh"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_teutonic", 1),
+    (eq, ":offset", "fac_culture_teutonic"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_balkan", 1),
+    (eq, ":offset", "fac_culture_balkan"),
+        (assign, reg20, 0),
+      
+  (else_try),
+    (eq, "$g_player_know_culture_rus", 1),
+    (eq, ":offset", "fac_culture_rus"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_nordic", 1),
+    (eq, ":offset", "fac_culture_nordic"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_baltic", 1),
+    (eq, ":offset", "fac_culture_baltic"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_marinid", 1),
+    (eq, ":offset", "fac_culture_marinid"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_mamluke", 1),
+    (eq, ":offset", "fac_culture_mamluke"),
+        (assign, reg20, 0),
+  (else_try),
+    (eq, "$g_player_know_culture_byzantium", 1),
+    (eq, ":offset", "fac_culture_byzantium"),
+        (assign, reg20, 0),
+      
+  (else_try),
+    (eq, "$g_player_know_culture_iberian", 1),
+    (eq, ":offset", "fac_culture_iberian"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_italian", 1),
+    (eq, ":offset", "fac_culture_italian"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_andalus", 1),
+    (eq, ":offset", "fac_culture_andalus"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_gaelic", 1),
+    (eq, ":offset", "fac_culture_gaelic"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_anatolian_christian", 1),
+    (eq, ":offset", "fac_culture_anatolian_christian"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_anatolian", 1),
+    (eq, ":offset", "fac_culture_anatolian"),
+        (assign, reg20, 0), 
+      
+  (else_try),
+    (eq, "$g_player_know_culture_western", 1),
+    (eq, ":offset", "fac_culture_western"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_mongol", 1),
+    (eq, ":offset", "fac_culture_mongol"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_templar", 1),
+    (eq, ":offset", "fac_culture_templar"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_hospitaller", 1),
+    (eq, ":offset", "fac_culture_hospitaller"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_antiochian", 1),
+    (eq, ":offset", "fac_culture_antioch"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_tripoli", 1),
+    (eq, ":offset", "fac_culture_tripoli"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_ibelin", 1),
+    (eq, ":offset", "fac_culture_ibelin"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_jerusalem", 1),
+    (eq, ":offset", "fac_culture_jerusalem"),
+        (assign, reg20, 0), 
+
+  (else_try),
+    (eq, "$g_player_know_culture_crusader", 1),
+    (eq, ":offset", "fac_culture_crusader"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_cuman", 1),
+    (eq, ":offset", "fac_culture_cuman"),
+        (assign, reg20, 0), 
+
+  (else_try),
+    (eq, "$g_player_know_culture_english", 1),
+    (eq, ":offset", "fac_culture_english"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_french", 1),
+    (eq, ":offset", "fac_culture_french"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_hungarian", 1),
+    (eq, ":offset", "fac_culture_hungarian"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_polish", 1),
+    (eq, ":offset", "fac_culture_polish"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, ":offset", "fac_culture_player"),
+        (assign, reg20, 0),  
+  (try_end),
+# (str_store_string, s12, ":cost"),
+############### 
 ],
-"{s11}.", "minister_pretalk",
+"{s11} (cost: {reg20}).", "minister_pretalk",
 [
 (store_repeat_object, ":faction_no"),
 # (troop_remove_gold, "trp_player", 15000),
-(troop_remove_gold, "trp_player", reg20), ###### NEW v3.9.1 - 
+############### NEW v3.12 - 
+(try_begin),
+    (gt, reg20, 0),
+        (troop_remove_gold, "trp_player", reg20), ###### NEW v3.9.1 - 
+(try_end),
+############### 
 (assign, "$g_player_culture", ":faction_no"),
 # (faction_set_slot, "fac_player_supporters_faction", slot_faction_culture, ":faction_no"),
 (faction_set_slot, "$players_kingdom", slot_faction_culture, ":faction_no"), ########## NEW v3.3
@@ -14858,6 +15021,23 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr, "dplmc_companion_truce_pay", [],                    
    "On second thought, perhaps this is not now in our interests..", "companion_rejoin_response", [
                     ]],
+
+############### NEW v3.12 - 
+[anyone|plyr, "minister_talk",
+[
+],
+"I want to change your equipment.", "minister_change_inventory", []],
+
+
+[anyone, "minister_change_inventory",
+[
+],
+"Yes. Here`s what i`m using...", "minister_pretalk", ]
+[
+(change_screen_equip_other)
+]
+],
+############### 
 
 ##diplomacy end
    [anyone|plyr, "minister_talk", [],
@@ -25895,6 +26075,129 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (assign, "$g_invite_offered_center", 0),
     (assign, "$g_leave_encounter",1),
     (assign, "$g_player_cur_role", role_vassal),  ####### NEW v3.0 - player role
+    
+    
+   ############### NEW v3.12 - 
+   (try_begin),
+     (faction_get_slot, ":cur_faction_culture", "$g_talk_troop_faction", slot_faction_culture),
+     #### player doesn`t have a culture, add one to him
+     (try_begin),  
+        (this_or_next|neg|is_between, ":cur_faction_culture", cultures_begin, cultures_end),
+        (troop_slot_eq, "trp_player", slot_troop_cur_culture, "fac_culture_player"),
+            (troop_set_slot, "trp_player", slot_troop_cur_culture, ":cur_faction_culture"),
+     (try_end),
+     
+     (try_begin),
+       (eq, ":cur_faction_culture", "fac_culture_finnish"),
+         (assign, "$g_player_know_culture_finnish", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mazovian"),
+         (assign, "$g_player_know_culture_mazovian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_serbian"),
+         (assign, "$g_player_know_culture_serbian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_welsh"),
+         (assign, "$g_player_know_culture_welsh", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_teutonic"),
+         (assign, "$g_player_know_culture_teutonic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_balkan"),
+         (assign, "$g_player_know_culture_balkan", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_rus"),
+         (assign, "$g_player_know_culture_rus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_nordic"),
+         (assign, "$g_player_know_culture_nordic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_baltic"),
+         (assign, "$g_player_know_culture_baltic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_marinid"),
+         (assign, "$g_player_know_culture_marinid", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mamluke"),
+         (assign, "$g_player_know_culture_mamluke", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_byzantium"),
+         (assign, "$g_player_know_culture_byzantium", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_iberian"),
+         (assign, "$g_player_know_culture_iberian", 1), 
+         (assign, "$g_ask_for_language", 1),     
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_italian"),
+         (assign, "$g_player_know_culture_italian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_andalus"),
+         (assign, "$g_player_know_culture_andalus", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_gaelic"),
+         (assign, "$g_player_know_culture_gaelic", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian_christian"),
+         (assign, "$g_player_know_culture_anatolian_christian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_anatolian"),
+         (assign, "$g_player_know_culture_anatolian", 1),
+         
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_western"),
+         (assign, "$g_player_know_culture_western", 1),
+         (assign, "$g_ask_for_language", 1),    ########## NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_mongol"),
+         (assign, "$g_player_know_culture_mongol", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_templar"),
+         (assign, "$g_player_know_culture_templar", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hospitaller"),
+         (assign, "$g_player_know_culture_hospitaller", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_antioch"),
+         (assign, "$g_player_know_culture_antiochian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_tripoli"),
+         (assign, "$g_player_know_culture_tripoli", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_ibelin"),
+         (assign, "$g_player_know_culture_ibelin", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_jerusalem"),
+         (assign, "$g_player_know_culture_jerusalem", 1),
+   ############### NEW v3.3 
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_crusader"),
+         (assign, "$g_player_know_culture_crusader", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_cuman"),
+         (assign, "$g_player_know_culture_cuman", 1),
+   ################# 
+   ############## NEW v3.10
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_english"),
+         (assign, "$g_player_know_culture_english", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_french"),
+         (assign, "$g_player_know_culture_french", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_hungarian"),
+         (assign, "$g_player_know_culture_hungarian", 1),
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_polish"),
+         (assign, "$g_player_know_culture_polish", 1),
+############################
+     (else_try),
+       (eq, ":cur_faction_culture", "fac_culture_player"),
+         (assign, "$g_player_know_culture_player", 1),      
+     (try_end),
+   (try_end),
+############### 
 	]],
 
 [anyone, "lord_give_conclude_2", [
@@ -28527,6 +28830,24 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    ],
 "Anyway, that is the content of our larder.", "spouse_pretalk",[
  ]],
+
+
+############### NEW v3.12 - 
+[anyone|plyr, "spouse_talk",
+[
+],
+"I want to change your equipment.", "spouse_change_inventory", []],
+
+
+[anyone, "spouse_change_inventory",
+[
+],
+"Yes. Here`s what i`m using...", "spouse_pretalk", ]
+[
+(change_screen_equip_other)
+]
+],
+############### 
 
 
 [anyone|plyr, "spouse_talk", [],
@@ -33522,6 +33843,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  Well, good hunting to you.", "close_window",
    [(call_script, "script_start_quest", "$random_quest_no", "$g_talk_troop"),
     (call_script, "script_change_player_relation_with_troop", "$g_talk_troop",2),
+    
 	(assign, reg20, "$random_quest_no"),
 	(display_message, "@Script chose quest {reg20}, fugitive {reg21} with {reg22} money."),
     (assign, "$g_leave_encounter",1),
