@@ -22938,8 +22938,6 @@ scripts = [
                 (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
                 (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
               (else_try),
-            (display_message, "str_s1_joined_battle_friend", 0x50FF50),
-            (display_message, "str_s1_joined_battle_friend", 0x50FF50),
                 (display_message, "str_s1_joined_battle_friend", 0x50FF50),
               (try_end),
             (try_end),
