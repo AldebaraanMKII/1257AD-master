@@ -10945,58 +10945,56 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 ############### NEW v3.12 - 
 [anyone|plyr, "dplmc_constable_talk",
-[
+  [],
+  "I want to change your equipment.", "dplmc_constable_change_inventory",
+  []
 ],
-"I want to change your equipment.", "dplmc_constable_change_inventory", []],
 
 
 [anyone, "dplmc_constable_change_inventory",
-[
-],
-"Yes. Here`s what i`m using...", "dplmc_constable_pretalk", ]
-[
-(change_screen_equip_other)
-]
+  [],
+  "Yes. Here's what I'm using...", "dplmc_constable_pretalk",
+  [
+    (change_screen_equip_other)
+  ]
 ],
 ############### 
 
 
 
+### Dismiss constable   
+[anyone|plyr, "dplmc_constable_talk",
+  [],
+  "You are dismissed.", "dplmc_constable_dismiss_confirm_ask", []
+],
 
-##dismiss constable   
-   [anyone|plyr, "dplmc_constable_talk",
-   [
-   ],
-"You are dismissed.", "dplmc_constable_dismiss_confirm_ask", []],
-   
-   [anyone, "dplmc_constable_dismiss_confirm_ask",
-   [
-   ],
-"Are you sure that you don't need me anymore?", "dplmc_constable_dismiss_confirm", []],
-   
-   [anyone|plyr, "dplmc_constable_dismiss_confirm",
-   [
-   ],
-"Yes I am.", "dplmc_constable_dismiss_confirm_yes", []],
-   
-   [anyone, "dplmc_constable_dismiss_confirm_yes",
-   [
-   ],
-"As you wish.", "close_window",
-   [
+[anyone, "dplmc_constable_dismiss_confirm_ask",
+  [],
+  "Are you sure that you don't need me anymore?", "dplmc_constable_dismiss_confirm", []
+],
+
+[anyone|plyr, "dplmc_constable_dismiss_confirm",
+  [],
+  "Yes I am.", "dplmc_constable_dismiss_confirm_yes", []
+],
+
+[anyone, "dplmc_constable_dismiss_confirm_yes",
+  [],
+  "As you wish.", "close_window",
+  [
     (assign, "$g_player_constable", -1),
     (assign, "$g_constable_training_center", -1),
-   ]],
-   
-   [anyone|plyr, "dplmc_constable_dismiss_confirm",
-   [
-   ],
-"No I am not.", "dplmc_constable_pretalk", []],
+  ]
+],
 
-   
+[anyone|plyr, "dplmc_constable_dismiss_confirm",
+  [],
+  "No I am not.", "dplmc_constable_pretalk", []
+],
+
 [anyone|plyr, "dplmc_constable_talk", [],
-"Thank you, I will come back to you later.", "close_window",[
- ]],
+  "Thank you, I will come back to you later.", "close_window", []
+],
 
 
 
@@ -13422,7 +13420,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (assign, reg20, ":cost"),
 ##################
 ],
-"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20}.)). If you already know that culture then the cost is free.", "dplmc_chancellor_kingdom_culture_select",
+"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20})). If you already know that culture then the cost is free.", "dplmc_chancellor_kingdom_culture_select",
 []],
 
 
@@ -15017,18 +15015,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 ############### NEW v3.12 - 
 [anyone|plyr, "minister_talk",
-[
+  [],
+  "I want to change your equipment.", "minister_change_inventory",
+  []
 ],
-"I want to change your equipment.", "minister_change_inventory", []],
 
 
 [anyone, "minister_change_inventory",
-[
-],
-"Yes. Here`s what i`m using...", "minister_pretalk", ]
-[
-(change_screen_equip_other)
-]
+  [],
+  "Yes. Here's what I'm using...", "minister_pretalk",
+  [
+    (change_screen_equip_other)
+  ]
 ],
 ############### 
 
@@ -28805,48 +28803,47 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  ##diplomacy end+ (Add "dedicate a tournament" option even after marriage)
 ########################
 [anyone|plyr, "spouse_talk",
-   [
+  [
     (neg|check_quest_active, "qst_organize_feast"),
-   ],
-"I was thinking that perhaps we could host a feast.", "spouse_organize_feast",[
- ]],
+  ],
+  "I was thinking that perhaps we could host a feast.", "spouse_organize_feast", []
+],
 
 [anyone|plyr, "spouse_talk",
-   [
-   ],
-"Let us take inventory of our household possessions.", "spouse_household_possessions",[
-   (change_screen_loot, "trp_household_possessions"),
- ]],
+  [],
+  "Let us take inventory of our household possessions.", "spouse_household_possessions",
+  [
+    (change_screen_loot, "trp_household_possessions"),
+  ]
+],
 
 [anyone, "spouse_household_possessions",
-   [
-   ],
-"Anyway, that is the content of our larder.", "spouse_pretalk",[
- ]],
+  [],
+  "Anyway, that is the content of our larder.", "spouse_pretalk", []
+],
 
 
 ############### NEW v3.12 - 
 [anyone|plyr, "spouse_talk",
-[
+  [],
+  "I want to change your equipment.", "spouse_change_inventory", []
 ],
-"I want to change your equipment.", "spouse_change_inventory", []],
 
 
 [anyone, "spouse_change_inventory",
-[
-],
-"Yes. Here`s what i`m using...", "spouse_pretalk", ]
-[
-(change_screen_equip_other)
-]
+  [],
+  "Yes. Here's what I'm using...", "spouse_pretalk",
+  [
+    (change_screen_equip_other)
+  ]
 ],
 ############### 
 
 
 [anyone|plyr, "spouse_talk", [],
-"We shall speak later, my {wife/husband}.", "close_window",[
-     (assign, "$g_leave_encounter", 1),
- ]],
+  "We shall speak later, my {wife/husband}.", "close_window",
+  [(assign, "$g_leave_encounter", 1),]
+],
 
 
 
@@ -28940,8 +28937,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (val_div, ":days_to_wait", 24),
    (assign, reg3, ":days_to_wait"),   
    ],
-"A splendid idea, my {husband/wife}. However, our realm has recently had a feast. Perhaps we should wait another {reg3} days before we organize another one.", "spouse_pretalk",[
- ]],
+  "A splendid idea, my {husband/wife}. However, our realm has recently had a feast. Perhaps we should wait another {reg3} days before we organize another one.", "spouse_pretalk",[]
+],
 
 
 
