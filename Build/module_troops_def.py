@@ -111,13 +111,13 @@ knight_wp_5 = wp_one_handed(440)|wp_two_handed(440)|wp_polearm(440)| wp_archery(
 
 
 
-# skill/attrib definitions
+### Skill/attribute definitions
 foot_attrib_1 = str_6|agi_6|int_5|cha_4|level(4)                        # serf
-foot_attrib_2 = str_9|agi_7|int_6|cha_5|level(7)                       # militia
+foot_attrib_2 = str_9|agi_7|int_6|cha_5|level(7)                        # militia
 foot_attrib_3 = str_12|agi_9|int_6|cha_6|level(12)                      # footman
 foot_attrib_4 = str_15|agi_12|int_6|cha_6|level(18)                     # regular
 foot_attrib_5 = str_18|agi_14|int_9|cha_9|level(24)                     # veteran
-foot_attrib_elite = str_21 |agi_16|int_12|cha_12|level(28)              # sergeant
+foot_attrib_elite = str_21|agi_16|int_12|cha_12|level(28)               # sergeant
 
 ranged_attrib_3     = str_9  |agi_6 |int_6  |cha_6  |level(12)                      # rangedman
 ranged_attrib_4     = str_12 |agi_10 |int_6  |cha_6  |level(19)                     # regular
@@ -179,9 +179,19 @@ sea_raider_elite_wp        = wp_one_handed(300)|wp_two_handed(60)|wp_polearm(200
 ############### 
 ####################
 
-swords_regulars_skills    = knows_ironflesh_4|knows_power_strike_5|knows_athletics_2|knows_weapon_master_5|knows_shield_4|knows_power_throw_2|knows_inventory_management_10
-swords_veteran_skills     = knows_ironflesh_6|knows_power_strike_6|knows_athletics_3|knows_weapon_master_7|knows_shield_5|knows_power_throw_2|knows_inventory_management_10
-swords_sergeant_skills    = knows_ironflesh_8|knows_power_strike_7|knows_athletics_4|knows_weapon_master_8|knows_shield_6|knows_power_throw_2|knows_inventory_management_10
+### Household troops (troops with support skills) ###
+household_soldier_attrib  = str_15|agi_12|int_9|cha_9|level(18)     ### Regular
+household_veteran_attrib  = str_18|agi_14|int_12|cha_12|level(24)   ### Veteran
+household_elite_attrib    = str_21|agi_16|int_12|cha_12|level(28)   ### Elite
+household_soldier_skills  = knows_ironflesh_4|knows_power_strike_5|knows_power_throw_2|knows_athletics_2|knows_weapon_master_5|knows_shield_4|knows_riding_3|knows_inventory_management_10|knows_tactics_3|knows_leadership_3|knows_trade_3
+household_veteran_skills  = knows_ironflesh_6|knows_power_strike_6|knows_power_throw_2|knows_athletics_3|knows_weapon_master_7|knows_shield_5|knows_riding_4|knows_inventory_management_10|knows_tactics_4|knows_leadership_4|knows_trade_4
+household_elite_skills    = knows_ironflesh_8|knows_power_strike_7|knows_power_throw_2|knows_athletics_4|knows_weapon_master_8|knows_shield_6|knows_riding_4|knows_inventory_management_10|knows_tactics_4|knows_leadership_4|knows_trade_4
+
+
+### Standard foot troops (melee) ###
+swords_regulars_skills    = knows_ironflesh_4|knows_power_strike_5|knows_power_throw_2|knows_athletics_2|knows_weapon_master_5|knows_shield_4|knows_inventory_management_10
+swords_veteran_skills     = knows_ironflesh_6|knows_power_strike_6|knows_power_throw_2|knows_athletics_3|knows_weapon_master_7|knows_shield_5|knows_inventory_management_10
+swords_sergeant_skills    = knows_ironflesh_8|knows_power_strike_7|knows_power_throw_2|knows_athletics_4|knows_weapon_master_8|knows_shield_6|knows_inventory_management_10
 swords_regulars_wp        = wp_one_handed(220)|wp_two_handed(60)|wp_polearm(160)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)
 swords_veteran_wp         = wp_one_handed(300)|wp_two_handed(60)|wp_polearm(220)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)
 swords_sergeant_wp        = wp_one_handed(380)|wp_two_handed(60)|wp_polearm(280)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)
@@ -195,17 +205,15 @@ pikes_veteran_wp          = wp_one_handed(60)|wp_two_handed(300)|wp_polearm(300)
 pikes_sergeant_wp         = wp_one_handed(60)|wp_two_handed(380)|wp_polearm(380)|wp_archery(60)|wp_crossbow(60)|wp_throwing(60)
 
 
-spears_regulars_skills     = knows_ironflesh_3|knows_power_strike_5|knows_athletics_4|knows_weapon_master_5|knows_shield_3|knows_power_throw_1|knows_inventory_management_10
-spears_veteran_skills      = knows_ironflesh_4|knows_power_strike_6|knows_athletics_5|knows_weapon_master_7|knows_shield_4|knows_power_throw_2|knows_inventory_management_10
-spears_sergeant_skills     = knows_ironflesh_5|knows_power_strike_7|knows_athletics_6|knows_weapon_master_8|knows_shield_5|knows_power_throw_2|knows_inventory_management_10
+spears_regulars_skills     = knows_ironflesh_3|knows_power_strike_5|knows_power_throw_1|knows_athletics_4|knows_weapon_master_5|knows_shield_3|knows_inventory_management_10
+spears_veteran_skills      = knows_ironflesh_4|knows_power_strike_6|knows_power_throw_2|knows_athletics_5|knows_weapon_master_7|knows_shield_4|knows_inventory_management_10
+spears_sergeant_skills     = knows_ironflesh_5|knows_power_strike_7|knows_power_throw_2|knows_athletics_6|knows_weapon_master_8|knows_shield_5|knows_inventory_management_10
 spears_regulars_wp         = wp_one_handed(160) |wp_two_handed(60)|wp_polearm(220)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)
 spears_veteran_wp          = wp_one_handed(220) |wp_two_handed(60)|wp_polearm(300)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)
 spears_sergeant_wp         = wp_one_handed(280) |wp_two_handed(60)|wp_polearm(380)|wp_archery(60)|wp_crossbow(60)|wp_throwing(100)
 
 
-
-
-# foot ranged soldiers
+### Standard foot troops (ranged) ###
 skirmisher_skills         = knows_athletics_1|knows_weapon_master_1|knows_power_throw_2|knows_power_draw_2|knows_power_strike_1|knows_inventory_management_10
 skirmisher_wp             = wp_one_handed(80)|wp_two_handed(60)|wp_polearm(60)|wp_archery(120)|wp_crossbow(120)|wp_throwing(120)
 

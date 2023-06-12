@@ -5555,7 +5555,7 @@ npc_children_male_end   = "trp_npc_child_f"
     (str_store_party_name, s6, "$g_notification_menu_var2"),
     
      (str_clear,s1),
-          (str_store_string,s1,"@You receive word the peasants of the {s5} are rioting! The skies above {s6} are black with smoke, and cries of death fill the air. Only time will tell if this is the beginning of open revolt...."),
+          (str_store_string,s1,"@You receive word the peasants of the {s5} are rioting! The skies above {s6} are black with smoke, and cries of death fill the air. Only time will tell if this is the beginning of open revolt..."),
          # (display_message, "@{s1}"),
           (jump_to_menu, "mnu_riot_event"),
     ],
@@ -5617,7 +5617,7 @@ npc_children_male_end   = "trp_npc_child_f"
     
     ("notification_new_revolt",0,
     "You receive word the peasants of the {s1} are revolting! Black smoke fill the Kingdom's sky's, and death is in the air. \
-    Surely {s2} will be praying to whatever God they believe in....",
+    Surely {s2} will be praying to whatever God they believe in...",
     "none", 
     
     [ (set_background_mesh, "mesh_pic_villageriot"),  

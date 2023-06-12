@@ -590,8 +590,8 @@ trp_nordic_village_recruit|Scandinavian Village Recruit
 trp_nordic_village_recruit_pl|Scandinavian Village Recruits
 trp_nordic_town_recruit|Scandinavian Town Recruit
 trp_nordic_town_recruit_pl|Scandinavian Town Recruits
-trp_nordic_swords_sergeant|Scandinavian Armored Swordsman
-trp_nordic_swords_sergeant_pl|Scandinavian Armored Swordsmen
+trp_nordic_swords_sergeant|Scandinavian Armored Hirdsman
+trp_nordic_swords_sergeant_pl|Scandinavian Armored Hirdsmen
 trp_nordic_billman|Scandinavian Axeman
 trp_nordic_billman_pl|Scandinavian Axemen
 trp_nordic_veteran_billman|Scandinavian Experienced Axeman
@@ -964,8 +964,12 @@ trp_anatolian_turkoman_3|Anatolian Ghulam Bodyguard
 trp_anatolian_turkoman_3_pl|Anatolian Ghulam Bodyguards
 trp_scottish_village_recruit|Scottish Levy
 trp_scottish_village_recruit_pl|Scottish Levies
+trp_scottish_infantry_recruit|Scottish Recruit
+trp_scottish_infantry_recruit_pl|Scottish Recruits
 trp_scottish_forinsec_archer|Scottish Commoner Archer
 trp_scottish_forinsec_archer_pl|Scottish Commoner Archers
+trp_scottish_archer_2|Scottish Veteran Archer
+trp_scottish_archer_2_pl|Scottish Veteran Archers
 trp_scottish_forinsec_spearman|Scottish Commoner Spearman
 trp_scottish_forinsec_spearman_pl|Scottish Commoner Spearmen
 trp_scottish_clansman|Scottish Clansman
@@ -974,6 +978,14 @@ trp_scottish_heavy_swordsman|Scottish Heavy Footman
 trp_scottish_heavy_swordsman_pl|Scottish Heavy Footmen
 trp_scottish_heavy_axeman|Scottish Heavy Axeman
 trp_scottish_heavy_axeman_pl|Scottish Heavy Axemen
+trp_scottish_light_cavalry|Scottish Mounted Sergeant
+trp_scottish_light_cavalry_pl|Scottish Mounted Sergeants
+trp_scottish_medium_cavalry|Scottish Man-at-arms
+trp_scottish_medium_cavalry_pl|Scottish Men-at-arms
+trp_scottish_squire|Scottish Lesser Knight
+trp_scottish_squire_pl|Scottish Lesser Knights
+trp_scottish_knight|Scottish Knight
+trp_scottish_knight_pl|Scottish Knights
 trp_euro_town_recruit|Euro Commoner Footman
 trp_euro_town_recruit_pl|Euro Commoner Footmen
 trp_euro_village_recruit|Euro Levy Footman

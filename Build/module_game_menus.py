@@ -3716,7 +3716,7 @@ game_menus = [ #
 
   ("reports",0,
    # "Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
-   "Mod Version: v{s22}^Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
+   "Mod Version: v{s22}^^Character Renown: {reg5}^Honor Rating: {reg6}^Party Morale: {reg8}^Party Size Limit: {reg7}^",
    "none",
    [(call_script, "script_game_get_party_companion_limit"),
     (assign, ":party_size_limit", reg0),
@@ -3749,7 +3749,7 @@ game_menus = [ #
          ]
         ),
 		
-       ("action_view_troop_trees_2",[], "View troop trees (Cont.)",
+       ("action_view_troop_trees_2",[], "View troop trees (Cont.).",
         [
          (start_presentation, "prsnt_faction_troop_trees_2"),
          ]
@@ -3790,7 +3790,7 @@ game_menus = [ #
        ("faction_statistics_1",
 	   [
        (gt, "$g_current_factions_active", 0),
-	   ], "View faction statistics (Part I.)",
+	   ], "View faction statistics (Part I).",
         [
          (assign, "$g_misc_current_statistics_menu", 1),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3800,7 +3800,7 @@ game_menus = [ #
        ("faction_statistics_2",
 	   [
        (gt, "$g_current_factions_active", 20),
-	   ], "View faction statistics (Part II.)",
+	   ], "View faction statistics (Part II).",
         [
          (assign, "$g_misc_current_statistics_menu", 2),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3810,7 +3810,7 @@ game_menus = [ #
        ("faction_statistics_3",
 	   [
        (gt, "$g_current_factions_active", 43),
-	   ], "View faction statistics (Part III.)",
+	   ], "View faction statistics (Part III).",
         [
          (assign, "$g_misc_current_statistics_menu", 3),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3820,7 +3820,7 @@ game_menus = [ #
        ("faction_statistics_4",
 	   [
        (gt, "$g_current_factions_active", 55),
-	   ], "View faction statistics (Part IV.)",
+	   ], "View faction statistics (Part IV).",
         [
          (assign, "$g_misc_current_statistics_menu", 4),
          (start_presentation, "prsnt_ee_faction_statistics"),
@@ -3992,46 +3992,43 @@ game_menus = [ #
     ],
     [
       ("start_male",
-      [],
-      "Male.",
-      [
-        (troop_set_type, "trp_player", 0),
-        (assign, "$character_gender", 0),
-        (try_begin),
-          (eq, "$quickstart", 0),
-          (jump_to_menu, "mnu_start_game_new_2dot1"),
-        (else_try),
-          (jump_to_menu, "mnu_start_game_new_2dot1"),
-        (try_end),
-      ]
+        [], "Male.",
+        [
+          (troop_set_type, "trp_player", 0),
+          (assign, "$character_gender", 0),
+          (try_begin),
+            (eq, "$quickstart", 0),
+            (jump_to_menu, "mnu_start_game_new_2dot1"),
+          (else_try),
+            (jump_to_menu, "mnu_start_game_new_2dot1"),
+          (try_end),
+        ]
       ),
 
-############## MF for testing start ####################NEW v2.9-KOMKE
-
-     ("start_mod",[(eq,1,1),],"Quick Character (for mod testing.)",## when releasing new version set this to false so it is disabled
-       [
-           (troop_set_type,"trp_player",0),
-           (assign,"$character_gender",tf_male),
-         (troop_raise_attribute, "trp_player",ca_intelligence,-4), #so you dont need to wait time picking extra skills         
-           (change_screen_return, 0),
-      ]
-   ),
-############## MF for testing end ####################   
-	  
-      ("start_female",
-      [],
-      "Female.",
-      [
-        (troop_set_type, "trp_player", 1),
-        (assign, "$character_gender", 1),
-        (try_begin),
-          (eq, "$quickstart", 0),
-          (jump_to_menu, "mnu_start_game_new_2dot1"),
-        (else_try),
-          (jump_to_menu, "mnu_start_game_new_2dot1"),
-        (try_end),
-      ]
+      ("start_female", ### Moved the female character start above "Quick Character" (NEW v3.9.3, by Khanor)
+        [], "Female.",
+        [
+          (troop_set_type, "trp_player", 1),
+          (assign, "$character_gender", 1),
+          (try_begin),
+            (eq, "$quickstart", 0),
+            (jump_to_menu, "mnu_start_game_new_2dot1"),
+          (else_try),
+            (jump_to_menu, "mnu_start_game_new_2dot1"),
+          (try_end),
+        ]
       ),
+
+      ### MF for testing start ### NEW v2.9-KOMKE
+      ("start_mod",[(eq,1,1),],"Quick Character (for mod testing).",## when releasing new version set this to false so it is disabled
+        [
+          (troop_set_type,"trp_player",0),
+          (assign,"$character_gender",tf_male),
+          (troop_raise_attribute, "trp_player",ca_intelligence,-4), #so you dont need to wait time picking extra skills         
+          (change_screen_return, 0),
+        ]
+      ),
+      ### MF for testing end ###
 
       ("enable_quickstart",
       [
@@ -4077,7 +4074,7 @@ game_menus = [ #
     [
       ("suffix_yes_1",
       [],
-      "1257AD_wage_system_(Windows.)",
+      "1257AD_wage_system_(Windows).",
       [
         (assign, "$native_wages", 0),
         (jump_to_menu, "mnu_start_game_new_2dot1_2"),
@@ -4086,7 +4083,7 @@ game_menus = [ #
 
       ("suffix_no_1",
       [],
-      "Native_wage_system_(Mac_&_Linux.)",
+      "Native_wage_system_(Mac_&_Linux).",
       [
         (assign, "$native_wages", 1),
         (jump_to_menu, "mnu_start_game_new_2dot1_2"),
@@ -4433,7 +4430,7 @@ game_menus = [ #
 
     ("select_opt1on_1",
     [],
-    "Set it to default EE size (600 max for castles/800 for towns.)",
+    "Set it to default EE size (600 max for castles/800 for towns).",
     [
       (assign, "$g_party_garrison_max_size_castles", 600),
       (assign, "$g_party_garrison_max_size_towns", 800),
@@ -4444,7 +4441,7 @@ game_menus = [ #
 
     ("select_opt1on_2",
     [],
-    "Set it to 1257 default size (300 max for castles/500 for towns.)",
+    "Set it to 1257 default size (300 max for castles/500 for towns).",
     [
       (assign, "$g_party_garrison_max_size_castles", 300),
       (assign, "$g_party_garrison_max_size_towns", 500),
@@ -4641,7 +4638,7 @@ game_menus = [ #
 	    (assign, "$g_player_cur_role", role_bandit),  ####### NEW v3.0 - player role
         (try_begin),
           (eq, "$quickstart", 0),
-          (jump_to_menu, "mnu_start_character_1"),
+          (jump_to_menu, "mnu_choose_skill"), ### Now jumps directly to the choose skill menu, like the Mercenary Captain start (NEW v3.9.3, by Khanor)
         (else_try),
           (jump_to_menu, "mnu_start_phase_2"),
         (try_end),
@@ -4992,143 +4989,220 @@ game_menus = [ #
           (troop_raise_attribute, "trp_player", ca_charisma, 1),
           (troop_raise_skill, "trp_player", "skl_leadership", 1),
           (troop_raise_skill, "trp_player", "skl_riding", 1),
+        
+        #################################################
+        ### --- King/Queen (faction leader) start --- ###
+        #################################################
         (try_begin),
           (eq, "$background_type", cb_king),
           (troop_raise_attribute, "trp_player", ca_strength, 10),
           (troop_raise_attribute, "trp_player", ca_intelligence, 4),
-          (troop_raise_attribute, "trp_player", ca_charisma, 6),
-          (troop_raise_skill, "trp_player", "skl_trade", 5),
-          (troop_raise_skill, "trp_player", "skl_leadership", 6),
-          (troop_raise_skill, "trp_player", "skl_prisoner_management", 4),
-          (troop_raise_skill, "trp_player", "skl_persuasion", 6),
-          (troop_raise_skill, "trp_player", "skl_inventory_management", 5),
+          (troop_raise_attribute, "trp_player", ca_charisma, 6), ### Total of 20 attribute points extra. - Khanor
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 5),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 6),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 5),
+          (troop_raise_skill, "trp_player", "skl_athletics", 3),
+          (troop_raise_skill, "trp_player", "skl_riding", 7),
+          (troop_raise_skill, "trp_player", "skl_shield", 4),
           (troop_raise_skill, "trp_player", "skl_tactics", 5),
           (troop_raise_skill, "trp_player", "skl_trainer", 3),
           (troop_raise_skill, "trp_player", "skl_looting", 3),
-          (troop_raise_skill, "trp_player", "skl_riding", 7),
-          (troop_raise_skill, "trp_player", "skl_athletics", 3),
-          (troop_raise_skill, "trp_player", "skl_shield", 4),
-          (troop_raise_skill, "trp_player", "skl_weapon_master", 5),
-          (troop_raise_skill, "trp_player", "skl_power_strike", 6),
-          (troop_raise_skill, "trp_player", "skl_ironflesh", 5),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 5),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 6),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 4),
+          (troop_raise_skill, "trp_player", "skl_leadership", 6),
+          (troop_raise_skill, "trp_player", "skl_trade", 5),
+
           (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 120),
           (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 100),
           (troop_raise_proficiency, "trp_player", wpt_polearm, 120),
-          # (troop_set_slot, "trp_player", 7, 800),   ###### NEW 3.5 - this is now set in the init script
+          # (troop_set_slot, "trp_player", 7, 800), ### NEW 3.5 - this is now set in the init script
           (call_script, "script_change_player_honor", 50),
           (assign, ":player_gold", 0),
           (store_random_in_range, ":player_gold", 60000, 80000),
           (troop_add_gold, "trp_player", ":player_gold"),
           (party_add_xp, "p_main_party", 10000),
-        (else_try),
-          (eq, "$background_type", cb_vassal),
-          (troop_raise_attribute, "trp_player", ca_strength, 8),
-          (troop_raise_attribute, "trp_player", ca_intelligence, 2),
-          (troop_raise_attribute, "trp_player", ca_charisma, 4),
-          (troop_raise_skill, "trp_player", "skl_trade", 3),
-          (troop_raise_skill, "trp_player", "skl_leadership", 4),
-          (troop_raise_skill, "trp_player", "skl_prisoner_management", 3),
-          (troop_raise_skill, "trp_player", "skl_persuasion", 4),
-          (troop_raise_skill, "trp_player", "skl_inventory_management", 3),
-          (troop_raise_skill, "trp_player", "skl_tactics", 3),
-          (troop_raise_skill, "trp_player", "skl_trainer", 3),
-          (troop_raise_skill, "trp_player", "skl_looting", 4),
-          (troop_raise_skill, "trp_player", "skl_riding", 5),
-          (troop_raise_skill, "trp_player", "skl_athletics", 5),
-          (troop_raise_skill, "trp_player", "skl_shield", 4),
-          (troop_raise_skill, "trp_player", "skl_weapon_master", 5),
-          (troop_raise_skill, "trp_player", "skl_power_strike", 5),
-          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
-          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 80),
-          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 60),
-          (troop_raise_proficiency, "trp_player", wpt_polearm, 80),
-          # (troop_set_slot, "trp_player", 7, 400),  ###### NEW 3.5 - this is now set in the init script
-          (call_script, "script_change_player_honor", 30),
-          (assign, ":player_gold", 0),
-          (store_random_in_range, ":player_gold", 25000, 40000),
-          (troop_add_gold, "trp_player", ":player_gold"),
-          (party_add_xp, "p_main_party", 4500),
+
+        ####################################################
+        ### --- Prince/Princess (faction heir) start --- ###
+        ####################################################
         (else_try),
           (eq, "$background_type", cb_prince),
           (troop_raise_attribute, "trp_player", ca_strength, 8),
           (troop_raise_attribute, "trp_player", ca_intelligence, 2),
-          (troop_raise_attribute, "trp_player", ca_charisma, 4),
-          (troop_raise_skill, "trp_player", "skl_trade", 4),
-          (troop_raise_skill, "trp_player", "skl_leadership", 5),
-          (troop_raise_skill, "trp_player", "skl_prisoner_management", 3),
-          (troop_raise_skill, "trp_player", "skl_persuasion", 5),
-          (troop_raise_skill, "trp_player", "skl_inventory_management", 4),
+          (troop_raise_attribute, "trp_player", ca_charisma, 4), ### Total of 14 attribute points extra. - Khanor
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 5),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 4),
+          (troop_raise_skill, "trp_player", "skl_athletics", 4),
+          (troop_raise_skill, "trp_player", "skl_riding", 6),
+          (troop_raise_skill, "trp_player", "skl_shield", 4),
           (troop_raise_skill, "trp_player", "skl_tactics", 4),
           (troop_raise_skill, "trp_player", "skl_trainer", 2),
           (troop_raise_skill, "trp_player", "skl_looting", 3),
-          (troop_raise_skill, "trp_player", "skl_riding", 6),
-          (troop_raise_skill, "trp_player", "skl_athletics", 4),
-          (troop_raise_skill, "trp_player", "skl_shield", 4),
-          (troop_raise_skill, "trp_player", "skl_weapon_master", 4),
-          (troop_raise_skill, "trp_player", "skl_power_strike", 5),
-          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 4),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 5),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 3),
+          (troop_raise_skill, "trp_player", "skl_leadership", 5),
+          (troop_raise_skill, "trp_player", "skl_trade", 4),
+
           (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 100),
           (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 80),
           (troop_raise_proficiency, "trp_player", wpt_polearm, 100),
-          # (troop_set_slot, "trp_player", 7, 500), ###### NEW 3.5 - this is now set in the init script
+          # (troop_set_slot, "trp_player", 7, 500), ### NEW 3.5 - this is now set in the init script
           (call_script, "script_change_player_honor", 20),
           (assign, ":player_gold", 0),
           (store_random_in_range, ":player_gold", 35000, 50000),
           (troop_add_gold, "trp_player", ":player_gold"),
           (party_add_xp, "p_main_party", 6000),
-########## NEW v3.0 - mercenary captain start   NEW v3.5 - moved this here
+
+        ##################################
+        ### --- Sworn Vassal start --- ###
+        ##################################
+        (else_try),
+          (eq, "$background_type", cb_vassal),
+          (troop_raise_attribute, "trp_player", ca_strength, 8),
+          (troop_raise_attribute, "trp_player", ca_intelligence, 2),
+          (troop_raise_attribute, "trp_player", ca_charisma, 4), ### Total of 14 attribute points extra. - Khanor
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 5),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 5),
+          (troop_raise_skill, "trp_player", "skl_athletics", 5),
+          (troop_raise_skill, "trp_player", "skl_riding", 5),
+          (troop_raise_skill, "trp_player", "skl_shield", 4),
+          (troop_raise_skill, "trp_player", "skl_tactics", 3),
+          (troop_raise_skill, "trp_player", "skl_trainer", 3),
+          (troop_raise_skill, "trp_player", "skl_looting", 4),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 3),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 4),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 3),
+          (troop_raise_skill, "trp_player", "skl_leadership", 4),
+          (troop_raise_skill, "trp_player", "skl_trade", 3),
+          
+          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 80),
+          (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 60),
+          (troop_raise_proficiency, "trp_player", wpt_polearm, 80),
+          # (troop_set_slot, "trp_player", 7, 400), ### NEW 3.5 - this is now set in the init script
+          (call_script, "script_change_player_honor", 30),
+          (assign, ":player_gold", 0),
+          (store_random_in_range, ":player_gold", 25000, 40000),
+          (troop_add_gold, "trp_player", ":player_gold"),
+          (party_add_xp, "p_main_party", 4500),
+
+        ###############################################################################
+        ### --- Mercenary Captain start (NEW v3.0) (NEW v3.5 - moved this here) --- ###
+        ###############################################################################
         (else_try),
           (eq, "$background_type", cb_mercenary_captain),
           (troop_raise_attribute, "trp_player", ca_strength, 6),
           (troop_raise_attribute, "trp_player", ca_intelligence, 3),
-          (troop_raise_attribute, "trp_player", ca_charisma, 3),
-		  #############
-          (troop_raise_skill, "trp_player", "skl_trade", 2),
-          (troop_raise_skill, "trp_player", "skl_leadership", 3),
-          (troop_raise_skill, "trp_player", "skl_prisoner_management", 2),
-          (troop_raise_skill, "trp_player", "skl_persuasion", 2),
-          (troop_raise_skill, "trp_player", "skl_inventory_management", 2),
+          (troop_raise_attribute, "trp_player", ca_charisma, 3), ### Total of 12 attribute points extra. - Khanor
+          
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 3),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 3),
+          (troop_raise_skill, "trp_player", "skl_athletics", 2),
+          (troop_raise_skill, "trp_player", "skl_riding", 3),
+          (troop_raise_skill, "trp_player", "skl_shield", 2),
           (troop_raise_skill, "trp_player", "skl_tactics", 2),
           (troop_raise_skill, "trp_player", "skl_trainer", 3),
           (troop_raise_skill, "trp_player", "skl_looting", 3),
-          (troop_raise_skill, "trp_player", "skl_riding", 3),
-          (troop_raise_skill, "trp_player", "skl_athletics", 2),
-          (troop_raise_skill, "trp_player", "skl_shield", 2),
-          (troop_raise_skill, "trp_player", "skl_weapon_master", 3),
-          (troop_raise_skill, "trp_player", "skl_power_strike", 3),
-          (troop_raise_skill, "trp_player", "skl_ironflesh", 4),
-		  #############
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 2),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 2),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 2),
+          (troop_raise_skill, "trp_player", "skl_leadership", 3),
+          (troop_raise_skill, "trp_player", "skl_trade", 2), ### Total of 36 skill points extra. - Khanor
+
           (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 120),
           (troop_raise_proficiency, "trp_player", wpt_two_handed_weapon, 90),
           (troop_raise_proficiency, "trp_player", wpt_polearm, 90),
-          #############
-		  # (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain"),
-		  (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain", 4), ####### NEW v3.4 - fixed merc start not getting any equipment
-          #############
-		  (troop_add_item, "trp_player", "itm_smoked_fish", 0),
+
+          # (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain"),
+          (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_9_mercenary_captain", 4), ####### NEW v3.4 - fixed merc start not getting any equipment
+
+          (troop_add_item, "trp_player", "itm_smoked_fish", 0),
           (troop_add_item, "trp_player", "itm_smoked_fish", 0),
           (troop_add_item, "trp_player", "itm_dried_meat", 0),
           (troop_add_item, "trp_player", "itm_bread", 0),
           (troop_add_item, "trp_player", "itm_bread", 0),
           (troop_add_item, "trp_player", "itm_bread", 0),
           (troop_add_item, "trp_player", "itm_hunter", imod_heavy),
-		  #############
+
           (store_random_in_range, ":random", 100, 200),
           (troop_set_slot, "trp_player", slot_troop_renown, ":random"),  ####### NEW 3.5 - random
           (assign, ":random", 0),
           (store_random_in_range, ":random", 5000, 8000),
           (troop_add_gold, "trp_player", ":random"),
-		  #############		  
-		  (call_script, "script_ee_get_closest_town", "p_main_party"),
-		  (assign, ":town", reg0),
-          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
-          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
-          (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
-          (party_upgrade_with_xp, "p_main_party", 6000, 0),
-          (party_upgrade_with_xp, "p_main_party", 6000, 0),
-        # (try_end),
-#############################		  
-###################### vanilla starts
+
+          (call_script, "script_ee_get_closest_town", "p_main_party"),
+          (assign, ":town", reg0),
+            (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+            (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+            (call_script, "script_fill_company", ":town", "p_main_party", slot_regional_mercs),
+            (party_upgrade_with_xp, "p_main_party", 6000, 0),
+            (party_upgrade_with_xp, "p_main_party", 6000, 0),
+        
+        ####################################################
+        ### --- Bandit start (NEW v3.9.3, by Khanor) --- ###
+        ####################################################
+        (else_try),
+          (eq, "$background_type", cb_bandit),
+          (troop_raise_attribute, "trp_player", ca_strength, 2),
+          (troop_raise_attribute, "trp_player", ca_intelligence, 4),
+          (troop_raise_attribute, "trp_player", ca_charisma, 2), ### Total of 8 attribute points extra. - Khanor
+
+          (troop_raise_skill, "trp_player", "skl_ironflesh", 3),
+          (troop_raise_skill, "trp_player", "skl_power_strike", 2),
+          (troop_raise_skill, "trp_player", "skl_power_throw", 1),
+          (troop_raise_skill, "trp_player", "skl_power_draw", 1),
+          (troop_raise_skill, "trp_player", "skl_weapon_master", 2),
+          (troop_raise_skill, "trp_player", "skl_athletics", 3),
+          (troop_raise_skill, "trp_player", "skl_riding", 3),
+          (troop_raise_skill, "trp_player", "skl_shield", 2),
+          (troop_raise_skill, "trp_player", "skl_looting", 4),
+          (troop_raise_skill, "trp_player", "skl_inventory_management", 4),
+          (troop_raise_skill, "trp_player", "skl_persuasion", 1),
+          (troop_raise_skill, "trp_player", "skl_prisoner_management", 2),
+          (troop_raise_skill, "trp_player", "skl_leadership", 1),
+          (troop_raise_skill, "trp_player", "skl_trade", 3), ### Total of 32 skill points extra. - Khanor
+
+          (troop_raise_proficiency, "trp_player", wpt_one_handed_weapon, 90),
+          (troop_raise_proficiency, "trp_player", wpt_archery, 60),
+          (troop_raise_proficiency, "trp_player", wpt_crossbow, 60),
+          (troop_raise_proficiency, "trp_player", wpt_throwing, 60),
+
+          (store_random_in_range, ":starting_kit_randomizer", 0, 29), ### Used to give one of three bandit leader starting kits to the player. - Khanor
+          (try_begin),
+            (lt, "$starting_kit_randomizer", 10),
+            (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_3_bandit_leader", 4),
+          (else_try),
+            (lt, "$starting_kit_randomizer", 20),
+            (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_6_pirate", 4),
+          (else_try),
+            (call_script, "script_give_source_troop_inventory_to_troop", "trp_player", "trp_bounty_7_pirate_captain", 4),
+          (try_end),
+
+          (troop_add_item, "trp_player", "itm_dried_meat", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+          (troop_add_item, "trp_player", "itm_bread", 0),
+          (troop_add_item, "trp_player", "itm_hunter", imod_spirited),
+
+          (call_script, "script_change_player_honor", -25),
+
+          (store_random_in_range, ":random", 50, 120),
+          (troop_set_slot, "trp_player", slot_troop_renown, ":random"),
+          (assign, ":random", 0),
+          (store_random_in_range, ":random", 9000, 12000),
+          (troop_add_gold, "trp_player", ":random"),
+
+          (party_add_members, "p_main_party", "trp_looter", 2),
+          (party_add_members, "p_main_party", "trp_sea_raider", 4),
+          (party_add_members, "p_main_party", "trp_sea_raider_veteran", 4),
+          ### Remaining location specific bandits handed out after a starting town has been chosen, so the local area can be taken into account.
+
+        ##############################
+        ### --- Vanilla starts --- ###
+        ##############################
         (else_try),
           (eq, "$background_type", 1),
           (eq, "$character_gender", 0),
@@ -7035,7 +7109,7 @@ game_menus = [ #
   ),
   
   ("mod_troop_rebalance",0,
-   "This is an experimental feature to rebalances troop armour values to their appropriate tier. {s10}^^   What does it do? The troops are automatically re-equipped via scripts with a set range of body armours and helmets   appriopriate to their tier and culture.^^   Using this feature will make the gameplay more balanced, while still being historically correct. This   however will likely make the artistic values of the troop design obsolete.^^   To turn of this feature you will require to reload the game (it will not effect the save game in any way.)   It's required you to do so, so the game engine could reload the troop items from the mod files. Turning on this feature   does not require you to reload the game.",
+   "This is an experimental feature to rebalances troop armour values to their appropriate tier. {s10}^^   What does it do? The troops are automatically re-equipped via scripts with a set range of body armours and helmets   appriopriate to their tier and culture.^^   Using this feature will make the gameplay more balanced, while still being historically correct. This   however will likely make the artistic values of the troop design obsolete.^^   To turn of this feature you will require to reload the game (it will not affect the save game in any way).   It's required you to do so, so the game engine could reload the troop items from the mod files. Turning on this feature   does not require you to reload the game.",
    "none",
    [
     (try_begin),
@@ -7346,7 +7420,7 @@ game_menus = [ #
     ("camp_wagon",
 	[
 	(eq, "$wagon_active", 0),
-	],"Form a wagon train (300 coins.)",
+	],"Form a wagon train (300 coins).",
     [
 	 (store_troop_gold, ":gold_amount", "trp_player"),
      (try_begin),
@@ -7606,7 +7680,7 @@ game_menus = [ #
   ),
 
   ("end_game",0,
-   "The decision is made, and you resolve to give up your adventurer's life and settle down. You sell off your weapons and armour, gather up all your money, and ride off into the sunset....",
+   "The decision is made, and you resolve to give up your adventurer's life and settle down. You sell off your weapons and armour, gather up all your money, and ride off into the sunset...",
    "none",
    [],
     [
@@ -12215,7 +12289,7 @@ game_menus = [ #
           (party_get_slot, ":center_relation", "$current_town", slot_center_player_relation),
           (call_script, "script_describe_center_relation_to_s3", ":center_relation"),
           (assign, reg9, ":center_relation"),
-          (str_store_string, s7, "@{!} {s3} ({reg9})."), ### Ignore conventional writing here, tidier with period outside parenthesis here. - Khanor
+          (str_store_string, s7, "@{!} {s3} ({reg9})."), ### The number inside the parentheses relates to the text string, and it also looks tidier with the period outside the parentheses. - Khanor
         (try_end),
         (str_clear, s6),
         (try_begin),
@@ -13133,7 +13207,7 @@ game_menus = [ #
           (try_end)
       ]),
       ("recruit_them",[(gt, reg5, 0)],
-       "Recruit all of them ({reg6} denars.)",
+       "Recruit all of them ({reg6} denars).",
         [
           (call_script, "script_village_recruit_volunteers_recruit", -1),
           (try_begin),
@@ -13148,7 +13222,7 @@ game_menus = [ #
 
       ]),
       ("recruit_one_of_them",[(gt, reg5, 0)],
-       "Recruit one of them ({reg7} denars.)",
+       "Recruit one of them ({reg7} denars).",
         [
           (call_script, "script_village_recruit_volunteers_recruit", 1),
           (try_begin),
@@ -14339,7 +14413,7 @@ game_menus = [ #
           (party_get_slot, ":center_relation", "$current_town", slot_center_player_relation),
           (call_script, "script_describe_center_relation_to_s3", ":center_relation"),
           (assign, reg9, ":center_relation"),
-          (str_store_string, s12, "@{!} {s3} ({reg9})."), ### Ignore conventional writing here, tidier with period outside parenthesis here. - Khanor
+          (str_store_string, s12, "@{!} {s3} ({reg9})."), ### The number inside the parentheses relates to the text string, and it also looks tidier with the period outside the parentheses. - Khanor
         (try_end),
 
         (str_clear, s13),
@@ -17893,7 +17967,7 @@ game_menus = [ #
 
 
 #####################################################################
-## Captivity....
+## Captivity...
 #####################################################################
 #####################################################################
 #####################################################################
@@ -19236,13 +19310,24 @@ game_menus = [ #
   ),
 
    ("notification_village_raided",0,
-    "Enemies have Laid Waste to a Fief^^{s1} has been raided by {s2} of {s3}!",
+    "Enemies have laid waste to {reg0?your:a} Fief^^{s1} has been raided by {s2} of {s3}!",
     "none",
     [
       (str_store_party_name, s1, "$g_notification_menu_var1"),
       (str_store_troop_name, s2, "$g_notification_menu_var2"),
       (store_troop_faction, ":troop_faction", "$g_notification_menu_var2"),
       (str_store_faction_name, s3, ":troop_faction"),
+
+      ### Check if raided village actually belongs to the player, and fill in appropriate words in the string (NEW v3.9.3, by Khanor) ###
+      (party_get_slot, ":fief_lord", "$g_notification_menu_var1", slot_town_lord),
+      (try_begin),
+        (eq, ":fief_lord", "trp_player"),
+        (assign, reg0, 1),
+      (else_try),
+        (assign, reg0, 0),
+      (try_end),
+      ### Player check end ###
+
       (set_fixed_point_multiplier, 100),
       (position_set_x, pos0, 62),
       (position_set_y, pos0, 30),
@@ -19257,13 +19342,24 @@ game_menus = [ #
   ),
 
    ("notification_village_raid_started",0,
-    "Your Village is under Attack!^^{s2} of {s3} is laying waste to {s1}.",
+    "Your {reg0?:faction's }Village is under attack!^^{s2} of {s3} is laying waste to {s1}.",
     "none",
     [
       (str_store_party_name, s1, "$g_notification_menu_var1"),
       (str_store_troop_name, s2, "$g_notification_menu_var2"),
       (store_troop_faction, ":troop_faction", "$g_notification_menu_var2"),
       (str_store_faction_name, s3, ":troop_faction"),
+      
+      ### Check if currently raided village actually belongs to the player, else fill in "faction's" in the string (NEW v3.9.3, by Khanor) ###
+      (party_get_slot, ":fief_lord", "$g_notification_menu_var1", slot_town_lord),
+      (try_begin),
+        (eq, ":fief_lord", "trp_player"),
+        (assign, reg0, 1),
+      (else_try),
+        (assign, reg0, 0),
+      (try_end),
+      ### Player check end ###
+      
       (set_fixed_point_multiplier, 100),
       (position_set_x, pos0, 62),
       (position_set_y, pos0, 30),
@@ -19750,9 +19846,9 @@ game_menus = [ #
     (str_store_troop_name, s11, "$love_interest_in_town"),
 
     (try_begin),
-        (call_script, "script_npc_decision_checklist_male_guardian_assess_suitor", ":guardian_lord", "trp_player"),
-        (lt, reg0, 0),
-        (troop_set_slot, ":guardian_lord", slot_lord_granted_courtship_permission, -1),
+      (call_script, "script_npc_decision_checklist_male_guardian_assess_suitor", ":guardian_lord", "trp_player"),
+      (lt, reg0, 0),
+      (troop_set_slot, ":guardian_lord", slot_lord_granted_courtship_permission, -1),
     (try_end),
 
     (assign, "$nurse_assists_entry", 0),
@@ -20378,6 +20474,39 @@ game_menus = [ #
          (party_get_position, pos2, "$current_town"),
          (map_get_land_position_around_position, pos1, pos2, 1),
          (party_set_position, "p_main_party",pos1),
+
+         ### Check local area by means of local town culture, add appropriate bandits for the bandit start (NEW v3.9.3, by Khanor) ###
+         (try_begin),
+          (eq, "$background_type", cb_bandit),
+
+          (call_script, "script_ee_get_closest_town", "p_main_party"),
+          (assign, ":nearest_town", reg0),
+          (party_get_slot, ":local_culture", ":nearest_town", slot_center_culture), ### Get culture.
+          (try_begin),
+            (this_or_next|eq, ":local_culture", "fac_culture_nordic"),
+            (this_or_next|eq, ":local_culture", "fac_culture_finnish"),
+            (this_or_next|eq, ":local_culture", "fac_culture_baltic"),
+            (eq, ":local_culture", "fac_culture_rus"),
+            (party_add_members, "p_main_party", "trp_taiga_bandit", 10),
+          (else_try),
+            (eq, ":local_culture", "fac_culture_mongol"),
+            (party_add_members, "p_main_party", "trp_steppe_bandit", 10),
+          (else_try),
+            (this_or_next|eq, ":local_culture", "fac_culture_balkan"),
+            (this_or_next|eq, ":local_culture", "fac_culture_anatolian_christian"),
+            (eq, ":local_culture", "fac_culture_anatolian"),
+            (party_add_members, "p_main_party", "trp_mountain_bandit", 10),
+          (else_try),
+            (this_or_next|eq, ":local_culture", "fac_culture_marinid"),
+            (this_or_next|eq, ":local_culture", "fac_culture_mamluke"),
+            (eq, ":local_culture", "fac_culture_jerusalem"),
+            (party_add_members, "p_main_party", "trp_desert_bandit", 10),
+          (else_try),
+            (party_add_members, "p_main_party", "trp_forest_bandit", 10),
+          (try_end),
+        (try_end),
+        ###############################################################################################################################
+
          # (set_show_messages, 0),
          # (succeed_quest, "qst_save_relative_of_merchant"),
          # (succeed_quest, "qst_save_town_from_bandits"),
@@ -21629,38 +21758,40 @@ game_menus = [ #
 ##########################################################
 # Inventory allocation / Loot allocation Game Menu  -  by Fisheye
 # Parameters:
-# $return_menu : return to this menu after managing loot.  0 if this menu is called via random encounter
+# $return_menu : return to this menu after managing loot. 0 if this menu is called via random encounter
   ("manage_loot_pool",
     0,
     "{s10}",
     "none",
     [
       (assign, "$pool_troop", "trp_temp_troop"),
-      (assign, reg20,0),
+      (assign, reg20, -5), ### Start at -5 to account for equipped gear on the "pool_troop" (NEW v3.9.3, by Khanor) ###
       (troop_get_inventory_capacity, ":inv_cap", "$pool_troop"),
         (try_for_range, ":i_slot", 0, ":inv_cap"),
           (troop_get_inventory_slot, ":item_id", "$pool_troop", ":i_slot"),
           (ge, ":item_id", 0),
-          (val_add, reg20,1),
+          (val_add, reg20, 1),
         (try_end),
-        # reg20 now contains number of items in loot pool
+        ### reg20 now contains number of items in loot pool.
         (try_begin),
-          (eq, reg20, 0),
+          (le, reg20, 0),
           (str_store_string, 10, "str_item_pool_no_items"),
           (str_store_string, 20, "str_item_pool_leave"),
         (else_try),
           (eq, reg20, 1),
           (str_store_string, 10, "str_item_pool_one_item"),
           (str_store_string, 20, "str_item_pool_abandon"),
+          (str_store_string, 30, "str_item_pool_leave_without_items"),
         (else_try),
           (str_store_string, 10, "str_item_pool_many_items"),
           (str_store_string, 20, "str_item_pool_abandon"),
+          (str_store_string, 30, "str_item_pool_leave_without_items"),
         (try_end),
     ],
     [
       ("auto_loot",
         [
-          (eq, "$inventory_menu_offset",0),
+          (eq, "$inventory_menu_offset", 0),
           (store_free_inventory_capacity, ":space", "$pool_troop"),
           (ge, ":space", 10)
         ],
@@ -21668,7 +21799,7 @@ game_menus = [ #
       ),
       ("auto_loot_no",
         [
-          (eq, "$inventory_menu_offset",0),
+          (eq, "$inventory_menu_offset", 0),
           (store_free_inventory_capacity, ":space", "$pool_troop"),
           (lt, ":space", 10),
           (disable_menu_option)
@@ -21680,7 +21811,7 @@ game_menus = [ #
       ),
       ## CC
       ("auto_loot_upgrade_management", [],
-        "Upgrade management of the NPC's equipments.",
+        "Upgrade management of the companions' equipment.",
         [
           (party_get_num_companion_stacks, ":num_stacks", "p_main_party"),
           (try_for_range, ":stack_no", 0, ":num_stacks"),
@@ -21707,7 +21838,7 @@ game_menus = [ #
             (is_between, ":stack_troop", companions_begin, companions_end),
             (call_script, "script_transfer_special_inventory", "$pool_troop", ":stack_troop"), #special items
           (try_end),
-          # (call_script, "script_sort_food", "trp_player"),  ########## NEW v3.5
+          # (call_script, "script_sort_food", "trp_player"),  ### NEW v3.5
           (jump_to_menu, "$return_menu"),
         ]
       ),
@@ -21720,7 +21851,15 @@ game_menus = [ #
             (is_between, ":stack_troop", companions_begin, companions_end),
             (call_script, "script_transfer_inventory", "$pool_troop", ":stack_troop", 1), #include book
           (try_end),
-          # (call_script, "script_sort_food", "trp_player"),  ########## NEW v3.5
+          # (call_script, "script_sort_food", "trp_player"),  ### NEW v3.5
+          (jump_to_menu, "$return_menu"),
+        ]
+      ),
+      ### Option to leave without any items as a convenience when the remaining items aren't even worth picking up (NEW v3.9.3, by Khanor) ###
+      ("auto_loot_leave_without_items", [],
+        "{s30}",
+        [
+          (display_message, "@You decide to leave and let any remaining items lie."),
           (jump_to_menu, "$return_menu"),
         ]
       ),

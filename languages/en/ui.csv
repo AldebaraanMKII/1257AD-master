@@ -473,6 +473,7 @@ ui_move_backward|Move Backward
 ui_move_left|Move Left
 ui_move_right|Move Right
 ui_action|Action
+ui_crouch|Crouch
 ui_jump|Jump
 ui_attack|Attack
 ui_parry_then_attack|Counter Attack

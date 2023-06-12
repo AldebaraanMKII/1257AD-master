@@ -6698,14 +6698,16 @@ simple_triggers = [
       (troop_set_slot, ":merchant", slot_troop_cur_center, ":town"),
       
       (troop_clear_inventory, ":merchant"),
-      (try_begin),###HATS!
+      (try_begin), ### HATS!
         (is_between, ":merchant", "trp_trader_hat1", "trp_trader_sword1"),
         (try_for_range, reg0, 0, 30),
           # (store_random_in_range, ":itm", "itm_sarranid_head_cloth", "itm_leather_steppe_cap_a"),
-          (store_random_in_range, ":itm", "itm_head_wrappings", "itm_wooden_shield"), ##### NEW v2.6 - bugfix
+          (store_random_in_range, ":itm", "itm_head_wrappings", "itm_head_african"), ### NEW v2.6 - bugfix ### Removed weird items (NEW v3.9.3, by Khanor) ###
           (troop_add_item, ":merchant", ":itm"),
+          (store_random_in_range, ":itm_2", "itm_nomad_cap", "itm_wooden_shield"), ### Removed weird items (NEW v3.9.3, by Khanor) ###
+          (troop_add_item, ":merchant", ":itm_2"),
         (try_end),
-      (else_try), ########sword
+      (else_try), ### Swords
         (is_between, ":merchant", "trp_trader_sword1", "trp_trader_helmet1"),
         (try_for_range, reg0, 0, 25),
           # (store_random_in_range, ":itm", "itm_sword_type_xii", "itm_spatha"),

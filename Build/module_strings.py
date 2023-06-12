@@ -287,6 +287,8 @@ strings = [
 
   ("s1_joined_battle_enemy", "{s1} has joined the battle on the enemy side."),
   ("s1_joined_battle_friend", "{s1} has joined the battle on your side."),
+  ("s1_garrison_joined_battle_enemy", "The garrison of {s1} has joined the battle on the enemy side."),
+  ("s1_garrison_joined_battle_friend", "The garrison of {s1} has joined the battle on your side."),
 
 #  ("entrance_to_town_forbidden", "It seems that the town guards have been warned of your presence and you won't be able to enter the town unchallenged."),
   ("entrance_to_town_forbidden", "The town guards are on the lookout for intruders and it seems that you won't be able to pass through the gates unchallenged."),
@@ -4979,7 +4981,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("we_are_trying_to_seek_out_and_defeat_s8", "We are trying to seek out and defeat {s8}."),
   ("we_are_riding_to_the_defense_of_s8", "We are riding to the defense of {s8}."),
   ("we_are_gathering_for_a_feast_at_s8", "We are gathering for a feast at {s8}."),
-  ("_however_that_may_change_shortly_s14", " However, that may change shortly. {s14}"),
+  ("however_that_may_change_shortly_s14", "However, that may change shortly. {s14}"),
   ("it_is_our_custom_to_seal_any_such_alliances_with_marriage_and_in_fact_we_have_been_looking_for_a_suitable_groom_for_my_s11_s14", "It is our custom to seal any such alliances with marriage, and in fact, we have been looking for a suitable groom for my {s11}, {s14}."),
   ("once_again_", "once again "),
   ("cheat__marriage_proposal", "Cheat - marriage proposal"),
@@ -5219,7 +5221,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("faction_title_female_21", "Lady {s0}"),
   ("faction_title_female_22", "Lady {s0}"),
   ("faction_title_female_23", "Lady {s0}"),
-  ("faction_title_female_24", "{s0} Hatun"),
+  ("faction_title_female_24", "Lady {s0}"),
   ("faction_title_female_25", "Amira {s0}"),
   ("faction_title_female_26", "Lady {s0}"),
   ("faction_title_female_27", "Lady {s0}"),
@@ -5458,7 +5460,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("you_fought_bad_at_town_fight_survived", "Well, the enemy is in flight, and it looks like you're still on your feet. At the end of the day, that's all that's important in a battle."), 
   
   ("you_fought_well_at_town_fight", "Ah! You're awake. You took quite a blow, there. But good news! We defeated them -- and you did them some real damage before you went down. If you hadn't been here, it could have gone very baldy. I'm grateful to you..."), 
-  ("you_wounded_at_town_fight", "Ah! You're alive. That's a relief. You took quite a blow, there. I'm not sure that you got any of them yourself, but thankfully, the rest of us were able to beat them. We'll need to see about getting you some treatment.... "), 
+  ("you_wounded_at_town_fight", "Ah! You're alive. That's a relief. You took quite a blow, there. I'm not sure that you got any of them yourself, but thankfully, the rest of us were able to beat them. We'll need to see about getting you some treatment..."), 
   
   ("you_fought_well_at_town_fight_survived_answer", "Let every villain learn to fear the name {playername}!"), 
   ("you_fought_normal_at_town_fight_survived_answer", "Ah, well, I'm proud to have done my bit along with the rest..."), 
@@ -5588,8 +5590,9 @@ We apologize sincerely if you contributed your suggestions and feedback but were
     ("item_pool_no_items", "There are currently no items in the item pool."),
     ("item_pool_one_item", "There is one item left in the item pool."),
     ("item_pool_many_items", "There are {reg20} items left in the item pool."),
-    ("item_pool_abandon", "Let NPCs to collect all the items left and continue."),
+    ("item_pool_abandon", "Let your companions collect all the items left and continue."),
     ("item_pool_leave", "Done."),
+    ("item_pool_leave_without_items", "Done, and leave the remaining items."),
     
     ("hero_not_upgrading_armor", "not upgrading my armor"),
     ("hero_upgrading_armor", "upgrading my own armor"),
@@ -9850,8 +9853,8 @@ We apologize sincerely if you contributed your suggestions and feedback but were
  
   ("dplmc_political_explanation_original_lord", "In this case, the fortress should go its original owner."),
 
-  ("mod_version", "3.11"), ### This holds short form version name, revision holds long form name, if applicable. - Khanor
-  ("revision", "3.11"), ### Update this and the "mod_version"-line above on non-hotfix patches! - Khanor
+  ("mod_version", "3.12"), ### This holds short form version name, revision holds long form name, if applicable. - Khanor
+  ("revision", "3.12"), ### Update this and the "mod_version"-line above on non-hotfix patches! - Khanor
 ###################################################################################
 # End Autoloot
 ###################################################################################
