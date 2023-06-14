@@ -142,7 +142,7 @@ parties = [
     ("town_10_6", "Aix-en-Provence", icon_french_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-60.97), scale_f(-34.57)), []),
     ("town_10_7", "Reims", icon_french_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-70.38), scale_f(13.31)), [], 10),
 
-    ("town_11_1", "Niðarós", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-25.54), scale_f(130.69)), []),
+    ("town_11_1", "Niðarós", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-25.54), scale_f(129.70)), []),
     ("town_11_2", "Biǫrgyn", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-58.81), scale_f(101.97)), []),
     ("town_11_3", "Ásló", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-22.79), scale_f(99.85)), []),
 
@@ -167,7 +167,7 @@ parties = [
     ("town_17_2", "Valencia", icon_italy|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-97.30), scale_f(-69.87)), []),
   
     ("town_18_1", "Toledo", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-122.55), scale_f(-68.68)), []),
-    ("town_18_2", "Sevilla ", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-206.20,-129.50), []),
+    ("town_18_2", "Sevilla", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-206.20,-129.50), []),
   
     ("town_19_1", "Pamplona", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-106.82), scale_f(-41.69)), []),  
     
@@ -181,14 +181,13 @@ parties = [
     ("town_22_2", "Smyrna", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(85.36), scale_f(-78.31)), []),  
     ("town_22_3", "Chonai", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(98.51), scale_f(-84.32)), []),  
     ("town_22_4", "Thessalonica", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(57.04), scale_f(-59.55)), []),  
-  
+
     ("town_23_1", "Acre", icon_acre|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(139.11), scale_f(-127.95)), []),  
     ("town_23_2", "Tarsus", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(138.92), scale_f(-93.05)), []),  
     ("town_23_4", "Antioch", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(146.33), scale_f(-98.35)), []),  
     ("town_23_5", "Nicosia", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(129.92), scale_f(-105.44)), []),  
     ("town_23_6", "Saphet", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (221.69, -172.02), []),  
-  
-  
+
     ("town_24_1", "Palermo", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-8.83, -122.77), []),
     ("town_24_2", "Napoli", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-0.45), scale_f(-57.17)), []),
 
@@ -196,49 +195,49 @@ parties = [
     ("town_25_2", "Alexandria", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(106.25), scale_f(-139.74)), []),
     ("town_25_3", "Damietta", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(119.27), scale_f(-140.87)), []),
     ("town_25_4", "Damascus", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (237.76, -174.48), []),
-    ("town_25_5", "Jerusalem", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(140.50), scale_f(-136.16)), []),  
- 
+    ("town_25_5", "Jerusalem", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(140.50), scale_f(-136.16)), []),
+    
     ("town_26_1", "Constantinople", icon_constantinople|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(97.35), scale_f(-56.44)), []),
-    ("town_26_2", "Patras", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (78.79,-120.54), []),    
+    ("town_26_2", "Patras", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (78.79,-120.54), []),
     
     ("town_27_1", "Trebizond", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(160.05), scale_f(-57.87)), []),
     ("town_27_2", "Ankara", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(122.17), scale_f(-69.55)), []),
     ("town_27_3", "Iconium", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(120.102), scale_f(-85.49)), []),
     ("town_27_4", "Aleppo", icon_eastern2|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (226.74, -146.11), []),
-      #("village_23_7", "Aleppo", icon_village_c|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (226.74, -146.11), []),
+     # ("village_23_7", "Aleppo", icon_village_c|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (226.74, -146.11), []),
 
     ("town_28_1", "Tunis", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-26.96), scale_f(-91.31)), []),
-    ("town_28_2", "Tripoli", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.83), scale_f(-124.81)), []),  
-  
-    ("town_29_1", "Kotor", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (41.19, -67.00), []), 
-    ("town_29_2", "Brskovo", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (53.80, -56.65), []),  
-  
-    ("town_30_1", "Tarnovo", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (116.38,-60.64), []),  
-    ("town_30_2", "Plovdiv ", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (102.74,-73.65), []),
-  
-    ("town_31_1", "Fes", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-130.55), scale_f(-112)), []),  
+    ("town_28_2", "Tripoli", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.83), scale_f(-124.81)), []),
+
+    ("town_29_1", "Kotor", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (41.19, -67.00), []),
+    ("town_29_2", "Brskovo", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (53.80, -56.65), []),
+
+    ("town_30_1", "Tarnovo", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (116.38,-60.64), []),
+    ("town_30_2", "Plovdiv", icon_eastern|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (102.74,-73.65), []),
+
+    ("town_31_1", "Fes", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-130.55), scale_f(-112)), []),
     ("town_31_2", "Marakesh", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-141.68), scale_f(-129.54)), []),
     ("town_31_3", "Oran", icon_andalusian|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-97.51), scale_f(-104.26)), []),
-  
-    ("town_32_1", "Venezia", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.82), scale_f(-24.59)), []),  
-    ("town_32_2", "Candia", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (110.84, -156.98), []),  
-    ("town_32_3", "Ragusa", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (35.51, -64.53), []),  
-   
-    ("town_37_1", "Aberffraw", icon_town|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-188.16, 68.51), []),  
-    ####genoa Genoa
+
+    ("town_32_1", "Venezia", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.84), scale_f(-19.72)), []),
+    ("town_32_2", "Candia", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (110.84, -156.98), []),
+    ("town_32_3", "Ragusa", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (35.51, -64.53), []),
+
+    ("town_37_1", "Aberffraw", icon_town|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-188.16, 68.51), []),
+    ### genoa Genoa
     ("town_38_1", "Genova", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-38.07), scale_f(-27.98)), []),
-    #####pisa Pisa
-    ("town_39_1", "Pisa", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-36.05, -56.35), []),  
-    ####guelph Guelph
+    ### pisa Pisa
+    ("town_39_1", "Pisa", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-36.05, -56.35), []),
+    ### guelph Guelph
     ("town_40_1", "Milano", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-53.59, -30.99), []),
     ("town_40_2", "Firenze", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-25.83, -56.81), []),
-    ####ghibeline Ghibeline
+    ### ghibeline Ghibeline
     ("town_41_1", "Verona", icon_italy_new_a|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-20.33), scale_f(-20.69)), [], 90),
     ("town_41_2", "Siena", icon_italy_new_b|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-25.55, -66.19), []),
     
     ("town_42_1", "Praha", icon_prague|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(2.03), scale_f(17.75)), [], 100),
     ("town_42_2", "Olmütz", icon_town|pf_town, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (13.84, 26.26), [], 53),
-   
+
     ("castle_1_1", "Arensburg", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (82.91, 127.96), [], 135),
     ("castle_1_2", "Balga", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (57.50,85.00), [], 310),
     ("castle_1_3", "Fellin", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (111.16, 130.24), [], 60),
@@ -249,18 +248,18 @@ parties = [
     ("castle_1_8", "Marienwerder", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (75.78, 77.93), [], 170),
     ("castle_1_9", "Wenden", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(80.37), scale_f(77.51)), [], 170),
 
-    #("castle_2_1", "Raseiniai", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(55.43), scale_f(58.74)), []),
+    # ("castle_2_1", "Raseiniai", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(55.43), scale_f(58.74)), []),
     ("castle_2_1", "Veršviai", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(64.53), scale_f(56.06)), []),
     ("castle_2_2", "Šeiminiškėliai", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(73.64), scale_f(61.37)), []),
     ("castle_2_3", "Dubingiai", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(88.28), scale_f(51.26)), []),
     ("castle_2_4", "Kernavė", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(76.27), scale_f(53.71)), []),
     ("castle_2_5", "Taurapilis", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(90.34), scale_f(56.93)), []),
-    #("castle_2_6", "Novogorodok", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(84.13), scale_f(41.22)), []),
+    # ("castle_2_6", "Novogorodok", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(84.13), scale_f(41.22)), []),
     ("castle_2_6", "Horodna", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(68.57), scale_f(47.72)), []),
     ("castle_2_7", "Mensk", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(97.04), scale_f(48.75)), []),
     ("castle_2_8", "Vitebsk", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(106.62), scale_f(57.95)), []),
     
-    ("castle_3_1", "Ryazan", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (263.04,71.30), [], 75),    
+    ("castle_3_1", "Ryazan", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (263.04,71.30), [], 75),
     ("castle_3_2", "Vladimir", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (251.11,94.71), [], 90),
     ("castle_3_3", "Sugdeya", icon_castle_d|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (203.38,-39.10), [], 90),
     ("castle_3_4", "Novgorod Seversky", icon_castle_c|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (202.89,64.29), [], 90),
@@ -276,7 +275,7 @@ parties = [
     ("castle_4_5", "Swinaburgh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-24.85), scale_f(61.02)), [], 90),
     ("castle_4_6", "Kalundæburgh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-21.27), scale_f(65.53)), [], 90),
     ("castle_4_7", "Helsingiæburgh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-9.32), scale_f(68.91)), [], 90),
-    ("castle_4_8", "Varbiargh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-13.33), scale_f(78.80)), [], 90),
+    ("castle_4_8", "Varbiargh", icon_european_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.70), scale_f(77.70)), [], 90),
 
     ("castle_5_1", "Gniezno", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(30.86), scale_f(32.17)), [], 135),
     ("castle_5_2", "Sandomierz", icon_dutch_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(52.22), scale_f(25.57)), []),
@@ -343,7 +342,7 @@ parties = [
     ("castle_11_2", "Borgyndr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-47.63), scale_f(110.48)), [], 90),
     ("castle_11_3", "Stafangr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-56.98), scale_f(94.81)), [], 90),
     ("castle_11_4", "Túnsberg", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-28.55), scale_f(93.53)), [], 90),
-    ("castle_11_5", "Ragnhildarhólmr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.00), scale_f(82.86)), [], 90),
+    ("castle_11_5", "Ragnhildarhólmr", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-14.70), scale_f(82.30)), [], 90),
     ("castle_11_6", "Mann", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-125.71), scale_f(53.06)), [], 90),
 
     ("castle_12_1", "Urquhart", icon_norman_castle|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-188.92, 118.77), [], 135),
@@ -360,7 +359,7 @@ parties = [
     ("castle_14_1", "Kalmarnir", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(12.13), scale_f(71.56)), [], 90),
     ("castle_14_2", "Stokholm", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(28.05), scale_f(96.53)), [], 90),
     ("castle_14_3", "Scara", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-3.82), scale_f(86.90)), [], 90),
-    ("castle_14_4", "Visingsey ", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(4.72), scale_f(80.14)), [], 90),
+    ("castle_14_4", "Visingsey", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(4.72), scale_f(80.14)), [], 90),
     ("castle_14_5", "Stægeburgh", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(16.65), scale_f(85.88)), [], 90),
     ("castle_14_6", "Linkøpang", icon_castle_snow_b|pf_castle, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(9.72), scale_f(84.82)), [], 90),
 
@@ -553,7 +552,7 @@ parties = [
     ("village_4_11", "Horsnæs", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-30.44), scale_f(66.36)), [], 10),
     ("village_4_12", "Oþænswé", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-25.71), scale_f(63.59)), [], 10),
     ("village_4_13", "Flænsburgh", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-31.54), scale_f(56.05)), [], 10),
-    ("village_4_14", "Halmstaþr", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-10.23), scale_f(74.08)), [], 10),
+    ("village_4_14", "Halmstaþr", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-9.73), scale_f(73.08)), [], 10),
     ("village_4_15", "Falkenbærgh", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.11), scale_f(76.44)), [], 10),
     ("village_4_16", "Ringstaþr", icon_village_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-15.93), scale_f(61.58)), [], 10),
 
@@ -685,7 +684,7 @@ parties = [
     ("village_10_30", "Le Mans", icon_village_middle_europe|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-93.80), scale_f(2.50)), [], 10),
   
     ("village_11_1", "Hjaltlandseyjar", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-103.79), scale_f(102.32)), [], 10),
-    ("village_11_2", "Freysey", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-2.13), scale_f(131.54)), [], 10),
+    ("village_11_2", "Freysey", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-2.13), scale_f(128.40)), [], 10),
     ("village_11_3", "Þorshofn", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-141.12), scale_f(118.56)), [], 10),
     ("village_11_4", "Hamarr", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-21.68), scale_f(105.11)), [], 10),
     ("village_11_5", "Borg", icon_village_snow_a|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-21.59), scale_f(93.56)), [], 10),
@@ -911,11 +910,11 @@ parties = [
     ("village_31_8", "Corso", icon_village_c|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-69.40), scale_f(-97.41)), []),  
  
     ("village_32_1", "Caorle", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-16.09, -27.61), []),
-    ("village_32_2", "Chioggia", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-19.88, -32.43), []),  
+    ("village_32_2", "Chioggia", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (scale_f(-12.90), scale_f(-22.34)), []),  
     ("village_32_3", "Sita", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (119.52, -160.34), []),
     ("village_32_4", "Canea", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (95.09, -155.91), []),  
     ("village_32_5", "Poreč", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (-6.94, -33.31), []),
-    ("village_32_6", "Sibinicum ", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (20.56, -56.61), []),   
+    ("village_32_6", "Sibinicum", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (20.56, -56.61), []),   
     ("village_32_7", "Zara", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (14.23, -51.59), []),   
     ("village_32_8", "Rethymno", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (103.49, -157.67), []),   
     #("village_32_6", "Ragusa", icon_village_italy|pf_village, no_menu, pt_none, fac_neutral, 0, ai_bhvr_hold, 0, (30.05, -60.08), []),   

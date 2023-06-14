@@ -49,7 +49,7 @@ scripts = [
     (party_set_name, ":spawned_party", "@{s5} patrol"),
 
     # (party_set_ai_behavior, ":spawned_party", ai_bhvr_travel_to_party),
-    (party_set_ai_behavior, ":spawned_party", ai_bhvr_patrol_party),  ######## NEW 3.2 - fixes the patrol bug
+    (party_set_ai_behavior, ":spawned_party", ai_bhvr_patrol_party),  ######## NEW v3.2 - fixes the patrol bug
     (party_set_ai_object, ":spawned_party", ":target_party"),
     (party_set_slot, ":spawned_party", slot_party_ai_object, ":target_party"),
     (party_set_slot, ":spawned_party", slot_party_ai_state, spai_patrolling_around_center),
@@ -9144,10 +9144,10 @@ scripts = [
            (assign, "$g_ee_cur_faction", ":faction_no"),
            (assign, "$g_ee_cur_troop", ":cur_lord"),
            (start_presentation, "prsnt_lord_vassalage_notify"),
-       # (else_try),
-         # (neq, ":faction_no", "$players_kingdom"),
-         # (neg|faction_slot_eq, ":faction_no", slot_faction_leader, "trp_player"),
-           # (call_script, "script_ee_spawn_lord_party", ":cur_lord", ":faction_no"), 
+      #  (else_try),
+      #    (neq, ":faction_no", "$players_kingdom"),
+      #    (neg|faction_slot_eq, ":faction_no", slot_faction_leader, "trp_player"),
+      #      (call_script, "script_ee_spawn_lord_party", ":cur_lord", ":faction_no"),
        (else_try),
          (call_script, "script_ee_spawn_lord_party", ":cur_lord", ":faction_no"), 
        (try_end),
@@ -9801,15 +9801,15 @@ scripts = [
          # (le, ":random_chance", 100),
          (assign, ":culture", "fac_culture_western"),
        (try_end),
-       
-############### NEW v3.12 - 
+
+    ### NEW v3.12 - ###
    (else_try), 
      (eq, ":faction_culture", "fac_culture_western"),
          (try_begin),
            # (le, ":random_chance", 100),
            (assign, ":culture", "fac_culture_western"),
          (try_end),
-############### 
+    ###################
 	   
 ############ NEW v3.8 - Missing crusader cultures 
    (else_try), 
@@ -11631,8 +11631,8 @@ scripts = [
 ################ NEW v2.1  - modified version of equip_troop_king_start that accepts a troop - used for equipping new kings
 ("give_equipment_to_new_king",
   [
-   (store_script_param, ":troop_no", 1),    
-   (store_script_param, ":source_troop", 2),    
+   (store_script_param, ":troop_no", 1),
+   (store_script_param, ":source_troop", 2),
   
    (try_begin),  ##### if troop = player don't clear inventory
      (neq, ":troop_no", "trp_player"),
@@ -11641,7 +11641,7 @@ scripts = [
        (try_for_range, ":i_slot", 0, ":inv_cap"),
          (troop_set_inventory_slot, ":troop_no", ":i_slot", -1),
        (try_end),
-   (try_end),  
+   (try_end),
 
    (try_begin),  
      (troop_get_slot, ":party_no", ":troop_no", slot_troop_leaded_party),
@@ -12876,17 +12876,17 @@ scripts = [
       (eq, ":culture_no", "fac_culture_cuman"),
         (assign, ":source_troop", "trp_cuman_heavy_lancer"),
 ###########################
-######### NEW v3.10        
-    (else_try), 
+######### NEW v3.10 
+    (else_try),
       (eq, ":culture_no", "fac_culture_english"),
         (assign, ":source_troop", "trp_english_knight"),
-    (else_try), 
+    (else_try),
       (eq, ":culture_no", "fac_culture_french"),
         (assign, ":source_troop", "trp_french_knight"),
-    (else_try), 
+    (else_try),
       (eq, ":culture_no", "fac_culture_hungarian"),
         (assign, ":source_troop", "trp_hungarian_knight"),
-    (else_try), 
+    (else_try),
       (eq, ":culture_no", "fac_culture_polish"),
         (assign, ":source_troop", "trp_polish_guard"),
 ###########################
@@ -13604,8 +13604,7 @@ scripts = [
            # (le, ":random_chance", 100),
            (assign, ":culture", "fac_culture_western"),
          (try_end),
-############### 
-####################################
+############################
    (else_try), 
      ##### Player Culture 
      (eq, ":faction_culture", "fac_culture_player"),
@@ -14647,10 +14646,10 @@ scripts = [
      (faction_set_slot, "fac_culture_cuman", slot_faction_language, faction_language_cuman), 
      #################
      ############# NEW v3.10
-     (faction_set_slot, "fac_culture_english", slot_faction_language, faction_language_english), 
-     (faction_set_slot, "fac_culture_french", slot_faction_language, faction_language_french), 
-     (faction_set_slot, "fac_culture_hungarian", slot_faction_language, faction_language_hungarian), 
-     (faction_set_slot, "fac_culture_polish", slot_faction_language, faction_language_polish), 
+     (faction_set_slot, "fac_culture_english", slot_faction_language, faction_language_english),
+     (faction_set_slot, "fac_culture_french", slot_faction_language, faction_language_french),
+     (faction_set_slot, "fac_culture_hungarian", slot_faction_language, faction_language_hungarian),
+     (faction_set_slot, "fac_culture_polish", slot_faction_language, faction_language_polish),
 ############################
      (faction_set_slot, "fac_culture_player", slot_faction_language, faction_language_mixed_euro), #### New v2.7 
    (try_end),
@@ -17793,10 +17792,10 @@ scripts = [
      (this_or_next|eq, ":cur_lord_culture", fac_culture_tripoli),  
      (this_or_next|eq, ":cur_lord_culture", fac_culture_ibelin),  
      ############## NEW v3.10
-     (this_or_next|eq, ":cur_lord_culture", fac_culture_english),  
-     (this_or_next|eq, ":cur_lord_culture", fac_culture_french),  
-     (this_or_next|eq, ":cur_lord_culture", fac_culture_hungarian),  
-     (this_or_next|eq, ":cur_lord_culture", fac_culture_polish),  
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_english),
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_french),
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_hungarian),
+     (this_or_next|eq, ":cur_lord_culture", fac_culture_polish),
 ############################
      (this_or_next|eq, ":cur_lord_culture", fac_culture_player),   
      (eq, ":cur_lord_culture", fac_culture_jerusalem),
@@ -21679,7 +21678,7 @@ scripts = [
           (str_store_string, s1, "str_s2s_rebellion"),
         (try_end),
         #(faction_set_color, "fac_player_supporters_faction", 0xFF0000), #rafi remove this
-        ############### NEW 3.7
+        ############### NEW v3.7
         (assign, "$players_kingdom", "fac_player_supporters_faction"),
         (troop_set_faction, "trp_player", "fac_player_supporters_faction"),
 		###############
@@ -22096,7 +22095,7 @@ scripts = [
         (try_end),
     ]),
 ####################################
-### Raises an attribute/skill/proficiency until the value desired ### (NEW 3.7)
+### Raises an attribute/skill/proficiency until the value desired ### (NEW v3.7)
     ("ee_raise_actor_attribute",
       [
       (store_script_param, ":attribute", 1),
@@ -22156,7 +22155,7 @@ scripts = [
           (try_end),
         (try_end),
 
-        ### Light correction in the other direction to catch cases where proficiency is not a multiple of 5 ### (NEW 3.9.2a, by Khanor)
+        ### Light correction in the other direction to catch cases where proficiency is not a multiple of 5 ### (NEW v3.9.2a, by Khanor)
         (store_proficiency_level, ":cur_value", ":actor", ":proficiency"),
         (assign, ":end", ":value"),
         (try_for_range, ":unused", 0, ":end"),
@@ -22170,7 +22169,7 @@ scripts = [
           (try_end),
         (try_end),
     ]),
-### Lowers an attribute/skill/proficiency until the value desired ### (NEW 3.9.2, by Khanor)
+### Lowers an attribute/skill/proficiency until the value desired ### (NEW v3.9.2, by Khanor)
     ("ee_lower_actor_attribute",
       [
       (store_script_param, ":attribute", 1),
@@ -22230,7 +22229,7 @@ scripts = [
           (try_end),
         (try_end),
 
-        ### Light correction in the other direction to catch cases where proficiency is not a multiple of 5 ### (NEW 3.9.2a, by Khanor)
+        ### Light correction in the other direction to catch cases where proficiency is not a multiple of 5 ### (NEW v3.9.2a, by Khanor)
         (store_proficiency_level, ":cur_value", ":actor", ":proficiency"),
         (assign, ":end", ":value"),
         (try_for_range, ":unused", 0, ":end"),
@@ -22244,6 +22243,49 @@ scripts = [
           (try_end),
         (try_end),
     ]),
+
+    ### Script for reloading starting equipment of Faction Leaders, Lords, Ladies, etc. in an ongoing game, for increased save game compatibility (NEW 3.9.3, by Khanor) ###
+    ("ee_reload_character_starting_equipment",
+      [
+      (store_script_param, ":troop_no", 1),
+      (store_script_param, ":source_troop", 2),
+
+      (try_begin), ### if troop = player don't clear inventory
+        (neq, ":troop_no", "trp_player"),
+        (troop_clear_inventory, ":troop_no"),
+        (troop_get_inventory_capacity, ":inv_cap", ":troop_no"),
+        (try_for_range, ":i_slot", 0, ":inv_cap"),
+          (troop_set_inventory_slot, ":troop_no", ":i_slot", -1),
+        (try_end),
+      (try_end),
+
+      (call_script, "script_give_source_troop_inventory_to_troop", ":troop_no", ":source_troop", 1),
+      ]
+    ),
+
+    ### Script for reloading starting equipment of Faction Leaders, Lords, Ladies, etc., but excluding the player's spouse. Useful if companion capabilities are added to them in the future (NEW 3.9.3, by Khanor) ###
+    ("ee_reload_character_starting_equipment_excluding_player_spouse",
+      [
+      (store_script_param, ":troop_no", 1),
+      (store_script_param, ":source_troop", 2),
+
+      (try_begin),
+        (troop_get_slot, ":spouse", "trp_player", slot_troop_spouse), ### Get player's spouse.
+      (try_end),
+      
+      (try_begin), ### if troop = player don't clear inventory
+        (neq, ":troop_no", "trp_player"),
+        (neq, ":troop_no", ":spouse"), ### Exclude spouse too!
+        (troop_clear_inventory, ":troop_no"),
+        (troop_get_inventory_capacity, ":inv_cap", ":troop_no"),
+        (try_for_range, ":i_slot", 0, ":inv_cap"),
+          (troop_set_inventory_slot, ":troop_no", ":i_slot", -1),
+        (try_end),
+      (try_end),
+      
+      (call_script, "script_give_source_troop_inventory_to_troop", ":troop_no", ":source_troop", 1),
+      ]
+    ),
 ####################################  NEW v3.7
     ("ee_lord_find_faction_to_defect", 
     [
@@ -22283,7 +22325,7 @@ scripts = [
       (assign, reg0, ":new_faction"),    
     ]),
 	
-	################## NEW 3.7 - as Deadpool once said, "IT'S SO BORING!" -------- not necessary. Just make the original lords not get their names and titles changed when they change factions.
+	################## NEW v3.7 - as Deadpool once said, "IT'S SO BORING!" -------- not necessary. Just make the original lords not get their names and titles changed when they change factions.
     ("ee_assign_names_to_lords", 
     [
       # (try_for_range, ":faction_no", active_npcs_begin, active_npcs_end),      

@@ -390,25 +390,18 @@ dialogs = [
     (agent_set_team, ":player_agent", 0),
     (agent_set_team, "$g_talk_agent", 1),
 ]],
-  
 
-[anyone|plyr, "camp_soldier_talk", [], "Tell me about yourself", "camp_view_char_requested",[]],
+[anyone|plyr, "camp_soldier_talk", [], "Tell me about yourself.", "camp_view_char_requested",[]],
 [anyone, "camp_view_char_requested", [], "Very well, listen to this...", "camp_view_char",[[change_screen_view_character]]],
 [anyone, "camp_view_char", [], "Anything else?", "camp_soldier_talk",[]],
-
 [anyone|plyr, "camp_soldier_talk", [], "Nothing right now.", "close_window",[]],
-    
-    
-  
+
 [anyone|plyr, "camp_prisoner_talk", [], "I have decided that you have lived long enough.", "camp_prisoner_kill",[]],
 [anyone|plyr, "camp_prisoner_talk", [], "Enjoying your captivity? I came here to laugh at your pathetic state.", "camp_prisoner_insult",[]],
-
-
-
 [anyone|plyr, "camp_prisoner_talk", [], "Nothing, goodbye.", "close_window",[]],
 
 [anyone, "camp_prisoner_kill", [], "Damn you to hell! Is there no mercy in that breast of yours?", "close_window",[
-    (try_for_agents, ":agent_no"),    
+    (try_for_agents, ":agent_no"),
         (agent_is_human, ":agent_no"),
         (agent_is_alive, ":agent_no"),
         (agent_get_entry_no, ":entry_no", ":agent_no"),
@@ -424,7 +417,6 @@ dialogs = [
     (try_end),
 ]],
 [anyone, "camp_prisoner_insult", [], "Enjoy your laughs while you can. One day you will reap what you sow.", "close_window",[]],
-  
 ##########################################################################     
 
 
@@ -1863,7 +1855,7 @@ dialogs = [
         
         [anyone|plyr, "mongol_camp",
           [],
-        "Yes yes, chin-ping chin....", "close_window",
+        "Yes yes, chin-ping chin...", "close_window",
           [],
         ],
         ##MIGRATE TO
@@ -2447,7 +2439,7 @@ dialogs = [
                (str_store_string, s0, "@Low"),
              (else_try),  #low
                #(party_slot_eq, "$g_encountered_party", ":building_slot",-1),
-               (str_store_string, s0, "@....I have absolutely no idea"),  
+               (str_store_string, s0, "@...I have absolutely no idea"),
              (try_end),
              (party_get_slot, ":last_tax", "$g_encountered_party", manor_slot_last_tax), 
              (assign, reg0, ":last_tax"),
@@ -3455,7 +3447,7 @@ dialogs = [
         
         [anyone|plyr, "priest_begin",
           [],
-        "Goodbye", "close_window",
+        "Goodbye.", "close_window",
           [],
         ],
         #sin - honor priest
@@ -3470,7 +3462,7 @@ dialogs = [
             (store_troop_gold, ":gold" , "trp_player"),
             (ge, ":gold", 1000),
           ],
-        "My worldly means are limited father, I will donate 1000 denars", "priest_begin",
+        "My worldly means are limited father, I will donate 1000 denars.", "priest_begin",
           [
             (str_store_string, s0, "@Your donation is most appreciated my son, go with the blessing and forgiveness of our\
                                     Holy Father. Benedictus Deus. Benedictum Nomen Sanctum eius?"),
@@ -3484,7 +3476,7 @@ dialogs = [
             (store_troop_gold, ":gold" , "trp_player"),
             (ge, ":gold", 2000),
           ],
-        "I will give all I can spare, 2000 denars", "priest_begin",
+        "I will give all I can spare, 2000 denars.", "priest_begin",
           [
             (str_store_string, s0, "@Your donation is most appreciated my son, go with the blessing and forgiveness of our\
                                     Holy Father. Benedictus Deus. Benedictum Nomen Sanctum eius?"),
@@ -3498,7 +3490,7 @@ dialogs = [
             (store_troop_gold, ":gold" , "trp_player"),
             (ge, ":gold", 3000),
           ],
-        "No expense is too great in matters of faith, please accept 3000 denars", "priest_begin",
+        "No expense is too great in matters of faith, please accept 3000 denars.", "priest_begin",
           [
             (str_store_string, s0, "@Your donation is most appreciated my son, go with the blessing and forgiveness of our\
                                     Holy Father. Benedictus Deus. Benedictum Nomen Sanctum eius?"),
@@ -3517,7 +3509,7 @@ dialogs = [
         #priest - moral
         [anyone, "priest_men",
           [],
-        "I would be glad to hold a sermon for your men, my son. Though I would humbly ask that you prove yourself charitable in return", "priest_men",
+        "I would be glad to hold a sermon for your men, my son. Though I would humbly ask that you prove yourself charitable in return.", "priest_men",
           [],
         ],
         
@@ -3546,7 +3538,7 @@ dialogs = [
           [
             (assign, reg1, 9000),
           ],
-        "Off course, my child. Scriptorium will alow you to purchase books that we sometimes sell to traders. We will need a donation of {reg1} gold coins.", "priest_scriptorium",
+        "Of course, my child. A scriptorium will allow you to purchase books that we sometimes sell to traders. We will need a donation of {reg1} gold coins.", "priest_scriptorium",
           [
             (str_store_string, s0, "@Yes?"),
           ],
@@ -3557,7 +3549,7 @@ dialogs = [
             (store_troop_gold, ":gold", "trp_player"),
             (ge, ":gold", reg1),
           ],
-        "Off course.", "priest_begin",
+        "Of course.", "priest_begin",
           [
             (troop_remove_gold, "trp_player", reg1),
             (party_set_slot, "$g_encountered_party", manor_slot_Monastery_upgrade, manor_Monastery_scriptorium),
@@ -3576,7 +3568,7 @@ dialogs = [
         [anyone, "priest_invite_order",
           [
           ],
-        "Ofcourse. With the donation of {reg10} gold I can arrange for any order to come to our monastery. Which order would you like to invite?", "priest_invite_order",
+        "Of course. With the donation of {reg10} gold I can arrange for any order to come to our monastery. Which order would you like to invite?", "priest_invite_order",
           [
           ],
         ],
@@ -3593,7 +3585,7 @@ dialogs = [
         
         [anyone|plyr, "priest_invite_order",
           [],
-        "The Knights Hospitaller. ", "priest_begin",
+        "The Knights Hospitaller.", "priest_begin",
           [
             (troop_remove_gold, "trp_player", reg10),
             (party_set_slot, "$g_encountered_party", manor_slot_Monastery_upgrade, manor_Monastery_hospitaliers),
@@ -3603,7 +3595,7 @@ dialogs = [
         
         [anyone|plyr, "priest_invite_order",
           [],
-        "The Teutonic Order. ", "priest_begin",
+        "The Teutonic Order.", "priest_begin",
           [
             (troop_remove_gold, "trp_player", reg10),
             (party_set_slot, "$g_encountered_party", manor_slot_Monastery_upgrade, manor_Monastery_teutons),
@@ -3613,7 +3605,7 @@ dialogs = [
         
         [anyone|plyr, "priest_invite_order",
           [],
-        "The Order of Saint Lazarus. ", "priest_begin",
+        "The Order of Saint Lazarus.", "priest_begin",
           [
             (troop_remove_gold, "trp_player", reg10),
             (party_set_slot, "$g_encountered_party", manor_slot_Monastery_upgrade, manor_Monastery_lazarus),
@@ -3623,7 +3615,7 @@ dialogs = [
         
         [anyone|plyr, "priest_invite_order",
           [],
-        "The Order of Santiago. ", "priest_begin",
+        "The Order of Santiago.", "priest_begin",
           [
             (troop_remove_gold, "trp_player", reg10),
             (party_set_slot, "$g_encountered_party", manor_slot_Monastery_upgrade, manor_Monastery_santiago),
@@ -3633,7 +3625,7 @@ dialogs = [
         
         [anyone|plyr, "priest_invite_order",
           [],
-        "The order of Calatrava. ", "priest_begin",
+        "The order of Calatrava.", "priest_begin",
           [
             (troop_remove_gold, "trp_player", reg10),
             (party_set_slot, "$g_encountered_party", manor_slot_Monastery_upgrade, manor_Monastery_calatrava),
@@ -3643,7 +3635,7 @@ dialogs = [
         
         [anyone|plyr, "priest_invite_order",
           [],
-        "The Knights of Saint Thomas of Acre. ", "priest_begin",
+        "The Knights of Saint Thomas of Acre.", "priest_begin",
           [
             (troop_remove_gold, "trp_player", reg10),
             (party_set_slot, "$g_encountered_party", manor_slot_Monastery_upgrade, manor_Monastery_thomas),
@@ -3653,7 +3645,7 @@ dialogs = [
         
         [anyone|plyr, "priest_invite_order",
           [],
-        "Pardon me Father, I changed my mind", "priest_begin",
+        "Pardon me Father, I've changed my mind.", "priest_begin",
           [
             (str_store_string, s0, "@Yes?"),
           ],
@@ -3712,7 +3704,7 @@ dialogs = [
         # [
 
         # ],
-        # "One will do, i'm a weekling....", "whore_ask_self_number_price",
+        # "One will do, i'm a weekling...", "whore_ask_self_number_price",
         # [
             # (assign, "$temp", 1),
         # ],
@@ -9818,7 +9810,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (call_script, "script_troop_get_player_relation", ":troop_no"),
   (assign, reg10, reg0),
   ],
-  "{s10} of {s11} (Relations: {reg10}.)", "dplmc_constable_execution_ask_confirm",
+  "{s10} of {s11} (Relations: {reg10}).", "dplmc_constable_execution_ask_confirm",
   #########
 [
   (store_repeat_object, "$lord_to_execute"),
@@ -9848,7 +9840,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   "What method do you want to execute him?", "dplmc_constable_execution_confirm_3",[]],
   
  [anyone|plyr, "dplmc_constable_execution_confirm_3", [],
- "Beheading (honorable death.)", "dplmc_constable_execution_confirm_4",
+ "Beheading (honorable death).", "dplmc_constable_execution_confirm_4",
  [(assign, "$g_method_of_execution", 1),]],
   
  [anyone|plyr, "dplmc_constable_execution_confirm_3", [],
@@ -9900,7 +9892,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   "No, I changed my mind.", "dplmc_constable_pretalk",[]], 
   
  [anyone, "dplmc_constable_execution_confirm_6", [],
-  "Very well. I will schedule his execution as soon as possible. You will be notified when it happens (will take up to 3 days.)", "dplmc_constable_pretalk",[]],
+  "Very well. I will schedule his execution as soon as possible. You will be notified when it happens (will take up to 3 days).", "dplmc_constable_pretalk",[]],
 #####
 
 #############################################
@@ -10000,7 +9992,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
  (store_mul, reg12, reg11, 70), ## 70%
  (val_mul, reg11, 30), #### 30%
  ],
- "By my calculations, to eliminate someone of the status of {s10}, it would require {reg10} coins. You pay 30% upfront ({reg11}.) If the assassination succeeds you pay the rest ({reg12}.) Do you want to proceed?", "dplmc_constable_assassination_confirm_3",[]],
+ "By my calculations, to eliminate someone of the status of {s10}, it would require {reg10} coins. You pay 30% upfront ({reg11}). If the assassination succeeds you pay the rest ({reg12}). Do you want to proceed?", "dplmc_constable_assassination_confirm_3",[]],
   
  [anyone|plyr, "dplmc_constable_assassination_confirm_3", 
  [
@@ -10504,7 +10496,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Heavy ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm",
+"Heavy ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -10632,7 +10624,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Spirited ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm",
+"Spirited ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -10795,7 +10787,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Champion ({reg1} coins, {reg2} hours.)", "constable_horse_train_confirm",
+"Champion ({reg1} coins, {reg2} hours).", "constable_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -10919,7 +10911,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (lt, ":gold", "$g_current_horse_price"),
 (assign, reg1, "$g_current_horse_price"),
 ],
-"I don't have the money right now ({reg1} coins.)", "dplmc_constable_talk",
+"I don't have the money right now ({reg1} coins).", "dplmc_constable_talk",
 []],
 ########################
 [anyone, "constable_horse_train_confirm_3", [], "Very well. You will be notified when it's done.", "dplmc_constable_talk",
@@ -10953,58 +10945,56 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 ############### NEW v3.12 - 
 [anyone|plyr, "dplmc_constable_talk",
-[
+  [],
+  "I want to change your equipment.", "dplmc_constable_change_inventory",
+  []
 ],
-"I want to change your equipment.", "dplmc_constable_change_inventory", []],
 
 
 [anyone, "dplmc_constable_change_inventory",
-[
-],
-"Yes. Here`s what i`m using...", "dplmc_constable_pretalk", ]
-[
-(change_screen_equip_other)
-]
+  [],
+  "Yes. Here's what I'm using...", "dplmc_constable_pretalk",
+  [
+    (change_screen_equip_other)
+  ]
 ],
 ############### 
 
 
 
+### Dismiss constable   
+[anyone|plyr, "dplmc_constable_talk",
+  [],
+  "You are dismissed.", "dplmc_constable_dismiss_confirm_ask", []
+],
 
-##dismiss constable   
-   [anyone|plyr, "dplmc_constable_talk",
-   [
-   ],
-"You are dismissed.", "dplmc_constable_dismiss_confirm_ask", []],
-   
-   [anyone, "dplmc_constable_dismiss_confirm_ask",
-   [
-   ],
-"Are you sure that you don't need me anymore?", "dplmc_constable_dismiss_confirm", []],
-   
-   [anyone|plyr, "dplmc_constable_dismiss_confirm",
-   [
-   ],
-"Yes I am.", "dplmc_constable_dismiss_confirm_yes", []],
-   
-   [anyone, "dplmc_constable_dismiss_confirm_yes",
-   [
-   ],
-"As you wish.", "close_window",
-   [
+[anyone, "dplmc_constable_dismiss_confirm_ask",
+  [],
+  "Are you sure that you don't need me anymore?", "dplmc_constable_dismiss_confirm", []
+],
+
+[anyone|plyr, "dplmc_constable_dismiss_confirm",
+  [],
+  "Yes I am.", "dplmc_constable_dismiss_confirm_yes", []
+],
+
+[anyone, "dplmc_constable_dismiss_confirm_yes",
+  [],
+  "As you wish.", "close_window",
+  [
     (assign, "$g_player_constable", -1),
     (assign, "$g_constable_training_center", -1),
-   ]],
-   
-   [anyone|plyr, "dplmc_constable_dismiss_confirm",
-   [
-   ],
-"No I am not.", "dplmc_constable_pretalk", []],
+  ]
+],
 
-   
+[anyone|plyr, "dplmc_constable_dismiss_confirm",
+  [],
+  "No I am not.", "dplmc_constable_pretalk", []
+],
+
 [anyone|plyr, "dplmc_constable_talk", [],
-"Thank you, I will come back to you later.", "close_window",[
- ]],
+  "Thank you, I will come back to you later.", "close_window", []
+],
 
 
 
@@ -12280,7 +12270,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (str_store_faction_name, s1, "$crusader_faction"),
 (str_store_party_name, s2, "$crusade_target"),
 (str_store_faction_name, s3, "$crusade_target_faction"),
-], "Yes! They assembled at {s1} and their target is {s2} ({s3}.)", "lord_talk",[]],
+], "Yes! They assembled at {s1} and their target is {s2} ({s3}).", "lord_talk",[]],
 
 [anyone, "pope_talk_crusade_active", 
 [  
@@ -12346,7 +12336,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 # [trp_pope|plyr, "pope_crusade_against_fief", 
 [anyone|plyr, "pope_crusade_against_fief", 
  [
- ], "....I changed my mind.", "pope_crusade_not_start",[]],   
+ ], "...I changed my mind.", "pope_crusade_not_start",[]],   
 ############
 
 #####################
@@ -12379,7 +12369,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 # [trp_pope|plyr, "pope_crusade_accept", 
 [anyone|plyr, "pope_crusade_accept", 
  [
- ], "....I changed my mind.", "pope_crusade_not_start",[]],   
+ ], "...I changed my mind.", "pope_crusade_not_start",[]],   
 #########################
  # [trp_pope, "pope_crusade_start", 
  [anyone, "pope_crusade_start", 
@@ -13430,7 +13420,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (assign, reg20, ":cost"),
 ##################
 ],
-"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20}.)). If you already know that culture then the cost is free.", "dplmc_chancellor_kingdom_culture_select",
+"{s11}. ^ Do you want to change it? Remember that something like this requires extensive resources, so it will not come cheap. Think twice before choosing any (costs 15,000 gold - 5% per level of trading of your party ({reg20})). If you already know that culture then the cost is free.", "dplmc_chancellor_kingdom_culture_select",
 []],
 
 
@@ -13754,382 +13744,383 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ###################################################
 [anyone, "dplmc_chancellor_kingdom_language_select_1", 
 [
-(eq, "$g_ask_for_language", 1),     
-], 
+  (eq, "$g_ask_for_language", 1),     
+],
 "And what language would you like to use (This affects the names of the lords recruited into your faction)?", "dplmc_chancellor_kingdom_language_select_2", []
 ],
 ###################################################
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_finnish"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Finnish", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_finnish"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Finnish.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_finnish),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Finnish"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_finnish),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Finnish"),
 ]
 ],
 
-
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_polish"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Polish", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_polish"), ### NEW v3.12 - 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Polish.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_polish),
-(assign, "$g_ask_for_language", 0),    
-(display_message, "@Current faction language is: Polish"),   
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_polish),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Polish"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_serbian"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Serbian", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_serbian"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Serbian.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_serbian),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Serbian"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_serbian),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Serbian"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_welsh"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-],  
-"Welsh", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_welsh"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Welsh.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_welsh),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Welsh"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_welsh),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Welsh"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"German", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"German.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_german),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: German"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_german),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: German"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_balkan"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Bulgarian", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_balkan"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Bulgarian.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_bulgarian),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Bulgarian"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_bulgarian),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Bulgarian"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_rus"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Rus", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_rus"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Rus.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_rus),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Rus"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_rus),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Rus"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_nordic"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Danish", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_nordic"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Danish.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_danish),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Danish"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_danish),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Danish"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_nordic"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Norwegian", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_nordic"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Norwegian.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_norwegian),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Norwegian"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_norwegian),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Norwegian"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_nordic"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Swedish", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_nordic"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Swedish.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_swedish),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Swedish"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_swedish),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Swedish"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_baltic"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Baltic", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_nordic"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Baltic.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_baltic), 
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Baltic"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_baltic),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Baltic"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-############### NEW v3.12 - 
-(this_or_next|eq, "$g_player_culture", "fac_culture_marinid"),   
-(this_or_next|eq, "$g_player_culture", "fac_culture_mamluke"),   
-(this_or_next|eq, "$g_player_culture", "fac_culture_andalus"),   
-(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian"),   
-############### 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Arab", "minister_pretalk", 
+  #### NEW v3.12 - ###
+  (this_or_next|eq, "$g_player_culture", "fac_culture_marinid"),
+  (this_or_next|eq, "$g_player_culture", "fac_culture_mamluke"),
+  (this_or_next|eq, "$g_player_culture", "fac_culture_andalus"),
+  (this_or_next|eq, "$g_player_culture", "fac_culture_anatolian"),
+  ####################
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Arab.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_arab),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Arab"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_arab),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Arab"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
-[############### NEW v3.12 - 
-(this_or_next|eq, "$g_player_culture", "fac_culture_byzantium"),   
-(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian_christian"),   
-############### 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Greek", "minister_pretalk", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_greek),
-(assign, "$g_ask_for_language", 0),   
-(display_message, "@Current faction language is: Greek"),    
+  ### NEW v3.12 - ###
+  (this_or_next|eq, "$g_player_culture", "fac_culture_byzantium"),
+  (this_or_next|eq, "$g_player_culture", "fac_culture_anatolian_christian"),
+  ###################
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Greek.", "minister_pretalk",
+[
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_greek),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Greek"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
-(this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Spanish", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+  (this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Spanish.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_spanish),
-(assign, "$g_ask_for_language", 0),    
-(display_message, "@Current faction language is: Spanish"),   
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_spanish),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Spanish"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Portuguese", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Portuguese.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_portuguese),
-(assign, "$g_ask_for_language", 0),   
-(display_message, "@Current faction language is: Portuguese"),    
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_portuguese),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Portuguese"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_italian"),  ############### NEW v3.12 -   
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Italian", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_italian"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Italian.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_italian),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Italian"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_italian),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Italian"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_gaelic"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Gaelic", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_gaelic"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Gaelic.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_gaelic),    
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Gaelic"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_gaelic),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Gaelic"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian_christian"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Armenian", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_anatolian_christian"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Armenian.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_armenian),   
-(assign, "$g_ask_for_language", 0), 
-(display_message, "@Current faction language is: Armenian"),      
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_armenian),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Armenian"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",  
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_anatolian"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Seljuk", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_anatolian"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Seljuk.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_turkish),  
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Seljuk"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_turkish),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Seljuk"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_scotish"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Scottish", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_scotish"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Scottish.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_scottish),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Scottish"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_scottish),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Scottish"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-############### NEW v3.12 - 
-(this_or_next|eq, "$g_player_culture", "fac_culture_hungarian"),   
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
-###############
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Hungarian", "minister_pretalk", 
+  ### NEW v3.12 - ###
+  (this_or_next|eq, "$g_player_culture", "fac_culture_hungarian"),
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+  ###################
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Hungarian.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_hungarian),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Hungarian"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_hungarian),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Hungarian"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_english"),   ############### NEW v3.12 - 
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"English", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_english"), ### NEW v3.12 - 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"English.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_english),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: English"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_english),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: English"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_french"),   ############### NEW v3.12 - 
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"French", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_french"), ### NEW v3.12 - 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"French.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_french),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: French"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_french),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: French"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Czech", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Czech.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_czech),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Czech"),  
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_czech),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Czech"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_mongol"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Mongolian", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_mongol"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Mongolian.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_mongol),
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Mongolian"),     
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_mongol),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Mongolian"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(this_or_next|eq, "$g_player_culture", "fac_culture_crusader"),   ############### NEW v3.12 - 
-(this_or_next|eq, "$g_player_culture", "fac_culture_western"),   ############### NEW v3.12 - 
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Mixed European", "minister_pretalk", 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_crusader"), ### NEW v3.12 - 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_western"), ### NEW v3.12 - 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Mixed European.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_mixed_euro),   
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Mixed European"),     
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_mixed_euro),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Mixed European"),
 ]
 ],
 
-[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2", 
+[anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
-(eq, "$g_player_culture", "fac_culture_player"),
-], 
-"Custom", "minister_pretalk", 
+  (eq, "$g_player_culture", "fac_culture_player"),
+],
+"Custom.", "minister_pretalk",
 [
-(faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_custom), 
-(assign, "$g_ask_for_language", 0),     
-(display_message, "@Current faction language is: Custom"),     
+  (faction_set_slot, "$players_kingdom", slot_faction_language, faction_language_custom),
+  (assign, "$g_ask_for_language", 0),
+  (display_message, "@Current faction language is: Custom"),
 ]
 ],
 #####################################################################################
 
-[anyone, "dplmc_chancellor_kingdom_language_select_1", 
+[anyone, "dplmc_chancellor_kingdom_language_select_1",
 [
-(eq, "$g_ask_for_language", 0),     
-], 
-"Very well", "minister_pretalk", 
+  (eq, "$g_ask_for_language", 0),
+],
+"Very well.", "minister_pretalk",
 [
 ]
 ],
@@ -14193,7 +14184,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 (lt, ":player_gold", ":cost"),
 ########################
 ],
-"Forget about it (not enough money.)", "minister_pretalk",
+"Forget about it (not enough money).", "minister_pretalk",
 []],
 ######
 ##diplomacy end+
@@ -15024,18 +15015,18 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 ############### NEW v3.12 - 
 [anyone|plyr, "minister_talk",
-[
+  [],
+  "I want to change your equipment.", "minister_change_inventory",
+  []
 ],
-"I want to change your equipment.", "minister_change_inventory", []],
 
 
 [anyone, "minister_change_inventory",
-[
-],
-"Yes. Here`s what i`m using...", "minister_pretalk", ]
-[
-(change_screen_equip_other)
-]
+  [],
+  "Yes. Here's what I'm using...", "minister_pretalk",
+  [
+    (change_screen_equip_other)
+  ]
 ],
 ############### 
 
@@ -17578,7 +17569,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 
 
-# Events....
+# Events...
 # Choose friend.
 #Post 0907 changes begin
 [anyone , "start", [(troop_slot_eq, "$g_talk_troop",slot_troop_occupation, slto_kingdom_hero),
@@ -20843,7 +20834,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (try_begin),
      (troop_slot_eq, "$g_talk_troop", slot_troop_recruitment_random, 0),
 
-       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads.)
+       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads).
      (troop_get_slot, ":temp_ai_seed", "$g_talk_troop", slot_troop_temp_decision_seed),
      (store_div, ":random", ":temp_ai_seed", 100),  #I used div instead of mod to have a different random value, value generated from (mod 100) will be used in next steps. These two values should be non-related.
      (val_add, ":random", 1),
@@ -20867,7 +20858,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    (try_begin),
      (troop_slot_eq, "$g_talk_troop", slot_troop_recruitment_random, 0),
 
-       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads.)
+       #(store_random_in_range, ":random", 1, 101), #replaced with below 3 lines to provide a constant history (not changable by save-loads).
      (troop_get_slot, ":temp_ai_seed", "$g_talk_troop", slot_troop_temp_decision_seed),
      (store_div, ":random", ":temp_ai_seed", 100),  #I used div instead of mod to have a different random value, value generated from (mod 100) will be used in next steps. These two values should be non-related.
      (val_add, ":random", 1),
@@ -23484,8 +23475,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (party_clear, "p_temp_party"),
   (party_clear, "p_temp_party_2"),
 
-  ###############################################################################################################################
-  ### Update number of fiefs and tax inefficiency on exchanging fiefs to avoid a bugged budget report! (NEW 3.9.2, by Khanor) ###
+  ################################################################################################################################
+  ### Update number of fiefs and tax inefficiency on exchanging fiefs to avoid a bugged budget report! (NEW v3.9.2, by Khanor) ###
   (try_begin),
     (eq, "$tom_difficulty_fief", 0), ### Hard
     (assign, ":num_centers_needed_for_efficiency_loss", 2),
@@ -24211,7 +24202,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (this_or_next|neq, ":ai_state", ":planned_state"),
         (neq, ":ai_object", ":planned_object"),
 
-    (str_store_string, s14, "str__however_that_may_change_shortly_s14"),
+    (str_store_string, s14, "str_however_that_may_change_shortly_s14"),
   (try_end),
 
   ],
@@ -24295,7 +24286,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 # "lord_strategy_why_not",[
 # ]],
 
-#This dialog appears when lord disagrees with marshal about the selected faction ai (attack/defend/gather/other.)
+#This dialog appears when lord disagrees with marshal about the selected faction ai (attack/defend/gather/other).
 #To Steve - I took that dialog upper from below one. Lord should compare his faction ai choice with marshal's one before comparing preffered ai objects.
 [anyone, "lord_strategy_follow_evaluation",
 [
@@ -25716,7 +25707,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    # (eq, "$players_kingdom", "fac_player_supporters_faction"),
    (eq, "$players_kingdom", "$players_kingdom"),
-  ], "Indeed.... Did you offer vassalage, then, just to by time? Very well -- you shall have time to reconsider, but if you are toying with me, it will do your reputation no credit.", "close_window",
+  ], "Indeed... Did you offer vassalage, then, just to by time? Very well -- you shall have time to reconsider, but if you are toying with me, it will do your reputation no credit.", "close_window",
    [
    (assign, "$g_leave_encounter", 1),
     ]],
@@ -25725,7 +25716,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    [
    # (eq, "$players_kingdom", "fac_player_supporters_faction"),
    (eq, "$players_kingdom", "$players_kingdom"),
-  ], "Indeed.... Did you offer vassalage, then, just to buy time? Very well -- you shall have time to reconsider, but if you are toying with me, it will do your reputation no credit.", "close_window",
+  ], "Indeed... Did you offer vassalage, then, just to buy time? Very well -- you shall have time to reconsider, but if you are toying with me, it will do your reputation no credit.", "close_window",
    [
    (assign, "$g_leave_encounter", 1),
     ]],
@@ -25854,7 +25845,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr, "lord_give_oath_3", [],  "I pledge homage to you as lawful ruler of the {s41}.", "lord_give_oath_4", []],
 [anyone|plyr, "lord_give_oath_3", [],  "Excuse me, {reg63?my lady:sir}. But I feel I need to think about this.", "lord_give_oath_give_up", []],
 
-[anyone, "lord_give_oath_4", [],  "I will remain as your loyal and devoted {man/follower} as long as my breath remains....", "lord_give_oath_5", []],
+[anyone, "lord_give_oath_4", [],  "I will remain as your loyal and devoted {man/follower} as long as my breath remains...", "lord_give_oath_5", []],
 
 [anyone|plyr, "lord_give_oath_5", [],  "I will remain as your loyal and devoted {man/follower} as long as my breath remains...", "lord_give_oath_6", []],
 [anyone|plyr, "lord_give_oath_5", [],  "{reg63?My lady:Sir}, may I ask for some time to think about this?", "lord_give_oath_give_up", []],
@@ -26312,7 +26303,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
      (gt, ":is_war", 0),
      (val_add, ":honor_change", -5),
  (try_end),
- #The baseline change is -10.  The greatest possible is -25 (100 relation with the king, and at war.)
+ #The baseline change is -10.  The greatest possible is -25 (100 relation with the king, and at war).
  (val_sub, ":honor_change", 10),
  
  #If the player was insufficiently recognized for his service, the honor loss
@@ -26429,8 +26420,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
          (val_sub, ":relation_penalty", 1),
      (try_end),
              
-     #Lords who would consider the rebellion more justified if the player was "under-fiefed"
-     #(some will only care if they liked the player; others have a more general sense of fairness.)
+     ### Lords who would consider the rebellion more justified if the player was "under-fiefed"
+     ### (Some will only care if they liked the player; others have a more general sense of fairness.)
      (try_begin),
          (ge, ":fief_unfairness", 1),
          (try_begin),
@@ -27235,18 +27226,18 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
                          #tom
 
 
-############### NEW v3.12 - 
-[anyone|plyr, "lord_talk", 
-[
-(ge, "$cheat_mode", 1),
-], "[DEBUG] Randomize this lord's name [Leave the conversation to see effects].", "lord_pretalk", 
-[
-(troop_get_slot, ":cur_lord_culture", "$g_talk_troop", slot_troop_culture),
-(call_script, "script_get_random_name_for_lord", "$g_talk_troop_faction", "$g_talk_troop", ":cur_lord_culture"), 
-]
+### NEW v3.12 - ###
+[anyone|plyr, "lord_talk",
+  [
+    (ge, "$cheat_mode", 1),
+  ], "[DEBUG] Randomize this lord's name [Leave the conversation to see effects].", "lord_pretalk",
+  [
+    (troop_get_slot, ":cur_lord_culture", "$g_talk_troop", slot_troop_culture),
+    (call_script, "script_get_random_name_for_lord", "$g_talk_troop_faction", "$g_talk_troop", ":cur_lord_culture"),
+  ]
 ],
-############### 
-                         
+###################
+
 
 [anyone, "lord_propose_mercenary", [(call_script, "script_party_calculate_strength", "p_main_party", 0),
                                      (assign, ":offer_value", reg0),
@@ -28812,48 +28803,47 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  ##diplomacy end+ (Add "dedicate a tournament" option even after marriage)
 ########################
 [anyone|plyr, "spouse_talk",
-   [
+  [
     (neg|check_quest_active, "qst_organize_feast"),
-   ],
-"I was thinking that perhaps we could host a feast.", "spouse_organize_feast",[
- ]],
+  ],
+  "I was thinking that perhaps we could host a feast.", "spouse_organize_feast", []
+],
 
 [anyone|plyr, "spouse_talk",
-   [
-   ],
-"Let us take inventory of our household possessions.", "spouse_household_possessions",[
-   (change_screen_loot, "trp_household_possessions"),
- ]],
+  [],
+  "Let us take inventory of our household possessions.", "spouse_household_possessions",
+  [
+    (change_screen_loot, "trp_household_possessions"),
+  ]
+],
 
 [anyone, "spouse_household_possessions",
-   [
-   ],
-"Anyway, that is the content of our larder.", "spouse_pretalk",[
- ]],
+  [],
+  "Anyway, that is the content of our larder.", "spouse_pretalk", []
+],
 
 
 ############### NEW v3.12 - 
 [anyone|plyr, "spouse_talk",
-[
+  [],
+  "I want to change your equipment.", "spouse_change_inventory", []
 ],
-"I want to change your equipment.", "spouse_change_inventory", []],
 
 
 [anyone, "spouse_change_inventory",
-[
-],
-"Yes. Here`s what i`m using...", "spouse_pretalk", ]
-[
-(change_screen_equip_other)
-]
+  [],
+  "Yes. Here's what I'm using...", "spouse_pretalk",
+  [
+    (change_screen_equip_other)
+  ]
 ],
 ############### 
 
 
 [anyone|plyr, "spouse_talk", [],
-"We shall speak later, my {wife/husband}.", "close_window",[
-     (assign, "$g_leave_encounter", 1),
- ]],
+  "We shall speak later, my {wife/husband}.", "close_window",
+  [(assign, "$g_leave_encounter", 1),]
+],
 
 
 
@@ -28947,8 +28937,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
    (val_div, ":days_to_wait", 24),
    (assign, reg3, ":days_to_wait"),   
    ],
-"A splendid idea, my {husband/wife}. However, our realm has recently had a feast. Perhaps we should wait another {reg3} days before we organize another one.", "spouse_pretalk",[
- ]],
+  "A splendid idea, my {husband/wife}. However, our realm has recently had a feast. Perhaps we should wait another {reg3} days before we organize another one.", "spouse_pretalk",[]
+],
 
 
 
@@ -33910,7 +33900,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "bounty_1", [], "Nothing. Sorry to trouble you.", "close_window",[]],
 
 [anyone, "bounty_2", [], "How do I know you're not a bountyhunter?!!", "bounty_3",[]],
-[anyone|plyr, "bounty_3", [], "I can assure you I....", "bounty_4",[]],
+[anyone|plyr, "bounty_3", [], "I can assure you I...", "bounty_4",[]],
 ###################################
 [anyone, "bounty_4", [(eq, "$g_talk_troop", "$bounty_target_1")], "Allright so I made a mistake! ONE mistake!! Can't a man start over?!! Do I have to keep on paying?!! HUH?!?! Maybe I should make another mistake!!!", "close_window",
    [(set_party_battle_mode),
@@ -40123,7 +40113,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
    # (store_script_param, ":execution_reason", 5),
 ]],
 ######## This one made the game crash
-# [anyone, "prisoner_chat_noble_execute_4", [], "D-Damn youuuu......", "close_window",
+# [anyone, "prisoner_chat_noble_execute_4", [], "D-Damn youuuu...", "close_window",
 # [
 # (try_for_agents, ":agent_no"),
   # (agent_is_human, ":agent_no"),
@@ -40328,7 +40318,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 # (store_troop_gold, ":gold", "trp_player"),
 # (ge, ":gold", reg1),
 ],
-"Normal ({reg1} coins, {reg2} days.)", "trade_requested_horse_train_confirm",
+"Normal ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -40377,7 +40367,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 # (store_troop_gold, ":gold", "trp_player"),
 # (ge, ":gold", reg1),
 ],
-"Heavy ({reg1} coins, {reg2} days.)", "trade_requested_horse_train_confirm",
+"Heavy ({reg1} coins, {reg2} days).", "trade_requested_horse_train_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -40442,7 +40432,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (lt, ":gold", "$g_current_horse_price"),
 (assign, reg1, "$g_current_horse_price"),
 ],
-"Sorry, i don't have the money right now ({reg1} coins.)", "merchant_trade",
+"Sorry, I don't have the money right now ({reg1} coins).", "merchant_trade",
 []],
 ########################
 [anyone, "trade_requested_horse_train_confirm_3", [], "Very well. You will be notified when it's done.", "merchant_trade",
@@ -40498,7 +40488,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (store_troop_gold, ":gold", "trp_player"),
 (ge, ":gold", reg1),
 ],
-"Yes. Bring it back to health ({reg1} coins, {reg2} days.)", "trade_requested_horse_nurse_confirm",
+"Yes. Bring it back to health ({reg1} coins, {reg2} days).", "trade_requested_horse_nurse_confirm",
 [
 (call_script, "script_ee_get_troop_horse_imod", "trp_player"),
 (assign, ":horse", reg0),
@@ -40545,7 +40535,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 (store_troop_gold, ":gold", "trp_player"),
 (lt, ":gold", reg1),
 ],
-"Sorry, i don't have the money right now ({reg1} coins.)", "merchant_trade",
+"Sorry, I don't have the money right now ({reg1} coins).", "merchant_trade",
 []],
 
 [anyone|plyr, "trade_nurse_options", 
@@ -41314,7 +41304,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ######################################
 
 [anyone, "member_chat", [], "Your orders {sir/madam}?", "regular_member_talk",[]],
-[anyone|plyr, "regular_member_talk", [], "Tell me about yourself", "view_regular_char_requested",[]],
+[anyone|plyr, "regular_member_talk", [], "Tell me about yourself.", "view_regular_char_requested",[]],
 [anyone, "view_regular_char_requested", [], "Aye {sir/madam}. Let me tell you all there is to know about me.", "do_regular_member_view_char",[[change_screen_view_character]]],
 [anyone, "do_regular_member_view_char", [], "Anything else?", "regular_member_talk",[]],
 #tom companion recruitment
@@ -41328,7 +41318,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 ## CC view regular's equipment
 [anyone|plyr, "regular_member_talk", [],
 "Let me see your equipment.", "dplmc_view_regular_inventory", []
-  ],
+],
 ##########################
 [anyone, "dplmc_view_regular_inventory",
 [], "Very well, here is what I am using...", "dplmc_do_view_regular_inventory",#Use {s0} instead of {sir/madam}
@@ -41682,7 +41672,7 @@ I suppose there are plenty of bountyhunters around to get the job done . . .", "
 [anyone|plyr, "battle_reason_stated", [], "I am not afraid of you. I will fight.", "close_window",[[encounter_attack]]],
 
 [anyone, "start", [], "Hello. What can I do for you?", "free",[]],
-[anyone|plyr, "free", [[neg|in_meta_mission]], "Tell me about yourself", "view_char_requested",[]],
+[anyone|plyr, "free", [[neg|in_meta_mission]], "Tell me about yourself.", "view_char_requested",[]],
 [anyone, "view_char_requested", [], "Very well, listen to this...", "view_char",[[change_screen_view_character]]],
 [anyone, "view_char", [], "Anything else?", "free",[]],
 

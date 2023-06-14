@@ -48,26 +48,34 @@ game_menus = [
      # (party_get_slot, reg40, "$current_town", slot_regional_mercs2_number),
      # (party_get_slot, reg41, "$current_town", slot_regional_mercs3_number),
 
-     (try_begin),
-       (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
-       (this_or_next|eq, "$cheat_mode", 1),
-       (eq, ":town_lord", "trp_player"),
-       (str_store_string, s40, "@You currently have {reg20} lance(s) available for recruitment."),
-       (party_get_slot, reg24, "$current_town", slot_number_nobles),
-       (party_get_slot, reg25, "$current_town", slot_number_commoner),
-       (this_or_next|gt, reg24, 0),
-       (gt, reg25, 0),
-       (str_store_string, s40, "@You currently have {reg20} lance(s) available for recruitment. Among them are {reg24} nobles and {reg25} commoners that have experience on the field of battle."),
-     (try_end),
+    ### Lance de-pluralization check (NEW v3.9.3, by Khanor) ###
+    (try_begin),
+      (eq, reg20, 1),
+      (assign, reg0, 1),
+    (else_try),
+      (assign, reg0, 0),
+    (try_end),
+    ### Lance de-pluralization check end ###
+    (try_begin),
+      (party_get_slot, ":town_lord", "$current_town", slot_town_lord),
+      (this_or_next|eq, "$cheat_mode", 1),
+      (eq, ":town_lord", "trp_player"),
+      (str_store_string, s40, "@You currently have {reg20} lance{reg0?:s} available for recruitment."),
+      (party_get_slot, reg24, "$current_town", slot_number_nobles),
+      (party_get_slot, reg25, "$current_town", slot_number_commoner),
+      (this_or_next|gt, reg24, 0),
+      (gt, reg25, 0),
+      (str_store_string, s40, "@You currently have {reg20} lance{reg0?:s} available for recruitment. Among them are {reg24} nobles and {reg25} commoners that have experience on the field of battle."),
+    (try_end),
      
-     (try_begin),
-       (is_between,  "$current_town", towns_begin, towns_end),
-       (gt, reg21, 0),
-       #(is_between,  "$current_town", towns_begin, towns_end),
-       # (party_get_slot, reg24, "$current_town", slot_number_nobles),
-       # (party_get_slot, reg25, "$current_town", slot_number_commoner),
-       (str_store_string, s41, "@A local mercenary company is available for hire."),
-     (try_end),
+    (try_begin),
+      (is_between, "$current_town", towns_begin, towns_end),
+      (gt, reg21, 0),
+      # (is_between,  "$current_town", towns_begin, towns_end),
+      #  (party_get_slot, reg24, "$current_town", slot_number_nobles),
+      #  (party_get_slot, reg25, "$current_town", slot_number_commoner),
+      (str_store_string, s41, "@A local mercenary company is available for hire."),
+    (try_end),
      
      (try_begin),
        (is_between, "$current_town", centers_begin, centers_end),
@@ -4029,10 +4037,26 @@ game_menus = [
         ]
       ),
 
-      ### Troop update button, bringing older saves up to the current version's troop attributes, skills and proficiencies ### (NEW 3.9.2, by Khanor)
+      ### Troop update button, bringing older saves up to the current version's troop attributes, skills and proficiencies (NEW v3.9.2, by Khanor) ###
       ### Remember to add newly tweaked troops here if wanting players to update them!
       ("enhanced_mod_options_9",[], "Update troops to the current mod version.",
         [
+          (try_for_range, ":cur_updating_troop", "trp_merc_mamluke_range", "trp_merc_mamluke_syrian"), ### Mamluke Archer
+            (call_script, "script_ee_raise_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_archery, ":cur_updating_troop", 160),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_raise_actor_proficiency", wpt_throwing, ":cur_updating_troop", 60),
+
+            (call_script, "script_ee_lower_actor_proficiency", wpt_one_handed_weapon, ":cur_updating_troop", 100),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_two_handed_weapon, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_polearm, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_archery, ":cur_updating_troop", 160),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_crossbow, ":cur_updating_troop", 60),
+            (call_script, "script_ee_lower_actor_proficiency", wpt_throwing, ":cur_updating_troop", 60),
+          (try_end),
+
           (try_for_range, ":cur_updating_troop", "trp_merc_gaelic_spearman", "trp_merc_gaelic_axeman"), ### Gaelic Mercenary Spearman
             (call_script, "script_ee_raise_actor_attribute", ca_strength, ":cur_updating_troop", 12),
             (call_script, "script_ee_raise_actor_attribute", ca_agility, ":cur_updating_troop", 9),
@@ -4336,8 +4360,60 @@ game_menus = [
           (jump_to_menu, "mnu_camp"),
         ]
       ),
+
+      ### Unique charcter inventory update button, bringing older saves character inventories in line if item updates cluttered things up (NEW v3.9.2, by Khanor) ###
+      ### Remember to add newly tweaked troops here if wanting players to update them!
+      # ("enhanced_mod_options_10",[], "Reload inventories of Lords, Ladies and Tournament Competitors. (Excluding player spouse.)",
+      #   [
+      #     (try_for_range, ":cur_updating_character", "trp_kingdom_1_lord", "trp_knight_1_1"), ### All Faction Leaders.
+      #       (call_script, "script_ee_reload_character_starting_equipment_excluding_player_spouse", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (try_for_range, ":cur_updating_character", "trp_knight_1_1", "trp_enhanced_rnd_lord_1"), ### All starting Lords (not custom).
+      #       (call_script, "script_ee_reload_character_starting_equipment_excluding_player_spouse", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (try_for_range, ":cur_updating_character", "trp_knight_1_1_wife", "trp_heroes_end"), ### All starting Ladies.
+      #       (call_script, "script_ee_reload_character_starting_equipment_excluding_player_spouse", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (try_for_range, ":cur_updating_character", "trp_ramun_the_slave_trader", "trp_kingdom_heroes_including_player_begin"), ### Other non-companion unique characters.
+      #       (call_script, "script_ee_reload_character_starting_equipment_excluding_player_spouse", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (display_message, "@Reloaded inventories of all Lords, Ladies and Tournament Competitors. (Excluding player spouse.)"),
+
+      #     (jump_to_menu, "mnu_camp"),
+      #   ]
+      # ),
+
+      ### Unique charcter inventory update button, bringing older saves character inventories in line if item updates cluttered things up (NEW v3.9.2, by Khanor) ###
+      ### Remember to add newly tweaked troops here if wanting players to update them!
+      # ("enhanced_mod_options_11",[], "Reload inventories of Lords, Ladies and Tournament Competitors. (Including player spouse.)",
+      #   [
+      #     (try_for_range, ":cur_updating_character", "trp_kingdom_1_lord", "trp_knight_1_1"), ### All Faction Leaders.
+      #       (call_script, "script_ee_reload_character_starting_equipment", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (try_for_range, ":cur_updating_character", "trp_knight_1_1", "trp_enhanced_rnd_lord_1"), ### All starting Lords (not custom).
+      #       (call_script, "script_ee_reload_character_starting_equipment", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (try_for_range, ":cur_updating_character", "trp_knight_1_1_wife", "trp_heroes_end"), ### All starting Ladies.
+      #       (call_script, "script_ee_reload_character_starting_equipment", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (try_for_range, ":cur_updating_character", "trp_ramun_the_slave_trader", "trp_kingdom_heroes_including_player_begin"), ### Other non-companion unique characters.
+      #       (call_script, "script_ee_reload_character_starting_equipment", ":cur_updating_character", ":cur_updating_character"), ### Get your own starting inventory, remove it, and replace with your starting inventory.
+      #     (try_end),
+
+      #     (display_message, "@Reloaded inventories of all Lords, Ladies and Tournament Competitors. (Including player spouse.)"),
+
+      #     (jump_to_menu, "mnu_camp"),
+      #   ]
+      # ),
        
-      ("enhanced_mod_options_10",[], "Go back.",
+      ("enhanced_mod_options_12",[], "Go back.",
         [
           (jump_to_menu, "mnu_camp"),
         ]
@@ -9228,21 +9304,21 @@ game_menus = [
     (set_background_mesh, "mesh_pic_camp"),
    ],     
     [      
-       ("sort_inventory_1",[], "Sort your inventory (compact.)",
+       ("sort_inventory_1",[], "Sort your inventory (compact).",
        [
          (call_script, "script_rearrange_inventory", "trp_player", 0),
-         (display_message, "@Inventory sorted (compact.)"),
+         (display_message, "@Inventory sorted (compact)."),
        ]
        ),
        
-       ("sort_inventory_2",[], "Sort your inventory (by cost.)",
+       ("sort_inventory_2",[], "Sort your inventory (by cost).",
        [
          (call_script, "script_rearrange_inventory", "trp_player", 1),
          (display_message, "@Inventory sorted by item cost."),
        ]
        ),
        
-       ("sort_inventory_3",[], "Sort your inventory (by type.)",
+       ("sort_inventory_3",[], "Sort your inventory (by type).",
        [
          (call_script, "script_rearrange_inventory", "trp_player", 2),
          (display_message, "@Inventory sorted by item type."),
@@ -9718,7 +9794,7 @@ game_menus = [
         
 		("camp_mod_8",
 			[],
-		"Reduce party to 1",## I need to reduce the enemy party (lord or walled fief), to test battles, fiefs, kingdoms....
+		"Reduce party to 1",## I need to reduce the enemy party (lord or walled fief), to test battles, fiefs, kingdoms...
 		[
             (try_for_range, ":center_no", centers_begin, centers_end),
                 (store_distance_to_party_from_party, ":party_distance", "p_main_party", ":center_no"),
@@ -10239,7 +10315,7 @@ game_menus = [
 #######################################
     ]),
 	
-###################### NEW 3.7
+###################### NEW v3.7
   ("debug_options_new_2",mnf_scale_picture,
    "Debug 3",
    "none",
@@ -10628,7 +10704,7 @@ game_menus = [
 
 ########################### NEW v3.9.1 - start a quest
   ("debug_options_quest_select_1", mnf_enable_hot_keys,
-   "Choose a quest (Note: this will select a random alive lord/mayor/village elder/lady as the quest giver so it's better to try this in a new adventurer start with neutral relations.).",
+   "Choose a quest. (Note: This will select a random alive lord/mayor/village elder/lady as the quest giver so it's better to try this in a new adventurer start with neutral relations.)",
    "none",
     [],
     [

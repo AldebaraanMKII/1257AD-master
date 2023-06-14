@@ -843,8 +843,8 @@ troops = [
 
 
   ["merc_mamluke_javalin",
-     "Sagittarius Stipendiarii(Kurdia)",
-     "Sagittarii Stipendiarii(Kurdia)",
+     "Iaculator Stipendiarii (Kurdia)",
+     "Iaculatoris Stipendiarii (Kurdia)",
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_20,
     [
@@ -865,34 +865,33 @@ troops = [
 
 
   ["merc_mamluke_range",
-     "Turkoman Iaculator Arcoballista Stipendiarii",
-     "Turkoman Iaculatoris Acroballistae Stipendiarii",
+     "Turkoman Sagittarius Stipendiarii",
+     "Turkoman Sagittarii Stipendiarii",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_20,
     [
+    ### Ranged Weapons
+    itm_nomad_bow,
+    itm_barbed_arrows,
+    
     itm_turk_kaftan_furtrim,
     itm_kau_arab_lamellar_vest_b,
     itm_turban_c,
-    itm_javelin,
     itm_sarranid_boots_c,
     itm_sarranid_axe_b,
     itm_turk_kaftan_beige,
-    itm_sniper_crossbow,
-    itm_steel_bolts,
-    itm_crusade_bolt_heavy,
-    itm_crusade_bolt_heavy_pierce,
     itm_seljuk_hair,
     itm_mamluk_cap,
     itm_seljuk_archer_cap,
     ],
-    ranged_merc_attrib_1, merc_crossbowman_wp_1, merc_crossbowman_skills_1,
+    ranged_merc_attrib_1, merc_archer_wp_1, merc_archer_skills_1,
     euro_face_3, euro_face_4
   ],
 
 
   ["merc_mamluke_syrian",
-    "Sagittarius Stipendiarii(Syra)",
-    "Sagittarii Stipendiarii(Syra)",
+    "Sagittarius Stipendiarii (Syra)",
+    "Sagittarii Stipendiarii (Syra)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
     0, 0, fac_kingdom_20,
     [
@@ -2715,8 +2714,8 @@ troops = [
 
 
   ["merc_veteran_mamluke_range",
-     "Turkoman Iaculator Arcoballista Stipendiarii",
-     "Turkoman Iaculatoris Acroballistae Stipendiarii",
+     "Turkoman Sagittarius Stipendiarii",
+     "Turkoman Sagittarii Stipendiarii",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_20,
     [
@@ -4549,8 +4548,8 @@ troops = [
 
 
   ["merc_elite_mamluke_range",
-     "Turkoman Iaculator Arcoballista Stipendiarii",
-     "Turkoman Iaculatoris Acroballistae Stipendiarii",
+     "Turkoman Sagittarius Stipendiarii",
+     "Turkoman Sagittarii Stipendiarii",
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_20,
     [
@@ -4595,8 +4594,8 @@ troops = [
 
 
   ["merc_elite_mamluke_syrian",
-     "Sagittarius Stipendiarii(Syra)",
-     "Sagittarii Stipendiarii(Syra)",
+     "Sagittarius Stipendiarii (Syra)",
+     "Sagittarii Stipendiarii (Syra)",
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet,
     0, 0, fac_kingdom_20,
     [
@@ -7406,8 +7405,8 @@ troops = [
     itm_mace_4,
     itm_raf_one_handed_axe_h,
     itm_talak_warhammer,
-	
-	  itm_dethertir_gloves,
+
+    itm_dethertir_gloves,
 
     itm_lazarus_serjeant_tunic,
 
@@ -15303,15 +15302,15 @@ troops = [
     nord_face_young_1, swadian_face_old_2
   ],
 
-
+  ##################################################
+  ### --- Nordic lance troops/regular troops --- ###
+  ##################################################
   ["nordic_town_recruit",
      "B"+y_kreska+"jarma"+eth+"ur",
      "B"+y_kreska+"jarmenn",
-    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_shield,
+    tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-
-
     itm_spear_d,
     itm_spear_e,
     itm_spear_f,
@@ -15370,7 +15369,7 @@ troops = [
   ["nordic_swords_sergeant",
      "Hir"+eth+"ma"+eth+"ur",
      "Hir"+eth+"menn",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
+    tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
     ### Melee Weapons
@@ -15422,7 +15421,7 @@ troops = [
     itm_byzantine_greaves,
     itm_raf_mail_chausses,
     ],
-    foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
+    household_veteran_attrib, swords_veteran_wp, household_veteran_skills,
     nord_face_young_1, swadian_face_old_2
   ],
 
@@ -16249,17 +16248,14 @@ troops = [
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     nord_face_young_1, swadian_face_old_2
   ],
-
-  ####################################
-  #
-  ######         Balt begins
-  #
-
-    ###### Balt troops
+  
+  ##################################################
+  ### --- Baltic lance troops/regular troops --- ###
+  ##################################################
   ["balt_recruit",
      "Kaimynas",
      "Kaimynai",
-    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
+    tf_guarantee_helmet | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_2,
     [
     itm_spiked_club,
@@ -17294,7 +17290,7 @@ troops = [
     itm_lit_pavise_g_3,
     itm_lit_pavise_h_3,
     itm_byz_shield_kite,
-
+    
     ##### itm_lapcie,    #DrTomas thinks that, higher tier balt troops should use long boots instead, as there were in style at the time
     itm_rus_boots_b,
     itm_leather_fur_boots,
@@ -17318,7 +17314,7 @@ troops = [
   ["balt_noble_3",
      "Didžiūnas",
      "Didžiūnai",
-    tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_gloves,
+    tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_2,
     [
     ### Melee Weapons
@@ -17335,7 +17331,7 @@ troops = [
     itm_spear_n,
     itm_spear_o,
     itm_spear_p,
-    #itm_talak_mace,
+    # itm_talak_mace,
     itm_mace_1,
     itm_mace_2,
     itm_mace_3,
@@ -17357,13 +17353,13 @@ troops = [
     itm_balt_helmet_a,
     itm_balt_helmet_b,
     itm_balt_helmet_c,
-    #itm_curonian_helmet, DrTomas revision2
+    # itm_curonian_helmet, ### DrTomas revision2
     itm_slonim,
     itm_baltic_ponted_helmet,
 
     ### Armors
     itm_surcoat_lithuania_a,
-    #itm_surcoat_lithuania_b,
+    # itm_surcoat_lithuania_b,
     itm_kau_rus_scale_a,
     itm_kau_rus_noble_a,
 
@@ -17374,7 +17370,7 @@ troops = [
     ### Boots
     itm_byzantine_greaves,
     ],
-    foot_attrib_elite, swords_sergeant_wp, swords_sergeant_skills,
+    household_elite_attrib, swords_sergeant_wp, household_elite_skills,
     nord_face_young_1, swadian_face_old_2
   ],
 
@@ -23977,30 +23973,39 @@ troops = [
     arab_face_1, arab_face_2
   ],
 
-
+  ##################################################
+  ### --- Gaelic lance troops/regular troops --- ###
+  ##################################################
   ["gaelic_village_recruit",
      "Gairmsluaigh Retrobannum",
      "Gairmsluaigh Retrobannum",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
+    tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
+    ### Ranged Weapons
+    itm_arrows,
+    itm_hunting_bow,
+    itm_darts,
+
+    ### Melee Weapons
+    itm_hatchet,
+    itm_club,
+    itm_studded_club,
+    itm_spiked_mace,
+    itm_knife,
+    itm_butchering_knife,
+    itm_scythe,
+
+    ### Armors
     itm_gaelic_shirt_blue,
     itm_gaelic_shirt_green,
     itm_gaelic_shirt_red,
 
-    itm_arrows,
-    itm_hunting_bow,
-
-    itm_peasant_f,
-    itm_hatchet,
-    itm_darts,
-    itm_club,
-    itm_studded_club,
-    itm_spiked_mace,
-      ##### itm_bare_legs,
-    itm_knife,
-    itm_butchering_knife,
-    itm_scythe,
+    ### Boots
+    itm_bare_legs,
+    itm_bare_legs, ### Additional chance of bare feet here.
+    itm_legs_with_shoes,
+    itm_shoes,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -24010,23 +24015,37 @@ troops = [
   ["gaelic_infantry_recruit",
      "Gairmsluaigh Retrobannum",
      "Gairmsluaigh Retrobannum",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots ,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
-    itm_gaelic_shirt_blue,
-    itm_gaelic_shirt_green,
-    itm_gaelic_shirt_red,
-
-    itm_peasant_f,
-    itm_hatchet,
+    ### Ranged Weapons
     itm_darts,
+    
+    ### Melee Weapons
+    itm_hatchet,
     itm_club,
     itm_studded_club,
     itm_spiked_mace,
-      ##### itm_bare_legs,
     itm_knife,
     itm_butchering_knife,
     itm_scythe,
+
+    ### Helmets
+    itm_1257_hood,
+    itm_arming_cap,
+    itm_padded_coif,
+    
+    ### Armors
+    itm_gaelic_shirt_blue,
+    itm_gaelic_shirt_green,
+    itm_gaelic_shirt_red,
+    itm_peasant_f,
+
+    ### Boots
+    itm_bare_legs,
+    itm_bare_legs, ### Additional chance of bare feet here.
+    itm_legs_with_shoes,
+    itm_shoes,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -24036,24 +24055,13 @@ troops = [
   ["gaelic_village_footman",
      "Ceithernach Pedes",
      "Ceithernach Pedite",
-    tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_boots,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
+    ### Ranged Weapons
     itm_war_darts,
-    itm_gaelic_shirt_blue,
-    itm_gaelic_shirt_green,
-    itm_gaelic_shirt_red,
-    itm_leather_jerkin,
-    itm_pelt_coat,
-    itm_rawhide_coat,
 
-    itm_peasant_f,
-
-      ##### itm_bare_legs,
-    itm_arming_cap,
-    itm_padded_coif,
-    itm_legs_with_shoes,
-
+    ### Melee Weapons
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
@@ -24066,16 +24074,41 @@ troops = [
     itm_raf_two_handed_axe_b,
 
     itm_spear_f,
-    itm_elm2,
     itm_spear_j,
     itm_spear_k,
     itm_spear_l,
-    itm_1257_hood,
     itm_spear_n,
     itm_spear_o,
+
+    ### Shields
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
+
+    ### Helmets
+    itm_1257_hood,
+    itm_arming_cap,
+    itm_elm2,
+    itm_padded_coif,
     itm_raf_spangen,
 
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+    ### Armors
+    itm_gaelic_shirt_blue,
+    itm_gaelic_shirt_green,
+    itm_gaelic_shirt_red,
+    itm_leather_jerkin,
+    itm_peasant_f,
+    itm_pelt_coat,
+    itm_rawhide_coat,
+
+    ### Boots
+    itm_bare_legs,
+    itm_bare_legs, ### Additional chance of bare feet here.
+    itm_legs_with_shoes,
+    itm_shoes,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -24117,7 +24150,7 @@ troops = [
     itm_targe_6,
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
 
     itm_arming_cap,
     itm_raf_spangen,
@@ -24173,8 +24206,6 @@ troops = [
     itm_raf_one_handed_axe_g,
     itm_1257_hood,
 
-
-
     itm_leather_jerkin,
     itm_pelt_coat,
     itm_rawhide_coat,
@@ -24183,7 +24214,7 @@ troops = [
     itm_tab_shield_kite_c,
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
 
     itm_kettlehat_a,
     itm_kettlehat_b,
@@ -24524,7 +24555,7 @@ troops = [
 
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
 
     itm_priest_cap_1,
     itm_mail_coif,
@@ -26376,7 +26407,7 @@ troops = [
     itm_arab_mail_e,
     itm_byzantine_greaves,
 
-      ##### itm_vaegir_war_helmet,
+    # itm_vaegir_war_helmet,
     itm_ghulam_helmet,
     itm_seljuk_helmet,
 
@@ -26391,45 +26422,55 @@ troops = [
     khergit_face_younger_1, khergit_face_old_2
   ],
 
-##################################################
-
+  ####################################################
+  ### --- Scottish lance troops/regular troops --- ###
+  ####################################################
   ["scottish_village_recruit",
      "Nativi Pedes",
      "Nativi Pedes",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots ,
+    tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+    ### Ranged Weapons
+    itm_darts,
+
+    ### Melee Weapons
     itm_hatchet,
     itm_club,
     itm_raf_one_handed_axe_g,
-    itm_darts,
-
-    itm_arming_cap,
-    itm_1257_hood,
-    itm_flat_kettle_hat,
-    itm_elm2,
-
-    itm_peasant_tunic_a,
-    itm_peasant_b,
-    itm_peasant_c,
-    itm_peasant_d,
-    itm_tunic_with_green_cape,
-    itm_peasant_g,
-
-    itm_peasant_f,
-    itm_legs_with_shoes,
-    itm_shoes,
-      ##### itm_bare_legs,
-    itm_highlander_boots_1,
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
 
     itm_spear_k,
-    itm_norman_coif_d,
-    itm_raf_spangen,
     itm_spear_n,
     itm_spear_o,
     itm_spear_p,
+
+    ### Shields
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
+
+    ### Helmets
+    itm_arming_cap,
+    itm_1257_hood,
+    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
+
+    ### Armors
+    itm_peasant_b,
+    itm_peasant_c,
+    itm_peasant_d,
+    itm_peasant_g,
+    itm_peasant_tunic_a,
+    itm_tunic_with_green_cape,
+
+    ### Boots
+    itm_peasant_f,
+    itm_legs_with_shoes,
+    itm_shoes,
+    # itm_bare_legs,
+    itm_highlander_boots_1,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -26438,23 +26479,46 @@ troops = [
   ["scottish_infantry_recruit",
      "Scottish Recruit",
      "Scottish Recruits",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots ,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_gaelic_shirt_blue,
-    itm_gaelic_shirt_green,
-    itm_gaelic_shirt_red,
-
-    itm_peasant_f,
+    ### Melee Weapons
     itm_hatchet,
-    itm_darts,
     itm_club,
     itm_studded_club,
     itm_spiked_mace,
-      ##### itm_bare_legs,
     itm_knife,
     itm_butchering_knife,
     itm_scythe,
+
+    ### Shields
+    itm_tab_shield_kite_c,
+    itm_tab_shield_heater_c,
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
+
+    ### Helmets
+    itm_arming_cap,
+    itm_1257_hood,
+    itm_elm2,
+    itm_flat_kettle_hat,
+    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
+    itm_raf_spangen,
+
+    ### Armors
+    itm_gaelic_shirt_blue,
+    itm_gaelic_shirt_green,
+    itm_gaelic_shirt_red,
+    itm_peasant_f,
+
+    ### Boots
+    itm_shoes,
+    # itm_bare_legs,
+    itm_highlander_boots_1,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -26463,7 +26527,7 @@ troops = [
   ["scottish_forinsec_spearman",
      "Servitium Forensicum Hastatus",
      "Servitium Forensicum Hastati",
-    tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_helmet,
+    tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_spear_a,
@@ -26478,7 +26542,7 @@ troops = [
     itm_spear_l,
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
     itm_norman_coif_d,
     itm_raf_spangen,
 
@@ -26529,7 +26593,7 @@ troops = [
     itm_raf_spangen,
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
 
     itm_flat_topped_helmet_b,
     itm_raf_one_handed_axe_b,
@@ -26641,7 +26705,7 @@ troops = [
   ["scottish_forinsec_archer",
      "Servitium Forensicum Sagittarius",
      "Servitium Forensicum Sagittari",
-    tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_helmet,
+    tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_arrows,
@@ -26669,7 +26733,7 @@ troops = [
 
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
     itm_highlander_boots_1,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
@@ -26679,7 +26743,7 @@ troops = [
   ["scottish_archer_2",
      "Scottish Veteran Archer",
      "Scottish Veteran Archers",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_barbed_arrows,
@@ -26693,7 +26757,7 @@ troops = [
     itm_raf_one_handed_axe_h,
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
     itm_sword_viking_2,
     itm_sword_viking_2_small,
     itm_sword_viking_3,
@@ -26724,7 +26788,7 @@ troops = [
   ["scottish_light_cavalry",
      "Scottish Mounted Sergeant",
      "Scottish Mounted Sergeants",
-    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse,
+    tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_1,
     [
     itm_javelin,
@@ -26760,7 +26824,7 @@ troops = [
     itm_raf_one_handed_axe_g,
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
 
     itm_sumpter_horse,
     itm_saddle_horse,
@@ -26806,7 +26870,7 @@ troops = [
 
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
 
     itm_vik_spangen_a,
     itm_vik_spangen_b,
@@ -26853,7 +26917,7 @@ troops = [
 
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    # itm_bare_legs,
 
     itm_priest_cap_1,
     itm_mail_coif,
@@ -26958,7 +27022,7 @@ troops = [
     itm_sword_type_xiiib,
     itm_sword_type_xii,
     itm_raf_one_handed_axe_h,
-      ##### itm_talak_mace,
+    # itm_talak_mace,
 
     itm_rnd_surcoat_01,
     itm_rnd_surcoat_02,
@@ -27036,13 +27100,16 @@ troops = [
     euro_face_1, euro_face_2
   ],
 
-
+  ############################################################
+  ### --- Western European lance troops/regular troops --- ###
+  ############################################################
   ["euro_town_recruit",
      "Pedes de Cives",
      "Pedi de Cives",
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+    ### Melee Weapons
     itm_spear_a,
     itm_spear_b,
     itm_spear_c,
@@ -27058,20 +27125,24 @@ troops = [
     itm_spear_o,
     itm_spear_p,
 
-    itm_arming_cap,
+    ### Helmets
     itm_1257_hood,
-    itm_pilgrim_hat,
+    itm_arming_cap,
     itm_elm2,
-    itm_norman_coif_d,
+    itm_flat_kettle_hat,
+    itm_kettlehat_b,
+    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
+    itm_pilgrim_hat,
     itm_raf_spangen,
 
+    ### Armors
     itm_peasant_tunic_a,
     itm_peasant_b,
     itm_peasant_c,
+    itm_peasant_f,
     itm_peasant_g,
 
-    itm_peasant_f,
-
+    ### Boots
     itm_leather_fur_boots,
     itm_red_hose,
     itm_green_hose,
@@ -27081,7 +27152,6 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
-
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -27091,9 +27161,15 @@ troops = [
   ["euro_village_recruit",
      "Retrobannum Pedes",
      "Retrobannum Pedes",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
+    tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+    ### Ranged Weapons
+    itm_javelin,
+    itm_hunting_bow,
+    itm_arrows,
+
+    ### Melee Weapons
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
@@ -27106,34 +27182,30 @@ troops = [
     itm_knife,
     itm_butchering_knife,
 
-    itm_javelin,
-
-    itm_hunting_bow,
-    itm_arrows,
-
+    ### Helmets
+    itm_1257_hood,
     itm_1257_hood,
     itm_kolpak_mail,
-
     itm_elm1,
     itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
     itm_elm2,
+    itm_flat_kettle_hat,
+    itm_kettlehat_b,
+    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
     itm_priest_cap_2,
     itm_vik_spangen_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
+    ### Armors
     itm_archer_a,
     itm_archer_b,
     itm_archer_c,
     itm_peasant_d,
-    itm_peasant_g,
-
     itm_peasant_f,
-
+    itm_peasant_g,
+    
+    ### Boots
     itm_leather_fur_boots,
     itm_red_hose,
     itm_green_hose,
@@ -27143,7 +27215,6 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
-
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -27155,7 +27226,7 @@ troops = [
      "Vicani Sagittarii Militares",
     #####" Militia Archer",
     #####" Militia Archers",
-    tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
+    tf_guarantee_helmet | tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
     itm_arrows,
@@ -36776,8 +36847,8 @@ troops = [
    [itm_spiked_mace,itm_club,itm_woolen_cap,itm_rawhide_coat,itm_coarse_tunic,itm_nomad_armor,itm_nordic_shield,itm_woolen_hose,itm_wrapping_boots,itm_sumpter_horse],
    def_attrib|level(15),wp(120),knows_common,bandit_face1, bandit_face2
   ],
-  
-  ### Peasant Woman upgrades, limited to tier 3 for historically plausible auxiliaries/camp helpers ### (NEW 3.9.2, by Khanor)
+
+  ### Peasant Woman upgrades, limited to tier 3 for historically plausible auxiliaries/camp helpers ### (NEW v3.9.2, by Khanor)
   ["follower_woman","Camp Follower","Camp Follower",
     tf_female | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,0,0,
     fac_commoners,
@@ -41036,7 +41107,7 @@ troops = [
 
 
   ["kingdom_6_lord",
-     "Richard von Cornvall, König des heiligen römischen Reiche",
+     "Richard von Cornvall, König des Heiligen Römischen Reiche",
      "Richard von Cornwall",
     tf_hero,
     0, 0, fac_kingdom_6,
@@ -41255,7 +41326,7 @@ troops = [
 
 
   ["kingdom_13_lord",
-     "Brian O'Neill, King of Tir Eoghain ",
+     "Brian O'Neill, King of Tir Eoghain",
      "Brian",
     tf_hero,
     0, 0, fac_kingdom_13,
@@ -41586,7 +41657,7 @@ troops = [
 
 
   ["kingdom_24_lord",
-     "Manfredi di Sicilia,Rei di Sicilia",
+     "Manfredi di Sicilia, Rei di Sicilia",
      "Manfredi di Sicilia",
     tf_hero,
     0, 0, fac_kingdom_24,
@@ -41654,7 +41725,7 @@ troops = [
 
 
   ["kingdom_26_lord",
-     "Baudouin II de Courtenay,empereur de Constantinople",
+     "Baudouin II de Courtenay, empereur de Constantinople",
      "Baudouin II",
     tf_hero,
     0, 0, fac_kingdom_26,
@@ -42158,8 +42229,8 @@ troops = [
 ###### Teutonic
 
   ["knight_1_1",
-     "Deutschmeister_Konrad_von_Nurnburg ",
-     "Konrad_von_Nurnburg ",
+     "Deutschmeister_Konrad_von_Nurnburg",
+     "Konrad_von_Nurnburg",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42209,8 +42280,8 @@ troops = [
 
 
   ["knight_1_3",
-     "Landmeister_Burkhard_von_Hornhausen ",
-     "Burkhard_von_Hornhausen ",
+     "Landmeister_Burkhard_von_Hornhausen",
+     "Burkhard_von_Hornhausen",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42234,8 +42305,8 @@ troops = [
 
 
   ["knight_1_4",
-     "Komtur_Hartmann_von_Heldrungen ",
-     "Hartmann_von_Heldrungen ",
+     "Komtur_Hartmann_von_Heldrungen",
+     "Hartmann_von_Heldrungen",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42265,8 +42336,8 @@ troops = [
 
 
   ["knight_1_5",
-     "Komtur_Georg_von_Eichstatt ",
-     "Georg_von_Eichstatt ",
+     "Komtur_Georg_von_Eichstatt",
+     "Georg_von_Eichstatt",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42318,8 +42389,8 @@ troops = [
 
 
   ["knight_1_7",
-     "Albert II Suerbeer, Erzbischof von Riga ",
-     "Erzbischof von Riga ",
+     "Albert II Suerbeer, Erzbischof von Riga",
+     "Erzbischof von Riga",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42344,8 +42415,8 @@ troops = [
 
 
   ["knight_1_8",
-     "Ritterbrüder Konrad von Feuchtwangen ",
-     "Konrad von Feuchtwangen ",
+     "Ritterbrüder Konrad von Feuchtwangen",
+     "Konrad von Feuchtwangen",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42371,7 +42442,7 @@ troops = [
 
   ["knight_1_9",
      "Ordensmarschall Heinrich Botel",
-     "Heinrich Botel ",
+     "Heinrich Botel",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42426,8 +42497,8 @@ troops = [
 
 
   ["knight_1_11",
-     "Heinrich,Bischof von Ösel-Wiek  ",
-     "Bischof von Ösel-Wiek ",
+     "Heinrich,Bischof von Ösel-Wiek",
+     "Bischof von Ösel-Wiek",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42453,8 +42524,8 @@ troops = [
 
 
   ["knight_1_12",
-     "Anselm von Meißen, Bischof von Ermland ",
-     "Bischof von Ermland ",
+     "Anselm von Meißen, Bischof von Ermland",
+     "Bischof von Ermland",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42503,7 +42574,7 @@ troops = [
 
 
   ["knight_1_14",
-     "Johann von Bardewis, Herr von Uexküll und Gerzike ",
+     "Johann von Bardewis, Herr von Uexküll und Gerzike",
      "Herr von Uexküll",
     tf_hero,
     0, 0, fac_kingdom_1,
@@ -42530,7 +42601,7 @@ troops = [
 
   ["knight_1_15",
      "Magister_Livoniae_Werner_von_Wenden",
-     "Werner_von_Wenden ",
+     "Werner_von_Wenden",
     tf_hero,
     0, 0, fac_kingdom_1,
     [
@@ -42859,7 +42930,7 @@ troops = [
     # itm_spear_k,
     itm_light_lance,
 
-      ##### itm_talak_mace,
+    # itm_talak_mace,
     itm_byzantine_sword,
 
     itm_lithuanian_shield9,
@@ -42884,7 +42955,7 @@ troops = [
     itm_warhorse_lithuania_a,
     itm_kau_rus_noble_b,
 
-      ##### itm_talak_mace,
+    # itm_talak_mace,
     itm_byzantine_sword,
 
     itm_lithuanian_shield9,
@@ -46599,7 +46670,7 @@ troops = [
 
 
   ["knight_10_17",
-     "Alain VI, vicomte de Rohan ",
+     "Alain VI, vicomte de Rohan",
      "Alain VI",
     tf_hero,
     0, 0, fac_kingdom_10,
@@ -61218,7 +61289,7 @@ troops = [
 ####################
 
 
-#Troop upgrade declarations
+### Troop upgrade declarations
 ###### Mercenaries
 
 upgrade(troops, "bandit", "brigand"),
@@ -61237,7 +61308,7 @@ upgrade(troops, "cuman_tribesman", "cuman_skirmisher"),
 upgrade(troops, "cuman_skirmisher", "cuman_horse_archer"),
 upgrade(troops, "cuman_horse_archer", "cuman_veteran_horse_archer"),
 
-### Peasants and Commoners ### (NEW 3.9.2, by Khanor)
+### Peasants and Commoners ### (NEW v3.9.2, by Khanor)
 upgrade(troops, "peasant_woman", "follower_woman"),
 upgrade(troops, "follower_woman", "hunter_woman"),
 

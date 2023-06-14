@@ -5469,15 +5469,15 @@ scripts = [
                                     (display_log_message, "@{s1} of the {s3} was defeated in battle by the {s2} but managed to escape.", reg20), 
                                     ############ NEW v2.7 - being defeated generates animosity
                                     # (call_script, "script_troop_change_relation_with_troop", ":leader_troop_id", ":cur_troop_id", -3),
-                                    (val_add, "$total_battle_enemy_changes", -2),      
-                                    (call_script, "script_change_troop_renown", ":cur_troop_id", -10), ############### NEW v3.12 - 
+                                    (val_add, "$total_battle_enemy_changes", -2),
+                                    (call_script, "script_change_troop_renown", ":cur_troop_id", -10), ### NEW v3.12 - 
                                     ########################                                    
                                   (else_try),
                                     (neg|is_between, ":faction_receiving_prisoners", kingdoms_begin, kingdoms_end),
                                     # (display_message, "@{s1} of {s3} was defeated in battle but managed to escape."),
                                     (call_script, "script_get_message_color", 1, ":cur_troop_id"),
                                     (display_log_message, "@{s1} of the {s3} was defeated in battle but managed to escape.", reg20),
-                                    (call_script, "script_change_troop_renown", ":cur_troop_id", -10), ############### NEW v3.12 - 
+                                    (call_script, "script_change_troop_renown", ":cur_troop_id", -10), ### NEW v3.12 - 
                                   (try_end),
                               (try_end),
                             (try_end),
@@ -16129,7 +16129,7 @@ scripts = [
         (party_get_current_terrain, ":party_terrain", ":party_no"),
         
         (try_begin),
-          (eq, ":party_terrain", rt_water), ### Set high as ships/boats with sails were generally faster than horses over distances (and can move all day and night without stops for rest/sleep.)
+          (eq, ":party_terrain", rt_water), ### Set high as ships/boats with sails were generally faster than horses over distances (and can move all day and night without stops for rest/sleep). - Khanor
             (val_add, ":terrain_speed_modifier", 22),
         (else_try),
           (eq, ":party_terrain", rt_steppe),
@@ -22489,7 +22489,7 @@ scripts = [
           
           (party_stack_get_troop_id, ":stack_troop", ":party_no", 0),
           (try_begin),
-            (neg|is_between, ":stack_troop", "trp_looter", "trp_black_khergit_horseman"),
+            (neg|is_between, ":stack_troop", "trp_looter", "trp_manhunter"),
             # (assign, ":join_distance", 5), #day/not bandit - rafi reduced
             (assign, ":join_distance", 3), #### NEW v3.3
             (try_begin),
@@ -22549,12 +22549,12 @@ scripts = [
             (gt, ":reln_with_enemy", 0),
             # (party_get_slot, ":party_type", ":party_no"),  
             # (party_get_slot, ":party_type", ":party_no", slot_party_type),  #### NEW v2.1 - fix - was missing the slot parameter
+            (party_get_slot, ":party_type", ":party_no", slot_party_type), ### Brought this back for various later checks (NEW 3.9.3, by Khanor) ###
             
             (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 0),
             (try_begin),
               (party_stack_get_troop_id, ":stack_troop", ":party_no", 0),
-              # (is_between, ":stack_troop", "trp_looter", "trp_black_khergit_horseman"),
-              (is_between, ":stack_troop", "trp_euro_horse_4_jerusalem", "trp_manhunter"),
+              (is_between, ":stack_troop", "trp_looter", "trp_manhunter"), ### All bandit type troops in this range now included accurately. - Khanor
               (gt, ":player_level", 6),
               (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
             (try_end),
@@ -22595,24 +22595,163 @@ scripts = [
             # (this_or_next|eq, ":party_type", spt_scout),
             # (this_or_next|eq, ":party_type", spt_mercenary_company),
             ########################
-            ############### NEW v3.11 - 
-            (is_between, ":template", "pt_manhunters", "pt_manor"), 
-            (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+            ### NEW v3.11 - ###
+            (try_begin),
+              (this_or_next|eq, ":template", "pt_mercenary_warband"),
+              (is_between, ":template", "pt_manhunters", "pt_manor"),
+              (gt, ":player_level", 6),
+              (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+            (try_end),
+            ###################
 
-            ############### NEW v3.9.2a, by Khanor
-            # (is_between, ":template", "pt_cattle_herd", "pt_manor") and (neq, ":template", "pt_manhunters"),
-            # (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
-            ########################
+            ### Bandit check for the Definitive Series (NEW v3.9.2a, by Khanor) ###
+            # (try_begin),
+            #   (this_or_next|eq, ":template", "pt_looters"),
+            #   (this_or_next|eq, ":template", "pt_mercenary_warband"),
+            #   (is_between, ":template", "pt_peasant_rebels_euro", "pt_merchant_caravan"),
+            #   (gt, ":player_level", 6),
+            #   (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+            # (try_end),
+            #######################################################################
             
+            ### Now in (try_begin)-block (NEW v3.9.3, by Khanor) ###
             (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
-            (neq, ":ai_bhvr", ai_bhvr_avoid_party),
-            #rafi
-            (party_relocate_near_party, ":party_no", "p_main_party", 3),
-            #rafi
-            (party_quick_attach_to_current_battle, ":party_no", ":enemy_side"), #attach as enemy
-            (str_store_party_name, s1, ":party_no"),
-            (display_message, "str_s1_joined_battle_enemy", 0xFF5050),
-          (else_try),
+            (try_begin),
+              (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+              (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
+              
+              ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+              (try_begin),
+                (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                (neq, ":party_type", spt_town),
+                (neq, ":party_type", spt_village),
+                (neq, ":party_type", spt_bandit_lair),
+                (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                #rafi
+                (party_relocate_near_party, ":party_no", "p_main_party", 3),
+              (try_end),
+              ### Party check and relocation end ###
+
+              #rafi
+              (party_quick_attach_to_current_battle, ":party_no", ":enemy_side"), ### Attach as enemy.
+              (str_store_party_name, s1, ":party_no"),
+
+              ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+              (try_begin),
+                (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                (display_message, "str_s1_garrison_joined_battle_enemy", 0xFF5050),
+              (else_try),
+                (display_message, "str_s1_joined_battle_enemy", 0xFF5050),
+              (try_end),
+            (try_end),
+            #########################################################
+
+            ######################################################################################
+            ### Standard faction parties join in as hostiles to player (NEW v3.9.3, by Khanor) ###
+            ######################################################################################
+            (try_begin),
+              (eq, ":besiege_mode", 0),
+              (lt, ":reln_with_player", 0),
+              (gt, ":reln_with_enemy", 0),
+              (eq, ":enemy_is_bandit_party_and_level_is_greater_than_6", 0),
+              
+              ### The party_no checks below are the key to finding Lords' parties, patrols, etc. for reinforcements, so brought it back and moved it all into one place.
+              (party_get_template_id, ":template", ":party_no"),
+              (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
+              (options_get_campaign_ai, ":current_campaign_difficulty"), ### Get campaign difficulty.
+              
+              (try_begin),
+                (this_or_next|eq, ":party_type", spt_kingdom_hero_party),
+                (this_or_next|eq, ":party_type", spt_patrol),
+                (this_or_next|eq, ":party_type", spt_merc_party),
+                (this_or_next|eq, ":party_type", spt_war_party),
+                (this_or_next|eq, ":party_type", spt_scout),
+                (eq, ":party_type", spt_mercenary_company),
+                (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### Not checking for hostile fiefs here, doing that in the next larger try_begin-block.
+                (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+
+                ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+                (try_begin),
+                  (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                  (neq, ":party_type", spt_town),
+                  (neq, ":party_type", spt_village),
+                  (neq, ":party_type", spt_bandit_lair),
+                  (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                  (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                  #rafi
+                  (party_relocate_near_party, ":party_no", "p_main_party", 3),
+                (try_end),
+                ### Party check and relocation end ###
+
+                #rafi
+                (party_quick_attach_to_current_battle, ":party_no", ":enemy_side"), ### Attach as enemy.
+                (str_store_party_name, s1, ":party_no"),
+
+                ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+                (try_begin),
+                  (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                  (display_message, "str_s1_garrison_joined_battle_enemy", 0xFF5050),
+                (else_try),
+                  (display_message, "str_s1_joined_battle_enemy", 0xFF5050),
+                (try_end),
+              
+              ### Walled settlement garrisons can now also join on (campaign) difficulties normal and above, but only when they have a large enough garrison (NEW 3.9.3, by Khanor) ###
+              (else_try),
+                (this_or_next|eq, ":party_type", spt_castle),
+                (this_or_next|eq, ":party_type", spt_town),
+                (is_between, ":party_no", walled_centers_begin, walled_centers_end),
+                (neq, ":current_campaign_difficulty", 2), ### Not easy campaign difficulty required to enable hostile garrisons joining in.
+
+                (assign, ":selected_party", ":party_no"),
+                (assign, ":garrison_size", 0),
+                (try_begin),
+                  (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
+                  (try_for_range, ":i_stack", 0, ":num_stacks"),
+                    (party_stack_get_troop_id, ":stack_troop", ":selected_party", ":i_stack"),
+                    (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
+                    (val_add, ":garrison_size", ":stack_size"),
+                  (try_end),
+
+                  (try_begin),
+                    (ge, ":garrison_size", 240), ### Garrison size must be 240 or above, to not risk losing the battle and leaving the settlement with little to no garrison!
+                    ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+                    (try_begin),
+                      (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                      (neq, ":party_type", spt_town),
+                      (neq, ":party_type", spt_village),
+                      (neq, ":party_type", spt_bandit_lair),
+                      (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                      (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                      #rafi
+                      (party_relocate_near_party, ":party_no", "p_main_party", 3),
+                    (try_end),
+                    ### Party check and relocation end ###
+
+                    #rafi
+                    (party_quick_attach_to_current_battle, ":party_no", ":enemy_side"), ### Attach as enemy.
+                    (str_store_party_name, s1, ":party_no"),
+
+                    ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+                    (try_begin),
+                      (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                      (display_message, "str_s1_garrison_joined_battle_enemy", 0xFF5050),
+                    (else_try),
+                      (display_message, "str_s1_joined_battle_enemy", 0xFF5050),
+                    (try_end),
+                  (try_end),
+                (try_end),
+              (try_end),
+            (try_end),
+            ########################################################
+            ### Standard faction parties join in as hostiles end ###
+            ########################################################
+          (try_end),
+
+          ##################################################################
+          ### Broad checks of eligibility for joining the current battle ###
+          ##################################################################
+          (try_begin),
             (try_begin),
               (party_slot_eq, ":party_no", slot_party_ai_state, spai_accompanying_army),
               (party_slot_eq, ":party_no", slot_party_ai_object, "trp_player"),
@@ -22633,6 +22772,7 @@ scripts = [
               (assign, ":following_player", 1),
             (try_end),
             
+            ### If in besiege mode, check if otherwise eligible to join battle ###
             (assign, ":do_join", 1),
             (try_begin),
               (eq, ":besiege_mode", 1),
@@ -22642,81 +22782,126 @@ scripts = [
               (faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"),
               (assign, ":do_join", 1),
             (try_end),
+            ######################################################################
             (eq, ":do_join", 1),
-            
-              ##zerilius changes begin
+            ##zerilius changes begin
               ##wrong use of operation (native bug)
               #(party_get_slot, ":party_type", ":party_no"),
             (party_get_slot, ":party_type", ":party_no", slot_party_type),
               ##zerilius changes end
-            (this_or_next|eq, ":party_type", spt_patrol), #Floris - Diplo bugfix
+            (this_or_next|eq, ":party_type", spt_patrol), ### Floris - Diplo bugfix
+            (this_or_next|eq, ":party_type", spt_scout), ### Scouts and war parties can now also join (NEW 3.9.3, by Khanor) ###
+            (this_or_next|eq, ":party_type", spt_war_party),
             (eq, ":party_type", spt_kingdom_hero_party),
             (try_begin), #Floris - Diplo bugfix
-                (eq, ":party_type", spt_kingdom_hero_party), #Floris - Diplo bugifx
-                (party_stack_get_troop_id, ":leader", ":party_no", 0),
-                #(troop_get_slot, ":player_relation", ":leader", slot_troop_player_relation),
-                (call_script, "script_troop_get_player_relation", ":leader"),
-                (assign, ":player_relation", reg0),
+              (eq, ":party_type", spt_kingdom_hero_party), ### Floris - Diplo bugifx
+              (party_stack_get_troop_id, ":leader", ":party_no", 0),
+              #(troop_get_slot, ":player_relation", ":leader", slot_troop_player_relation),
+              (call_script, "script_troop_get_player_relation", ":leader"),
+              (assign, ":player_relation", reg0),
             (else_try), #Floris - Diplo bugfix begin
-                (eq, ":party_type", spt_patrol),
-                (assign, ":player_relation", 1), #force join
+              (this_or_next|eq, ":party_type", spt_patrol), ### Floris - Diplo bugfix
+              (this_or_next|eq, ":party_type", spt_scout), ### Scouts and war parties can now also join (NEW 3.9.3, by Khanor) ###
+              (eq, ":party_type", spt_war_party),
+              (assign, ":player_relation", 1), ### Force join
+
+            ### Walled settlement garrisons can now also join in as friendlies to the player on all difficulties, but this has some requirements (NEW 3.9.3, by Khanor) ###
+            (else_try),
+              (this_or_next|eq, ":party_type", spt_castle),
+              (this_or_next|eq, ":party_type", spt_town),
+              (is_between, ":party_no", walled_centers_begin, walled_centers_end),
+              
+              (try_begin),
+                (assign, ":selected_party", ":party_no"),
+                (assign, ":garrison_size", 0),
+                (assign, ":player_relation", 0), ### Reset for walled fiefs to later give back if checks are passed! - Khanor
+
+                (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
+                (try_for_range, ":i_stack", 0, ":num_stacks"),
+                  (party_stack_get_troop_id, ":stack_troop", ":selected_party", ":i_stack"),
+                  (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
+                  (val_add, ":garrison_size", ":stack_size"),
+                (try_end),
+
+                (try_begin),
+                  (ge, ":garrison_size", 120), ### Garrison size must be 120 or above, to not leave the settlement too vulnerable. Less strict here because benefits the player receive from the help outweigh garrison preservation gameplay-wise.
+                  (party_slot_eq, ":party_no", slot_center_has_messenger_post, 1),
+                  
+                  (try_begin),
+                    (party_get_slot, ":fief_owner", ":party_no", slot_town_lord),
+                    (eq, ":fief_owner", "trp_player"), ## Friendly fiefs have extra requirements (would be too powerful if all friendly fiefs could help): The fief needs a messenger post and it must be owned by the player. - Khanor
+                    (assign, ":player_relation", 1), ### All checks passed, allow friendly fief to join.
+                  (try_end),
+                (try_end),
+              (try_end),
             (try_end), #Floris - Diplo bugfix end
             
             (assign, ":join_even_you_do_not_like_player", 0),
             (try_begin),
-              (faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"), #new added, if player is marshal and if he is accompanying then join battle even lord do not like player
+              (faction_slot_eq, "$players_kingdom", slot_faction_marshall, "trp_player"), ### New added, if player is marshal and if he is accompanying then join battle even lord do not like player
               (eq, ":following_player", 1),
               (assign, ":join_even_you_do_not_like_player", 1),
             (try_end),
+
+            (try_begin),
+              (this_or_next|ge, ":player_relation", 1),
+              (eq, ":join_even_you_do_not_like_player", 1),
+              (this_or_next|eq, ":besiege_mode", 0),
+              (eq, ":do_join", 1), ### And here we make use of the above check if still eligible to join even if sieging.
+              (gt, ":reln_with_player", 0),
+              (lt, ":reln_with_enemy", 0),
+
+              ########################################################################################
+              ### Standard faction parties join in as friendlies to player (NEW v3.9.3, by Khanor) ###
+              ########################################################################################
+              ### The party_no checks below are the key to finding Lords' parties, patrols, etc. for reinforcements, so brought it back and moved it all into one place.
+              (party_get_template_id, ":template", ":party_no"),
+              (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
+              (try_begin),
+                (this_or_next|eq, ":party_type", spt_kingdom_hero_party),
+                (this_or_next|eq, ":party_type", spt_patrol),
+                (this_or_next|eq, ":party_type", spt_merc_party),
+                (this_or_next|eq, ":party_type", spt_war_party),
+                (this_or_next|eq, ":party_type", spt_scout),
+                (eq, ":party_type", spt_mercenary_company),
+                (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+
+                ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+                (try_begin),
+                  (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                  (neq, ":party_type", spt_town),
+                  (neq, ":party_type", spt_village),
+                  (neq, ":party_type", spt_bandit_lair),
+                  (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                  (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                  #rafi
+                  (party_relocate_near_party, ":party_no", "p_main_party", 3),
+                (try_end),
+                ### Party check and relocation end ###
+
+                #rafi
+                (party_quick_attach_to_current_battle, ":party_no", 0), ### Attach as friend.
+                (str_store_party_name, s1, ":party_no"),
+
+                ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+                (try_begin),
+                  (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                  (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
+                (else_try),
+                  (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+                (try_end),
+              (try_end),
+              ##########################################################
+              ### Standard faction parties join in as friendlies end ###
+              ##########################################################
+            (try_end),
             
-            (this_or_next|ge, ":player_relation", 0),
-            (eq, ":join_even_you_do_not_like_player", 1),
-            #rafi
-            (party_relocate_near_party, ":party_no", "p_main_party", 3),
-            #rafi
-            (party_quick_attach_to_current_battle, ":party_no", 0), #attach as friend
-            (str_store_party_name, s1, ":party_no"),
-            (display_message, "str_s1_joined_battle_friend", 0x50FF50),
-          (else_try), ## various parties join in
+          #######################################################
+          ### Various parties join in as friendlies to player ###
+          #######################################################
+          (else_try),
             (party_get_template_id, ":template", ":party_no"),
-            # (this_or_next|eq, ":party_type", spt_patrol), # tom
-            # (this_or_next|eq, ":template", "pt_mongolian_camp"),
-            # (this_or_next|eq, ":template", "pt_welsh"),
-            # (this_or_next|eq, ":template", "pt_guelphs"),
-            # (this_or_next|eq, ":template", "pt_ghibellines"),
-            # (this_or_next|eq, ":template", "pt_crusaders"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_iberian"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_scandinavian"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_euro"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_italian"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_welsh"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_gaelic"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_teutonic"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_templar"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_hospitaller"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_saint_lazarus"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_santiago"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_calatrava"),
-            # (this_or_next|eq, ":template", "pt_crusader_raiders_saint_thomas"),
-            # (this_or_next|eq, ":template", "pt_jihadist_raiders"),
-            # (this_or_next|eq, ":template", "pt_teutonic_raiders"),
-            # (this_or_next|eq, ":template", "pt_curonians"),
-            # (this_or_next|eq, ":template", "pt_prussians"),
-            # (this_or_next|eq, ":template", "pt_samogitians"),
-            # (this_or_next|eq, ":template", "pt_yotvingians"),
-            # ############### NEW v3.11 - 
-            # (this_or_next|eq, ":template", "pt_escaped_prisoners_party"), 
-            # (this_or_next|eq, ":template", "pt_mercenary_warband"),
-            # ############### 
-            # ############ NEW v3.3
-            # (this_or_next|eq, ":party_type", spt_war_party),
-            # (this_or_next|eq, ":party_type", spt_scout),
-            # (this_or_next|eq, ":party_type", spt_mercenary_company),
-            # ########################
-            # (eq, ":party_type", spt_merc_party),
-            ############### NEW v3.11 - 
-            (is_between, ":template", "pt_manhunters", "pt_manor"),
-            ############### 
+            (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
             
             (try_begin),
               (party_slot_eq, ":party_no", slot_party_ai_state, spai_accompanying_army),
@@ -22725,17 +22910,41 @@ scripts = [
             (else_try),
               (assign, ":party_is_accompanying_player", 0),
             (try_end),
-            
-            (this_or_next|eq, ":dont_add_friends_other_than_accompanying", 0),
-            (eq, ":party_is_accompanying_player", 1),
-            (gt, ":reln_with_player", 0),
-            (lt, ":reln_with_enemy", 0),
-            (party_relocate_near_party, ":party_no", "p_main_party", 3),
-            (party_quick_attach_to_current_battle, ":party_no", 0), #attach as friend
-            (str_store_party_name, s1, ":party_no"),
-            (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+
+            (try_begin),
+              (this_or_next|eq, ":dont_add_friends_other_than_accompanying", 0),
+              (eq, ":party_is_accompanying_player", 1),
+              (gt, ":reln_with_player", 0),
+              (lt, ":reln_with_enemy", 0),
+              (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+              ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+              (try_begin),
+                (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                (neq, ":party_type", spt_town),
+                (neq, ":party_type", spt_village),
+                (neq, ":party_type", spt_bandit_lair),
+                (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                #rafi
+                (party_relocate_near_party, ":party_no", "p_main_party", 3),
+              (try_end),
+              ### Party check and relocation end ###
+              
+              (party_quick_attach_to_current_battle, ":party_no", 0), ### Attach as friend.
+              (str_store_party_name, s1, ":party_no"),
+
+              ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+              (try_begin),
+                (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
+              (else_try),
+                (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+              (try_end),
+            (try_end),
           (try_end),
-          
+          #################################################
+          ### Various parties join in as friendlies end ###
+          #################################################
         (try_end),
     ]),
     
@@ -28973,9 +29182,13 @@ scripts = [
         (try_begin),
           (check_quest_active, "qst_cause_provocation"),
           (neg|check_quest_succeeded, "qst_cause_provocation"),
-          (this_or_next|eq, "$players_kingdom", ":kingdom_a"),
-          (eq, "$players_kingdom", ":kingdom_b"),
-          (call_script, "script_abort_quest", "qst_cause_provocation", 0),
+          (eq, "$players_kingdom", ":kingdom_a") and (quest_slot_eq, "qst_cause_provocation", slot_quest_target_faction, ":kingdom_b"),
+          (call_script, "script_succeed_quest", "qst_cause_provocation", 0),
+        (else_try),
+          (check_quest_active, "qst_cause_provocation"),
+          (neg|check_quest_succeeded, "qst_cause_provocation"),
+          (eq, "$players_kingdom", ":kingdom_b") and (quest_slot_eq, "qst_cause_provocation", slot_quest_target_faction, ":kingdom_a"),
+          (call_script, "script_succeed_quest", "qst_cause_provocation", 0),
         (try_end),
     ]),
     
@@ -32105,7 +32318,7 @@ scripts = [
     
     # script_search_troop_prisoner_of_party
     # Input: arg1 = troop_no
-    # Output: reg0 = party_no (-1 if troop is not a prisoner.)
+    # Output: reg0 = party_no (-1 if troop is not a prisoner).
     ("search_troop_prisoner_of_party",
       [
         (store_script_param_1, ":troop_no"),
@@ -37116,16 +37329,16 @@ scripts = [
           (is_between, ":original_kingdom", npc_kingdoms_begin, npc_kingdoms_end),
           (call_script, "script_player_leave_faction", 0), #Ends quests, transfers control of centers
         (try_end),
-        ############### NEW v3.12 - 
+        ### NEW v3.12 - ###
         (faction_get_slot, ":faction_culture", ":original_kingdom", slot_faction_culture),
         (faction_get_slot, ":faction_religion", ":original_kingdom", slot_faction_religion),
         (faction_get_slot, ":faction_language", ":original_kingdom", slot_faction_language),
-        
+
         (assign, "$g_player_culture", ":faction_culture"),
         (faction_set_slot, "fac_player_supporters_faction", slot_faction_culture, ":faction_culture"),
         (faction_set_slot, "fac_player_supporters_faction", slot_faction_religion, ":faction_religion"),
         (faction_set_slot, "fac_player_supporters_faction", slot_faction_language, ":faction_language"),
-############### 
+        ###################
         #Name faction
         (try_begin),
           (is_between, ":liege", active_npcs_begin, active_npcs_end),
@@ -40629,28 +40842,28 @@ scripts = [
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 1),
           (str_store_string, s0, "@Stable upgrade I"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (30% chance for each once a week.)"),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (30% chance for each once a week)."),
           (assign, reg0, 5000),
           (assign, reg1, 10),
         (else_try),
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 2),
           (str_store_string, s0, "@Stable upgrade II"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (45% chance for each once a week.) Can also train your horses (max modifier: heavy, max at once: 1) by talking to the constable."),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+12 slots) and heal your stored horses (45% chance for each once a week). Can also train your horses (max modifier: heavy, max at once: 1) by talking to the constable."),
           (assign, reg0, 8000),
           (assign, reg1, 12),
         (else_try),
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 3),
           (str_store_string, s0, "@Stable upgrade III"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (60% chance for each once a week.) Can also train your horses (max modifier: spirited, max at once: 2, cost: -15%, train time: -25%) by talking to the constable."),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (60% chance for each once a week). Can also train your horses (max modifier: spirited, max at once: 2, cost: -15%, train time: -25%) by talking to the constable."),
           (assign, reg0, 12000),
           (assign, reg1, 15),
         (else_try),
           (eq, ":improvement_no", slot_center_has_stables),
           (eq, ":level", 4),
           (str_store_string, s0, "@Stable upgrade IV"),
-          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (75% chance for each once a week.) Can also train your horses (max modifier: champion, max at once: 3, cost: -25%, train time: -40%) by talking to the constable. Will train horses (with less than heavy modifier) automatically."),
+          (str_store_string, s1, "@Upgrade your stables to improve the ability to store your horses (+18 slots) and heal your stored horses (75% chance for each once a week). Can also train your horses (max modifier: champion, max at once: 3, cost: -25%, train time: -40%) by talking to the constable. Will train horses (with less than heavy modifier) automatically."),
           (assign, reg0, 18000),
           (assign, reg1, 18),
 ####################################
@@ -47596,12 +47809,12 @@ scripts = [
 		    (this_or_next|eq, ":fac_culture", "fac_culture_ibelin"),
 		    (this_or_next|eq, ":fac_culture", "fac_culture_jerusalem"),
 		    (this_or_next|eq, ":fac_culture", "fac_culture_crusader"),
-            ############## NEW v3.10
+		    ### NEW v3.10 ###
 		    (this_or_next|eq, ":fac_culture", "fac_culture_english"),
 		    (this_or_next|eq, ":fac_culture", "fac_culture_french"),
 		    (this_or_next|eq, ":fac_culture", "fac_culture_hungarian"),
 		    (this_or_next|eq, ":fac_culture", "fac_culture_polish"),
-############################
+		    #################
 		    (eq, ":fac_culture", "fac_culture_player"),
               (assign, ":culture", mtf_tom_euro),
           (else_try),
@@ -51097,7 +51310,7 @@ scripts = [
 		  (val_add, ":lowest_acceptable_strength_percentage", ":no_campaign_addition"),
 		  (val_max, ":lowest_acceptable_strength_percentage", 25),
 		  
-		  #max : 30%+15%+35% = 80% (happens when there is no campaign and player is near to its home center.)
+		  #max : 30%+15%+35% = 80% (happens when there is no campaign and player is near to its home center).
 		  (lt, ":party_strength_as_percentage_of_ideal", ":lowest_acceptable_strength_percentage"),
 		  
 		  (try_begin),
@@ -52305,12 +52518,12 @@ scripts = [
             #if faction ai is "attacking enemies around a center" is then do not find and compare distance to marshal, find and compare distance to "attacked village"
             (party_get_slot, ":enemy_strength_nearby", ":faction_object", slot_center_sortie_enemy_strength),
             
-            (try_begin), #changes between 70..x (as ":enemy_strength_nearby" increases, ":information_radius" increases too.),
+            (try_begin), ### Changes between 70..x (as ":enemy_strength_nearby" increases, ":information_radius" increases too).
               (ge, ":enemy_strength_nearby", 4000),
               (val_sub, ":enemy_strength_nearby", 4000),
               (store_div, ":information_radius", ":enemy_strength_nearby", 200),
               (val_add, ":information_radius", 70),
-            (else_try), #changes between 30..70
+            (else_try), ### Changes between 30..70
               (store_div, ":information_radius", ":enemy_strength_nearby", 100),
               (val_add, ":information_radius", 30),
             (try_end),
