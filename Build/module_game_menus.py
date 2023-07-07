@@ -5630,7 +5630,74 @@ game_menus = [ #
           (troop_raise_attribute, "trp_player", ca_intelligence, 1),
           (troop_raise_skill, "trp_player", "skl_looting", 1),
         (try_end),
-		################################
+
+        #########################################################################################################################
+        ### --- Additional historical and flavor diplomacy and variables added before game start (NEW v3.9.3a, by Khanor) --- ###
+        #########################################################################################################################
+        ### Added initial positive relations between the Golden Horde and the Il-khanate as they were both part of the Mongol Empire in 1257 (NEW v3.9.3a, by Khanor) ###
+        (store_relation, ":relation", "fac_kingdom_3", "fac_kingdom_27"), ### fac_kingdom_3 = Golden Horde, fac_kingdom_27 = Il-khanate.
+        (val_add, ":relation", 5),
+        (val_max, ":relation", 20),
+        (set_relation, "fac_kingdom_3", "fac_kingdom_27", ":relation"),
+
+        (try_begin),
+          (eq, "$players_kingdom", "fac_kingdom_3"),
+          (store_relation, ":relation", "$players_kingdom", "fac_kingdom_27"),
+          (val_add, ":relation", 5),
+          (val_max, ":relation", 20),
+          (call_script, "script_set_player_relation_with_faction", "fac_kingdom_27", ":relation"),
+        (else_try),
+          (eq, "$players_kingdom", "fac_kingdom_27"),
+          (store_relation, ":relation", "$players_kingdom", "fac_kingdom_3"),
+          (val_add, ":relation", 5),
+          (val_max, ":relation", 20),
+          (call_script, "script_set_player_relation_with_faction", "fac_kingdom_3", ":relation"),
+        (try_end),
+
+        (try_begin),
+          (this_or_next|eq, "fac_kingdom_3", "$players_kingdom"),
+          (eq, "fac_kingdom_27", "$players_kingdom"),
+            (call_script, "script_add_notification_menu", "mnu_dplmc_notification_trade_declared", "fac_kingdom_3", "fac_kingdom_27"),
+        (try_end),
+
+        (call_script, "script_event_kingdom_make_peace_with_kingdom", "fac_kingdom_3", "fac_kingdom_27"),
+        (call_script, "script_event_kingdom_make_peace_with_kingdom", "fac_kingdom_27", "fac_kingdom_3"),
+
+        (call_script, "script_recalculate_ais_for_faction", "fac_kingdom_3"),
+        (call_script, "script_recalculate_ais_for_faction", "fac_kingdom_27"),
+
+        ### Added initial starting truce between the Golden Horde and the Il-khanate as they were both part of the Mongol Empire until the latter half of 1259 historically (NEW v3.9.3a, by Khanor) ###
+        (store_add, ":truce_slot", "fac_kingdom_3", slot_faction_truce_days_with_factions_begin),
+        (val_sub, ":truce_slot", kingdoms_begin),
+        (faction_set_slot, "fac_kingdom_27", ":truce_slot", 910), ### 730 days = 2 years. 910 days ~ 2.5 years.
+        
+        (store_add, ":truce_slot", "fac_kingdom_27", slot_faction_truce_days_with_factions_begin),
+        (val_sub, ":truce_slot", kingdoms_begin),
+        (faction_set_slot, "fac_kingdom_3", ":truce_slot", 910), ### 730 days = 2 years. 910 days ~ 2.5 years.
+
+        (store_add, ":slot_war_damage_inflicted_on_b", "fac_kingdom_27", slot_faction_war_damage_inflicted_on_factions_begin),
+        (val_sub, ":slot_war_damage_inflicted_on_b", kingdoms_begin),
+        (faction_get_slot, ":damage_inflicted_by_a", "fac_kingdom_3", ":slot_war_damage_inflicted_on_b"),
+        (try_begin),
+          (lt, ":damage_inflicted_by_a", 100),
+        (try_end),
+        (faction_set_slot, "fac_kingdom_3", ":slot_war_damage_inflicted_on_b", 0),
+        
+        (store_add, ":slot_war_damage_inflicted_on_a", "fac_kingdom_3", slot_faction_war_damage_inflicted_on_factions_begin),
+        (val_sub, ":slot_war_damage_inflicted_on_a", kingdoms_begin),
+        (faction_get_slot, ":damage_inflicted_by_b", "fac_kingdom_27", ":slot_war_damage_inflicted_on_a"),
+        (try_begin),
+          (lt, ":damage_inflicted_by_b", 100),
+        (try_end),
+        (faction_set_slot, "fac_kingdom_27", ":slot_war_damage_inflicted_on_a", 0),
+
+        ### Set new global variables on game start (NEW v3.9.3a, by Khanor) ###
+        (assign, "$g_eastern_roman_empire_restored", 0), ### Global variable for holding information about the Roman Empire of Nicaea having retaken Constantinople or not. Not true at game start.
+        (assign, "$g_mongol_empire_split", 0), ### Global variable for holding information about the Mongol Empire having split after the Great Khan dies. Not true at game start.
+        ####################################################################################################
+        ### --- Additional historical and flavor diplomacy and variables added before game start end --- ###
+        ####################################################################################################
+
         (try_begin),
 		  ############# NEW v3.5
           (this_or_next|eq, "$background_type", cb_prince),
@@ -9282,9 +9349,9 @@ game_menus = [ #
               (try_begin), #player took a walled center while he is a vassal of npc kingdom.
                 (is_between, "$players_kingdom", kingdoms_begin, kingdoms_end),
                 # rafi - rename Nicae to Roman Empire
-                (try_begin),                
+                (try_begin),
                   (eq, "$g_encountered_party", "p_town_26_1"),
-                    ########## FIX 
+                    ########## FIX
                     (faction_get_slot, ":player_culture", "$players_kingdom", slot_faction_culture),
                     (eq, ":player_culture", "fac_culture_byzantium"),  ######### NEW v2.4
 					##########
@@ -9295,6 +9362,13 @@ game_menus = [ #
                       (party_set_slot, "p_town_26_1", slot_spec_mercs2_number, 1),
                       ####### NEW
                       (party_set_slot, "p_town_26_1", slot_center_has_quarters_varangian, 1),
+
+                      ### Global variable for the reconquest of Constantinople by the Eastern Roman Empire added (NEW v3.9.3a, by Khanor) ###
+                      (try_begin),
+                        (eq, "$g_eastern_roman_empire_restored", 0), ### Has not happened before.
+
+                        (assign, "$g_eastern_roman_empire_restored", 1), ### Set global variable for Constantinople being retaken by the Eastern Roman Empire to true.
+                      (try_end),
                 (try_end),
                 # rafi																 
                 (jump_to_menu, "$g_next_menu"), ###### NEW v3.8
@@ -19316,7 +19390,7 @@ game_menus = [ #
   ),
 
 
-   ("notification_center_under_siege",0,
+  ("notification_center_under_siege", 0,
     "{s1} has been besieged by {s2} of {s3}!",
     "none",
     [
@@ -19329,15 +19403,15 @@ game_menus = [ #
       (position_set_y, pos0, 30),
       (position_set_z, pos0, 170),
       (set_game_menu_tableau_mesh, "tableau_center_note_mesh", "$g_notification_menu_var1", pos0),
-      ],
+    ],
     [
       ("continue",[], "Continue...",
        [(change_screen_return),
         ]),
-     ]
+    ]
   ),
 
-   ("notification_village_raided",0,
+  ("notification_village_raided",0,
     "Enemies have laid waste to {reg0?your:a} Fief^^{s1} has been raided by {s2} of {s3}!",
     "none",
     [
@@ -19361,15 +19435,15 @@ game_menus = [ #
       (position_set_y, pos0, 30),
       (position_set_z, pos0, 170),
       (set_game_menu_tableau_mesh, "tableau_center_note_mesh", "$g_notification_menu_var1", pos0),
-      ],
+    ],
     [
       ("continue",[], "Continue...",
        [(change_screen_return),
         ]),
-     ]
+    ]
   ),
 
-   ("notification_village_raid_started",0,
+  ("notification_village_raid_started", 0,
     "Your {reg0?:faction's }Village is under attack!^^{s2} of {s3} is laying waste to {s1}.",
     "none",
     [
@@ -19393,12 +19467,12 @@ game_menus = [ #
       (position_set_y, pos0, 30),
       (position_set_z, pos0, 170),
       (set_game_menu_tableau_mesh, "tableau_center_note_mesh", "$g_notification_menu_var1", pos0),
-      ],
+    ],
     [
       ("continue",[], "Continue...",
        [(change_screen_return),
-        ]),
-     ]
+      ]),
+    ]
   ),
 
    ("notification_one_faction_left",0,
@@ -20533,7 +20607,73 @@ game_menus = [ #
             (party_add_members, "p_main_party", "trp_forest_bandit", 10),
           (try_end),
         (try_end),
-        ###############################################################################################################################
+
+        #########################################################################################################################
+        ### --- Additional historical and flavor diplomacy and variables added before game start (NEW v3.9.3a, by Khanor) --- ###
+        #########################################################################################################################
+        ### Added initial positive relations between the Golden Horde and the Il-khanate as they were both part of the Mongol Empire in 1257 (NEW v3.9.3a, by Khanor) ###
+        (store_relation, ":relation", "fac_kingdom_3", "fac_kingdom_27"), ### fac_kingdom_3 = Golden Horde, fac_kingdom_27 = Il-khanate.
+        (val_add, ":relation", 5),
+        (val_max, ":relation", 20),
+        (set_relation, "fac_kingdom_3", "fac_kingdom_27", ":relation"),
+
+        (try_begin),
+          (eq, "$players_kingdom", "fac_kingdom_3"),
+          (store_relation, ":relation", "$players_kingdom", "fac_kingdom_27"),
+          (val_add, ":relation", 5),
+          (val_max, ":relation", 20),
+          (call_script, "script_set_player_relation_with_faction", "fac_kingdom_27", ":relation"),
+        (else_try),
+          (eq, "$players_kingdom", "fac_kingdom_27"),
+          (store_relation, ":relation", "$players_kingdom", "fac_kingdom_3"),
+          (val_add, ":relation", 5),
+          (val_max, ":relation", 20),
+          (call_script, "script_set_player_relation_with_faction", "fac_kingdom_3", ":relation"),
+        (try_end),
+
+        (try_begin),
+          (this_or_next|eq, "fac_kingdom_3", "$players_kingdom"),
+          (eq, "fac_kingdom_27", "$players_kingdom"),
+            (call_script, "script_add_notification_menu", "mnu_dplmc_notification_trade_declared", "fac_kingdom_3", "fac_kingdom_27"),
+        (try_end),
+
+        (call_script, "script_event_kingdom_make_peace_with_kingdom", "fac_kingdom_3", "fac_kingdom_27"),
+        (call_script, "script_event_kingdom_make_peace_with_kingdom", "fac_kingdom_27", "fac_kingdom_3"),
+
+        (call_script, "script_recalculate_ais_for_faction", "fac_kingdom_3"),
+        (call_script, "script_recalculate_ais_for_faction", "fac_kingdom_27"),
+
+        ### Added initial starting truce between the Golden Horde and the Il-khanate as they were both part of the Mongol Empire until the latter half of 1259 historically (NEW v3.9.3a, by Khanor) ###
+        (store_add, ":truce_slot", "fac_kingdom_3", slot_faction_truce_days_with_factions_begin),
+        (val_sub, ":truce_slot", kingdoms_begin),
+        (faction_set_slot, "fac_kingdom_27", ":truce_slot", 910), ### 730 days = 2 years. 910 days ~ 2.5 years.
+        
+        (store_add, ":truce_slot", "fac_kingdom_27", slot_faction_truce_days_with_factions_begin),
+        (val_sub, ":truce_slot", kingdoms_begin),
+        (faction_set_slot, "fac_kingdom_3", ":truce_slot", 910), ### 730 days = 2 years. 910 days ~ 2.5 years.
+
+        (store_add, ":slot_war_damage_inflicted_on_b", "fac_kingdom_27", slot_faction_war_damage_inflicted_on_factions_begin),
+        (val_sub, ":slot_war_damage_inflicted_on_b", kingdoms_begin),
+        (faction_get_slot, ":damage_inflicted_by_a", "fac_kingdom_3", ":slot_war_damage_inflicted_on_b"),
+        (try_begin),
+          (lt, ":damage_inflicted_by_a", 100),
+        (try_end),
+        (faction_set_slot, "fac_kingdom_3", ":slot_war_damage_inflicted_on_b", 0),
+        
+        (store_add, ":slot_war_damage_inflicted_on_a", "fac_kingdom_3", slot_faction_war_damage_inflicted_on_factions_begin),
+        (val_sub, ":slot_war_damage_inflicted_on_a", kingdoms_begin),
+        (faction_get_slot, ":damage_inflicted_by_b", "fac_kingdom_27", ":slot_war_damage_inflicted_on_a"),
+        (try_begin),
+          (lt, ":damage_inflicted_by_b", 100),
+        (try_end),
+        (faction_set_slot, "fac_kingdom_27", ":slot_war_damage_inflicted_on_a", 0),
+
+        ### Set new global variables on game start (NEW v3.9.3a, by Khanor) ###
+        (assign, "$g_eastern_roman_empire_restored", 0), ### Global variable for holding information about the Roman Empire of Nicaea having retaken Constantinople or not. Not true at game start.
+        (assign, "$g_mongol_empire_split", 0), ### Global variable for holding information about the Mongol Empire having split after the Great Khan dies. Not true at game start.
+        ####################################################################################################
+        ### --- Additional historical and flavor diplomacy and variables added before game start end --- ###
+        ####################################################################################################
 
          # (set_show_messages, 0),
          # (succeed_quest, "qst_save_relative_of_merchant"),

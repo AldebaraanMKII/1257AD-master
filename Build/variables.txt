@@ -1997,3 +1997,5 @@ g_decap_psys_blood_decapitation
 g_decap_psys_game_blood
 g_decap_psys_game_blood_2
 g_dismemberment_enabled
+g_eastern_roman_empire_restored
+g_mongol_empire_split

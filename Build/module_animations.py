@@ -27,6 +27,9 @@ from header_animations import *
 amf_priority_jump           = 2
 amf_priority_ride           = 2
 amf_priority_continue       = 1
+amf_priority_stand_to_crouch     = 1
+amf_priority_crouch_to_stand     = 4
+amf_priority_walk_forward_crouch = 8
 amf_priority_attack         = 10
 amf_priority_cancel         = 12
 amf_priority_defend         = 14
@@ -533,7 +536,7 @@ animations = [
    [10.0, "low_walk", 1, 81, arf_use_walk_progress|arf_cyclic|blend_in_walk|arf_make_walk_sound,pack2f(0.4,0.9), (0, 0, 0), 0.0],
  ],
  ["stand_to_crouch", acf_enforce_lowerbody|acf_parallels_for_look_slope, 0,
-   [5.0, "crouch_down", 1, 81, arf_cyclic, pack2f(0.4,0.9), (0, 0, 0), 0.0], 
+   [5.0, "crouch_down", 1, 81, blend_in_walk, pack2f(0.4,0.9), (0, 0, 0), 0.0], 
  ],
  ["crouch_to_stand", acf_enforce_lowerbody, 0,
    [1.7, "crouch_down", 154, 185, arf_blend_in_1, 0, (0, 0, 0), 0.0], 

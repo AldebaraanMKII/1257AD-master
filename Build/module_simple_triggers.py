@@ -8593,11 +8593,26 @@ simple_triggers = [
        (try_end),
      (try_end),
      (assign, ":search_end", -1),  ##### break loop
-#######################################
  (try_end),
-]),  
+]),
 #######################################
-(24,   
+### Mongol Empire split timer, the player should be warned of the end of the unified Mongol Empire, and non-aggression between the Golden Horde and the Il-khanate ending (NEW v3.9.3a, by Khanor) ###
+(168,
+  [
+    (store_current_hours, ":cur_hours"),
+    (try_begin),
+      (eq, "$g_mongol_empire_split", 0), ### Has not happened before.
+      (ge, ":cur_hours", 21660), ### 10 days left of the initial two and a half year (21900 hour) non-aggression pact between the Golden Horde and the Il-khanate.
+      
+      (assign, "$g_mongol_empire_split", 1), ### Set global variable for the Mongol Empire split to true.
+      (display_message, "@News from Cathay tell of the death of the Great Khan during the siege of a Song castle.", 0xff0000),
+      (display_message, "@Central authority in the Mongol Empire now wanes as successor Khans strive for power over their local Khanates...", 0xff0000),
+      (display_message, "@The Mongol Empire has split up!", 0xff0000),
+    (try_end),
+  ]
+),
+#######################################
+(24,
 [
 ]),  
 ##############################################################################
