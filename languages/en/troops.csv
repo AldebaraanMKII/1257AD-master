@@ -78,8 +78,6 @@ trp_merc_maghreb_range|Muslim Mercenary Archer
 trp_merc_maghreb_range_pl|Muslim Mercenary Archers
 trp_merc_maghreb_horse|Muslim Mercenary Horseman
 trp_merc_maghreb_horse_pl|Muslim Mercenary Horsemen
-trp_merc_almogabar|Almogabar
-trp_merc_almogabar_pl|Almogabars
 trp_merc_rus_spearman|Rus Mercenary Spearman
 trp_merc_rus_spearman_pl|Rus Mercenary Spearmen
 trp_merc_rus_guisarmer|Rus Mercenary Guisarmer
@@ -96,6 +94,8 @@ trp_merc_latin_range|Latin Mercenary Crossbowman
 trp_merc_latin_range_pl|Latin Mercenary Crossbowmen
 trp_merc_latin_horse|Latin Mercenary Horseman
 trp_merc_latin_horse_pl|Latin Mercenary Horsemen
+trp_merc_almogavar_1|Almogavar
+trp_merc_almogavar_1_pl|Almogavars
 trp_merc_latin_light|Latin Light Infantry
 trp_merc_latin_light_pl|Latin Light Infantry
 trp_merc_balkan_spearman|Balkan Mercenary Spearman
@@ -160,6 +160,8 @@ trp_merc_veteran_latin_range|Veteran Latin Mercenary Crossbowman
 trp_merc_veteran_latin_range_pl|Veteran Latin Mercenary Crossbowmen
 trp_merc_veteran_latin_horse|Veteran Latin Mercenary Horseman
 trp_merc_veteran_latin_horse_pl|Veteran Latin Mercenary Horsemen
+trp_merc_almogavar_2|Almocaden Almogavar
+trp_merc_almogavar_2_pl|Almocaden Almogavars
 trp_merc_veteran_latin_light|Veteran Latin Light Infantry
 trp_merc_veteran_latin_light_pl|Veteran Latin Light Infantry
 trp_merc_veteran_balkan_spearman|Veteran Balkan Mercenary Spearman
@@ -224,6 +226,8 @@ trp_merc_elite_latin_range|Elite Latin Mercenary Crossbowman
 trp_merc_elite_latin_range_pl|Elite Latin Mercenary Crossbowmen
 trp_merc_elite_latin_horse|Elite Latin Mercenary Horseman
 trp_merc_elite_latin_horse_pl|Elite Latin Mercenary Horsemen
+trp_merc_almogavar_3|Adalid Almogavar
+trp_merc_almogavar_3_pl|Adalid Almogavars
 trp_merc_elite_latin_light|Elite Latin Light Infantry
 trp_merc_elite_latin_light_pl|Elite Latin Light Infantry
 trp_merc_elite_balkan_spearman|Elite Balkan Mercenary Spearman
@@ -696,40 +700,56 @@ trp_marinid_mounted_skirmisher_3|Noble Western Muslim Cavalryman
 trp_marinid_mounted_skirmisher_3_pl|Noble Western Muslim Cavalrymen
 trp_bedouin_recruit|Bedouin Levy
 trp_bedouin_recruit_pl|Bedouin Levies
-trp_bedouin_spearman|Bedouin Spearman
-trp_bedouin_spearman_pl|Bedouin Spearmen
-trp_bedouin_cav_1|Bedouin Light Cavalry
-trp_bedouin_cav_1_pl|Bedouin Light Cavalry
-trp_bedouin_cav_2|Bedouin Cavalry
-trp_bedouin_cav_2_pl|Bedouin Cavalry
-trp_bedouin_cav_3|Bedouin Noble Cavalry
-trp_bedouin_cav_3_pl|Bedouin Nobles Cavalry
+trp_bedouin_skirmisher|Bedouin Skirmisher
+trp_bedouin_skirmisher_pl|Bedouin Skirmishers
+trp_bedouin_javelin_1|Bedouin Warrior
+trp_bedouin_javelin_1_pl|Bedouin Warriors
+trp_bedouin_javelin_2|Bedouin Veteran Warrior
+trp_bedouin_javelin_2_pl|Bedouin Veteran Warriors
+trp_bedouin_cavalry_1|Bedouin Auxiliary Cavalry
+trp_bedouin_cavalry_1_pl|Bedouin Auxiliary Cavalry
+trp_bedouin_cavalry_2|Bedouin Cavalry
+trp_bedouin_cavalry_2_pl|Bedouin Cavalry
+trp_bedouin_cavalry_3|Bedouin Loyal Cavalry
+trp_bedouin_cavalry_3_pl|Bedouin Loyal Cavalry
 trp_halqa_recruit|Halqa Levy
 trp_halqa_recruit_pl|Halqa Levies
-trp_halqa_levy_spear|Halqa Levy Spearman
-trp_halqa_levy_spear_pl|Halqa Levy Spearmen
-trp_halqa_light_spear|Halqa Light Spearman
-trp_halqa_light_spear_pl|Halqa Light Spearmen
-trp_halqa_medium_spear|Halqa Medium Spearman
-trp_halqa_medium_spear_pl|Halqa Medium Spearmen
+trp_halqa_spear_1|Halqa Militia
+trp_halqa_spear_1_pl|Halqa Militia
+trp_halqa_spear_2|Halqa Spearman
+trp_halqa_spear_2_pl|Halqa Spearmen
+trp_halqa_spear_3|Halqa Veteran Spearman
+trp_halqa_spear_3_pl|Halqa Veteran Spearmen
+trp_halqa_guisarmer_1|Halqa Infantryman
+trp_halqa_guisarmer_1_pl|Halqa Infantrymen
+trp_halqa_guisarmer_2|Halqa Veteran Infantryman
+trp_halqa_guisarmer_2_pl|Halqa Veteran Infantrymen
 trp_halqa_archer|Halqa Archer
 trp_halqa_archer_pl|Halqa Archers
-trp_halqa_cav_1|Halqa Light Cavalry
-trp_halqa_cav_1_pl|Halqa Light Cavalry
-trp_halqa_cav_2|Halqa Cavalry
-trp_halqa_cav_2_pl|Halqa Cavalry
-trp_halqa_cav_3|Halqa Heavy Cavalry
-trp_halqa_cav_3_pl|Halqa Heavy Cavalry
-trp_mamluk_slave_1|Mamluk Slave
-trp_mamluk_slave_1_pl|Mamluk Slaves
-trp_mamluk_slave_2|Mamluk Ghulam
-trp_mamluk_slave_2_pl|Mamluk Ghilman
-trp_mamluk_horseman|Lesser Mamluk
-trp_mamluk_horseman_pl|Lesser Mamluks
-trp_mamluk_lancer|Mamluk Lancer
-trp_mamluk_lancer_pl|Mamluk Lancers
-trp_mamluk_archer|Mamluk Archer
-trp_mamluk_archer_pl|Mamluk Archers
+trp_halqa_cavalry_1|Halqa Light Cavalry
+trp_halqa_cavalry_1_pl|Halqa Light Cavalry
+trp_halqa_cavalry_2|Halqa Cavalry
+trp_halqa_cavalry_2_pl|Halqa Cavalry
+trp_halqa_cavalry_3|Halqa Professional Cavalry
+trp_halqa_cavalry_3_pl|Halqa Professional Cavalry
+trp_slave_recruit|Slave Recruit
+trp_slave_recruit_pl|Slave Recruits
+trp_mamluk_levy|Mamluk Levy
+trp_mamluk_levy_pl|Mamluk Levies
+trp_mamluk_cavalry_1|Mamluk Junior Cavalry
+trp_mamluk_cavalry_1_pl|Mamluk Junior Cavalry
+trp_mamluk_cavalry_2|Mamluk Regular Cavalry
+trp_mamluk_cavalry_2_pl|Mamluk Regular Cavalry
+trp_mamluk_cavalry_3|Mamluk Elite Cavalry
+trp_mamluk_cavalry_3_pl|Mamluk Elite Cavalry
+trp_ghulam_levy|Ghulam Levy
+trp_ghulam_levy_pl|Ghulam Levies
+trp_ghulam_cavalry_1|Ghulam Light Cavalry
+trp_ghulam_cavalry_1_pl|Ghulam Light Cavalry
+trp_ghulam_cavalry_2|Ghulam Cavalry
+trp_ghulam_cavalry_2_pl|Ghulam Cavalry
+trp_ghulam_cavalry_3|Ghulam Lancer Cavalry
+trp_ghulam_cavalry_3_pl|Ghulam Lancer Cavalry
 trp_mamluke_turkoman_1|Turkoman Horse Archer
 trp_mamluke_turkoman_1_pl|Turkoman Horse Archers
 trp_mamluke_turkoman_2|Turkoman Veteran Horse Archer
@@ -966,10 +986,6 @@ trp_scottish_village_recruit|Scottish Levy
 trp_scottish_village_recruit_pl|Scottish Levies
 trp_scottish_infantry_recruit|Scottish Recruit
 trp_scottish_infantry_recruit_pl|Scottish Recruits
-trp_scottish_forinsec_archer|Scottish Commoner Archer
-trp_scottish_forinsec_archer_pl|Scottish Commoner Archers
-trp_scottish_archer_2|Scottish Veteran Archer
-trp_scottish_archer_2_pl|Scottish Veteran Archers
 trp_scottish_forinsec_spearman|Scottish Commoner Spearman
 trp_scottish_forinsec_spearman_pl|Scottish Commoner Spearmen
 trp_scottish_clansman|Scottish Clansman
@@ -978,6 +994,10 @@ trp_scottish_heavy_swordsman|Scottish Heavy Footman
 trp_scottish_heavy_swordsman_pl|Scottish Heavy Footmen
 trp_scottish_heavy_axeman|Scottish Heavy Axeman
 trp_scottish_heavy_axeman_pl|Scottish Heavy Axemen
+trp_scottish_forinsec_archer|Scottish Commoner Archer
+trp_scottish_forinsec_archer_pl|Scottish Commoner Archers
+trp_scottish_archer_2|Scottish Veteran Archer
+trp_scottish_archer_2_pl|Scottish Veteran Archers
 trp_scottish_light_cavalry|Scottish Mounted Sergeant
 trp_scottish_light_cavalry_pl|Scottish Mounted Sergeants
 trp_scottish_medium_cavalry|Scottish Man-at-arms
@@ -1309,8 +1329,8 @@ trp_spy_walker_2_pl|Townswomen
 trp_tournament_master|Tournament Master
 trp_trainer|Trainer
 trp_trainer_pl|Trainer
-trp_Constable_Hareck|Constable Hareck
-trp_Constable_Hareck_pl|Constable Hareck
+trp_ee_constable_armory|Armory
+trp_ee_constable_armory_pl|Armory
 trp_Ramun_the_slave_trader|Ramun, the slave trader
 trp_Ramun_the_slave_trader_pl|Ramun, the slave trader
 trp_guide|Quick Jimmy
@@ -6153,3 +6173,23 @@ trp_english_veteran_longbowman|English Veteran Longbowman
 trp_english_veteran_longbowman_pl|English Veteran Longbowmen
 trp_wagon_master|Wagon Master
 trp_wagon_master_pl|Wagon Masters
+trp_ee_watchman|Watchman
+trp_ee_watchman_pl|Watchmen
+trp_fort_walker|Guard
+trp_fort_walker_pl|Guards
+trp_fort_rider|Patrol
+trp_fort_rider_pl|Guards
+trp_fort_slave|Slave
+trp_fort_slave_pl|Slaves
+trp_outpost_captain|Outpost Captain
+trp_outpost_captain_pl|Outpost Captains
+trp_fort_captain|Fort Captain
+trp_fort_captain_pl|Fort Captains
+trp_looter_bully_handless|Looter Bully
+trp_looter_bully_handless_pl|Looter Bullies
+trp_looter_thug_armless|Looter Thug
+trp_looter_thug_armless_pl|Looter Thug
+trp_thin_looter_armless|Looter Thief
+trp_thin_looter_armless_pl|Looter Thief
+trp_fat_peasant_handless|Fat Peasant
+trp_fat_peasant_handless_pl|Fat Peasants
