@@ -734,6 +734,16 @@ items = [
 
 ####
 
+############### NEW v3.14 - 
+["heraldic_armor_new_aa","Heraldic_Mail", [("heraldic_armor_new_aa", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0,3454, weight(22)|abundance(100)|body_armor(49)|leg_armor(17)|difficulty(7), imodbits_armor, [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_heraldic_armor_aa", ":agent_no", ":troop_no")])], all_euro_factions],
+ 
+["heraldic_armor_new_bb","Heraldic_Plated_Mail", [("heraldic_armor_new_bb", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0,3520, weight(22)|abundance(100)|body_armor(50)|leg_armor(16)|difficulty(7), imodbits_armor, [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_heraldic_armor_bb", ":agent_no", ":troop_no")])], all_euro_factions],
+
+["heraldic_armor_new_cc","Heraldic_Surcoat_Over_Mail", [("heraldic_armor_new_cc", 0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_doesnt_cover_hair, 0,1950, weight(22)|abundance(100)|body_armor(44)|leg_armor(15)|difficulty(7), imodbits_armor, [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_heraldic_armor_cc", ":agent_no", ":troop_no")])], all_euro_factions],
+############### 
+
+
+
 
 #### TIER 7
 ["coat_of_plates", "Coat of Plates", [("coat_of_plates_a",0)], itp_merchandise|itp_type_body_armor  |itp_covers_legs ,0, tier_7_body_armor_price, tier_7_body_armor, imodbits_armor, [], euro_factions],

@@ -206,7 +206,7 @@ party_templates = [
 #  ("default_reinforcements_c", "default_reinforcements_c",0,0,fac_commoners,0,[(trp_hired_blade,1,7),(trp_mercenary,3,10),(trp_caravan_guard,3,15)]),
 
   # Teutonic
-  ("kingdom_teutonic_reinforcements_a", "{!}kingdom_teutonic_reinforcements_a", 0, 0, fac_kingdom_1, soldier_personality, [(trp_teu_horse_1,1,3), (trp_teu_village_recruit,4,9),(trp_teu_town_1,4,9)]),
+  ("kingdom_teutonic_reinforcements_a", "{!}kingdom_teutonic_reinforcements_a", 0, 0, fac_kingdom_1, soldier_personality, [(trp_teu_horse_1,1,3), (trp_teu_village_recruit,4,9),(trp_teu_town_1,4,9),(trp_teu_horse_4_dismounted,1,1)]),   ############### NEW v3.12 - 
   ("kingdom_teutonic_reinforcements_b", "{!}kingdom_teutonic_reinforcements_b", 0, 0, fac_kingdom_1, soldier_personality, [(trp_teu_town_2_2,2,6),(trp_teu_ger_1,1,3),(trp_teu_balt_1,1,3),(trp_teu_town_2_1,1,3)]),
   ("kingdom_teutonic_reinforcements_c", "{!}kingdom_teutonic_reinforcements_c", 0, 0, fac_kingdom_1, soldier_personality, [(trp_teu_horse_3_dismounted, 1,2), (trp_teu_horse_4_dismounted, 0,1), (trp_teu_horse_2, 2,4), (trp_teu_horse_4, 2,3)]),
 
@@ -345,7 +345,37 @@ party_templates = [
   ("kingdom_polish_reinforcements_b", "{!}kingdom_polish_reinforcements_b", 0, 0, fac_kingdom_5, soldier_personality, [(trp_polish_strzelcy,2,4),(trp_polish_spear_levy,5,8), (trp_polish_peasant_archer,1,2)]),
   ("kingdom_polish_reinforcements_c", "{!}kingdom_polish_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_polish_retainer, 2,5), (trp_polish_guard, 1,2), (trp_hussar_cavalry, 1,2)]),
 ############################
+############### NEW v3.13 - 
+  ("kingdom_sicilian_reinforcements_a", "{!}kingdom_sicilian_reinforcements_a", 0, 0, fac_kingdom_40, soldier_personality, [(trp_italian_light_cavalry,1,3),(trp_italian_village_recruit,4,9),(trp_italian_town_recruit,4,9)]),
+  ("kingdom_sicilian_reinforcements_b", "{!}kingdom_sicilian_reinforcements_b", 0, 0, fac_kingdom_40, soldier_personality, [(trp_italian_archer,1,3),(trp_italian_veteran_crossbowman,1,3),(trp_italian_billman,1,3),(trp_iberian_spears_sergeant,1,3),(trp_italian_veteran_spearman,1,3)]),
+  ("kingdom_sicilian_reinforcements_c", "{!}kingdom_sicilian_reinforcements_c", 0, 0, fac_kingdom_40, soldier_personality, [(trp_italian_medium_cavalry, 2,5),(trp_sicilian_knight, 1,2)]),
+  
+  ("kingdom_swedish_reinforcements_a", "{!}kingdom_swedish_reinforcements_a", 0, 0, fac_kingdom_4, soldier_personality, [(trp_nordic_village_recruit,5,12),(trp_nordic_town_recruit,6,9)]),
+  ("kingdom_swedish_reinforcements_b", "{!}kingdom_swedish_reinforcements_b", 0, 0, fac_kingdom_4, soldier_personality, [(trp_nordic_veteran_archer,1,2),(trp_nordic_crossbowman,1,3),(trp_nordic_billman,1,3),(trp_nordic_veteran_spearman,1,3),(trp_nordic_spearman,1,3)]),
+  ("kingdom_swedish_reinforcements_c", "{!}kingdom_swedish_reinforcements_c", 0, 0, fac_kingdom_4, soldier_personality, [(trp_nordic_medium_cavalry, 2,3),(trp_swedish_knight, 1,2),(trp_nordic_swords_sergeant,2,3)]),
+  
+  ("kingdom_norwegian_reinforcements_a", "{!}kingdom_norwegian_reinforcements_a", 0, 0, fac_kingdom_4, soldier_personality, [(trp_nordic_village_recruit,5,12),(trp_nordic_town_recruit,6,9)]),
+  ("kingdom_norwegian_reinforcements_b", "{!}kingdom_norwegian_reinforcements_b", 0, 0, fac_kingdom_4, soldier_personality, [(trp_nordic_veteran_archer,1,2),(trp_nordic_crossbowman,1,3),(trp_nordic_billman,1,3),(trp_nordic_veteran_spearman,1,3),(trp_nordic_spearman,1,3)]),
+  ("kingdom_norwegian_reinforcements_c", "{!}kingdom_norwegian_reinforcements_c", 0, 0, fac_kingdom_4, soldier_personality, [(trp_nordic_medium_cavalry, 2,3),(trp_norwegian_knight, 1,2),(trp_nordic_swords_sergeant,2,3)]),
+  
+  ("kingdom_hre_reinforcements_a", "{!}kingdom_hre_reinforcements_a", 0, 0, fac_kingdom_5, soldier_personality, [(trp_euro_horse_1,3,7),(trp_euro_village_recruit,3,7),(trp_euro_town_recruit,3,7)]),
+  ("kingdom_hre_reinforcements_b", "{!}kingdom_hre_reinforcements_b", 0, 0, fac_kingdom_5, soldier_personality, [(trp_euro_archer_2,1,3),(trp_imperial_mounted_crossbow,1,3),(trp_imperial_zweihander,1,3),(trp_euro_spearman_3,1,3),(trp_euro_spearman_2,1,3)]),
+  ("kingdom_hre_reinforcements_c", "{!}kingdom_hre_reinforcements_c", 0, 0, fac_kingdom_5, soldier_personality, [(trp_euro_horse_2, 2,5), (trp_imperial_knight, 1,2)]),
+  
+  
+  ("kingdom_portuguese_reinforcements_a", "{!}kingdom_portuguese_reinforcements_a", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_light_cavalry,1,3),(trp_iberian_village_recruit,4,9),(trp_iberian_town_recruit,4,9)]),
+  ("kingdom_portuguese_reinforcements_b", "{!}kingdom_portuguese_reinforcements_b", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_archer,1,3),(trp_iberian_veteran_crossbowman,1,3),(trp_iberian_billman,1,3),(trp_iberian_spears_sergeant,1,3),(trp_iberian_veteran_spearman,1,3)]),
+  ("kingdom_portuguese_reinforcements_c", "{!}kingdom_portuguese_reinforcements_c", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_medium_cavalry, 2,5),(trp_portuguese_knight, 1,2)]),
+  
+  ("kingdom_castile_reinforcements_a", "{!}kingdom_castile_reinforcements_a", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_light_cavalry,1,3),(trp_iberian_village_recruit,4,9),(trp_iberian_town_recruit,4,9)]),
+  ("kingdom_castile_reinforcements_b", "{!}kingdom_castile_reinforcements_b", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_archer,1,3),(trp_iberian_veteran_crossbowman,1,3),(trp_iberian_billman,1,3),(trp_iberian_spears_sergeant,1,3),(trp_iberian_veteran_spearman,1,3)]),
+  ("kingdom_castile_reinforcements_c", "{!}kingdom_castile_reinforcements_c", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_medium_cavalry, 2,5),(trp_crown_of_castile_knight, 1,2)]),
+  
+  ("kingdom_aragon_reinforcements_a", "{!}kingdom_aragon_reinforcements_a", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_light_cavalry,1,3),(trp_iberian_village_recruit,4,9),(trp_iberian_town_recruit,4,9)]),
+  ("kingdom_aragon_reinforcements_b", "{!}kingdom_aragon_reinforcements_b", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_archer,1,3),(trp_iberian_veteran_crossbowman,1,3),(trp_iberian_billman,1,3),(trp_iberian_spears_sergeant,1,3),(trp_iberian_veteran_spearman,1,3)]),
+  ("kingdom_aragon_reinforcements_c", "{!}kingdom_aragon_reinforcements_c", 0, 0, fac_kingdom_16, soldier_personality, [(trp_iberian_medium_cavalry, 2,5),(trp_crown_of_aragon_knight, 1,2)]),
 
+############### 
   ("steppe_bandit_lair" , "Steppe Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_steppe_bandit,15,58)]),
   ("taiga_bandit_lair", "Tundra Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_taiga_bandit,15,58)]),
   ("desert_bandit_lair" , "Desert Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_desert_bandit,15,58)]),
@@ -481,29 +511,45 @@ party_templates = [
 
   
   ##crusader
-  ("company_teutonic_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3, 3, 5), (trp_teu_horse_4, 1, 2)]),
-  ("company_teutonic_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,5,8), (trp_teu_horse_4,2,4)]), 
-  ("company_teutonic_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,7,10), (trp_teu_horse_4,4,6)]), 
-  ("company_teutonic_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,9,12), (trp_teu_horse_4,6,8)]), 
+  # ("company_teutonic_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3, 3, 5), (trp_teu_horse_4, 1, 2)]),
+  # ("company_teutonic_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,5,8), (trp_teu_horse_4,2,4)]), 
+  # ("company_teutonic_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,7,10), (trp_teu_horse_4,4,6)]), 
+  # ("company_teutonic_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,9,12), (trp_teu_horse_4,6,8)]), 
+  ############### NEW v3.12 - 
+  ("company_teutonic_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3, 3, 5), (trp_teu_horse_4, 1, 2), (trp_teu_horse_4_dismounted, 1, 1)]),
+  ("company_teutonic_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,5,8), (trp_teu_horse_4,2,4), (trp_teu_horse_4_dismounted,1,3)]), 
+  ("company_teutonic_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,7,10), (trp_teu_horse_4,4,6), (trp_teu_horse_4_dismounted,2,5)]), 
+  ("company_teutonic_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_horse_3,9,12), (trp_teu_horse_4,6,8), (trp_teu_horse_4_dismounted,3,6)]), 
+############### 
   
   ("company_teutonic_aux_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_town_3_1,9,12), (trp_teu_town_3_2,6,8)]), 
   ("company_teutonic_aux_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_teu_town_3_1,13,16), (trp_teu_town_4_1,4,6), (trp_teu_town_3_2,10,12), (trp_teu_town_4_2,3,5)]), 
   
 
 
-  ("company_templar_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,2,5), (trp_templar_knight,1,2)]), 
-  ("company_templar_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,5,8), (trp_templar_knight,2,4)]), 
-  ("company_templar_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,7,10), (trp_templar_knight,4,6)]), 
-  ("company_templar_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,9,12), (trp_templar_knight,6,8)]), 
-    
+  # ("company_templar_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,2,5), (trp_templar_knight,1,2)]), 
+  # ("company_templar_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,5,8), (trp_templar_knight,2,4)]), 
+  # ("company_templar_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,7,10), (trp_templar_knight,4,6)]), 
+  # ("company_templar_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,9,12), (trp_templar_knight,6,8)]), 
+    ############### NEW v3.12 - 
+  ("company_templar_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,2,5), (trp_templar_knight,1,2), (trp_templar_knight_dismounted,1,1)]), 
+  ("company_templar_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,5,8), (trp_templar_knight,2,4), (trp_templar_knight_dismounted,1,3)]), 
+  ("company_templar_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,7,10), (trp_templar_knight,4,6), (trp_templar_knight_dismounted,2,5)]), 
+  ("company_templar_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_half_brother,9,12), (trp_templar_knight,6,8), (trp_templar_knight_dismounted,3,6)]), 
+############### 
   ("company_templar_aux_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_spearman_1,9,12), (trp_templar_crossbowman_1,6,8)]), 
   ("company_templar_aux_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_templar_spearman_1,13,16), (trp_templar_spearman_2,4,6), (trp_templar_crossbowman_1,10,12), (trp_templar_crossbowman_2,3,5)]), 
   
-  ("company_hospitaller_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,2,5), (trp_hospitaller_knight,1,2)]), 
-  ("company_hospitaller_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,5,8), (trp_hospitaller_knight,2,4)]), 
-  ("company_hospitaller_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,7,10), (trp_hospitaller_knight,4,6)]), 
-  ("company_hospitaller_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,9,12), (trp_hospitaller_knight,6,8)]), 
-
+  # ("company_hospitaller_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,2,5), (trp_hospitaller_knight,1,2)]), 
+  # ("company_hospitaller_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,5,8), (trp_hospitaller_knight,2,4)]), 
+  # ("company_hospitaller_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,7,10), (trp_hospitaller_knight,4,6)]), 
+  # ("company_hospitaller_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,9,12), (trp_hospitaller_knight,6,8)]), 
+  ############### NEW v3.12 - 
+  ("company_hospitaller_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,2,5), (trp_hospitaller_knight,1,2), (trp_hospitaller_knight_dismounted,1,1)]), 
+  ("company_hospitaller_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,5,8), (trp_hospitaller_knight,2,4), (trp_hospitaller_knight_dismounted,1,3)]), 
+  ("company_hospitaller_3", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,7,10), (trp_hospitaller_knight,4,6), (trp_hospitaller_knight_dismounted,2,5)]), 
+  ("company_hospitaller_4", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_half_brother,9,12), (trp_hospitaller_knight,6,8), (trp_hospitaller_knight_dismounted,3,6)]), 
+############### 
   ("company_hospitaller_aux_1", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_spearman_1,9,12), (trp_hospitaller_crossbowman_1,6,8)]), 
   ("company_hospitaller_aux_2", "{!}Company", 0, 0, fac_neutral, soldier_personality, [(trp_hospitaller_spearman_1,13,16), (trp_hospitaller_spearman_2,4,6), (trp_hospitaller_crossbowman_1,10,12), (trp_hospitaller_crossbowman_2,3,5)]), 
 

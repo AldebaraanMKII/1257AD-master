@@ -3817,15 +3817,15 @@ game_menus = [ #
          ]
         ),
 		
-       ("faction_statistics_4",
-	   [
-       (gt, "$g_current_factions_active", 55),
-	   ], "View faction statistics (Part IV).",
-        [
-         (assign, "$g_misc_current_statistics_menu", 4),
-         (start_presentation, "prsnt_ee_faction_statistics"),
-         ]
-        ),
+       # ("faction_statistics_4",
+	   # [
+       # (gt, "$g_current_factions_active", 55),
+	   # ], "View faction statistics (Part IV).",
+        # [
+         # (assign, "$g_misc_current_statistics_menu", 4),
+         # (start_presentation, "prsnt_ee_faction_statistics"),
+         # ]
+        # ),
        ## CC
 ########################################################################
        

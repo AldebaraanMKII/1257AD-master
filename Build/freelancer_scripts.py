@@ -1208,8 +1208,8 @@ scripts = [
         (store_character_level, ":cur_level", ":cur_troop"),
         (ge, ":player_level", ":cur_level"),## only troops with level <= player level
 		#################
-        # (str_store_troop_name, s20, ":cur_troop"),
-        # (display_message, "@Got {s20}"),
+        (str_store_troop_name, s20, ":cur_troop"),
+        (display_message, "@Got {s20}"),
 		#################
         (try_begin),
             (eq, ":division", grc_cavalry),

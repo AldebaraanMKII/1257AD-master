@@ -327,10 +327,10 @@ kingdoms_begin_2 = fac_papacy
 kingdoms_end_2 = fac_enhanced_kingdom_1
 
 kingdoms_begin_3 = fac_enhanced_kingdom_1
-kingdoms_end_3 = fac_enhanced_kingdom_21
+kingdoms_end_3 = fac_kingdoms_end
 
-kingdoms_begin_4 = fac_enhanced_kingdom_21
-kingdoms_end_4 = fac_kingdoms_end
+# kingdoms_begin_4 = fac_enhanced_kingdom_21
+# kingdoms_end_4 = fac_kingdoms_end
 
 slot_faction_days_active = 120
 slot_faction_battles_won = 121
@@ -2769,6 +2769,28 @@ hungarian_culture_end = trp_polish_town_recruit
 polish_culture_start = trp_polish_town_recruit
 polish_culture_end = trp_scots_guard
 ##################
+############### NEW v3.13 - 
+swedish_culture_start = trp_nordic_village_recruit
+swedish_culture_end = trp_balt_recruit
+
+norwegian_culture_start = trp_nordic_village_recruit
+norwegian_culture_end = trp_balt_recruit
+
+castile_culture_start = trp_iberian_village_recruit
+castile_culture_end = trp_italian_village_recruit
+
+portuguese_culture_start = trp_iberian_village_recruit
+portuguese_culture_end = trp_italian_village_recruit
+
+aragon_culture_start = trp_iberian_village_recruit
+aragon_culture_end = trp_italian_village_recruit
+
+sicilian_culture_start = trp_italian_village_recruit
+sicilian_culture_end = trp_andalus_village_recruit
+
+hre_culture_start = trp_euro_town_recruit
+hre_culture_end = trp_tatar_tribesman
+############### 
 player_culture_start = trp_cstm_custom_troop_3_tiers_0_0_0
 player_culture_end = trp_cstm_custom_troop_3_tiers_1_0_0
 ####################################

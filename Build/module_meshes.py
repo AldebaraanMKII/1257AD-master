@@ -1796,6 +1796,11 @@ meshes = [
   ("icon_bardiche", 0, "ico_axetwo", 0, 0, 0, 0, 0, 0, 0.3, 0.3, 0.3),
 #############################################
 
+############### NEW v3.14 - 
+  ("tableau_mesh_heraldic_armor_aa", 0, "tableau_mesh_heraldic_armor_aa",  0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("tableau_mesh_heraldic_armor_bb", 0, "tableau_mesh_heraldic_armor_bb",  0, 0, 0, 0, 0, 0, 1, 1, 1),
+  ("tableau_mesh_heraldic_armor_cc", 0, "tableau_mesh_heraldic_armor_cc",  0, 0, 0, 0, 0, 0, 1, 1, 1),
+############### 
 
 
 

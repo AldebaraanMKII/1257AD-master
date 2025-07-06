@@ -295,3 +295,6 @@ tableau_arabian_light_armor_b = 293
 tableau_arabian_light_armor_c = 294
 tableau_arabian_light_armor_d = 295
 tableau_lord_vassalage_notify = 296
+tableau_heraldic_armor_aa = 297
+tableau_heraldic_armor_bb = 298
+tableau_heraldic_armor_cc = 299

@@ -8868,6 +8868,101 @@ game_menus = [
         (display_message, "@Fief culture changed to Crusader.", 0x0000ff),
       ]),
 ##################################
+############### NEW v3.13 - 
+      ("change_culture_swedish",
+      [
+        (eq, "$g_player_know_culture_swedish", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_swedish"),
+      ],
+      "Change it to swedish.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_swedish"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to swedish.", 0x0000ff),
+      ]),
+      
+      ("change_culture_norwegian",
+      [
+        (eq, "$g_player_know_culture_norwegian", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_norwegian"),
+      ],
+      "Change it to norwegian.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_norwegian"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to norwegian.", 0x0000ff),
+      ]),
+      
+      
+      ("change_culture_castile",
+      [
+        (eq, "$g_player_know_culture_castile", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_castile"),
+      ],
+      "Change it to castile.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_castile"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to castile.", 0x0000ff),
+      ]),
+      
+      ("change_culture_portuguese",
+      [
+        (eq, "$g_player_know_culture_portuguese", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_portuguese"),
+      ],
+      "Change it to portuguese.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_portuguese"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to portuguese.", 0x0000ff),
+      ]),
+      
+      ("change_culture_hre",
+      [
+        (eq, "$g_player_know_culture_hre", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_hre"),
+      ],
+      "Change it to hre.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_hre"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to hre.", 0x0000ff),
+      ]),
+      
+      
+      
+      ("change_culture_sicilian",
+      [
+        (eq, "$g_player_know_culture_sicilian", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_sicilian"),
+      ],
+      "Change it to sicilian.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_sicilian"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to sicilian.", 0x0000ff),
+      ]),
+      
+      ("change_culture_aragon",
+      [
+        (eq, "$g_player_know_culture_aragon", 1),
+        (party_get_slot, ":cur_center_culture", "$current_town", slot_center_culture),
+        (neq, ":cur_center_culture", "fac_culture_aragon"),
+      ],
+      "Change it to aragon.",
+      [
+        (call_script, "script_update_fief_culture", "$current_town", "fac_culture_aragon"),
+        (troop_remove_gold, "trp_player", reg15),
+        (display_message, "@Fief culture changed to aragon.", 0x0000ff),
+      ]),
+############### 
      # ("change_culture_next_dot",[], "Next page.",
      # [
        # (jump_to_menu, "mnu_ee_change_culture_5"), 
@@ -10669,26 +10764,18 @@ game_menus = [
        ############### NEW v3.12 - 
        ("debug_options2_13",[], "Make all marshals siege something.",
        [
-	   # (try_for_range, ":cur_lord", lords_begin, lords_end),
-		 # (troop_slot_eq, ":cur_lord", slot_troop_is_alive, 1),
-         # (neg|troop_slot_ge, ":cur_lord", slot_troop_prisoner_of_party, 0), 
-         # (store_troop_faction, ":lord_faction", ":cur_lord"),
-         # (faction_slot_eq, ":lord_faction", slot_faction_marshall, ":cur_lord"),
        (try_for_range, ":faction", kingdoms_begin, kingdoms_end),
-            # (faction_slot_eq, ":faction", slot_faction_state, sfs_active),
 		   (faction_set_slot, ":faction", slot_faction_ai_state, sfai_gathering_army),
        (try_end),
        ]
        ),
 	   #######################################
-       ("debug_options2_14",[], "Loot all villages.",
+	   #######################################
+       ("debug_options2_98",[], "More options.",
        [
-       (try_for_range, ":village", villages_begin, villages_end),
-            (call_script, "script_village_set_state",  ":village", svs_looted),
-       (try_end),
+       (jump_to_menu, "mnu_debug_options_new_3"),
        ]
        ),
-	   #######################################
 	   #######################################
        ("debug_options2_99",[], "Go back.",
        [
@@ -10699,6 +10786,49 @@ game_menus = [
     ]),
 ##############################################################################
 
+
+###################### NEW v3.13
+  ("debug_options_new_3",mnf_scale_picture,
+   "Debug 4",
+   "none",
+   [     
+    (assign, "$g_player_icon_state", pis_normal),
+     (set_background_mesh, "mesh_pic_camp"),
+   ],     
+   [      
+	   #######################################
+       ("debug_options3_1",[], "Loot all villages.",
+       [
+       (try_for_range, ":village", villages_begin, villages_end),
+            (call_script, "script_village_set_state",  ":village", svs_looted),
+       (try_end),
+       ]
+       ),
+	   #######################################
+       ("debug_options3_2",[], "Reset acres in all fiefs.",
+       [
+       (try_for_range, ":fief", centers_begin, centers_end),
+            (party_get_slot, ":acres", ":fief", slot_town_player_acres),
+            (gt, ":acres", 0),
+                (party_get_slot, ":prosp_mod", ":fief", slot_town_prosperity),
+                (store_mul, ":price_mod", ":prosp_mod", 10),
+                (val_sub, ":price_mod", 500),
+                (store_add, ":money_prosperity", 1000, ":price_mod"),									
+                (store_mul, ":money", ":money_prosperity", ":acres"),									
+                (troop_add_gold, "trp_player", ":money"),
+                (party_set_slot, ":fief", slot_town_player_acres, 0),
+       (try_end),
+       ]
+       ),
+	   #######################################
+       ("debug_options3_99",[], "Go back.",
+       [
+         (jump_to_menu, "mnu_debug_options_new_2"),
+       ]
+       ),
+###########################
+]),
+###########################
 
 
 

@@ -6742,6 +6742,15 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("culture_33_adjective",     "Hungarian"),
 ("culture_34_adjective",     "Polish"),
 ##############
+############## NEW v3.13
+("culture_35_adjective",     "Swedish"),
+("culture_36_adjective",     "Norwegian"),
+("culture_37_adjective",     "Castile"),
+("culture_38_adjective",     "Portuguese"),
+("culture_39_adjective",     "Holy Roman Empire"),
+("culture_40_adjective",     "Sicilian"),
+("culture_41_adjective",     "Aragon"),
+##############
 ("culture_player_adjective", "Player Culture"),
 
 

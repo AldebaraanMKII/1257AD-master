@@ -7244,41 +7244,29 @@ troops = [
 
     itm_arabian_sword_a,
     itm_arabian_sword_b,
-
-    itm_kau_mail_b,
-    itm_kau_mail_a,
-
-    itm_kau_padded_mail_a,
-    itm_mamluk_jawshan_leather,
-    itm_mamluk_jawshan_leather,
-    itm_kau_turcopole_a,
+    itm_javelin,
+    itm_falshion_2,
+    
     itm_kau_turcopole_b,
+    itm_kau_turcopole_a,
+    
+    itm_beduin_turban_4,
+    itm_beduin_turban_3,
+    itm_beduin_turban_2,
+    itm_beduin_turban_1,
+    
+    itm_red_hose,
+    itm_blue_hose,
+    itm_blue_hose_mod,
+    itm_yellow_hose,
+    itm_grey_hose,
+    itm_green_hose,
+    
+    itm_sa_securiti_caravan_crusader_shield,
 
-    itm_elm1,
-    itm_elm2,
-    itm_arab_shield_f_3,
-    itm_arab_shield_g_3,
-    itm_arab_shield_h_3,
-    itm_arab_shield_i_3,
-
-    itm_mamluke_helm_ventail,
-    itm_mamluke_helm_ventail,
-    itm_mamluke_helm_ventail,
-    itm_mamluke_helm_ventail,
-    itm_baltic_ponted_helmet,
-    itm_berber_white_turban,
-    itm_berber_white_turban,
-    itm_balt_helmet_b,
-    itm_arab_helmet_b,
-    itm_turban_b,
-    itm_turban_b,
-    itm_byz_helmet_b,
-
-    itm_cuman_boots,
-
-    itm_byz_boots_c,
+    itm_saddle_horse,
     itm_hunter,
-
+    itm_sumpter_horse,
     ],
     horse_attrib_3,
     cum_horseman_wp,
@@ -7297,34 +7285,22 @@ troops = [
 
     itm_arabian_sword_a,
     itm_arabian_sword_b,
-
-    itm_kau_mail_b,
-    itm_kau_mail_a,
-    itm_mamluk_jawshan_leather,
-
-    itm_elm1,
-    itm_arab_shield_f_3,
-    itm_arab_shield_g_3,
-    itm_arab_shield_h_3,
-    itm_arab_shield_i_3,
-
-    itm_mamluke_helm_b,
-
-    itm_arab_helmet_d,
-
-    itm_arab_helmet_c,
-    itm_baltic_ponted_helmet,
-    itm_balt_spiked_helmet,
-    itm_arab_helmet_b,
-    itm_arab_helmet_d,
-    itm_arab_mail_coif,
-    itm_black_guard_helmet,
-    itm_rus_helmet,
-    itm_cuman_boots,
-
-    itm_byz_boots_c,
+    itm_scimitar,
+    
+    itm_dethertir_armor_1,
+    itm_dethertir_armor_2,
+    
+    itm_dethertir_helm_a,
+    itm_dethertir_helm_b,
+    itm_dethertir_helm_c,
+    
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
+    
+    itm_sa_securiti_caravan_crusader_shield,
+    
     itm_hunter,
-
+    itm_arabs_horse_b,
     ],
     horse_attrib_4,
     cum_harcher_wp,
@@ -7343,47 +7319,25 @@ troops = [
 
     itm_arabian_sword_a,
     itm_arabian_sword_b,
+    itm_scimitar_b,
+    
+    itm_modded_war_spear,
+    
+    itm_securiti_caravan_crusader,
+    itm_securiti_caravan_cloak_crusader,
+    
+    itm_securiti_crysader_helm_a,
+    itm_securiti_crysader_helm_b,
 
-    itm_kau_mail_b,
-    itm_kau_mail_a,
-
-    itm_arab_mail_e,
-    itm_seljuk_scale_a,
-    itm_saracen_mail,
-
-    itm_mamluk_infantry_lamellar_a,
-    itm_mamluk_infantry_lamellar_b,
-
-    itm_elm1,
-
-    (itm_arab_shield_f_3, imod_thick),
-    (itm_arab_shield_g_3, imod_thick),
-    (itm_arab_shield_h_3, imod_thick),
-    (itm_arab_shield_i_3, imod_thick),
-
-    itm_mamluke_helm_b,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-
-    itm_arab_helmet_d,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-
-    itm_arab_helmet_c,
-    itm_baltic_ponted_helmet,
-    itm_balt_spiked_helmet,
-    itm_arab_helmet_b,
-    itm_arab_helmet_d,
-    itm_arab_mail_coif,
-    itm_black_guard_helmet,
-
-    itm_cuman_boots,
-
-    itm_byz_boots_c,
-    itm_hunter,
-
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
+    itm_sa_securiti_caravan_crusader_shield,
+    
+    itm_warhorse,
     ],
     horse_attrib_elite,
     cum_vharcher_wp,
@@ -7399,24 +7353,34 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_modded_euro_armingsword_3,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
+    itm_mace_6,
     itm_morningstar,
     itm_mace_4,
-    itm_raf_one_handed_axe_h,
+    itm_axe_crusader_a,
     itm_talak_warhammer,
-
-    itm_dethertir_gloves,
-
+    itm_axe_crusader_b,
+    itm_crusader_sword_a,
+    itm_crusader_sword_c,
+    itm_crusader_sword_b,
+    
     itm_lazarus_serjeant_tunic,
 
-    itm_vik_spangen_b,
+    itm_mail_coif,
+    itm_modded_mail_coif_1,
+    
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
 
-    itm_tab_shield_small_round_a,
-
-    itm_sa_boot_average_crusader_1,
-
+    itm_sa_shield_veteran_hospitaller_1,
+    
     itm_hunter,
+    itm_courser,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -7429,26 +7393,31 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_sa_shoes_crusader,
-
-    itm_light_lance,
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_b_2,
+    itm_mace_6,
     itm_morningstar,
-    itm_modded_damascus_sword,
-    itm_modded_templar_arming_sword,
+    itm_axe_crusader_c,
     itm_talak_warhammer,
-
-    itm_dethertir_gauntlets,
-   
-    itm_mail_coif,
-    itm_mail_coif_b,
-    itm_mail_coif_c,
+    itm_axe_crusader_d,
+    itm_axe_crusader_1,
+    itm_modded_templar_arming_sword,
     
+    itm_kau_mail_boots_dark_long,
+    
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+
     itm_lazarus_serjeant_tunic,
-
-    itm_european_horse_b,
-    itm_european_horse_a,
-
-    itm_tab_shield_small_round_c,
+    
+    itm_modded_mail_coif_1,
+    itm_elm3,
+    
+    itm_sa_hospitaller_shield_knight_2,
+    
+    itm_hospitaller_warhorse_b,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -7460,30 +7429,29 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
-    itm_kau_santiago,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
+    itm_modded_mace_1,
     itm_mace_4,
-    itm_raf_one_handed_axe_h,
+    itm_moorish_axe,
     itm_talak_warhammer,
-
+    itm_iberian_cleaver,
+    
     itm_santiago_knight,
 
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    
+    itm_andalusian_helmet_c,
+    
+    itm_splinted_leather_greaves,
 
-
-    itm_mail_coif,
-    itm_andalusian_helmet_b,
-    itm_great_helmet_decorative,
-    itm_andalusian_helmet_d,
-   
-
-    itm_andalusian_helmet_a,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
-
-    itm_hunter,
+    itm_tab_shield_iberia_c,
+    
+    itm_european_horse_f,
+    itm_european_horse_e,
+    itm_european_horse_d,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -7496,52 +7464,33 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-    itm_lance,
-
+    itm_kau_mail_boots_dark_long,
+    
+    itm_heavy_lance,
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_b_2,
     itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
+    itm_iberian_cleaver,
+    itm_moorish_axe,
+    itm_modded_mace_1,
+    itm_andalusian_sword,
+    
     itm_kau_santiago,
 
-    itm_mail_coif,
+    itm_andalusian_helmet_a,
     itm_andalusian_helmet_b,
-    itm_great_helmet_decorative,
+    itm_andalusian_helmet_e,
     itm_andalusian_helmet_d,
-    itm_mail_coif_b,
-    itm_mail_coif_c,
-    itm_norman_coif_c,
-    itm_elm1,
-    itm_elm3,
-    itm_elm6,
-    itm_elm7,
-    itm_elm8,
-    itm_flat_topped_helmet_a,
-    itm_flat_topped_helmet_a,
-
-    itm_kolpak_mail,
-    itm_rhodok_great_helmet,
-    itm_mail_coif,
-
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_hunter,
-    itm_santiago_knight,
-
-        ],
+    
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
+    itm_tab_shield_iberia_c,
+    
+    itm_warhorse,
+    ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
   ],
@@ -7552,26 +7501,30 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
     itm_morningstar,
     itm_mace_4,
-    itm_raf_one_handed_axe_h,
+    itm_modded_mace_1,
     itm_talak_warhammer,
-
+    itm_moorish_axe,
+    itm_iberian_cleaver,
+    
     itm_calatrava_knight,
 
-    itm_mail_coif,
-   
-    itm_andalusian_helmet_b,
-    itm_andalusian_helmet_d,
-    itm_kettlehat_b,
+    itm_splinted_leather_greaves,
 
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
-
-    itm_hunter,
+    itm_andalusian_helmet_c,
+    
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_tab_shield_iberia_c,
+    
+    itm_european_horse_a,
+    itm_european_horse_b,
+    itm_european_horse_c,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -7584,53 +7537,33 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-    itm_lance,
+    itm_kau_mail_boots_dark_long,
+    
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_b_2,
+    itm_modded_mace_1,
     itm_morningstar,
-
+    itm_moorish_axe,
     itm_talak_warhammer,
+    itm_iberian_cleaver,
+    itm_andalusian_sword,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_rnd_helm_03,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_hunter,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
+    itm_andalusian_helmet_a,
+    itm_andalusian_helmet_b,
+    itm_andalusian_helmet_d,
+    itm_andalusian_helmet_e,
+    
     itm_calatrava_knight,
-
-        ],
+    
+    itm_tab_shield_iberia_c,
+    
+    itm_warhorse,
+    ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
   ],
@@ -7642,44 +7575,36 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
+    ###itm_talak_mace,
     itm_morningstar,
     itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
+    itm_mace_6,
     itm_talak_warhammer,
-
+    itm_axe_crusader_b,
+    itm_axe_crusader_a,
+    
     itm_saint_thomas_knight,
 
+    itm_light_crusader_helm_3,
 
-
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
-
-    itm_hunter,
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
+    itm_crusader_sword_b,
+    itm_crusader_sword_a,
+    itm_crusader_sword_c,
+    
+    itm_sa_shield_veteran_templar_1,
+    
+    itm_european_horse_e,
+    itm_european_horse_c,
+    itm_european_horse_f,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -7692,53 +7617,31 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-    itm_lance,
+    itm_kau_mail_boots_dark_long,
+    
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_b_2,
     itm_morningstar,
-
+    itm_mace_6,
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
+    itm_axe_crusader_1,
+    
     itm_saint_thomas_knight,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
+	itm_wenceslav_helmet,
 
-    itm_mail_mittens,
-    itm_rnd_helm_03,
+    itm_modded_damascus_sword,
 
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_hunter,
-    itm_hunter,
-    itm_warhorse,
-
-        ],
+    itm_sa_templar_shield_knight,
+    
+    itm_templar_knight_horse_c,
+    ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
   ],
@@ -7752,7 +7655,7 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves | tf_guarantee_shield,
     0, 0, fac_kingdom_1,
     [
-    
+    itm_raf_two_handed_axe_c,
     itm_long_axe,
     itm_long_axe_b,
 
@@ -7764,24 +7667,11 @@ troops = [
     itm_varangian_shield_b, 
     itm_varangian_shield_c,
 	
-    itm_mail_mittens,
+    itm_scale_gauntlets,
 
-    itm_surcoat_novgorod,
-
-    itm_byz_guard_a,
-    itm_byz_mail_a,
     itm_varangian_helm,
-    itm_rus_byzantinenoble_kettle,
-    itm_rus_noble_helmet,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_kettlehat_b,
-    itm_byz_cavalry_boots,
-    itm_cuman_noble_helmet,
-
-    itm_byz_boots_a,
-
-    itm_rus_leather_scale_b,
+    
+    itm_byzantine_greaves,
     ],
     foot_attrib_elite, varangian_wp, varangian_skills,
     0x00000005c00005c9485b92351564350b00000000001dd85a0000000000000000, 0x00000005c00025c9485b92351564350b00000000001dd85a0000000000000000
@@ -7796,33 +7686,24 @@ troops = [
     itm_sword_khergit_2,
     itm_sword_khergit_3,
     itm_light_lance,
-    itm_rus_leather_scale_b,
-
     itm_sarranid_axe_a,
-    itm_kau_rus_mail_shirt_a,
+    itm_sarranid_mace_1,
+    itm_scimitar_b,
 
-    itm_balt_helmet_b,
-    itm_balt_helmet_a,
     itm_baltic_ponted_helmet,
 
-        ###### itm_rus_leather_scale,
-    ###### itm_rus_leather_scale_b,
     itm_georgian_mail,
-    itm_byz_guard_a, #higher lvl
-    itm_byz_lamellar_b,
-    itm_anatolian_mail,
-
-    itm_byz_boots_c,
-    itm_tied_up_shoes,
-    ###### itm_hide_boots,
-
+    
+    itm_mail_mittens,
+    
+    itm_byzantine_greaves,
+    
     itm_cuman_shield_a_3,
     itm_cuman_shield_b_3,
     itm_cuman_shield_c_3,
+    itm_rus_shield_1,
 
-    itm_arab_mail_e,
-    itm_hunter,
-    itm_horse_e,
+    itm_warhorse,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     rhodok_face_younger_1, rhodok_face_old_2
@@ -7843,24 +7724,24 @@ troops = [
 
     itm_balt_helmet_b,
     itm_balt_helmet_a,
-    itm_baltic_ponted_helmet,
+    itm_byz_helmet_b,
+    itm_byz_yoman_c,
 
-    itm_georgian_mail,
-    itm_byz_guard_a,
+    itm_byz_lamellar_a,
     itm_byz_lamellar_b,
-    itm_anatolian_mail,
-    itm_armenian_mail_b,
     itm_balt_shirt_c,
     itm_balt_shirt_a,
+    
+    itm_leather_gloves,
 
     itm_cuman_shield_a_3,
     itm_cuman_shield_b_3,
     itm_cuman_shield_c_3,
 
     itm_byz_boots_c,
-    itm_kau_rus_noble_d,
-
+    itm_byz_lord_boots_long,
     itm_cuman_boots,
+    
     itm_hunter,
     itm_horse_e,
     ],
@@ -8201,22 +8082,21 @@ troops = [
     [
     itm_cuman_shirt_c,
     itm_kipchak_shirt_b,
+    
     itm_cuman_boots,
-    itm_rus_boots_a,
-
-
-
-    itm_bulgar_helm,
-    itm_bulgar_helm_b,
+    
     itm_cuman_cap_b,
 
     itm_nomad_bow,
     itm_strely,
 
     itm_scimitar,
+    itm_falshion_2,
+    
     itm_steppe_horse,
-
-    itm_czekan,
+    
+    itm_targe_2,
+    itm_targe_5,
     ],
     horse_attrib_3, merc_archer_wp_1, merc_archer_skills_1,
     mong_face_1, mong_face_2
@@ -8229,23 +8109,16 @@ troops = [
     tf_mounted | tf_guarantee_ranged |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
     0, 0, fac_kingdom_8,
     [
-    itm_cuman_shirt_c,
-    itm_kipchak_shirt_b,
+    itm_kipchak_mail_a,
+    itm_kipchak_lamellar_a,
+    
     itm_cuman_boots,
-    itm_rus_helmet,
-    itm_rus_helmet_a,
-
-    itm_baltic_ponted_helmet,
-    itm_bulgar_helm,
-
-    itm_bulgar_helm_b,
-    itm_rus_helm_a,
+    
     itm_kipchak_steppe_helmet,
-
+    
+    itm_sarranid_mace_1,
     itm_scimitar,
-
-   itm_czekan,
-
+   
     itm_nomad_bow,
     itm_strely,
 
@@ -8266,28 +8139,21 @@ troops = [
     tf_mounted | tf_guarantee_ranged |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_helmet,
     0, 0, fac_kingdom_8,
     [
-    itm_rus_mask_helmet,
-    itm_rus_helmet_2,
     itm_kipchak_steppe_helmet,
-    itm_surcoat_novgorod,
-    itm_kau_mail_shirt_b,
-    itm_rus_boots_a,
-    itm_kau_rus_noble_a,
-    itm_rus_mail_shirt_c,
-    itm_rus_noble_mail,
-
+    
+    itm_leather_gloves,
+    
     itm_cuman_boots,
 
     itm_scimitar_b,
-    itm_nikloskoe_helmet_warrior,
-
-    itm_mace_3,
-    itm_mace_4,
-
+    itm_sarranid_mace_1,
+    
     itm_khergit_bow,
     itm_strely,
 
-    itm_hunter,
+    itm_steppe_horse,
+    
+    itm_kipchak_lamellar_b,
 
     itm_cuman_shield_a_3,
     itm_cuman_shield_b_3,
@@ -8314,32 +8180,18 @@ troops = [
     itm_sword_khergit_1,
     itm_sword_khergit_2,
     itm_sword_khergit_3,
-    itm_mace_3,
-    itm_mace_4,
+    itm_sarranid_mace_1,
+    itm_falshion_2,
 
     itm_turban_a,
     itm_turban_b,
     itm_turban_c,
-
     itm_desert_turban,
     itm_desert_turban,
-    ###### itm_turban,
-    ###### itm_turban,
-    ###### itm_turban,
-
-    itm_mamluke_helm_ventail,
-    itm_mamluke_helm_ventail,
-    itm_mamluke_helm_ventail,
-    itm_mamluke_helm_ventail,
-    itm_mamluke_helm_b,
-    itm_mamluke_helm,
-
-      ##### itm_vik_norman_helmet_c,
-    itm_sarranid_horseman_helmet,
-
+    ###itm_turban,
+    
     itm_mamluk_shirt_a,
-    itm_mamluk_shirt_d,
-
+    
     itm_arab_shield_a_3,
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
@@ -8355,7 +8207,6 @@ troops = [
     itm_steppe_horse,
     itm_arabian_horse_a,
     itm_arabian_horse_b,
-
     ],
     horse_attrib_2,
     cum_skirmisher_wp,
@@ -8369,41 +8220,24 @@ troops = [
     tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
-    ###### itm_lance,
     itm_nomad_bow,
     itm_khergit_bow,
     itm_strely,
 
     itm_sarranid_cavalry_sword,
     itm_arabian_sword_b,
-    itm_sword_type_xii,
+    itm_falshion_2,
     itm_sword_khergit_1,
     itm_sword_khergit_2,
     itm_sword_khergit_3,
     itm_scimitar,
-    itm_mace_4,
+    itm_sarranid_mace_1,
 
     itm_mamluke_helm_ventail,
-    itm_baltic_ponted_helmet,
-    itm_mongol_kettle,
-
     itm_mamluke_helm_b,
 
-    itm_arab_helmet_d,
-    itm_mamluke_helm,
-
-    itm_arab_helmet_c,
-    itm_baltic_ponted_helmet,
-    itm_balt_spiked_helmet,
-    itm_arab_helmet_b,
-    itm_arab_helmet_d,
-    itm_arab_mail_coif,
-    itm_arab_mail_coif,
-
-    itm_black_guard_helmet,
-    itm_black_guard_helmet,
-    itm_rus_helmet,
-
+    itm_mamluk_jawshan_leather,
+    
     itm_arab_shield_d_3,
     itm_arab_shield_e_3,
     itm_arab_shield_f_3,
@@ -8411,18 +8245,10 @@ troops = [
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
 
-     ###### itm_mamluk_shirt_d,
-    itm_seljuk_hauberk_jawshan,
-
-    itm_balt_helmet_b,
-    itm_mamluke_helm_ventail,
-
     itm_mamluke_boots,
 
-    itm_courser,
-    itm_cuman_boots,
     itm_arabian_horse_b,
-
+    itm_arabian_horse_a,
     ],
     horse_attrib_4,
     cum_horseman_wp,
@@ -8436,8 +8262,7 @@ troops = [
     tf_guarantee_ranged |tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
-    ###### itm_heraldic_lance,
-    ###### itm_muslim_lance,
+    itm_muslim_lance,
     itm_nomad_bow,
     itm_khergit_bow,
     itm_strely,
@@ -8446,13 +8271,10 @@ troops = [
     itm_sword_khergit_1,
     itm_sword_khergit_2,
     itm_sword_khergit_3,
-
-    itm_mace_4,
-      ##### itm_talak_mace,
     itm_sarranid_mace_1,
 
-    itm_tab_shield_small_round_b,
-    itm_tab_shield_small_round_c,
+    itm_leather_gloves,
+    
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
     itm_arab_shield_d_3,
@@ -8460,42 +8282,19 @@ troops = [
     itm_arab_shield_f_3,
     itm_arab_shield_g_3,
 
-    itm_mamluk_lamellar,
+    itm_mamluk_shirt_f,
 
-    itm_arab_mail_b,
-    itm_arab_mail_b,
-    itm_seljuk_hauberk_jawshan,
-    itm_seljuk_hauberk_jawshan,
-
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-
-    itm_arab_helmet_d,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-
-    itm_arab_helmet_c,
-    itm_baltic_ponted_helmet,
-    itm_balt_spiked_helmet,
-    itm_arab_mail_coif,
-    itm_arab_mail_coif,
-
-    itm_black_guard_helmet,
-    itm_black_guard_helmet,
-    itm_rus_helmet,
-
-    itm_ghulam_helmet,
-
+    itm_sa_helm_saracin_5,
+    itm_sa_helm_saracin_4,
+    itm_mamluke_helm_b,
+    itm_mamluke_helm_ventail,
+    
+    itm_sa_saracin_hard_boot_2,
     itm_mamluke_boots,
-
-    itm_horse_e,
-    itm_horse_d,
+    itm_sa_saracin_hard_boot_1,
+    
     itm_seljuk_horse,
-
+    itm_saracin_hard_horses_b_v1,
     ],
     horse_attrib_5,
     cum_harcher_wp,
@@ -8509,11 +8308,11 @@ troops = [
     tf_guarantee_ranged|tf_guarantee_boots|tf_guarantee_armor|tf_mounted|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
-
-    ###### itm_heraldic_lance,
-    ###### itm_muslim_lance,
+    itm_mameluk_spears_b,
+    itm_mameluk_spears_a,
+    itm_muslim_lance,
     itm_arabian_sword_d,
-    itm_byz_boots_c,
+    itm_mameluk_spears_c,
     itm_sword_khergit_2,
     itm_sarranid_mace_1,
 
@@ -8521,40 +8320,20 @@ troops = [
     itm_khergit_bow,
     itm_strely,
 
-    itm_mamluk_shirt_f,
-    itm_arab_mail_e,
+    itm_sa_gauntlets_arabs_1,
 
     itm_mamluk_lamellar,
-    itm_mamluk_lamellar,
-    itm_mamluk_lamellar,
-    itm_mamluk_lamellar,
-    itm_mamluk_lamellar,
-    itm_arab_mail_b,
+    
+    itm_arab_shield_g_3,
+    itm_arab_shield_a_3,
+    itm_arab_shield_e_3,
 
-    itm_arab_shield_b_3,
-    itm_arab_shield_b_3,
-
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-    itm_mamluke_helm,
-
-    itm_arab_mail_coif,
-    itm_arab_mail_coif,
-
-    itm_black_guard_helmet,
-    itm_black_guard_helmet,
-
-    itm_mail_chausses,
-
+    itm_mamluke_helm_b,
+    
+    itm_sarranid_boots_d_long,
+    
     itm_seljuk_horse,
-    itm_byz_warhorse,
+    itm_warhorse_sarranid,
     itm_warhorse,
     ],
     horse_attrib_elite,
@@ -8571,41 +8350,28 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
+    itm_mace_6,
     itm_morningstar,
     itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
+    itm_axe_crusader_a,
     itm_talak_warhammer,
-
+    itm_axe_crusader_b,
+    itm_crusader_sword_a,
+    itm_crusader_sword_c,
+    itm_crusader_sword_b,
+    
     itm_lazarus_serjeant_tunic,
 
     itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_modded_mail_coif_1,
+    
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
 
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
+    itm_sa_shield_veteran_hospitaller_1,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -8618,51 +8384,25 @@ troops = [
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-    itm_lance,
+    itm_mace_6,
     itm_morningstar,
-
+    itm_axe_crusader_c,
     itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_rnd_helm_03,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
+    itm_axe_crusader_d,
+    itm_axe_crusader_1,
+    itm_modded_templar_arming_sword,
+    
+    itm_kau_mail_boots_dark_long,
+    
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
 
     itm_lazarus_serjeant_tunic,
-
+    
+    itm_modded_mail_coif_1,
+    itm_elm3,
+    
+    itm_sa_hospitaller_shield_knight_2,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -8674,38 +8414,22 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
-    itm_kau_santiago,
+    itm_modded_mace_1,
     itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
+    itm_moorish_axe,
     itm_talak_warhammer,
-
+    itm_iberian_cleaver,
+    
     itm_santiago_knight,
 
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    
+    itm_andalusian_helmet_c,
+    
+    itm_splinted_leather_greaves,
 
-
-    itm_mail_coif,
-    itm_andalusian_helmet_b,
-    itm_great_helmet_decorative,
-    itm_andalusian_helmet_d,
-    itm_mail_coif_b,
-    itm_mail_coif_c,
-    itm_norman_coif_c,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_elm7,
-    itm_elm8,
-    itm_flat_topped_helmet_a,
-    itm_flat_topped_helmet_a,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_andalusian_helmet_b,
-
-    itm_mail_boots_long,
+    itm_tab_shield_iberia_c,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -8718,53 +8442,26 @@ troops = [
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-    itm_lance,
+    itm_kau_mail_boots_dark_long,
 
     itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
+    itm_iberian_cleaver,
+    itm_moorish_axe,
+    itm_modded_mace_1,
+    itm_andalusian_sword,
+    
     itm_kau_santiago,
 
-    itm_mail_coif,
+    itm_andalusian_helmet_a,
     itm_andalusian_helmet_b,
-    itm_great_helmet_decorative,
+    itm_andalusian_helmet_e,
     itm_andalusian_helmet_d,
-    itm_mail_coif_b,
-    itm_mail_coif_c,
-    itm_norman_coif_c,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_elm7,
-    itm_elm8,
-    itm_flat_topped_helmet_a,
-    itm_flat_topped_helmet_a,
-
-    itm_kolpak_mail,
-    itm_rhodok_great_helmet,
-    itm_mail_coif,
-
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_santiago_knight,
-
-        ],
+    
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
+    itm_tab_shield_iberia_c,
+    ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
   ],
@@ -8775,45 +8472,23 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
     itm_morningstar,
     itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
+    itm_modded_mace_1,
     itm_talak_warhammer,
-
+    itm_moorish_axe,
+    itm_iberian_cleaver,
+    
     itm_calatrava_knight,
 
+    itm_splinted_leather_greaves,
 
-
-    itm_mail_coif,
-
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_andalusian_helmet_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_andalusian_helmet_d,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
+    itm_andalusian_helmet_c,
+    
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_tab_shield_iberia_c,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -8826,53 +8501,27 @@ troops = [
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-    itm_lance,
+    itm_kau_mail_boots_dark_long,
+    
+    itm_modded_mace_1,
     itm_morningstar,
-
+    itm_moorish_axe,
     itm_talak_warhammer,
+    itm_iberian_cleaver,
+    itm_andalusian_sword,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_rnd_helm_03,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
+    itm_andalusian_helmet_a,
+    itm_andalusian_helmet_b,
+    itm_andalusian_helmet_d,
+    itm_andalusian_helmet_e,
+    
     itm_calatrava_knight,
-
-        ],
+    
+    itm_tab_shield_iberia_c
+    ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
   ],
@@ -8884,43 +8533,29 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
+    ###itm_talak_mace,
     itm_morningstar,
     itm_mace_4,
-      ########### itm_raf_one_handed_axe_h,
+    itm_mace_6,
     itm_talak_warhammer,
-
+    itm_axe_crusader_b,
+    itm_axe_crusader_a,
+    
     itm_saint_thomas_knight,
 
+    itm_light_crusader_helm_3,
 
-
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    (itm_tab_shield_kite_c, imod_thick),
-
-    itm_mail_boots_long,
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
+    itm_crusader_sword_b,
+    itm_crusader_sword_a,
+    itm_crusader_sword_c,
+    
+    itm_sa_shield_veteran_templar_1
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -8933,51 +8568,25 @@ troops = [
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-    itm_lance,
+    itm_kau_mail_boots_dark_long,
+    
     itm_morningstar,
-
+    itm_mace_6,
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
+    itm_axe_crusader_1,
+    
     itm_saint_thomas_knight,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-    itm_rnd_helm_03,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
 	itm_wenceslav_helmet,
 
-    itm_norman_faceplate,
+    itm_modded_damascus_sword,
 
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-        ],
+    itm_sa_templar_shield_knight,
+    ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
   ],
@@ -16131,119 +15740,31 @@ troops = [
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_mail_boots_long,
-
-    itm_heraldic_lance,
-    itm_coat_of_plates_red,
-    # itm_talak_mace,
-
-    itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-
-    itm_splinted_greaves_long,
-
     itm_mail_mittens,
-
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_rnd_helm_04,
-    itm_mail_coif,
-    itm_elm7,
-
-    itm_norman_coif_c,
-    itm_elm8,
-    itm_flat_topped_helmet_b,
-
-    itm_great_helmet_b,
-    itm_rnd_helm_03,
-
-    itm_kettlehat_a,
-
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    # itm_elm7,
-    itm_rhodok_great_helmet,
-
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_nasal_helmet_a,
-
-
-    ############### NEW v2.5
-    itm_modded_helmet_heavy_1,
-    itm_modded_helmet_heavy_2,
-    itm_modded_helmet_heavy_3,
-
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-    itm_sa_crusader_helm_11,
-
-    ###### itm_kettlehat_d,
-    ###### itm_kettlehat_e,
-
-    ###### itm_modded_helmet_kettle_mail_1,
-    ###### itm_modded_helmet_kettle_mail_2,
-    ###### itm_modded_helmet_kettle_mail_3,
-    ###### itm_modded_helmet_kettle_mail_4,
-    ###### itm_modded_helmet_kettle_mail_5,
-
-    ###### itm_modded_mail_coif_1,
-    ###### itm_modded_helmet_1,
-
-    ###### itm_capelina_crusader,
-
-    ###### itm_sa_crusader_helm_1,
-    ###### itm_sa_crusader_helm_2,
-    ###### itm_sa_crusader_helm_3,
-    ###### itm_sa_crusader_helm_4,
-    ###### itm_sa_crusader_helm_5,
-    ###### itm_sa_crusader_helm_6,
-    ###### itm_sa_crusader_helm_7,
-    ###### itm_sa_crusader_helm_8,
-    ###### itm_sa_crusader_helm_9,
-    ###### itm_sa_crusader_helm_10,
-    ##########
-    itm_tab_shield_heater_cav_a,
+    itm_sword_viking_1,
+    itm_sword_viking_2,
+    itm_sword_viking_3,
+    itm_modded_scandinavian_sword_2,
+    itm_modded_scandinavian_sword_3,
+    itm_tab_shield_kite_cav_b,
     itm_tab_shield_heater_cav_b,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_thick),
-
-    itm_warhorse,
-
-    itm_rnd_surcoat_01,
-    itm_rnd_surcoat_02,
-    itm_rnd_surcoat_03,
-    itm_rnd_surcoat_04,
+   
+    itm_warhorse_denmark_a,
+    itm_surcoat_denmark_a,
     itm_rnd_surcoat_05,
-    itm_rnd_surcoat_06,
-    itm_rnd_surcoat_07,
-    itm_rnd_surcoat_08,
-    itm_rnd_surcoat_09,
-    itm_rnd_surcoat_10,
-    itm_rnd_surcoat_11,
-    itm_rnd_surcoat_12,
-    itm_rnd_surcoat_13,
-    itm_rnd_surcoat_14,
-    itm_rnd_surcoat_15,
-    itm_rnd_surcoat_16,
-    itm_rnd_surcoat_17,
-    itm_rnd_surcoat_18,
-    itm_rnd_surcoat_19,
-    itm_rnd_surcoat_20,
-    itm_rnd_surcoat_21,
-    itm_rnd_surcoat_22,
-    itm_rnd_surcoat_23,
+    itm_kau_mail_boots_dark_long,
+    
+    itm_raf_one_handed_axe_h,
+    itm_mace_2,
+    itm_mace_4,
+    itm_mace_3,
+    itm_heavy_lance,
+    itm_heraldic_lance,
+    
+    itm_rnd_helm_05,
+    itm_rnd_helm_04,
+    itm_great_helmet_c,
+    itm_rhodok_great_helmet,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     nord_face_young_1, swadian_face_old_2
@@ -23010,128 +22531,32 @@ troops = [
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-
-
-    itm_mail_boots_long,
-
-    itm_heraldic_lance,
-    itm_sword_type_xii,
-
-    itm_sword_type_xiv,
-    itm_vik_norman_helmet_a,
-    itm_shortened_military_scythe,
-
+    itm_kau_athens,
+    
+    itm_kau_mail_boots_dark_long,
+    
     itm_mail_mittens,
-
-    itm_vik_spangen_b,
-    itm_frenchpepperpot2,
-
-
-
-
-    itm_mail_coif,
-
-    itm_frenchpepperpot,
-    itm_mail_coif_b,
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm3,
-    itm_elm6,
-    itm_elm7,
-    itm_elm8,
-    itm_rnd_helm_03,
-
-    itm_flat_topped_helmet_a,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_b,
-    itm_great_helmet_d,
-    itm_pepperpothelm1,
-    itm_kettlehat_b,
-    itm_rhodok_great_helmet,
-
-    itm_kolpak_mail,
-    itm_munitionshelm2,
-    itm_rhodok_nasal_helmet_a,
-    itm_norman_faceplate,
-    itm_wenceslav_helmet,
-    itm_munitionshelm1,
-    itm_rhodok_nasal_helmet_a,
-
-
-	############### NEW v2.5
-    itm_modded_helmet_heavy_1,
+    
     itm_modded_helmet_heavy_2,
-    itm_modded_helmet_heavy_2,
-    itm_modded_helmet_heavy_2,
-    itm_modded_helmet_heavy_2,
-    itm_modded_helmet_heavy_3,
-
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-    itm_sa_crusader_helm_11,
-
-    ###### itm_kettlehat_d,
-    ###### itm_kettlehat_e,
-
-    ###### itm_modded_helmet_kettle_mail_1,
-    ###### itm_modded_helmet_kettle_mail_2,
-    ###### itm_modded_helmet_kettle_mail_3,
-    ###### itm_modded_helmet_kettle_mail_4,
-    ###### itm_modded_helmet_kettle_mail_5,
-
-    ###### itm_modded_mail_coif_1,
-    ###### itm_modded_helmet_1,
-
-    ###### itm_capelina_crusader,
-
-    ###### itm_sa_crusader_helm_1,
-    ###### itm_sa_crusader_helm_2,
-    ###### itm_sa_crusader_helm_3,
-    ###### itm_sa_crusader_helm_4,
-    ###### itm_sa_crusader_helm_5,
-    ###### itm_sa_crusader_helm_6,
-    ###### itm_sa_crusader_helm_7,
-    ###### itm_sa_crusader_helm_8,
-    ###### itm_sa_crusader_helm_9,
-    ###### itm_sa_crusader_helm_10,
-    ##########
-
-    itm_tab_shield_heater_c,
-    itm_tab_shield_kite_c,
-    itm_tab_shield_iberia_c,
-
-    itm_warhorse,
-
-    itm_rnd_surcoat_01,
-    itm_rnd_surcoat_02,
-    itm_rnd_surcoat_03,
-    itm_rnd_surcoat_04,
-    itm_rnd_surcoat_05,
-    itm_rnd_surcoat_06,
-    itm_rnd_surcoat_07,
-    itm_rnd_surcoat_08,
-    itm_rnd_surcoat_09,
-    itm_rnd_surcoat_10,
-    itm_rnd_surcoat_11,
-    itm_rnd_surcoat_12,
-    itm_rnd_surcoat_13,
-    itm_rnd_surcoat_14,
-    itm_rnd_surcoat_15,
-    itm_rnd_surcoat_16,
-    itm_rnd_surcoat_17,
-    itm_rnd_surcoat_18,
-    itm_rnd_surcoat_19,
-    itm_rnd_surcoat_20,
-    itm_rnd_surcoat_21,
-    itm_rnd_surcoat_22,
-    itm_rnd_surcoat_23,
+    
+    itm_heraldic_lance,
+    
+    itm_sword_type_xii,
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_g,
+    itm_raf_one_handed_axe_c,
+    itm_raf_one_handed_axe_d,
+    ###itm_talak_mace,
+    itm_mace_4,
+    itm_talak_warhammer,
+    itm_mace_2,
+    itm_sword_type_xiiib,
+    itm_sword_type_xiii,
+    
+    itm_tab_shield_kite_cav_b,
+    itm_tab_shield_heater_cav_b,
+    
+    itm_rnd_horse_22,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     latin_face_1, latin_face_2
@@ -23982,13 +23407,12 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
-    ### Ranged Weapons
     itm_arrows,
     itm_hunting_bow,
     itm_darts,
 
-    ### Melee Weapons
-    itm_hatchet,
+    itm_dagger,
+    itm_pickaxe,
     itm_club,
     itm_studded_club,
     itm_spiked_mace,
@@ -23996,16 +23420,27 @@ troops = [
     itm_butchering_knife,
     itm_scythe,
 
-    ### Armors
+    itm_head_wrappings,
+    itm_1257_hood,
+    itm_arming_cap,
+    itm_padded_coif,
+      
+    itm_gaelic_long_tunic_c,
     itm_gaelic_shirt_blue,
     itm_gaelic_shirt_green,
     itm_gaelic_shirt_red,
-
-    ### Boots
-    itm_bare_legs,
-    itm_bare_legs, ### Additional chance of bare feet here.
+    itm_gaelic_long_tunic_a,
+    itm_gaelic_long_tunic_b,
+      
     itm_legs_with_shoes,
     itm_shoes,
+    
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -24018,11 +23453,10 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
-    ### Ranged Weapons
     itm_darts,
-    
-    ### Melee Weapons
-    itm_hatchet,
+      
+    itm_dagger,
+    itm_pickaxe,
     itm_club,
     itm_studded_club,
     itm_spiked_mace,
@@ -24030,22 +23464,27 @@ troops = [
     itm_butchering_knife,
     itm_scythe,
 
-    ### Helmets
+    itm_head_wrappings,
     itm_1257_hood,
     itm_arming_cap,
     itm_padded_coif,
-    
-    ### Armors
+      
+    itm_gaelic_long_tunic_c,
     itm_gaelic_shirt_blue,
     itm_gaelic_shirt_green,
     itm_gaelic_shirt_red,
-    itm_peasant_f,
-
-    ### Boots
-    itm_bare_legs,
-    itm_bare_legs, ### Additional chance of bare feet here.
+    itm_gaelic_long_tunic_a,
+    itm_gaelic_long_tunic_b,
+      
     itm_legs_with_shoes,
     itm_shoes,
+    
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -24058,20 +23497,10 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
-    ### Ranged Weapons
     itm_war_darts,
 
-    ### Melee Weapons
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-    itm_raf_one_handed_axe_h,
-    itm_raf_two_handed_axe_a,
-    itm_raf_two_handed_axe_b,
+    itm_hatchet,
+    itm_modded_falchion_3,
 
     itm_spear_f,
     itm_spear_j,
@@ -24080,7 +23509,6 @@ troops = [
     itm_spear_n,
     itm_spear_o,
 
-    ### Shields
     itm_targe_1,
     itm_targe_2,
     itm_targe_3,
@@ -24088,25 +23516,19 @@ troops = [
     itm_targe_5,
     itm_targe_6,
 
-    ### Helmets
     itm_1257_hood,
     itm_arming_cap,
-    itm_elm2,
+    itm_skullcap,
     itm_padded_coif,
-    itm_raf_spangen,
-
-    ### Armors
+     
+    itm_gaelic_byrnie_a,
     itm_gaelic_shirt_blue,
     itm_gaelic_shirt_green,
     itm_gaelic_shirt_red,
-    itm_leather_jerkin,
-    itm_peasant_f,
-    itm_pelt_coat,
-    itm_rawhide_coat,
+    itm_gaelic_byrnie_b,
 
-    ### Boots
-    itm_bare_legs,
-    itm_bare_legs, ### Additional chance of bare feet here.
+    itm_ankle_boots,
+    itm_leather_fur_boots,
     itm_legs_with_shoes,
     itm_shoes,
     ],
@@ -24121,6 +23543,8 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+    itm_javelin,
+
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
@@ -24129,46 +23553,10 @@ troops = [
     itm_raf_one_handed_axe_f,
     itm_raf_one_handed_axe_g,
     itm_raf_one_handed_axe_h,
-    itm_javelin,
-
-    itm_gaelic_byrnie_a,
-    itm_gaelic_byrnie_b,
-    itm_gambeson_b,
-    itm_gambeson_c,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-    itm_padded_cloth,
-    itm_leather_jerkin,
-    itm_pelt_coat,
-    itm_rawhide_coat,
-
-    itm_targe_1,
-    itm_targe_2,
-    itm_targe_3,
-    itm_targe_4,
-    itm_targe_5,
-    itm_targe_6,
-    itm_legs_with_shoes,
-    itm_shoes,
-    # itm_bare_legs,
-
-    itm_arming_cap,
-    itm_raf_spangen,
-    itm_kettle_cloth,
-    itm_vik_spangen_a,
-    itm_vik_spangen_b,
-    itm_vik_norman_helmet_e,
-    itm_elm2,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiiib,
+    itm_modded_falchion_3,
     itm_sword_viking_1,
     itm_sword_viking_2,
     itm_sword_viking_3,
-
-
-
-    itm_highlander_boots_1,
 
     itm_spear_f,
     itm_spear_h,
@@ -24179,6 +23567,24 @@ troops = [
     itm_spear_n,
     itm_spear_o,
     itm_spear_p,
+
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
+
+    itm_arming_cap,
+    itm_gaelic_helmet_a,
+
+    itm_gaelic_byrnie_a,
+    itm_gaelic_byrnie_b,
+    itm_buff_leather,
+
+    itm_highlander_boots_1,
+    itm_legs_with_shoes,
+    itm_shoes,
     ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     euro_face_1, euro_face_2
@@ -24193,9 +23599,6 @@ troops = [
     [
     itm_throwing_spears,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
     itm_sword_viking_1,
     itm_sword_viking_2,
     itm_sword_viking_3,
@@ -24204,39 +23607,18 @@ troops = [
     itm_raf_one_handed_axe_c,
     itm_raf_one_handed_axe_f,
     itm_raf_one_handed_axe_g,
-    itm_1257_hood,
+    itm_modded_falchion_3,
 
-    itm_leather_jerkin,
-    itm_pelt_coat,
-    itm_rawhide_coat,
-
-    itm_tab_shield_heater_c,
-    itm_tab_shield_kite_c,
-    itm_legs_with_shoes,
-    itm_shoes,
-    # itm_bare_legs,
-
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_mail_coif,
-    itm_vik_norman_helmet_a,
-    itm_vik_norman_helmet_b,
-    itm_raf_spangen,
-    itm_kolpak_mail,
+    itm_gaelic_helmet_a,
 
     itm_gaelic_mail_shirt_a,
-    itm_gaelic_mail_shirt_b,
-    itm_kau_mail_b,
-    itm_kau_mail_shirt_a,
-    itm_kau_mail_shirt_d,
-
-    itm_ankle_boots,
-    itm_wrapping_boots,
-
+      
+    itm_gaelic_shield_a,
+    
+    itm_mail_mittens,
+      
+    itm_splinted_leather_greaves,
+    
     itm_spear_f,
     itm_spear_h,
     itm_spear_j,
@@ -24259,41 +23641,33 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_javelin,
-    itm_gaelic_byrnie_a,
-    itm_gaelic_byrnie_b,
-    itm_gambeson_a,
-    itm_gambeson_b,
-    itm_gambeson_c,
-    itm_gambeson_d,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-    itm_padded_cloth,
-
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
-
-    itm_kettle_cloth,
-    itm_elm2,
-    itm_arming_cap,
-    itm_1257_hood,
-    itm_raf_spangen,
-    itm_vik_spangen_a,
-    itm_vik_spangen_b,
-    itm_vik_norman_helmet_e,
-
-    itm_sword_viking_2,
-    itm_sword_viking_3,
+    
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
+    itm_modded_falchion_3,
+
     itm_spear_f,
     itm_spear_h,
     itm_spear_j,
     itm_spear_k,
     itm_spear_l,
     itm_spear_m,
+
+    itm_gaelic_shield_a,
+    
+    itm_arming_cap,
+    itm_1257_hood,
+    itm_gaelic_helmet_a,
+
+    itm_gaelic_byrnie_a,
+    itm_gaelic_byrnie_b,
+    itm_buff_leather,
+
+    itm_dark_grey_hose, 
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
+    itm_highlander_boots_1,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -24307,6 +23681,7 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_throwing_spears,
+    itm_modded_falchion_3,
     itm_sword_viking_2,
     itm_sword_viking_3,
     itm_raf_one_handed_axe_a,
@@ -24316,35 +23691,17 @@ troops = [
     itm_spear_l,
     itm_spear_m,
     itm_spear_n,
-    itm_legs_with_shoes,
-    itm_shoes,
-      ##### itm_bare_legs,
-
-    itm_tab_shield_heater_c,
-    itm_tab_shield_kite_c,
-
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_kettle_cloth,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_vik_norman_helmet_a,
-    itm_vik_norman_helmet_b,
-    itm_raf_spangen,
-    itm_kolpak_mail,
-
+      
+    itm_gaelic_helmet_a,
+      
+    itm_splinted_leather_greaves,
+      
+    itm_mail_mittens,
+    
     itm_gaelic_mail_shirt_a,
-    itm_gaelic_mail_shirt_b,
-    itm_kau_mail_b,
-    itm_kau_mail_shirt_a,
-    itm_kau_mail_shirt_d,
-
-    itm_leather_jerkin,
-    itm_pelt_coat,
-    itm_rawhide_coat,
-
-        ],
+      
+    itm_gaelic_shield_a, 
+    ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
   ],
@@ -24358,20 +23715,32 @@ troops = [
     [
     itm_arrows,
     itm_hunting_bow,
-    itm_elm2,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-    itm_legs_with_shoes,
-    itm_shoes,
-      ##### itm_bare_legs,
+
+    itm_dagger,
+    itm_hatchet,
     itm_knife,
     itm_butchering_knife,
-
-    itm_gaelic_shirt_red,
-    itm_gaelic_shirt_blue,
-    itm_gaelic_shirt_green,
+    itm_almogavar_sword,
+      
+    itm_gaelic_byrnie_b,
+    itm_gaelic_byrnie_a,
+    
+    itm_targe_4,
+    itm_targe_1,
+    itm_talak_buckler,
+    
+    itm_leather_cap,
+    itm_arming_cap,
+    itm_1257_hood_2,
+    itm_padded_coif,
+    itm_skullcap,
+      
+    itm_legs_with_shoes,
+    itm_shoes,
+    itm_woolen_hose,
+    itm_green_hose_b,
+    itm_grey_hose,
+    itm_yellow_hose,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
@@ -24393,30 +23762,21 @@ troops = [
     itm_raf_one_handed_axe_f,
     itm_raf_one_handed_axe_g,
     itm_raf_one_handed_axe_h,
-    itm_legs_with_shoes,
-    itm_shoes,
-      ##### itm_bare_legs,
-    itm_sword_viking_2,
     itm_sword_viking_2_small,
-    itm_sword_viking_3,
+    itm_modded_falchion_3,
     itm_sword_viking_3_small,
 
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+    itm_highlander_boots_1,
+    itm_ankle_boots,
+    itm_hunter_boots,
+    itm_leather_boots,
 
-    itm_gaelic_byrnie_a,
-    itm_gaelic_byrnie_b,
-    itm_padded_cloth,
+    itm_gaelic_helmet_a,
 
-    itm_elm2,
-    itm_vik_spangen_a,
-    itm_vik_spangen_b,
-    itm_vik_norman_helmet_e,
-    itm_kettle_cloth,
-
-    itm_leather_jerkin,
-    itm_pelt_coat,
-    itm_rawhide_coat,
-
+    itm_gaelic_shield_b,
+    itm_gaelic_shield_c,
+    
+    itm_buff_leather,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -24432,12 +23792,8 @@ troops = [
     itm_javelin,
     itm_throwing_spears,
 
-    itm_gaelic_shirt_blue,
-    itm_gaelic_shirt_red,
-    itm_gaelic_shirt_green,
+    itm_gaelic_tunic_cape_a,
 
-    itm_elm2,
-    itm_raf_spangen,
     itm_spear_f,
     itm_spear_h,
     itm_spear_j,
@@ -24454,16 +23810,17 @@ troops = [
     itm_targe_4,
     itm_targe_5,
     itm_targe_6,
-
+    
+    itm_hatchet,
+    itm_modded_falchion_3,
+    
     itm_1257_hood,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_arming_cap,
+    itm_padded_coif,
+    
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
-
+      
     itm_sumpter_horse,
     itm_saddle_horse,
     ],
@@ -24483,38 +23840,30 @@ troops = [
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
     itm_raf_one_handed_axe_f,
-    itm_raf_spangen,
     itm_raf_one_handed_axe_h,
     itm_falchion,
-
-    itm_1257_hood,
+    itm_modded_falchion_3,
+    
     itm_spear_k,
     itm_spear_l,
     itm_spear_n,
-    itm_haubergeon,
-
+   
+    itm_gaelic_helmet_a,
+    
     itm_targe_1,
     itm_targe_2,
     itm_targe_3,
-    itm_elm2,
+    itm_gaelic_shield_b,
     itm_targe_5,
     itm_targe_6,
+    itm_gaelic_shield_c,
 
-    itm_gaelic_byrnie_a,
-    itm_gaelic_byrnie_b,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-    itm_padded_cloth,
+    itm_gaelic_mail_shirt_a,
 
     itm_legs_with_shoes,
     itm_shoes,
-      ##### itm_bare_legs,
-
-    itm_vik_spangen_a,
-    itm_vik_spangen_b,
-    itm_vik_norman_helmet_e,
-    itm_kettle_cloth,
-    itm_elm2,
+    itm_highlander_boots_1,
+    itm_yellow_hose,
 
     itm_saddle_horse,
     itm_courser,
@@ -24533,86 +23882,32 @@ troops = [
     itm_lance,
     itm_light_lance,
 
-    itm_tab_shield_kite_c,
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
-    itm_tab_shield_heater_c,
-
-    itm_kau_mail_a,
-    itm_kau_mail_b,
-    itm_kau_mail_shirt_a,
-    itm_kau_mail_shirt_b,
-    itm_gaelic_mail_shirt_a,
-    itm_gaelic_mail_shirt_b,
-    itm_haubergeon,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
+    itm_raf_one_handed_axe_g,
+    itm_raf_one_handed_axe_e,
+    itm_spiked_mace,
+    itm_winged_mace,
+    itm_modded_euro_sidesword_1,
+    itm_modded_euro_armingsword_1,
     itm_sword_viking_1,
     itm_sword_viking_2,
     itm_sword_viking_3,
 
-    itm_legs_with_shoes,
-    itm_shoes,
-    # itm_bare_legs,
-
-    itm_priest_cap_1,
     itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_raf_spangen,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-    itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
+    itm_mail_coif_b,
+    
+    itm_surcoat_gaelic,
 
     itm_hunter,
     itm_horse_d,
     itm_horse_e,
 
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
+	itm_leather_gloves,
 
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
+    itm_leather_boots,
+    itm_highlander_boots_1,
 
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
-
-
+    itm_gaelic_shield_b,
+    itm_gaelic_shield_c,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
@@ -24627,31 +23922,16 @@ troops = [
     [
     itm_heavy_lance,
     itm_heraldic_lance,
-    itm_mail_boots_long,
+    
+    itm_kau_mail_boots_dark_long,
 
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
+    itm_tab_shield_kite_cav_b,
+    itm_tab_shield_heater_cav_b,
 
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_raf_spangen,
-
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_kettlehat_b,
-    itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
+    itm_munitionshelm2,
+    itm_munitionshelm1,
+    itm_pepperpothelm1,
+    itm_rhodok_great_helmet,
 
     itm_mail_mittens,
 
@@ -24660,79 +23940,16 @@ troops = [
     itm_sword_type_xiiib,
     itm_sword_type_xii,
     itm_raf_one_handed_axe_h,
-      ##### itm_talak_mace,
-
-    itm_rnd_surcoat_01,
-    itm_rnd_surcoat_02,
-    itm_rnd_surcoat_03,
-    itm_rnd_surcoat_04,
-    itm_rnd_surcoat_05,
-    itm_rnd_surcoat_06,
-    itm_rnd_surcoat_07,
-    itm_rnd_surcoat_08,
-    itm_rnd_surcoat_09,
-    itm_rnd_surcoat_10,
-    itm_rnd_surcoat_11,
-    itm_rnd_surcoat_12,
-    itm_rnd_surcoat_13,
-    itm_rnd_surcoat_14,
-    itm_rnd_surcoat_15,
-    itm_rnd_surcoat_16,
-    itm_rnd_surcoat_17,
-    itm_rnd_surcoat_18,
-    itm_rnd_surcoat_19,
-    itm_rnd_surcoat_20,
-    itm_rnd_surcoat_21,
-    itm_rnd_surcoat_22,
-    itm_rnd_surcoat_23,
-
-    ###### itm_hunter,
-    ###### itm_horse_e,
-    ###### itm_horse_d,
-    ###### itm_warhorse_yellow,
-    ###### itm_warhorse_blue,
-    ###### itm_warhorse_white,
-    ###### itm_warhorse_red,
-    itm_warhorse,
-	############### NEW v2.5
-    itm_modded_helmet_heavy_1,
-    itm_modded_helmet_heavy_2,
-    itm_modded_helmet_heavy_3,
-
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-    itm_sa_crusader_helm_11,
-
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
+    ###itm_talak_mace,
+    itm_talak_warhammer,
+    itm_raf_one_handed_axe_b,
+    itm_raf_one_handed_axe_f,
+    
+    itm_irish_surcoat,
+    itm_surcoat_ireland_a,
+    
+	itm_warhorse,
+    itm_warhorse_ireland_a,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
@@ -24748,58 +23965,33 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_commoners,
     [
-    itm_byz_boots_c,
-
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-    itm_peasant_b,
-    itm_peasant_c,
-    itm_peasant_d,
-    itm_peasant_tunic_a,
-
-    itm_peasant_f,
-    itm_archer_a,
-    itm_archer_b,
-    itm_archer_c,
+    itm_fur_hat,
+    
     itm_leather_vest,
     itm_burlap_tunic,
     itm_short_tunic,
     itm_coarse_tunic,
+    itm_balt_shirt_c,
+    itm_balt_shirt_a,
 
-
-
+    itm_berber_shoes,
+    
     itm_short_bow,
     itm_strely,
     itm_butchering_knife,
     itm_knife,
     itm_hatchet,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_fighting_pick,
+    itm_sickle,
 
     itm_javelin,
-    ###### itm_scythe,
-    ###### itm_spear_a,
-    ###### itm_spear_b,
-    ###### itm_spear_c,
-    ###### itm_spear_d,
-    ###### itm_spear_e,
-    ###### itm_spear_f,
-    ###### itm_spear_g,
-    ###### itm_spear_h,
-    ###### itm_spear_i,
-
-    itm_mace_1,
+    itm_scythe,
+    
     itm_club,
 
     itm_leather_covered_round_shield,
     itm_hide_covered_round_shield,
-    itm_rus_shield_d_3,
-    itm_lithuanian_shield9,
+    itm_targe_5,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -24812,43 +24004,26 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_commoners,
     [
-    itm_byz_psiloi_a,
-    itm_byz_psiloi_b,
-
-    itm_peasant_tunic_a,
-    itm_peasant_b,
-    itm_peasant_c,
-    itm_peasant_g,
-
-    itm_peasant_f,
-
-    itm_byz_boots_b,
-    itm_byz_boots_a,
-    itm_byz_boots_c,
-
-    itm_rus_shield_d_3,
-    itm_lithuanian_shield9,
+    itm_balt_fur_coat_a,
+    itm_balt_shirt_b,
+    itm_balt_shirt_e,
+    itm_balt_shirt_d,
+    
+    itm_berber_shoes,
 
     itm_butchering_knife,
     itm_knife,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_e,
+    itm_pickaxe,
     itm_falchion,
-    itm_mace_1,
+    itm_fighting_pick,
+    itm_sickle,
 
-    ###### itm_short_bow,
-    ###### itm_arrows,
+    itm_short_bow,
+    itm_arrows,
 
-    itm_arab_helmet_c,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_g,
-    itm_spear_h,
-    itm_spear_i,
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -24866,39 +24041,24 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_8,
     [
-    itm_arab_helmet_c,
-    itm_byz_boots_a,
-    itm_byz_boots_b,
-    itm_byz_boots_c,
-    itm_byz_helmet_a,
-    itm_baltic_ponted_helmet,
-
-    itm_raf_one_handed_axe_a,
-    itm_ilkhanate_kaftan,
-    itm_raf_one_handed_axe_e,
+    itm_ilkhanate_cap,
+    
+    itm_falshion_2,
     itm_falchion,
 
-    itm_byz_boots_a,
-    itm_byz_boots_b,
-    itm_byz_boots_c,
-
-    itm_meghrebi_vest,
-    itm_rus_militia_padded_a,
-    itm_kau_turcopole_a,
-    itm_kau_turcopole_b,
-    itm_gaelic_shirt_blue,
-
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
+    itm_bamboo_spear,
+    itm_berber_spear,
 
     itm_tab_shield_round_b,
     itm_tab_shield_small_round_a,
     itm_rus_shield_d_3,
     itm_lithuanian_shield9,
-
+    
+    itm_kau_lit_mail,
+    
+    itm_hunter_boots,
+    itm_leather_fur_boots,
+    itm_hide_boots,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -24910,32 +24070,23 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_8,
     [
-      ##### itm_kettlehat_a,
-      ##### itm_kettlehat_b,
-      ##### itm_kettle_cloth,
-      ##### itm_flat_kettle_hat,
-    itm_osp_faceplate,
-      ##### itm_vik_norman_helmet_a,
-    itm_norman_coif_c,
-
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_e,
     itm_falchion,
-
-    itm_meghrebi_vest,
-    itm_rus_militia_padded_a,
-    itm_kau_turcopole_a,
-    itm_kau_turcopole_b,
-    itm_gaelic_shirt_blue,
-
+    itm_spatha,
+    
+    itm_byz_shield_4,
     itm_rus_shield_d_3,
     itm_lithuanian_shield9,
 
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
+    itm_anatolian_leather_lamellar,
+    
+    itm_balt_footman_helmet,
+    itm_bulgar_helm_b,
+    
+    itm_bamboo_spear,
+    itm_berber_spear,
 
     itm_byz_boots_a,
     itm_byz_boots_b,
@@ -24951,61 +24102,26 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_8,
     [
-    itm_haubergeon,
-    itm_studden_leather_armour_a,
-    itm_kau_mail_a,
-    itm_kau_mail_b,
+    itm_armenian_mail_b,
 
-    itm_norman_coif_c,
-    itm_osp_faceplate,
+    itm_splinted_leather_greaves,
 
-    itm_tab_shield_kite_c,
+    itm_byz_shield_4,
     itm_rus_shield_a_3,
     itm_rus_shield_b_3,
     itm_rus_shield_c_3,
     itm_rus_shield_d_3,
 
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
+    itm_mail_mittens,
 
-    itm_byz_boots_a,
-    itm_byz_boots_b,
-    itm_byz_boots_c,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_e,
+    itm_sarranid_axe_b,
+    itm_sarranid_axe_a,
     itm_falchion,
-    itm_rus_shield_d_3,
-    itm_lithuanian_shield9,
+    itm_spatha,
 
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
+	itm_bamboo_spear,
+    itm_berber_spear,
+    itm_modded_war_spear,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     euro_face_1, euro_face_2
@@ -25019,40 +24135,21 @@ troops = [
     0, 0, fac_kingdom_8,
 
     [
-
     itm_nomad_bow,
     itm_strely,
 
-    itm_byzantine_sword,
-    itm_arabian_sword_a,
-    itm_sword_type_xii,
-    itm_raf_one_handed_axe_g,
-    itm_raf_one_handed_axe_e,
-    itm_ilkhanate_kaftan,
-    itm_raf_one_handed_axe_d,
+    itm_hatchet,
     itm_falchion,
     itm_butchering_knife,
-
-    itm_byz_psiloi_a,
-    itm_byz_psiloi_b,
-
-    itm_byz_helmet_a,
-
-
-
-    itm_tab_shield_small_round_a,
-    itm_arab_shield_a_3,
-    itm_balt_shirt_a,
+    itm_falshion_2,
+    
     itm_ilkhanate_cap,
-    itm_balt_shirt_c,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-    itm_arab_shield_g_3,
-    itm_arab_shield_h_3,
 
-    itm_byz_boots_a,
-    itm_byz_boots_b,
-    itm_byz_boots_c,
+    itm_balt_padded_a,
+
+    itm_berber_shoes,
+    itm_hide_boots,
+    itm_hunter_boots,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -25067,30 +24164,14 @@ troops = [
     itm_strely,
     itm_strong_bow,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_arabian_sword_a,
-    itm_arabian_sword_b,
-    itm_byzantine_sword,
+    itm_spatha,
 
-    itm_meghrebi_vest,
-    itm_rus_militia_padded_a,
-    itm_kau_turcopole_a,
-    itm_kau_turcopole_b,
-    itm_gaelic_shirt_blue,
+    itm_balt_padded_a,
 
-    itm_byz_helmet_a,
-    itm_baltic_ponted_helmet,
+    itm_ilkhanate_cap,
 
     itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-    itm_arab_shield_g_3,
-    itm_ilkhanate_kaftan,
-
+   
     itm_byz_boots_a,
     itm_byz_boots_b,
     itm_byz_boots_c,
@@ -25108,60 +24189,24 @@ troops = [
     itm_strely,
     itm_strong_bow,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_sarranid_axe_a,
+    itm_sarranid_axe_b,
     itm_byzantine_sword,
-
-    itm_byz_mail_a,
-    itm_byz_mail_b,
-    itm_kau_mail_b,
-    itm_kau_mail_shirt_d,
-    itm_rus_mail_shirt_c,
-
+    itm_spatha,
+    
+    itm_arab_shield_a_3,
     itm_tab_shield_small_round_c,
     itm_tab_shield_small_round_b,
 
-    itm_rus_noble_helmet,
-      ##### itm_vaegir_noble_helmet,
-    itm_elm9,
-    itm_osp_faceplate,
+    itm_anatolian_leather_lamellar,
 
+    itm_balt_footman_helmet,
+    itm_bulgar_helm_b,
 
-
-    itm_byz_boots_b,
-    itm_byz_boots_b,
-    itm_byz_boots_c,
-
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
-
-    ],
+    itm_byz_cavalry_boots,
+    
+    itm_leather_gloves,
+	],
     ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
     euro_face_1, euro_face_2
   ],
@@ -25174,26 +24219,27 @@ troops = [
     0, 0, fac_commoners,
     [
     itm_javelin,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
+    itm_berber_spear,
+    itm_bamboo_spear,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
     itm_mace_4,
     itm_mace_2,
-    itm_byz_helmet_a,
-    itm_baltic_ponted_helmet,
+    itm_hatchet,
+    itm_falshion_2,
 
-    itm_byz_psiloi_a,
-    itm_byz_psiloi_a,
-
-    itm_byz_boots_a,
-    itm_byz_boots_b,
-    itm_byz_boots_c,
-    itm_rus_shield_d_3,
-    itm_lithuanian_shield9,
+    itm_tab_shield_small_round_a,
+    
+    itm_balt_shirt_d,
+    itm_balt_shirt_b,
+    itm_balt_shirt_e,
+    itm_balt_fur_coat_a,
+    
+    itm_berber_shoes,
+    itm_leather_fur_boots,
+    
+    itm_targe_6,
+    itm_targe_5,
+    itm_targe_4,
 
     itm_saddle_horse,
     itm_sumpter_horse,
@@ -25212,38 +24258,20 @@ troops = [
     [
     itm_javelin,
 
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
-    itm_sword_type_xii,
+    itm_berber_spear,
+    itm_sarranid_axe_a,
     itm_byzantine_sword,
     itm_sword_khergit_1,
     itm_arabian_sword_a,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_haubergeon,
+    itm_spatha,
+    
+    itm_anatolian_leather_lamellar,
 
-    itm_meghrebi_vest,
-    itm_rus_militia_padded_a,
-    itm_kau_turcopole_a,
-    itm_kau_turcopole_b,
-    itm_gaelic_shirt_blue,
+    itm_balt_footman_helmet,
 
-      ##### itm_kettle_cloth,
-      ##### itm_vik_norman_helmet_c,
-      ##### itm_vik_norman_helmet_e,
-      ##### itm_vik_spangen_a,
-      ##### itm_vik_spangen_b,
     itm_byz_boots_a,
     itm_byz_boots_b,
     itm_byz_boots_c,
-
-    itm_byz_helmet_a,
-    itm_baltic_ponted_helmet,
 
     itm_tab_shield_small_round_a,
     itm_rus_shield_d_3,
@@ -25264,43 +24292,24 @@ troops = [
     0, 0, fac_kingdom_8,
     [
     itm_lance,
-    itm_heraldic_lance,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
+    
+    itm_sarranid_mace_1,
     itm_arabian_sword_a,
     itm_arabian_sword_b,
     itm_byzantine_sword,
     itm_mace_4,
+    itm_sarranid_axe_a,
+    itm_spatha,
 
-    itm_haubergeon,
     itm_armenian_mail_b,
-    itm_georgian_mail,
-    itm_anatolian_mail,
-    itm_kau_mail_a,
-    itm_kau_mail_b,
-
-    itm_byz_helmet_a,
+    
     itm_baltic_ponted_helmet,
-
-    itm_arab_helmet_c,
-    itm_balt_spiked_helmet,
-    itm_arab_helmet_b,
-    itm_arab_helmet_d,
-    ###### itm_arab_mail_coif,
-
-    itm_black_guard_helmet,
-    itm_rus_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-
-
 
     itm_rus_shield_a_3,
     itm_rus_shield_b_3,
     itm_rus_shield_c_3,
     itm_rus_shield_d_3,
+    itm_tab_shield_small_round_b,
 
     itm_byz_boots_a,
     itm_byz_boots_b,
@@ -25322,16 +24331,21 @@ troops = [
     0, 0, fac_kingdom_8,
     [
     itm_heraldic_lance,
+    itm_muslim_lance,
     itm_heavy_lance,
 
     itm_sword_type_xii,
     itm_sword_type_xiii,
     itm_sword_type_xiiib,
+    itm_sarranid_mace_1,
+    itm_sarranid_axe_b,
+    itm_sarranid_axe_a,
     itm_arabian_sword_d,
+    itm_byzantine_sword_3,
+    itm_byzantine_sword_5,
 
     itm_kau_mail_boots_dark_long,
-    itm_mail_boots_long,
-
+    
     itm_mail_mittens,
 
     itm_armenian_knight_a,
@@ -25342,34 +24356,12 @@ troops = [
     itm_rus_shield_b_3,
     itm_rus_shield_c_3,
     itm_rus_shield_d_3,
+    itm_tab_shield_small_round_c,
 
-    itm_arab_helmet_c,
-    itm_balt_spiked_helmet,
-    itm_arab_helmet_b,
-    itm_arab_helmet_d,
-    ###### itm_arab_mail_coif,
-
-    itm_black_guard_helmet,
-    itm_rus_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-    itm_seljuk_helmet,
-
-      ##### itm_vaegir_noble_helmet,
-    itm_rus_helmet_1,
-     ###### itm_norman_coif_c,
-     ###### itm_elm9,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_d,
-    itm_kolpak_mail,
-    itm_osp_faceplate,
-
-    itm_hunter,
-    itm_horse_d,
-    itm_horse_e,
+    itm_munitionshelm1,
+    itm_munitionshelm2,
+    
+    itm_warhorse,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_1, euro_face_2
@@ -25716,24 +24708,10 @@ troops = [
     0, 0, fac_kingdom_20,
     [
 	#Helmet
-
-
-
-
-
-
-
-
-
-
-
-
     itm_mamluk_cap,
 	itm_mamluk_cap,
 
-
-
-	itm_mamluk_cap,
+    itm_mamluk_cap,
     itm_seljuk_archer_cap,
     itm_seljuk_archer_cap,
     itm_seljuk_archer_cap,
@@ -25741,12 +24719,6 @@ troops = [
 	itm_ilkhanate_cap,
 
 	itm_cuman_cap_d,
-
-
-
-
-
-
 
     itm_arab_helmet_c,
     itm_arab_helmet_c,
@@ -25876,8 +24848,7 @@ troops = [
 	itm_armor_medium_tyrk_c,
 	itm_armor_medium_tyrk_d,
 
-
-	#Boots
+    #Boots
     itm_rus_boots_b,
     itm_leather_fur_boots,
 	itm_leather_fur_boots,
@@ -25899,12 +24870,6 @@ troops = [
 	#Shield
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
-
-
-
-
-
-
 
     itm_tab_shield_kite_c,
 	itm_tab_shield_kite_c,
@@ -26219,19 +25184,16 @@ troops = [
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_mounted|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
-	#Weapons
-    itm_khergit_bow,
-	itm_saracin_bow_a,
+	itm_khergit_bow,
 	itm_saracin_bow_a,
 	itm_saracin_bow_b,
 	itm_saracin_bow_c,
 	itm_arrow_tyrk_a,
-	itm_arrow_tyrk_a,
+	
 	itm_arrow_tyrk_b,
 	itm_arrow_tyrk_c,
 
-	#Armor
-    itm_turk_kaftan_green,
+	itm_turk_kaftan_green,
     itm_turk_kaftan_furtrim,
     itm_turk_kaftan_beige,
 	itm_arab_archer,
@@ -26240,53 +25202,31 @@ troops = [
     itm_seljuk_tunic_c,
 	itm_armor_medium_tyrk_f,
 
-	#Helmets
-    itm_mamluk_cap,
 	itm_mamluk_cap,
-    itm_seljuk_archer_cap,
-    itm_seljuk_archer_cap,
+	itm_seljuk_archer_cap,
 	itm_helm_tyrk_1,
 
-    #Swords
     itm_sword_khergit_1,
     itm_sword_khergit_2,
     itm_sword_khergit_3,
     itm_scimitar,
-	itm_scimitar,
-    itm_sword_type_xii,
-
-	#Shields
-	itm_bandit_shield_1,
+	
+    itm_bandit_shield_1,
 	itm_bandit_shield_2,
 	itm_bandit_shield_2,
 	itm_bandit_shield_3,
-    itm_arab_shield_a_3,
-    itm_arab_shield_b_3,
-    itm_arab_shield_c_3,
-    itm_arab_shield_d_3,
-    itm_arab_shield_e_3,
-    itm_arab_shield_f_3,
-    itm_arab_shield_g_3,
-    itm_arab_shield_h_3,
-    itm_arab_shield_i_3,
+    
     itm_cuman_shield_a_3,
     itm_cuman_shield_b_3,
     itm_cuman_shield_c_3,
-
-	#Boots
-    itm_rus_boots_b,
+	
     itm_leather_fur_boots,
-	itm_leather_fur_boots,
     itm_tied_up_shoes,
-
-	#Horse
-    itm_steppe_horse,
-	itm_horse_tyrk_a,
-	itm_horse_tyrk_b,
-	itm_horse_tyrk_c,
-	itm_horse_tyrk_d,
-	itm_horse_tyrk_e,
-    ],
+    itm_sa_saracin_light_boot_1,
+    itm_sa_saracin_light_boot_2,
+    
+	itm_steppe_horse,
+	],
     horse_attrib_3,
     cum_horseman_wp,
     cum_horseman_skills,
@@ -26299,27 +25239,19 @@ troops = [
     tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_ranged|tf_mounted|tf_guarantee_shield|tf_guarantee_helmet|tf_guarantee_horse,
     0,0,fac_kingdom_20,
     [
-	#Weapons
-    itm_khergit_bow,
-	itm_saracin_bow_a,
+	itm_khergit_bow,
 	itm_saracin_bow_a,
 	itm_saracin_bow_b,
 	itm_saracin_bow_c,
 	itm_arrow_tyrk_a,
-	itm_arrow_tyrk_a,
 	itm_arrow_tyrk_b,
 	itm_arrow_tyrk_c,
 
-	#Swords
-    itm_sword_type_xii,
-    itm_sword_khergit_1,
+	itm_sword_khergit_1,
     itm_sword_khergit_2,
     itm_sword_khergit_3,
     itm_scimitar,
-	itm_scimitar,
-	itm_scimitar,
-
-	#Shields
+	
     itm_arab_shield_a_3,
     itm_arab_shield_b_3,
     itm_arab_shield_c_3,
@@ -26330,44 +25262,29 @@ troops = [
     itm_arab_shield_h_3,
     itm_arab_shield_i_3,
 
-	#Boots
-    itm_rus_boots_b,
-    itm_leather_fur_boots,
-    itm_byzantine_greaves,
-	itm_byzantine_greaves,
+	itm_sarranid_boots_a_long,
+    itm_sarranid_boots_b_long,
+    itm_sarranid_boots_c,
 
-    #Armor
     itm_anatolian_mail,
 	itm_turk_kaftan_green,
-    itm_anatolian_leather_lamellar,
-    itm_anatolian_horseman_lamellar,
-	itm_armor_medium_tyrk_f,
-	itm_armor_medium_tyrk_f,
-	itm_armor_medium_tyrk_f,
-	itm_armor_medium_tyrk_e,
-	itm_armor_medium_tyrk_e,
+    itm_armor_medium_tyrk_f,
+    itm_armor_medium_tyrk_e,
 
-    #Helmets
     itm_mamluk_cap,
-	itm_mamluk_cap,
     itm_seljuk_archer_cap,
     itm_seljuk_helmet,
-	itm_seljuk_helmet,
-
-    itm_rus_helmet_1,
-	itm_helm_tyrk_1,
+	
+    itm_helm_tyrk_1,
 	itm_helm_tyrk_1,
 	itm_helm_tyrk_4,
 	itm_helm_tyrk_4,
 
-    #Horse
-	itm_horse_tyrk_a,
+    itm_horse_tyrk_a,
 	itm_horse_tyrk_b,
 	itm_horse_tyrk_c,
 	itm_horse_tyrk_d,
 	itm_horse_tyrk_e,
-    itm_horse_d,
-    itm_horse_e,
     ],
     horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
     khergit_face_younger_1, khergit_face_old_2
@@ -26380,10 +25297,8 @@ troops = [
     0,0,fac_kingdom_20,
     [
 	itm_saracin_bow_a,
-	itm_saracin_bow_a,
 	itm_saracin_bow_b,
 	itm_saracin_bow_c,
-	itm_arrow_tyrk_a,
 	itm_arrow_tyrk_a,
 	itm_arrow_tyrk_b,
 	itm_arrow_tyrk_c,
@@ -26393,28 +25308,27 @@ troops = [
     itm_scimitar_b,
     itm_sarranid_mace_1,
 
-    itm_seljuk_hauberk_jawshan,
-	itm_armor_medium_tyrk_f,
-	itm_armor_medium_tyrk_f,
-	itm_armor_medium_tyrk_e,
-	itm_armor_medium_tyrk_c,
-    itm_arab_mail_c,
+    itm_anatolian_horseman_lamellar,
 
-    itm_tab_shield_heater_c,
-    itm_tab_shield_round_c,
+    itm_arab_shield_a_3,
+    itm_arab_shield_b_3,
+    itm_arab_shield_c_3,
+    itm_arab_shield_d_3,
+    itm_arab_shield_e_3,
+    itm_arab_shield_f_3,
+    itm_arab_shield_g_3,
+    itm_arab_shield_h_3,
+    itm_arab_shield_i_3,
+    
+    itm_sarranid_boots_d_long,
 
-    itm_arab_mail_d,
-    itm_arab_mail_e,
-    itm_byzantine_greaves,
-
-    # itm_vaegir_war_helmet,
+    itm_vaegir_mask,
     itm_ghulam_helmet,
     itm_seljuk_helmet,
+    
+    itm_sa_gauntlets_arabs_1,
 
     itm_seljuk_horse,
-    itm_mon_lamellar_horse_c,
-    itm_mon_lamellar_horse_b,
-    itm_mon_lamellar_horse_a,
     ],
     horse_attrib_5,
     cum_vharcher_wp,
@@ -26431,20 +25345,15 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    ### Ranged Weapons
     itm_darts,
 
-    ### Melee Weapons
-    itm_hatchet,
+    itm_fighting_pick,
+    itm_military_pick,
     itm_club,
-    itm_raf_one_handed_axe_g,
-
-    itm_spear_k,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
-
-    ### Shields
+    itm_pitch_fork,
+    itm_battle_fork,
+    itm_military_fork,
+    
     itm_targe_1,
     itm_targe_2,
     itm_targe_3,
@@ -26452,25 +25361,22 @@ troops = [
     itm_targe_5,
     itm_targe_6,
 
-    ### Helmets
+    itm_priest_cap_2,
     itm_arming_cap,
     itm_1257_hood,
-    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
+    itm_woolen_cap,
 
-    ### Armors
-    itm_peasant_b,
-    itm_peasant_c,
-    itm_peasant_d,
-    itm_peasant_g,
-    itm_peasant_tunic_a,
-    itm_tunic_with_green_cape,
+    itm_gaelic_shirt_blue,
+    itm_gaelic_shirt_green,
+    itm_gaelic_shirt_red,
+    itm_gaelic_long_tunic_c,
+    itm_gaelic_long_tunic_a,
+    itm_gaelic_long_tunic_b,
 
-    ### Boots
-    itm_peasant_f,
+    itm_green_hose_b,
     itm_legs_with_shoes,
     itm_shoes,
-    # itm_bare_legs,
-    itm_highlander_boots_1,
+    itm_green_hose,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -26482,18 +25388,16 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    ### Melee Weapons
-    itm_hatchet,
+    itm_dagger,
+    itm_pickaxe,
     itm_club,
     itm_studded_club,
     itm_spiked_mace,
     itm_knife,
     itm_butchering_knife,
     itm_scythe,
-
-    ### Shields
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
+    itm_knife,
+   
     itm_targe_1,
     itm_targe_2,
     itm_targe_3,
@@ -26501,24 +25405,23 @@ troops = [
     itm_targe_5,
     itm_targe_6,
 
-    ### Helmets
     itm_arming_cap,
     itm_1257_hood,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
-    itm_raf_spangen,
-
-    ### Armors
+    itm_priest_cap_3,
+    itm_priest_cap_1,
+    itm_priest_cap_2,
+    
     itm_gaelic_shirt_blue,
     itm_gaelic_shirt_green,
     itm_gaelic_shirt_red,
-    itm_peasant_f,
+    itm_gaelic_long_tunic_c,
+    itm_gaelic_long_tunic_a,
+    itm_gaelic_long_tunic_b,
 
-    ### Boots
+    itm_green_hose_b,
     itm_shoes,
-    # itm_bare_legs,
-    itm_highlander_boots_1,
+    itm_legs_with_shoes,
+    itm_green_hose,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -26530,6 +25433,9 @@ troops = [
     tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+    itm_modded_falchion_3,
+    itm_hatchet,
+    itm_almogavar_sword,
     itm_spear_a,
     itm_spear_b,
     itm_spear_c,
@@ -26540,27 +25446,22 @@ troops = [
     itm_spear_j,
     itm_spear_k,
     itm_spear_l,
+    
     itm_legs_with_shoes,
     itm_shoes,
-    # itm_bare_legs,
-    itm_norman_coif_d,
-    itm_raf_spangen,
-
+    itm_wrapping_boots,
+    itm_highlander_boots_1,
+    itm_leather_fur_boots,
+    itm_green_hose_b,
+    itm_green_hose,
+    
+    itm_padded_coif,
     itm_arming_cap,
     itm_1257_hood,
-    itm_flat_kettle_hat,
-    itm_elm2,
+    itm_skullcap,
 
-    itm_archer_a,
-    itm_archer_b,
-    itm_archer_c,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-
-    itm_highlander_boots_1,
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+    itm_gaelic_shield_b,
+    itm_gaelic_shield_c,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -26574,42 +25475,24 @@ troops = [
     [
     itm_javelin,
 
-    itm_gaelic_shirt_red,
-    itm_gaelic_tunic_cape_a,
-
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
-
-    # itm_surcoat_gaelic,
-    itm_gaelic_shirt_blue,
-    itm_gaelic_shirt_green,
-    itm_elm2,
-
-    itm_leather_gloves,
-    itm_mail_mittens,
-    itm_norman_coif_d,
-    itm_raf_spangen,
-
+    itm_modded_helmet_kettle_cloth_4,
     itm_flat_kettle_hat,
     itm_raf_spangen,
-    itm_legs_with_shoes,
-    itm_shoes,
-    # itm_bare_legs,
-
+    itm_gaelic_helmet_a,
+    itm_kettle_cloth_cape,
     itm_flat_topped_helmet_b,
-    itm_raf_one_handed_axe_b,
+    itm_footman_helmet,
+    
     itm_highlander_boots_1,
+    
+    itm_gaelic_shield_a,
+    
+    itm_modded_falchion_3,
+    itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_d,
     itm_raf_one_handed_axe_e,
     itm_raf_one_handed_axe_f,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
-
     itm_spear_k,
-    itm_gaelic_helmet_a,
-    itm_kettle_cloth_cape,
     itm_spear_n,
     itm_spear_o,
     itm_spear_p,
@@ -26625,8 +25508,8 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_galloglass_mail,
-    itm_galloglass_padded,
-    itm_gaelic_mail_shirt_b,
+    
+    itm_mail_mittens,
 
     itm_raf_spangen,
     itm_norman_coif_a,
@@ -26634,39 +25517,20 @@ troops = [
     itm_norman_coif_c,
     itm_norman_coif_d,
     itm_norman_coif_e,
+    itm_rhodok_four_plated_helmet,
+    itm_modded_helmet_kettle_mail_1,
 
     itm_morningstar,
     itm_talak_warhammer,
     itm_mace_4,
-    itm_norman_coif_d,
-    itm_raf_spangen,
-
     itm_raf_one_handed_axe_h,
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
-    itm_sword_type_xiii,
+    itm_talak_bastard_sword,
+    
+    itm_splinted_leather_greaves,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_highlander_boots_1,
-
-    itm_spear_a,
-    itm_kau_mail_shirt_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
+    itm_gaelic_shield_a,
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     euro_face_3, euro_face_4
@@ -26680,23 +25544,17 @@ troops = [
     [
     itm_long_axe,
     itm_long_axe_b,
+    itm_raf_two_handed_axe_c,
 
     itm_mail_mittens,
 
     itm_galloglass_mail,
-    itm_galloglass_padded,
-    itm_gaelic_mail_shirt_b,
-
+    
     itm_raf_spangen,
-    itm_norman_coif_a,
-    itm_norman_coif_b,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_rhodok_four_plated_helmet,
+    itm_modded_helmet_kettle_mail_1,
 
-    itm_highlander_boots_1,
+    itm_splinted_leather_greaves,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_3, euro_face_4
@@ -26713,28 +25571,30 @@ troops = [
     itm_hunting_bow,
     itm_short_bow,
 
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
 
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_hatchet,
+    itm_almogavar_sword,
 
     itm_arming_cap,
     itm_1257_hood,
-    itm_flat_kettle_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_skullcap,
+    itm_arming_cap,
 
-    itm_archer_a,
-    itm_archer_b,
-    itm_archer_c,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
+    itm_gaelic_byrnie_a,
+    itm_gaelic_byrnie_b,
 
     itm_legs_with_shoes,
     itm_shoes,
-    # itm_bare_legs,
+    itm_green_hose_b,
+    itm_green_hose,
     itm_highlander_boots_1,
+    itm_leather_fur_boots,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
@@ -26755,30 +25615,26 @@ troops = [
     itm_raf_one_handed_axe_f,
     itm_raf_one_handed_axe_g,
     itm_raf_one_handed_axe_h,
-    itm_legs_with_shoes,
-    itm_shoes,
-    # itm_bare_legs,
+    itm_modded_falchion_3,
     itm_sword_viking_2,
     itm_sword_viking_2_small,
     itm_sword_viking_3,
     itm_sword_viking_3_small,
 
-    itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+    itm_targe_1,
+    itm_targe_2,
+    itm_targe_3,
+    itm_targe_4,
+    itm_targe_5,
+    itm_targe_6,
 
-    itm_gaelic_byrnie_a,
-    itm_gaelic_byrnie_b,
-    itm_padded_cloth,
+    itm_galloglass_padded,
 
     itm_elm2,
-    itm_vik_spangen_a,
-    itm_vik_spangen_b,
-    itm_vik_norman_helmet_e,
+    itm_modded_helmet_kettle_cloth_4,
     itm_kettle_cloth,
 
-    itm_leather_jerkin,
-    itm_pelt_coat,
-    itm_rawhide_coat,
-
+    itm_highlander_boots_1,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -26794,12 +25650,10 @@ troops = [
     itm_javelin,
     itm_throwing_spears,
 
-    itm_gaelic_shirt_blue,
-    itm_gaelic_shirt_red,
-    itm_gaelic_shirt_green,
+    itm_gaelic_tunic_cape_a,
 
-    itm_elm2,
-    itm_raf_spangen,
+    itm_modded_falchion_3,
+    itm_hatchet,
     itm_spear_f,
     itm_spear_h,
     itm_spear_j,
@@ -26818,13 +25672,13 @@ troops = [
     itm_targe_6,
 
     itm_1257_hood,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_padded_coif,
+    itm_priest_cap_1,
+    itm_arming_cap,
+    
     itm_legs_with_shoes,
     itm_shoes,
-    # itm_bare_legs,
+    itm_wrapping_boots,
 
     itm_sumpter_horse,
     itm_saddle_horse,
@@ -26840,41 +25694,29 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_1,
     [
+    itm_light_lance,
     itm_javelin,
+    itm_light_throwing_axes,
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
     itm_raf_one_handed_axe_f,
-    itm_raf_spangen,
     itm_raf_one_handed_axe_h,
     itm_falchion,
-
-    itm_1257_hood,
+    itm_modded_falchion_3,
+    
     itm_spear_k,
     itm_spear_l,
     itm_spear_n,
-    itm_haubergeon,
+    
+    itm_kau_mail_shirt_b,
+    
+    itm_gaelic_shield_b,
+    itm_gaelic_shield_c,
 
-    itm_targe_1,
-    itm_targe_2,
-    itm_targe_3,
-    itm_elm2,
-    itm_targe_5,
-    itm_targe_6,
+    itm_highlander_boots_1,
 
-    itm_gaelic_byrnie_a,
-    itm_gaelic_byrnie_b,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-    itm_padded_cloth,
-
-    itm_legs_with_shoes,
-    itm_shoes,
-    # itm_bare_legs,
-
-    itm_vik_spangen_a,
-    itm_vik_spangen_b,
-    itm_vik_norman_helmet_e,
+    itm_modded_helmet_kettle_cloth_4,
     itm_kettle_cloth,
     itm_elm2,
 
@@ -26894,87 +25736,36 @@ troops = [
     [
     itm_lance,
     itm_light_lance,
-
-    itm_tab_shield_kite_c,
+    
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_b,
+    itm_raf_one_handed_axe_c,
+    itm_spiked_mace,
+    itm_winged_mace,
+    
     itm_tab_shield_kite_c,
     itm_tab_shield_heater_c,
-    itm_tab_shield_heater_c,
 
-    itm_kau_mail_a,
-    itm_kau_mail_b,
-    itm_kau_mail_shirt_a,
-    itm_kau_mail_shirt_b,
-    itm_gaelic_mail_shirt_a,
-    itm_gaelic_mail_shirt_b,
+    itm_galloglass_mail,
     itm_haubergeon,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
+    itm_modded_euro_armingsword_1,
     itm_sword_viking_1,
     itm_sword_viking_2,
     itm_sword_viking_3,
-
-    itm_legs_with_shoes,
-    itm_shoes,
-    # itm_bare_legs,
-
-    itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_raf_spangen,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-    itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
+    itm_modded_euro_armingsword_3,
+    itm_modded_euro_armingsword_2,
+    
+    itm_leather_gloves,
+   
+    itm_splinted_leather_greaves,
+    
     itm_hunter,
     itm_horse_d,
     itm_horse_e,
 
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
-
-
+	itm_mail_coif,
+    itm_mail_coif_b,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
@@ -26989,32 +25780,14 @@ troops = [
     [
     itm_heavy_lance,
     itm_heraldic_lance,
-    itm_mail_boots_long,
+    
+    itm_kau_mail_boots_dark_long,
 
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
+    itm_tab_shield_kite_cav_b,
+    itm_tab_shield_heater_cav_b,
 
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_raf_spangen,
-
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_kettlehat_b,
-    itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
+    itm_surcoat_scotland_a,
+    
     itm_mail_mittens,
 
     itm_cp391_sword,
@@ -27022,79 +25795,19 @@ troops = [
     itm_sword_type_xiiib,
     itm_sword_type_xii,
     itm_raf_one_handed_axe_h,
-    # itm_talak_mace,
-
-    itm_rnd_surcoat_01,
-    itm_rnd_surcoat_02,
-    itm_rnd_surcoat_03,
-    itm_rnd_surcoat_04,
-    itm_rnd_surcoat_05,
-    itm_rnd_surcoat_06,
-    itm_rnd_surcoat_07,
-    itm_rnd_surcoat_08,
-    itm_rnd_surcoat_09,
-    itm_rnd_surcoat_10,
-    itm_rnd_surcoat_11,
-    itm_rnd_surcoat_12,
-    itm_rnd_surcoat_13,
-    itm_rnd_surcoat_14,
-    itm_rnd_surcoat_15,
-    itm_rnd_surcoat_16,
-    itm_rnd_surcoat_17,
-    itm_rnd_surcoat_18,
-    itm_rnd_surcoat_19,
-    itm_rnd_surcoat_20,
-    itm_rnd_surcoat_21,
-    itm_rnd_surcoat_22,
-    itm_rnd_surcoat_23,
-
-    ###### itm_hunter,
-    ###### itm_horse_e,
-    ###### itm_horse_d,
-    ###### itm_warhorse_yellow,
-    ###### itm_warhorse_blue,
-    ###### itm_warhorse_white,
-    ###### itm_warhorse_red,
-    itm_warhorse,
-	############### NEW v2.5
+    ###itm_talak_mace,
+    itm_morningstar,
+    itm_mace_2,
+    itm_raf_one_handed_axe_d,
+    itm_raf_one_handed_axe_e,
+    
     itm_modded_helmet_heavy_1,
     itm_modded_helmet_heavy_2,
     itm_modded_helmet_heavy_3,
+    itm_rnd_helm_06,
+    itm_rhodok_great_helmet,
 
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-    itm_sa_crusader_helm_11,
-
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
+    itm_warhorse_scotland_a,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
@@ -27109,41 +25822,29 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    ### Melee Weapons
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
-
-    ### Helmets
+    itm_dagger,
+    itm_club_with_spike_head,
+    itm_cleaver,
+    itm_hammer,
+    itm_pickaxe,
+    itm_battle_fork,
+    itm_military_fork,
+    itm_pitch_fork,
+    
     itm_1257_hood,
     itm_arming_cap,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_kettlehat_b,
-    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
+    itm_woolen_cap,
     itm_pilgrim_hat,
-    itm_raf_spangen,
-
-    ### Armors
+    itm_priest_cap_1,
+    itm_priest_cap_2,
+    
     itm_peasant_tunic_a,
     itm_peasant_b,
     itm_peasant_c,
     itm_peasant_f,
     itm_peasant_g,
 
-    ### Boots
-    itm_leather_fur_boots,
+    itm_woolen_hose,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -27152,6 +25853,10 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
+    itm_legs_with_shoes,
+    
+    itm_wooden_shield,
+    itm_talak_buckler,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -27164,40 +25869,23 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    ### Ranged Weapons
     itm_javelin,
     itm_hunting_bow,
     itm_arrows,
 
-    ### Melee Weapons
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_pickaxe,
     itm_scythe,
     itm_dagger,
     itm_knife,
     itm_butchering_knife,
 
-    ### Helmets
     itm_1257_hood,
-    itm_1257_hood,
-    itm_kolpak_mail,
-    itm_elm1,
-    itm_elm2,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_kettlehat_b,
-    itm_norman_coif_d, ### It's the standard "Kettle Hat." - Khanor
+    itm_1257_hood_2,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_priest_cap_3,
     itm_priest_cap_1,
     itm_arming_cap,
 
-    ### Armors
     itm_archer_a,
     itm_archer_b,
     itm_archer_c,
@@ -27205,8 +25893,8 @@ troops = [
     itm_peasant_f,
     itm_peasant_g,
     
-    ### Boots
-    itm_leather_fur_boots,
+    itm_wrapping_boots,
+    itm_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -27215,6 +25903,9 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
+    
+    itm_talak_buckler,
+    itm_wooden_shield,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -27234,11 +25925,7 @@ troops = [
     itm_hunting_bow,
     itm_short_bow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-
-    itm_pilgrim_hat,
+    itm_almogavar_sword,
     itm_dagger,
     itm_hatchet,
     itm_knife,
@@ -27246,27 +25933,20 @@ troops = [
     itm_falchion,
 
     itm_1257_hood,
-
-    itm_elm2,
-
+    itm_priest_cap_3,
+    itm_skullcap,
+    itm_padded_coif,
     itm_priest_cap_2,
-
+    itm_leather_warrior_cap,
     itm_priest_cap_1,
     itm_arming_cap,
 
     itm_archer_b,
     itm_archer_c,
-    itm_linen_tunic,
-    itm_leather_vest,
     itm_militia_tunic_a,
     itm_militia_tunic_b,
-    itm_peasant_c,
-    itm_peasant_tunic_a,
-    itm_peasant_b,
-    itm_ragged_cloth_b,
-    itm_peasant_f,
-
-    itm_leather_fur_boots,
+    
+    itm_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -27275,6 +25955,8 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
+    
+    itm_talak_buckler,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
@@ -27294,85 +25976,27 @@ troops = [
 
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_modded_falchion_2,
     itm_falchion,
-    itm_falchion,
+    itm_modded_falchion_1,
 
-    itm_gambeson_a,
-    itm_gambeson_b,
-    itm_gambeson_c,
-    itm_gambeson_d,
-    itm_kau_padded_mail_a,
-    itm_gambeson_a,
-    itm_surcoat_a,
-    itm_surcoat_b,
-    itm_surcoat_c,
-    itm_surcoat_d,
-    itm_surcoat_e,
-    itm_militia_tunic_a,
-    itm_militia_tunic_b,
-
-    itm_1257_hood,
-    itm_kolpak_mail,
-
-    itm_elm1,
-    itm_elm2,
-
-    itm_elm3,
-    itm_elm2,
-    ###### itm_priest_cap_2,
-    itm_vik_spangen_b,
-    ###### itm_priest_cap_1,
-    ###### itm_arming_cap,
-
+    itm_hide_boots,
+    itm_hunter_boots,
+    itm_leather_boots,
+    itm_wrapping_boots,
     itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
+    itm_ankle_boots,
 
     itm_talak_buckler,
-
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
+    itm_tab_shield_round_b,
+    
+    itm_genoa_mail_b,
+    itm_genoa_padded_b,
+	
+    itm_elm2,
+    itm_norman_coif_c,
+    itm_norman_coif_d,
+    itm_footman_helmet,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -27388,58 +26012,29 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_bolts,
-    itm_crusade_bolt,
-
+    
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
-    itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
     itm_light_crossbow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_hatchet,
     itm_falchion,
     itm_dagger,
     itm_butchering_knife,
     itm_knife,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
+    itm_padded_coif,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_skullcap,
     itm_priest_cap_1,
     itm_arming_cap,
 
     itm_archer_b,
     itm_archer_c,
-    itm_linen_tunic,
-    itm_leather_vest,
     itm_militia_tunic_a,
     itm_militia_tunic_b,
-    itm_peasant_c,
-    itm_peasant_tunic_a,
-    itm_peasant_b,
-    itm_ragged_cloth_b,
-    itm_peasant_f,
-
-    itm_leather_fur_boots,
+    
+    itm_woolen_hose,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -27448,6 +26043,9 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
+    
+    itm_tab_shield_small_round_n,
+    itm_tab_shield_round_a,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -27462,68 +26060,30 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_bolts,
-    itm_crusade_bolt,
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
     itm_heavy_crossbow,
 
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_almogavar_sword,
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_man_at_arms_a,
-    itm_man_at_arms_b,
-    itm_surcoat_b,
-    itm_surcoat_c,
-    itm_surcoat_d,
-    itm_surcoat_e,
-    itm_surcoat_f,
-    itm_surcoat_g,
-    itm_man_at_arms_c,
-    itm_kau_haubergeon_a,
-    itm_kau_mail_shirt_c,
-    itm_kau_mail_shirt_d,
-
+    
+    itm_hunter_boots,
+    itm_ankle_boots,
     itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
+    itm_leather_boots,
 
-    itm_tab_shield_heater_c,
+    itm_tab_shield_round_b,
 
-    itm_kolpak_mail,
+    itm_genoa_padded_b,
+    itm_genoa_mail_b,
 
     itm_footman_helmet,
-    itm_elm1,
+    itm_padded_coif,
     itm_elm2,
-    itm_flat_kettle_hat,
-
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    ###### itm_priest_cap_2,
-    itm_vik_spangen_b,
-    ###### itm_priest_cap_1,
-    ###### itm_arming_cap,
+    itm_norman_coif_d,
+    itm_norman_coif_c,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -27539,86 +26099,26 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_bolts,
-    itm_crusade_bolt,
     itm_steel_bolts,
-    itm_crusade_bolt_heavy,
-    itm_crusade_bolt_heavy_pierce,
-
+    
     itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_sniper_crossbow,
-    itm_sniper_crossbow,
-    itm_sniper_crossbow,
-    itm_sniper_crossbow,
-
+    
+    itm_raf_one_handed_axe_d,
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_raf_one_handed_axe_f,
     itm_military_cleaver_b,
-
-    itm_kau_mail_a,
-    itm_kau_mail_b,
-    itm_veteran_surcoat_a,
-    itm_veteran_surcoat_b,
-    itm_veteran_surcoat_c,
-    itm_veteran_surcoat_d,
-
-    ###### itm_talak_buckler,
-    itm_tab_shield_heater_c,
-    itm_tab_shield_heater_c,
-    (itm_tab_shield_heater_c, imod_thick),
-
-     ###### itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
+    itm_modded_falchion_2,
+    
+    itm_leather_gloves,
+    
+    itm_tab_shield_round_d,
+    
     itm_footman_helmet,
-    itm_elm1,
-    itm_kettlehat_b,
-    itm_elm3,
-    ###### itm_priest_cap_2,
-    ###### itm_priest_cap_1,
-    ###### itm_arming_cap,
+    itm_elm2,
+    
+    itm_splinted_leather_greaves,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
-
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
+	itm_genoa_padded_c,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -27636,25 +26136,15 @@ troops = [
     itm_arming_cap,
     itm_1257_hood,
     itm_pilgrim_hat,
-    itm_elm2,
-    itm_elm8,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_flat_kettle_hat,
+    itm_leather_warrior_cap,
+    itm_skullcap,
 
-    itm_archer_b,
-    itm_archer_c,
-    itm_linen_tunic,
-    itm_leather_vest,
+    itm_gambeson_b,
     itm_militia_tunic_a,
     itm_militia_tunic_b,
-    itm_peasant_c,
-    itm_peasant_tunic_a,
-    itm_peasant_b,
-    itm_ragged_cloth_b,
-    itm_peasant_f,
+    itm_gambeson_c,
 
-    itm_leather_fur_boots,
+    itm_legs_with_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -27664,15 +26154,11 @@ troops = [
     itm_green_hose_b,
     itm_blue_hose_mod,
 
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_tab_shield_round_b,
+    
+    itm_hatchet,
+    itm_military_cleaver_b,
+    itm_almogavar_sword,
     itm_falchion,
 
     itm_spear_a,
@@ -27683,7 +26169,6 @@ troops = [
     itm_spear_f,
     itm_spear_h,
     itm_spear_j,
-
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -27708,48 +26193,25 @@ troops = [
     itm_spear_j,
     itm_spear_k,
 
-    itm_man_at_arms_a,
-    itm_man_at_arms_b,
-    itm_surcoat_b,
-    itm_surcoat_c,
-    itm_surcoat_d,
-    itm_surcoat_e,
-    itm_surcoat_f,
-    itm_surcoat_g,
-    itm_man_at_arms_c,
-    itm_kau_haubergeon_a,
-    itm_kau_mail_shirt_c,
-    itm_kau_mail_shirt_d,
+    itm_padded_cloth,
 
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_mail_coif,
-    itm_vik_norman_helmet_b,
-    itm_raf_spangen,
-    itm_elm8,
     itm_elm2,
-    itm_elm3,
-    itm_kolpak_mail,
+    itm_footman_helmet,
 
     itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
+    itm_hide_boots,
+    itm_ankle_boots,
+    itm_hunter_boots,
+    itm_leather_boots,
 
-    itm_tab_shield_heater_c,
+    itm_tab_shield_round_d,
 
     itm_raf_one_handed_axe_d,
     itm_raf_one_handed_axe_e,
     itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    
+    itm_modded_falchion_1,
+    itm_military_cleaver_c,
     itm_falchion,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
@@ -27770,20 +26232,15 @@ troops = [
     itm_spear_l,
     itm_spear_n,
 
-    itm_kau_mail_a,
-    itm_kau_mail_b,
-    itm_veteran_surcoat_a,
-    itm_veteran_surcoat_b,
-    itm_veteran_surcoat_c,
-    itm_veteran_surcoat_d,
+    itm_mail_mittens,
+    
+    itm_splinted_leather_greaves,
 
-    itm_tab_shield_heater_c,
+    itm_tab_shield_round_e,
 
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
+    itm_rhodok_kettle_hat_c,
     itm_kettlehat_b,
-    itm_kettlehat_c,
+    itm_norman_coif_b,
     itm_norman_coif_a,
 
     itm_leather_fur_boots,
@@ -27799,37 +26256,13 @@ troops = [
     itm_raf_one_handed_axe_d,
     itm_raf_one_handed_axe_e,
     itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_modded_euro_shortsword_2,
+    itm_modded_euro_shortsword_3,
     itm_falchion,
 
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
+    itm_ee_constable_kau_mail_a,
+    itm_kau_mail_a,
+    itm_kau_mail_b,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -27843,29 +26276,21 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
+    itm_skullcap,
+    itm_leather_warrior_cap,
 
-    itm_kau_mail_shirt_a,
-    itm_kau_padded_mail_a,
-    itm_studden_leather_armour_a,
+    itm_militia_tunic_b,
+    itm_militia_tunic_a,
     itm_gambeson_a,
     itm_gambeson_b,
     itm_gambeson_c,
     itm_gambeson_d,
-    itm_surcoat_a,
-
+    
     itm_bill,
     itm_glaive,
     itm_scythe,
 
-    itm_leather_fur_boots,
+    itm_woolen_hose,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -27888,21 +26313,10 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
-    itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
     itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
+    itm_footman_helmet,
     itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
+    itm_flat_kettle_hat,
 
     itm_glaive,
     itm_bill,
@@ -27912,28 +26326,11 @@ troops = [
     itm_raf_two_handed_axe_a,
     itm_raf_two_handed_axe_b,
 
-    itm_man_at_arms_a,
-    itm_man_at_arms_b,
-    itm_surcoat_b,
-    itm_surcoat_c,
-    itm_surcoat_d,
-    itm_surcoat_e,
-    itm_surcoat_f,
-    itm_surcoat_g,
-    itm_man_at_arms_c,
-    itm_kau_haubergeon_a,
-    itm_kau_mail_shirt_c,
-    itm_kau_mail_shirt_d,
+    itm_padded_cloth,
 
     itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
+    itm_ankle_boots,
+    itm_leather_boots,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
@@ -27952,74 +26349,20 @@ troops = [
     itm_military_scythe,
     itm_shortened_military_scythe,
     itm_two_handed_cleaver,
+    itm_modded_guisarme,
 
     itm_kau_mail_a,
     itm_kau_mail_b,
-    itm_veteran_surcoat_a,
-    itm_veteran_surcoat_b,
-    itm_veteran_surcoat_c,
-    itm_veteran_surcoat_d,
+    itm_ee_constable_kau_mail_a,
 
-    itm_surcoat_f,
-    itm_surcoat_g,
+    itm_mail_mittens,
 
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
     itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
     itm_norman_coif_a,
     itm_rhodok_kettle_hat_c,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
-
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
+    itm_norman_coif_b,
+    
+    itm_splinted_leather_greaves,
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
@@ -28036,17 +26379,13 @@ troops = [
     itm_spear_j,
     itm_spear_k,
 
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
+    itm_military_cleaver_b,
+    itm_hatchet,
     itm_mace_2,
+    itm_modded_falchion_1,
+    itm_modded_falchion_2,
 
-    itm_tab_shield_kite_c,
-    itm_tab_shield_kite_c,
-    itm_tab_shield_heater_c,
-    itm_tab_shield_heater_c,
-
-    itm_leather_fur_boots,
+    itm_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -28057,37 +26396,19 @@ troops = [
     itm_blue_hose_mod,
 
     itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_priest_cap_3,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
+    itm_1257_hood,
     itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    itm_kau_mail_shirt_a,
-    itm_kau_padded_mail_a,
-    itm_studden_leather_armour_a,
+    itm_padded_coif,
+    
     itm_gambeson_a,
     itm_gambeson_b,
     itm_gambeson_c,
     itm_gambeson_d,
-    itm_surcoat_a,
+    itm_noble_cloak,
+    
+    itm_tab_shield_small_round_a,
 
     itm_sumpter_horse,
     itm_saddle_horse,
@@ -28105,87 +26426,38 @@ troops = [
     [
     itm_lance,
     itm_light_lance,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_haubergeon,
+    itm_spear_b,
+    itm_spear_i,
+    itm_spear_f,
+    itm_spear_k,
     itm_mace_3,
     itm_mace_4,
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_b,
 
     itm_tab_shield_heater_c,
-    itm_tab_shield_heater_c,
     itm_tab_shield_kite_c,
-    itm_tab_shield_kite_c,
-
-    itm_man_at_arms_a,
-    itm_man_at_arms_b,
-    itm_surcoat_b,
-    itm_surcoat_c,
-    itm_surcoat_d,
-    itm_surcoat_e,
-    itm_surcoat_f,
-    itm_surcoat_g,
-    itm_man_at_arms_c,
-    itm_kau_haubergeon_a,
-    itm_kau_mail_shirt_c,
-    itm_kau_mail_shirt_d,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
+    
+    itm_modded_euro_sidesword_1,
+    itm_modded_euro_sidesword_2,
+    
+    itm_leather_boots,
+    itm_ankle_boots,
+    itm_hide_boots,
 
     itm_saddle_horse,
     itm_courser,
     itm_hunter,
 
-	############### NEW v2.5
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
-
-    itm_modded_mail_coif_1,
-
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
+	itm_kettle_cloth,
+    itm_flat_kettle_hat,
+    itm_elm2,
+    
+    itm_surcoat_a,
+    itm_surcoat_d,
+    itm_surcoat_e,
+    itm_surcoat_b,
+    itm_surcoat_c,
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
@@ -28198,116 +26470,48 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_1,
     [
-    itm_heraldic_lance,
-
+    itm_lance,
+    itm_heavy_lance,
     itm_cp391_sword,
-    itm_cp391_sword,
-    itm_sword_type_xiii,
+    itm_raf_one_handed_axe_b,
     itm_sword_type_xiii,
     itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-    itm_sword_type_xii,
+    itm_raf_one_handed_axe_g,
     itm_sword_type_xii,
     itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
     itm_mace_2,
     itm_mace_3,
-    itm_mace_3,
     itm_mace_4,
-    itm_mace_4,
-    itm_haubergeon,
-
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-    itm_wenceslav_helmet,
-    itm_vik_norman_helmet_a,
-    itm_vik_norman_helmet_b,
-
-    itm_kau_mail_a,
-    itm_kau_mail_b,
-    itm_veteran_surcoat_a,
-    itm_veteran_surcoat_b,
-    itm_veteran_surcoat_c,
+    
+    itm_leather_gloves,
+    
+    itm_arena_outfit_b,
+    itm_arena_outfit_d,
+    itm_veteran_surcoat_e,
     itm_veteran_surcoat_d,
 
-    itm_mail_mittens,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
     itm_splinted_leather_greaves,
-    itm_mail_chausses,
+    
+    itm_european_horse_a, 
+    itm_european_horse_b, 
+    itm_european_horse_c, 
+    itm_european_horse_d, 
+    itm_european_horse_e, 
+    itm_european_horse_f, 
+    itm_hunter, 
+    itm_horse_e, 
+    itm_horse_d, 
 
-    itm_tab_shield_heater_c,
-
-    (itm_tab_shield_heater_c, imod_thick),
-
-    (itm_european_horse_a, imod_heavy),
-    (itm_european_horse_b, imod_heavy),
-    (itm_european_horse_c, imod_heavy),
-    (itm_european_horse_d, imod_heavy),
-    (itm_european_horse_e, imod_heavy),
-    (itm_european_horse_f, imod_heavy),
-    (itm_hunter, imod_heavy),
-    (itm_horse_e, imod_heavy),
-    (itm_horse_d, imod_heavy),
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
-
-
-	############### NEW v2.5
-    itm_modded_helmet_heavy_1,
-    itm_modded_helmet_heavy_2,
-    itm_modded_helmet_heavy_3,
-
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-    itm_sa_crusader_helm_11,
-
-    itm_kettlehat_d,
-    itm_kettlehat_e,
-
-    itm_modded_helmet_kettle_mail_1,
-    itm_modded_helmet_kettle_mail_2,
-    itm_modded_helmet_kettle_mail_3,
-    itm_modded_helmet_kettle_mail_4,
-    itm_modded_helmet_kettle_mail_5,
+    itm_morningstar,
+    itm_modded_euro_armingsword_3,
+    itm_modded_euro_armingsword_1,
+	itm_modded_euro_armingsword_2,
 
     itm_modded_mail_coif_1,
+    itm_mail_coif_b,
 
-    itm_capelina_crusader,
-
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-    itm_sa_crusader_helm_8,
-    itm_sa_crusader_helm_9,
-    itm_sa_crusader_helm_10,
-    ##########
-
-
+    itm_tab_shield_kite_cav_a,
+    itm_tab_shield_heater_cav_a,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
@@ -28321,125 +26525,49 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_cp391_sword,
-    itm_cp391_sword,
-    itm_sword_type_xiii,
+    itm_raf_one_handed_axe_f,
+    itm_raf_one_handed_axe_a,
+    itm_raf_one_handed_axe_d,
+    itm_raf_one_handed_axe_e,
     itm_sword_type_xiii,
     itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-
-    itm_sword_type_xiiia,
     itm_sword_type_xiiia,
     itm_mace_2,
-    itm_mace_2,
-    itm_mace_3,
     itm_mace_3,
     itm_mace_4,
-    itm_mace_4,
     itm_morningstar,
-    itm_morningstar,
-      ##### itm_talak_mace,
+    ###itm_talak_mace,
     itm_heraldic_lance,
 
     itm_mail_mittens,
 
-    itm_mail_coif,
+    itm_kau_mail_boots_dark_long,
 
-    itm_mail_coif_c,
     itm_rnd_helm_04,
     itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
     itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
     itm_great_helmet_b,
     itm_great_helmet_c,
-    itm_kettlehat_b,
     itm_rnd_helm_03,
-
-    itm_norman_faceplate,
     itm_rnd_helm_05,
     itm_rnd_helm_06,
-    itm_mail_coif,
     itm_rhodok_great_helmet,
-
-    itm_mail_boots_long,
-    itm_splinted_greaves_long,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
     itm_munitionshelm2,
     itm_pepperpothelm1,
     itm_munitionshelm1,
-    itm_frenchpepperpot,
+    
+    itm_tab_shield_heater_cav_b,
+    itm_tab_shield_kite_cav_b,
+	
+    itm_warhorse_bohemia,
 
-
-	############### NEW v2.5
-    itm_modded_helmet_heavy_1,
-    itm_modded_helmet_heavy_3,
-
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-    itm_sa_crusader_helm_11,
-
-    ###### itm_kettlehat_d,
-    ###### itm_kettlehat_e,
-
-    ###### itm_modded_helmet_kettle_mail_1,
-    ###### itm_modded_helmet_kettle_mail_2,
-    ###### itm_modded_helmet_kettle_mail_3,
-    ###### itm_modded_helmet_kettle_mail_4,
-    ###### itm_modded_helmet_kettle_mail_5,
-
-    ###### itm_modded_mail_coif_1,
-    ###### itm_modded_helmet_1,
-
-    ###### itm_capelina_crusader,
-    ###### itm_sa_crusader_helm_1,
-    ###### itm_sa_crusader_helm_2,
-    ###### itm_sa_crusader_helm_3,
-    ###### itm_sa_crusader_helm_4,
-    ###### itm_sa_crusader_helm_5,
-    ###### itm_sa_crusader_helm_6,
-    ###### itm_sa_crusader_helm_7,
-    ###### itm_sa_crusader_helm_8,
-    ###### itm_sa_crusader_helm_9,
-    ###### itm_sa_crusader_helm_10,
-    ##########
-
-    ###### itm_tab_shield_heater_c,
-
-   (itm_tab_shield_heater_c, imod_thick),
-   (itm_tab_shield_heater_c, imod_reinforced),
-
-    itm_warhorse,
-
-    itm_rnd_surcoat_01,
-    itm_rnd_surcoat_02,
-    itm_rnd_surcoat_03,
-    itm_rnd_surcoat_04,
-    itm_rnd_surcoat_05,
-    itm_rnd_surcoat_06,
-    itm_rnd_surcoat_07,
-    itm_rnd_surcoat_08,
-    itm_rnd_surcoat_09,
-    itm_rnd_surcoat_10,
-    itm_rnd_surcoat_11,
-    itm_rnd_surcoat_12,
-    itm_rnd_surcoat_13,
-    itm_rnd_surcoat_14,
-    itm_rnd_surcoat_15,
-    itm_rnd_surcoat_16,
-    itm_rnd_surcoat_17,
-    itm_rnd_surcoat_18,
-    itm_rnd_surcoat_19,
-    itm_rnd_surcoat_20,
-    itm_rnd_surcoat_21,
-    itm_rnd_surcoat_22,
-    itm_rnd_surcoat_23,
+    itm_surcoat_bohemia,
+    
+    ############### NEW v3.14 - 
+    itm_heraldic_armor_new_aa,
+    itm_heraldic_armor_new_bb,
+    itm_heraldic_armor_new_cc,
+############### 
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
@@ -28457,23 +26585,24 @@ troops = [
     [
     itm_strely,
     itm_club,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
+    itm_hatchet,
+    itm_sickle,
     itm_hunting_bow,
+    itm_bamboo_spear,
+    
     itm_steppe_cap,
     itm_mongol_fur_hat,
+    itm_ilkhanate_cap,
+    
+    itm_ilkhanate_kaftan,
     itm_nomad_vest,
-    ###### itm_steppe_armor,
-    itm_rus_cav_boots,
+    itm_mongol_tunic_b,
+    
+    itm_leather_fur_boots,
+    
+    itm_targe_4,
+    itm_targe_2,
+    itm_targe_3,
 
     itm_steppe_horse,
     ],
@@ -28493,26 +26622,19 @@ troops = [
     itm_strely,
     itm_sword_khergit_1,
     itm_mace_4,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_kipchak_steppe_helmet,
-    itm_baltic_ponted_helmet,
-    itm_ilkhanate_cap,
-    itm_mongol_fur_hat,
-    itm_rus_helmet,
-    itm_spear_i,
     itm_strong_bow,
-    itm_javelin,
-    itm_mongol_helmet_c,
+    itm_bamboo_spear,
+    
+    itm_mongol_kettle,
 
     itm_rus_cav_boots,
 
-    itm_tab_shield_small_round_a,
+    itm_targe_5,
+    itm_targe_1,
+    itm_targe_4,
 
-    itm_cuman_shirt_d,
-    itm_cuman_shirt_b,
-    itm_mongol_warrior_ilkhanate,
+    itm_mongol_warrior_d,
+    itm_mongol_warrior_de,
 
     itm_steppe_horse,
     ],
@@ -28533,26 +26655,21 @@ troops = [
     itm_strong_bow,
     itm_light_lance,
     itm_sword_khergit_2,
-    itm_raf_one_handed_axe_h,
+    itm_sarranid_axe_a,
     itm_hafted_blade_a,
+    
     itm_rus_cav_boots,
 
     itm_cuman_shield_b_3,
     itm_cuman_shield_a_3,
-
     itm_cuman_shield_c_3,
-    itm_mongol_helmet_b,
-
-    itm_mongol_warrior_c,
-    itm_mongol_warrior_a,
-
-    itm_mongol_warrior_b,
-
-
+    
+    itm_mongol_tunic_a,
 
     itm_khergit_cavalry_helmet,
+    itm_khergit_guard_helmet,
+    
     itm_steppe_horse,
-
     ],
     horse_attrib_4,
     cum_horseman_wp,
@@ -28567,29 +26684,21 @@ troops = [
     tf_guarantee_ranged | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet| tf_mounted,
     0, 0, fac_kingdom_3,
     [
-    itm_ilkhanate_mongol_helmet,
     itm_khergit_bow,
     itm_strely,
 
     itm_sword_khergit_2,
     itm_winged_mace,
-    itm_raf_one_handed_axe_h,
+    itm_sarranid_axe_a,
 
-    itm_mongol_warrior_c,
-    itm_mongol_warrior_a,
+    itm_mongol_warrior_ilkhanate,
 
-    itm_mongol_warrior_b,
-    itm_mongol_kettle,
-    itm_mongol_helmet_d,
-
-    itm_mongol_helmet_b,
     itm_khergit_cavalry_helmet,
-
+    
     itm_rus_cav_boots,
 
     itm_cuman_shield_b_3,
     itm_cuman_shield_a_3,
-
     itm_cuman_shield_c_3,
 
     itm_steppe_horse,
@@ -28607,34 +26716,24 @@ troops = [
     tf_guarantee_ranged | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_helmet| tf_mounted,
     0, 0, fac_kingdom_3,
     [
-    itm_ilkhanate_mongol_helmet,
+    itm_khergit_war_helmet,
+    
     itm_khergit_bow,
     itm_strely,
 
     itm_sword_khergit_3,
     itm_mace_4,
-    itm_raf_one_handed_axe_h,
-
-
-
+    itm_sarranid_axe_b,
 
     itm_cuman_shield_b_3,
     itm_cuman_shield_a_3,
-
     itm_cuman_shield_c_3,
 
-    itm_mongol_warrior_c,
-    itm_mongol_warrior_a,
-    itm_mongol_warrior_de,
+    itm_mon_lamellar_b,
 
-    itm_khergit_cavalry_helmet,
-    itm_mongol_kettle,
-    itm_mongol_helmet_d,
+    itm_khergit_guard_boots,
 
-    itm_rus_cav_boots,
-
-    itm_mongol_helmet_b,
-    itm_ilkhanate_cap,
+    itm_leather_gloves,
 
     itm_steppe_horse
     ],
@@ -28652,36 +26751,27 @@ troops = [
     0, 0, fac_kingdom_3,
     [
     itm_sword_khergit_4,
-    itm_raf_one_handed_axe_h,
+    itm_sarranid_axe_a,
     itm_hafted_blade_a,
     itm_hafted_blade_b,
     itm_winged_mace,
     itm_lance,
+    itm_modded_war_spear,
 
-    itm_ilkhanate_mongol_helmet,
-    itm_mongol_kettle,
-    itm_mongol_helmet_d,
-    itm_mongol_warrior_c,
-    itm_mongol_warrior_a,
-    itm_mongol_warrior_de,
-
-    itm_lamellar_vest_khergit,
-    itm_mongol_warrior_c,
-    itm_mongol_warrior_d,
+    itm_khergit_cavalry_helmet,
+    itm_khergit_guard_helmet,
+    
+    itm_mongol_tunic_c,
 
     itm_rus_cav_boots,
-
-
 
     itm_leather_gloves,
 
     itm_cuman_shield_b_3,
     itm_cuman_shield_a_3,
-
     itm_cuman_shield_c_3,
 
-    itm_hunter,
-    itm_courser,
+    itm_steppe_horse,
     ],
     horse_attrib_5,
     cum_lancer_wp,
@@ -28697,19 +26787,18 @@ troops = [
     0, 0, fac_kingdom_3,
     [
     itm_sword_khergit_4,
-    itm_raf_one_handed_axe_h,
-    itm_lance,
+    itm_sarranid_axe_a,
+    itm_muslim_lance,
+    itm_heavy_lance,
+    itm_sarranid_axe_b,
+    itm_sarranid_mace_1,
     itm_hafted_blade_a,
     itm_hafted_blade_b,
 
-        itm_mongol_warrior_c,
-    itm_mongol_warrior_a,
-    itm_mongol_warrior_de,
-    itm_mail_mittens,
+    itm_sa_gauntlets_arabs_1,
 
     itm_cuman_shield_b_3,
     itm_cuman_shield_a_3,
-
     itm_cuman_shield_c_3,
 
     itm_mon_lamellar_horse_a,
@@ -28717,12 +26806,9 @@ troops = [
     itm_mon_lamellar_horse_c,
 
     itm_mon_lamellar_a,
-    itm_mon_lamellar_b,
-
-    itm_rus_cav_boots,
-
-    itm_ilkhanate_mongol_helmet,
-    itm_khergit_guard_helmet,
+    
+    itm_khergit_guard_boots,
+    
     itm_mongol_helmet_a,
     ],
     horse_attrib_elite,
@@ -28732,6 +26818,66 @@ troops = [
   ],
 
 
+   ["mongol_foot_archer",
+     "Mongol_Foot_Archer",
+     "Mongol_Foot_Archers",
+     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield | tf_guarantee_gloves,
+     0, 0, fac_kingdom_3,
+     [
+     itm_strely,
+     itm_strong_bow,
+     
+     itm_mongol_warrior_c,
+     itm_mongol_kettle,
+     itm_leather_gloves,
+     itm_boots_tyrk_a,
+     itm_boots_tyrk_c,
+     itm_boots_tyrk_b,
+     itm_targe_1,
+     itm_targe_3,
+     itm_targe_2,
+     
+     itm_falshion_2,
+     itm_sarranid_axe_b,
+     
+     itm_mongol_warrior_a,
+     itm_mongol_warrior_b,
+     ],
+     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
+     mong_face_1, mong_face_2
+   ],
+   
+   ["mongol_infantry",
+     "Mongol_Infantry",
+     "Mongol_Infantrymen",
+     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet| tf_guarantee_gloves,
+     0, 0, fac_kingdom_3,
+     [
+     itm_ilkhanate_mongol_helmet,
+     itm_lamellar_vest_khergit,
+     itm_mongol_helmet_b,
+     itm_mongol_helmet_c,
+     itm_mongol_helmet_d,
+     
+     itm_sword_khergit_3,
+     itm_sword_khergit_2,
+     itm_sarranid_mace_1,
+     itm_berber_shield_3,
+     itm_balt_javelin,
+     
+     itm_mail_mittens,
+     itm_boots_tyrk_b,
+     itm_boots_tyrk_c,
+     itm_boots_tyrk_a,
+     
+     itm_hafted_blade_b,
+     itm_hafted_blade_a,
+     itm_sword_khergit_1,
+     ],
+     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
+     mong_face_1, mong_face_2
+   ],
+   
 
 
 
@@ -28743,36 +26889,25 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
+    itm_military_fork,
+    itm_fighting_pick,
+    itm_military_pick,
+    itm_battle_fork,
+    itm_military_hammer,
+    itm_pitch_fork,
 
     itm_arming_cap,
     itm_1257_hood,
     itm_pilgrim_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_priest_cap_1,
 
     itm_peasant_tunic_a,
     itm_peasant_b,
     itm_peasant_c,
     itm_peasant_g,
-
     itm_peasant_f,
 
-    itm_leather_fur_boots,
+    itm_legs_with_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -28781,6 +26916,9 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
+    
+    itm_targe_4,
+    itm_targe_6,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -28793,13 +26931,7 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_pickaxe,
     itm_scythe,
     itm_dagger,
     itm_knife,
@@ -28811,17 +26943,9 @@ troops = [
     itm_arrows,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
+    itm_1257_hood_2,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_priest_cap_3,
     itm_priest_cap_1,
     itm_arming_cap,
 
@@ -28830,10 +26954,10 @@ troops = [
     itm_archer_c,
     itm_peasant_d,
     itm_peasant_g,
-
+    itm_peasant_tunic_a,
     itm_peasant_f,
 
-    itm_leather_fur_boots,
+    itm_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -28842,7 +26966,9 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
-
+    
+    itm_targe_3,
+    itm_targe_1,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -28855,73 +26981,32 @@ troops = [
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
-    itm_bolts,
     itm_crusade_bolt,
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
-    itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
     itm_light_crossbow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
     itm_falchion,
     itm_dagger,
     itm_butchering_knife,
     itm_knife,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
+    itm_koif_monie_a,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_koif_monie_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
+    
     itm_sa_novici_templar_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
+    itm_hatchet,
+    itm_falshion_1,
+    
+    itm_sa_shields_archer_templar_1,
+    itm_sa_shields_archer_templar_2,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -28935,71 +27020,29 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-
-    ###### itm_bolts,
-    itm_steel_bolts,
-    itm_crusade_bolt_heavy,
-    itm_crusade_bolt_heavy_pierce,
-
-    itm_heavy_crossbow,
-    ###### itm_sniper_crossbow,
-
-    itm_templar_mail_a,
-
+    itm_crusade_bolt,
+    
+    itm_crusaders_crossbows_c,
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_b,
+    
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_almogavar_sword,
     itm_military_cleaver_b,
 
-    itm_tab_shield_pavise_d,
+    itm_templar_kettlehat_a,
 
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_tied_up_shoes,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
+    
     itm_sa_archer_templar_armor_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    
     itm_sa_shields_archer_templar_1,
     itm_sa_shields_archer_templar_2,
-    ########
     ],
     ranged_attrib_4, knight_order_crossbow_wp, knight_order_crossbow_skills,
     nord_face_young_1, swadian_face_old_2
@@ -29013,61 +27056,29 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_steel_bolts,
     itm_crusade_bolt_heavy,
     itm_crusade_bolt_heavy_pierce,
 
-    itm_sniper_crossbow,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-
-    itm_tab_shield_pavise_d,
-
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_munitionshelm1,
-    itm_pepperpothelm1,
-
-    itm_mail_mittens,
-
-    itm_kau_mail_boots_dark_long,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
+    itm_crusaders_crossbows_c,
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_b,
+    
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
 
     itm_sa_sergeant_templar_armor,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_shields_archer_templar_1,
+    
+    itm_templar_kettlehat_a_mail,
+    
+    itm_axe_crusader_c,
+    itm_modded_templar_arming_sword,
+    itm_falshion_1,
+    
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
     itm_sa_shields_archer_templar_1,
     itm_sa_shields_archer_templar_2,
-    itm_sa_shields_archer_templar_2,
-    (itm_sa_shields_archer_templar_1, imod_thick),
-    (itm_sa_shields_archer_templar_2, imod_thick),
-    ########
     ],
     ranged_attrib_5, knight_order_crossbow_serjeant_wp, knight_order_crossbow_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
@@ -29085,13 +27096,9 @@ troops = [
     itm_arming_cap,
     itm_1257_hood,
     itm_pilgrim_hat,
-    itm_elm2,
-    itm_elm8,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_flat_kettle_hat,
-
-    itm_leather_fur_boots,
+    itm_koif_monie_b,
+    itm_koif_monie_a,
+    
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -29101,51 +27108,21 @@ troops = [
     itm_green_hose_b,
     itm_blue_hose_mod,
 
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_almogavar_sword,
     itm_falchion,
+    itm_hatchet,
+    
+    itm_templar_mail_a,
+    itm_templar_gambeson_a,
 
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
-    itm_sa_novici_templar_armor,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
+    itm_falshion_1,
+    
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+    
     itm_sa_templar_shield,
     itm_sa_templar_shield_1,
-    ########
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -29158,76 +27135,27 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
+    itm_templar_kettlehat_a,
 
-    ###### itm_arena_outfit_b,
-    ###### itm_teu_gambeson,
-    ###### itm_teu_gambeson,
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
 
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_tied_up_shoes,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
     itm_falchion,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    itm_almogavar_sword,
+    
     itm_armor_infantry_templar_a,
     itm_armor_infantry_templar_b,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+   
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_templar_shield,
     itm_sa_templar_shield_1,
-    ########
     ],
     foot_attrib_4, knight_order_spearman_wp, knight_order_spearman_skills,
     nord_face_young_1, swadian_face_old_2
@@ -29240,69 +27168,35 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+   
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
+    
+    itm_templar_kettlehat_a_mail,
 
-    ###### itm_arena_outfit_b,
-    ###### itm_teu_gambeson,
-    ###### itm_teu_gambeson,
+    itm_sa_armor_monie_templar_a,
+    itm_sa_armor_monie_templar_b,
+   
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
+    itm_axe_crusader_1,
+    itm_falshion_1,
+    itm_falchion,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_modded_templar_arming_sword,
+    itm_crusader_sword_c,
 
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_munitionshelm1,
-    itm_pepperpothelm1,
-
-    itm_kau_mail_boots_dark_long,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-
-    itm_sa_sergeant_templar_armor,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_shield_veteran_templar_1,
     itm_sa_shield_veteran_templar_2,
     itm_sa_shield_veteran_templar_3,
     itm_sa_shield_veteran_templar,
-    ########
     ],
     foot_attrib_5, knight_order_spearman_serjeant_wp, knight_order_spearman_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
@@ -29318,77 +27212,30 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
-
+    itm_mace_6,
+    itm_axe_crusader_c,
     itm_mace_4,
-    itm_raf_one_handed_axe_h,
     itm_talak_warhammer,
 
-    itm_templar_sarjeant_mail,
     itm_templar_sarjeant_surcoat,
-    itm_sa_sergeant_templar_armor,
-    itm_sa_sergeant_templar_armor,
-
+    
     itm_templar_kettlehat_a_mail,
-    itm_mail_coif,
-
-    itm_osp_faceplate,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    itm_mail_boots_long,
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
-    itm_sa_sergeant_templar_armor,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
+    
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    itm_modded_templar_arming_sword,
 
     itm_sa_shield_veteran_templar_1,
     itm_sa_shield_veteran_templar_2,
     itm_sa_shield_veteran_templar_3,
     itm_sa_shield_veteran_templar,
-
-    (itm_sa_shield_veteran_templar_1, imod_thick),
-    (itm_sa_shield_veteran_templar_2, imod_thick),
-    (itm_sa_shield_veteran_templar_3, imod_thick),
-    (itm_sa_shield_veteran_templar, imod_thick),
-    ########
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -29401,78 +27248,31 @@ troops = [
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves_long,
-
-    itm_mail_chausses,
-    itm_lance,
-
+    itm_axe_crusader_c,
+    itm_axe_crusader_1,
+    itm_axe_crusader_d,
+    itm_mace_6,
+    itm_morningstar,
     itm_talak_warhammer,
 
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-
-    itm_mail_mittens,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-
-    itm_sa_templiers_hard_helm,
-    itm_sa_templiers_hard_helm_namet,
+    itm_kau_mail_boots_dark_long,
+    
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
+    
     itm_sa_templiers_hard_helm_namet_1,
     itm_sa_templiers_hard_helm_namet_2,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
-
-    itm_sa_knight_armor_templar_1,
-    itm_sa_knight_armor_templar_1_cloak,
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    itm_k_long_sword_c,
+    itm_modded_templar_arming_sword,
+    
     itm_sa_knight_armor_templar_2,
     itm_sa_knight_armor_templar_2_cloak,
-    itm_sa_knight_armor_templar_3,
-    itm_sa_knight_armor_templar_3_cloak,
     itm_sa_knight_armor_templar_4,
     itm_sa_knight_armor_templar_4_cloak,
     itm_sa_knight_armor_templar_5,
@@ -29480,14 +27280,9 @@ troops = [
     itm_sa_knight_armor_templar_6,
     itm_sa_knight_armor_templar_6_cloak,
 
-    (itm_sa_templar_shield_knight, imod_thick),
-    (itm_sa_templar_shield_knight_1, imod_thick),
-    (itm_sa_templar_shield_knight_2, imod_thick),
-
-    (itm_sa_templar_shield_knight, imod_reinforced),
-    (itm_sa_templar_shield_knight_1, imod_reinforced),
-    (itm_sa_templar_shield_knight_2, imod_reinforced),
-    ########
+    itm_sa_templar_shield_knight, 
+    itm_sa_templar_shield_knight_1, 
+    itm_sa_templar_shield_knight_2,
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -29502,71 +27297,32 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
-    itm_light_lance,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-
+    itm_crusader_spear_c,
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    
+    itm_falchion,
     itm_mace_2,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
+    itm_hatchet,
+    
     itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_koif_monie_a,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
+    itm_koif_monie_b,
     itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
+    
     itm_sumpter_horse,
     itm_saddle_horse,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
 
-    itm_sa_novici_templar_armor,
+    itm_templar_tunic_a,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
+    itm_falshion_1,
 
     itm_sa_templar_shield,
     itm_sa_templar_shield_1,
-    ########
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
@@ -29579,59 +27335,31 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_light_lance,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_mace_3,
+    itm_crusader_spear_c,
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    
+    itm_mace_6,
     itm_mace_4,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
+    itm_axe_crusader_a,
+    itm_talak_warhammer,
+    itm_axe_crusader_b,
 
     itm_saddle_horse,
     itm_courser,
     itm_hunter,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
 
-    itm_armor_infantry_templar_a,
-    itm_armor_infantry_templar_b,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
+    itm_templar_sarjeant_mail,
+    
+    itm_templar_kettlehat_a,
+    
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    itm_modded_templar_arming_sword,
 
     itm_sa_templar_shield,
     itm_sa_templar_shield_1,
@@ -29642,7 +27370,6 @@ troops = [
     itm_european_horse_d,
     itm_european_horse_e,
     itm_european_horse_f,
-    ########
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
@@ -29657,87 +27384,40 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_lance,
-    itm_sword_type_xiii,
-
+    itm_crusader_spear_c,
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    
+    itm_mace_6,
     itm_mace_4,
-    itm_raf_one_handed_axe_h,
+    itm_axe_crusader_a,
     itm_talak_warhammer,
+    itm_axe_crusader_b,
 
     itm_templar_sarjeant_mail,
     itm_templar_sarjeant_surcoat,
 
     itm_templar_kettlehat_a_mail,
-    itm_mail_coif,
-
-    itm_osp_faceplate,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    itm_mail_boots_long,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
-    itm_sa_sergeant_templar_armor,
-    itm_sa_sergeant_templar_armor,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
+    itm_templar_sarjeant_surcoat,
+    
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    itm_modded_templar_arming_sword,
 
     itm_sa_shield_veteran_templar_1,
     itm_sa_shield_veteran_templar_2,
     itm_sa_shield_veteran_templar_3,
     itm_sa_shield_veteran_templar,
 
-    (itm_sa_shield_veteran_templar_1, imod_thick),
-    (itm_sa_shield_veteran_templar_2, imod_thick),
-    (itm_sa_shield_veteran_templar_3, imod_thick),
-    (itm_sa_shield_veteran_templar, imod_thick),
-
-    (itm_european_horse_a, imod_heavy),
-    (itm_european_horse_b, imod_heavy),
-    (itm_european_horse_c, imod_heavy),
-    (itm_european_horse_d, imod_heavy),
-    (itm_european_horse_e, imod_heavy),
-    (itm_european_horse_f, imod_heavy),
-    (itm_hunter, imod_heavy),
-    (itm_horse_e, imod_heavy),
-    (itm_horse_d, imod_heavy),
-    ########
-
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    
+    itm_templar_warhorse_a,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -29750,111 +27430,55 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves_long,
-
-    itm_mail_chausses,
-    itm_lance,
+    itm_crusader_knight_spear_a_2,
+    itm_heraldic_lance,
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_b_2,
 
     itm_talak_warhammer,
+    itm_mace_6,
+    itm_axe_crusader_d,
+    itm_axe_crusader_c,
+    itm_axe_crusader_1,
+    itm_modded_templar_arming_sword,
 
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-
-    itm_mail_mittens,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_templar_warhorse_a,
-    itm_templar_warhorse_a,
-
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
+    
+    itm_kau_mail_boots_dark_long,
+    
     itm_templar_knight_a,
     itm_templar_knight_b,
     itm_templar_knight_c,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-
     itm_sa_templiers_hard_helm,
     itm_sa_templiers_hard_helm_namet,
     itm_sa_templiers_hard_helm_namet_1,
-    itm_sa_templiers_hard_helm_namet_2,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+   
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    itm_k_long_sword_c,
 
     itm_sa_knight_armor_templar_1,
     itm_sa_knight_armor_templar_1_cloak,
-    itm_sa_knight_armor_templar_2,
-    itm_sa_knight_armor_templar_2_cloak,
     itm_sa_knight_armor_templar_3,
     itm_sa_knight_armor_templar_3_cloak,
-    itm_sa_knight_armor_templar_4,
-    itm_sa_knight_armor_templar_4_cloak,
-    itm_sa_knight_armor_templar_5,
-    itm_sa_knight_armor_templar_5_cloak,
-    itm_sa_knight_armor_templar_6,
     itm_sa_knight_armor_templar_6_cloak,
-
-    (itm_sa_templar_shield_knight, imod_thick),
-    (itm_sa_templar_shield_knight_1, imod_thick),
-    (itm_sa_templar_shield_knight_2, imod_thick),
-
-    (itm_sa_templar_shield_knight, imod_reinforced),
-    (itm_sa_templar_shield_knight_1, imod_reinforced),
-    (itm_sa_templar_shield_knight_2, imod_reinforced),
+    itm_templar_knight_f,
+    
+    itm_sa_templar_shield_knight, 
+    itm_sa_templar_shield_knight_1, 
+    itm_sa_templar_shield_knight_2, 
 
     itm_templar_knight_horse_a,
     itm_templar_knight_horse_b,
     itm_templar_knight_horse_c,
     itm_templar_knight_horse_d,
     itm_templar_knight_horse_e,
-    ########
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -29868,63 +27492,43 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-
+    itm_crusader_knight_spear_a_2,
     itm_heraldic_lance,
-
-    (itm_sword_type_xiiia, imod_balanced),
-
-    (itm_mail_mittens, imod_reinforced),
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_b_2,
 
     itm_mail_boots_long,
 
-    itm_rnd_helm_04,
-    itm_rnd_helm_04,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_great_helmet_a,
-    itm_great_helmet_a,
-    itm_great_helmet_b,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
+    itm_lamellar_gauntlets,
 
-    (itm_templar_knight_a, imod_reinforced),
-    (itm_templar_knight_b, imod_reinforced),
-    (itm_templar_knight_c, imod_reinforced),
+    itm_sa_templiers_hard_helm,
+    itm_sa_templiers_hard_helm_namet,
+    itm_sa_templiers_hard_helm_namet_1,
 
-    (itm_templar_warhorse_a, imod_heavy),
-    (itm_templar_warhorse_a, imod_heavy),
+    itm_talak_warhammer,
+    itm_mace_6,
+    itm_axe_crusader_d,
+    itm_axe_crusader_c,
+    itm_axe_crusader_1,
+    itm_crusader_long_sword_a, 
+    itm_crusader_long_sword_b, 
+    itm_crusader_long_sword_c, 
+    itm_k_long_sword_a, 
+    itm_k_long_sword_b, 
+    itm_k_long_sword_c, 
 
-    ############# NEW v2.1 - CWE
-    #(itm_crusader_long_sword_a, imod_balanced),
-    #(itm_crusader_long_sword_b, imod_balanced),
-    #(itm_crusader_long_sword_c, imod_balanced),
-    #(itm_k_long_sword_a, imod_balanced),
-    #(itm_k_long_sword_b, imod_balanced),
-    #(itm_k_long_sword_c, imod_balanced),
+    itm_templar_knight_d,
 
-    (itm_sa_knight_armor_templar_1, imod_reinforced),
-    (itm_sa_knight_armor_templar_1_cloak, imod_reinforced),
-    (itm_sa_knight_armor_templar_2, imod_reinforced),
-    (itm_sa_knight_armor_templar_2_cloak, imod_reinforced),
-    (itm_sa_knight_armor_templar_3, imod_reinforced),
-    (itm_sa_knight_armor_templar_3_cloak, imod_reinforced),
-    (itm_sa_knight_armor_templar_4, imod_reinforced),
-    (itm_sa_knight_armor_templar_4_cloak, imod_reinforced),
-    (itm_sa_knight_armor_templar_5, imod_reinforced),
-    (itm_sa_knight_armor_templar_5_cloak, imod_reinforced),
-    (itm_sa_knight_armor_templar_6, imod_reinforced),
-    (itm_sa_knight_armor_templar_6_cloak, imod_reinforced),
+    itm_sa_templar_shield_knight, 
+    itm_sa_templar_shield_knight_1, 
+    itm_sa_templar_shield_knight_2, 
 
-    (itm_sa_templar_shield_knight, imod_reinforced),
-    (itm_sa_templar_shield_knight_1, imod_reinforced),
-    (itm_sa_templar_shield_knight_2, imod_reinforced),
-
-    (itm_templar_knight_horse_a, imod_heavy),
-    (itm_templar_knight_horse_b, imod_heavy),
-    (itm_templar_knight_horse_c, imod_heavy),
-    (itm_templar_knight_horse_d, imod_heavy),
-    (itm_templar_knight_horse_e, imod_heavy),
-    ########
+    itm_templar_knight_horse_a, 
+    itm_templar_knight_horse_b, 
+    itm_templar_knight_horse_c, 
+    itm_templar_knight_horse_d, 
+    itm_templar_knight_horse_e, 
     ],
     horse_attrib_elite_veteran, nbl_knight_veteran_wp, nbl_knight_veteran_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -29944,39 +27548,29 @@ troops = [
   ["euro_town_recruit_hospitaller",
      "Hospitaller Town Recruit",
      "Hospitaller Town Recruits",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
-
+    itm_priest_cap_2,
+    itm_priest_cap_3,
     itm_arming_cap,
     itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_priest_cap_1,
+    
+    itm_battle_fork,
+    itm_military_pick,
+    itm_dagger,
+    itm_military_hammer,
+    itm_pitch_fork,
+    itm_military_fork,
 
     itm_peasant_tunic_a,
     itm_peasant_b,
     itm_peasant_c,
     itm_peasant_g,
-
     itm_peasant_f,
 
-    itm_leather_fur_boots,
+    itm_legs_with_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -29985,6 +27579,9 @@ troops = [
     itm_tied_up_shoes,
     itm_green_hose_b,
     itm_blue_hose_mod,
+    
+    itm_targe_6,
+    itm_targe_5,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -29994,16 +27591,10 @@ troops = [
   ["euro_village_recruit_hospitaller",
      "Hospitaller Levy",
      "Hospitaller Levies",
-    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
+    tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_pickaxe,
     itm_scythe,
     itm_dagger,
     itm_knife,
@@ -30015,17 +27606,9 @@ troops = [
     itm_arrows,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
+    itm_priest_cap_3,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_1257_hood_2,
     itm_priest_cap_1,
     itm_arming_cap,
 
@@ -30034,10 +27617,10 @@ troops = [
     itm_archer_c,
     itm_peasant_d,
     itm_peasant_g,
-
+    itm_peasant_tunic_a,
     itm_peasant_f,
 
-    itm_leather_fur_boots,
+    itm_shoes,
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -30047,6 +27630,8 @@ troops = [
     itm_green_hose_b,
     itm_blue_hose_mod,
 
+    itm_targe_3,
+    itm_targe_2,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -30061,77 +27646,36 @@ troops = [
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_1,
     [
-    itm_bolts,
     itm_crusade_bolt,
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
-    itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
     itm_light_crossbow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_hatchet,
     itm_falchion,
     itm_dagger,
     itm_butchering_knife,
     itm_knife,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
+    itm_koif_monie_a,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_koif_monie_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
+    itm_sa_shields_archer_hospitaller_2,
+    itm_sa_shields_archer_hospitaller_1,
+    
     itm_sa_novici_hospitaller_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
+    itm_falshion_1,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
-    ],
+   ],
 
 
 
@@ -30141,69 +27685,29 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-
-    ###### itm_bolts,
-    itm_steel_bolts,
-    itm_crusade_bolt_heavy,
-    itm_crusade_bolt_heavy_pierce,
-
-    itm_heavy_crossbow,
-    ###### itm_sniper_crossbow,
+    itm_crusade_bolt,
+    
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_c,
+    itm_crusaders_crossbows_b,
 
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_almogavar_sword,
     itm_military_cleaver_b,
 
-    itm_tab_shield_pavise_d,
-
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_tied_up_shoes,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_hospitaller_kettlehat_a,
+    
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_archer_hospitaller_armor_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
+    itm_axe_crusader_a,
+    
+    itm_falshion_1,
+    
     itm_sa_shields_archer_hospitaller_1,
     itm_sa_shields_archer_hospitaller_2,
-    ########
     ],
     ranged_attrib_4, knight_order_crossbow_wp, knight_order_crossbow_skills,
     nord_face_young_1, swadian_face_old_2
@@ -30217,61 +27721,31 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_steel_bolts,
     itm_crusade_bolt_heavy,
     itm_crusade_bolt_heavy_pierce,
 
-    itm_sniper_crossbow,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-
-    itm_tab_shield_pavise_d,
-
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_munitionshelm1,
-    itm_pepperpothelm1,
-
-    itm_mail_mittens,
-
-    itm_kau_mail_boots_dark_long,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_c,
+    itm_crusaders_crossbows_b,
+   
     itm_sa_sergeant_hospitaller_armor_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_shields_archer_hospitaller_1,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_modded_euro_shortsword_1,
+    itm_falshion_1,
+    itm_modded_euro_shortsword_2,
+    
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
+    
     itm_sa_shields_archer_hospitaller_1,
     itm_sa_shields_archer_hospitaller_2,
-    itm_sa_shields_archer_hospitaller_2,
-    (itm_sa_shields_archer_hospitaller_1, imod_thick),
-    (itm_sa_shields_archer_hospitaller_2, imod_thick),
-    ########
+    
+    itm_hospitaller_kettlehat_a_mail,
     ],
     ranged_attrib_5, knight_order_crossbow_serjeant_wp, knight_order_crossbow_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
@@ -30288,14 +27762,9 @@ troops = [
     [
     itm_arming_cap,
     itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_elm8,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_flat_kettle_hat,
-
-    itm_leather_fur_boots,
+    itm_koif_monie_a,
+    itm_koif_monie_b,
+    
     itm_red_hose,
     itm_green_hose,
     itm_grey_hose,
@@ -30305,52 +27774,20 @@ troops = [
     itm_green_hose_b,
     itm_blue_hose_mod,
 
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
     itm_falchion,
+    itm_hatchet,
+    
+    itm_hospitaller_gambeson_a,
 
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
+    itm_falshion_1,
+    itm_almogavar_sword,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
-    itm_sa_novici_hospitaller_armor,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+   
     itm_sa_hospitaller_shield,
     itm_sa_hospitaller_shield_1,
-    ########
-
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -30363,75 +27800,25 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
-
-    ###### itm_arena_outfit_b,
-    ###### itm_teu_gambeson,
-    ###### itm_teu_gambeson,
-
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_tied_up_shoes,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_hospitaller_kettlehat_a,
+   
     itm_falchion,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
+    
     itm_sa_armor_infantry_hospitaller_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_hospitaller_shield,
     itm_sa_hospitaller_shield_1,
-    ########
     ],
     foot_attrib_4, knight_order_spearman_wp, knight_order_spearman_skills,
     nord_face_young_1, swadian_face_old_2
@@ -30444,69 +27831,32 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
+    itm_hospitaller_kettlehat_a_mail,
 
-    ###### itm_arena_outfit_b,
-    ###### itm_teu_gambeson,
-    ###### itm_teu_gambeson,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
 
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_munitionshelm1,
-    itm_pepperpothelm1,
-
-    itm_kau_mail_boots_dark_long,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mail_mittens,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-
-    itm_sa_sergeant_hospitaller_armor_1,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_sa_armor_monie_hospitaller_a,
+    itm_sa_armor_monie_hospitaller_b,
+    
+    itm_axe_crusader_c,
+    itm_falshion_1,
+    itm_falchion,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_shield_veteran_hospitaller_1,
     itm_sa_shield_veteran_hospitaller_2,
     itm_sa_shield_veteran_hospitaller_3,
     itm_sa_shield_veteran_hospitaller_4,
-    ########
     ],
     foot_attrib_5, knight_order_spearman_serjeant_wp, knight_order_spearman_serjeant_skills,
     nord_face_young_1, swadian_face_old_2
@@ -30522,9 +27872,8 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
-    itm_sword_type_xiii,
-
+    itm_axe_crusader_b,
+    itm_axe_crusader_a,
     itm_mace_4,
     itm_raf_one_handed_axe_h,
     itm_talak_warhammer,
@@ -30533,65 +27882,22 @@ troops = [
     itm_hospitaller_sarjeant_surcoat,
 
     itm_hospitaller_kettlehat_a_mail,
-    itm_mail_coif,
-
-    itm_osp_faceplate,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    itm_mail_boots_long,
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
-    itm_sa_sergeant_hospitaller_armor_1,
-    itm_sa_sergeant_hospitaller_armor_1,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    itm_modded_damascus_sword,
 
     itm_sa_shield_veteran_hospitaller_1,
     itm_sa_shield_veteran_hospitaller_2,
     itm_sa_shield_veteran_hospitaller_3,
     itm_sa_shield_veteran_hospitaller_4,
 
-    (itm_sa_shield_veteran_hospitaller_1, imod_thick),
-    (itm_sa_shield_veteran_hospitaller_2, imod_thick),
-    (itm_sa_shield_veteran_hospitaller_3, imod_thick),
-    (itm_sa_shield_veteran_hospitaller_4, imod_thick),
-    ########
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -30604,56 +27910,17 @@ troops = [
     tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves_long,
+    itm_kau_mail_boots_dark_long,
 
-    itm_mail_chausses,
-    itm_lance,
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
 
     itm_talak_warhammer,
-
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-
-    itm_mail_mittens,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
+    itm_morningstar,
+    itm_mace_6,
+    itm_axe_crusader_1,
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
 
     itm_sa_hospitaller_hard_helm,
     itm_sa_hospitaller_hard_helm_namet,
@@ -30661,35 +27928,18 @@ troops = [
     itm_sa_hospitaller_hard_helm_namet_2,
     itm_sa_hospitaller_hard_helm_namet_3,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    itm_k_long_sword_c,
 
-    itm_sa_knight_armor_hospitaller_1,
-    itm_sa_knight_armor_hospitaller_1_cloak_1,
-    itm_sa_knight_armor_hospitaller_1_cloak_2,
-    itm_sa_knight_armor_hospitaller_2,
-    itm_sa_knight_armor_hospitaller_2_cloak,
-    itm_sa_knight_armor_hospitaller_2_cloak_1,
-    itm_sa_knight_armor_hospitaller_3,
-    itm_sa_knight_armor_hospitaller_3_cloak,
-    itm_sa_knight_armor_hospitaller_4,
-    itm_sa_knight_armor_hospitaller_4_cloak,
-    itm_sa_knight_armor_hospitaller_4_cloak_1,
     itm_sa_knight_armor_hospitaller_4_cloak_2,
 
-    (itm_sa_hospitaller_shield_knight_1, imod_thick),
-    (itm_sa_hospitaller_shield_knight_2, imod_thick),
+    itm_sa_hospitaller_shield_knight_1, 
+    itm_sa_hospitaller_shield_knight_2, 
 
-    (itm_sa_hospitaller_shield_knight_1, imod_reinforced),
-    (itm_sa_hospitaller_shield_knight_2, imod_reinforced),
-    ########
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -30705,70 +27955,32 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_light_lance,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
 
     itm_mace_2,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
+    itm_hatchet,
+    itm_falshion_1,
+    itm_falchion,
+    itm_military_cleaver_b,
 
     itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_koif_monie_a,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
+    itm_koif_monie_b,
     itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
+    
     itm_sumpter_horse,
     itm_saddle_horse,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
 
-    itm_sa_novici_hospitaller_armor,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
+    itm_hospitaller_tunic_a,
 
     itm_sa_hospitaller_shield,
     itm_sa_hospitaller_shield_1,
-    ########
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
@@ -30781,58 +27993,30 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_1,
     [
-    itm_lance,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
     itm_light_lance,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_mace_6,
     itm_mace_3,
     itm_mace_4,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    
     itm_saddle_horse,
     itm_courser,
     itm_hunter,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    
+    itm_hospitaller_kettlehat_a,
 
     itm_sa_armor_infantry_hospitaller_1,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
 
     itm_sa_hospitaller_shield,
     itm_sa_hospitaller_shield_1,
@@ -30843,7 +28027,6 @@ troops = [
     itm_european_horse_d,
     itm_european_horse_e,
     itm_european_horse_f,
-    ########
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
@@ -30858,87 +28041,39 @@ troops = [
     0, 0, fac_kingdom_1,
     [
     itm_lance,
-    itm_sword_type_xiii,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
 
     itm_mace_4,
-    itm_raf_one_handed_axe_h,
+    itm_axe_crusader_b,
     itm_talak_warhammer,
+    itm_mace_6,
+    itm_axe_crusader_a,
 
     itm_hospitaller_sarjeant_mail,
     itm_hospitaller_sarjeant_surcoat,
 
     itm_hospitaller_kettlehat_a_mail,
-    itm_mail_coif,
+   
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
 
-    itm_osp_faceplate,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    itm_mail_boots_long,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
-    itm_sa_sergeant_hospitaller_armor_1,
-    itm_sa_sergeant_hospitaller_armor_1,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
-
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
+    itm_modded_damascus_sword,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
     itm_sa_shield_veteran_hospitaller_1,
     itm_sa_shield_veteran_hospitaller_2,
     itm_sa_shield_veteran_hospitaller_3,
     itm_sa_shield_veteran_hospitaller_4,
 
-    (itm_sa_shield_veteran_hospitaller_1, imod_thick),
-    (itm_sa_shield_veteran_hospitaller_2, imod_thick),
-    (itm_sa_shield_veteran_hospitaller_3, imod_thick),
-    (itm_sa_shield_veteran_hospitaller_4, imod_thick),
-
-    (itm_european_horse_a, imod_heavy),
-    (itm_european_horse_b, imod_heavy),
-    (itm_european_horse_c, imod_heavy),
-    (itm_european_horse_d, imod_heavy),
-    (itm_european_horse_e, imod_heavy),
-    (itm_european_horse_f, imod_heavy),
-    (itm_hunter, imod_heavy),
-    (itm_horse_e, imod_heavy),
-    (itm_horse_d, imod_heavy),
-    ########
-
+    itm_hospitaller_warhorse_b,
+    itm_hospitaller_warhorse_a,
     ],
     horse_attrib_4, nbl_hlan_wp, nbl_hlan_skills,
     nord_face_young_1, swadian_face_old_2
@@ -30951,84 +28086,39 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_splinted_greaves_long,
-
-    itm_mail_chausses,
-    itm_lance,
-
+    itm_kau_mail_boots_dark_long,
+    
+    itm_heraldic_lance,
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b_2,
+    itm_crusader_knight_spear_b,
+    ###itm_talak_mace,
     itm_talak_warhammer,
+    itm_mace_6,
 
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
+    itm_axe_crusader_1,
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
 
-    itm_mail_mittens,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    (itm_tab_shield_heater_cav_a, imod_thick),
-    (itm_tab_shield_heater_cav_b, imod_thick),
-    (itm_tab_shield_heater_cav_a, imod_reinforced),
-    (itm_tab_shield_heater_cav_b, imod_reinforced),
-
-    itm_hospitaller_warhorse_a,
-
-    itm_hospitaller_knight_a,
-    itm_hospitaller_knight_b,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
+    itm_hospitaller_knight_f,
+    itm_hospitaller_knight_e,
+    itm_hospitaller_knight_g,
     itm_hospitaller_knight_c,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
 
     itm_sa_hospitaller_hard_helm,
     itm_sa_hospitaller_hard_helm_namet,
     itm_sa_hospitaller_hard_helm_namet_1,
-    itm_sa_hospitaller_hard_helm_namet_2,
-    itm_sa_hospitaller_hard_helm_namet_3,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
-
+   
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    
     itm_sa_knight_armor_hospitaller_1,
     itm_sa_knight_armor_hospitaller_1_cloak_1,
     itm_sa_knight_armor_hospitaller_1_cloak_2,
@@ -31040,19 +28130,14 @@ troops = [
     itm_sa_knight_armor_hospitaller_4,
     itm_sa_knight_armor_hospitaller_4_cloak,
     itm_sa_knight_armor_hospitaller_4_cloak_1,
-    itm_sa_knight_armor_hospitaller_4_cloak_2,
-
-    (itm_sa_hospitaller_shield_knight_1, imod_thick),
-    (itm_sa_hospitaller_shield_knight_2, imod_thick),
-
-    (itm_sa_hospitaller_shield_knight_1, imod_reinforced),
-    (itm_sa_hospitaller_shield_knight_2, imod_reinforced),
+    
+    itm_sa_hospitaller_shield_knight_1, 
+    itm_sa_hospitaller_shield_knight_2, 
 
     itm_hospitaller_knight_horse_a,
     itm_hospitaller_knight_horse_b,
     itm_hospitaller_knight_horse_c,
     itm_hospitaller_knight_horse_d,
-    ########
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -31066,60 +28151,42 @@ troops = [
     tf_mounted| tf_guarantee_helmet | tf_guarantee_gloves | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-
     itm_heraldic_lance,
-
-    (itm_sword_type_xiiia, imod_balanced),
-
-    (itm_mail_mittens, imod_reinforced),
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b_2,
+    itm_crusader_knight_spear_b,
+    ###itm_talak_mace,
+    itm_talak_warhammer,
+    itm_mace_6,
 
     itm_mail_boots_long,
 
-    itm_rnd_helm_04,
-    itm_rnd_helm_04,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_great_helmet_a,
-    itm_great_helmet_a,
-    itm_great_helmet_b,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
+    itm_lamellar_gauntlets,
 
-    (itm_hospitaller_knight_a, imod_reinforced),
-    (itm_hospitaller_knight_b, imod_reinforced),
-    (itm_hospitaller_knight_c, imod_reinforced),
+    itm_hospitaller_hochmeister_surcoat_1,
 
-    (itm_hospitaller_warhorse_a, imod_heavy),
+    itm_axe_crusader_1,
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
+    itm_crusader_long_sword_a, 
+    itm_crusader_long_sword_b, 
+    itm_crusader_long_sword_c, 
+    itm_k_long_sword_a, 
+    itm_k_long_sword_b, 
+    itm_k_long_sword_c,
 
-    ############# NEW v2.1 - CWE
-    #(itm_crusader_long_sword_a, imod_balanced),
-    #(itm_crusader_long_sword_b, imod_balanced),
-    #(itm_crusader_long_sword_c, imod_balanced),
-    #(itm_k_long_sword_a, imod_balanced),
-    #(itm_k_long_sword_b, imod_balanced),
-    #(itm_k_long_sword_c, imod_balanced),
+    itm_sa_hospitaller_hard_helm,
+    itm_sa_hospitaller_hard_helm_namet,
+    itm_sa_hospitaller_hard_helm_namet_1,
 
-    (itm_sa_knight_armor_hospitaller_1, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_1_cloak_1, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_1_cloak_2, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_2, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_2_cloak, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_2_cloak_1, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_3, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_3_cloak, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_4, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_4_cloak, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_4_cloak_1, imod_reinforced),
-    (itm_sa_knight_armor_hospitaller_4_cloak_2, imod_reinforced),
+    itm_sa_hospitaller_shield_knight_1, 
+    itm_sa_hospitaller_shield_knight_2, 
 
-    (itm_sa_hospitaller_shield_knight_1, imod_reinforced),
-    (itm_sa_hospitaller_shield_knight_2, imod_reinforced),
-
-    (itm_hospitaller_knight_horse_a, imod_heavy),
-    (itm_hospitaller_knight_horse_b, imod_heavy),
-    (itm_hospitaller_knight_horse_c, imod_heavy),
-    (itm_hospitaller_knight_horse_d, imod_heavy),
-    ########
+    itm_hospitaller_knight_horse_a, 
+    itm_hospitaller_knight_horse_b, 
+    itm_hospitaller_knight_horse_c, 
+    itm_hospitaller_knight_horse_d, 
     ],
     horse_attrib_elite_veteran, nbl_knight_veteran_wp, nbl_knight_veteran_skills,
     0x84000000125cbb1f25249c77d00000000001c36d80000000000000000, 0xcbf10600238e3729592cd56a400000000001cb75a0000000000000000
@@ -31147,45 +28214,36 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
-
+    itm_pitch_fork,
+    itm_dagger,
+    itm_military_hammer,
+    itm_battle_fork,
+    itm_butchering_knife,
+    itm_military_pick,
+    itm_military_fork,
+    
+    itm_priest_cap_2,
     itm_arming_cap,
     itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_priest_cap_1,
 
     itm_peasant_tunic_a,
     itm_peasant_b,
     itm_peasant_c,
     itm_peasant_g,
-
     itm_peasant_f,
 
-    itm_leather_fur_boots,
     itm_red_hose,
-    ###### itm_green_hose,
+    itm_green_hose,
     itm_grey_hose,
     itm_dark_grey_hose,
-    ###### itm_yellow_hose,
+    itm_yellow_hose,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
+    itm_green_hose_b,
     itm_blue_hose_mod,
-
+    
+    itm_targe_4,
+    itm_targe_1,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -31198,13 +28256,7 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_pickaxe,
     itm_scythe,
     itm_dagger,
     itm_knife,
@@ -31216,17 +28268,7 @@ troops = [
     itm_arrows,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
@@ -31235,19 +28277,19 @@ troops = [
     itm_archer_c,
     itm_peasant_d,
     itm_peasant_g,
-
     itm_peasant_f,
 
-    itm_leather_fur_boots,
     itm_red_hose,
-    ###### itm_green_hose,
+    itm_green_hose,
     itm_grey_hose,
     itm_dark_grey_hose,
-    ###### itm_yellow_hose,
+    itm_yellow_hose,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
+    itm_green_hose_b,
     itm_blue_hose_mod,
-
+    
+    itm_targe_4,
+    itm_targe_1,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -31265,62 +28307,31 @@ troops = [
     itm_hunting_bow,
     itm_short_bow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
 
-    itm_pilgrim_hat,
+    itm_hatchet,
     itm_dagger,
     itm_dagger,
     itm_hatchet,
     itm_knife,
-    itm_knife,
-    itm_knife,
-    itm_butchering_knife,
-    itm_butchering_knife,
     itm_butchering_knife,
     itm_falchion,
 
     itm_1257_hood,
-
-    itm_elm2,
-
+    itm_koif_monie_a,
     itm_priest_cap_2,
-
+    itm_koif_monie_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_shields_archer_antioch_1,
+    itm_sa_shields_archer_antioch_2,
 
     itm_sa_novici_antioch_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
-
-
-    ],
+    itm_falshion_1,
+    ],  
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
   ],
@@ -31335,68 +28346,23 @@ troops = [
     itm_arrows,
     itm_short_bow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_almogavar_sword,
     itm_falchion,
 
-    itm_1257_hood,
-
-    itm_elm1,
-    itm_elm2,
-
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    
+    itm_sa_crusader_koif_a,
+    itm_light_capelina_crusader,
 
     itm_sa_archer_antioch_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    
     itm_sa_shields_archer_antioch_1,
     itm_sa_shields_archer_antioch_2,
-    ########
-
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -31409,75 +28375,33 @@ troops = [
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
-    itm_crusade_bolt,
     itm_crusade_bolt,
 
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
-    itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
     itm_light_crossbow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
     itm_falchion,
     itm_dagger,
     itm_butchering_knife,
     itm_knife,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
+    itm_koif_monie_a,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_koif_monie_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_shields_archer_antioch_1,
+    itm_sa_shields_archer_antioch_2,
+    
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
 
     itm_sa_novici_antioch_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
+    itm_hatchet,
+    itm_falshion_1,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -31489,80 +28413,30 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
+    
     itm_crusade_bolt,
-    itm_crossbow,
+    
     itm_crusaders_crossbows_a,
     itm_crusaders_crossbows_b,
     itm_crusaders_crossbows_c,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-
+    
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_almogavar_sword,
+    
+    itm_light_capelina_crusader,
+    itm_sa_crusader_koif_a,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    itm_kolpak_mail,
-
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_archer_antioch_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    
     itm_sa_shields_archer_antioch_1,
     itm_sa_shields_archer_antioch_2,
-    ########
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -31575,81 +28449,35 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
-    itm_crusade_bolt,
-    itm_steel_bolts,
     itm_crusade_bolt_heavy,
     itm_crusade_bolt_heavy_pierce,
 
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_sniper_crossbow,
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_b,
+    itm_crusaders_crossbows_c,
 
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_modded_euro_shortsword_2,
     itm_military_cleaver_b,
 
-    itm_tab_shield_heater_c,
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
 
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
+    itm_capelina_crusader,
     itm_sa_crusader_helm_5,
     itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    
     itm_sa_sergeant_armor_antioch,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_shields_archer_antioch_1,
+    
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
+    itm_falshion_1,
+    
     itm_sa_shields_archer_antioch_1,
     itm_sa_shields_archer_antioch_2,
-    itm_sa_shields_archer_antioch_2,
-    (itm_sa_shields_archer_antioch_1, imod_thick),
-    (itm_sa_shields_archer_antioch_2, imod_thick),
-    ########
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -31664,69 +28492,26 @@ troops = [
     [
     itm_arming_cap,
     itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_elm8,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_flat_kettle_hat,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_koif_monie_a,
+    itm_koif_monie_b,
+    
     itm_falchion,
-
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_almogavar_sword,
+    
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader,
 
     itm_sa_novici_antioch_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
+    itm_falshion_1,
+    itm_hatchet,
 
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+    
     itm_sa_antioch_shield_1,
     itm_sa_antioch_shield_2,
-    ########
-
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -31739,80 +28524,26 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
 
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_mail_coif,
-    itm_vik_norman_helmet_b,
-    itm_raf_spangen,
-    itm_elm8,
-    itm_elm2,
-    itm_elm3,
-    itm_kolpak_mail,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_light_crusader_helm_2,
+    itm_light_crusader_helm_1,
+    
     itm_falchion,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
 
     itm_sa_armor_infantry_antioch,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_antioch_shield_1,
     itm_sa_antioch_shield_2,
-    ########
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
@@ -31825,77 +28556,35 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
-
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
+    
     itm_falchion,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
     itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
     itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    
     itm_sa_sergeant_armor_antioch,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
+    itm_axe_crusader_1,
+    itm_falshion_1,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_shield_veteran_antioch_1,
     itm_sa_shield_veteran_antioch_2,
     itm_sa_shield_veteran_antioch_3,
     itm_sa_shield_veteran_antioch_4,
-    ########
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -31905,42 +28594,21 @@ troops = [
   ["euro_guisarm_1_antioch",
      "Antioch Lesser Militia Guisarmer",
      "Antioch Lesser Militia Guisarmer",
-    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
+    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_koif_monie_b,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
+    itm_knife,
 
     itm_bill,
     itm_glaive,
     itm_scythe,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
     itm_sa_novici_antioch_armor,
-    ########
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -31950,25 +28618,12 @@ troops = [
   ["euro_guisarm_2_antioch",
      "Antioch Senior Militia Guisarmer",
      "Antioch Senior Militia Guisarmer",
-    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
+    tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
-
+    itm_light_crusader_helm_2,
+    itm_light_crusader_helm_1,
+    
     itm_glaive,
     itm_bill,
     itm_military_scythe,
@@ -31977,28 +28632,10 @@ troops = [
     itm_raf_two_handed_axe_a,
     itm_raf_two_handed_axe_b,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_armor_infantry_antioch,
-    ########
-
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
@@ -32008,7 +28645,7 @@ troops = [
   ["euro_guisarm_3_antioch",
      "Antioch Sergeant Guisarmer",
      "Antioch Sergeant Guisarmer",
-    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots,
+    tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
     itm_glaive,
@@ -32016,50 +28653,16 @@ troops = [
     itm_shortened_military_scythe,
     itm_two_handed_cleaver,
 
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
     itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
     itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    
     itm_sa_sergeant_armor_antioch,
-    ########
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
@@ -32073,68 +28676,32 @@ troops = [
     0, 0, fac_kingdom_23,
     [
     itm_light_lance,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+    
+    itm_hatchet,
     itm_mace_2,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    itm_blue_hose_mod,
-
+    itm_mace_6,
+    itm_falshion_1,
+    itm_falchion,
+    
     itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
     itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
+    itm_koif_monie_b,
+    itm_koif_monie_a,
 
     itm_sumpter_horse,
     itm_saddle_horse,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
     itm_sa_novici_antioch_armor,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-
+    
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
+    
     itm_sa_antioch_shield_1,
     itm_sa_antioch_shield_2,
-    ########
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
@@ -32149,56 +28716,31 @@ troops = [
     [
     itm_lance,
     itm_light_lance,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
     itm_mace_3,
     itm_mace_4,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
+    itm_mace_6,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    
     itm_saddle_horse,
     itm_courser,
     itm_hunter,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_light_crusader_helm_2,
+    itm_light_crusader_helm_1,
+    itm_sa_crusader_koif_a,
 
     itm_sa_armor_infantry_antioch,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
 
     itm_sa_antioch_shield_1,
     itm_sa_antioch_shield_2,
@@ -32209,7 +28751,6 @@ troops = [
     itm_european_horse_d,
     itm_european_horse_e,
     itm_european_horse_f,
-    ########
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
@@ -32222,86 +28763,48 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_23,
     [
-    itm_heraldic_lance,
-    itm_heavy_lance,
-    itm_heavy_lance,
-
-    itm_cp391_sword,
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
+    itm_crusader_knight_spear_b_2,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_a,
+    
     itm_mace_2,
     itm_mace_3,
-    itm_mace_3,
+    itm_mace_6,
     itm_mace_4,
-    itm_mace_4,
-
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-    itm_wenceslav_helmet,
-    itm_vik_norman_helmet_a,
-    itm_vik_norman_helmet_b,
-
-    itm_mail_mittens,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
+    itm_axe_crusader_c,
+    itm_axe_crusader_b,
+    
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
     itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
+    itm_sa_crusader_helm_8,
     itm_sa_crusader_helm_7,
 
-    itm_sa_sergeant_armor_antioch,
+    itm_kau_antioch,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    itm_modded_euro_armingsword_1,
 
     itm_sa_shield_veteran_antioch_1,
     itm_sa_shield_veteran_antioch_2,
     itm_sa_shield_veteran_antioch_3,
     itm_sa_shield_veteran_antioch_4,
 
-    (itm_sa_shield_veteran_antioch_1, imod_thick),
-    (itm_sa_shield_veteran_antioch_2, imod_thick),
-    (itm_sa_shield_veteran_antioch_3, imod_thick),
-    (itm_sa_shield_veteran_antioch_4, imod_thick),
-
-    (itm_european_horse_a, imod_heavy),
-    (itm_european_horse_b, imod_heavy),
-    (itm_european_horse_c, imod_heavy),
-    (itm_european_horse_d, imod_heavy),
-    (itm_european_horse_e, imod_heavy),
-    (itm_european_horse_f, imod_heavy),
-    (itm_hunter, imod_heavy),
-    (itm_horse_e, imod_heavy),
-    (itm_horse_d, imod_heavy),
-    ########
+    itm_european_horse_a, 
+    itm_european_horse_b, 
+    itm_european_horse_c, 
+    itm_european_horse_d, 
+    itm_european_horse_e, 
+    itm_european_horse_f, 
+    itm_hunter, 
+    itm_horse_e, 
+    itm_horse_d, 
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
@@ -32314,57 +28817,22 @@ troops = [
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
+    itm_mace_6,
     itm_mace_2,
-    itm_mace_2,
-    itm_mace_3,
+    itm_talak_warhammer,
     itm_mace_3,
     itm_mace_4,
-    itm_mace_4,
-    itm_morningstar,
+    itm_axe_crusader_1,
+    itm_axe_crusader_c,
+    itm_axe_crusader_d,
     itm_morningstar,
 
     itm_heraldic_lance,
+    itm_crusader_knight_spear_b_2,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_a,
 
-    itm_mail_mittens,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    itm_mail_boots_long,
-    itm_splinted_greaves_long,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    ############# NEW v2.1 - CWE
     itm_sa_crusader_hard_helm_1,
     itm_sa_crusader_hard_helm_2,
     itm_sa_crusader_hard_helm_3,
@@ -32373,15 +28841,14 @@ troops = [
     itm_sa_crusader_hard_helm_6,
     itm_sa_crusader_hard_helm_6_namet,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_kau_mail_boots_dark_long,
+    
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    itm_k_long_sword_c,
 
     itm_sa_knight_armor_antioch_1,
     itm_sa_knight_armor_antioch_1_cloak,
@@ -32393,15 +28860,14 @@ troops = [
     itm_sa_knight_armor_antioch_4_cloak,
     itm_sa_knight_armor_antioch_4_cloak_1,
 
-    (itm_sa_shield_knight_antioch_1, imod_thick),
-    (itm_sa_shield_knight_antioch_2, imod_thick),
+    itm_sa_shield_knight_antioch_1, 
+    itm_sa_shield_knight_antioch_2, 
 
-    (itm_sa_shield_knight_antioch_1, imod_reinforced),
-    (itm_sa_shield_knight_antioch_2, imod_reinforced),
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
 
     itm_antioch_knight_horse_a,
     itm_antioch_knight_horse_b,
-    ########
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
@@ -32429,45 +28895,38 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
+    itm_dagger,
+    itm_pickaxe,
+    itm_military_pick,
+    itm_fighting_pick,
+    itm_spiked_club,
+    itm_pitch_fork,
+    itm_battle_fork,
+    itm_military_fork,
 
     itm_arming_cap,
     itm_1257_hood,
     itm_pilgrim_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_priest_cap_2,
 
     itm_peasant_tunic_a,
     itm_peasant_b,
     itm_peasant_c,
     itm_peasant_g,
-
     itm_peasant_f,
 
-    itm_leather_fur_boots,
+    itm_legs_with_shoes,
     itm_red_hose,
-    ###### itm_green_hose,
+    itm_green_hose,
     itm_grey_hose,
     itm_dark_grey_hose,
-    ###### itm_yellow_hose,
+    itm_yellow_hose,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
+    itm_shoes,
+    itm_blue_hose_mod,
+    
+    itm_targe_6,
+    itm_targe_5,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -32480,35 +28939,21 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_military_pick,
     itm_scythe,
     itm_dagger,
     itm_knife,
     itm_butchering_knife,
-
+    itm_fighting_pick,
     itm_javelin,
 
     itm_hunting_bow,
     itm_arrows,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
+    itm_1257_hood_2,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_priest_cap_3,
     itm_priest_cap_1,
     itm_arming_cap,
 
@@ -32517,19 +28962,20 @@ troops = [
     itm_archer_c,
     itm_peasant_d,
     itm_peasant_g,
-
     itm_peasant_f,
 
-    itm_leather_fur_boots,
+    itm_shoes,
     itm_red_hose,
-    ###### itm_green_hose,
+    itm_green_hose,
     itm_grey_hose,
     itm_dark_grey_hose,
-    ###### itm_yellow_hose,
+    itm_yellow_hose,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
+    itm_green_hose_b,
+    itm_blue_hose_mod,
+    
+    itm_targe_1,
+    itm_targe_2,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -32543,65 +28989,30 @@ troops = [
     0, 0, fac_kingdom_23,
     [
     itm_arrows,
-
     itm_hunting_bow,
-    itm_short_bow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-
-    itm_pilgrim_hat,
-    itm_dagger,
+    
     itm_dagger,
     itm_hatchet,
     itm_knife,
-    itm_knife,
-    itm_knife,
-    itm_butchering_knife,
-    itm_butchering_knife,
     itm_butchering_knife,
     itm_falchion,
 
     itm_1257_hood,
-
-    itm_elm2,
-
-    itm_priest_cap_2,
-
+    itm_priest_cap_3,
+    itm_koif_monie_a,
     itm_priest_cap_1,
     itm_arming_cap,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_koif_monie_b,
+    
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
 
     itm_sa_novici_tripoli_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
-
-
+    itm_sa_shields_archer_tripoli_1,
+    itm_sa_shields_archer_tripoli_2,
+    
+    itm_falshion_1,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
@@ -32617,68 +29028,20 @@ troops = [
     itm_arrows,
     itm_short_bow,
 
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_falchion,
-
-    itm_1257_hood,
-
-    itm_elm1,
-    itm_elm2,
-
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    
+    itm_sa_crusader_koif_a,
+    itm_light_capelina_crusader,
 
     itm_sa_archer_tripoli_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_axe_crusader_a,
+    itm_falshion_1,
+    itm_almogavar_sword,
 
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_2,
-    ########
-
+    itm_sa_shields_archer_tripoli_1,
+    itm_sa_shields_archer_tripoli_2,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -32691,75 +29054,32 @@ troops = [
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
     itm_crusade_bolt,
-    itm_crusade_bolt,
-
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
     itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    
+    itm_almogavar_sword,
     itm_falchion,
     itm_dagger,
     itm_butchering_knife,
     itm_knife,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
     itm_priest_cap_1,
     itm_arming_cap,
+    itm_koif_monie_b,
+    itm_koif_monie_a,
+    
+    itm_sa_shields_archer_tripoli_1,
+    itm_sa_shields_archer_tripoli_2,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
 
     itm_sa_novici_tripoli_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
+    itm_falshion_1,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -32771,80 +29091,24 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
     itm_crusade_bolt,
-    itm_crossbow,
     itm_crusaders_crossbows_a,
     itm_crusaders_crossbows_b,
     itm_crusaders_crossbows_c,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-
-    itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_kolpak_mail,
-
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
 
     itm_sa_archer_tripoli_armor,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_2,
-    ########
+    
+    itm_light_capelina_crusader,
+    itm_sa_crusader_koif_a,
+   
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    
+    itm_sa_shields_archer_tripoli_1,
+    itm_sa_shields_archer_tripoli_2,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -32857,81 +29121,34 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
-    itm_crusade_bolt,
-    itm_steel_bolts,
+    itm_crusaders_crossbows_c,
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_b,
     itm_crusade_bolt_heavy,
     itm_crusade_bolt_heavy_pierce,
 
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_sniper_crossbow,
-
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
     itm_military_cleaver_b,
 
-    itm_tab_shield_heater_c,
-
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    
     itm_sa_crusader_helm_5,
     itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_capelina_crusader,
 
     itm_sa_sergeant_armor_tripoli,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_axe_crusader_a,
+    itm_mace_6,
+    itm_falshion_1,
+    itm_modded_euro_shortsword_1,
+    itm_crusader_sword_c,
 
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_2,
-    itm_sa_shields_archer_antioch_2,
-    (itm_sa_shields_archer_antioch_1, imod_thick),
-    (itm_sa_shields_archer_antioch_2, imod_thick),
-    ########
+    itm_sa_tripoli_shield_1,
+    itm_sa_tripoli_shield_2,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -32946,69 +29163,25 @@ troops = [
     [
     itm_arming_cap,
     itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_elm8,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_flat_kettle_hat,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_koif_monie_a,
+    itm_koif_monie_b,
+    
     itm_falchion,
-
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_hatchet,
+    
     itm_sa_novici_tripoli_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
-    ########
-
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
+    itm_falshion_1,
+    
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+    
+    itm_sa_shields_archer_tripoli_1,
+    itm_sa_shields_archer_tripoli_2,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -33021,80 +29194,27 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_mail_coif,
-    itm_vik_norman_helmet_b,
-    itm_raf_spangen,
-    itm_elm8,
-    itm_elm2,
-    itm_elm3,
-    itm_kolpak_mail,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    
     itm_falchion,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_light_crusader_helm_1,
+    itm_light_crusader_helm_2,
 
     itm_sa_armor_infantry_tripoli,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    itm_almogavar_sword,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
-    ########
+    itm_sa_tripoli_shield_1,
+    itm_sa_tripoli_shield_2,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
@@ -33107,77 +29227,37 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
-
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
     itm_falchion,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
     itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
     itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
+    
     itm_sa_sergeant_armor_tripoli,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_axe_crusader_c,
+    
+    itm_falshion_1,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
 
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
-    itm_sa_shield_veteran_antioch_1,
-    itm_sa_shield_veteran_antioch_2,
-    itm_sa_shield_veteran_antioch_3,
-    itm_sa_shield_veteran_antioch_4,
-    ########
+    itm_sa_shield_veteran_tripoli_4,
+    itm_sa_shield_veteran_tripoli_3,
+    itm_sa_shield_veteran_tripoli_2,
+    itm_sa_shield_veteran_tripoli_1,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -33190,39 +29270,18 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_koif_monie_b,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
+    itm_koif_monie_a,
 
     itm_bill,
     itm_glaive,
     itm_scythe,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
 
     itm_sa_novici_tripoli_armor,
-    ########
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -33235,21 +29294,8 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
+    itm_light_crusader_helm_2,
+    itm_light_crusader_helm_1,
 
     itm_glaive,
     itm_bill,
@@ -33259,28 +29305,10 @@ troops = [
     itm_raf_two_handed_axe_a,
     itm_raf_two_handed_axe_b,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_armor_infantry_tripoli,
-    ########
-
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
@@ -33297,51 +29325,19 @@ troops = [
     itm_military_scythe,
     itm_shortened_military_scythe,
     itm_two_handed_cleaver,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
+    itm_bardiche,
+    itm_modded_guisarme,
+    
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
     itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_crusader_helm_9,
 
     itm_sa_sergeant_armor_tripoli,
-    ########
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
@@ -33355,71 +29351,31 @@ troops = [
     0, 0, fac_kingdom_23,
     [
     itm_light_lance,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_crusader_spear_c,
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
 
     itm_mace_2,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
+    itm_falshion_1,
+    itm_hatchet,
+    itm_falchion,
 
     itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_koif_monie_a,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
+    itm_koif_monie_b,
     itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
+    
     itm_sumpter_horse,
     itm_saddle_horse,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
     itm_sa_novici_tripoli_armor,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
-    ########
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
+    itm_sa_shields_archer_tripoli_1,
+    itm_sa_shields_archer_tripoli_2,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
@@ -33434,61 +29390,35 @@ troops = [
     [
     itm_lance,
     itm_light_lance,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
+    itm_mace_6,
     itm_mace_3,
     itm_mace_4,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
+    itm_falshion_1,
+    
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+    itm_crusader_spear_a,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
 
     itm_saddle_horse,
     itm_courser,
     itm_hunter,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_armor_infantry_tripoli,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
+    itm_light_crusader_helm_1,
+    itm_sa_crusader_koif_a,
 
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
+    itm_sa_tripoli_shield_1,
+    itm_sa_tripoli_shield_2,
 
     itm_european_horse_a,
     itm_european_horse_b,
@@ -33496,7 +29426,6 @@ troops = [
     itm_european_horse_d,
     itm_european_horse_e,
     itm_european_horse_f,
-    ########
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
@@ -33509,86 +29438,41 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_23,
     [
-    itm_heraldic_lance,
+    
     itm_heavy_lance,
-    itm_heavy_lance,
-
-    itm_cp391_sword,
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
-    itm_mace_2,
-    itm_mace_3,
+    itm_mace_6,
     itm_mace_3,
     itm_mace_4,
-    itm_mace_4,
 
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-    itm_wenceslav_helmet,
-    itm_vik_norman_helmet_a,
-    itm_vik_norman_helmet_b,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_b_2,
+    itm_axe_crusader_a,
+    itm_axe_crusader_c,
 
-    itm_mail_mittens,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
     itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
+    itm_sa_crusader_helm_8,
     itm_sa_crusader_helm_7,
 
     itm_sa_sergeant_armor_tripoli,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
+    itm_sa_shield_veteran_tripoli_4,
+    itm_sa_shield_veteran_tripoli_3,
+    itm_sa_shield_veteran_tripoli_2,
+    itm_sa_shield_veteran_tripoli_1,
 
-    itm_sa_shield_veteran_antioch_1,
-    itm_sa_shield_veteran_antioch_2,
-    itm_sa_shield_veteran_antioch_3,
-    itm_sa_shield_veteran_antioch_4,
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
 
-    (itm_sa_shield_veteran_antioch_1, imod_thick),
-    (itm_sa_shield_veteran_antioch_2, imod_thick),
-    (itm_sa_shield_veteran_antioch_3, imod_thick),
-    (itm_sa_shield_veteran_antioch_4, imod_thick),
-
-    (itm_european_horse_a, imod_heavy),
-    (itm_european_horse_b, imod_heavy),
-    (itm_european_horse_c, imod_heavy),
-    (itm_european_horse_d, imod_heavy),
-    (itm_european_horse_e, imod_heavy),
-    (itm_european_horse_f, imod_heavy),
-    (itm_hunter, imod_heavy),
-    (itm_horse_e, imod_heavy),
-    (itm_horse_d, imod_heavy),
-    ########
+    itm_tripoli_horse,
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
@@ -33601,57 +29485,23 @@ troops = [
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    
     itm_mace_2,
     itm_mace_3,
-    itm_mace_3,
-    itm_mace_4,
     itm_mace_4,
     itm_morningstar,
-    itm_morningstar,
-
     itm_heraldic_lance,
 
-    itm_mail_mittens,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    itm_mail_boots_long,
-    itm_splinted_greaves_long,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    ############# NEW v2.1 - CWE
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_b_2,
+    itm_axe_crusader_1,
+    itm_axe_crusader_d,
+    itm_axe_crusader_b,
+    
     itm_sa_crusader_hard_helm_1,
     itm_sa_crusader_hard_helm_2,
     itm_sa_crusader_hard_helm_3,
@@ -33660,15 +29510,12 @@ troops = [
     itm_sa_crusader_hard_helm_6,
     itm_sa_crusader_hard_helm_6_namet,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    itm_k_long_sword_c,
 
     itm_sa_knight_armor_tripolli_1,
     itm_sa_knight_armor_tripolli_1_cloak,
@@ -33677,16 +29524,14 @@ troops = [
     itm_sa_knight_armor_tripolli_3,
     itm_sa_knight_armor_tripolli_3_cloak,
 
-    (itm_sa_shield_knight_tripoli_1, imod_thick),
-    (itm_sa_shield_knight_tripoli_1, imod_thick),
+    itm_kau_mail_boots_dark_long,
 
-    (itm_sa_shield_knight_tripoli_1, imod_reinforced),
-    (itm_sa_shield_knight_tripoli_1, imod_reinforced),
+    itm_sa_shield_knight_tripoli_1, 
+    itm_sa_shield_knight_tripoli_2,
 
     itm_tripoli_knight_horse_a,
     itm_tripoli_knight_horse_b,
     itm_tripoli_knight_horse_c,
-    ########
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
@@ -33708,45 +29553,37 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
+    itm_pitch_fork,
+    itm_dagger,
+    itm_butchering_knife,
+    itm_knife,
+    itm_military_pick,
+    itm_pickaxe,
+    itm_battle_fork,
+    itm_military_fork,
 
     itm_arming_cap,
     itm_1257_hood,
     itm_pilgrim_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_priest_cap_3,
 
     itm_peasant_tunic_a,
     itm_peasant_b,
     itm_peasant_c,
     itm_peasant_g,
-
     itm_peasant_f,
-
-    itm_leather_fur_boots,
+   
     itm_red_hose,
-    ###### itm_green_hose,
+    itm_green_hose,
     itm_grey_hose,
     itm_dark_grey_hose,
     itm_yellow_hose,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
+    itm_green_hose_b,
+    itm_blue_hose_mod,
+    
+    itm_targe_2,
+    itm_targe_4,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -33759,35 +29596,20 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_pickaxe,
     itm_scythe,
     itm_dagger,
     itm_knife,
     itm_butchering_knife,
-
+    itm_spiked_club,
     itm_javelin,
+    itm_fighting_pick,
 
     itm_hunting_bow,
     itm_arrows,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
@@ -33796,19 +29618,20 @@ troops = [
     itm_archer_c,
     itm_peasant_d,
     itm_peasant_g,
-
     itm_peasant_f,
-
-    itm_leather_fur_boots,
+    
     itm_red_hose,
-    ###### itm_green_hose,
+    itm_green_hose,
     itm_grey_hose,
     itm_dark_grey_hose,
     itm_yellow_hose,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
+    itm_green_hose_b,
+    itm_blue_hose_mod,
+    
+    itm_targe_6,
+    itm_targe_3,
+    itm_targe_1,
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -33822,65 +29645,28 @@ troops = [
     0, 0, fac_kingdom_23,
     [
     itm_arrows,
-
     itm_hunting_bow,
-    itm_short_bow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-
-    itm_pilgrim_hat,
-    itm_dagger,
     itm_dagger,
     itm_hatchet,
     itm_knife,
-    itm_knife,
-    itm_knife,
-    itm_butchering_knife,
-    itm_butchering_knife,
     itm_butchering_knife,
     itm_falchion,
+    itm_almogavar_sword,
 
     itm_1257_hood,
-
-    itm_elm2,
-
-    itm_priest_cap_2,
-
     itm_priest_cap_1,
     itm_arming_cap,
+    itm_priest_cap_2,
+    itm_koif_monie_a,
+    itm_koif_monie_b,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
 
     itm_sa_novici_ibelin_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
-
-
+    itm_sa_shields_archer_ibelin_1,
+    itm_sa_shields_archer_ibelin_2,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
@@ -33895,69 +29681,22 @@ troops = [
     [
     itm_arrows,
     itm_short_bow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
     itm_falchion,
-
-    itm_1257_hood,
-
-    itm_elm1,
-    itm_elm2,
-
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    itm_almogavar_sword,
+    
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
+    
     itm_sa_archer_ibelin_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_2,
-    ########
-
+    itm_sa_crusader_koif_a,
+    itm_light_capelina_crusader,
+    
+    itm_axe_crusader_c,
+    itm_falshion_1,
+    
+    itm_sa_shields_archer_ibelin_1,
+    itm_sa_shields_archer_ibelin_2,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -33970,75 +29709,29 @@ troops = [
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
     itm_crusade_bolt,
-    itm_crusade_bolt,
-
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
     itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
     itm_falchion,
     itm_dagger,
     itm_butchering_knife,
     itm_knife,
-
+    itm_hatchet,
+    itm_almogavar_sword,
+    
     itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_priest_cap_2,
-    itm_vik_spangen_b,
+    itm_koif_monie_b,
     itm_priest_cap_1,
     itm_arming_cap,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_koif_monie_a,
+    
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
     itm_sa_novici_ibelin_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
+    itm_sa_shields_archer_ibelin_1,
+    itm_sa_shields_archer_ibelin_2,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -34050,80 +29743,23 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
     itm_crusade_bolt,
-    itm_crossbow,
     itm_crusaders_crossbows_a,
     itm_crusaders_crossbows_b,
     itm_crusaders_crossbows_c,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_kolpak_mail,
-
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    itm_light_capelina_crusader,
+    itm_sa_crusader_koif_a,
     itm_sa_archer_ibelin_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_2,
-    ########
+    itm_axe_crusader_c,
+    itm_falshion_1,
+    
+    itm_sa_shields_archer_ibelin_2,
+    itm_sa_shields_archer_ibelin_1,
     ],
     ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -34136,81 +29772,30 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
-    itm_crusade_bolt,
-    itm_steel_bolts,
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_c,
+    itm_crusaders_crossbows_b,
     itm_crusade_bolt_heavy,
     itm_crusade_bolt_heavy_pierce,
 
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_sniper_crossbow,
-
+    itm_axe_crusader_b,
+    itm_axe_crusader_a,
     itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_military_cleaver_b,
-
-    itm_tab_shield_heater_c,
-
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
+    itm_falshion_1,
+    itm_modded_euro_shortsword_2,
+    
     itm_sa_crusader_helm_5,
     itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_capelina_crusader,
 
     itm_sa_sergeant_ibelin_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_dethertir_gloves,
+    itm_sa_gloves_a,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
 
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_1,
-    itm_sa_shields_archer_antioch_2,
-    itm_sa_shields_archer_antioch_2,
-    (itm_sa_shields_archer_antioch_1, imod_thick),
-    (itm_sa_shields_archer_antioch_2, imod_thick),
-    ########
+    itm_sa_ibelin_shield,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -34225,69 +29810,25 @@ troops = [
     [
     itm_arming_cap,
     itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_elm8,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_flat_kettle_hat,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
+    itm_koif_monie_a,
+    itm_koif_monie_b,
+    
     itm_falchion,
-
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_hatchet,
+    
     itm_sa_novici_ibelin_armor,
+    
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
+    itm_falshion_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
-    ########
-
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+    
+    itm_sa_shields_archer_ibelin_1,
+    itm_sa_shields_archer_ibelin_2,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -34300,80 +29841,24 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_mail_coif,
-    itm_vik_norman_helmet_b,
-    itm_raf_spangen,
-    itm_elm8,
-    itm_elm2,
-    itm_elm3,
-    itm_kolpak_mail,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_falchion,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_armor_infantry_ibelin,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falchion,
+    itm_falshion_1,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
+    
+    itm_light_crusader_helm_1,
+    itm_light_crusader_helm_2,
 
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
-    ########
+    itm_sa_ibelin_shield,
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     euro_face_3, euro_face_4
@@ -34386,77 +29871,31 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
-
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_falchion,
-
-    ############# NEW v2.1 - CWE
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
+    
     itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
     itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_crusader_helm_8,
 
     itm_sa_sergeant_ibelin_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
+    
+    itm_axe_crusader_b,
+    itm_axe_crusader_c,
+    itm_falshion_1,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
-    itm_sa_shield_veteran_antioch_1,
-    itm_sa_shield_veteran_antioch_2,
-    itm_sa_shield_veteran_antioch_3,
-    itm_sa_shield_veteran_antioch_4,
-    ########
+    itm_sa_shield_veteran_ibelin_2,
+    itm_sa_shield_veteran_ibelin_1,
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -34469,39 +29908,21 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_koif_monie_b,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
+    itm_koif_monie_a,
 
     itm_bill,
     itm_glaive,
     itm_scythe,
+    itm_modded_cleaving_voulge,
+    itm_modded_glaive_roundel,
+    itm_modded_glaive_1,
 
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
 
     itm_sa_novici_ibelin_armor,
-    ########
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -34514,21 +29935,8 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
 
     itm_glaive,
     itm_bill,
@@ -34537,29 +29945,14 @@ troops = [
     itm_two_handed_cleaver,
     itm_raf_two_handed_axe_a,
     itm_raf_two_handed_axe_b,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    itm_modded_voulge,
+    itm_modded_fauchard_4,
+    itm_modded_fauchard_1,
+    
     itm_sa_armor_infantry_ibelin,
-    ########
-
+    
+    itm_light_crusader_helm_2,
+    itm_light_crusader_helm_1,
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
@@ -34576,51 +29969,20 @@ troops = [
     itm_military_scythe,
     itm_shortened_military_scythe,
     itm_two_handed_cleaver,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
+    itm_bardiche,
+    itm_shortened_voulge,
+    itm_modded_guisarme,
+   
     itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
     itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
 
     itm_sa_sergeant_ibelin_armor,
-    ########
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
     euro_face_1, euro_face_2
@@ -34633,72 +29995,27 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_light_lance,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mace_2,
-
-    itm_leather_fur_boots,
-    itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
+    itm_hatchet,
+    itm_falshion_1,
+    
     itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
+    itm_koif_monie_b,
     itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-    itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
+    itm_koif_monie_a,
+    
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
     itm_sumpter_horse,
     itm_saddle_horse,
 
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
     itm_sa_novici_ibelin_armor,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
-    ########
+    itm_sa_shields_archer_ibelin_2,
+    itm_sa_shields_archer_ibelin_1,
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
     euro_face_3, euro_face_4
@@ -34713,62 +30030,27 @@ troops = [
     [
     itm_lance,
     itm_light_lance,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_mace_3,
-    itm_mace_4,
+    itm_crusader_spear_c,
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_mace_6,
 
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
-    itm_saddle_horse,
-    itm_courser,
-    itm_hunter,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    
+    itm_light_crusader_helm_2,
+    itm_light_crusader_helm_1,
+    itm_sa_crusader_koif_a,
+    
     itm_sa_armor_infantry_ibelin,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
 
-    itm_sa_antioch_shield_1,
-    itm_sa_antioch_shield_2,
+    itm_sa_ibelin_shield,
 
     itm_european_horse_a,
     itm_european_horse_b,
@@ -34776,7 +30058,6 @@ troops = [
     itm_european_horse_d,
     itm_european_horse_e,
     itm_european_horse_f,
-    ########
     ],
     horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
     euro_face_1, euro_face_2
@@ -34789,86 +30070,38 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_23,
     [
-    itm_heraldic_lance,
-    itm_heavy_lance,
-    itm_heavy_lance,
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
 
-    itm_cp391_sword,
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
-    itm_mace_2,
-    itm_mace_3,
-    itm_mace_3,
-    itm_mace_4,
-    itm_mace_4,
-
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-    itm_wenceslav_helmet,
-    itm_vik_norman_helmet_a,
-    itm_vik_norman_helmet_b,
-
-    itm_mail_mittens,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
-    ############# NEW v2.1 - CWE
+    itm_crusader_knight_spear_a,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_b_2,
+    itm_axe_crusader_c,
+    itm_morningstar,
+    itm_mace_6,
+    
     itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
     itm_sa_crusader_helm_7,
 
     itm_sa_sergeant_ibelin_armor,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
+    itm_sa_shield_veteran_ibelin_2,
+    itm_sa_shield_veteran_ibelin_1,
 
-    itm_sa_shield_veteran_antioch_1,
-    itm_sa_shield_veteran_antioch_2,
-    itm_sa_shield_veteran_antioch_3,
-    itm_sa_shield_veteran_antioch_4,
-
-    (itm_sa_shield_veteran_antioch_1, imod_thick),
-    (itm_sa_shield_veteran_antioch_2, imod_thick),
-    (itm_sa_shield_veteran_antioch_3, imod_thick),
-    (itm_sa_shield_veteran_antioch_4, imod_thick),
-
-    (itm_european_horse_a, imod_heavy),
-    (itm_european_horse_b, imod_heavy),
-    (itm_european_horse_c, imod_heavy),
-    (itm_european_horse_d, imod_heavy),
-    (itm_european_horse_e, imod_heavy),
-    (itm_european_horse_f, imod_heavy),
-    (itm_hunter, imod_heavy),
-    (itm_horse_e, imod_heavy),
-    (itm_horse_d, imod_heavy),
-    ########
+    itm_european_horse_a, 
+    itm_european_horse_b, 
+    itm_european_horse_c, 
+    itm_european_horse_d, 
+    itm_european_horse_e, 
+    itm_european_horse_f, 
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
@@ -34881,57 +30114,29 @@ troops = [
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
-    itm_mace_2,
-    itm_mace_3,
-    itm_mace_3,
-    itm_mace_4,
-    itm_mace_4,
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    itm_k_long_sword_c,
+    itm_mace_6,
     itm_morningstar,
-    itm_morningstar,
-
+    itm_talak_warhammer,
     itm_heraldic_lance,
+    itm_axe_crusader_1,
+    itm_axe_crusader_d,
+    itm_axe_crusader_c,
+    itm_crusader_knight_spear_b_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_a,
 
-    itm_mail_mittens,
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
 
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    itm_mail_boots_long,
-    itm_splinted_greaves_long,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    ############# NEW v2.1 - CWE
+    itm_kau_mail_boots_dark_long,
+    
     itm_sa_crusader_hard_helm_1,
     itm_sa_crusader_hard_helm_2,
     itm_sa_crusader_hard_helm_3,
@@ -34940,16 +30145,6 @@ troops = [
     itm_sa_crusader_hard_helm_6,
     itm_sa_crusader_hard_helm_6_namet,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
-
     itm_sa_knight_armor_ibelin_1,
     itm_sa_knight_armor_ibelin_1_cloak,
     itm_sa_knight_armor_ibelin_2,
@@ -34957,14 +30152,11 @@ troops = [
     itm_sa_knight_armor_ibelin_3,
     itm_sa_knight_armor_ibelin_3_cloak,
 
-    (itm_sa_ibelin_shield_knight, imod_thick),
-
-    (itm_sa_ibelin_shield_knight, imod_reinforced),
+    itm_sa_ibelin_shield_knight,
 
     itm_ibelin_knight_horse_a,
     itm_ibelin_knight_horse_b,
     itm_ibelin_knight_horse_c,
-    ########
     ],
     horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
     euro_face_1, euro_face_2
@@ -34988,44 +30180,33 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_m,
-    itm_spear_n,
-    itm_spear_o,
-    itm_spear_p,
+    itm_targe_3,
+    itm_targe_5,
+    
+    itm_scythe,
+    itm_dagger,
+    itm_knife,
+    itm_butchering_knife,
+    itm_pickaxe,
+    itm_spiked_club,
+    itm_pitch_fork,
+    itm_battle_fork,
+    itm_military_fork,
 
-    itm_arming_cap,
     itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_norman_coif_d,
-    itm_raf_spangen,
+    itm_priest_cap_2,
+    itm_priest_cap_1,
+    itm_arming_cap,
 
-    itm_peasant_tunic_a,
-    itm_peasant_b,
-    itm_peasant_c,
+    itm_archer_a,
+    itm_archer_b,
+    itm_archer_c,
+    itm_peasant_d,
     itm_peasant_g,
 
-    itm_peasant_f,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
+    itm_legs_with_shoes,
+    itm_shoes,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
 
     ],
     foot_attrib_2, militia_wp, militia_skills,
@@ -35039,35 +30220,21 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_23,
     [
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
+    itm_targe_3,
+    itm_targe_5,
+    
     itm_scythe,
     itm_dagger,
     itm_knife,
     itm_butchering_knife,
-
+    itm_pickaxe,
     itm_javelin,
-
+    itm_pitch_fork,
     itm_hunting_bow,
     itm_arrows,
 
     itm_1257_hood,
-    itm_kolpak_mail,
-
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
     itm_priest_cap_2,
-    itm_vik_spangen_b,
     itm_priest_cap_1,
     itm_arming_cap,
 
@@ -35077,18 +30244,9 @@ troops = [
     itm_peasant_d,
     itm_peasant_g,
 
-    itm_peasant_f,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
+    itm_legs_with_shoes,
+    itm_shoes,
     itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -35102,65 +30260,21 @@ troops = [
     0, 0, fac_kingdom_23,
     [
     itm_arrows,
-
     itm_hunting_bow,
-    itm_short_bow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-
-    itm_pilgrim_hat,
-    itm_dagger,
     itm_dagger,
     itm_hatchet,
     itm_knife,
-    itm_knife,
-    itm_knife,
     itm_butchering_knife,
-    itm_butchering_knife,
-    itm_butchering_knife,
-    itm_falchion,
-
-    itm_1257_hood,
-
-    itm_elm2,
-
-    itm_priest_cap_2,
-
-    itm_priest_cap_1,
-    itm_arming_cap,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
     itm_sa_novici_jerusalem_armor,
-
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
-
-
+    
+    itm_sa_shields_archer_jerusalem_1,
+    itm_sa_shields_archer_jerusalem_2,
+    
+    itm_koif_monie_a,
+    itm_koif_monie_b,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
@@ -35175,69 +30289,19 @@ troops = [
     [
     itm_arrows,
     itm_short_bow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_falchion,
-
-    itm_1257_hood,
-
-    itm_elm1,
-    itm_elm2,
-
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_falshion_1,
+    itm_hatchet,
+    
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_archer_jerusalem_armor_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
     itm_sa_shields_archer_jerusalem_1,
     itm_sa_shields_archer_jerusalem_2,
-    ########
-
+    
+    itm_light_capelina_crusader,
+    itm_sa_crusader_koif_a,
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -35247,78 +30311,26 @@ troops = [
   ["euro_xbow_1_jerusalem",
      "Jerusalem Lesser Militia Crossbowman",
      "Jerusalem Lesser Militia Crossbowmen",
-    tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet,
+    tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_boots | tf_guarantee_helmet | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
     itm_crusade_bolt,
-    itm_crusade_bolt,
-
     itm_crossbow,
-    itm_crusaders_crossbows_a,
-    itm_crusaders_crossbows_b,
-    itm_crusaders_crossbows_c,
     itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
-    itm_light_crossbow,
-
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-    itm_falchion,
     itm_dagger,
     itm_butchering_knife,
     itm_knife,
+    itm_pickaxe,
+    
+    itm_sa_boot_light_crusader,
+    itm_sa_boot_light_crusader_1,
 
-    itm_1257_hood,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_priest_cap_2,
-    itm_vik_spangen_b,
-    itm_priest_cap_1,
-    itm_arming_cap,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_koif_monie_a,
+    itm_koif_monie_b,
     itm_sa_novici_jerusalem_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ########
+    itm_sa_shields_archer_jerusalem_1,
+    itm_sa_shields_archer_jerusalem_2,
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_3, euro_face_4
@@ -35330,76 +30342,19 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
     itm_crusade_bolt,
-    itm_crossbow,
     itm_crusaders_crossbows_a,
     itm_crusaders_crossbows_b,
     itm_crusaders_crossbows_c,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-
-    itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_raf_one_handed_axe_a,
-    itm_raf_one_handed_axe_b,
-    itm_raf_one_handed_axe_c,
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-    itm_raf_one_handed_axe_g,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_kolpak_mail,
-
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
-
+    
     itm_sa_archer_jerusalem_armor_1,
+    itm_sa_boot_average_crusader_1,
+    itm_sa_boot_average_crusader,
+    itm_sa_crusader_koif_a,
+    itm_light_capelina_crusader,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_falshion_1,
+    itm_hatchet,
 
     itm_sa_shields_archer_jerusalem_1,
     itm_sa_shields_archer_jerusalem_2,
@@ -35416,81 +30371,32 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_bolts,
-    itm_crusade_bolt,
-    itm_steel_bolts,
+    itm_crusaders_crossbows_a,
+    itm_crusaders_crossbows_c,
+    itm_crusaders_crossbows_b,
     itm_crusade_bolt_heavy,
     itm_crusade_bolt_heavy_pierce,
 
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_heavy_crossbow,
-    itm_sniper_crossbow,
-
-    itm_falchion,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_military_cleaver_b,
-
-    itm_tab_shield_heater_c,
-
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_b,
-    itm_footman_helmet,
-    itm_elm1,
-    itm_elm2,
-    itm_flat_kettle_hat,
-    itm_norman_coif_d,
-    itm_kettlehat_b,
-    itm_elm3,
-    itm_elm2,
-    itm_vik_spangen_b,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    
     itm_sa_crusader_helm_5,
     itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_capelina_crusader,
 
     itm_sa_sergeant_jerusalem_armor_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
 
-    itm_sa_shields_archer_jerusalem_1,
-    itm_sa_shields_archer_jerusalem_1,
-    itm_sa_shields_archer_jerusalem_2,
-    itm_sa_shields_archer_jerusalem_2,
-    (itm_sa_shields_archer_jerusalem_1, imod_thick),
-    (itm_sa_shields_archer_jerusalem_2, imod_thick),
-    ########
+    itm_sa_jerusalem_shield_1,
+    itm_sa_jerusalem_shield_2,
     ],
     ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -35503,71 +30409,22 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_arming_cap,
-    itm_1257_hood,
-    itm_pilgrim_hat,
-    itm_elm2,
-    itm_elm8,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_flat_kettle_hat,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_falchion,
-
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
 
     itm_sa_novici_jerusalem_armor,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
-
-    itm_sa_jerusalem_shield_1,
-    itm_sa_jerusalem_shield_2,
-    ########
-
+    itm_sa_shields_archer_jerusalem_2,
+    itm_sa_shields_archer_jerusalem_1,
+    
+    itm_falshion_1,
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
+    itm_hatchet,
+    
+    itm_koif_monie_b,
+    itm_koif_monie_a,
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -35580,76 +30437,20 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_a,
-    itm_spear_b,
-    itm_spear_c,
-    itm_spear_d,
-    itm_spear_e,
-    itm_spear_f,
-    itm_spear_h,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_mail_coif,
-    itm_vik_norman_helmet_b,
-    itm_raf_spangen,
-    itm_elm8,
-    itm_elm2,
-    itm_elm3,
-    itm_kolpak_mail,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_falchion,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
+    itm_light_crusader_helm_2,
+    itm_light_crusader_helm_1,
 
     itm_sa_armor_infantry_jerusalem_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
-
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_axe_crusader_a,
+    itm_axe_crusader_b,
+    itm_falshion_1,
+    
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_jerusalem_shield_1,
     itm_sa_jerusalem_shield_2,
@@ -35666,71 +30467,31 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_shield,
     0, 0, fac_kingdom_23,
     [
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
-
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kettlehat_c,
-    itm_flat_kettle_hat,
-    itm_norman_coif_a,
-    itm_norman_coif_c,
-    itm_norman_coif_d,
-    itm_norman_coif_e,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_raf_one_handed_axe_d,
-    itm_raf_one_handed_axe_e,
-    itm_raf_one_handed_axe_f,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_falchion,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
+    itm_sa_crusader_helm_9,
     itm_sa_crusader_helm_7,
+    
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
 
     itm_sa_sergeant_jerusalem_armor_1,
 
-    ##### itm_axe_crusader_a,
-    ##### itm_axe_crusader_b,
-    ##### itm_axe_crusader_c,
-    ##### itm_axe_crusader_d,
-    ##### itm_axe_crusader_1,
-    ##### itm_falshion_1,
-    ##### itm_falshion_2,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_axe_crusader_d,
+    itm_axe_crusader_1,
+    itm_falshion_1,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    
 
-    ##### itm_crusader_spear_a,
-    ##### itm_crusader_spear_b,
-    ##### itm_crusader_spear_c,
-    ##### itm_crusader_spear_inf_a,
-    ##### itm_crusader_spear_inf_b,
-    ##### itm_crusader_spear_inf_c,
+    itm_crusader_spear_a,
+    itm_crusader_spear_b,
+    itm_crusader_spear_c,
+    itm_crusader_spear_inf_a,
+    itm_crusader_spear_inf_b,
+    itm_crusader_spear_inf_c,
 
     itm_sa_shield_veteran_jerusalem_1,
     itm_sa_shield_veteran_jerusalem_2,
@@ -35749,36 +30510,14 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-
-    itm_bill,
-    itm_glaive,
-    itm_scythe,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    itm_koif_monie_a,
+    itm_koif_monie_b,
+    
+    itm_modded_glaive_1,
+    itm_modded_cleaving_voulge,
+    itm_modded_glaive_roundel,
 
     itm_sa_novici_jerusalem_armor,
     ########
@@ -35794,21 +30533,8 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_shield | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_glaive,
     itm_bill,
@@ -35817,29 +30543,13 @@ troops = [
     itm_two_handed_cleaver,
     itm_raf_two_handed_axe_a,
     itm_raf_two_handed_axe_b,
+    itm_modded_fauchard_1,
+    itm_modded_fauchard_4,
 
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_light_crusader_helm_1,
+    itm_light_crusader_helm_2,
 
     itm_sa_armor_infantry_jerusalem_1,
-    ########
-
     ],
     foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
     euro_face_3, euro_face_4
@@ -35856,50 +30566,21 @@ troops = [
     itm_military_scythe,
     itm_shortened_military_scythe,
     itm_two_handed_cleaver,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
+    itm_bardiche,
+    itm_shortened_voulge,
+    itm_modded_guisarme,
+    
     itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
     itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
+    itm_sa_crusader_helm_8,
     itm_sa_crusader_helm_7,
 
     itm_sa_sergeant_jerusalem_armor_1,
+    
+    itm_dethertir_gauntlets,
+    itm_gauntlets_crysader,
+    itm_sa_shoes_crusader,
+    itm_sa_vizantia_greaves,
     ########
     ],
     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
@@ -35913,71 +30594,26 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_helmet,
     0, 0, fac_kingdom_23,
     [
-    itm_light_lance,
-    itm_spear_j,
-    itm_spear_k,
-
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-
-    itm_mace_2,
-
-    itm_leather_fur_boots,
-    ###### itm_red_hose,
-    ###### itm_green_hose,
-    itm_grey_hose,
-    itm_dark_grey_hose,
-    ###### itm_yellow_hose,
-    itm_tied_up_shoes,
-    ###### itm_green_hose_b,
-    ###### itm_blue_hose_mod,
-
-    itm_priest_cap_1,
-    itm_mail_coif,
-    itm_great_helmet_d,
-    itm_elm1,
-    itm_elm2,
-    itm_great_helmet_decorative,
-    itm_norman_coif_d,
-    itm_kettle_cloth,
-    itm_elm3,
-    itm_elm8,
-    itm_maciejowski_kettle_hat_b,
-    itm_maciejowski_kettle_hat_a,
-    itm_norman_faceplate,
-    itm_priest_cap_2,
-    itm_norman_coif_a,
-    itm_vik_spangen_a,
-    itm_norman_coif_e,
-    itm_kettlehat_b,
-    itm_arming_cap,
-    itm_flat_topped_helmet_b,
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_kettle_hat_c,
-    itm_rhodok_four_plated_helmet,
-
-    itm_sumpter_horse,
-    itm_saddle_horse,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_koif_a,
-    itm_light_capelina_crusader,
-    itm_light_crusader_helm_1,
-    itm_light_crusader_helm_2,
-    itm_light_crusader_helm_3,
-    itm_capelina_crusader,
-
+    itm_sa_shields_archer_jerusalem_1,
+    itm_sa_shields_archer_jerusalem_2,
+   
+    itm_sa_boot_light_crusader_1,
+    itm_sa_boot_light_crusader,
+    
     itm_sa_novici_jerusalem_armor,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
+    itm_mace_6,
+    itm_axe_crusader_b,
+    itm_axe_crusader_a,
+    itm_falshion_1,
 
-    itm_sa_jerusalem_shield_1,
-    itm_sa_jerusalem_shield_2,
+    itm_saddle_horse,
+    
+    itm_koif_monie_a,
+    itm_koif_monie_b,
     ########
     ],
     horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
@@ -35991,64 +30627,27 @@ troops = [
     tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_23,
     [
-    itm_lance,
-    itm_light_lance,
-    itm_sword_type_xii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiv,
-    itm_mace_3,
-    itm_mace_4,
-
-    itm_norman_coif_c,
-    itm_mail_coif,
-    itm_elm1,
-    itm_elm2,
-    itm_elm3,
-    itm_elm6,
-    itm_flat_kettle_hat,
-    itm_flat_topped_helmet_b,
-    itm_kettlehat_a,
-    itm_kettlehat_b,
-    itm_kolpak_mail,
-    itm_maciejowski_kettle_hat_a,
-    itm_maciejowski_kettle_hat_b,
-    itm_norman_faceplate,
-    itm_norman_coif_b,
-    itm_norman_coif_a,
-    itm_rhodok_kettle_hat_c,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
-    itm_saddle_horse,
-    itm_courser,
-    itm_hunter,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
-    itm_sa_crusader_helm_2,
-    itm_sa_crusader_helm_3,
-    itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
-    itm_sa_crusader_helm_6,
-    itm_sa_crusader_helm_7,
+    itm_sa_boot_average_crusader,
+    itm_sa_boot_average_crusader_1,
 
     itm_sa_armor_infantry_jerusalem_1,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_sword_c,
+    
+    itm_crusader_spear_c,
+    itm_crusader_spear_b,
+    itm_crusader_spear_a,
+    itm_mace_6,
+    itm_axe_crusader_b,
+    itm_axe_crusader_a,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
 
     itm_sa_jerusalem_shield_1,
     itm_sa_jerusalem_shield_2,
+    
+    itm_light_capelina_crusader,
+    itm_light_crusader_helm_1,
+    itm_light_crusader_helm_2,
 
     itm_european_horse_a,
     itm_european_horse_b,
@@ -36069,86 +30668,41 @@ troops = [
     tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_horse,
     0, 0, fac_kingdom_23,
     [
-    itm_heraldic_lance,
-    itm_heavy_lance,
-    itm_heavy_lance,
+    itm_crusader_knight_spear_b_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_a,
 
-    itm_cp391_sword,
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-    itm_sword_type_xii,
-    itm_sword_type_xii,
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
-    itm_mace_2,
-    itm_mace_3,
-    itm_mace_3,
-    itm_mace_4,
-    itm_mace_4,
+    itm_kau_jerusalem,
 
-    itm_rhodok_nasal_helmet_a,
-    itm_rhodok_four_plated_helmet,
-    itm_raf_spangen,
-    itm_great_helmet_d,
-    itm_great_helmet_decorative,
-    itm_wenceslav_helmet,
-    itm_vik_norman_helmet_a,
-    itm_vik_norman_helmet_b,
+    itm_jerusalem_horse,
 
-    itm_mail_mittens,
-
-    itm_raf_mail_chausses,
-    itm_kau_mail_boots_dark_long,
-    itm_kau_mail_boots_dark_long,
-
-    itm_splinted_leather_greaves,
-    itm_mail_chausses,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_helm_1,
+    itm_sa_gloves_a,
+    itm_dethertir_gloves,
+    itm_sa_vizantia_greaves,
+    itm_sa_shoes_crusader,
+    
+    itm_sa_crusader_helm_9,
     itm_sa_crusader_helm_2,
     itm_sa_crusader_helm_3,
     itm_sa_crusader_helm_4,
-    itm_sa_crusader_helm_5,
+    itm_sa_crusader_helm_8,
     itm_sa_crusader_helm_6,
     itm_sa_crusader_helm_7,
 
-    itm_sa_sergeant_jerusalem_armor_1,
-
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_axe_crusader_b,
+    itm_axe_crusader_a,
+    itm_mace_6,
+    itm_crusader_sword_a,
+    itm_crusader_sword_b,
+    itm_crusader_sword_c,
+    itm_modded_templar_arming_sword,
+    itm_modded_damascus_sword,
 
     itm_sa_shield_veteran_jerusalem_1,
     itm_sa_shield_veteran_jerusalem_2,
     itm_sa_shield_veteran_jerusalem_3,
     itm_sa_shield_veteran_jerusalem_4,
-
-    (itm_sa_shield_veteran_jerusalem_1, imod_thick),
-    (itm_sa_shield_veteran_jerusalem_2, imod_thick),
-    (itm_sa_shield_veteran_jerusalem_3, imod_thick),
-    (itm_sa_shield_veteran_jerusalem_4, imod_thick),
-
-    (itm_european_horse_a, imod_heavy),
-    (itm_european_horse_b, imod_heavy),
-    (itm_european_horse_c, imod_heavy),
-    (itm_european_horse_d, imod_heavy),
-    (itm_european_horse_e, imod_heavy),
-    (itm_european_horse_f, imod_heavy),
-    (itm_hunter, imod_heavy),
-    (itm_horse_e, imod_heavy),
-    (itm_horse_d, imod_heavy),
-    ########
     ],
     horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
     euro_face_3, euro_face_4
@@ -36161,65 +30715,26 @@ troops = [
     tf_mounted | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
     0, 0, fac_kingdom_23,
     [
-    itm_cp391_sword,
-    itm_sword_type_xiii,
-    itm_sword_type_xiii,
-    itm_sword_type_xiiib,
-    itm_sword_type_xiiib,
-
-    itm_sword_type_xiiia,
-    itm_sword_type_xiiia,
-    itm_mace_2,
-    itm_mace_2,
-    itm_mace_3,
-    itm_mace_3,
-    itm_mace_4,
-    itm_mace_4,
-    itm_morningstar,
-    itm_morningstar,
-
+    
     itm_heraldic_lance,
+    itm_mace_6,
+    itm_axe_crusader_1,
+    itm_axe_crusader_d,
+    itm_axe_crusader_c,
+    itm_crusader_knight_spear_b_2,
+    itm_crusader_knight_spear_b,
+    itm_crusader_knight_spear_a_2,
+    itm_crusader_knight_spear_a,
 
-    itm_mail_mittens,
-
-    itm_mail_coif,
-
-    itm_mail_coif_c,
-    itm_rnd_helm_04,
-    itm_great_helmet_decorative,
-    itm_flat_topped_helmet_b,
-    itm_great_helmet_a,
-    itm_elm6,
-    itm_elm8,
-    itm_great_helmet_b,
-    itm_great_helmet_c,
-    itm_kettlehat_b,
-    itm_rnd_helm_03,
-
-    itm_norman_faceplate,
-    itm_rnd_helm_05,
-    itm_rnd_helm_06,
-    itm_mail_coif,
-    itm_rhodok_great_helmet,
-
-    itm_mail_boots_long,
-    itm_splinted_greaves_long,
-    itm_frenchpepperpot2,
-    itm_frenchpepperpot3,
-    itm_munitionshelm2,
-    itm_pepperpothelm1,
-    itm_munitionshelm1,
-    itm_frenchpepperpot,
-
-    ############# NEW v2.1 - CWE
-    itm_sa_crusader_hard_helm_1,
-    itm_sa_crusader_hard_helm_2,
-    itm_sa_crusader_hard_helm_3,
-    itm_sa_crusader_hard_helm_4,
-    itm_sa_crusader_hard_helm_5,
-    itm_sa_crusader_hard_helm_6,
-    itm_sa_crusader_hard_helm_6_namet,
-
+    itm_gauntlets_crysader,
+    itm_dethertir_gauntlets,
+    itm_raf_mail_chausses,
+    itm_mail_chausses,
+    
+    itm_sa_jerusalem_hard_helm,
+    itm_sa_jerusalem_hard_helm_namet,
+    itm_sa_fracia_helmet_jerusalem,
+    
     itm_sa_knight_armor_jerusalem_1,
     itm_sa_knight_armor_jerusalem_1_cloak,
     itm_sa_knight_armor_jerusalem_1_cloak_1,
@@ -36230,21 +30745,15 @@ troops = [
     itm_sa_knight_armor_jerusalem_3_cloak,
     itm_sa_knight_armor_jerusalem_3_cloak_1,
 
-    ##### itm_crusader_sword_a,
-    ##### itm_crusader_sword_b,
-    ##### itm_crusader_sword_c,
-    ##### itm_crusader_long_sword_a,
-    ##### itm_crusader_long_sword_b,
-    ##### itm_crusader_long_sword_c,
-    ##### itm_k_long_sword_a,
-    ##### itm_k_long_sword_b,
-    ##### itm_k_long_sword_c,
+    itm_crusader_long_sword_a,
+    itm_crusader_long_sword_b,
+    itm_crusader_long_sword_c,
+    itm_k_long_sword_a,
+    itm_k_long_sword_b,
+    itm_k_long_sword_c,
 
-    (itm_sa_jerusalem_shield_knight_1, imod_thick),
-    (itm_sa_jerusalem_shield_knight_2, imod_thick),
-
-    (itm_sa_jerusalem_shield_knight_1, imod_reinforced),
-    (itm_sa_jerusalem_shield_knight_2, imod_reinforced),
+    itm_sa_jerusalem_shield_knight_1, 
+    itm_sa_jerusalem_shield_knight_2, 
 
     itm_jerusalem_knight_horse_a,
     itm_jerusalem_knight_horse_b,
@@ -36277,8 +30786,8 @@ troops = [
    [
     itm_hatchet,
     itm_club,
-    ###### itm_spear_f,
-    ###### itm_spear_a,
+    # itm_spear_f,
+    # itm_spear_a,
     itm_butchering_knife,
     itm_falchion,
     itm_peasant_g,
@@ -36295,7 +30804,7 @@ troops = [
     itm_archer_b,
     itm_peasant_c,
     itm_peasant_d,
-    ##### itm_bare_legs,
+    # itm_bare_legs,
     ],
    def_attrib|level(4),wp(20),knows_common,bandit_face1, bandit_face2],
 
@@ -36315,11 +30824,11 @@ troops = [
     itm_green_hose_b,
     itm_legs_with_shoes,
     itm_shoes,
-   itm_balt_rus_cap,
-   itm_balt_footman_helmet,
-   itm_pilgrim_hat,
-   itm_priest_cap_2,
-   itm_vik_spangen_a,
+    itm_balt_rus_cap,
+    itm_balt_footman_helmet,
+    itm_pilgrim_hat,
+    itm_priest_cap_2,
+    itm_vik_spangen_a,
     itm_lit_pavise_f_3,
     itm_lit_pavise_e_3,
     itm_rohatyna,
@@ -37082,11 +31591,12 @@ troops = [
 	itm_shoes,
 	itm_legs_with_shoes,
 	itm_tied_up_shoes,
+    itm_red_hose,
 	
     itm_talak_buckler,
     ],
     ranged_attrib_3, archer_regulars_wp, archer_regulars_skills,
-    nord_face_young_1, swadian_face_old_2
+    euro_face_1, euro_face_2
   ],
 
 
@@ -37096,7 +31606,7 @@ troops = [
     tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_ranged,
     0, 0, fac_kingdom_9,
     [
-    itm_strely,
+    itm_arrows,
 
     itm_hatchet,
 	itm_almogavar_sword,
@@ -37108,21 +31618,19 @@ troops = [
 
     itm_thomas_padded_armour,
 
-    itm_almogavar_helmet,
-	itm_koif_monie_a,
-	itm_koif_monie_b,
+    itm_padded_coif,
+    itm_leather_cap,
     
     itm_leather_boots,
     itm_leather_fur_boots,
 	itm_kau_mail_boots,
 	itm_hunter_boots,
 	itm_hide_boots,
-	itm_highlander_boots_1,
 
     itm_talak_buckler,
     ],
     ranged_attrib_4, archer_veteran_wp, archer_veteran_skills,
-    nord_face_young_1, swadian_face_old_2
+    euro_face_1, euro_face_2
   ],
 
   ["english_retinue_longbowman",
@@ -37135,26 +31643,19 @@ troops = [
 	itm_barbed_arrows,
     
 	itm_sa_gloves_b,
-	itm_sa_gloves_a,
-	itm_leather_gloves,
-	itm_dethertir_gloves,
 	
     itm_long_bow,
-	itm_modded_euro_sidesword_1,
-	itm_modded_euro_sidesword_2,
+    itm_raf_one_handed_axe_f,
+	itm_modded_euro_shortsword_1,
+	itm_modded_euro_shortsword_2,
     
-	itm_light_capelina_crusader,
-	itm_light_crusader_helm_3,
-	itm_vik_spangen_b,
-	itm_modded_helmet_kettle_cloth_1,
-	itm_modded_helmet_kettle_cloth_2,
-	itm_modded_helmet_kettle_cloth_3,
-	itm_modded_helmet_kettle_cloth_4,
-	itm_footman_helmet,
-	itm_kettle_cloth,
-	itm_elm2,
-	itm_sa_crusader_koif_a,
-	itm_light_crusader_helm_2,
+	itm_modded_helmet_kettle_mail_3,
+    itm_modded_helmet_kettle_mail_1,
+    itm_modded_helmet_kettle_mail_5,
+    itm_modded_helmet_kettle_mail_2,
+    itm_mail_coif_b,
+    itm_capelina_crusader,
+    itm_sa_crusader_helm_10,
 	
 	itm_kau_rus_mail_shirt_b,
     
@@ -37164,7 +31665,7 @@ troops = [
 	itm_tab_shield_pavise_d,
     ],
     ranged_attrib_elite, archer_veteran_wp, archer_veteran_skills,
-    nord_face_young_1, swadian_face_old_2
+    euro_face_3, euro_face_4
   ],
 ############################
 
@@ -37177,15 +31678,8 @@ troops = [
      0, 0, fac_kingdom_9,
      [
   
-     itm_byz_psiloi_b,
+     itm_red_shirt,
   
-     itm_red_hose,
-     itm_green_hose,
-     itm_grey_hose,
-     itm_yellow_hose,
-	 itm_dark_grey_hose,
-	 itm_grey_hose,
-	 itm_green_hose_b,
 	 itm_shoes,
 	 itm_legs_with_shoes,
 	 itm_tied_up_shoes,
@@ -37193,6 +31687,7 @@ troops = [
      itm_head_wrappings,
 	 itm_arming_cap,
 	 itm_priest_cap_1,
+     itm_1257_hood,
   
      itm_hammer,
      itm_pitch_fork,
@@ -37203,8 +31698,7 @@ troops = [
 	 itm_military_hammer,
 	 itm_military_fork,
 	 itm_battle_fork,
-	 itm_short_bow,
-	 itm_arrows,
+	 itm_butchering_knife,
   
      itm_talak_buckler,
      ],
@@ -37219,22 +31713,16 @@ troops = [
      0, 0, fac_kingdom_9,
      [
   
-     itm_byz_psiloi_b,
+     itm_archer_a,
   
-     itm_red_hose,
-     itm_green_hose,
-     itm_grey_hose,
-     itm_yellow_hose,
-	 itm_dark_grey_hose,
-	 itm_grey_hose,
-	 itm_green_hose_b,
-	 itm_shoes,
+     itm_shoes,
 	 itm_legs_with_shoes,
 	 itm_tied_up_shoes,
   
      itm_head_wrappings,
 	 itm_arming_cap,
 	 itm_priest_cap_1,
+     itm_1257_hood_2,
   
      itm_hammer,
      itm_pitch_fork,
@@ -37245,6 +31733,9 @@ troops = [
 	 itm_military_hammer,
 	 itm_military_fork,
 	 itm_battle_fork,
+     itm_dagger,
+     itm_hunting_bow,
+     itm_arrows,
   
      itm_talak_buckler,
      ],
@@ -37259,20 +31750,25 @@ troops = [
      0, 0, fac_kingdom_9,
      [
   
-     itm_militia_tunic_b,
-  
-     itm_ankle_boots,
-     itm_hide_boots,
-	 itm_leather_fur_boots,
-  
-     itm_skullcap,
-	 itm_leather_warrior_cap,
-	 itm_koif_monie_a,
-	 itm_koif_monie_b,
-	 itm_leather_cap,
-	 itm_1257_hood,
-	 itm_padded_coif,
-  
+     itm_surcoat_d,
+     itm_kau_haubergeon_a,
+     
+     itm_yellow_hose,
+     itm_woolen_hose,
+     itm_green_hose_b,
+     itm_red_hose,
+     itm_dark_grey_hose,
+     
+     itm_elm2,
+     itm_light_capelina_crusader,
+     itm_light_crusader_helm_2,
+     itm_modded_helmet_kettle_cloth_1,
+     itm_modded_helmet_kettle_cloth_2,
+     itm_modded_helmet_kettle_cloth_3,
+     itm_norman_coif_c,
+     itm_norman_coif_d,
+     itm_flat_kettle_hat,
+     
      itm_spear_a,
 	 itm_spear_b,
 	 itm_spear_c,
@@ -37283,7 +31779,8 @@ troops = [
 	 itm_falchion,
 	 itm_modded_falchion_1,
   
-     itm_tab_shield_round_a,
+     itm_tab_shield_round_b,
+     itm_tab_shield_round_c,
      ],
      foot_attrib_3, footman_wp, footman_skills,
      euro_face_3, euro_face_4
@@ -37296,37 +31793,31 @@ troops = [
      0, 0, fac_kingdom_9,
      [
   
-     itm_kau_haubergeon_a,
+     itm_man_at_arms_c,
   
      itm_leather_boots,
      itm_kau_mail_boots,
 	 itm_green_hose,
 	 itm_red_hose,
 	 itm_grey_hose,
+     
+     itm_norman_coif_a,
+     itm_maciejowski_kettle_hat_a,
+     itm_rhodok_kettle_hat_c,
+     itm_kettle_cloth_cape_b,
+     itm_osp_faceplate,
 	
-     itm_light_capelina_crusader,
-	 itm_light_crusader_helm_3,
-	 itm_vik_spangen_b,
-	 itm_modded_helmet_kettle_cloth_1,
-	 itm_modded_helmet_kettle_cloth_2,
-	 itm_modded_helmet_kettle_cloth_3,
-	 itm_modded_helmet_kettle_cloth_4,
-	 itm_norman_coif_c,
-	 itm_footman_helmet,
-	 itm_almogavar_helmet,
-	 itm_kettle_cloth,
-	 itm_norman_coif_d,
-	 itm_sa_crusader_koif_a,
-	 itm_elm2,
-  
-     itm_modded_euro_sidesword_1,
-	 itm_modded_euro_sidesword_2,
+	 itm_modded_euro_shortsword_1,
      itm_spear_b,
 	 itm_spear_g,
 	 itm_spear_a,
 	 itm_spear_j,
+     itm_raf_one_handed_axe_h,
+     itm_raf_one_handed_axe_g,
+     itm_modded_euro_shortsword_3,
   
-     itm_tab_shield_round_c,
+     itm_tab_shield_round_d,
+     itm_tab_shield_round_e,
      ],
      foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
      euro_face_3, euro_face_4
@@ -37339,20 +31830,21 @@ troops = [
      0, 0, fac_kingdom_9,
      [
   
-     itm_mail_with_surcoat,
+     itm_modded_surcoat_22,
   
      itm_sa_shoes_crusader,
-	 itm_sa_vizantia_greaves,
   
      itm_mail_mittens,
-	 itm_gauntlets_crysader,
-	 itm_dethertir_gauntlets,
   
-     itm_sa_crusader_hard_helm_4,
+     itm_pepperpothelm1,
+     itm_munitionshelm1,
+     itm_munitionshelm2,
   
      itm_modded_euro_armingsword_1,
 	 itm_modded_euro_armingsword_2,
 	 itm_modded_euro_armingsword_3,
+     itm_raf_one_handed_axe_b,
+     itm_raf_one_handed_axe_e,
 	 itm_modded_damascus_sword,
 	 itm_cp391_sword,
 	 itm_sword_type_xiv,
@@ -37372,27 +31864,19 @@ troops = [
      0, 0, fac_kingdom_9,
      [
   
-     itm_surcoat_d,
+     itm_man_at_arms_c,
+     itm_norman_coif_a,
+     itm_maciejowski_kettle_hat_a,
+     itm_rhodok_kettle_hat_c,
+     itm_kettle_cloth_cape_b,
+     itm_osp_faceplate,
   
      itm_leather_boots,
 	 itm_leather_fur_boots,
 	 itm_hunter_boots,
 	 itm_hide_boots,
-	 itm_highlander_boots_1,
-  
-     itm_light_capelina_crusader,
-	 itm_light_crusader_helm_3,
-	 itm_vik_spangen_b,
-	 itm_modded_helmet_kettle_cloth_1,
-	 itm_kettle_cloth,
-	 itm_modded_helmet_kettle_cloth_2,
-	 itm_norman_coif_c,
-	 itm_norman_coif_d,
-	 itm_flat_kettle_hat,
-	 itm_vik_norman_helmet_e,
-	 itm_footman_helmet,
-	 itm_almogavar_helmet,
-  
+	 
+     itm_bill,
      itm_modded_billhook_fork_1,
      itm_modded_billhook_fork_2,
      itm_modded_billhook_2,
@@ -37408,21 +31892,10 @@ troops = [
      0, 0, fac_kingdom_9,
      [
   
-     itm_sa_vizantia_greaves,
 	 itm_sa_shoes_crusader,
   
      itm_mail_mittens,
-	 itm_dethertir_gauntlets,
-	 itm_gauntlets_crysader,
-  
-     itm_sa_crusader_helm_10,
-	 itm_capelina_crusader,
-	 itm_sa_crusader_helm_1,
-	 itm_elm3,
-	 itm_great_helmet_d,
-	 itm_kolpak_mail,
-	 itm_kettlehat_e,
-	 itm_kettlehat_d,
+	 itm_osp_great_helm_b,
 	 
 	 itm_coat_of_plates_red,
   
@@ -37453,10 +31926,9 @@ troops = [
 	 itm_grey_hose,
   
      itm_padded_coif,
-	 itm_leather_cap,
-	 itm_1257_hood,
 	 itm_koif_monie_a,
 	 itm_koif_monie_b,
+     itm_leather_cap,
 	 itm_turret_hat_green,
   
      itm_saddle_horse,
@@ -37468,6 +31940,7 @@ troops = [
 	 itm_spear_o,
      itm_modded_falchion_1,
 	 itm_falchion,
+     itm_hatchet,
 	 itm_modded_falchion_2,
 	 itm_modded_falchion_3,
   
@@ -37489,29 +31962,25 @@ troops = [
      itm_hunter_boots,
      itm_kau_mail_boots,
 	 itm_leather_boots,
-	 itm_highlander_boots_1,
+	 itm_hide_boots,
 	
-     itm_elm2,
-	 itm_vik_norman_helmet_e,
-	 itm_flat_kettle_hat,
-	 itm_footman_helmet,
-	 itm_almogavar_helmet,
-	 itm_kettle_cloth,
-	 itm_norman_coif_c,
-	 itm_norman_coif_d,
+     itm_light_crusader_helm_2,
 	 
-     itm_horse_d,
+	 itm_horse_d,
 	 itm_horse_e,
   
      itm_lance,
-     itm_modded_euro_shortsword_1,
-	 itm_modded_euro_shortsword_2,
-	 itm_modded_euro_shortsword_3,
 	 itm_light_lance,
-	 itm_cp391_sword,
+	 itm_raf_one_handed_axe_d,
+     itm_raf_one_handed_axe_f,
+     itm_raf_one_handed_axe_g,
 	 itm_sword_type_xiv,
+     itm_mace_6,
+     itm_modded_euro_sidesword_1,
+     itm_modded_euro_sidesword_2,
   
-     itm_tab_shield_small_round_b,
+     itm_tab_shield_kite_cav_a,
+     itm_tab_shield_heater_cav_a,
      ],
      horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
      euro_face_3, euro_face_4
@@ -37528,12 +31997,11 @@ troops = [
   
      itm_splinted_leather_greaves,
   
-     itm_dethertir_gloves,
 	 itm_leather_gloves,
-	 itm_sa_gloves_a,
   
      itm_mail_coif_b,
 	 itm_mail_coif,
+     itm_sa_crusader_helm_10,
   
      itm_courser,
    	 itm_european_horse_a,
@@ -37547,6 +32015,9 @@ troops = [
      itm_modded_damascus_sword,
 	 itm_lance,
 	 itm_talak_warhammer,
+     itm_morningstar,
+     itm_winged_mace,
+     itm_axe_crusader_a,
 	 itm_modded_euro_armingsword_1,
 	 itm_modded_euro_armingsword_2,
 	 itm_modded_euro_armingsword_3,
@@ -37555,7 +32026,7 @@ troops = [
 	 itm_tab_shield_kite_c,
      ],
      horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
    ],
 
    ["english_knight",
@@ -37566,43 +32037,16 @@ troops = [
      [
   
      itm_surcoat_bigod,
-	 itm_rnd_surcoat_08,
-	 itm_rnd_surcoat_17,
-	 itm_rnd_surcoat_20,
-	 itm_rnd_surcoat_23,
-	 itm_modded_surcoat_5,
-	 itm_modded_surcoat_11,
-	 itm_modded_surcoat_12,
   
      itm_mail_chausses,
 	 itm_raf_mail_chausses,
   
      itm_scale_gauntlets,
   
-     itm_rhodok_great_helmet,
 	 itm_sa_crusader_hard_helm_4,
-	 itm_sa_crusader_hard_helm_5,
-	 itm_mail_coif_c,
-	 itm_munitionshelm2,
-	 itm_sa_crusader_hard_helm_6,
 	 itm_rnd_helm_03,
-	 itm_rnd_helm_04,
-	 itm_rnd_helm_06,
-	 itm_rnd_helm_05,
-	 itm_modded_helmet_heavy_3,
-	 itm_great_helmet_a,
-	 itm_great_helmet_b,
-	 itm_great_helmet_c,
   
      itm_warhorse_bigod,
-	 itm_rnd_horse_08,
-	 itm_rnd_horse_10,
-	 itm_rnd_horse_17,
-	 itm_rnd_horse_20,
-	 itm_rnd_horse_21,
-	 itm_rnd_horse_03,
-	 itm_rnd_horse_22,
-	 itm_rnd_horse_23,
 	 
      itm_heraldic_lance,
      itm_modded_euro_longsword_1,
@@ -37610,8 +32054,10 @@ troops = [
 	 itm_mace_4,
    	 itm_morningstar,
 	 itm_talak_warhammer,
-	 itm_modded_euro_longsword_2,
 	 itm_heavy_lance,
+     itm_axe_crusader_a,
+     itm_axe_crusader_c,
+     itm_axe_crusader_d,
 	 itm_sword_type_xiia,
 	 itm_sword_type_xiiia,
 	
@@ -37619,7 +32065,7 @@ troops = [
 	 itm_tab_shield_kite_cav_b,
      ],
      horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
 
 ###French
@@ -37630,7 +32076,7 @@ troops = [
      0, 0, fac_kingdom_10,
      [
   
-     itm_leather_jerkin,
+     itm_archer_b,
   
      itm_blue_hose,
      itm_blue_hose_mod,
@@ -37639,10 +32085,12 @@ troops = [
 	 itm_shoes,
 	 itm_legs_with_shoes,
   
-     itm_leather_cap,
+     itm_priest_cap_2,
 	 itm_koif_monie_a,
 	 itm_koif_monie_b,
-	 itm_skullcap,
+	 itm_priest_cap_1,
+     itm_priest_cap_3,
+     itm_arming_cap,
   
      itm_hunting_bow,
      itm_arrows,
@@ -37663,16 +32111,23 @@ troops = [
      0, 0, fac_kingdom_10,
      [
 	
-	 itm_kau_mail_shirt_d,
+	 itm_balt_padded_a,
 	
 	 itm_blue_hose,
 	 itm_blue_hose_mod,
 	 itm_grey_hose,
 	 itm_shoes,
 	 itm_legs_with_shoes,
+     itm_blue_hose,
+     itm_blue_hose_mod,
     
 	 itm_skullcap,
 	 itm_leather_warrior_cap,
+     itm_footman_helmet,
+     itm_norman_coif_e,
+     itm_vik_spangen_a,
+     itm_vik_spangen_b,
+     itm_vik_norman_helmet_e,
 	
 	 itm_hunting_crossbow,
 	 itm_crossbow,
@@ -37697,21 +32152,15 @@ troops = [
      [
     
 	 itm_genoa_mail_c,
+     itm_kau_rus_d,
+     itm_kau_mail_shirt_c,
 	
-	 itm_hunter_boots,
-	 itm_leather_boots,
-	 itm_leather_fur_boots,
-	 itm_hide_boots,
-	 itm_highlander_boots_1,
+	 itm_splinted_leather_greaves,
 	
-	 itm_sa_gloves_a,
 	 itm_leather_gloves,
 	
-	 itm_vik_spangen_a,
-	 itm_footman_helmet,
-	 itm_vik_norman_helmet_e,
-	 itm_norman_coif_e,
-	 itm_light_crusader_helm_1,
+	 itm_sa_crusader_helm_6,
+	 itm_sa_crusader_helm_5,
 	 
      itm_heavy_crossbow,
 	 itm_steel_bolts,
@@ -37736,6 +32185,8 @@ troops = [
      [
 	
 	 itm_balt_shirt_e,
+     itm_peasant_f,
+     itm_peasant_d,
 	
 	 itm_woolen_hose,
 	 itm_shoes,
@@ -37771,6 +32222,8 @@ troops = [
      [
 	
 	 itm_balt_shirt_e,
+     itm_peasant_d,
+     itm_peasant_f,
 	
 	 itm_woolen_hose,
 	 itm_shoes,
@@ -37806,11 +32259,17 @@ troops = [
      [
 	
 	 itm_gambeson_c,
+     itm_surcoat_b,
+     itm_kau_mail_shirt_d,
 	
-	 itm_ankle_boots,
+	 itm_blue_hose_mod,
+     itm_blue_hose,
+     itm_woolen_hose,
+     itm_dark_grey_hose,
 	
-	 itm_vik_norman_helmet_a,
+	 itm_vik_spangen_a,
 	 itm_footman_helmet,
+     itm_leather_warrior_cap,
 	
 	 itm_spear_a,
 	 itm_spear_b,
@@ -37823,7 +32282,9 @@ troops = [
 	 itm_almogavar_sword,
 	 itm_falchion,
 	
-	 itm_nordic_shield,
+	 itm_wooden_shield,
+     itm_leather_covered_round_shield,
+     itm_tab_shield_small_round_n,
 	 ],
 	 foot_attrib_3, footman_wp, footman_skills,
      euro_face_1, euro_face_2
@@ -37836,15 +32297,16 @@ troops = [
      0, 0, fac_kingdom_10,
      [
 	
-	 itm_surcoat_b,
+	 itm_man_at_arms_b,
 	
-	 itm_highlander_boots_1,
 	 itm_leather_boots,
 	 itm_hide_boots,
 	 itm_hunter_boots,
+     itm_ankle_boots,
 	
-	 itm_light_crusader_helm_1,
+	 itm_raf_spangen,
 	 itm_footman_helmet,
+     itm_vik_norman_helmet_b,
 	
 	 itm_spear_a,
 	 itm_spear_p,
@@ -37852,10 +32314,10 @@ troops = [
 	 itm_spear_j,
 	 itm_long_spiked_club,
 	 itm_scythe,
-	 itm_modded_euro_shortsword_1,
-	 itm_modded_euro_shortsword_2,
+	 itm_military_cleaver_c,
+	 itm_falchion,
 	
-	 itm_tab_shield_round_c,
+	 itm_tab_shield_round_b,
      ],
      foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
      euro_face_1, euro_face_2
@@ -37876,10 +32338,13 @@ troops = [
 	
 	 itm_sa_crusader_helm_7,
 	 itm_vik_norman_helmet_c,
-	 itm_vik_norman_helmet_e,
-	 itm_elm8,
-	 itm_flat_topped_helmet_a,
-	 itm_flat_topped_helmet_b,
+	 itm_rhodok_four_plated_helmet,
+     itm_sa_crusader_helm_3,
+     itm_sa_crusader_helm_4,
+     itm_sa_crusader_helm_5,
+     itm_sa_crusader_helm_6,
+     itm_sa_crusader_helm_8,
+     itm_sa_crusader_helm_9,
 	
 	 itm_spear_k,
 	 itm_spear_a,
@@ -37890,10 +32355,11 @@ troops = [
 	 itm_modded_euro_sidesword_1,
 	 itm_modded_euro_sidesword_2,
 	
-	 itm_tab_shield_small_round_c,
+	 itm_tab_shield_kite_c,
+     itm_tab_shield_heater_c,
      ],
      foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
    ],
    
    ["french_volgue_militia",
@@ -37903,15 +32369,16 @@ troops = [
 	 0,0, fac_kingdom_10,
 	 [
 	
-	 itm_iberian_leather_armour_c,
+	 itm_man_at_arms_a,
 	
 	 itm_ankle_boots,
 	 itm_wrapping_boots,
 	 itm_hide_boots,
 	 itm_leather_fur_boots,
-	 itm_highlander_boots_1,
 	
-	 itm_light_crusader_helm_1,
+	 itm_raf_spangen,
+     itm_vik_norman_helmet_b,
+     itm_footman_helmet,
 	
 	 itm_modded_cleaving_voulge,
 	 itm_modded_hooked_voulge_3,
@@ -37928,21 +32395,18 @@ troops = [
      0, 0, fac_kingdom_10,
      [
   
-     itm_man_at_arms_a,
+     itm_surcoat_g,
 	
 	 itm_splinted_leather_greaves,
 	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
+	 itm_mail_mittens,
 	
-	 itm_vik_norman_helmet_a,
-	 itm_vik_norman_helmet_c,
 	 itm_rhodok_nasal_helmet_a,
 	 itm_elm8,
-	 itm_sa_crusader_helm_3,
-	 itm_sa_crusader_helm_4,
-	 itm_sa_crusader_helm_5,
-	 itm_sa_crusader_helm_9,
+     itm_elm6,
+     itm_flat_topped_helmet_b,
+     itm_flat_topped_helmet_a,
+	 itm_great_helmet_decorative,
 	
 	 itm_modded_voulge,
 	 itm_modded_spiked_voulge,
@@ -37950,7 +32414,7 @@ troops = [
 	 itm_shortened_voulge,
      ],
      foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
    ],	
 
     
@@ -37961,22 +32425,24 @@ troops = [
      0, 0, fac_kingdom_10,
 	 [
 	
-	 itm_man_at_arms_b,
+	 itm_teu_coat_of_plates,
 	
-	 itm_byz_cavalry_boots,
+	 itm_sa_shoes_crusader,
 	
 	 itm_mail_mittens,
 	
-	 itm_rhodok_four_plated_helmet,
-	 itm_flat_topped_helmet_a,
-	 itm_flat_topped_helmet_b,
-	 itm_vik_norman_helmet_a,
-	 itm_vik_norman_helmet_c,
+	 itm_sa_fracia_helmet_1,
+     itm_norman_faceplate,
+     itm_sa_crusader_hard_helm_2,
+     itm_modded_helmet_heavy_1,
+     itm_frenchpepperpot,
+     itm_frenchpepperpot2,
+     itm_frenchpepperpot3,
 	
 	 itm_modded_pike,
 	 ],
      foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
    
    
@@ -37999,12 +32465,18 @@ troops = [
 	 itm_legs_with_shoes,
 	
 	 itm_vik_norman_helmet_e,
-	 itm_turret_hat_green,
+	 itm_leather_warrior_cap,
+     itm_skullcap,
+     itm_priest_cap_1,
+     itm_priest_cap_2,
+     itm_priest_cap_3,
+     itm_arming_cap,
+     itm_padded_coif,
 	
 	 itm_saddle_horse,
 	 itm_sumpter_horse,
 	
-	 itm_hunting_bow,
+	 itm_short_bow,
 	 itm_arrows,
 	 itm_spear_b,
 	 itm_spear_c,
@@ -38039,6 +32511,8 @@ troops = [
 	 itm_vik_spangen_a,
 	 itm_footman_helmet,
 	 itm_light_crusader_helm_1,
+     itm_vik_spangen_b,
+     itm_light_crusader_helm_2,
 	 
      itm_spear_k,
 	 itm_spear_l,
@@ -38053,7 +32527,8 @@ troops = [
 	 itm_horse_d,
 	 itm_horse_e,
 	
-	 itm_tab_shield_small_round_c,
+	 itm_tab_shield_heater_cav_a,
+     itm_tab_shield_kite_cav_a,
      ],
      horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
      euro_face_3, euro_face_4
@@ -38094,12 +32569,18 @@ troops = [
 	 itm_sword_type_xii,
 	 itm_talak_warhammer,
 	 itm_mace_1,
+     itm_raf_one_handed_axe_e,
+     itm_raf_one_handed_axe_a,
+     itm_raf_one_handed_axe_c,
+     itm_morningstar,
+     itm_modded_templar_arming_sword,
+     itm_cp391_sword,
 	
  	 itm_tab_shield_kite_cav_a,
 	 itm_tab_shield_heater_cav_a,
 	 ], 
 	 horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
    
    ["french_knight",
@@ -38109,12 +32590,6 @@ troops = [
      0, 0, fac_kingdom_10,
      [
 	 itm_surcoat_france_a,
-	 itm_rnd_surcoat_13,
-	 itm_rnd_surcoat_12,
-	 itm_rnd_surcoat_15,
-	 itm_rnd_surcoat_02,
-	 itm_rnd_surcoat_08,
-	 itm_modded_surcoat_19,
 	
 	 itm_splinted_greaves_long,
 	
@@ -38124,22 +32599,18 @@ troops = [
 	 itm_frenchpepperpot,
 	 itm_frenchpepperpot2,
 	 itm_frenchpepperpot3,
-	
+     itm_sa_fracia_helmet_1,
+     itm_norman_faceplate,
+     
 	 itm_warhorse_france_a,
-	 itm_warhorse_blue,
-	 itm_rnd_horse_15,
-	 itm_rnd_horse_02,
-	 itm_rnd_horse_04,
-	 itm_warhorse_white,
 	
 	 itm_modded_euro_longsword_1,
-	 itm_modded_euro_longsword_2,
 	 itm_sword_type_xiiia,
 	 itm_sword_type_xiia,
 	 itm_modded_templar_arming_sword,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_raf_one_handed_axe_c,
+	 itm_axe_crusader_d,
+	 itm_axe_crusader_a,
+	 itm_axe_crusader_1,
 	 itm_heraldic_lance,
 	 itm_heavy_lance,
 	 itm_morningstar,
@@ -38150,7 +32621,7 @@ troops = [
 	 itm_tab_shield_heater_cav_b,
 	 ],
      horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
    
 
@@ -38198,7 +32669,7 @@ troops = [
 	 0,0, fac_kingdom_7,
 	 [
 	
-	 itm_archers_vest,
+	 itm_scale_shirt_a,
 	
 	 itm_sa_boot_average_crusader_1,
 	 itm_leather_boots,
@@ -38222,7 +32693,7 @@ troops = [
 	 itm_berber_shield_3,
 	 ],
 	 ranged_attrib_5, archer_veteran_wp, archer_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ], 
      
 	 
@@ -38258,7 +32729,7 @@ troops = [
 	 itm_lit_pavise_f_3,
 	 ],
 	 ranged_attrib_4, crossbow_regulars_wp, crossbow_regulars_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
    ],
    
    ["hungarian_pavise_crossbow",
@@ -38268,7 +32739,7 @@ troops = [
      0, 0, fac_kingdom_7,
      [
 	
-	 itm_bulgar_warrior_b,
+	 itm_scale_shirt_a,
 	 itm_baltic_ponted_helmet,
 	 itm_balt_footman_helmet,
 	 itm_balt_helmet_a,
@@ -38291,7 +32762,7 @@ troops = [
 	 itm_lit_pavise_g_3,
 	 ],
 	 ranged_attrib_5, crossbow_veteran_wp, crossbow_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
    ],
 
    
@@ -38383,6 +32854,7 @@ troops = [
 	
 	 itm_balt_rus_cap,
 	 itm_rus_hat_with_padding,
+     itm_steppe_cap,
 	
 	 itm_berber_spear,
 	 itm_modded_baltic_falchion_2,
@@ -38407,7 +32879,7 @@ troops = [
 	
 	 itm_rus_boots_a,
 	 itm_rus_boots_b,
-	 itm_rus_cav_boots,
+	 itm_lapcie,
 	
 	 itm_bulgar_helm_b,
 	 itm_balt_footman_helmet,
@@ -38435,12 +32907,11 @@ troops = [
      0, 0, fac_kingdom_7,
      [
   
-     itm_kau_rus_mail_shirt_a,
+     itm_rus_noble_mail,
   
-     itm_byzantine_greaves,
+     itm_splinted_leather_greaves,
   
-     itm_sa_gloves_a,
-	 itm_leather_gloves,
+	 itm_mail_mittens,
   
      itm_rus_helmet_b,
 	 itm_rus_helmet_3,
@@ -38455,7 +32926,7 @@ troops = [
      itm_tab_shield_heater_c,
      ],
      foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-     nord_face_young_1, swadian_face_old_2,
+     euro_face_3, euro_face_4
    ], 
 	
    ["hungarian_halbard_levy",
@@ -38493,7 +32964,7 @@ troops = [
 	 0,0, fac_kingdom_7,
 	 [
 	
-	 itm_surcoat_lithuania_a,
+	 itm_rus_leather_scale,
 	
 	 itm_sa_shoes_crusader,
 	 itm_sa_vizantia_greaves,
@@ -38511,7 +32982,7 @@ troops = [
 	 itm_long_axe,
 	 ],
      foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2,
+     euro_face_1, euro_face_2,
    ],
 	
 	
@@ -38530,17 +33001,19 @@ troops = [
 	 itm_lapcie,
 	 itm_berber_shoes,
   
-     itm_nordic_fur_cap,
+     itm_leather_steppe_cap_c,
+     itm_steppe_cap,
+     itm_leather_steppe_cap_a,
+     itm_leather_steppe_cap_b,
   
-     itm_european_horse_bandits_d,
-	 itm_european_horse_bandits_a,
-	 itm_european_horse_bandits_c,
+     itm_steppe_horse,
   
      itm_berber_spear,
      itm_modded_baltic_falchion_2,
 	 itm_modded_baltic_falchion_1,
+     itm_hatchet,
   
-     itm_lit_pavise_f_3,
+     itm_tab_shield_small_round_a,
      ],
      horse_attrib_2, nbl_lcv_wp, nbl_lcv_skills,
      euro_face_3, euro_face_4
@@ -38581,7 +33054,7 @@ troops = [
 	 itm_tab_shield_small_round_c,
      ],
      horse_attrib_4, cum_harcher_wp, cum_harcher_skills,
-     rhodok_face_younger_1, rhodok_face_old_2
+     euro_face_3, euro_face_4
    ],
    
    
@@ -38594,7 +33067,7 @@ troops = [
 	
 	 itm_haubergeon,
 	
-	 itm_byz_cavalry_boots,
+	 itm_rus_cav_boots,
 	
 	 itm_sa_gloves_a,
 	 itm_leather_gloves,
@@ -38606,7 +33079,7 @@ troops = [
 	
 	 itm_modded_baltic_sword_4,
 	 itm_baltic_sword,
-	 itm_berber_spear,
+	 itm_light_lance,
 	 itm_lance,
 	 itm_talak_warhammer,
 	 # itm_talak_mace,
@@ -38618,7 +33091,7 @@ troops = [
 	 itm_tab_shield_heater_cav_a,
 	 ], 
 	 horse_attrib_5, nbl_hlan_wp, nbl_hlan_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2,
    ],
    
    
@@ -38629,33 +33102,29 @@ troops = [
      0, 0, fac_kingdom_7,
      [
 	 itm_surcoat_hungary_a,
-	 itm_surcoat_bohemia,
-	
-	 itm_kau_mail_boots_dark_long,
-	
-	 itm_mail_mittens,
-	
-	 itm_great_helmet_c,
-	
-	 itm_warhorse_hungary_a,
-	 itm_warhorse_bohemia,
-	
-	 itm_bb_rus_sword_1,
-	 itm_modded_rus_sword_1,
-	 itm_bb_rus_sword_6,
-	 itm_heavy_lance,
-	 itm_heraldic_lance,
-	 itm_morningstar,
-	 itm_mace_4,
-	 itm_talak_warhammer,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_raf_one_handed_axe_c,
-	
-	 itm_lit_pavise_b_3,
+     itm_warhorse_hungary_a,
+     itm_kau_mail_boots_dark_long,
+     itm_mail_mittens,
+     itm_sa_crusader_hard_helm_1,
+     itm_pepperpothelm1,
+     itm_munitionshelm1,
+     itm_munitionshelm2,
+     
+     itm_mace_2,
+     itm_mace_4,
+     itm_mace_3,
+     itm_heavy_lance,
+     itm_heraldic_lance,
+     itm_sword_type_xiiib,
+     itm_sword_type_xii,
+     itm_sword_type_xiii,
+     itm_czekan,
+     
+     itm_tab_shield_kite_cav_b,
+     itm_tab_shield_heater_cav_b,
 	 ],
      horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
    ],
    
    
@@ -38668,19 +33137,17 @@ troops = [
      0, 0, fac_kingdom_5,
      [
 	
-	 itm_almogavar_a,
-	
-	 itm_green_hose,
-	 itm_yellow_hose,
-	 itm_red_hose,
+	 itm_kau_rus_e,
+	 itm_kau_rus_tunic_b,
+     itm_kau_rus_tunic_c,
+	 
 	 itm_berber_shoes,
 	 itm_shoes,
 	 itm_legs_with_shoes,
 	 
-	 itm_leather_warrior_cap,
-	 itm_rus_hat_with_padding,
-	 itm_balt_rus_cap,
-	
+	 itm_felt_hat,
+	 itm_felt_hat_b,
+     
 	 itm_pitch_fork,
 	 itm_hatchet,
 	 itm_fighting_pick,
@@ -38703,19 +33170,17 @@ troops = [
      0, 0, fac_kingdom_5,
      [
 	
-	 itm_almogavar_a,
-	
-	 itm_green_hose,
-	 itm_yellow_hose,
-	 itm_red_hose,
+	 itm_kau_rus_e,
+	 itm_kau_rus_tunic_b,
+     itm_kau_rus_tunic_c,
+	 
 	 itm_berber_shoes,
 	 itm_shoes,
 	 itm_legs_with_shoes,
 	 
-	 itm_leather_warrior_cap,
-	 itm_rus_hat_with_padding,
-	 itm_balt_rus_cap,
-	
+	 itm_felt_hat,
+	 itm_felt_hat_b,
+     
 	 itm_pitch_fork,
 	 itm_hatchet,
 	 itm_fighting_pick,
@@ -38724,7 +33189,7 @@ troops = [
 	 itm_military_hammer,
 	 itm_military_pick,
 	 itm_battle_fork,
-	 itm_short_bow,
+	 itm_hunting_bow,
 	 itm_arrows,
 	
 	 itm_targe_6,
@@ -38740,25 +33205,21 @@ troops = [
 	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
      0, 0, fac_kingdom_5,
      [
-	
-	 itm_kau_arab_lamellar_vest_b,
-	
-	 itm_ankle_boots,
-	 itm_berber_shoes,
-	 itm_tied_up_shoes,
-	
 	 itm_nomad_cap_b,
-	 itm_rus_militia_helmet,
-	 itm_balt_rus_cap,
-	
-	 itm_spear_b,
-	 itm_spear_d,
-	 itm_spear_e,
-	 itm_spear_a,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	
-	 itm_lit_pavise_e_3,
+     itm_balt_rus_cap,
+	 itm_nomad_cap,
+     itm_nomad_cap_c,
+     itm_rus_hat_with_padding,
+     itm_liv_sergeant,
+     itm_liv_tunic_a,
+     itm_grey_hose,
+     itm_green_hose,
+     itm_woolen_hose,
+     
+     itm_berber_spear,
+     itm_modded_baltic_falchion_2,
+     itm_hatchet,
+     itm_tab_shield_small_round_a,
 	 ],
 	 foot_attrib_3, footman_wp, footman_skills,
      euro_face_1, euro_face_2
@@ -38770,30 +33231,20 @@ troops = [
      tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_shield,
      0, 0, fac_kingdom_5,
      [
-	
-	 itm_padded_cloth,
-	
-	 itm_hunter_boots,
 	 itm_lapcie,
-	 itm_hide_boots,
-	 itm_leather_fur_boots,
-	
-	 itm_nomad_cap_b,
-	 itm_balt_footman_helmet,
-	 itm_rus_hat_with_padding,
-	 itm_nomad_cap,
-	 itm_nomad_cap_c,
-	
-	 itm_spear_a,
-	 itm_spear_i,
-	 itm_spear_m,
-	 itm_spear_c,
-	 itm_modded_baltic_falchion_1,
-	 itm_modded_baltic_falchion_2,
-	 itm_raf_one_handed_axe_c,
-	 itm_raf_one_handed_axe_b,
-	
-	 itm_lithuanian_shield9,
+     itm_balt_footman_helmet,
+     itm_steppe_helmet,
+     itm_bulgar_helm_b,
+     itm_megreb_spangen,
+     itm_teu_monk_surcoat_a,
+     
+     itm_military_cleaver_b,
+     itm_modded_baltic_falchion_1,
+     itm_modded_baltic_falchion_2,
+     itm_berber_spear,
+     itm_czekan,
+     itm_lit_pavise_f_3,
+     itm_lit_pavise_e_3,
 	 ],
 	 foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
      euro_face_3, euro_face_4
@@ -38807,29 +33258,21 @@ troops = [
      0, 0, fac_kingdom_5,
      [
    
-     # itm_md_surcoat_22,
-     itm_rnd_surcoat_22,
+     itm_splinted_leather_greaves,
      itm_civil_rich_boots_b,
 	 itm_civil_rich_boots_a,
-   
+     itm_kau_rus_noble_a,
      itm_mail_mittens,
    
-     itm_rhodok_four_plated_helmet,
-	 itm_polski_helm,
+     itm_polski_helm,
    
-     itm_bb_rus_sword_1,
-	 itm_bb_rus_sword_3,
-	 itm_bb_rus_sword_6,
-	 itm_spear_g,
-	 itm_spear_h,
-     itm_spear_k,
-     itm_raf_one_handed_axe_d,
-	 itm_raf_one_handed_axe_b,
-   
-     itm_lit_pavise_d_3,
+     itm_bb_rus_sword_3,
+	 itm_czekan,
+	 itm_rohatyna,
+     itm_lithuanian_shield9,
      ],
      foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
-     nord_face_young_1, swadian_face_old_2,
+     euro_face_3, euro_face_4
    ],
    
    
@@ -38839,17 +33282,15 @@ troops = [
      tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots,
      0,0, fac_kingdom_5,
      [
-   
-     itm_padded_cloth,
- 	
-     itm_hunter_boots,
-	 itm_lapcie,
-	 itm_hide_boots,
-	 itm_cuman_boots,
-	
-     itm_nomad_cap_b,
-	
-     itm_glaive,
+     itm_lapcie,
+     itm_rus_boots_a,
+     itm_rus_boots_b,
+     itm_teu_monk_surcoat_a,
+     itm_megreb_spangen,
+     itm_steppe_helmet,
+     itm_bulgar_helm_b,
+     itm_balt_footman_helmet,
+     
      itm_bill,
      ],
      foot_attrib_4, pikes_regulars_wp, pikes_regulars_skills,
@@ -38863,19 +33304,12 @@ troops = [
 	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_gloves,
      0,0, fac_kingdom_5,
 	 [
-	
-	 itm_rus_leather_scale_b,
-	
-	 itm_sa_boot_average_crusader_1,
-	 itm_sa_boot_light_crusader,
-	 itm_rus_boots_a,
-	 itm_rus_boots_b,
-	
-	 itm_sa_gloves_a,
 	 itm_leather_gloves,
-	
-	 itm_raf_spangen,
-	 itm_polski_helm,
+     itm_splinted_leather_greaves,
+     itm_rus_padded,
+     itm_kau_rus_b,
+     itm_rus_infantry_helmet,
+	 itm_baltic_ponted_helmet,
 	
 	 itm_raf_two_handed_axe_a,
 	 itm_raf_two_handed_axe_b,
@@ -38883,7 +33317,7 @@ troops = [
 	 itm_long_axe,
 	 ],
      foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
     ],
 	
    
@@ -38893,33 +33327,27 @@ troops = [
 	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
      0, 0, fac_kingdom_5,
      [
-    
-	 itm_balt_lamellar_coat_b,
-	
-	 itm_sa_boot_average_crusader_1,
-	 itm_rus_boots_a,
-	 itm_rus_boots_b,
-	
-	 itm_sa_gloves_a,
-	 itm_leather_gloves,
-	
-	 itm_raf_spangen,
-	
-	 itm_horse_d,
-	 itm_horse_e,
-	
-	 itm_light_crossbow,
-	 itm_bolts,
-	 itm_raf_one_handed_axe_d,
-	 itm_raf_one_handed_axe_e,
-	 itm_raf_one_handed_axe_g,
-	 itm_modded_baltic_falchion_1,
-	 itm_modded_baltic_falchion_2,
-	
-	 itm_lithuanian_shield9,
+     itm_light_crossbow,
+     itm_bolts,
+     itm_modded_baltic_falchion_1,
+     itm_modded_baltic_falchion_2,
+     itm_hatchet,
+     itm_targe_1,
+     itm_targe_5,
+     itm_targe_4,
+     
+     itm_rus_hat_with_padding,
+	 itm_balt_rus_cap,
+	 itm_militia_tunic_a,
+     itm_gambeson_b,
+     itm_woolen_hose,
+     itm_dark_grey_hose,
+     itm_green_hose_b,
+     
+     itm_little_samogitian
      ],
      horse_attrib_3, cum_horseman_wp, cum_horseman_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
    
    ["polish_retainer",
@@ -38928,31 +33356,26 @@ troops = [
 	 tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_boots|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves,
      0, 0, fac_kingdom_5,
      [
-	  
-	 # itm_byz_lamellar_b,
-	 itm_surcoat_f, ############### NEW v3.11 - 
-	
-	 itm_leather_gloves,
-	 itm_mail_boots_long,   ############### NEW v3.11 - 
-	
-	 itm_european_horse_d,
-	 itm_european_horse_a,
-	
-	 itm_mail_coif,
-	 itm_polski_helm,
-	 
-	 itm_modded_templar_arming_sword,
-	 itm_modded_euro_shortsword_1,
-	 itm_modded_euro_shortsword_2,
-	 itm_modded_euro_shortsword_3,
-	 itm_lance,
-	 itm_spear_d,
-	 itm_spear_k,
-	 itm_spear_e,
-	 itm_spear_l,
-	
-	 itm_lithuanian_shield9,
-     ],
+	 itm_light_lance,
+     itm_rohatyna,
+     itm_modded_rus_sword_1,
+     itm_military_cleaver_c,
+     itm_czekan,
+     
+     itm_little_samogitian,
+     itm_rus_cav_boots,
+     itm_rus_coat,
+     itm_steppe_helmet,
+     itm_bulgar_helm_b,
+     itm_megreb_spangen,
+     itm_balt_lamellar_coat_b,
+     itm_balt_lamellar_coat_a,
+     itm_balt_lamellar_vest_a,
+     
+     itm_lit_pavise_c_3,
+     itm_lit_pavise_b_3,
+     itm_lit_pavise_a_3,
+	 ],
      horse_attrib_4, nbl_mcv_wp, nbl_mcv_skills,
      euro_face_3, euro_face_4
    ],
@@ -38963,33 +33386,28 @@ troops = [
 	 tf_mounted |tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse| tf_guarantee_ranged | tf_guarantee_helmet|tf_guarantee_gloves,
      0, 0, fac_kingdom_5,
      [
-   
-     itm_rnd_surcoat_22,
-   
-     itm_civil_rich_boots_b,
-	 itm_civil_rich_boots_a,
-   
-     itm_mail_mittens,
-   
-     itm_rhodok_four_plated_helmet,
-	 itm_polski_helm,
-	 itm_mail_coif,
-	 itm_mail_coif_b,
+     itm_polski_helm,
+     itm_european_horse_d,
+     itm_european_horse_a,
+     itm_european_horse_b,
      
-	 itm_european_horse_d,
-	 itm_european_horse_a,
-    
-     itm_javelin,
      itm_throwing_spears,
-     itm_bb_rus_sword_1, 
-	 itm_bb_rus_sword_3,
-	 itm_bb_rus_sword_6,
-	 itm_modded_euro_armingsword_2,
-	 
-     itm_lit_pavise_d_3,
+     itm_bb_rus_sword_3,
+     itm_balt_javelin,
+     itm_lance,
+     itm_light_lance,
+     itm_czekan,
+     itm_modded_rus_sword_1,
+     itm_lithuanian_shield9,
+     
+     itm_civil_rich_boots_a,
+     itm_civil_rich_boots_b,
+     itm_leather_gloves,
+     itm_splinted_leather_greaves,
+     itm_kau_rus_noble_a,
      ],
      horse_attrib_5, cum_harcher_wp, cum_harcher_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_3, euro_face_4
    ],
    
    ["polish_guard",
@@ -39000,31 +33418,31 @@ troops = [
      [
 	 
 	 itm_surcoat_pol_a,
-	 
+	 itm_warhorse_poland_b,
 	 itm_kau_mail_boots_dark_long,
 	 
 	 itm_mail_mittens,
-	 
-	 itm_frenchpepperpot3,
+	 itm_munitionshelm2,
+	 itm_munitionshelm1,
 	 itm_pepperpothelm1,
-	 itm_polski_helm,
+	 itm_maciejowski_helm,
+     itm_rhodok_great_helmet,
 	 
-	 itm_warhorse_pol_a,
-	 
-	 itm_modded_euro_longsword_1,
-	 itm_modded_euro_longsword_2,
-	 itm_heavy_lance,
-	 itm_lance,
-	 itm_talak_warhammer,
-	 # itm_talak_mace,
-	 itm_morningstar,
-	 itm_raf_one_handed_axe_h,
-	 itm_raf_one_handed_axe_g,
-	 
-     itm_lit_pavise_b_3,
+     itm_heraldic_lance,
+     itm_heavy_lance,
+     itm_bb_serbian_sword_1,
+	 itm_bb_serbian_sword_5,
+	 itm_bb_rus_sword_6,
+	 itm_bb_rus_sword_1,
+     itm_czekan,
+     itm_mace_2,
+     itm_talak_warhammer,
+     itm_mace_4,
+     itm_tab_shield_kite_cav_b,
+     itm_tab_shield_heater_cav_b,
      ],
 	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
    
 
@@ -39036,10 +33454,15 @@ troops = [
 	 [
 	
 	 itm_almogavar_a,
-	
+	 itm_almogavar_b,
 	 itm_green_hose,
-	
-	 itm_leather_warrior_cap,
+     itm_grey_hose,
+     itm_dark_grey_hose,
+     itm_woolen_hose,
+	 itm_nomad_cap_c,
+     itm_leather_steppe_cap_a,
+	 itm_rus_hat_with_padding,
+     itm_pelt_coat,
 	
 	 itm_hunting_bow,
 	 itm_arrows,
@@ -39059,23 +33482,26 @@ troops = [
 	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
 	 0,0, fac_kingdom_5,
 	 [
+	 itm_bulgar_helm_b,
+     itm_balt_padded_a,
+     itm_steppe_helmet,
+     itm_megreb_spangen,
+     itm_rus_boots_b,
+     itm_rus_boots_a,
+     itm_lapcie,
+     itm_padded_cloth,
+     itm_leather_gloves,
+     itm_kau_rus_mail_shirt_a,
 	 
-	 itm_kau_arab_lamellar_vest_b,
-	
-	 itm_ankle_boots,
-	
-	 itm_nomad_cap_b,
-	 itm_polski_helm,
-	
+	 itm_czekan,
 	 itm_short_bow,
 	 itm_strely,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	
+	 itm_modded_baltic_falchion_1,
+	 itm_modded_baltic_falchion_2,
 	 itm_lit_pavise_e_3,
 	 ],
 	 ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
 	 
 	 
@@ -39085,18 +33511,22 @@ troops = [
 	 tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_ranged|tf_guarantee_shield,
 	 0,0, fac_kingdom_5,
 	 [
-	 
-	 itm_kau_arab_lamellar_vest_b,
-	
-	 itm_ankle_boots,
-	
-	 itm_nomad_cap_b,
-	 
+	 itm_almogavar_c,
+     itm_almogavar_a,
+     itm_almogavar_b,
+     itm_pelt_coat,
+     itm_rus_hat_with_padding,
+     itm_balt_rus_cap,
+	 itm_nomad_cap_c,
+     itm_woolen_hose,
+     itm_dark_grey_hose,
+     itm_grey_hose,
+     
+     itm_butchering_knife,
+	 itm_dagger,
+	 itm_hatchet,
 	 itm_hunting_crossbow,
 	 itm_bolts,
-	 itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 
 	 itm_targe_4,
 	 ],
      ranged_attrib_3, skirmisher_wp, skirmisher_skills,
@@ -39112,28 +33542,27 @@ troops = [
 	 tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_boots| tf_guarantee_ranged| tf_guarantee_shield| tf_guarantee_gloves,
 	 0,0, fac_kingdom_10,
 	 [
-     
-     itm_surcoat_over_mail,
-     
      itm_splinted_leather_greaves,
-
-     itm_mail_mittens,
-
-     itm_raf_spangen,
-	 itm_vik_norman_helmet_b,
-
-     itm_long_bow,
-     itm_strely,
-     itm_raf_one_handed_axe_a,
-	 itm_raf_one_handed_axe_b,
-	 itm_raf_one_handed_axe_c,
-	 itm_modded_falchion_3,
-	 itm_almogavar_sword,
+     itm_veteran_surcoat_b,
+     itm_leather_gloves,
+     itm_sa_shoes_crusader,
+     itm_osp_faceplate,
+     itm_kettle_cloth_cape,
+     itm_norman_coif_a,
      
-     itm_gaelic_shield_a,
+     itm_long_bow,
+     itm_arrows,
+     itm_raf_one_handed_axe_a,
+     itm_raf_one_handed_axe_b,
+     itm_raf_one_handed_axe_c,
+     itm_modded_falchion_3,
+     itm_modded_euro_shortsword_2,
+     itm_modded_euro_shortsword_1,
+     itm_modded_euro_shortsword_3,
+     itm_gaelic_shield_b,
      ],
 	 ranged_attrib_5, welsh_veteran_archer_wp, welsh_veteran_archer_skills,
-     nord_face_young_1, swadian_face_old_2
+     euro_face_1, euro_face_2
    ],
   
    ["magyar_cavalry",
@@ -39142,51 +33571,325 @@ troops = [
 	 tf_mounted | tf_guarantee_ranged | tf_guarantee_helmet | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_horse | tf_guarantee_gloves,
      0, 0, fac_kingdom_7,
      [
-	 
-	 itm_lamellar_vest,
-	 
-	 itm_byz_cavalry_boots,
-	 
 	 itm_leather_gloves,
-	 
-	 itm_steppe_helmet,
-	 
-	 itm_steppe_horse,
-	 itm_saracin_hard_horses_b_v1,
-	 
-	 itm_strong_bow,
-	 itm_barbed_arrows,
-	 itm_modded_baltic_sword_2,
-	 
-	 itm_targe_4,
+     itm_steppe_helmet,
+     
+     itm_strong_bow,
+     itm_targe_4,
+     itm_targe_1,
+     itm_targe_2,
+     itm_strely,
+     itm_modded_baltic_sword_3,
+     itm_modded_baltic_sword_4,
+     
+     itm_little_samogitian,
+     itm_surcoat_novgorod,
+     itm_splinted_leather_greaves,
+     itm_mamluke_helm_b,
+     itm_berber_spear,
 	 ],
 	 horse_attrib_elite, cum_vharcher_wp, cum_vharcher_skills,
-     khergit_face_middle_1, khergit_face_older_2
+     nord_face_young_1, swadian_face_old_2
    ],
 	 
    ["hussar_cavalry",
      "Hussar Cavalry",
-	 "Hussar Cavalry",
+	 "Hussar Cavalrymen",
 	 tf_mounted | tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_horse | tf_guarantee_boots | tf_guarantee_gloves,
      0, 0, fac_kingdom_5,
      [
-     itm_balt_lamellar_vest_c,
-	 itm_byz_cavalry_boots,
-	 itm_leather_gloves,
-	 itm_raf_spangen,
+     itm_lance,
+     itm_light_lance,
+     itm_tab_shield_small_round_c,
+     itm_bb_serbian_sword_1,
+     itm_bb_serbian_sword_5,
      
-	 itm_lance,
-	 itm_light_lance,
-	 itm_bb_rus_sword_1,
-	 
-	 itm_arabian_horse_a,
-	 
-	 itm_tab_shield_small_round_c,
+     itm_little_samogitian,
+     itm_rus_helm_a,
+     itm_splinted_leather_greaves,
+     itm_mail_mittens,
+     itm_surcoat_lithuania_a,
      ],
      horse_attrib_elite, cum_hlancer_wp, cum_hlancer_skills,
      nord_face_young_1, swadian_face_old_2
    ],
+   
+############# New v4.0
+   ["swedish_knight",
+     "Swedish_Knight",
+     "Swedish_Knights",
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_14,
+     [
+	 itm_mail_mittens,
+     itm_tab_shield_kite_cav_b,
+     itm_tab_shield_heater_cav_b,
+     itm_surcoat_sweden_a,
+     itm_warhorse_sweden_a,
+     
+     itm_modded_scandinavian_sword_2,
+     itm_modded_scandinavian_sword_3,
+     itm_raf_one_handed_axe_h,
+     itm_kau_mail_boots_dark_long,
+     
+     itm_heraldic_lance,
+     itm_heavy_lance,
+     itm_mace_3,
+     itm_mace_4,
+     itm_mace_2,
+     itm_sword_viking_1,
+     itm_sword_viking_2,
+     itm_sword_viking_3,
+     
+     itm_rhodok_great_helmet,
+     itm_great_helmet_c,
+     itm_rnd_helm_04,
+     itm_rnd_helm_05,
+     ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
+
+   ["norwegian_knight",
+     "Norwegian_Knight",
+     "Norwegian_Knights",
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_11,
+     [
+	 itm_warhorse_norway_a,
+     itm_surcoat_norway_a,
+     itm_mail_mittens,
+     itm_modded_scandinavian_sword_2,
+     itm_modded_scandinavian_sword_3,
+     itm_tab_shield_kite_cav_b,
+     itm_tab_shield_heater_cav_b,
+     itm_kau_mail_boots_dark_long,
+     
+     itm_heraldic_lance,
+     itm_heavy_lance,
+     itm_raf_one_handed_axe_h,
+     
+     itm_rhodok_great_helmet,
+     itm_rnd_helm_06,
+     
+     itm_mace_4,
+     itm_mace_2,
+     itm_mace_3,
+     itm_sword_viking_1,
+     itm_sword_viking_2,
+     itm_sword_viking_3,
+	 ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     nord_face_young_1, swadian_face_old_2
+   ],
 	
+   ["crown_of_aragon_knight",
+     "Crown_of_Aragon_Knight",
+     "Crown_of_Aragon_Knights",
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_17,
+     [
+	 itm_mail_mittens,
+     
+     itm_heraldic_lance,
+     itm_andalusian_sword,
+     itm_moorish_axe,
+     itm_iberian_cleaver,
+     itm_modded_mace_1,
+     itm_tab_shield_iberia_c,
+     
+     itm_kau_aragon_c,
+     itm_kau_aragon_b,
+     itm_kau_aragon_a,
+     itm_kau_aragon_knight,
+     itm_kau_mail_boots_dark_long,
+     itm_kau_epyres_helmet,
+     itm_kau_pons_helmet,
+     itm_kau_alego_helmet,
+     itm_kau_urgell_helmet,
+     
+     itm_kau_reino_horse,
+     itm_kau_montcada_horse,
+     itm_kau_epyres_horse,
+	 ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     latin_face_1, latin_face_2
+   ],
+   
+   ["crown_of_castile_knight",
+     "Crown_of_Castile_Knight",
+     "Crown_of_Castile_Knights",
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_18,
+     [
+	 itm_mail_mittens,
+     
+     itm_heraldic_lance,
+     itm_andalusian_sword,
+     itm_moorish_axe,
+     itm_iberian_cleaver,
+     itm_modded_mace_1,
+     itm_tab_shield_iberia_c,
+     
+     itm_castile_horse,
+     
+     itm_kau_castile_c,
+     itm_kau_castile_b,
+     itm_kau_castile_a,
+     itm_kau_castile_knight,
+     itm_kau_mail_boots_dark_long,
+     itm_andalusian_helmet_a,
+     itm_andalusian_helmet_d,
+     itm_andalusian_helmet_e,
+     itm_andalusian_helmet_b,
+	 ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     latin_face_1, latin_face_2
+   ],
+   
+   ["portuguese_knight",
+     "Portuguese_Knight",
+     "Portuguese_Knights",
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_16,
+     [
+	 itm_mail_mittens,
+     
+     itm_heraldic_lance,
+     itm_andalusian_sword,
+     itm_moorish_axe,
+     itm_iberian_cleaver,
+     itm_modded_mace_1,
+     itm_tab_shield_iberia_c,
+     
+     itm_portugal_horse,
+     
+     itm_kau_portugal_a,
+     itm_kau_portugal_b,
+     itm_kau_portugal_c,
+     itm_kau_portugal_d,
+     itm_kau_mail_boots_dark_long,
+     itm_andalusian_helmet_a,
+     itm_andalusian_helmet_d,
+     itm_andalusian_helmet_e,
+     itm_andalusian_helmet_b,
+	 ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     latin_face_1, latin_face_2
+   ],
+   
+   ["sicilian_knight",
+     "Sicilian_Knight",
+     "Sicilian_Knights",
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_24,
+     [
+	 itm_kau_sicily_a,
+     itm_kau_sicily_b,
+     itm_modded_helmet_heavy_2,
+     itm_kau_mail_boots_dark_long,
+     itm_mail_mittens,
+     itm_warhorse_gslask,
+     
+     itm_sword_type_xii,
+     itm_sword_type_xiii,
+     itm_sword_type_xiiib,
+     itm_heraldic_lance,
+     itm_heavy_lance,
+     itm_tab_shield_heater_cav_b,
+     itm_tab_shield_kite_cav_b,
+     
+     itm_mace_2,
+     itm_mace_3,
+     itm_mace_4,
+     itm_raf_one_handed_axe_b,
+	 ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   ["imperial_mounted_crossbow",
+     "Imperial_Mounted_Crossbow",
+     "Imperial_Mounted_Crossbowmen",
+     tf_guarantee_ranged| tf_guarantee_boots| tf_guarantee_armor| tf_guarantee_helmet| tf_guarantee_shield | tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_6,
+     [
+	 itm_mail_coif_b,
+     itm_capelina_crusader,
+     itm_teu_monk_surcoat_a,
+     itm_splinted_leather_greaves,
+     itm_leather_gloves,
+     
+     itm_light_crossbow,
+     itm_steel_bolts,
+     itm_falchion,
+     itm_modded_falchion_2,
+     itm_modded_falchion_1,
+     itm_tab_shield_heater_cav_a,
+     itm_tab_shield_kite_cav_a,
+     
+     itm_courser,
+     itm_horse_d,
+     itm_horse_e,
+	 ],
+     horse_attrib_4, nbl_horsemen_skills, nbl_recruit_wp,
+     euro_face_3, euro_face_4
+   ],
+   
+   ["imperial_zweihander",
+     "Imperial_Zweihander",
+     "Imperial_Zweihanders",
+     tf_guarantee_armor | tf_guarantee_boots | tf_guarantee_helmet| tf_guarantee_gloves,
+     0, 0, fac_kingdom_6,
+     [
+	 itm_two_handed_cleaver,
+     itm_talak_bastard_sword,
+     
+     itm_mail_mittens,
+     itm_sa_shoes_crusader,
+     itm_osp_great_helm_b,
+     itm_coat_of_plates,
+	 ],
+     foot_attrib_5, pikes_veteran_wp, pikes_veteran_skills,
+     euro_face_3, euro_face_4
+   ],
+   
+   ["imperial_knight",
+     "Imperial_Knight",
+     "Imperial_Knights",
+     tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_boots|tf_guarantee_shield|tf_guarantee_gloves|tf_mounted|tf_guarantee_horse,
+     0, 0, fac_kingdom_6,
+     [
+	 itm_surcoat_hre_a,
+     itm_warhorse_hre_a,
+     itm_mail_chausses,
+     itm_lamellar_gauntlets,
+     itm_sa_tevton_hard_helm,
+     
+     itm_modded_euro_longsword_1,
+     itm_sword_type_xiiia,
+     itm_mace_2,
+     itm_mace_3,
+     itm_mace_4,
+     itm_axe_crusader_a,
+     itm_axe_crusader_c,
+     itm_axe_crusader_d,
+     itm_axe_crusader_1,
+     itm_sword_type_xiia,
+     itm_heavy_lance,
+     itm_heraldic_lance,
+     
+     itm_rhodok_great_helmet,
+     itm_maciejowski_helm,
+     itm_tab_shield_heater_cav_b,
+     itm_tab_shield_kite_cav_b,
+	 ],
+	 horse_attrib_elite, nbl_knight_wp, nbl_knight_skills,
+     euro_face_1, euro_face_2
+   ],
+   
+   
+   
 
 
 
@@ -61294,10 +55997,10 @@ troops = [
 
 upgrade(troops, "bandit", "brigand"),
 
-upgrade(troops, "tatar_horseman", "tatar_lancer"),
+upgrade2(troops, "tatar_horseman", "tatar_lancer", "mongol_infantry"),
 upgrade(troops, "tatar_lancer", "tatar_heavy_lancer"),
 
-upgrade(troops, "tatar_tribesman", "tatar_skirmisher"),
+upgrade2(troops, "tatar_tribesman", "tatar_skirmisher", "mongol_foot_archer"),
 upgrade(troops, "tatar_skirmisher", "tatar_horse_archer"),
 upgrade(troops, "tatar_horse_archer", "tatar_veteran_horse_archer"),
 
@@ -61386,13 +56089,13 @@ upgrade(troops,"balt_noble_2", "balt_noble_3")
 #infantry
 upgrade(troops,"byz_town_1", "byz_town_2"),
 upgrade2(troops,"byz_town_2", "byz_town_3_1", "byz_town_3_2"),
-upgrade(troops,"byz_town_3_1", "byz_town_4_1"),
+upgrade2(troops,"byz_town_3_1", "byz_town_4_1", "byz_castle_guard")
 upgrade(troops,"byz_town_3_2", "byz_town_4_2"),
 
 #archers
 upgrade(troops,"byz_village_1", "byz_village_2"),
 upgrade2(troops,"byz_village_2", "byz_village_3_1", "byz_village_3_2"),
-upgrade(troops,"byz_village_3_1", "byz_village_4_1"),
+upgrade(troops,"byz_village_3_1", "byz_village_4_1"), 
 upgrade(troops,"byz_village_3_2", "byz_village_4_2"),
 
 upgrade(troops,"byz_castle_1", "byz_castle_2"),
@@ -61808,21 +56511,13 @@ upgrade(troops,"hospitaller_crossbowman_1",  "hospitaller_crossbowman_2")
 
 
 ########################## NEW KNIGHT ORDER DISMOUNTED TROOPS
-upgrade(troops,"teu_horse_3_dismounted",  "teu_horse_3")
-upgrade(troops, "templar_half_brother_dismounted", "templar_half_brother")
-upgrade(troops, "hospitaller_half_brother_dismounted", "hospitaller_half_brother")
-upgrade(troops, "saint_lazarus_half_brother_dismounted", "saint_lazarus_half_brother")
-upgrade(troops, "santiago_half_brother_dismounted", "santiago_half_brother")
-upgrade(troops, "calatrava_half_brother_dismounted", "calatrava_half_brother")
-upgrade(troops, "saint_thomas_half_brother_dismounted", "saint_thomas_half_brother")
-
-upgrade(troops,"teu_horse_4_dismounted",  "teu_horse_4")
-upgrade(troops,"templar_knight_dismounted",  "templar_knight")
-upgrade(troops,"hospitaller_knight_dismounted",  "hospitaller_knight")
-upgrade(troops,"saint_lazarus_knight_dismounted",  "saint_lazarus_knight")
-upgrade(troops,"santiago_knight_dismounted",  "santiago_knight")
-upgrade(troops,"calatrava_knight_dismounted",  "calatrava_knight")
-upgrade(troops,"saint_thomas_knight_dismounted",  "saint_thomas_knight")
+upgrade(troops,"teu_horse_3_dismounted",  "teu_horse_4_dismounted")
+upgrade(troops, "templar_half_brother_dismounted", "templar_knight_dismounted")
+upgrade(troops, "hospitaller_half_brother_dismounted", "hospitaller_knight_dismounted")
+upgrade(troops, "saint_lazarus_half_brother_dismounted", "saint_lazarus_knight_dismounted")
+upgrade(troops, "santiago_half_brother_dismounted", "santiago_knight_dismounted")
+upgrade(troops, "calatrava_half_brother_dismounted", "calatrava_knight_dismounted")
+upgrade(troops, "saint_thomas_half_brother_dismounted", "saint_thomas_knight_dismounted")
 ######################################
 
 
@@ -61953,10 +56648,10 @@ upgrade(troops,"english_longbowman", "english_retinue_longbowman")
 upgrade(troops,"english_town_recruit", "english_levy_spearman")
 upgrade2(troops,"english_levy_spearman", "english_militia_footman", "english_billman")
 upgrade(troops,"english_billman", "english_heavy_billman")
-upgrade(troops,"english_militia_footman", "english_armoured_swordsman")
+upgrade2(troops,"english_militia_footman", "english_armoured_swordsman", "saint_thomas_half_brother_dismounted")
 
 upgrade(troops,"english_hobilar", "english_demi_lancer")
-upgrade(troops,"english_demi_lancer", "english_squire")
+upgrade2(troops,"english_demi_lancer", "english_squire", "saint_thomas_half_brother")
 upgrade(troops,"english_squire", "english_knight")
 
 
@@ -61965,12 +56660,13 @@ upgrade(troops,"french_village_recruit", "french_crossbow_militia")
 upgrade(troops,"french_crossbow_militia", "french_heavy_crossbowman")
 
 upgrade2(troops,"french_town_recruit", "french_levy_spearman", "french_volgue_militia")
-upgrade(troops,"french_levy_spearman", "french_armoured_sergeant")
+upgrade2(troops,"french_levy_spearman", "french_armoured_sergeant", "saint_lazarus_half_brother_dismounted")
 upgrade2(troops,"french_volgue_militia", "french_voulgier", "french_pikeman")
 
 upgrade(troops,"french_mounted_archer", "french_mounted_sergeant")
-upgrade(troops,"french_mounted_sergeant", "french_squire")
+upgrade2(troops,"french_mounted_sergeant", "french_squire", "saint_lazarus_half_brother")
 upgrade(troops,"french_squire", "french_knight")
+
 
 
 ####Hungarian

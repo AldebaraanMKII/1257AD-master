@@ -9788,13 +9788,13 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 [anyone|plyr|repeat_for_troops, "dplmc_constable_execution_choose",
 [
   (store_repeat_object, ":troop_no"),
-  (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+  # (troop_slot_eq, ":troop_no", slot_troop_occupation, slto_kingdom_hero),
+   (is_between, ":troop_no", lords_begin, lords_end), ############### NEW v3.13 - 
    ######### NEW v3.0
    (troop_slot_eq, ":troop_no", slot_troop_is_alive, 1),
-   (neq, ":troop_no", "trp_player"),
+   # (neq, ":troop_no", "trp_player"),
    #########
   (troop_get_slot, ":party", ":troop_no", slot_troop_prisoner_of_party),
-
   (assign, ":can_release", 0),
   (try_begin),
    (is_between, ":party", walled_centers_begin, walled_centers_end),
@@ -11027,7 +11027,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
       (party_get_slot, ":accumulated_rents", ":selected_party", slot_center_accumulated_rents),
       (val_add, ":income", ":accumulated_rents"),  
     
-      (str_clear, s60),
+      # (str_clear, s60),
+      (str_clear, s6), ############### NEW v3.13 - 
       (try_begin),
         (this_or_next|party_slot_eq, ":selected_party", slot_party_type, spt_town),
         (party_slot_eq, ":selected_party", slot_party_type, spt_castle),
@@ -11095,6 +11096,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
    [anyone, "dplmc_chamberlain_treasury",
    [
+   (str_clear, s4), ############### NEW v3.13 - 
+   (str_clear, s6), ############### NEW v3.13 - 
    (store_troop_gold, ":treasury", "trp_household_possessions"),
    (assign, reg0, ":treasury"),
    (str_store_string, s4, "@{!}{reg0}"),
@@ -11115,6 +11118,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
    [anyone, "dplmc_chamberlain_treasury_action_pay",
    [
+   (str_clear, s4), ############### NEW v3.13 - 
    (store_troop_gold, ":treasury", "trp_household_possessions"),
    (assign, reg0, ":treasury"),
    (str_store_string, s4, "@{!}{reg0}"),
@@ -11241,6 +11245,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
    [anyone, "dplmc_chamberlain_treasury_action_withdraw",
    [
+   (str_clear, s4), ############### NEW v3.13 - 
    (store_troop_gold, ":treasury", "trp_household_possessions"),
    (assign, reg0, ":treasury"),
    (str_store_string, s4, "@{!}{reg0}"),   
@@ -11384,6 +11389,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
    
    [anyone|plyr|repeat_for_parties, "dplmc_chamberlain_status_select_fief",
    [
+    (str_clear, s60), ############### NEW v3.13 - 
     (store_repeat_object, ":party_no"),
     (is_between, ":party_no", centers_begin, centers_end),
     (party_slot_eq, ":party_no", slot_town_lord, "trp_player"),
@@ -13581,6 +13587,37 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
     (eq, "$g_player_know_culture_polish", 1),
     (eq, ":offset", "fac_culture_polish"),
         (assign, reg20, 0), 
+############### NEW v3.13 - 
+  (else_try),
+    (eq, "$g_player_know_culture_swedish", 1),
+    (eq, ":offset", "fac_culture_swedish"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_norwegian", 1),
+    (eq, ":offset", "fac_culture_norwegian"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_castile", 1),
+    (eq, ":offset", "fac_culture_castile"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_portuguese", 1),
+    (eq, ":offset", "fac_culture_portuguese"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_hre", 1),
+    (eq, ":offset", "fac_culture_hre"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_sicilian", 1),
+    (eq, ":offset", "fac_culture_sicilian"),
+        (assign, reg20, 0), 
+  (else_try),
+    (eq, "$g_player_know_culture_aragon", 1),
+    (eq, ":offset", "fac_culture_aragon"),
+        (assign, reg20, 0), 
+############### 
+
   (else_try),
     (eq, ":offset", "fac_culture_player"),
         (assign, reg20, 0),  
@@ -13722,6 +13759,29 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_polish"),
       (assign, "$g_player_know_culture_polish", 1),
+############### NEW v3.13 - 
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_swedish"),
+      (assign, "$g_player_know_culture_swedish", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_norwegian"),
+      (assign, "$g_player_know_culture_norwegian", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_castile"),
+      (assign, "$g_player_know_culture_castile", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_portuguese"),
+      (assign, "$g_player_know_culture_portuguese", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_hre"),
+      (assign, "$g_player_know_culture_hre", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_sicilian"),
+      (assign, "$g_player_know_culture_sicilian", 1),
+  (else_try),
+    (eq, ":cur_faction_culture", "fac_culture_aragon"),
+      (assign, "$g_player_know_culture_aragon", 1),
+############### 
 ################# NEW v2.1 - display a dialogue that makes the player choose a language
   (else_try),
     (eq, ":cur_faction_culture", "fac_culture_player"),
@@ -13736,6 +13796,10 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ############### NEW v3.12 - 
 [anyone|plyr, "minister_talk",
 [
+############### NEW v3.13 - 
+(this_or_next|faction_slot_eq, "$players_kingdom", slot_faction_culture, "fac_culture_player"),
+(faction_slot_eq, "$players_kingdom", slot_faction_culture, "fac_culture_western"),
+############### 
 ],
 "I wish to select the kingdom's language.", "dplmc_chancellor_kingdom_language_select_1",
 [
@@ -13744,7 +13808,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 ###################################################
 [anyone, "dplmc_chancellor_kingdom_language_select_1", 
 [
-  (eq, "$g_ask_for_language", 1),     
+(eq, "$g_ask_for_language", 1),     
+
 ],
 "And what language would you like to use (This affects the names of the lords recruited into your faction)?", "dplmc_chancellor_kingdom_language_select_2", []
 ],
@@ -13804,6 +13869,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
+  (this_or_next|eq, "$g_player_culture", "fac_culture_hre"), ############### NEW v3.13 - 
   (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
   (eq, "$g_player_culture", "fac_culture_player"),
 ],
@@ -13856,6 +13922,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
+  (this_or_next|eq, "$g_player_culture", "fac_culture_norwegian"), ### NEW v3.13 - 
   (this_or_next|eq, "$g_player_culture", "fac_culture_nordic"), ### NEW v3.12 - 
   (eq, "$g_player_culture", "fac_culture_player"),
 ],
@@ -13869,6 +13936,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
+  (this_or_next|eq, "$g_player_culture", "fac_culture_swedish"), ### NEW v3.13 - 
   (this_or_next|eq, "$g_player_culture", "fac_culture_nordic"), ### NEW v3.12 - 
   (eq, "$g_player_culture", "fac_culture_player"),
 ],
@@ -13929,6 +13997,8 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
+  (this_or_next|eq, "$g_player_culture", "fac_culture_castile"), ############### NEW v3.13 - 
+  (this_or_next|eq, "$g_player_culture", "fac_culture_aragon"), ############### NEW v3.13 - 
   (this_or_next|eq, "$g_player_culture", "fac_culture_western"),
   (this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
   (eq, "$g_player_culture", "fac_culture_player"),
@@ -13943,6 +14013,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
+  (this_or_next|eq, "$g_player_culture", "fac_culture_portuguese"), ############### NEW v3.13 - 
   (this_or_next|eq, "$g_player_culture", "fac_culture_iberian"),
   (eq, "$g_player_culture", "fac_culture_player"),
 ],
@@ -13956,6 +14027,7 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
 
 [anyone|plyr, "dplmc_chancellor_kingdom_language_select_2",
 [
+  (this_or_next|eq, "$g_player_culture", "fac_culture_sicilian"), ### NEW v3.13 - 
   (this_or_next|eq, "$g_player_culture", "fac_culture_italian"), ### NEW v3.12 - 
   (eq, "$g_player_culture", "fac_culture_player"),
 ],
@@ -26183,6 +26255,29 @@ What kind of recruits do you want?", "dplmc_constable_recruit_select",
        (eq, ":cur_faction_culture", "fac_culture_polish"),
          (assign, "$g_player_know_culture_polish", 1),
 ############################
+############### NEW v3.13 - 
+    (else_try),
+      (eq, ":cur_faction_culture", "fac_culture_swedish"),
+        (assign, "$g_player_know_culture_swedish", 1),
+    (else_try),
+      (eq, ":cur_faction_culture", "fac_culture_norwegian"),
+        (assign, "$g_player_know_culture_norwegian", 1),
+    (else_try),
+      (eq, ":cur_faction_culture", "fac_culture_castile"),
+        (assign, "$g_player_know_culture_castile", 1),
+    (else_try),
+      (eq, ":cur_faction_culture", "fac_culture_portuguese"),
+        (assign, "$g_player_know_culture_portuguese", 1),
+    (else_try),
+      (eq, ":cur_faction_culture", "fac_culture_hre"),
+        (assign, "$g_player_know_culture_hre", 1),
+    (else_try),
+      (eq, ":cur_faction_culture", "fac_culture_sicilian"),
+        (assign, "$g_player_know_culture_sicilian", 1),
+    (else_try),
+      (eq, ":cur_faction_culture", "fac_culture_aragon"),
+        (assign, "$g_player_know_culture_aragon", 1),
+############### 
      (else_try),
        (eq, ":cur_faction_culture", "fac_culture_player"),
          (assign, "$g_player_know_culture_player", 1),      

@@ -4303,13 +4303,22 @@ lance_usage = [
           # Get wielded item.
           (agent_get_wielded_item, ":wielded", ":agent", 0),
           # Is it a lance?
-          (neg|is_between, ":wielded", "itm_light_lance", "itm_bamboo_spear"), # adjust as needed
+          # (neg|is_between, ":wielded", "itm_light_lance", "itm_bamboo_spear"), # adjust as needed
+          ############### NEW v3.12 - 
+          (this_or_next|neg|is_between, ":wielded", "itm_light_lance", "itm_bamboo_spear"), # adjust as needed
+          (neg|is_between, ":wielded", "itm_crusader_knight_spear_a", "itm_crusader_spear_a"), 
+############### 
           # Force the NPC to wield the lance, but this will only happen if they
           # actually have a lance in their inventory.  Otherwise this does
           # nothing.
           (try_for_range, ":item", "itm_light_lance", "itm_bamboo_spear"), # adjust as needed
             (agent_set_wielded_item, ":agent", ":item"),
           (try_end),    
+          ############### NEW v3.12 - 
+          (try_for_range, ":item", "itm_crusader_knight_spear_a", "itm_crusader_spear_a"),
+            (agent_set_wielded_item, ":agent", ":item"),
+          (try_end),    
+############### 
         (else_try), #WIELD FLAG
           (eq, "$tom_use_banners", 1),
           (try_for_range, ":item",itm_flag_pole_1,itm_cross +1), # adjust as needed
@@ -4318,15 +4327,23 @@ lance_usage = [
           (agent_get_wielded_item, ":item", ":agent", 0),
           (is_between, ":item", itm_flag_pole_1, itm_cross + 1),
         (else_try),#no lance on foot
-          (neg | troop_is_guarantee_ranged, ":troop_id"),
+          (neg|troop_is_guarantee_ranged, ":troop_id"),
           (le, ":horse", 0),
           (agent_get_wielded_item, ":wielded", ":agent", 0),
-          (is_between, ":wielded", "itm_light_lance", "itm_bamboo_spear"),
+          # (is_between, ":wielded", "itm_light_lance", "itm_bamboo_spear"),
+          ############### NEW v3.12 - 
+          (this_or_next|is_between, ":wielded", "itm_light_lance", "itm_bamboo_spear"), # adjust as needed
+          (is_between, ":wielded", "itm_crusader_knight_spear_a", "itm_crusader_spear_a"), 
+############### 
           (try_for_range, reg0, 0, 4),
             (agent_get_item_slot, ":item", ":agent", reg0),
             (is_between, ":item", 1, "itm_items_end"),
             #(gt, ":item", 0),
-            (neg|is_between, ":item", "itm_light_lance", "itm_bamboo_spear"),
+            # (neg|is_between, ":item", "itm_light_lance", "itm_bamboo_spear"),
+            ############### NEW v3.12 - 
+            (this_or_next|neg|is_between, ":item", "itm_light_lance", "itm_bamboo_spear"), # adjust as needed
+            (neg|is_between, ":item", "itm_crusader_knight_spear_a", "itm_crusader_spear_a"), 
+############### 
             (item_get_type, ":item_type", ":item"),
             (this_or_next|eq, ":item_type", itp_type_two_handed_wpn),
             (this_or_next|eq, ":item_type", itp_type_polearm),
@@ -4334,17 +4351,28 @@ lance_usage = [
             (agent_set_wielded_item, ":agent", ":item"),
           (try_end),    
         (else_try), #TOM - SPEAR USSAGE
-          (neg | troop_is_guarantee_ranged, ":troop_id"),
+          (neg|troop_is_guarantee_ranged, ":troop_id"),
           #(agent_get_horse, ":horse", ":agent"),
           (le, ":horse", 0), #unmounted
           (agent_get_wielded_item, ":wielded", ":agent", 0),
-          (neg|is_between, ":wielded", "itm_bamboo_spear", "itm_wooden_shield"),
+          # (neg|is_between, ":wielded", "itm_bamboo_spear", "itm_wooden_shield"),
+          ############### NEW v3.12 - 
+          (this_or_next|neg|is_between, ":wielded", "itm_bamboo_spear", "itm_wooden_shield"),
+          (this_or_next|neq, ":wielded", "itm_modded_war_spear"),
+          (neg|is_between, ":wielded", "itm_crusader_spear_a", "itm_mace_6"),
+############### 
           #(neg|is_between, ":wielded", "itm_flag_pole_1", "itm_items_end"), #not a flag
           (try_for_range, ":item", "itm_bamboo_spear", "itm_wooden_shield"), # adjust as needed
             #(gt, ":item", 0),
             #(agent_equip_item, ":agent", ":item"),
             (agent_set_wielded_item, ":agent", ":item"),
           (try_end),
+          ############### NEW v3.12 - 
+          (agent_set_wielded_item, ":agent", "itm_modded_war_spear"),
+          (try_for_range, ":item", "itm_crusader_spear_a", "itm_mace_6"), # adjust as needed
+            (agent_set_wielded_item, ":agent", ":item"),
+          (try_end),
+############### 
         (else_try), #tom - range usage
           (troop_is_guarantee_ranged, ":troop_id"),
           
