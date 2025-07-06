@@ -23407,6 +23407,7 @@ troops = [
     tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
+<<<<<<< HEAD
     itm_arrows,
     itm_hunting_bow,
     itm_darts,
@@ -23441,6 +23442,32 @@ troops = [
     itm_targe_4,
     itm_targe_5,
     itm_targe_6,
+=======
+      ### Ranged Weapons
+      itm_arrows,
+      itm_hunting_bow,
+      itm_darts,
+
+      ### Melee Weapons
+      itm_hatchet,
+      itm_club,
+      itm_studded_club,
+      itm_spiked_mace,
+      itm_knife,
+      itm_butchering_knife,
+      itm_scythe,
+
+      ### Armors
+      itm_gaelic_shirt_blue,
+      itm_gaelic_shirt_green,
+      itm_gaelic_shirt_red,
+
+      ### Boots
+      itm_bare_legs,
+      itm_bare_legs, ### Additional chance of bare feet here.
+      itm_legs_with_shoes,
+      itm_shoes,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -23453,6 +23480,7 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
+<<<<<<< HEAD
     itm_darts,
       
     itm_dagger,
@@ -23485,6 +23513,36 @@ troops = [
     itm_targe_4,
     itm_targe_5,
     itm_targe_6,
+=======
+      ### Ranged Weapons
+      itm_darts,
+      
+      ### Melee Weapons
+      itm_hatchet,
+      itm_club,
+      itm_studded_club,
+      itm_spiked_mace,
+      itm_knife,
+      itm_butchering_knife,
+      itm_scythe,
+
+      ### Helmets
+      itm_1257_hood,
+      itm_arming_cap,
+      itm_padded_coif,
+      
+      ### Armors
+      itm_gaelic_shirt_blue,
+      itm_gaelic_shirt_green,
+      itm_gaelic_shirt_red,
+      itm_peasant_f,
+
+      ### Boots
+      itm_bare_legs,
+      itm_bare_legs, ### Additional chance of bare feet here.
+      itm_legs_with_shoes,
+      itm_shoes,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     foot_attrib_2, militia_wp, militia_skills,
     euro_face_1, euro_face_2
@@ -23497,18 +23555,36 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots, ### Keep the "guarantee boots"-flag and instead use multiple "itm_bare_legs" to represent the iconic, barefooted Irish Kerns. Barefooted and light footwear are both historically correct possibilities we should represent. - Khanor
     0, 0, fac_kingdom_1,
     [
+<<<<<<< HEAD
     itm_war_darts,
 
     itm_hatchet,
     itm_modded_falchion_3,
+=======
+      ### Ranged Weapons
+      itm_war_darts,
 
-    itm_spear_f,
-    itm_spear_j,
-    itm_spear_k,
-    itm_spear_l,
-    itm_spear_n,
-    itm_spear_o,
+      ### Melee Weapons
+      itm_raf_one_handed_axe_a,
+      itm_raf_one_handed_axe_b,
+      itm_raf_one_handed_axe_c,
+      itm_raf_one_handed_axe_d,
+      itm_raf_one_handed_axe_e,
+      itm_raf_one_handed_axe_f,
+      itm_raf_one_handed_axe_g,
+      itm_raf_one_handed_axe_h,
+      itm_raf_two_handed_axe_a,
+      itm_raf_two_handed_axe_b,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
 
+      itm_spear_f,
+      itm_spear_j,
+      itm_spear_k,
+      itm_spear_l,
+      itm_spear_n,
+      itm_spear_o,
+
+<<<<<<< HEAD
     itm_targe_1,
     itm_targe_2,
     itm_targe_3,
@@ -23531,6 +23607,37 @@ troops = [
     itm_leather_fur_boots,
     itm_legs_with_shoes,
     itm_shoes,
+=======
+      ### Shields
+      itm_targe_1,
+      itm_targe_2,
+      itm_targe_3,
+      itm_targe_4,
+      itm_targe_5,
+      itm_targe_6,
+
+      ### Helmets
+      itm_1257_hood,
+      itm_arming_cap,
+      itm_elm2,
+      itm_padded_coif,
+      itm_raf_spangen,
+
+      ### Armors
+      itm_gaelic_shirt_blue,
+      itm_gaelic_shirt_green,
+      itm_gaelic_shirt_red,
+      itm_leather_jerkin,
+      itm_peasant_f,
+      itm_pelt_coat,
+      itm_rawhide_coat,
+
+      ### Boots
+      itm_bare_legs,
+      itm_bare_legs, ### Additional chance of bare feet here.
+      itm_legs_with_shoes,
+      itm_shoes,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     foot_attrib_3, footman_wp, footman_skills,
     euro_face_3, euro_face_4
@@ -23543,6 +23650,7 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+<<<<<<< HEAD
     itm_javelin,
 
     itm_raf_one_handed_axe_a,
@@ -23585,6 +23693,70 @@ troops = [
     itm_highlander_boots_1,
     itm_legs_with_shoes,
     itm_shoes,
+=======
+      ### Ranged Weapons
+      itm_javelin,
+
+      ### Melee Weapons
+      itm_raf_one_handed_axe_a,
+      itm_raf_one_handed_axe_b,
+      itm_raf_one_handed_axe_c,
+      itm_raf_one_handed_axe_d,
+      itm_raf_one_handed_axe_e,
+      itm_raf_one_handed_axe_f,
+      itm_raf_one_handed_axe_g,
+      itm_raf_one_handed_axe_h,
+      itm_sword_type_xii,
+      itm_sword_type_xiiib,
+      itm_sword_viking_1,
+      itm_sword_viking_2,
+      itm_sword_viking_3,
+
+      itm_spear_f,
+      itm_spear_h,
+      itm_spear_j,
+      itm_spear_k,
+      itm_spear_l,
+      itm_spear_m,
+      itm_spear_n,
+      itm_spear_o,
+      itm_spear_p,
+
+      ### Shields
+      itm_targe_1,
+      itm_targe_2,
+      itm_targe_3,
+      itm_targe_4,
+      itm_targe_5,
+      itm_targe_6,
+
+      ### Helmets
+      itm_arming_cap,
+      itm_raf_spangen,
+      itm_kettle_cloth,
+      itm_vik_spangen_a,
+      itm_vik_spangen_b,
+      itm_vik_norman_helmet_e,
+      itm_elm2,
+
+      ### Armors
+      itm_gaelic_byrnie_a,
+      itm_gaelic_byrnie_b,
+      itm_gambeson_b,
+      itm_gambeson_c,
+      itm_militia_tunic_a,
+      itm_militia_tunic_b,
+      itm_padded_cloth,
+      itm_leather_jerkin,
+      itm_pelt_coat,
+      itm_rawhide_coat,
+
+      ### Boots
+      # itm_bare_legs, ### No chance of going barefooted.
+      itm_highlander_boots_1,
+      itm_legs_with_shoes,
+      itm_shoes,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     foot_attrib_4, swords_regulars_wp, swords_regulars_skills,
     euro_face_1, euro_face_2
@@ -23597,8 +23769,9 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_helmet | tf_guarantee_boots | tf_guarantee_gloves,
     0, 0, fac_kingdom_1,
     [
-    itm_throwing_spears,
+      itm_throwing_spears,
 
+<<<<<<< HEAD
     itm_sword_viking_1,
     itm_sword_viking_2,
     itm_sword_viking_3,
@@ -23628,6 +23801,61 @@ troops = [
     itm_spear_n,
     itm_spear_o,
     itm_spear_p,
+=======
+      itm_sword_type_xii,
+      itm_sword_type_xiii,
+      itm_sword_type_xiiib,
+      itm_sword_viking_1,
+      itm_sword_viking_2,
+      itm_sword_viking_3,
+      itm_raf_one_handed_axe_a,
+      itm_raf_one_handed_axe_b,
+      itm_raf_one_handed_axe_c,
+      itm_raf_one_handed_axe_f,
+      itm_raf_one_handed_axe_g,
+      itm_1257_hood,
+
+      itm_leather_jerkin,
+      itm_pelt_coat,
+      itm_rawhide_coat,
+
+      itm_tab_shield_heater_c,
+      itm_tab_shield_kite_c,
+      itm_legs_with_shoes,
+      itm_shoes,
+      # itm_bare_legs, ### No chance of going barefooted.
+
+      itm_kettlehat_a,
+      itm_kettlehat_b,
+      itm_kettlehat_c,
+      itm_flat_kettle_hat,
+      itm_maciejowski_kettle_hat_a,
+      itm_maciejowski_kettle_hat_b,
+      itm_mail_coif,
+      itm_vik_norman_helmet_a,
+      itm_vik_norman_helmet_b,
+      itm_raf_spangen,
+      itm_kolpak_mail,
+
+      itm_gaelic_mail_shirt_a,
+      itm_gaelic_mail_shirt_b,
+      itm_kau_mail_b,
+      itm_kau_mail_shirt_a,
+      itm_kau_mail_shirt_d,
+
+      itm_ankle_boots,
+      itm_wrapping_boots,
+
+      itm_spear_f,
+      itm_spear_h,
+      itm_spear_j,
+      itm_spear_k,
+      itm_spear_l,
+      itm_spear_m,
+      itm_spear_n,
+      itm_spear_o,
+      itm_spear_p,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     foot_attrib_5, swords_veteran_wp, swords_veteran_skills,
     euro_face_3, euro_face_4
@@ -23640,7 +23868,10 @@ troops = [
     tf_guarantee_armor | tf_guarantee_shield | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+      ### Ranged Weapons
     itm_javelin,
+    itm_javelin,
+<<<<<<< HEAD
     
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
@@ -23668,6 +23899,76 @@ troops = [
     itm_legs_with_shoes,
     itm_shoes,
     itm_highlander_boots_1,
+=======
+    itm_gaelic_byrnie_a,
+    itm_gaelic_byrnie_b,
+    itm_gambeson_a,
+    itm_gambeson_b,
+    itm_gambeson_c,
+    itm_gambeson_d,
+    itm_militia_tunic_a,
+    itm_militia_tunic_b,
+    itm_padded_cloth,
+      itm_javelin,
+    itm_gaelic_byrnie_a,
+    itm_gaelic_byrnie_b,
+    itm_gambeson_a,
+    itm_gambeson_b,
+    itm_gambeson_c,
+    itm_gambeson_d,
+    itm_militia_tunic_a,
+    itm_militia_tunic_b,
+    itm_padded_cloth,
+
+      ### Melee Weapons
+      itm_raf_one_handed_axe_a,
+      itm_raf_one_handed_axe_b,
+      itm_raf_one_handed_axe_c,
+      itm_sword_viking_2,
+      itm_sword_viking_3,
+
+      itm_spear_f,
+      itm_spear_h,
+      itm_spear_j,
+      itm_spear_k,
+      itm_spear_l,
+      itm_spear_m,
+
+      ### Shields
+      itm_targe_1,
+      itm_targe_2,
+      itm_targe_3,
+      itm_targe_4,
+      itm_targe_5,
+      itm_targe_6,
+
+      ### Helmets
+      itm_kettle_cloth,
+      itm_elm2,
+      itm_arming_cap,
+      itm_1257_hood,
+      itm_raf_spangen,
+      itm_vik_spangen_a,
+      itm_vik_spangen_b,
+      itm_vik_norman_helmet_e,
+
+      ### Armors
+      itm_gaelic_byrnie_a,
+      itm_gaelic_byrnie_b,
+      itm_gambeson_a,
+      itm_gambeson_b,
+      itm_gambeson_c,
+      itm_gambeson_d,
+      itm_militia_tunic_a,
+      itm_militia_tunic_b,
+      itm_padded_cloth,
+
+      ### Boots
+      itm_bare_legs,
+      # itm_bare_legs, ### Some chance of being barefooted, but less than for lower tiers in the same line.
+      itm_legs_with_shoes,
+      itm_shoes,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     foot_attrib_4, spears_regulars_wp, spears_regulars_skills,
     nord_face_young_1, swadian_face_old_2
@@ -23680,6 +23981,7 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_gloves | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+<<<<<<< HEAD
     itm_throwing_spears,
     itm_modded_falchion_3,
     itm_sword_viking_2,
@@ -23701,6 +24003,45 @@ troops = [
     itm_gaelic_mail_shirt_a,
       
     itm_gaelic_shield_a, 
+=======
+      itm_throwing_spears,
+      itm_sword_viking_2,
+      itm_sword_viking_3,
+      itm_raf_one_handed_axe_a,
+      itm_raf_one_handed_axe_b,
+      itm_raf_one_handed_axe_c,
+      itm_spear_k,
+      itm_spear_l,
+      itm_spear_m,
+      itm_spear_n,
+      itm_legs_with_shoes,
+      itm_shoes,
+      # itm_bare_legs, ### No chance of going barefooted.
+
+      itm_tab_shield_heater_c,
+      itm_tab_shield_kite_c,
+
+      itm_kettlehat_a,
+      itm_kettlehat_b,
+      itm_kettlehat_c,
+      itm_kettle_cloth,
+      itm_maciejowski_kettle_hat_a,
+      itm_maciejowski_kettle_hat_b,
+      itm_vik_norman_helmet_a,
+      itm_vik_norman_helmet_b,
+      itm_raf_spangen,
+      itm_kolpak_mail,
+
+      itm_gaelic_mail_shirt_a,
+      itm_gaelic_mail_shirt_b,
+      itm_kau_mail_b,
+      itm_kau_mail_shirt_a,
+      itm_kau_mail_shirt_d,
+
+      itm_leather_jerkin,
+      itm_pelt_coat,
+      itm_rawhide_coat,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     foot_attrib_5, spears_veteran_wp, spears_veteran_skills,
     nord_face_young_1, swadian_face_old_2
@@ -23713,6 +24054,7 @@ troops = [
     tf_guarantee_armor | tf_guarantee_ranged  | tf_guarantee_ranged | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
+<<<<<<< HEAD
     itm_arrows,
     itm_hunting_bow,
 
@@ -23741,6 +24083,33 @@ troops = [
     itm_green_hose_b,
     itm_grey_hose,
     itm_yellow_hose,
+=======
+      ### Ranged Weapons
+      itm_arrows,
+      itm_hunting_bow,
+
+      ### Melee Weapons
+      itm_raf_one_handed_axe_b,
+      itm_raf_one_handed_axe_c,
+      itm_raf_one_handed_axe_f,
+      itm_raf_one_handed_axe_g,
+      itm_knife,
+      itm_butchering_knife,
+
+      ### Helmets
+      itm_elm2,
+
+      ### Armors
+      itm_gaelic_shirt_red,
+      itm_gaelic_shirt_blue,
+      itm_gaelic_shirt_green,
+
+      ### Boots
+      itm_bare_legs,
+      # itm_bare_legs, ### Some chance of being barefooted, but less than for lower tiers in the same line.
+      itm_legs_with_shoes,
+      itm_shoes,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     ranged_attrib_3, skirmisher_wp, skirmisher_skills,
     euro_face_1, euro_face_2
@@ -23753,9 +24122,10 @@ troops = [
     tf_guarantee_shield | tf_guarantee_armor | tf_guarantee_ranged | tf_guarantee_boots,
     0, 0, fac_kingdom_1,
     [
-    itm_barbed_arrows,
-    itm_short_bow,
+      itm_barbed_arrows,
+      itm_short_bow,
 
+<<<<<<< HEAD
     itm_raf_one_handed_axe_a,
     itm_raf_one_handed_axe_b,
     itm_raf_one_handed_axe_c,
@@ -23777,6 +24147,37 @@ troops = [
     itm_gaelic_shield_c,
     
     itm_buff_leather,
+=======
+      itm_raf_one_handed_axe_a,
+      itm_raf_one_handed_axe_b,
+      itm_raf_one_handed_axe_c,
+      itm_raf_one_handed_axe_f,
+      itm_raf_one_handed_axe_g,
+      itm_raf_one_handed_axe_h,
+      itm_legs_with_shoes,
+      itm_shoes,
+      # itm_bare_legs,
+      itm_sword_viking_2,
+      itm_sword_viking_2_small,
+      itm_sword_viking_3,
+      itm_sword_viking_3_small,
+
+      itm_targe_1,itm_targe_2,itm_targe_3,itm_targe_4,itm_targe_5,itm_targe_6,
+
+      itm_gaelic_byrnie_a,
+      itm_gaelic_byrnie_b,
+      itm_padded_cloth,
+
+      itm_elm2,
+      itm_vik_spangen_a,
+      itm_vik_spangen_b,
+      itm_vik_norman_helmet_e,
+      itm_kettle_cloth,
+
+      itm_leather_jerkin,
+      itm_pelt_coat,
+      itm_rawhide_coat,
+>>>>>>> ef2e9bd54a1f5b6f5e9fb234a5b278d7034bc073
     ],
     ranged_attrib_4, archer_regulars_wp, archer_regulars_skills,
     nord_face_young_1, swadian_face_old_2

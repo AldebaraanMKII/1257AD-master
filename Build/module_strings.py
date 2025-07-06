@@ -4981,7 +4981,7 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("we_are_trying_to_seek_out_and_defeat_s8", "We are trying to seek out and defeat {s8}."),
   ("we_are_riding_to_the_defense_of_s8", "We are riding to the defense of {s8}."),
   ("we_are_gathering_for_a_feast_at_s8", "We are gathering for a feast at {s8}."),
-  ("however_that_may_change_shortly_s14", "However, that may change shortly. {s14}"),
+  ("_however_that_may_change_shortly_s14", " However, that may change shortly. {s14}"),
   ("it_is_our_custom_to_seal_any_such_alliances_with_marriage_and_in_fact_we_have_been_looking_for_a_suitable_groom_for_my_s11_s14", "It is our custom to seal any such alliances with marriage, and in fact, we have been looking for a suitable groom for my {s11}, {s14}."),
   ("once_again_", "once again "),
   ("cheat__marriage_proposal", "Cheat - marriage proposal"),
@@ -9340,8 +9340,6 @@ We apologize sincerely if you contributed your suggestions and feedback but were
 ("ee_culture_title_king_polish", "King {s0}"),   
 ############### 
 ("ee_culture_title_king_custom", "King {s0}"),
-
-
 
 ################################### NEW v3.9 - female titles
 ("ee_culture_title_female_finnish", "Queen {s0}"),

@@ -85,7 +85,7 @@ game_menus = [
          
        (else_try),
          (party_slot_ge, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
-         (str_store_string, s43, "@Turkopole mercenaries have a outpost here."),
+         (str_store_string, s43, "@Turkopole mercenaries have an outpost here."),
          
        (else_try),
          (party_slot_ge, "$current_town", slot_center_has_camp_georgian, 1),
@@ -101,7 +101,7 @@ game_menus = [
          
        (else_try),
          (party_slot_eq, "$current_town", slot_spec_mercs1, merc_sicily_muslims),
-         (str_store_string, s47, "@Sicily muslim mercenaries often pass-by here."),
+         (str_store_string, s47, "@Sicilian muslim mercenaries often pass-by here."),
          
        (else_try),
          (party_slot_eq, "$current_town", slot_spec_mercs1, generic_maghreb),
@@ -121,7 +121,7 @@ game_menus = [
          
        (else_try),
          (party_slot_ge, "$current_town", slot_center_has_outpost_finnish, 1),
-         (str_store_string, s52, "@Finnish mercenaries have a outpost here."),    
+         (str_store_string, s52, "@Finnish mercenaries have an outpost here."),    
        (try_end),
      (try_end),
      
@@ -281,1148 +281,1393 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
-#############################################
-    ###MERCS - GENERIC
-     ("recruit_company",
-     [
-       (is_between,  "$current_town", towns_begin, towns_end),
-       (party_slot_ge, "$current_town", slot_regional_mercs_number, 1),
-       (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-       (ge, ":free_capacity", 20), ####### NEW v3.8
-       # (party_get_slot, ":manpower", "$current_town", slot_regional_mercs_number),
-       # (gt, ":manpower", 0), #more then one
-       #(store_faction_of_party, ":faction", "$current_town"),
-       (call_script, "script_get_number_of_hero_centers", "trp_player"),
-       #(assign, ":owned_centers", reg0),
-       (assign, reg7, merc_cost),
-       (str_clear, s1),
-       (try_begin),
-         (gt, reg0, 0), #is a lord
-         (assign, reg7, merc_cost * 3), #cost for one company
-         
-       (try_end),
-       (store_party_size, ":party_size", "p_main_party"),
-       (store_div, ":price_increase", ":party_size", 20),
-       (val_add, ":price_increase", 1),
-       (assign, reg0, ":price_increase"),
-       #(display_message, "@price increase: {reg0}"),
-       
-       (try_begin),
-         (eq, 0, 1), #lets disable this for now
-         (gt, ":price_increase", 1),
-         (val_mul, reg7, ":price_increase"),
-       (try_end),
-       
-       (store_troop_gold, ":gold", "trp_player"),
-       (ge, ":gold", reg7),
-       (str_store_string, s3, "@Cost: {reg7}"),
-     ], "Hire a local mercenary company. {s3}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_regional_mercs_number),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_regional_mercs_number, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg7, 0),
-         (troop_remove_gold, "trp_player", reg7),
-       (try_end),
-       
-       ###(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company", "$current_town", "p_main_party", slot_regional_mercs),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+    
+    
+    ###############################
+    ### --- MERCS - GENERIC --- ###
+    ###############################
+    ("recruit_company",
+      [
+        (is_between,  "$current_town", towns_begin, towns_end),
+        (party_slot_ge, "$current_town", slot_regional_mercs_number, 1),
+        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+        (ge, ":free_capacity", 20), ### NEW v3.8
+        # (party_get_slot, ":manpower", "$current_town", slot_regional_mercs_number),
+        # (gt, ":manpower", 0), ### More than zero.
+        # (store_faction_of_party, ":faction", "$current_town"),
+        (call_script, "script_get_number_of_hero_centers", "trp_player"),
+        # (assign, ":owned_centers", reg0),
+        (assign, reg7, merc_cost),
+        (str_clear, s1),
+        (try_begin),
+          (gt, reg0, 0), ### Is a lord
+          (assign, reg7, merc_cost * 3), ### Cost for one company.
+          
+        (try_end),
+        (store_party_size, ":party_size", "p_main_party"),
+        (store_div, ":price_increase", ":party_size", 20),
+        (val_add, ":price_increase", 1),
+        (assign, reg0, ":price_increase"),
+        # (display_message, "@price increase: {reg0}"),
+        
+        (try_begin),
+          (eq, 0, 1), ### Lets disable this for now
+          (gt, ":price_increase", 1),
+          (val_mul, reg7, ":price_increase"),
+        (try_end),
+
+        (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+          (eq, "$background_type", cb_mercenary_captain),
+          (ge, reg7, 5),
+
+          (val_mul, reg7, 4),
+          (val_div, reg7, 5),
+        (try_end),
+
+        (store_troop_gold, ":gold", "trp_player"),
+        (ge, ":gold", reg7),
+        (str_store_string, s3, "@Cost: {reg7}"),
+      ], "Hire a local mercenary company. {s3}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_regional_mercs_number),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_regional_mercs_number, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg7, 0),
+          (troop_remove_gold, "trp_player", reg7),
+        (try_end),
+        
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company", "$current_town", "p_main_party", slot_regional_mercs),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
-#############################################
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
-############################################ NEW MERC OPTIONS
-     ("recruit_company_special_genoese",
-     [
-       (is_between,  "$current_town", towns_begin, towns_end),
-       (party_slot_ge, "$current_town", slot_center_has_quarters_genoese, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_genoese),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s4, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
-         (str_store_string, s20, "@Genoese Crossbowmen (Normal)"),
-         # (assign, "$current_mercs", "pt_company_genoese_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 2),
-         (str_store_string, s20, "@Genoese Crossbowmen (Large)"),
-         # (assign, "$current_mercs", "pt_company_genoese_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 3),
-         (str_store_string, s20, "@Genoese Crossbowmen (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_genoese_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s20}. {s4}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_genoese),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_genoese, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
-         (assign, "$current_mercs", "pt_company_genoese_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 2),
-         (assign, "$current_mercs", "pt_company_genoese_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 3),
-         (assign, "$current_mercs", "pt_company_genoese_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+    ################################
+    ### --- NEW MERC OPTIONS --- ###
+    ################################
+    ("recruit_company_special_genoese",
+      [
+        (is_between,  "$current_town", towns_begin, towns_end),
+        (party_slot_ge, "$current_town", slot_center_has_quarters_genoese, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_genoese),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
+
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s4, "@Cost: {reg8}"),
+              ################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
+          (str_store_string, s20, "@Genoese Crossbowmen (Normal)"),
+          # (assign, "$current_mercs", "pt_company_genoese_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 2),
+          (str_store_string, s20, "@Genoese Crossbowmen (Large)"),
+          # (assign, "$current_mercs", "pt_company_genoese_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 3),
+          (str_store_string, s20, "@Genoese Crossbowmen (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_genoese_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s20}. {s4}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_genoese),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_genoese, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
+          (assign, "$current_mercs", "pt_company_genoese_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 2),
+          (assign, "$current_mercs", "pt_company_genoese_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 3),
+          (assign, "$current_mercs", "pt_company_genoese_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
-############################################
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
-     ("recruit_company_special_finnish",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_finnish, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_finnish),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s5, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 1),
-         (str_store_string, s21, "@Finnish mercenaries (Normal)"),
-         # (assign, "$current_mercs", "pt_company_finnish_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 2),
-         (str_store_string, s21, "@Finnish mercenaries (Large)"),
-         # (assign, "$current_mercs", "pt_company_finnish_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 3),
-         (str_store_string, s21, "@Finnish mercenaries (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_finnish_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s21}. {s5}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_finnish),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_finnish, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 1),
-         (assign, "$current_mercs", "pt_company_finnish_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 2),
-         (assign, "$current_mercs", "pt_company_finnish_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 3),
-         (assign, "$current_mercs", "pt_company_finnish_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+    ("recruit_company_special_finnish",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_outpost_finnish, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_finnish),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
+
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s5, "@Cost: {reg8}"),
+              ################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 1),
+          (str_store_string, s21, "@Finnish mercenaries (Normal)"),
+          # (assign, "$current_mercs", "pt_company_finnish_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 2),
+          (str_store_string, s21, "@Finnish mercenaries (Large)"),
+          # (assign, "$current_mercs", "pt_company_finnish_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 3),
+          (str_store_string, s21, "@Finnish mercenaries (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_finnish_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s21}. {s5}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_finnish),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_finnish, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 1),
+          (assign, "$current_mercs", "pt_company_finnish_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 2),
+          (assign, "$current_mercs", "pt_company_finnish_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_finnish, 3),
+          (assign, "$current_mercs", "pt_company_finnish_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
-############################################
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
-     ("recruit_company_special_turcopole",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
-	   ###### NEW v3.5 - only recruitable with christian owners
-       (store_faction_of_party, ":faction", "$current_town"),  
-       (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
-       (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
-	   ########################
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_turkopole),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s6, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
-         (str_store_string, s22, "@Turcopoles (Normal)"),
-         #(assign, "$current_mercs", "pt_company_turkopoles_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 2),
-         (str_store_string, s22, "@Turcopoles (Large)"),
-         #(assign, "$current_mercs", "pt_company_turkopoles_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 3),
-         (str_store_string, s22, "@Turcopoles (Very Large)"),
-         #(assign, "$current_mercs", "pt_company_turkopoles_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s22}. {s6}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_turkopole),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_turkopole, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
-         (assign, "$current_mercs", "pt_company_turkopoles_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 2),
-         (assign, "$current_mercs", "pt_company_turkopoles_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 3),
-         (assign, "$current_mercs", "pt_company_turkopoles_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+    ("recruit_company_special_turcopole",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
+        ### NEW v3.5 - Only recruitable with Christian owners
+        (store_faction_of_party, ":faction", "$current_town"),  
+        (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+        (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
+        ######################################
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_turkopole),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
+
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s6, "@Cost: {reg8}"),
+              ################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
+          (str_store_string, s22, "@Turcopoles (Normal)"),
+          # (assign, "$current_mercs", "pt_company_turkopoles_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 2),
+          (str_store_string, s22, "@Turcopoles (Large)"),
+          # (assign, "$current_mercs", "pt_company_turkopoles_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 3),
+          (str_store_string, s22, "@Turcopoles (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_turkopoles_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s22}. {s6}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_turkopole),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_turkopole, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
+          (assign, "$current_mercs", "pt_company_turkopoles_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 2),
+          (assign, "$current_mercs", "pt_company_turkopoles_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 3),
+          (assign, "$current_mercs", "pt_company_turkopoles_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
+    ("recruit_company_special_georgians",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_camp_georgian, 1),
+        ### NEW v3.5 - Only recruitable with Christian owners
+        (store_faction_of_party, ":faction", "$current_town"),  
+        (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
+        (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
+        ######################################
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_georgian),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
 
-     ("recruit_company_special_brabantine",
-     [
-       (is_between,  "$current_town", towns_begin, towns_end),
-       (party_slot_ge, "$current_town", slot_center_has_quarters_brabantine, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_brabantine),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s7, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
-         (str_store_string, s23, "@Brabantine mercenaries (Normal)"),
-         # (assign, "$current_mercs", "pt_company_brabantine_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 2),
-         (str_store_string, s23, "@Brabantine mercenaries (Large)"),
-         # (assign, "$current_mercs", "pt_company_brabantine_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 3),
-         (str_store_string, s23, "@Brabantine mercenaries (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_brabantine_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s23}. {s7}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_brabantine),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_brabantine, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
-         (assign, "$current_mercs", "pt_company_brabantine_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 2),
-         (assign, "$current_mercs", "pt_company_brabantine_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 3),
-         (assign, "$current_mercs", "pt_company_brabantine_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s6, "@Cost: {reg8}"),
+              ################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
+          (str_store_string, s23, "@Georgians (Normal)"),
+          # (assign, "$current_mercs", "pt_company_georgian_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 2),
+          (str_store_string, s23, "@Georgians (Large)"),
+          # (assign, "$current_mercs", "pt_company_georgian_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 3),
+          (str_store_string, s23, "@Georgians (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_georgian_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s23}. {s6}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_georgian),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_georgian, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
+          (assign, "$current_mercs", "pt_company_georgian_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 2),
+          (assign, "$current_mercs", "pt_company_georgian_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 3),
+          (assign, "$current_mercs", "pt_company_georgian_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
+    ("recruit_company_special_brabantine",
+      [
+        (is_between, "$current_town", towns_begin, towns_end),
+        (party_slot_ge, "$current_town", slot_center_has_quarters_brabantine, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_brabantine),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), #lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
 
-     
-     
-     
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
 
-
-     ("recruit_company_special_welsh_kern",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_welsh_kern, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_welsh_kern),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s8, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
-         (str_store_string, s24, "@Welsh mercenaries (Normal)"),
-         # (assign, "$current_mercs", "pt_company_welsh_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 2),
-         (str_store_string, s24, "@Welsh mercenaries (Large)"),
-         # (assign, "$current_mercs", "pt_company_welsh_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 3),
-         (str_store_string, s24, "@Welsh mercenaries (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_welsh_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s24}. {s8}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_welsh_kern),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_welsh_kern, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
-         (assign, "$current_mercs", "pt_company_welsh_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 2),
-         (assign, "$current_mercs", "pt_company_welsh_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 3),
-         (assign, "$current_mercs", "pt_company_welsh_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s7, "@Cost: {reg8}"),
+              ##################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
+          (str_store_string, s24, "@Brabantine mercenaries (Normal)"),
+          # (assign, "$current_mercs", "pt_company_brabantine_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 2),
+          (str_store_string, s24, "@Brabantine mercenaries (Large)"),
+          # (assign, "$current_mercs", "pt_company_brabantine_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 3),
+          (str_store_string, s24, "@Brabantine mercenaries (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_brabantine_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ########################################
+        (try_end),
+      ], "Hire a company of {s24}. {s7}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_brabantine),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_brabantine, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
+          (assign, "$current_mercs", "pt_company_brabantine_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 2),
+          (assign, "$current_mercs", "pt_company_brabantine_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 3),
+          (assign, "$current_mercs", "pt_company_brabantine_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
-
- 
-     
-     
-
-
-     ("recruit_company_special_gaelic",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_outpost_gaelic, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_gaelic),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s8, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 1),
-         (str_store_string, s25, "@Gaelic mercenaries (Normal)"),
-         # (assign, "$current_mercs", "pt_generic_gaelic_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 2),
-         (str_store_string, s25, "@Gaelic mercenaries (Large)"),
-         # (assign, "$current_mercs", "pt_generic_gaelic_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 3),
-         (str_store_string, s25, "@Gaelic mercenaries (Very Large)"),
-         # (assign, "$current_mercs", "pt_generic_gaelic_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s25}. {s8}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_gaelic),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_gaelic, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 1),
-         (assign, "$current_mercs", "pt_generic_gaelic_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 2),
-         (assign, "$current_mercs", "pt_generic_gaelic_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 3),
-         (assign, "$current_mercs", "pt_generic_gaelic_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
+    ("recruit_company_special_sicilian_muslims", ### Sicilian Mercenaries are back! (NEW v3.9.3a, by Khanor) ###
+      [
+        (is_between, "$current_town", towns_begin, towns_end),
+        (this_or_next|party_slot_eq, "$current_town", slot_spec_mercs1, merc_sicily_muslims),
+        (this_or_next|eq, "$current_town", "p_town_24_1"),
+        (eq, "$current_town", "p_town_24_2"),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_sicily_muslims),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
 
-     
-     
-     
-     ("recruit_company_special_cuman",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_camp_cuman, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cuman),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s8, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
-         (str_store_string, s26, "@Cumans (Normal)"),
-         # (assign, "$current_mercs", "pt_company_cuman_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 2),
-         (str_store_string, s26, "@Cumans (Large)"),
-         # (assign, "$current_mercs", "pt_company_cuman_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 3),
-         (str_store_string, s26, "@Cumans (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_cuman_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s26}. {s8}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cuman),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_cuman, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
-         (assign, "$current_mercs", "pt_company_cuman_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 2),
-         (assign, "$current_mercs", "pt_company_cuman_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 3),
-         (assign, "$current_mercs", "pt_company_cuman_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s7, "@Cost: {reg8}"),
+              ################################
+        (try_begin),
+          (ge, ":manpower", 1),
+          (str_store_string, s25, "@Sicilian mercenaries (Normal)"),
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s25}. {s7}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_sicily_muslims),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_sicily_muslims, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_spec_mercs1, merc_sicily_muslims),
+          (assign, "$current_mercs", "pt_company_sicily"),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
+    ("recruit_company_special_welsh_kern",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_outpost_welsh_kern, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_welsh_kern),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
 
-     
-     ("recruit_company_special_kipchak",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_camp_kipchak, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kipchak),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s8, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
-         (str_store_string, s27, "@Kipchaks (Normal)"),
-         # (assign, "$current_mercs", "pt_company_kipchak_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 2),
-         (str_store_string, s27, "@Kipchaks (Large)"),
-         # (assign, "$current_mercs", "pt_company_kipchak_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 3),
-         (str_store_string, s27, "@Kipchaks (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_kipchak_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s27}. {s8}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kipchak),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_kipchak, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
-         (assign, "$current_mercs", "pt_company_kipchak_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 2),
-         (assign, "$current_mercs", "pt_company_kipchak_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 3),
-         (assign, "$current_mercs", "pt_company_kipchak_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s8, "@Cost: {reg8}"),
+        ######################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
+          (str_store_string, s26, "@Welsh mercenaries (Normal)"),
+          # (assign, "$current_mercs", "pt_company_welsh_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 2),
+          (str_store_string, s26, "@Welsh mercenaries (Large)"),
+          # (assign, "$current_mercs", "pt_company_welsh_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 3),
+          (str_store_string, s26, "@Welsh mercenaries (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_welsh_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s26}. {s8}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_welsh_kern),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_welsh_kern, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
+          (assign, "$current_mercs", "pt_company_welsh_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 2),
+          (assign, "$current_mercs", "pt_company_welsh_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 3),
+          (assign, "$current_mercs", "pt_company_welsh_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
+    ("recruit_company_special_gaelic",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_outpost_gaelic, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_gaelic),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
 
-     
-     ("recruit_company_special_mongol",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_camp_mongol, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mongol),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s8, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
-         (str_store_string, s28, "@Mongols (Normal)"),
-         # (assign, "$current_mercs", "pt_company_mongol_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 2),
-         (str_store_string, s28, "@Mongols (Large)"),
-         # (assign, "$current_mercs", "pt_company_mongol_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 3),
-         (str_store_string, s28, "@Mongols (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_mongol_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s28}. {s8}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mongol),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_mongol, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
-         (assign, "$current_mercs", "pt_company_mongol_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 2),
-         (assign, "$current_mercs", "pt_company_mongol_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 3),
-         (assign, "$current_mercs", "pt_company_mongol_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s8, "@Cost: {reg8}"),
+        ######################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 1),
+          (str_store_string, s27, "@Gaelic mercenaries (Normal)"),
+          # (assign, "$current_mercs", "pt_generic_gaelic_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 2),
+          (str_store_string, s27, "@Gaelic mercenaries (Large)"),
+          # (assign, "$current_mercs", "pt_generic_gaelic_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 3),
+          (str_store_string, s27, "@Gaelic mercenaries (Very Large)"),
+          # (assign, "$current_mercs", "pt_generic_gaelic_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s27}. {s8}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_gaelic),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_gaelic, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 1),
+          (assign, "$current_mercs", "pt_generic_gaelic_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 2),
+          (assign, "$current_mercs", "pt_generic_gaelic_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_outpost_gaelic, 3),
+          (assign, "$current_mercs", "pt_generic_gaelic_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
+    ("recruit_company_special_cuman",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_camp_cuman, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cuman),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              #(display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this.
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
 
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
 
-     
-     ("recruit_company_special_georgian",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_camp_georgian, 1),
-	   ###### NEW v3.5 - only recruitable with christian owners
-       (store_faction_of_party, ":faction", "$current_town"),  
-       (this_or_next|faction_slot_eq, ":faction", slot_faction_religion, religion_catholic),  
-       (faction_slot_eq, ":faction", slot_faction_religion, religion_orthodox),  
-	   ########################
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_georgian),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s8, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
-         (str_store_string, s29, "@Georgians (Normal)"),
-         # (assign, "$current_mercs", "pt_company_georgian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 2),
-         (str_store_string, s29, "@Georgians (Large)"),
-         # (assign, "$current_mercs", "pt_company_georgian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 3),
-         (str_store_string, s29, "@Georgians (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_georgian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s29}. {s8}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_georgian),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_georgian, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
-         (assign, "$current_mercs", "pt_company_georgian_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 2),
-         (assign, "$current_mercs", "pt_company_georgian_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 3),
-         (assign, "$current_mercs", "pt_company_georgian_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s8, "@Cost: {reg8}"),
+        ######################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
+          (str_store_string, s28, "@Cumans (Normal)"),
+          # (assign, "$current_mercs", "pt_company_cuman_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 2),
+          (str_store_string, s28, "@Cumans (Large)"),
+          # (assign, "$current_mercs", "pt_company_cuman_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 3),
+          (str_store_string, s28, "@Cumans (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_cuman_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s28}. {s8}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cuman),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_cuman, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
+          (assign, "$current_mercs", "pt_company_cuman_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 2),
+          (assign, "$current_mercs", "pt_company_cuman_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 3),
+          (assign, "$current_mercs", "pt_company_cuman_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
 
 
+    ("recruit_company_special_kipchak",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_camp_kipchak, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kipchak),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
 
-     
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
 
-     
-     ("recruit_company_special_kwarezmian",
-     [
-       (is_between,  "$current_town", centers_begin, centers_end),
-       (party_slot_ge, "$current_town", slot_center_has_camp_kwarezmian, 1),
-         (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-         (ge, ":free_capacity", 20), ####### NEW v3.8
-           (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kwarezmian),
-           (gt, ":manpower", 0), #more then one
-             #(store_faction_of_party, ":faction", "$current_town"),
-             (call_script, "script_get_number_of_hero_centers", "trp_player"),
-             #(assign, ":owned_centers", reg0),
-             (assign, reg8, merc_cost),
-             (str_clear, s1),
-             (try_begin),
-               (gt, reg0, 0), #is a lord
-               (assign, reg8, merc_cost * 3), #cost for one company
-             (try_end),
-             (store_party_size, ":party_size", "p_main_party"),
-             (store_div, ":price_increase", ":party_size", 20),
-             (val_add, ":price_increase", 1),
-             (assign, reg0, ":price_increase"),
-             #(display_message, "@price increase: {reg0}"),
-             
-             (try_begin),
-               (eq, 0, 1), #lets disable this
-               (gt, ":price_increase", 1),
-               (val_mul, reg8, ":price_increase"),
-             (try_end),
-             
-             (store_troop_gold, ":gold", "trp_player"),
-             (ge, ":gold", reg8),
-             (str_store_string, s8, "@Cost: {reg8}"),
-############################################
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
-         (str_store_string, s30, "@Kwarezmians (Normal)"),
-         # (assign, "$current_mercs", "pt_company_kwarezmian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 2),
-         (str_store_string, s30, "@Kwarezmians (Large)"),
-         # (assign, "$current_mercs", "pt_company_kwarezmian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 3),
-         (str_store_string, s30, "@Kwarezmians (Very Large)"),
-         # (assign, "$current_mercs", "pt_company_kwarezmian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-############################################
-       (try_end),
-     ], "Hire a company of {s30}. {s8}",
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kwarezmian),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs_number_kwarezmian, ":manpower"),
-       #(call_script, "script_fill_lance", "$current_town", "p_main_party"),
-       
-       (try_begin),
-         (gt, reg8, 0),
-         (troop_remove_gold, "trp_player", reg8),
-       (try_end),
-       
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
-         (assign, "$current_mercs", "pt_company_kwarezmian_1"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 2),
-         (assign, "$current_mercs", "pt_company_kwarezmian_2"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 3),
-         (assign, "$current_mercs", "pt_company_kwarezmian_3"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       ##(party_set_slot, "$current_town", slot_regional_mercs, generic_euro), #######TEMP!!
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s8, "@Cost: {reg8}"),
+        ######################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
+          (str_store_string, s29, "@Kipchaks (Normal)"),
+          # (assign, "$current_mercs", "pt_company_kipchak_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 2),
+          (str_store_string, s29, "@Kipchaks (Large)"),
+          # (assign, "$current_mercs", "pt_company_kipchak_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 3),
+          (str_store_string, s29, "@Kipchaks (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_kipchak_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s29}. {s8}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kipchak),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_kipchak, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
+          (assign, "$current_mercs", "pt_company_kipchak_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 2),
+          (assign, "$current_mercs", "pt_company_kipchak_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 3),
+          (assign, "$current_mercs", "pt_company_kipchak_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+
+
+    ("recruit_company_special_mordovians", ### Mordovian Mercenaries are back! (NEW v3.9.3a, by Khanor) ###
+      [
+        (is_between, "$current_town", towns_begin, towns_end),
+        (party_slot_eq, "$current_town", slot_spec_mercs1, merc_mordovian),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mordovians),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
+
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s7, "@Cost: {reg8}"),
+              ################################
+        (try_begin),
+          (ge, ":manpower", 1),
+          (str_store_string, s30, "@Mordovians (Normal)"),
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s30}. {s7}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mordovians),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_mordovians, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_spec_mercs1, merc_mordovian),
+          (assign, "$current_mercs", "pt_company_mordovian"),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
+          (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
+
+    
+
+    ("recruit_company_special_mongol",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_camp_mongol, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mongol),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
+
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s8, "@Cost: {reg8}"),
+        ######################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
+          (str_store_string, s31, "@Mongols (Normal)"),
+          # (assign, "$current_mercs", "pt_company_mongol_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 2),
+          (str_store_string, s31, "@Mongols (Large)"),
+          # (assign, "$current_mercs", "pt_company_mongol_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 3),
+          (str_store_string, s31, "@Mongols (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_mongol_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s31}. {s8}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mongol),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_mongol, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
+          (assign, "$current_mercs", "pt_company_mongol_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 2),
+          (assign, "$current_mercs", "pt_company_mongol_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 3),
+          (assign, "$current_mercs", "pt_company_mongol_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
+          (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
+
+
+
+    ("recruit_company_special_kwarezmian",
+      [
+        (is_between,  "$current_town", centers_begin, centers_end),
+        (party_slot_ge, "$current_town", slot_center_has_camp_kwarezmian, 1),
+          (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+          (ge, ":free_capacity", 20), ### NEW v3.8
+            (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kwarezmian),
+            (gt, ":manpower", 0), ### More than zero.
+              # (store_faction_of_party, ":faction", "$current_town"),
+              (call_script, "script_get_number_of_hero_centers", "trp_player"),
+              # (assign, ":owned_centers", reg0),
+              (assign, reg8, merc_cost),
+              (str_clear, s1),
+              (try_begin),
+                (gt, reg0, 0), ### Is a lord
+                (assign, reg8, merc_cost * 3), ### Cost for one company.
+              (try_end),
+              (store_party_size, ":party_size", "p_main_party"),
+              (store_div, ":price_increase", ":party_size", 20),
+              (val_add, ":price_increase", 1),
+              (assign, reg0, ":price_increase"),
+              # (display_message, "@price increase: {reg0}"),
+              
+              (try_begin),
+                (eq, 0, 1), ### Lets disable this
+                (gt, ":price_increase", 1),
+                (val_mul, reg8, ":price_increase"),
+              (try_end),
+
+              (try_begin), ### Players with the Mercenary Captain background now have a permanent 20% discount on the final value of mercenary companies! (NEW v3.9.3a, by Khanor) ###
+                (eq, "$background_type", cb_mercenary_captain),
+                (ge, reg8, 5),
+
+                (val_mul, reg8, 4),
+                (val_div, reg8, 5),
+              (try_end),
+              
+              (store_troop_gold, ":gold", "trp_player"),
+              (ge, ":gold", reg8),
+              (str_store_string, s8, "@Cost: {reg8}"),
+        ######################################
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
+          (str_store_string, s32, "@Kwarezmians (Normal)"),
+          # (assign, "$current_mercs", "pt_company_kwarezmian_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 2),
+          (str_store_string, s32, "@Kwarezmians (Large)"),
+          # (assign, "$current_mercs", "pt_company_kwarezmian_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 3),
+          (str_store_string, s32, "@Kwarezmians (Very Large)"),
+          # (assign, "$current_mercs", "pt_company_kwarezmian_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        ######################################
+        (try_end),
+      ], "Hire a company of {s32}. {s8}",
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_kwarezmian),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs_number_kwarezmian, ":manpower"),
+        # (call_script, "script_fill_lance", "$current_town", "p_main_party"),
+        
+        (try_begin),
+          (gt, reg8, 0),
+          (troop_remove_gold, "trp_player", reg8),
+        (try_end),
+        
+        ### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
+          (assign, "$current_mercs", "pt_company_kwarezmian_1"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 2),
+          (assign, "$current_mercs", "pt_company_kwarezmian_2"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 3),
+          (assign, "$current_mercs", "pt_company_kwarezmian_3"),
+        (try_end),
+        ### NEW v3.0-KOMKE END- 
+        # (party_set_slot, "$current_town", slot_regional_mercs, generic_euro), ### TEMP!!
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
+          (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+            (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
+    
+
+
      ("recruit_crusaders_teutonic",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -1448,28 +1693,28 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
-         (str_store_string, s31, "@The Teutonic Knights (Small)"),
+         (str_store_string, s33, "@The Teutonic Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_teutonic_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 2),
-         (str_store_string, s31, "@The Teutonic Knights (Medium)"),
+         (str_store_string, s33, "@The Teutonic Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_teutonic_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 3),
-         (str_store_string, s31, "@The Teutonic Knights (Large)"),
+         (str_store_string, s33, "@The Teutonic Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_teutonic_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 4),
-         (str_store_string, s31, "@The Teutonic Knights (Very Large)"),
+         (str_store_string, s33, "@The Teutonic Knights (Very Large)"),
          # (assign, "$current_mercs", "pt_company_teutonic_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
          
 ############################################
        (try_end),
-     ], "Call upon {s31}. {s9}",
+     ], "Call upon {s33}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic),
        (val_sub, ":manpower", 1),
@@ -1512,13 +1757,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-
- 
-     
-     
-     
      ("recruit_crusaders_templar",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -1544,28 +1785,28 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
-         (str_store_string, s32, "@The Templar Knights (Small)"),
+         (str_store_string, s34, "@The Templar Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_templar_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 2),
-         (str_store_string, s32, "@The Templar Knights (Medium)"),
+         (str_store_string, s34, "@The Templar Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_templar_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 3),
-         (str_store_string, s32, "@The Templar Knights (Large)"),
+         (str_store_string, s34, "@The Templar Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_templar_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 4),
-         (str_store_string, s32, "@The Templar Knights (Very Large)"),
+         (str_store_string, s34, "@The Templar Knights (Very Large)"),
          # (assign, "$current_mercs", "pt_company_templar_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
          
 ############################################
        (try_end),
-     ], "Call upon {s32}. {s9}",
+     ], "Call upon {s34}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar),
        (val_sub, ":manpower", 1),
@@ -1608,13 +1849,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-
-     
-     
-     
-     
      ("recruit_crusaders_hospitaller",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -1640,28 +1877,28 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
-         (str_store_string, s33, "@The Hospitaller Knights (Small)"),
+         (str_store_string, s35, "@The Hospitaller Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 2),
-         (str_store_string, s33, "@The Hospitaller Knights (Medium)"),
+         (str_store_string, s35, "@The Hospitaller Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 3),
-         (str_store_string, s33, "@The Hospitaller Knights (Large)"),
+         (str_store_string, s35, "@The Hospitaller Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 4),
-         (str_store_string, s33, "@The Hospitaller Knights (Very Large)"),
+         (str_store_string, s35, "@The Hospitaller Knights (Very Large)"),
          # (assign, "$current_mercs", "pt_company_hospitaller_4"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
          
 ############################################
        (try_end),
-     ], "Call upon {s33}. {s9}",
+     ], "Call upon {s35}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller),
        (val_sub, ":manpower", 1),
@@ -1704,10 +1941,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
- 
-     
-     
-     
+    
+
+
      ("recruit_crusaders_saint_lazarus",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -1733,22 +1969,22 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 1),
-         (str_store_string, s34, "@The Saint Lazarus Knights (Small)"),
+         (str_store_string, s36, "@The Saint Lazarus Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 2),
-         (str_store_string, s34, "@The Saint Lazarus Knights (Medium)"),
+         (str_store_string, s36, "@The Saint Lazarus Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_saint_lazarus, 3),
-         (str_store_string, s34, "@The Saint Lazarus Knights (Large)"),
+         (str_store_string, s36, "@The Saint Lazarus Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_saint_lazarus_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
 ############################################
        (try_end),
-     ], "Call upon {s34}. {s9}",
+     ], "Call upon {s36}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_lazarus),
        (val_sub, ":manpower", 1),
@@ -1788,12 +2024,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-
-
-
-     
      ("recruit_crusaders_santiago",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -1819,22 +2052,22 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 1),
-         (str_store_string, s35, "@The Santiago Knights (Small)"),
+         (str_store_string, s37, "@The Santiago Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_santiago_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 2),
-         (str_store_string, s35, "@The Santiago Knights (Medium)"),
+         (str_store_string, s37, "@The Santiago Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_santiago_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_santiago, 3),
-         (str_store_string, s35, "@The Santiago Knights (Large)"),
+         (str_store_string, s37, "@The Santiago Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_santiago_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
 ############################################
        (try_end),
-     ], "Call upon {s35}. {s9}",
+     ], "Call upon {s37}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_santiago),
        (val_sub, ":manpower", 1),
@@ -1874,10 +2107,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-
-     
      ("recruit_crusaders_calatrava",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -1903,22 +2135,22 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 1),
-         (str_store_string, s36, "@The Calatrava Knights (Small)"),
+         (str_store_string, s38, "@The Calatrava Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_calatrava_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 2),
-         (str_store_string, s36, "@The Calatrava Knights (Medium)"),
+         (str_store_string, s38, "@The Calatrava Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_calatrava_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_calatrava, 3),
-         (str_store_string, s36, "@The Calatrava Knights (Large)"),
+         (str_store_string, s38, "@The Calatrava Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_calatrava_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
 ############################################
        (try_end),
-     ], "Call upon {s36}. {s9}",
+     ], "Call upon {s38}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_calatrava),
        (val_sub, ":manpower", 1),
@@ -1958,9 +2190,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-     
      ("recruit_crusaders_saint_thomas",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -1986,22 +2218,22 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 1),
-         (str_store_string, s37, "@The Saint Thomas Knights (Small)"),
+         (str_store_string, s39, "@The Saint Thomas Knights (Small)"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 2),
-         (str_store_string, s37, "@The Saint Thomas Knights (Medium)"),
+         (str_store_string, s39, "@The Saint Thomas Knights (Medium)"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_saint_thomas, 3),
-         (str_store_string, s37, "@The Saint Thomas Knights (Large)"),
+         (str_store_string, s39, "@The Saint Thomas Knights (Large)"),
          # (assign, "$current_mercs", "pt_company_saint_thomas_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
 ############################################
        (try_end),
-     ], "Call upon {s37}. {s9}",
+     ], "Call upon {s39}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_saint_thomas),
        (val_sub, ":manpower", 1),
@@ -2041,13 +2273,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-
-
-
-
-     
      ("recruit_spec2_varangians",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -2073,18 +2301,18 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 1),
-         (str_store_string, s38, "@The Varangians (Normal)"),
+         (str_store_string, s40, "@The Varangians (Normal)"),
          # (assign, "$current_mercs", "pt_company_varangian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_varangian, 2),
-         (str_store_string, s38, "@The Varangians (Large)"),
+         (str_store_string, s40, "@The Varangians (Large)"),
          # (assign, "$current_mercs", "pt_company_varangian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
           
 ############################################
        (try_end),
-     ], "Call upon {s38}. {s9}",
+     ], "Call upon {s40}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_varangian),
        (val_sub, ":manpower", 1),
@@ -2121,10 +2349,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-
-     
      ("recruit_spec2_cataphract",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -2150,22 +2377,22 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 1),
-         (str_store_string, s39, "@The Cataphracts (Small)"),
+         (str_store_string, s41, "@The Cataphracts (Small)"),
          # (assign, "$current_mercs", "pt_company_cataphract_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 2),
-         (str_store_string, s39, "@The Cataphracts (Medium)"),
+         (str_store_string, s41, "@The Cataphracts (Medium)"),
          # (assign, "$current_mercs", "pt_company_cataphract_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_cataphract, 3),
-         (str_store_string, s39, "@The Cataphracts (Large)"),
+         (str_store_string, s41, "@The Cataphracts (Large)"),
          # (assign, "$current_mercs", "pt_company_cataphract_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
 ############################################
        (try_end),
-     ], "Call upon {s39}. {s9}",
+     ], "Call upon {s41}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_cataphract),
        (val_sub, ":manpower", 1),
@@ -2205,13 +2432,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
+    
 
 
-
-     
-     
-
-     
      ("recruit_spec2_mamluk",
      [
        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
@@ -2237,22 +2460,22 @@ game_menus = [
 ############################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 1),
-         (str_store_string, s40, "@The Mamluks (Small)"),
+         (str_store_string, s42, "@The Mamluks (Small)"),
          # (assign, "$current_mercs", "pt_company_mamlukes_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 2),
-         (str_store_string, s40, "@The Mamluks (Medium)"),
+         (str_store_string, s42, "@The Mamluks (Medium)"),
          # (assign, "$current_mercs", "pt_company_mamlukes_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_mamluk, 3),
-         (str_store_string, s40, "@The Mamluks (Large)"),
+         (str_store_string, s42, "@The Mamluks (Large)"),
          # (assign, "$current_mercs", "pt_company_mamlukes_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
           
 ############################################
        (try_end),
-     ], "Call upon {s40}. {s9}",
+     ], "Call upon {s42}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_mamluk),
        (val_sub, ":manpower", 1),
@@ -2332,16 +2555,16 @@ game_menus = [
        
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 1),
-         (str_store_string, s41, "@The Teutonic Knights Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
+         (str_store_string, s43, "@The Teutonic Knights Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_teutonic_aux_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
 
       (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_teutonic, 2),
-         (str_store_string, s41, "@The Teutonic Knights Auxiliaries (Large)"),####### NEW v3.0-KOMKE
+         (str_store_string, s43, "@The Teutonic Knights Auxiliaries (Large)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_teutonic_aux_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (try_end),
        
-     ], "Call upon {s41}. {s9}",
+     ], "Call upon {s43}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_teutonic_aux),
        (val_sub, ":manpower", 1),
@@ -2378,12 +2601,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
-     
-     
-     
-     
-     
-     
+    
+
+
      ("recruit_crusader_aux_templar",
      [
        (is_between,  "$current_town", towns_begin, towns_end),
@@ -2419,16 +2639,16 @@ game_menus = [
        
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 1),
-         (str_store_string, s42, "@The Knights Templar Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
+         (str_store_string, s44, "@The Knights Templar Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_templar_aux_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_templar, 2),
-         (str_store_string, s42, "@The Knights Templar Auxiliaries (Large)"),####### NEW v3.0-KOMKE
+         (str_store_string, s44, "@The Knights Templar Auxiliaries (Large)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_templar_aux_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (try_end),
        
-     ], "Call upon {s42}. {s9}",
+     ], "Call upon {s44}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_templar_aux),
        (val_sub, ":manpower", 1),
@@ -2465,11 +2685,9 @@ game_menus = [
          (jump_to_menu, "mnu_village"),
        (try_end),
      ]),
-     
-     
-     
-     
-     
+    
+
+
      ("recruit_crusader_aux_hospitaller",
      [
        (is_between,  "$current_town", towns_begin, towns_end),
@@ -2505,16 +2723,16 @@ game_menus = [
        
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 1),
-         (str_store_string, s43, "@The Knights Hospitaller Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
+         (str_store_string, s45, "@The Knights Hospitaller Auxiliaries (Normal)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_hospitaller_aux_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
          
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_chapter_hospitaller, 2),
-         (str_store_string, s43, "@The Knights Hospitaller Auxiliaries (Large)"),####### NEW v3.0-KOMKE
+         (str_store_string, s45, "@The Knights Hospitaller Auxiliaries (Large)"),####### NEW v3.0-KOMKE
          # (assign, "$current_mercs", "pt_company_hospitaller_aux_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
        (try_end),
        
-     ], "Call upon {s43}. {s9}",
+     ], "Call upon {s45}. {s9}",
      [
        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_hospitaller_aux),
        (val_sub, ":manpower", 1),
@@ -2552,237 +2770,242 @@ game_menus = [
        (try_end),
      ]),
      
+     
+############################################################
+    
 ############################################################
 
-     
-################ this add recruitable knights from jousting lists/tournament grounds
-     ("recruit_knights_tournament",
-     [
-       (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
-       (store_faction_of_party, ":cur_fief_faction", "$current_town"),
-       ############ only factions with knights can have this
-       (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_western"),
-       (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_teutonic"),
-       (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_nordic"),
-       (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_iberian"),
-       (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_gaelic"),
-       (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_welsh"),
-       (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_italian"),
-       # (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_player"),
-       
-       (this_or_next|party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-       (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-       
-       (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
-       (ge, ":free_capacity", 20), ####### NEW v3.8
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_tournament_knights),
-       (gt, ":manpower", 0), #more then one
-       (store_faction_of_party, ":faction", "$current_town"),
-       #(eq, ":faction", "fac_kingdom_23"),
-       (eq, ":faction", "$players_kingdom"), #same faction ##
 
-       #(call_script, "script_get_number_of_hero_centers", "trp_player"),
-       #(assign, ":owned_centers", reg0),
-       #(assign, reg9, 3000),
-       (str_clear, s1),
-       #(try_begin),
-         #(gt, reg0, 0), #is a lord
-         (assign, reg9, 3000), #cost for one company
-       #(try_end),
-       # (store_party_size, ":party_size", "p_main_party"),
-       # (store_div, ":price_increase", ":party_size", 20),
-       
-       (store_troop_gold, ":gold", "trp_player"),
-       (ge, ":gold", reg9),
-       (str_store_string, s5, "@Cost: {reg9}"),
-#######################################
-####### NEW v3.0-KOMKE START-
-       (str_clear, s44),####### NEW v3.0-KOMKE otherwise the register was overwritten
-       (str_clear, s45),
-       (str_clear, s46),####### NEW v3.0-KOMKE there are 6 knight options
-       (str_clear, s47),
-       (str_clear, s48),
-       (str_clear, s49),
-       (try_begin),
-         (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_western"),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_teutonic"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (str_store_string, s44, "@Euro Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_euro_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_western"),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_teutonic"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (str_store_string, s44, "@Euro Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_euro_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+    #################################################################################
+    #### This adds recruitable knights from jousting lists/tournament grounds --- ###
+    #################################################################################
+    ("recruit_knights_tournament",
+      [
+        (is_between,  "$current_town", walled_centers_begin, walled_centers_end),
+        (store_faction_of_party, ":cur_fief_faction", "$current_town"),
+        ############ only factions with knights can have this
+        (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_western"),
+        (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_teutonic"),
+        (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_nordic"),
+        (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_iberian"),
+        (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_gaelic"),
+        (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_welsh"),
+        (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_italian"),
+        # (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_player"),
+        
+        (this_or_next|party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+        (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+        
+        (party_get_free_companions_capacity, ":free_capacity", "p_main_party"),
+        (ge, ":free_capacity", 20), ####### NEW v3.8
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs_number_tournament_knights),
+        (gt, ":manpower", 0), #more then one
+        (store_faction_of_party, ":faction", "$current_town"),
+        #(eq, ":faction", "fac_kingdom_23"),
+        (eq, ":faction", "$players_kingdom"), #same faction ##
 
-         
-#######################################
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_nordic"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (str_store_string, s45, "@Scandinavian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_nordic"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (str_store_string, s45, "@Scandinavian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-         
-#######################################
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_iberian"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (str_store_string, s46, "@Iberian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_iberian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-       
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_iberian"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (str_store_string, s46, "@Iberian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_iberian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-         
-#######################################
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_gaelic"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (str_store_string, s47, "@Gaelic Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-       
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_gaelic"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (str_store_string, s47, "@Gaelic Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-         
-#######################################
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_welsh"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (str_store_string, s48, "@Welsh Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_welsh_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-       
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_welsh"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (str_store_string, s48, "@Welsh Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_welsh_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-         
-         
-#######################################
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_italian"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (str_store_string, s49, "@Italian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_italian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-       
-       (else_try),
-         (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_italian"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (str_store_string, s49, "@Italian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_italian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-
-         
-###################################### CTT TROOPS
-       # (else_try),
-         # (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_player"),
-         # (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         # (str_store_string, s50, "@Italian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_italian_1"),
-       
-       # (else_try),
-         # (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_player"),
-         # (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         # (str_store_string, s50, "@Italian Knights"),
-         # (assign, "$current_mercs", "pt_company_knights_tournament_italian_2"),
-    (try_end),  
-     # ], "Recruit {s50}. {s5}",
-     ], "Recruit the following knights {s44}-{s45}-{s46}-{s47}-{s48}-{s49}. Cost = {s5}",
-####### NEW v3.0-KOMKE END-
-     [
-       (party_get_slot, ":manpower", "$current_town", slot_spec_mercs2_number),
-       (val_sub, ":manpower", 1),
-       (party_set_slot, "$current_town", slot_spec_mercs2_number, ":manpower"),
-####### NEW v3.0-KOMKE START-mercs assigned in consequences block
-       (try_begin),
-         (eq, s44, "@Euro Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_euro_1"),
-       (else_try),
-         (eq, s44, "@Euro Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_euro_2"),
-       (else_try),
-         (eq, s45, "@Scandinavian Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_1"),
-       (else_try),
-         (eq, s45, "@Scandinavian Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_2"),
-       (else_try),
-         (eq, s46, "@Iberian Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_iberian_1"),
-       (else_try),
-         (eq, s46, "@Iberian Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_iberian_2"),
-       (else_try),
-         (eq, s47, "@Gaelic Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_1"),
-       (else_try),
-         (eq, s47, "@Gaelic Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_2"),
-       (else_try),
-         (eq, s48, "@Welsh Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_welsh_1"),
-       (else_try),
-         (eq, s48, "@Welsh Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_welsh_2"),
-       (else_try),
-         (eq, s49, "@Italian Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_italian_1"),
-       (else_try),
-         (eq, s49, "@Italian Knights"),
-         (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
-         (assign, "$current_mercs", "pt_company_knights_tournament_italian_2"),
-       (try_end),
-####### NEW v3.0-KOMKE END- 
-       (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
-       
-       
-       
+        #(call_script, "script_get_number_of_hero_centers", "trp_player"),
+        #(assign, ":owned_centers", reg0),
+        #(assign, reg9, 3000),
+        (str_clear, s1),
+        #(try_begin),
+          #(gt, reg0, 0), #is a lord
+          (assign, reg9, 3000), #cost for one company
+        #(try_end),
+        # (store_party_size, ":party_size", "p_main_party"),
+        # (store_div, ":price_increase", ":party_size", 20),
+        
+        (store_troop_gold, ":gold", "trp_player"),
+        (ge, ":gold", reg9),
+        (str_store_string, s5, "@Cost: {reg9}"),
+  #######################################
+  ####### NEW v3.0-KOMKE START-
+        (str_clear, s46),####### NEW v3.0-KOMKE otherwise the register was overwritten
+        (str_clear, s47),
+        (str_clear, s48),####### NEW v3.0-KOMKE there are 6 knight options
+        (str_clear, s49),
+        (str_clear, s50),
+        (str_clear, s51),
         (try_begin),
-         (gt, reg9, 0),
-         (troop_remove_gold, "trp_player", reg9),
-       (try_end),
-       
-       
-       (try_begin),
-         (gt, ":manpower", 0),
-         (jump_to_menu, "mnu_lance_recruitment"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_town),
-         (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+          (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_western"),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_teutonic"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (str_store_string, s46, "@Euro Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_euro_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (this_or_next|faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_western"),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_teutonic"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (str_store_string, s46, "@Euro Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_euro_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+
+          
+  #######################################
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_nordic"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (str_store_string, s47, "@Scandinavian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_nordic"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (str_store_string, s47, "@Scandinavian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+          
+  #######################################
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_iberian"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (str_store_string, s48, "@Iberian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_iberian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+        
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_iberian"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (str_store_string, s48, "@Iberian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_iberian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+          
+  #######################################
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_gaelic"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (str_store_string, s49, "@Gaelic Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+        
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_gaelic"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (str_store_string, s49, "@Gaelic Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+          
+  #######################################
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_welsh"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (str_store_string, s50, "@Welsh Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_welsh_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+        
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_welsh"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (str_store_string, s50, "@Welsh Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_welsh_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+          
+          
+  #######################################
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_italian"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (str_store_string, s51, "@Italian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_italian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+        
+        (else_try),
+          (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_italian"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (str_store_string, s51, "@Italian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_italian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+
+          
+  ###################################### CTT TROOPS
+        # (else_try),
+          # (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_player"),
+          # (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          # (str_store_string, s51, "@Italian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_italian_1"),
+        
+        # (else_try),
+          # (faction_slot_eq, ":cur_fief_faction", slot_faction_culture, "fac_culture_player"),
+          # (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          # (str_store_string, s51, "@Italian Knights"),
+          # (assign, "$current_mercs", "pt_company_knights_tournament_italian_2"),
+    (try_end),  
+      # ], "Recruit {s51}. {s5}",
+      ], "Recruit the following knights {s46}-{s47}-{s48}-{s40}-{s50}-{s51}. Cost = {s5}",
+  ####### NEW v3.0-KOMKE END-
+      [
+        (party_get_slot, ":manpower", "$current_town", slot_spec_mercs2_number),
+        (val_sub, ":manpower", 1),
+        (party_set_slot, "$current_town", slot_spec_mercs2_number, ":manpower"),
+  ####### NEW v3.0-KOMKE START-mercs assigned in consequences block
+        (try_begin),
+          (eq, s46, "@Euro Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_euro_1"),
+        (else_try),
+          (eq, s46, "@Euro Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_euro_2"),
+        (else_try),
+          (eq, s47, "@Scandinavian Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_1"),
+        (else_try),
+          (eq, s47, "@Scandinavian Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_scandinavian_2"),
+        (else_try),
+          (eq, s48, "@Iberian Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_iberian_1"),
+        (else_try),
+          (eq, s48, "@Iberian Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_iberian_2"),
+        (else_try),
+          (eq, s49, "@Gaelic Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_1"),
+        (else_try),
+          (eq, s49, "@Gaelic Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_gaelic_2"),
+        (else_try),
+          (eq, s50, "@Welsh Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_welsh_1"),
+        (else_try),
+          (eq, s50, "@Welsh Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_welsh_2"),
+        (else_try),
+          (eq, s51, "@Italian Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_1_jousting_lists, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_italian_1"),
+        (else_try),
+          (eq, s51, "@Italian Knights"),
+          (party_slot_eq, "$current_town", slot_center_has_tier_2_tournament_grounds, 1),
+          (assign, "$current_mercs", "pt_company_knights_tournament_italian_2"),
+        (try_end),
+  ####### NEW v3.0-KOMKE END- 
+        (call_script, "script_fill_company_new", "$current_town", "p_main_party", "$current_mercs"),
+        
+        
+        
+        (try_begin),
+          (gt, reg9, 0),
+          (troop_remove_gold, "trp_player", reg9),
+        (try_end),
+        
+        
+        (try_begin),
+          (gt, ":manpower", 0),
+          (jump_to_menu, "mnu_lance_recruitment"),
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_town),
           (jump_to_menu, "mnu_ee_recruits_garrison_options"),
-       (else_try),
-         (jump_to_menu, "mnu_village"),
-       (try_end),
-     ]),
-     
+        (else_try),
+          (party_slot_eq, "$current_town", slot_party_type, spt_castle),
+          (jump_to_menu, "mnu_ee_recruits_garrison_options"),
+        (else_try),
+          (jump_to_menu, "mnu_village"),
+        (try_end),
+      ]
+    ),
 ############################################################
 
 
@@ -2942,149 +3165,149 @@ game_menus = [
         (party_slot_ge, "$current_town", slot_spec_mercs1, 1),
         (party_slot_ge, "$current_town", slot_spec_mercs1_number, 1),
         (assign, reg6, 3000),
-####### NEW v3.0-KOMKE START-
-        (str_clear, s50),####### NEW v3.0-KOMKE otherwise the register was overwritten
-        (str_clear, s51),
-        (str_clear, s52),####### NEW v3.0-KOMKE there are 11 mercenary options
+      ### NEW v3.0-KOMKE START- ###
+        (str_clear, s52), ### NEW v3.0-KOMKE otherwise the register was overwritten
         (str_clear, s53),
-        (str_clear, s54),
+        (str_clear, s54), ### NEW v3.0-KOMKE there are 11 mercenary options
         (str_clear, s55),
         (str_clear, s56),
         (str_clear, s57),
         (str_clear, s58),
         (str_clear, s59),
         (str_clear, s60),
-############################################
+        (str_clear, s61),
+        (str_clear, s62),
+      ######################################
        (try_begin),
          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
-         (str_store_string, s50, "@Genoese crossbowmen"),
-         # (assign, "$current_mercs", "pt_company_genoese_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s52, "@Genoese crossbowmen"),
+         # (assign, "$current_mercs", "pt_company_genoese_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
-         (str_store_string, s50, "@Genoese crossbowmen"),
-         # (assign, "$current_mercs", "pt_company_genoese_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s52, "@Genoese crossbowmen"),
+         # (assign, "$current_mercs", "pt_company_genoese_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
-         (str_store_string, s50, "@Genoese crossbowmen"),
-         # (assign, "$current_mercs", "pt_company_genoese_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s52, "@Genoese crossbowmen"),
+         # (assign, "$current_mercs", "pt_company_genoese_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
-         (str_store_string, s51, "@Turkopoles"),
-         # (assign, "$current_mercs", "pt_company_turkopoles_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s53, "@Turkopoles"),
+         # (assign, "$current_mercs", "pt_company_turkopoles_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
-         (str_store_string, s51, "@Turkopoles"),
-         # (assign, "$current_mercs", "pt_company_turkopoles_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s53, "@Turkopoles"),
+         # (assign, "$current_mercs", "pt_company_turkopoles_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
-         (str_store_string, s51, "@Turkopoles"),
-         # (assign, "$current_mercs", "pt_company_turkopoles_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s53, "@Turkopoles"),
+         # (assign, "$current_mercs", "pt_company_turkopoles_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
-         (str_store_string, s52, "@Georgians"),
-         # (assign, "$current_mercs", "pt_company_georgian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s54, "@Georgians"),
+         # (assign, "$current_mercs", "pt_company_georgian_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
-         (str_store_string, s52, "@Georgians"),
-         # (assign, "$current_mercs", "pt_company_georgian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s54, "@Georgians"),
+         # (assign, "$current_mercs", "pt_company_georgian_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
-         (str_store_string, s52, "@Georgians"),
-         # (assign, "$current_mercs", "pt_company_georgian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s54, "@Georgians"),
+         # (assign, "$current_mercs", "pt_company_georgian_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
-         (str_store_string, s53, "@Cumans"),
-         # (assign, "$current_mercs", "pt_company_cuman_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s55, "@Cumans"),
+         # (assign, "$current_mercs", "pt_company_cuman_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
-         (str_store_string, s53, "@Cumans"),
-         # (assign, "$current_mercs", "pt_company_cuman_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s55, "@Cumans"),
+         # (assign, "$current_mercs", "pt_company_cuman_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
-         (str_store_string, s53, "@Cumans"),
-         # (assign, "$current_mercs", "pt_company_cuman_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s55, "@Cumans"),
+         # (assign, "$current_mercs", "pt_company_cuman_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
-         (str_store_string, s54, "@Brabantines"),
-         # (assign, "$current_mercs", "pt_company_brabantine_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s56, "@Brabantines"),
+         # (assign, "$current_mercs", "pt_company_brabantine_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
-         (str_store_string, s54, "@Brabantines"),
-         # (assign, "$current_mercs", "pt_company_brabantine_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s56, "@Brabantines"),
+         # (assign, "$current_mercs", "pt_company_brabantine_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
-         (str_store_string, s54, "@Brabantines"),
-         # (assign, "$current_mercs", "pt_company_brabantine_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s56, "@Brabantines"),
+         # (assign, "$current_mercs", "pt_company_brabantine_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_spec_mercs1, merc_sicily_muslims),
-         (str_store_string, s55, "@Sicily Muslims"),
-         # (assign, "$current_mercs", "pt_company_templar_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s57, "@Sicilian Muslims"),
+         # (assign, "$current_mercs", "pt_company_templar_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
-         (str_store_string, s56, "@Welsh archers"),
-         # (assign, "$current_mercs", "pt_company_welsh_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s58, "@Welsh archers"),
+         # (assign, "$current_mercs", "pt_company_welsh_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
-         (str_store_string, s56, "@Welsh archers"),
-         # (assign, "$current_mercs", "pt_company_welsh_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s58, "@Welsh archers"),
+         # (assign, "$current_mercs", "pt_company_welsh_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
-         (str_store_string, s56, "@Welsh archers"),
-         # (assign, "$current_mercs", "pt_company_welsh_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s58, "@Welsh archers"),
+         # (assign, "$current_mercs", "pt_company_welsh_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
-         (str_store_string, s57, "@Kipchaks"),
-         # (assign, "$current_mercs", "pt_company_kipchak_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s59, "@Kipchaks"),
+         # (assign, "$current_mercs", "pt_company_kipchak_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
-         (str_store_string, s57, "@Kipchaks"),
-         # (assign, "$current_mercs", "pt_company_kipchak_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s59, "@Kipchaks"),
+         # (assign, "$current_mercs", "pt_company_kipchak_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
-         (str_store_string, s57, "@Kipchaks"),
-         # (assign, "$current_mercs", "pt_company_kipchak_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s59, "@Kipchaks"),
+         # (assign, "$current_mercs", "pt_company_kipchak_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_spec_mercs1, merc_mordovian),
-         (str_store_string, s58, "@Mordovians"),
-         # (assign, "$current_mercs", "pt_company_mordovian"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s60, "@Mordovians"),
+         # (assign, "$current_mercs", "pt_company_mordovian"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
-         (str_store_string, s59, "@Kwarezmians"),
-         # (assign, "$current_mercs", "pt_company_kwarezmian_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s61, "@Kwarezmians"),
+         # (assign, "$current_mercs", "pt_company_kwarezmian_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
-         (str_store_string, s59, "@Kwarezmians"),
-         # (assign, "$current_mercs", "pt_company_kwarezmian_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s61, "@Kwarezmians"),
+         # (assign, "$current_mercs", "pt_company_kwarezmian_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
-         (str_store_string, s59, "@Kwarezmians"),
-         # (assign, "$current_mercs", "pt_company_kwarezmian_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s61, "@Kwarezmians"),
+         # (assign, "$current_mercs", "pt_company_kwarezmian_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
-         (str_store_string, s60, "@Mongols"),
-         # (assign, "$current_mercs", "pt_company_mongol_1"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s62, "@Mongols"),
+         # (assign, "$current_mercs", "pt_company_mongol_1"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
-         (str_store_string, s60, "@Mongols"),
-         # (assign, "$current_mercs", "pt_company_mongol_2"),####### NEW v3.0-KOMKE mercs assigned in consequences block
+         (str_store_string, s62, "@Mongols"),
+         # (assign, "$current_mercs", "pt_company_mongol_2"), ### NEW v3.0-KOMKE mercs assigned in consequences block
        (else_try),
          (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
-         (str_store_string, s60, "@Mongols"),
-         # (assign, "$current_mercs", "pt_company_mongol_3"),####### NEW v3.0-KOMKE mercs assigned in consequences block
-############################################
+         (str_store_string, s62, "@Mongols"),
+         # (assign, "$current_mercs", "pt_company_mongol_3"), ### NEW v3.0-KOMKE mercs assigned in consequences block
+      ######################################
     (try_end),
      # ], "Hire {s20} mercenaries to the town garrison, cost: {reg6}",
-     ], "Hire to the town garrison the following mercenaries: {s50}-{s51}-{s52}-{s53}-{s54}-{s55}-{s56}-{s57}-{s58}-{s59}-{s60}, cost: {reg6}",
+     ], "Hire to the town garrison the following mercenaries: {s52}-{s53}-{s54}-{s55}-{s56}-{s57}-{s58}-{s59}-{s60}-{s61}-{s62}, cost: {reg6}",
      [
         (try_begin),
           (store_troop_gold, ":gold", "trp_player"),
@@ -3101,119 +3324,119 @@ game_menus = [
           (val_sub, ":mercs_number", 1),
           (party_set_slot, "$current_town", slot_spec_mercs1_number, ":mercs_number"),
            (try_begin),
-             # (eq, s50, "@Genoese crossbowmen"),
+             # (eq, s52, "@Genoese crossbowmen"),
              (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
              (assign, "$current_mercs", "pt_company_genoese_1"),
            (else_try),
-             # (eq, s50, "@Genoese crossbowmen"),
+             # (eq, s52, "@Genoese crossbowmen"),
              (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
              (assign, "$current_mercs", "pt_company_genoese_2"),
            (else_try),
-             # (eq, s50, "@Genoese crossbowmen"),
+             # (eq, s52, "@Genoese crossbowmen"),
              (party_slot_eq, "$current_town", slot_center_has_quarters_genoese, 1),
              (assign, "$current_mercs", "pt_company_genoese_3"),
            (else_try),
-             # (eq, s51, "@Turkopoles"),
+             # (eq, s53, "@Turkopoles"),
              (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
              (assign, "$current_mercs", "pt_company_turkopoles_1"),
            (else_try),
-             # (eq, s51, "@Turkopoles"),
+             # (eq, s53, "@Turkopoles"),
              (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
              (assign, "$current_mercs", "pt_company_turkopoles_2"),
            (else_try),
-             # (eq, s51, "@Turkopoles"),
+             # (eq, s53, "@Turkopoles"),
              (party_slot_eq, "$current_town", slot_center_has_outpost_crusader_turcopole, 1),
              (assign, "$current_mercs", "pt_company_turkopoles_3"),
            (else_try),
-             # (eq, s52, "@Georgians"),
+             # (eq, s54, "@Georgians"),
              (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
              (assign, "$current_mercs", "pt_company_georgian_1"),
            (else_try),
-             # (eq, s52, "@Georgians"),
+             # (eq, s54, "@Georgians"),
              (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
              (assign, "$current_mercs", "pt_company_georgian_2"),
            (else_try),
-             # (eq, s52, "@Georgians"),
+             # (eq, s54, "@Georgians"),
              (party_slot_eq, "$current_town", slot_center_has_camp_georgian, 1),
              (assign, "$current_mercs", "pt_company_georgian_3"),
            (else_try),
-             # (eq, s53, "@Cumans"),
+             # (eq, s55, "@Cumans"),
              (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
              (assign, "$current_mercs", "pt_company_cuman_1"),
            (else_try),
-             # (eq, s53, "@Cumans"),
+             # (eq, s55, "@Cumans"),
              (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
              (assign, "$current_mercs", "pt_company_cuman_2"),
            (else_try),
-             # (eq, s53, "@Cumans"),
+             # (eq, s55, "@Cumans"),
              (party_slot_eq, "$current_town", slot_center_has_camp_cuman, 1),
              (assign, "$current_mercs", "pt_company_cuman_3"),
            (else_try),
-             # (eq, s54, "@Brabantines"),
+             # (eq, s56, "@Brabantines"),
              (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
              (assign, "$current_mercs", "pt_company_brabantine_1"),
            (else_try),
-             # (eq, s54, "@Brabantines"),
+             # (eq, s56, "@Brabantines"),
              (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
              (assign, "$current_mercs", "pt_company_brabantine_2"),
            (else_try),
-             # (eq, s54, "@Brabantines"),
+             # (eq, s56, "@Brabantines"),
              (party_slot_eq, "$current_town", slot_center_has_quarters_brabantine, 1),
              (assign, "$current_mercs", "pt_company_brabantine_3"),
            (else_try),
-             # (eq, s55, "@Sicily Muslims"),
+             # (eq, s57, "@Sicily Muslims"),
              (party_slot_eq, "$current_town", slot_spec_mercs1, merc_sicily_muslims),
              (assign, "$current_mercs", "pt_company_sicily"),
            (else_try),
-             # (eq, s56, "@Welsh archers"),
+             # (eq, s58, "@Welsh archers"),
              (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
              (assign, "$current_mercs", "pt_company_welsh_1"),
            (else_try),
-             # (eq, s56, "@Welsh archers"),
+             # (eq, s58, "@Welsh archers"),
              (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
              (assign, "$current_mercs", "pt_company_welsh_2"),
            (else_try),
-             # (eq, s56, "@Welsh archers"),
+             # (eq, s58, "@Welsh archers"),
              (party_slot_eq, "$current_town", slot_center_has_outpost_welsh_kern, 1),
              (assign, "$current_mercs", "pt_company_welsh_3"),
            (else_try),
-             # (eq, s57, "@Kipchaks"),
+             # (eq, s59, "@Kipchaks"),
              (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
              (assign, "$current_mercs", "pt_company_kipchak_1"),
            (else_try),
-             # (eq, s57, "@Kipchaks"),
+             # (eq, s59, "@Kipchaks"),
              (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
              (assign, "$current_mercs", "pt_company_kipchak_2"),
            (else_try),
-             # (eq, s57, "@Kipchaks"),
+             # (eq, s59, "@Kipchaks"),
              (party_slot_eq, "$current_town", slot_center_has_camp_kipchak, 1),
              (assign, "$current_mercs", "pt_company_kipchak_3"),
            (else_try),
-             # (eq, s58, "@Mordovians"),
+             # (eq, s60, "@Mordovians"),
              (party_slot_eq, "$current_town", slot_spec_mercs1, merc_mordovian),
              (assign, "$current_mercs", "pt_company_mordovian"),
            (else_try),
-             # (eq, s59, "@Kwarezmians"),
+             # (eq, s61, "@Kwarezmians"),
              (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
              (assign, "$current_mercs", "pt_company_kwarezmian_1"),
            (else_try),
-             # (eq, s59, "@Kwarezmians"),
+             # (eq, s61, "@Kwarezmians"),
              (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
              (assign, "$current_mercs", "pt_company_kwarezmian_2"),
            (else_try),
-             # (eq, s59, "@Kwarezmians"),
+             # (eq, s61, "@Kwarezmians"),
              (party_slot_eq, "$current_town", slot_center_has_camp_kwarezmian, 1),
              (assign, "$current_mercs", "pt_company_kwarezmian_3"),
            (else_try),
-             # (eq, s60, "@Mongols"),
+             # (eq, s62, "@Mongols"),
              (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
              (assign, "$current_mercs", "pt_company_mongol_1"),
            (else_try),
-             # (eq, s60, "@Mongols"),
+             # (eq, s62, "@Mongols"),
              (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
              (assign, "$current_mercs", "pt_company_mongol_2"),
            (else_try),
-             # (eq, s60, "@Mongols"),
+             # (eq, s62, "@Mongols"),
              (party_slot_eq, "$current_town", slot_center_has_camp_mongol, 1),
              (assign, "$current_mercs", "pt_company_mongol_3"),
            (try_end),

@@ -10238,7 +10238,7 @@ scripts = [
        (str_store_string, s2, ":random_surname"),  
 ########### 
    (else_try),
-     (this_or_next|eq, ":cur_lord_culture", "fac_culture_polish"),  ###### NEW v3.10 - 
+     (this_or_next|eq, ":cur_lord_culture", "fac_culture_polish"), ###### NEW v3.10 - 
      (eq, ":cur_lord_culture", "fac_culture_mazovian"),
        (store_random_in_range, ":random_name", "str_enhanced_name_polish_1", "str_enhanced_surname_polish_1"),
        (store_random_in_range, ":random_surname", "str_enhanced_surname_polish_1", "str_enhanced_name_hungarian_1"),
@@ -13399,7 +13399,7 @@ scripts = [
          (ge, ":random_chance", 85),
            (assign, ":culture", "fac_culture_rus"),
        (try_end),
-              
+       
    (else_try), 
      ##### Denmark
      (eq, ":faction_culture", "fac_culture_nordic"),

@@ -4,6 +4,40 @@ fac_outlaws|Outlaws
 fac_neutral|Neutral Parties
 fac_innocents|Innocents
 fac_merchants|Merchants
+fac_culture_finnish|Finnish
+fac_culture_mazovian|Mazovian
+fac_culture_serbian|Serbian
+fac_culture_welsh|Welsh
+fac_culture_teutonic|Teutonic
+fac_culture_balkan|Balkan
+fac_culture_rus|Rus
+fac_culture_nordic|Nordic
+fac_culture_baltic|Baltic
+fac_culture_marinid|Marinid
+fac_culture_mamluke|Mamluke
+fac_culture_byzantium|Byzantium
+fac_culture_iberian|Iberian
+fac_culture_italian|Italian
+fac_culture_andalus|Andalus
+fac_culture_gaelic|Gaelic
+fac_culture_anatolian_christian|Armenian
+fac_culture_anatolian|Anatolia
+fac_culture_scotish|Scottish
+fac_culture_western|Western European
+fac_culture_mongol|Mongol
+fac_culture_templar|Templar
+fac_culture_hospitaller|Hospitaller
+fac_culture_antioch|Antioch
+fac_culture_tripoli|Tripoli
+fac_culture_ibelin|Ibelin
+fac_culture_jerusalem|Jerusalem
+fac_culture_crusader|Crusader
+fac_culture_cuman|Cuman
+fac_culture_english|English
+fac_culture_french|French
+fac_culture_hungarian|Hungarian
+fac_culture_polish|Polish
+fac_culture_player|Custom
 fac_player_faction|Player
 fac_player_supporters_faction|Player�s Kingdom
 fac_kingdom_1|Teutonic Order (Livonia and Prussia)
@@ -48,9 +82,42 @@ fac_kingdom_39|Republic of Pisa
 fac_kingdom_40|Guelphs
 fac_kingdom_41|Ghibellines
 fac_kingdom_42|Kingdom of Bohemia
+fac_enhanced_kingdom_1|Random Faction
+fac_enhanced_kingdom_2|Random Faction
+fac_enhanced_kingdom_3|Random Faction
+fac_enhanced_kingdom_4|Random Faction
+fac_enhanced_kingdom_5|Random Faction
+fac_enhanced_kingdom_6|Random Faction
+fac_enhanced_kingdom_7|Random Faction
+fac_enhanced_kingdom_8|Random Faction
+fac_enhanced_kingdom_9|Random Faction
+fac_enhanced_kingdom_10|Random Faction
+fac_enhanced_kingdom_11|Random Faction
+fac_enhanced_kingdom_12|Random Faction
+fac_enhanced_kingdom_13|Random Faction
+fac_enhanced_kingdom_14|Random Faction
+fac_enhanced_kingdom_15|Random Faction
+fac_enhanced_kingdom_16|Random Faction
+fac_enhanced_kingdom_17|Random Faction
+fac_enhanced_kingdom_18|Random Faction
+fac_enhanced_kingdom_19|Random Faction
+fac_enhanced_kingdom_20|Random Faction
+fac_enhanced_kingdom_21|Random Faction
+fac_enhanced_kingdom_22|Random Faction
+fac_enhanced_kingdom_23|Random Faction
+fac_enhanced_kingdom_24|Random Faction
+fac_enhanced_kingdom_25|Random Faction
+fac_enhanced_kingdom_26|Random Faction
+fac_enhanced_kingdom_27|Random Faction
+fac_enhanced_kingdom_28|Random Faction
+fac_enhanced_kingdom_29|Random Faction
+fac_enhanced_kingdom_30|Random Faction
 fac_manhunters|Manhunters
 fac_deserters|Deserters
 fac_mountain_bandits|Allied Factions
 fac_forest_bandits|Friendly Factions
+fac_undeads|Enemy Factions
+fac_peasant_rebels|Peasant Rebels
 fac_crusade|Crusaders
+fac_escaped_prisoners_faction|Escaped Prisoners
 fac_end_minor_faction|Village Idiots

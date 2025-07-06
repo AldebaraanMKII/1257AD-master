@@ -1356,7 +1356,7 @@ scripts = [
             (party_set_slot, ":castle_no", slot_town_prison, "scn_castle_prison_euro"),
             (party_set_slot, ":castle_no", slot_center_siege_with_belfry,   0),
           (try_end),
-        (else_try), #scotish
+        (else_try), ### scottish
           (this_or_next | eq, ":fac_no", "fac_kingdom_12"),
           (eq, ":fac_no", "fac_kingdom_13"),
           (store_random_in_range, ":random_no", 1, 7),
@@ -1390,7 +1390,7 @@ scripts = [
             (party_set_slot, ":castle_no", slot_town_castle, "scn_castle_interior_euro"),
             (party_set_slot, ":castle_no", slot_town_prison, "scn_castle_prison_euro"),
             (party_set_slot, ":castle_no", slot_center_siege_with_belfry,   0),
-          (else_try), #default scot - gaelic
+          (else_try), ### default scot - gaelic
             (party_set_slot, ":castle_no", slot_castle_exterior, "scn_walls_scot"),
             (party_set_slot, ":castle_no", slot_town_castle, "scn_castle_interior_euro"),
             (party_set_slot, ":castle_no", slot_town_prison, "scn_castle_prison_euro"),
@@ -1399,11 +1399,11 @@ scripts = [
         (else_try),
           (eq, ":fac_no", "fac_kingdom_22"),
           (party_set_slot, ":castle_no", slot_castle_exterior, "scn_byzantine_castle"),
-          #(party_set_slot, ":castle_no", slot_town_castle, "scn_castle_interior_iberia"),
+          # (party_set_slot, ":castle_no", slot_town_castle, "scn_castle_interior_iberia"),
           (party_set_slot, ":castle_no", slot_town_castle, "scn_castle_interior_byz"),
           (party_set_slot, ":castle_no", slot_town_prison, "scn_castle_prison_iberia"),
           (party_set_slot, ":castle_no", slot_center_siege_with_belfry,   0),
-        (else_try), #BALTS
+        (else_try), ### BALTS
           (this_or_next | eq, ":fac_no", "fac_kingdom_2"),
           (this_or_next | eq, ":fac_no", "fac_kingdom_30"),
           (this_or_next | eq, ":fac_no", "fac_kingdom_33"),
@@ -1442,9 +1442,9 @@ scripts = [
                 (party_set_slot, ":castle_no", slot_center_siege_with_belfry,   0),
             (try_end),
           (try_end),
-        (else_try), #eastern slavs - SNOW
+        (else_try), ### eastern slavs - SNOW
           (this_or_next | eq, ":fac_no", "fac_kingdom_8"),
-          (eq, ":fac_no", "fac_kingdom_3"), #mongols - need to manualy assign for southern lands
+          (eq, ":fac_no", "fac_kingdom_3"), ### mongols - need to manualy assign for southern lands
           (store_random_in_range, ":random_no", 1, 3),
           (try_begin),
             (eq, ":random_no", 1),
@@ -1458,7 +1458,7 @@ scripts = [
             (party_set_slot, ":castle_no", slot_town_prison, "scn_castle_prison_eastern"),
             (party_set_slot, ":castle_no", slot_center_siege_with_belfry,   0),
           (try_end),        
-        (else_try), # western slavs  -not snow          
+        (else_try), ### western slavs - not snow
           (this_or_next | eq, ":fac_no", "fac_kingdom_15"),          
           (this_or_next | eq, ":fac_no", "fac_kingdom_29"),
           (eq, ":fac_no", "fac_kingdom_26"),
@@ -2030,22 +2030,22 @@ scripts = [
       
       
       (party_set_slot, "p_village_6_19", slot_castle_exterior, "scn_den_bosch"),
-      #nordic scenes
-      #nordic - danish
+      ### nordic scenes
+      ### nordic - danish
       (party_set_slot, "p_village_4_15", slot_castle_exterior, "scn_village_nordic3"),
       (party_set_slot, "p_village_4_14", slot_castle_exterior, "scn_village_nordic3"),
       (party_set_slot, "p_village_4_3", slot_castle_exterior, "scn_village_nordic3"),
-      #noridc - norwegian
+      ### nordic - norwegian
       (party_set_slot, "p_village_11_5", slot_castle_exterior, "scn_village_nordic2"),
       (party_set_slot, "p_village_11_8", slot_castle_exterior, "scn_village_nordic2"),      
       (party_set_slot, "p_village_11_10", slot_castle_exterior, "scn_village_nordic3"),
       (party_set_slot, "p_village_11_11", slot_castle_exterior, "scn_village_nordic3"),
       (party_set_slot, "p_village_11_1", slot_castle_exterior, "scn_village_nordic3"),
       (party_set_slot, "p_village_11_3", slot_castle_exterior, "scn_village_nordic3"),
-      #noridc - swedish
+      ### nordic - swedish
       (party_set_slot, "p_village_14_3", slot_castle_exterior, "scn_village_nordic3"),
       (party_set_slot, "p_village_14_5", slot_castle_exterior, "scn_village_nordic3"),
-      #teutonic
+      ### teutonic
       (party_set_slot, "p_village_1_8", slot_castle_exterior, "scn_village_euro"),
       (party_set_slot, "p_village_1_9", slot_castle_exterior, "scn_village_euro"),
       (party_set_slot, "p_village_1_14", slot_castle_exterior, "scn_village_euro"),
@@ -2053,39 +2053,39 @@ scripts = [
       (party_set_slot, "p_village_1_2", slot_castle_exterior, "scn_village_euro"),
       (party_set_slot, "p_village_1_17", slot_castle_exterior, "scn_village_euro"),
       
-      #italy type scenes to french
+      ### italy type scenes to french
       (party_set_slot, "p_village_10_12", slot_castle_exterior, "scn_village_italy"),
       (party_set_slot, "p_village_10_10", slot_castle_exterior, "scn_village_italy"),
       (party_set_slot, "p_village_10_15", slot_castle_exterior, "scn_village_italy"),
       (party_set_slot, "p_village_10_19", slot_castle_exterior, "scn_village_italy"),
       (party_set_slot, "p_village_10_17", slot_castle_exterior, "scn_village_italy"),
       
-      #arab scenes
+      ### arab scenes
       (party_set_slot, "p_village_28_2", slot_castle_exterior, "scn_village_arab"),
       (party_set_slot, "p_village_28_9", slot_castle_exterior, "scn_village_arab"),
       (party_set_slot, "p_village_28_1", slot_castle_exterior, "scn_village_arab"),
       (party_set_slot, "p_village_28_10", slot_castle_exterior, "scn_village_arab"),
       
-      #mongol camps
+      ### mongol camps
       # (party_set_slot, "p_village_3_12", slot_castle_exterior, "scn_village_mongol"),
       # (party_set_slot, "p_village_3_13", slot_castle_exterior, "scn_village_mongol"),
       # (party_set_slot, "p_village_3_14", slot_castle_exterior, "scn_village_mongol"),
       # (party_set_slot, "p_village_3_15", slot_castle_exterior, "scn_village_mongol"),
       
-      #mongol eastern village
+      ### mongol eastern village
       (party_set_slot, "p_village_3_5", slot_castle_exterior, "scn_village_eastern"),
       (party_set_slot, "p_castle_3_3", slot_castle_exterior, "scn_castle_walls_mongol"),
       (party_set_slot, "p_village_3_14", slot_castle_exterior, "scn_village_eastern"),
       (party_set_slot, "p_village_3_10", slot_castle_exterior, "scn_village_byz"),
       
-      #lithuanian snow
+      ### lithuanian snow
       (party_set_slot, "p_village_2_16", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_2_15", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_2_4", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_2_8", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_2_3", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_2_2", slot_castle_exterior, "scn_village_eastern2"),
-      #TO snowy eastern
+      ### TO snowy eastern
       (party_set_slot, "p_village_1_3", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_1_10", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_1_15", slot_castle_exterior, "scn_village_eastern2"),
@@ -2093,12 +2093,12 @@ scripts = [
       (party_set_slot, "p_village_1_11", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_1_6", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_1_7", slot_castle_exterior, "scn_village_eastern2"),
-      #danish snowy eastern
+      ### danish snowy eastern
       (party_set_slot, "p_village_4_5", slot_castle_exterior, "scn_village_eastern2"),
       (party_set_slot, "p_village_4_6", slot_castle_exterior, "scn_village_eastern2"),
-      #swedish snowy eastern
+      ### swedish snowy eastern
       (party_set_slot, "p_village_14_4", slot_castle_exterior, "scn_village_eastern2"),
-      #scotish snowy
+      ### scottish snowy
       (party_set_slot, "p_village_12_1", slot_castle_exterior, "scn_village_nordic"),
       
       
@@ -2189,8 +2189,8 @@ scripts = [
           (party_set_slot, ":center", slot_spec_mercs_number_varangian, 1),
           (party_set_slot, ":center", slot_spec_mercs_number_mamluk, 1),
         (try_end),
-        #GENERIC!
-        (try_begin), #WESTERN 
+        ### GENERIC!
+        (try_begin), ### WESTERN 
           (this_or_next|eq, ":center", "p_town_3_1"),
           (this_or_next|eq, ":center", "p_town_27_1"),
           (eq, ":center", "p_town_27_4"),
@@ -2210,7 +2210,7 @@ scripts = [
           (eq, ":faction", "fac_kingdom_37"),
           (party_set_slot, ":center", slot_regional_mercs, generic_euro),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_euro"),
-        (else_try), #BALTIC
+        (else_try), ### BALTIC
           (this_or_next|eq, ":faction", "fac_kingdom_2"),
           (this_or_next|eq, ":faction", "fac_kingdom_33"),
           (this_or_next|eq, ":faction", "fac_kingdom_34"),
@@ -2218,60 +2218,60 @@ scripts = [
           (eq, ":faction", "fac_kingdom_36"),
           (party_set_slot, ":center", slot_regional_mercs, generic_balt),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_balt"),
-        (else_try), #scandinavian
+        (else_try), ### scandinavian
           (this_or_next|eq, ":faction", "fac_kingdom_4"),
           (this_or_next|eq, ":faction", "fac_kingdom_11"),
           (eq, ":faction", "fac_kingdom_14"),
           (party_set_slot, ":center", slot_regional_mercs, generic_scandinavian),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_scan"),
-        (else_try), #RUS
+        (else_try), ### RUS
           (this_or_next|eq, ":faction", "fac_kingdom_3"),
           (this_or_next|eq, ":faction", "fac_kingdom_8"),
           (eq, ":faction", "fac_kingdom_15"),
           (party_set_slot, ":center", slot_regional_mercs, generic_rus),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_rus"),
-        (else_try), #latin
+        (else_try), ### latin
           (this_or_next|eq, ":faction", "fac_kingdom_16"),
           (this_or_next|eq, ":faction", "fac_kingdom_17"),
           (this_or_next|eq, ":faction", "fac_kingdom_18"),
           (this_or_next|eq, ":faction", "fac_kingdom_19"),
-          (this_or_next|eq, ":faction", "fac_kingdom_26"), #latin
+          (this_or_next|eq, ":faction", "fac_kingdom_26"), ### latin
           (this_or_next|eq, ":faction", "fac_papacy"),
           (this_or_next|eq, ":faction", "fac_kingdom_23"),
           (this_or_next|eq, ":faction", "fac_kingdom_24"),
           (this_or_next|eq, ":faction", "fac_kingdom_38"),
           (this_or_next|eq, ":faction", "fac_kingdom_39"),
           (this_or_next|eq, ":faction", "fac_kingdom_40"),
-          (this_or_next|eq, ":faction", "fac_kingdom_27"),#ilkhanate
+          (this_or_next|eq, ":faction", "fac_kingdom_27"), ### il-khanate
           (eq, ":faction", "fac_kingdom_32"),
           (party_set_slot, ":center", slot_regional_mercs, generic_latin),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_latin"),
-        (else_try), #balkan + greek + latin empire +ilkhanate?
-          (this_or_next|eq, ":faction", "fac_kingdom_22"), #byz
-          ##(this_or_next|eq, ":faction", "fac_kingdom_26"), #latin
-          #(this_or_next|eq, ":faction", "fac_kingdom_27"), #ilkhanate
+        (else_try), ### balkan + greek + latin empire + il-khanate?
+          (this_or_next|eq, ":faction", "fac_kingdom_22"), ### byz
+          # (this_or_next|eq, ":faction", "fac_kingdom_26"), ### latin
+          # (this_or_next|eq, ":faction", "fac_kingdom_27"), ### il-khanate
           (this_or_next|eq, ":faction", "fac_kingdom_29"),
           (eq, ":faction", "fac_kingdom_30"),
           (party_set_slot, ":center", slot_regional_mercs, generic_balkan),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_balkan"),
-        (else_try), #north-africa
-          #(this_or_next|eq, ":faction", "fac_kingdom_25"),
+        (else_try), ### north-africa
+          # (this_or_next|eq, ":faction", "fac_kingdom_25"),
           (this_or_next|eq, ":faction", "fac_kingdom_20"),
           (eq, ":faction", "fac_kingdom_31"),
           (party_set_slot, ":center", slot_regional_mercs, generic_maghreb),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_maghreb"),
-        (else_try), #mamluke
-          (this_or_next|eq, ":faction", "fac_kingdom_28"),  ######## NEW v2.6 - fix
+        (else_try), ### mamluke
+          (this_or_next|eq, ":faction", "fac_kingdom_28"),  ### NEW v2.6 - fix
           (eq, ":faction", "fac_kingdom_25"),
           (party_set_slot, ":center", slot_regional_mercs, generic_mamluk),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_mamluk"),
         (else_try),
-          (eq, ":faction", "fac_kingdom_13"), #gaels
+          (eq, ":faction", "fac_kingdom_13"), ### gaels
           (party_set_slot, ":center", slot_regional_mercs, generic_gaelic),
           (party_set_slot, ":center", slot_regional_party_template, "pt_generic_gaelic_1"),
         (try_end),
         
-        #special 
+        ### special 
         (try_begin),
           (this_or_next|eq, ":center", "p_town_3_3"),
           (eq, ":center", "p_town_3_4"),
@@ -2328,17 +2328,17 @@ scripts = [
         (try_end),
         
 ####### NEW v3.0-KOMKE START-
-        ###special crusaders, varangians(those are set in a different place)
+        ### special crusaders, varangians(those are set in a different place)
         (try_begin),
           (eq, ":faction", "fac_kingdom_23"),
           (store_random_in_range, ":random_crusader", slot_center_has_chapter_teutonic, slot_center_has_chapter_saint_thomas + 1),
-          # (store_sub, ":template", ":random_crusader", slot_center_has_chapter_teutonic),####### NEW v3.0-KOMKE
+          # (store_sub, ":template", ":random_crusader", slot_center_has_chapter_teutonic), ### NEW v3.0-KOMKE
           (store_sub, ":offset", ":random_crusader", slot_center_has_chapter_teutonic),
           (assign, ":template", "pt_company_teutonic_1"),
           (val_add, ":template", ":offset"),
           (assign, ":merc_slot", merc_teutons),
           (val_add, ":merc_slot", ":offset"),
-          (party_set_slot, ":center", slot_spec_mercs2, ":merc_slot"),####### NEW v3.0-KOMKE this is needed to show the menu for mercs2
+          (party_set_slot, ":center", slot_spec_mercs2, ":merc_slot"), ### NEW v3.0-KOMKE this is needed to show the menu for mercs2
           (party_set_slot, ":center", ":random_crusader", 1),
           (party_set_slot, ":center", slot_spec_mercs2_party_template, ":template"),
         (try_end),
@@ -2443,9 +2443,9 @@ scripts = [
 ###    (try_end),
 ############### 
       
-      #More pre-Warband family structures removed here
+      ### More pre-Warband family structures removed here
       
-      #Warband changes begin - set companions relations
+      ### Warband changes begin - set companions relations
       (try_for_range, ":companion", companions_begin, companions_end),
         (try_for_range, ":other_companion", companions_begin, companions_end),
           (neq, ":other_companion", ":companion"),
@@ -2455,14 +2455,14 @@ scripts = [
         (try_end),
       (try_end),
       
-      #Warband changes continue -  sets relations in the same faction
+      ### Warband changes continue -  sets relations in the same faction
       (try_for_range, ":lord", original_kingdom_heroes_begin, active_npcs_end),
         (troop_slot_eq, ":lord", slot_troop_is_alive, 1),  ## he's alive/active
         (troop_slot_eq, ":lord", slot_troop_occupation, slto_kingdom_hero),
         (troop_get_slot, ":lord_faction", ":lord", slot_troop_original_faction),
         
         (try_for_range, ":other_hero", original_kingdom_heroes_begin, active_npcs_end),
-          (troop_slot_eq, ":other_hero", slot_troop_is_alive, 1),  ## he's alive/active
+          (troop_slot_eq, ":other_hero", slot_troop_is_alive, 1),  ### he's alive/active
           (this_or_next|troop_slot_eq, ":other_hero", slot_troop_occupation, slto_kingdom_hero),
           (troop_slot_eq, ":other_hero", slot_troop_occupation, slto_inactive_pretender),
           (troop_get_slot, ":other_hero_faction", ":other_hero", slot_troop_original_faction),
@@ -5718,6 +5718,13 @@ scripts = [
                            (party_set_slot, "p_town_26_1", slot_spec_mercs2_number, 1),
                            # (party_slot_eq, "p_town_26_1", slot_center_has_quarters_varangian, 0),  ######## NEW v2.7
                            (party_set_slot, "p_town_26_1", slot_center_has_quarters_varangian, 1),
+
+                          ### Global variable for the reconquest of Constantinople by the Eastern Roman Empire added (NEW v3.9.3a, by Khanor) ###
+                          (try_begin),
+                            (eq, "$g_eastern_roman_empire_restored", 0), ### Has not happened before.
+
+                            (assign, "$g_eastern_roman_empire_restored", 1), ### Set global variable for Constantinople being retaken by the Eastern Roman Empire to true.
+                          (try_end),
                      (try_end),
 ###################################################################
                 
@@ -22602,7 +22609,6 @@ scripts = [
             ########################
             ### NEW v3.11 - ###
             (try_begin),
-              (this_or_next|eq, ":template", "pt_mercenary_warband"),
               (is_between, ":template", "pt_manhunters", "pt_manor"),
               (gt, ":player_level", 6),
               (assign, ":enemy_is_bandit_party_and_level_is_greater_than_6", 1),
@@ -22632,6 +22638,10 @@ scripts = [
                 (neq, ":party_type", spt_village),
                 (neq, ":party_type", spt_bandit_lair),
                 (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                (neq, ":template", "pt_manor"),
+                (neq, ":template", "pt_mongolian_camp"),
+                (neq, ":template", "pt_outpost"),
+                (neq, ":template", "pt_fort"),
                 (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
                 #rafi
                 (party_relocate_near_party, ":party_no", "p_main_party", 3),
@@ -22683,6 +22693,10 @@ scripts = [
                   (neq, ":party_type", spt_village),
                   (neq, ":party_type", spt_bandit_lair),
                   (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                  (neq, ":template", "pt_manor"),
+                  (neq, ":template", "pt_mongolian_camp"),
+                  (neq, ":template", "pt_outpost"),
+                  (neq, ":template", "pt_fort"),
                   (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
                   #rafi
                   (party_relocate_near_party, ":party_no", "p_main_party", 3),
@@ -22727,6 +22741,10 @@ scripts = [
                       (neq, ":party_type", spt_village),
                       (neq, ":party_type", spt_bandit_lair),
                       (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                      (neq, ":template", "pt_manor"),
+                      (neq, ":template", "pt_mongolian_camp"),
+                      (neq, ":template", "pt_outpost"),
+                      (neq, ":template", "pt_fort"),
                       (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
                       #rafi
                       (party_relocate_near_party, ":party_no", "p_main_party", 3),
@@ -22809,23 +22827,7 @@ scripts = [
               (this_or_next|eq, ":party_type", spt_scout), ### Scouts and war parties can now also join (NEW 3.9.3, by Khanor) ###
               (eq, ":party_type", spt_war_party),
               (assign, ":player_relation", 1), ### Force join
-
-            ### Walled settlement garrisons can now also join in as friendlies to the player on all difficulties, but this has some requirements (NEW 3.9.3, by Khanor) ###
-            (else_try),
-              (this_or_next|eq, ":party_type", spt_castle),
-              (this_or_next|eq, ":party_type", spt_town),
-              (is_between, ":party_no", walled_centers_begin, walled_centers_end),
-              
-              (try_begin),
-                (assign, ":selected_party", ":party_no"),
-                (assign, ":garrison_size", 0),
-                (assign, ":player_relation", 0), ### Reset for walled fiefs to later give back if checks are passed! - Khanor
-
-                (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
-                (try_for_range, ":i_stack", 0, ":num_stacks"),
-                  (party_stack_get_troop_id, ":stack_troop", ":selected_party", ":i_stack"),
-                  (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
-                  (val_add, ":garrison_size", ":stack_size"),
+                (try_end),
                 (try_end),
 
                 (try_begin),
@@ -22836,9 +22838,19 @@ scripts = [
                     (party_get_slot, ":fief_owner", ":party_no", slot_town_lord),
                     (eq, ":fief_owner", "trp_player"), ## Friendly fiefs have extra requirements (would be too powerful if all friendly fiefs could help): The fief needs a messenger post and it must be owned by the player. - Khanor
                     (assign, ":player_relation", 1), ### All checks passed, allow friendly fief to join.
-                  (try_end),
-                (try_end),
               (try_end),
+
+                (try_begin),
+                  (ge, ":garrison_size", 120), ### Garrison size must be 120 or above, to not leave the settlement too vulnerable. Less strict here because benefits the player receive from the help outweigh garrison preservation gameplay-wise.
+                  (party_slot_eq, ":party_no", slot_center_has_messenger_post, 1),
+                  
+                  (try_begin),
+                    (party_get_slot, ":fief_owner", ":party_no", slot_town_lord),
+                    (eq, ":fief_owner", "trp_player"), ## Friendly fiefs have extra requirements (would be too powerful if all friendly fiefs could help): The fief needs a messenger post and it must be owned by the player. - Khanor
+                    (assign, ":player_relation", 1), ### All checks passed, allow friendly fief to join.
+              (try_end),
+            (try_end), #Floris - Diplo bugfix end
+            (try_end),
             (try_end), #Floris - Diplo bugfix end
             
             (assign, ":join_even_you_do_not_like_player", 0),
@@ -22848,7 +22860,19 @@ scripts = [
               (assign, ":join_even_you_do_not_like_player", 1),
             (try_end),
 
-            (try_begin),
+            (try_begin), ### Get effective center relations with player for some later checks! (NEW 3.9.3a, by Khanor) ###
+              (this_or_next|eq, ":party_type", spt_castle),
+              (this_or_next|eq, ":party_type", spt_town),
+              (this_or_next|eq, ":party_type", spt_village),
+              (is_between, ":party_no", walled_centers_begin, walled_centers_end),
+
+              (party_get_slot, ":center_relation", ":party_no", slot_center_player_relation),
+            (try_end),
+
+            (party_get_template_id, ":template", ":party_no"), ### Ensure you get both of these values for later checks! - Khanor
+            (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
+
+            (try_begin), ### Find out if general checks are passed, if they are, do specific checks for the three main groupings of friendly parties, standard parties, walled fief garrisons, and various parties. - Khanor
               (this_or_next|ge, ":player_relation", 1),
               (eq, ":join_even_you_do_not_like_player", 1),
               (this_or_next|eq, ":besiege_mode", 0),
@@ -22859,99 +22883,199 @@ scripts = [
               ########################################################################################
               ### Standard faction parties join in as friendlies to player (NEW v3.9.3, by Khanor) ###
               ########################################################################################
+              (try_begin),
+                (neq, ":party_type", spt_castle),
+                (neq, ":party_type", spt_town),
+                (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end),
+                (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+
+              ### The party_no checks below are the key to finding Lords' parties, patrols, etc. for reinforcements, so brought it back and moved it all into one place.
               ### The party_no checks below are the key to finding Lords' parties, patrols, etc. for reinforcements, so brought it back and moved it all into one place.
               (party_get_template_id, ":template", ":party_no"),
               (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
-              (try_begin),
-                (this_or_next|eq, ":party_type", spt_kingdom_hero_party),
-                (this_or_next|eq, ":party_type", spt_patrol),
-                (this_or_next|eq, ":party_type", spt_merc_party),
-                (this_or_next|eq, ":party_type", spt_war_party),
-                (this_or_next|eq, ":party_type", spt_scout),
-                (eq, ":party_type", spt_mercenary_company),
-                (neq, ":ai_bhvr", ai_bhvr_avoid_party),
-
-                ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+                ### The party_no checks below are the key to finding Lords' parties, patrols, etc. for reinforcements, so brought it back and moved it all into one place.
+              (party_get_template_id, ":template", ":party_no"),
+              (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
                 (try_begin),
-                  (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
-                  (neq, ":party_type", spt_town),
-                  (neq, ":party_type", spt_village),
-                  (neq, ":party_type", spt_bandit_lair),
-                  (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
-                  (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                  (this_or_next|eq, ":party_type", spt_kingdom_hero_party),
+                  (this_or_next|eq, ":party_type", spt_patrol),
+                  (this_or_next|eq, ":party_type", spt_merc_party),
+                  (this_or_next|eq, ":party_type", spt_war_party),
+                  (this_or_next|eq, ":party_type", spt_scout),
+                  (eq, ":party_type", spt_mercenary_company),
+                  (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### Do not handle castle and town garrison reinforcements here. - Khanor
+
+                  ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+                  (try_begin),
+                    (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                    (neq, ":party_type", spt_town),
+                    (neq, ":party_type", spt_village),
+                    (neq, ":party_type", spt_bandit_lair),
+                    (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                    (neq, ":template", "pt_manor"),
+                    (neq, ":template", "pt_mongolian_camp"),
+                    (neq, ":template", "pt_outpost"),
+                    (neq, ":template", "pt_fort"),
+                    (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                    #rafi
+                    (party_relocate_near_party, ":party_no", "p_main_party", 3),
+                  (try_end),
+                  ### Party check and relocation end ###
+
                   #rafi
-                  (party_relocate_near_party, ":party_no", "p_main_party", 3),
-                (try_end),
-                ### Party check and relocation end ###
+                  (party_quick_attach_to_current_battle, ":party_no", 0), ### Attach as friend.
+                  (str_store_party_name, s1, ":party_no"),
 
-                #rafi
-                (party_quick_attach_to_current_battle, ":party_no", 0), ### Attach as friend.
-                (str_store_party_name, s1, ":party_no"),
-
-                ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
-                (try_begin),
-                  (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
-                  (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
-                (else_try),
-                  (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+                  ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+                  (try_begin),
+                    (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                    (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
+                  (else_try),
+                    (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+                  (try_end),
                 (try_end),
-              (try_end),
               ##########################################################
               ### Standard faction parties join in as friendlies end ###
               ##########################################################
-            (try_end),
-            
-          #######################################################
-          ### Various parties join in as friendlies to player ###
-          #######################################################
-          (else_try),
-            (party_get_template_id, ":template", ":party_no"),
-            (get_party_ai_behavior, ":ai_bhvr", ":party_no"),
-            
-            (try_begin),
-              (party_slot_eq, ":party_no", slot_party_ai_state, spai_accompanying_army),
-              (party_slot_eq, ":party_no", slot_party_ai_object, "trp_player"),
-              (assign, ":party_is_accompanying_player", 1),
-            (else_try),
-              (assign, ":party_is_accompanying_player", 0),
-            (try_end),
 
-            (try_begin),
-              (this_or_next|eq, ":dont_add_friends_other_than_accompanying", 0),
-              (eq, ":party_is_accompanying_player", 1),
-              (gt, ":reln_with_player", 0),
-              (lt, ":reln_with_enemy", 0),
-              (neq, ":ai_bhvr", ai_bhvr_avoid_party),
-              ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
-              (try_begin),
-                (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
-                (neq, ":party_type", spt_town),
-                (neq, ":party_type", spt_village),
-                (neq, ":party_type", spt_bandit_lair),
-                (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
-                (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
-                #rafi
-                (party_relocate_near_party, ":party_no", "p_main_party", 3),
-              (try_end),
-              ### Party check and relocation end ###
-              
-              (party_quick_attach_to_current_battle, ":party_no", 0), ### Attach as friend.
-              (str_store_party_name, s1, ":party_no"),
-
-              ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
-              (try_begin),
-                (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
-                (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
+              ############################################################################################
+              ### Garrisons from walled fiefs join in as friendlies to player (NEW v3.9.3a, by Khanor) ###
+              ############################################################################################
               (else_try),
-                (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+                ### The party_no checks below are the key to finding Lords' parties, patrols, etc. for reinforcements, so brought it back and moved it all into one place.
+                (this_or_next|eq, ":party_type", spt_castle),
+                (this_or_next|eq, ":party_type", spt_town),
+                (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### But do handle castle and town garrison reinforcements here. - Khanor
+                (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+
+                (try_begin),
+                  ### Walled settlement garrisons can now also join in as friendlies to the player on all difficulties, but this has some requirements (NEW 3.9.3, by Khanor) ###
+                  (try_begin),
+                    (assign, ":selected_party", ":party_no"),
+                    (assign, ":garrison_size", 0),
+                    (assign, ":player_relation", 0), ### Reset for walled fiefs to later give back if checks are passed! - Khanor
+
+                    (party_get_num_companion_stacks, ":num_stacks", ":selected_party"),
+                    (try_for_range, ":i_stack", 0, ":num_stacks"),
+                      (party_stack_get_troop_id, ":stack_troop", ":selected_party", ":i_stack"),
+                      (party_stack_get_size, ":stack_size", ":selected_party", ":i_stack"),
+                      (val_add, ":garrison_size", ":stack_size"),
+                    (try_end),
+
+                    (try_begin),
+                      (ge, ":garrison_size", 120), ### Garrison size must be 120 or above, to not leave the settlement too vulnerable. Less strict here because benefits the player receive from the help outweigh garrison preservation gameplay-wise.
+                      (party_slot_eq, ":party_no", slot_center_has_messenger_post, 1), ### Friendly fiefs have extra requirements (would be too powerful if all friendly fiefs could help): The fief needs a messenger post, and...
+                      
+                      (party_get_slot, ":fief_owner", ":party_no", slot_town_lord),
+                      (try_begin),
+                        (this_or_next|eq, ":fief_owner", "trp_player"), ### ...the center must either be owned by the player, or...
+                        (ge, ":center_relation", 25), ### ...the center's relations with the player must be equal to or greater than 25. - Khanor
+
+                        (assign, ":player_relation", 1), ### All checks passed, allow friendly fief to join.
+                      (try_end),
+                    (try_end),
+                  (try_end),
+
+                  (try_begin),
+                    (ge, ":player_relation", 1), ### If all requirements are fulfilled, the walled fief's garrison is finally cleared for joining in! - Khanor
+
+                    ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+                    (try_begin),
+                      (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                      (neq, ":party_type", spt_town),
+                      (neq, ":party_type", spt_village),
+                      (neq, ":party_type", spt_bandit_lair),
+                      (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                      (neq, ":template", "pt_manor"),
+                      (neq, ":template", "pt_mongolian_camp"),
+                      (neq, ":template", "pt_outpost"),
+                      (neq, ":template", "pt_fort"),
+                      (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                      #rafi
+                      (party_relocate_near_party, ":party_no", "p_main_party", 3),
+                    (try_end),
+                    ### Party check and relocation end ###
+
+                    #rafi
+                    (party_quick_attach_to_current_battle, ":party_no", 0), ### Attach as friend.
+                    (str_store_party_name, s1, ":party_no"),
+
+                    ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+                    (try_begin),
+                      (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                      (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
+                    (else_try),
+                      (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+                    (try_end),
+                  (try_end),
+                (try_end),
+              #############################################################
+              ### Garrisons from walled fiefs join in as friendlies end ###
+              #############################################################
+              
+              #######################################################
+              ### Various parties join in as friendlies to player ###
+              #######################################################
+              (else_try),
+                (neq, ":party_type", spt_castle),
+                (neq, ":party_type", spt_town),
+                (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### Do not handle castle and town garrison reinforcements here. - Khanor
+                (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+                
+                (try_begin),
+                  (party_slot_eq, ":party_no", slot_party_ai_state, spai_accompanying_army),
+                  (party_slot_eq, ":party_no", slot_party_ai_object, "trp_player"),
+                  (assign, ":party_is_accompanying_player", 1),
+                (else_try),
+                  (assign, ":party_is_accompanying_player", 0),
+                (try_end),
+
+                (try_begin),
+                  (this_or_next|eq, ":dont_add_friends_other_than_accompanying", 0),
+                  (eq, ":party_is_accompanying_player", 1),
+                  (gt, ":reln_with_player", 0),
+                  (lt, ":reln_with_enemy", 0),
+                  (neq, ":ai_bhvr", ai_bhvr_avoid_party),
+                  (this_or_next|neq, ":party_type", spt_village),
+                  (ge, ":center_relation", 25), ### If village, center relations with the player must be 25 or above for the villagers to put themselves at such risk. - Khanor
+
+                  ### Check that party is not fief/settlement to avoid relocating fiefs (NEW v3.9.3, by Khanor) ###
+                  (try_begin),
+                    (neq, ":party_type", spt_castle), ### Very important, so includes more checks than technically needed.
+                    (neq, ":party_type", spt_town),
+                    (neq, ":party_type", spt_village),
+                    (neq, ":party_type", spt_bandit_lair),
+                    (neq, ":party_type", spt_prisoner_train), ### Also don't move prisoner trains closer to the action, they generally want to get to safety with the prisoners.
+                    (neq, ":template", "pt_manor"),
+                    (neq, ":template", "pt_mongolian_camp"),
+                    (neq, ":template", "pt_outpost"),
+                    (neq, ":template", "pt_fort"),
+                    (neg|is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                    #rafi
+                    (party_relocate_near_party, ":party_no", "p_main_party", 3),
+                  (try_end),
+                  ### Party check and relocation end ###
+                  
+                  (party_quick_attach_to_current_battle, ":party_no", 0), ### Attach as friend.
+                  (str_store_party_name, s1, ":party_no"),
+
+                  ### Message accounts for if joining party is settlement's garrison, or normal party (NEW v3.9.3, by Khanor) ###
+                  (try_begin),
+                    (is_between, ":party_no", walled_centers_begin, walled_centers_end), ### List of walled settlements/things that aren't supposed to move.
+                    (display_message, "str_s1_garrison_joined_battle_friend", 0x50FF50),
+                  (else_try),
+                    (display_message, "str_s1_joined_battle_friend", 0x50FF50),
+                  (try_end),
+                (try_end),
+              #################################################
+              ### Various parties join in as friendlies end ###
+              #################################################
               (try_end),
             (try_end),
           (try_end),
-          #################################################
-          ### Various parties join in as friendlies end ###
-          #################################################
         (try_end),
-    ]),
+      ]
+    ),
     
     # script_party_wound_all_members_aux
     # Input: arg1 = party_no

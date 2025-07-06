@@ -47,10 +47,10 @@ factions = [
   ("culture_italian",  "Italian", 0, 0.9, [], []), #papacy, kingdom_24, kingdom_38, kingdom_39, kingdom_40, kingdom_41
   ("culture_andalus",  "Andalus", 0, 0.9, [], []), #kingdom_20
   ("culture_gaelic",  "Gaelic", 0, 0.9, [], []),  #kingdom_13
-  ("culture_anatolian_christian",  "Armenia", 0, 0.9, [], []),  
+  ("culture_anatolian_christian",  "Armenian", 0, 0.9, [], []),  
   ("culture_anatolian",  "Anatolia", 0, 0.9, [], []),
   ("culture_scotish",  "Scottish", 0, 0.9, [], []), #kingdom_12
-  ("culture_western",  "Western Europe", 0, 0.9, [], []), #kingdom_5, kingdom_6, kingdom_7, kingdom_9, kingdom_10, kingdom_19, kingdom_42, kingdom_23
+  ("culture_western",  "Western European", 0, 0.9, [], []), #kingdom_5, kingdom_6, kingdom_7, kingdom_9, kingdom_10, kingdom_19, kingdom_42, kingdom_23
   ("culture_mongol",  "Mongol", 0, 0.9, [], []), #kingdom_3, kingdom_27
 ############## NEW v1.8
   ("culture_templar",  "Templar", 0, 0.9, [], []), 

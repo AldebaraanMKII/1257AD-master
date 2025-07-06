@@ -24,60 +24,92 @@ Things with the "Debug:" prefix require a new game but can be activated/fixed by
 
 
 v3.12
-1). (3.9.3 feature)(@Khanor#3713) Fixed Mamluke Archers so they correctly represent archers, not some weird javelinman/crossbowman hybrid (removed crossbows, bolts and throwing weapons from item list, exchanged old skills/proficiencies for relevant skills and archery proficiencies). Also added the updated proficiencies to the troop update button in "Enhanced Options." Thanks go to one of our Discord contributors, @mamacrooo#5615.
-2). (3.9.3 feature)(@Khanor#3713) Updated some of the Latin names of the above Mamluke unit and its veteran and elite variants, as well as one of their javelineer units.
-3). (3.9.3 feature)(@Khanor#3713) Fixed the name of one of the "Templar Knightly Surcoat over Mail" items. Thanks go to one of our Discord contributors, @mamacrooo#5615.
-4). (3.9.3 feature)(@Khanor#3713) Added a more proper Bandit (Bandit Leader) start, with a touch of renown, negative honor, some bonus stats, randomized bandit leader gear, one handed/ranged proficiencies, randomized but always significant amounts of gold, as well as a starting location appropriate bandit squad.
-5). (3.9.3 feature)(@Khanor#3713) The "Female" start option is now above the "Quick Character" start option in the new game setup menu.
-6). (3.9.3 feature)(@Khanor#3713) The "Cause Provocation" quest now also succeeds on war between the player's current Kingdom and the target Kingdom, as the quest-giver's desired outcome was reached, even if the player technically may not have done it as instructed.
-7). (3.9.3 feature)(@Khanor#3713) The "Your Village is under attack!" popup-screen and the "Enemies have laid waste to a Fief" popup-screen both now account for (and display) if the message is about the player's village/fief, or "just" a village/fief belonging to the same faction.
-8). (3.9.3 feature)(@Khanor#3713) Pluralisation of the word "lance" in the fief recruitment screen is now dynamic depending on if there's just one lance available, or any other number of lances available.
-9). (3.9.3 feature)(New Game)(@Khanor#3713) The "Scandinavian Armored Swordsman" and "Balt Magnate" troops now count as mounted on the world map, representing important hird/household soldiers that can afford horses for travel. In battles they still fight dismounted and count as infantry. They now also have some riding skill and support/flavor skills (tactics, leadership, trade). These changes mainly make their map movement speed and wages a tad higher.
-10). (3.9.3 feature)(@Khanor#3713) The "Scandinavian Armored Swordsman" troop has been renamed to "Scandinavian Armored Hirdsman."
-11). (3.9.3 feature)(New Game)(@Khanor#3713) One town, one castle and one village moved south or south-southeast in the Kingdom of Norway. One castle and one village moved south-southeast in the Kingdom of Denmark.
+1). (3.9.2 feature)(@Khanor#3713) The Mamluk Horse Archer mercenaries now no longer spawn with unnecessary bolts in their inventory, but instead have guaranteed Barbed Arrows in their inventory.
+2). (3.9.2 feature)(@Khanor#3713) Tweaked code a little to ensure every Faction leader meant to have a reinforced shield in their inventory actually gets one.
+3). (3.9.2 feature)(@Khanor#3713) Added in some basic upgrades for Peasant Women, so they can support the player's camp/party as auxiliary archers in a pinch, up to the level of around regular/experienced archers at best (a more historically plausible and less helmet-shunning option than the Sword Sisters of Vanilla/Native Warband).
+4). (3.9.2 feature)(@Khanor#3713) Added some support skills to the Peasant Woman upgrades, so they have some utility as path-finders and healers too in addition to the new combat auxiliary option.
+5). (3.9.2 feature)(@Khanor#3713) Added peasant units to the "Others"-troop tree.
+6). (3.9.2 feature)(@Khanor#3713) Added gloves to the item lists of Scandinavian Armored Swordsmen and Balt Magnates, as they were lacking this despite having the "guarantee gloves"-flag.
+7). (3.9.2 feature)(@Khanor#3713) Added an "Update troops to the current mod version" button to the "Enhanced Options" camp menu choice, which updates some recently tweaked troops to the most recent patch for added save game compatibility for future small troop tweaks. As of being added, this works for Sea Raider Captains and some peasant troops.
+8). (3.9.2 feature)(@Khanor#3713) Improved spacing, punctuation and language of multiple Chamberlain dialogues, reports, tax options and recruitment options.
+9). (3.9.2 feature)(@Khanor#3713) Improved spacing and punctuation of some Constable dialogues and reports.
+10). (3.9.2 feature)(@Khanor#3713) Improved spacing, punctuation and spelling of multiple dialogues for Lords, Ladies and other NPCs, as well as some of their related player responses.
+11). (3.9.2 feature)(@Khanor#3713) Improved spacing, punctuation and spelling of some settlement (village/castle/town) menu options, as well as some reports, camp menu, tournament and main menu texts/options.
+12). (3.9.2 feature)(@Khanor#3713) The Crown of Castile is now correctly named "Crown of Castile" instead of "Kingdom of Castille." Thanks go to our Discord feedback givers.
+13). (3.9.2 feature)(@Khanor#3713) Added fief amount, rent, tariff, tax inefficiency and salary calculations to the end of the fief exchange code to avoid the weekly budget report being bugged (temporarily) after the fief exchange happened. Does not solve all issues remaining with the budget report display, such as 0 rents displayed on recent load.
+14). (3.9.2a feature)(@Khanor#3713) Fixed code adaptation for the code letting opposing parties merge together for battles (now adapted for the differences between 3.11 and 3.9.2 in a more proper way).
+15). (3.9.2a feature)(@Khanor#3713) Fixed all instances of misspelled "Sergeant" in troop names (15 individual troop types affected).
+16). (3.9.2a feature)(@Khanor#3713) Updated troop stats (with error corrections) for the first two tiers of "Gaelic Mercenary Spearmen" and "Gaelic Mercenary Axemen" so that these are gradual upgrades proficiency- and attribute-wise. Especially a noticeable improvement for the proficiencies of the second tier in the Axemen-line, which one of our Discord-members led me to (thank you).
+17). (3.9.2a feature)(@Khanor#3713) Added attribute and proficiency updates for the above point's Gaelic Mercenaries to the "Update troops to the current mod version"-button under "Enhanced Options."
+18). (3.9.2a feature)(@Khanor#3713) Tuned the scripts for raising and lowering proficiencies so they can also tweak proficiency values with full accuracy in the cases where the before values for the proficiencies were not a multiple of 5 like in most cases for troops.
+19). (3.9.3 feature)(@Khanor#3713) Fixed Mamluke Archers so they correctly represent archers, not some weird javelinman/crossbowman hybrid (removed crossbows, bolts and throwing weapons from item list, exchanged old skills/proficiencies for relevant skills and archery proficiencies). Also added the updated proficiencies to the troop update button in "Enhanced Options." Thanks go to one of our Discord contributors, @mamacrooo#5615.
+20). (3.9.3 feature)(@Khanor#3713) Updated some of the Latin names of the above Mamluke unit and its veteran and elite variants, as well as one of their javelineer units.
+21). (3.9.3 feature)(@Khanor#3713) Fixed the name of one of the "Templar Knightly Surcoat over Mail" items. Thanks go to one of our Discord contributors, @mamacrooo#5615.
+22). (3.9.3 feature)(@Khanor#3713) Added a more proper Bandit (Bandit Leader) start, with a touch of renown, negative honor, some bonus stats, randomized bandit leader gear, one handed/ranged proficiencies, randomized but always significant amounts of gold, as well as a starting location appropriate bandit squad.
+23). (3.9.3 feature)(@Khanor#3713) The "Female" start option is now above the "Quick Character" start option in the new game setup menu.
+24). (3.9.3 feature)(@Khanor#3713) The "Cause Provocation" quest now also succeeds on war between the player's current Kingdom and the target Kingdom, as the quest-giver's desired outcome was reached, even if the player technically may not have done it as instructed.
+25). (3.9.3 feature)(@Khanor#3713) The "Your Village is under attack!" popup-screen and the "Enemies have laid waste to a Fief" popup-screen both now account for (and display) if the message is about the player's village/fief, or "just" a village/fief belonging to the same faction.
+26). (3.9.3 feature)(@Khanor#3713) Pluralisation of the word "lance" in the fief recruitment screen is now dynamic depending on if there's just one lance available, or any other number of lances available.
+27). (3.9.3 feature)(New Game)(@Khanor#3713) The "Scandinavian Armored Swordsman" and "Balt Magnate" troops now count as mounted on the world map, representing important hird/household soldiers that can afford horses for travel. In battles they still fight dismounted and count as infantry. They now also have some riding skill and support/flavor skills (tactics, leadership, trade). These changes mainly make their map movement speed and wages a tad higher.
+28). (3.9.3 feature)(@Khanor#3713) The "Scandinavian Armored Swordsman" troop has been renamed to "Scandinavian Armored Hirdsman."
+29). (3.9.3 feature)(New Game)(@Khanor#3713) One town, one castle and one village moved south or south-southeast in the Kingdom of Norway. One castle and one village moved south-southeast in the Kingdom of Denmark.
      - Kingdom of Norway: Niðarós and Freysey moved south, Ragnhildarhólmr moved south-southeast.
      - Kingdom of Denmark: Varbiargh and Halmstaþr moved south-southeast.
-12). (3.9.3 feature)(New Game)(@Khanor#3713) One town and one village in the Republic of Venice have been moved north and south respectively, much closer to their real world locations. Also fixed name of one village.
+30). (3.9.3 feature)(New Game)(@Khanor#3713) One town and one village in the Republic of Venice have been moved north and south respectively, much closer to their real world locations. Also fixed name of one village.
      - Republic of Venice: Venezia moved significantly north towards its real world location, Chioggia moved a touch south.
      - Republic of Venice: Removed extra space after the name of Sibinicum village.
-13). (3.9.3 feature)(New Game)(@Khanor#3713) Removed extra space in the following names too: "Sevilla" town (Crown of Castile), "Plovdiv" town (Kingdom of Bulgaria) and "Visingsey" castle (Kingdom of Sweden).
-14). (3.9.3 feature)(@Khanor#3713) Spacing, punctuation and/or spelling improvements in some manor dialogues, Mongol camp dialogues and Lord strategy talks.
-15). (3.9.3 feature)(@Khanor#3713) Punctuation, capitalization and spelling improvements in game menus, dialogues and some other places.
-16). (3.9.3 feature)(@Khanor#3713) Added some space between the mod version and the player stats in the "Reports" menu.
-17). (3.9.3 feature)(@Khanor#3713) Fixed hat merchants having weird items.
-18). (3.9.3 feature)(@Khanor#3713) Fixed Lords' parties and other standard faction parties (like patrols) not helping each other against the player or helping the player when relevant.
-19). (3.9.3 feature)(@Khanor#3713) Fief garrisons can now help you in battle if friendly, above a minimum of garrison, having a messenger post AND being owned by the player. This is very rare, but also a very powerful in the right situations, and hopefully people find the interesting ways this can be utilized.
-20). (3.9.3 feature)(@Khanor#3713) Fief garrisons of hostiles are now far more interesting and dynamic, if campaign difficulty is above easy and they have sufficient garrison...
-21). (3.9.3 feature)(@Khanor#3713) Fixed the display message on interest payments on the player's deposits in towns, as they weren't displaying the amount paid out correctly.
-22). (3.9.3 feature)(@Khanor#3713) Improved the auto loot/companion loot system's item counting code.
-23). (3.9.3 feature)(@Khanor#3713) Improved the auto loot/companion loot system's language a bit.
-24). (3.9.3 feature)(@Khanor#3713) Added new convenience option to the auto loot/companion loot system, now you can leave without adding any items to the shared pool at all in case you don't want any of the remaining items.
-25). (3.9.3 feature)(@Khanor#3713) Added melee version/secondary version to the "Throwing Spears" ranged weapon. While not as powerful as dedicated melee weapons in this use, they now have some more utility in any case.
-26). (3.9.3 feature)(@Khanor#3713) One of the "Cuman Hat" items has been renamed to "Segmented Helmet", due to that type of helmet not being unique to Cumans, and for that matter it was more of a helmet than a hat. (Thanks go to Quilboar on Steam.)
-27). (3.9.3 feature)(New Game)(@Khanor#3713) All Scottish lance troops/regular troops that didn't have the "guarantee boots"-flag now have it. No longer should you find barefoot Scottish soldiers on the battlefield. "Scottish Recruit" now has the "guarantee shield"-flag, while "Scottish Levy" lost it.
-28). (3.9.3 feature)(@Khanor#3713) The "Scottish Recruit" troop (tier one melee footman) now also has some helmets, shoes/boots and shields/targes in their inventory to draw from, giving them a not insignificant durability boost on the battlefield. They did lose their chance for getting "Darts" though. (Thanks go to Quilboar on Steam.)
-29). (3.9.3 feature)(@Khanor#3713) The "Scottish Levy" troop (tier one ranged footman) lost their kite shield and heater shield chance, but gained a chance for targes instead. "Scottish Recruit" troop also had some of the "Scottish Levy" troop's helmets transferred over, since they need it more in melee. "Scottish Levy" still has some headgear to draw from remaining.
-30). (3.9.3 feature)(@Khanor#3713) Gave a chance of light footwear to all Gaelic lance troops/regular troops that didn't have this in their inventory to draw from. Only the high tier ones have this guaranteed. The "Gaelic Recruit" troop now also has a chance for some light headgear.
-31). (3.9.3 feature)(@Khanor#3713) The "Euro Commoner Footman" and "Euro Levy Footman" troops (tier one melee footman and tier one ranged footman in the Western European troop tree, respectively) have both gotten additional helmet variation to draw upon, like simple kettle hats, while the mail coif that didn't match their body armor has been removed. (Thanks go to Quilboar on Steam.)
-32). (3.9.3 feature)(@Khanor#3713) All Scottish regular troops that weren't in the "troops.csv"-file have been added to it, to aid in any eventual future translations of the mod.
-33). (3.9.3 feature)(@Khanor#3713) Crouching (Windows PC default: "z") has been enabled in the "module.ini"-file by default. Edit the file and set the value to 0 if wanting to undo this. Added new UI-entry for this in the "ui.csv"-file.
-34). (3.9.3 feature)(@Khanor#3713) Created the framework for two new scripts to reload the starting inventories of most hero troops (unique characters) excluding companions, the player and optionally the player's spouse.
-35). (3.9.3 feature)(@Khanor#3713) The skill book "The Life of Alixenus the Great" has been renamed to "The Life of Alexander the Great."
-36). (3.9.3 feature)(@Khanor#3713) Sicilian Noble Ladies no longer use Mongol honorifics/name addendums, cool though it may be.
-37). Fixed random lords from Kingdom of England and France sometimes not getting names.
-38). Fixed bugs with random lords that the player gets when his faction culture is English/French/Polish/Hungarian/Western European.
-39). Fixed bug where player rebel faction didn't get a language assigned at creation and thus causing several issues.
-40). Fixed bug where player rebel faction always got assigned Catholic religion and Western European culture. Now they will be the same religion/culture as the originator factor.
-41). Losing battles now also cause a slight loss of renown.
-42). Fixed joining an army as a freelancer being possible when already having higher duties as a faction contracted mercenary or sworn vassal.
-43). Added fallback assignment of Western European culture to new Lords in case none of the earlier assignments met their criteria.
-44). Added option under minister for player to select faction language without needing to change his culture first. This is useful to change it whenever they want or if they encountered the bugs above before they were fixed.
-45). Added option to randomize a lord's name by talking to him. Cheat menu must be on.
-46). Added lances to all lords that didn't have one (exchanged spears for light lances in those cases).
-47). (@Khanor#3713) Ensured the first two tiers of Gaelic melee footmen and the first tier of ranged footmen have a significant chance to go barefoot to represent the iconic barefooted Irish Kerns, though they still have a chance of light footwear, as that was also common.
-48). (@Khanor#3713) Additional punctuation added to the minister dialogues and camp chat/troop chat dialogues.
-49). (@Khanor#3713) Fixed a "Fur Coat" not using cloth-based modifiers like intended (leading to things like "Rusty Fur Coat" and the likes).
-50). (@Khanor#3713) Buffed the melee damage of "Throwing Spears" just a touch.
+31). (3.9.3 feature)(New Game)(@Khanor#3713) Removed extra space in the following names too: "Sevilla" town (Crown of Castile), "Plovdiv" town (Kingdom of Bulgaria) and "Visingsey" castle (Kingdom of Sweden).
+32). (3.9.3 feature)(@Khanor#3713) Spacing, punctuation and/or spelling improvements in some manor dialogues, Mongol camp dialogues and Lord strategy talks.
+33). (3.9.3 feature)(@Khanor#3713) Punctuation, capitalization and spelling improvements in game menus, dialogues and some other places.
+34). (3.9.3 feature)(@Khanor#3713) Added some space between the mod version and the player stats in the "Reports" menu.
+35). (3.9.3 feature)(@Khanor#3713) Fixed hat merchants having weird items.
+36). (3.9.3 feature)(@Khanor#3713) Fixed Lords' parties and other standard faction parties (like patrols) not helping each other against the player or helping the player when relevant.
+37). (3.9.3 feature)(@Khanor#3713) Fief garrisons can now help you in battle if friendly, above a minimum of garrison, having a messenger post AND being owned by the player. This is very rare, but also a very powerful in the right situations, and hopefully people find the interesting ways this can be utilized.
+38). (3.9.3 feature)(@Khanor#3713) Fief garrisons of hostiles are now far more interesting and dynamic, if campaign difficulty is above easy and they have sufficient garrison...
+39). (3.9.3 feature)(@Khanor#3713) Fixed the display message on interest payments on the player's deposits in towns, as they weren't displaying the amount paid out correctly.
+40). (3.9.3 feature)(@Khanor#3713) Improved the auto loot/companion loot system's item counting code.
+41). (3.9.3 feature)(@Khanor#3713) Improved the auto loot/companion loot system's language a bit.
+42). (3.9.3 feature)(@Khanor#3713) Added new convenience option to the auto loot/companion loot system, now you can leave without adding any items to the shared pool at all in case you don't want any of the remaining items.
+43). (3.9.3 feature)(@Khanor#3713) Added melee version/secondary version to the "Throwing Spears" ranged weapon. While not as powerful as dedicated melee weapons in this use, they now have some more utility in any case.
+44). (3.9.3 feature)(@Khanor#3713) One of the "Cuman Hat" items has been renamed to "Segmented Helmet", due to that type of helmet not being unique to Cumans, and for that matter it was more of a helmet than a hat. (Thanks go to Quilboar on Steam.)
+45). (3.9.3 feature)(New Game)(@Khanor#3713) All Scottish lance troops/regular troops that didn't have the "guarantee boots"-flag now have it. No longer should you find barefoot Scottish soldiers on the battlefield. "Scottish Recruit" now has the "guarantee shield"-flag, while "Scottish Levy" lost it.
+46). (3.9.3 feature)(@Khanor#3713) The "Scottish Recruit" troop (tier one melee footman) now also has some helmets, shoes/boots and shields/targes in their inventory to draw from, giving them a not insignificant durability boost on the battlefield. They did lose their chance for getting "Darts" though. (Thanks go to Quilboar on Steam.)
+47). (3.9.3 feature)(@Khanor#3713) The "Scottish Levy" troop (tier one ranged footman) lost their kite shield and heater shield chance, but gained a chance for targes instead. "Scottish Recruit" troop also had some of the "Scottish Levy" troop's helmets transferred over, since they need it more in melee. "Scottish Levy" still has some headgear to draw from remaining.
+48). (3.9.3 feature)(@Khanor#3713) Gave a chance of light footwear to all Gaelic lance troops/regular troops that didn't have this in their inventory to draw from. Only the high tier ones have this guaranteed. The "Gaelic Recruit" troop now also has a chance for some light headgear.
+49). (3.9.3 feature)(@Khanor#3713) The "Euro Commoner Footman" and "Euro Levy Footman" troops (tier one melee footman and tier one ranged footman in the Western European troop tree, respectively) have both gotten additional helmet variation to draw upon, like simple kettle hats, while the mail coif that didn't match their body armor has been removed. (Thanks go to Quilboar on Steam.)
+50). (3.9.3 feature)(@Khanor#3713) All Scottish regular troops that weren't in the "troops.csv"-file have been added to it, to aid in any eventual future translations of the mod.
+51). (3.9.3 feature)(@Khanor#3713) Crouching (Windows PC default: "z") has been enabled in the "module.ini"-file by default. Edit the file and set the value to 0 if wanting to undo this. Added new UI-entry for this in the "ui.csv"-file.
+52). (3.9.3 feature)(@Khanor#3713) Created the framework for two new scripts to reload the starting inventories of most hero troops (unique characters) excluding companions, the player and optionally the player's spouse.
+53). (3.9.3 feature)(@Khanor#3713) The skill book "The Life of Alixenus the Great" has been renamed to "The Life of Alexander the Great."
+54). (3.9.3 feature)(@Khanor#3713) Sicilian Noble Ladies no longer use Mongol honorifics/name addendums, cool though it may be.
+55). Fixed random Lords from Kingdom of England and France sometimes not getting names.
+56). Fixed bugs with random Lords that the player gets when his faction culture is English/French/Polish/Hungarian/Western European.
+57). Fixed bug where player rebel faction didn't get a language assigned at creation and thus causing several issues.
+58). Fixed bug where player rebel faction always got assigned Catholic religion and Western European culture. Now they will be the same religion/culture as the originator factor.
+59). Losing battles now also cause a slight loss of renown.
+60). Fixed joining an army as a freelancer being possible when already having higher duties as a faction contracted mercenary or sworn vassal.
+61). Added fallback assignment of Western European culture to new Lords in case none of the earlier assignments met their criteria.
+62). Added option under minister for player to select faction language without needing to change his culture first. This is useful to change it whenever they want or if they encountered the bugs above before they were fixed.
+63). Added option to randomize a lord's name by talking to him. Cheat menu must be on.
+64). Added lances to all Lords that didn't have one (exchanged spears for light lances in those cases).
+65). (@Khanor#3713) Ensured the first two tiers of Gaelic melee footmen and the first tier of ranged footmen have a significant chance to go barefoot to represent the iconic barefooted Irish Kerns, though they still have a chance of light footwear, as that was also common.
+66). (@Khanor#3713) Additional punctuation added to the minister dialogues and camp chat/troop chat dialogues.
+67). (@Khanor#3713) Fixed a "Fur Coat" not using cloth-based modifiers like intended (leading to things like "Rusty Fur Coat" and the likes).
+68). (@Khanor#3713) Buffed the melee damage of "Throwing Spears" just a touch.
+69). Fixed some code related to belligerent drunk spawn type.
+70). (@DrainGangLegend420#8454) Fixed some surcoats' texture bugs.
+71). Fixed Polish guards not having horses.
+72). Fixed issues regarding mounted troops wielding CWE polearms not using their sidearms after being dismounted or being too close to opponents.
+73). (New Game) Fixed player starting as either England, France, Hungary or Poland and having wrong titles.
+74). Fixed player not learning the culture of a faction that he joined as a vassal.
+75). Fixed player not getting a culture when becoming a vassal when he didn't have any culture.
+76). Fixed Lords disappearing from notes and not becoming former members of their faction when they were killed by the player in battle. This will not affect lords that died before this fix on a save.
+77). (New Game) Fixed Ladies from player faction not recognizing the player in a King start.
+78). Fixed player monarch start (any Mongol faction) getting empty Lords without name nor culture.
+79). Fixed several issues with changing faction language through the minister.
+80). Player no longer has to pay to change his culture if he already payed for the culture in question before.
+81). Added new dialogue to change player wife, constable and minister equipment.
+82). Added dismounted knight variants to Teutonic, Templar and Hospitaller mercenaries that can be hired.
 
 
 
@@ -177,6 +209,26 @@ A: The chance is random. There's a 50% chance that the NPC will accept the gift.
 
 
 
+v3.9.3c "Gracious Game" (3.9 definitive series)
+(Save game compatible with all versions from 3.5 to 3.9.3b.)
+
+1). (@Khanor#3713) Renamed two cultures, "Western Europe" to "Western European", and "Armenia" to "Armenian."
+2). (@Khanor#3713) Added new generated language files that generated in a satisfactory way to the "languages/en"-folders to aid in future translations of the mod. The new additions are "info_pages.csv", "item_kinds.csv", "item_modifiers.csv" and "party_templates.csv."
+3). (@Khanor#3713) Updated the already included English language-files "factions.csv" and "troops.csv" with new additions and improvements.
+
+
+
+
+v3.9.3b "Gracious Game" (3.9 definitive series)
+(Save game compatible with all versions from 3.5 to 3.9.3a.)
+
+1). (@Khanor#3713) Set the surgeon outfit to belong to broadly European factions rather than being entirely universal.
+2). (@Khanor#3713) Fixed an error in the Chancellor/Minister's language choice dialogues that could freeze the game, and maybe also could make other dialogues weird. Also cleaned up the code formatting to make similar errors in the area much simpler to catch in the future.
+3). (@Khanor#3713) Added punctuation to several Constable, Minister, Minstrel and Lord dialogues that were missing this.
+
+
+
+
 v3.9.3a "Gracious Game" (3.9 definitive series)
 (Save game compatible with all versions from 3.5 to 3.9.3.)
 
@@ -184,6 +236,29 @@ v3.9.3a "Gracious Game" (3.9 definitive series)
 2). (3.12 feature)(@Khanor#3713) Additional punctuation added to the minister dialogues and camp chat/troop chat dialogues.
 3). (3.12 feature)(@Khanor#3713) Fixed a "Fur Coat" not using cloth-based modifiers like intended (leading to things like "Rusty Fur Coat" and the likes).
 4). (3.12 feature)(@Khanor#3713) Buffed the melee damage of "Throwing Spears" just a touch.
+5). (3.12 feature) Fixed some code related to belligerent drunk spawn type.
+6). (3.12 feature)(@DrainGangLegend420#8454) Fixed some surcoats' texture bugs.
+7). (3.12 feature) Fixed issues regarding mounted troops wielding CWE polearms not using their sidearms after being dismounted or being too close to opponents.
+8). (3.12 feature) Fixed player not learning the culture of a faction that he joined as a vassal.
+9). (3.12 feature) Fixed player not getting a culture when becoming a vassal when he didn't have any culture.
+10). (3.12 feature) Fixed Lords disappearing from notes and not becoming former members of their faction when they were killed by the player in battle. This will not affect Lords that died before this fix on a save.
+11). (3.12 feature)(New Game) Fixed Ladies from player faction not recognizing the player in a King start.
+12). (3.12 feature) Fixed player monarch start (any Mongol faction) getting empty Lords without name nor culture.
+13). (3.12 feature) Fixed several issues with changing faction language through the minister.
+14). (3.12 feature) Player no longer has to pay to change his culture if he already payed for the culture in question before.
+15). (3.12 feature) Added new dialogue to change player wife, constable and minister equipment.
+16). (3.12 feature) Added dismounted knight variants to Teutonic, Templar and Hospitaller mercenaries that can be hired.
+17). (@Khanor#3713) Improved further on the reinforcement system, friendly fiefs are now as limited as intended (though fiefs with high relations with the player can now also send reinforcements to the player like player owned fiefs could), and manors should generally not get involved, and even if they should decide to offer moral support, the will no longer relocate on the map.
+18). (@Khanor#3713) Friendly villages that the player has relations of 25 or above with may also help out a bit in local battles should the opponents be their enemies as well.
+19). (@Khanor#3713) The ability to recruit Sicilian mercenary companies has been introduced/brought back! (In Palermo and Napoli, specifically.)
+20). (@Khanor#3713) The ability to recruit Mordovian mercenary companies has been introduced/brought back! (Check out towns such as Velikiy Novgorod, Russa and Smolensk.)
+21). (@Khanor#3713) Starting with (or having started with) the "Mercenary Captain" character background now permanently grants the player a 20% discount to the final value of recruiting mercenary companies, both generic ones, and unique local ones (such as the aforementioned Sicilian or Mordovian mercenaries).
+22). (@Khanor#3713) Slight spelling/writing improvements related to recruiting mercenary companies.
+23). (@Khanor#3713) The "crouching"-animation should no longer loop while staying crouched.
+24). (@Khanor#3713) An additional tier up in the ranged footman troop line of Gaelic troops have gotten a slight chance of going barefoot, as have the Gaelic melee spearmen one tier up (though here too with reduced chance as compared with lower tiers). Barefooted Gaelic Kerns should now be appropriately represented along with Gaelic Kerns with light footwear.
+25). (New Game)(@Khanor#3713) The Golden Horde and the Il-khanate now start with positive relations with each other, as well as a unique two and a half year long non-aggression pact with each other to represent the fact that they were both part of the Mongol Empire until 1259 historically. Fighting between them before they become separate entities has now been disabled in practice.
+26). (@Khanor#3713) Added historically appropriate spread of the news of the death of the Great Khan and split of the Mongol Empire. This happens right before the initial non-aggression pact between the Golden Horde and Il-khanate ends for immersiveness, and as a player reminder.
+27). (@Khanor#3713) Added two new global variables. One to hold information about Constantinople having been retaken by the Roman Empire of Nicaea, and one to hold information about the Mongol Empire having split up into the successor Khanates.
 
 
 
@@ -238,7 +313,7 @@ v3.9.3 "Gracious Game" (3.9 definitive series)
 41). (3.12 feature) Added fallback assignment of Western European culture to new Lords in case none of the earlier assignments met their criteria.
 42). (3.12 feature) Added option under minister for player to select faction language without needing to change his culture first. This is useful to change it whenever they want or if they encountered the bugs above before they were fixed.
 43). (3.12 feature) Added option to randomize a lord's name by talking to him. Cheat menu must be on.
-44). (3.12 feature) Added lances to all lords that didn't have one (exchanged spears for light lances in those cases).
+44). (3.12 feature) Added lances to all Lords that didn't have one (exchanged spears for light lances in those cases).
 
 
 
